@@ -99,23 +99,23 @@ function fullscreenButton() {
  */
 export function renderNav(opts = {}) {
   if (document.querySelector('header.nav')) return; // 합본 화면처럼 스크립트 두 개가 함께 부르면 한 번만 그린다
-  const nav = el('header', { class: 'nav' },
+  // 챗봇 화면(2026-11-13): 로고와 전체화면 버튼만 남긴다 (챗봇·팔레트·거울·다크 모드·언어·기기 해제 버튼 없음)
+  const minimal = HERE === 'chat.html';
+  const nav = el('header', { class: minimal ? 'nav nav-min' : 'nav' },
     // 로고(TOOK 그림): 누르면 저장된 상태를 모두 지우고 홈(대기 화면)으로. 읽어 주는 이름은 'took(초기화)'
     el('strong', {}, Object.assign(el('a', { href: 'index.html', id: 'nav-reset', class: 'nav-logo', 'aria-label': t('nav.reset'), title: t('nav.reset'), onclick: goHomeWithMotion }), { innerHTML: logoSvg() })),
     // 상단 '홈'·'팔레트' 메뉴는 2026-11-09 뺐다 (로고 = 시작 화면)
     // 오른쪽 끝: 다크 모드 켜기/끄기 + 언어 전환
     // AI 뷰티 챗봇 (2026-11-11 손님 휴대폰을 없애고 태블릿으로 합침)
-    freshLink('chat.html', t('nav.chat')),
+    minimal ? null : freshLink('chat.html', t('nav.chat')),
     // 팔레트 (2026-11-13 다시 추가): 챗봇 옆에서 바로 팔레트로
-    freshLink('palette.html', t('nav.palette')),
-    // 챗봇 화면에서만: 거울 대기 화면(홈)으로 돌아가기. 로고와 달리 대화·섞은 색은 지우지 않는다
-    HERE === 'chat.html' ? el('a', { href: 'index.html', class: 'nav-mirror', text: t('nav.mirror'), onclick: (e) => goHomeWithMotion(e, { keep: true }) }) : null,
-    el('div', { class: 'nav-lang' }, themeToggle(), languageMenu()),
+    minimal ? null : freshLink('palette.html', t('nav.palette')),
+    minimal ? null : el('div', { class: 'nav-lang' }, themeToggle(), languageMenu()),
   );
   document.body.prepend(nav);
   applyI18n();
   setupIdleReset(opts.idle);
-  const reset = deviceResetButton();
+  const reset = minimal ? null : deviceResetButton();
   if (reset) nav.append(reset);
   nav.append(fullscreenButton());
 }

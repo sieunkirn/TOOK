@@ -441,29 +441,6 @@ test('영어 챗봇: 영어 문장을 한국어판과 같은 조건으로 알아
   assert.match(compareSummary(two), /저렴|모두/);
 });
 
-// ---------- NFC 태그 (public/js/nfc.js) ----------
-test('NFC 팔레트: 실물 테스트 카드 → 실제 립 제품, 태그에 쓴 제품 ID 우선', async () => {
-  const { resolveReading, NFC_CARD_PRODUCTS } = await import('../public/js/nfc.js');
-  assert.equal(resolveReading({ masked: '9F:93:••:47' }), 'OY-A000000241210');
-  assert.equal(resolveReading({ masked: '52:62:••:54' }), 'OY-A000001001860');
-  assert.equal(resolveReading({ masked: '04:11:••:66' }), null);
-  assert.equal(resolveReading({ masked: '9F:93:••:47', records: [{ type: 'text', text: 'OY-A000000205485' }] }), 'OY-A000000205485');
-});
-
-test('NFC 팔레트: 실물 테스트 카드는 카드 이름·사진으로 보이고 색은 연결한 제품 색', async () => {
-  const { cardProduct } = await import('../public/js/nfc.js');
-  const base = findById('OY-A000000241210') || { id: 'X', brand: '롬앤', name: '틴트', color_hex: '#C4707A', finish: 'glossy', price: 13000, url: 'https://x' };
-  const p = cardProduct('9F:93:••:47', base);
-  assert.equal(`${p.brand} ${p.name}`, '토스뱅크 카드');
-  assert.equal(p.color_hex, '#FFFFFF'); // 토스뱅크 카드 → 흰색 입술
-  assert.equal(cardProduct('52:62:••:54', base).color_hex, '#000000'); // 음쓰카드 → 검정 입술
-  assert.equal(p.price, null);
-  assert.equal(p.url, null);
-  assert.equal(p.image_url, 'images/nfc-test/toss-bank-card.png');
-  assert.equal(`${cardProduct('52:62:••:54', base).brand} ${cardProduct('52:62:••:54', base).name}`, '음쓰 카드');
-  assert.equal(cardProduct('04:11:••:66', base), base); // 테스트 카드가 아니면 그대로
-});
-
 // ---------- 화장품 광고 금지 표현 (src/lib/claims.js, 딥리서치 P0) ----------
 test('금지 표현: LLM 답(say)에 의약품 오인·미백·주름 효능·절대 표현이 있으면 막는다', async () => {
   const { findBannedClaim } = await import('../src/lib/claims.js');

@@ -305,7 +305,7 @@ function lightTalk(turn) {
     bridge = {
       query: toneHint ? { mine: true } : { situations: ['데일리'] },
       ack: c.compare ? L('비교하려면 먼저 제품이 있어야 해요. 무난한 립부터 보여 드릴게요.', 'I need products to compare first. Here are some easy picks.')
-        : toneHint ? L('좋아요, 그럼 측정한 톤에 어울리는 립으로 골라 볼게요.', 'Okay, let me pick lips that suit your measured tone.')
+        : toneHint ? L('정확히 알아듣진 못했지만, 측정한 톤에 어울리는 립을 먼저 골라 볼게요.', "I didn't quite catch that, so here are lips that suit your measured tone.")
           : (isEn() ? GENERIC_ACKS_EN : GENERIC_ACKS)[spoken.text.length % GENERIC_ACKS.length],
       unsure: true,
     };

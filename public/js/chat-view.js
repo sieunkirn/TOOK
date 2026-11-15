@@ -163,7 +163,9 @@ function welcome() {
   const color = !base && state.selectedHex ? C(' 방금 고른 색과 비슷한 제품도 찾아 드릴 수 있어요.', ` I can also find products similar to your color ${state.selectedHex}.`) : '';
   return {
     role: 'bot',
-    text: C(`찾는 색이나 원하는 느낌, 입술 고민을 편하게 말씀해 주세요. 마이크로 물어봐도 돼요.${color}`, `Tell me the color, feel or lip concern you have in mind. You can ask with the microphone too.${color}`),
+    text: $('voice') // 마이크가 있는 화면(합본)만 마이크 안내
+      ? C(`찾는 색이나 원하는 느낌, 입술 고민을 편하게 말씀해 주세요. 마이크로 물어봐도 돼요.${color}`, `Tell me the color, feel or lip concern you have in mind. You can ask with the microphone too.${color}`)
+      : C(`찾는 색이나 원하는 느낌, 입술 고민을 편하게 적어 주세요.${color}`, `Type the color, feel or lip concern you have in mind.${color}`),
     suggestions: START,
   };
 }
@@ -205,7 +207,17 @@ export function renderLog() {
       el('div', { class: 'who', text: C('took 챗봇', 'took chat') }),
       el('div', { class: 'typing-dots', 'aria-hidden': 'true' }, el('i'), el('i'), el('i'))) : null,
   ].filter(Boolean));
+  scrollToLatest();
+}
+
+// 맨 아래로 내리되, 마지막 답변이 대화창보다 길면 그 답변의 첫 줄이 보이게 멈춘다
+// (2026-11-15 QA: 제품 카드가 붙은 긴 답변은 끝부분만 보이고 '가장 추천하는 건…'이 위로 잘렸다)
+function scrollToLatest() {
   log.scrollTop = log.scrollHeight;
+  const last = [...log.querySelectorAll('.bubble')].at(-1);
+  if (!last || !last.classList.contains('bot')) return;
+  const top = last.getBoundingClientRect().top - log.getBoundingClientRect().top;
+  if (top < 0) log.scrollTop += top - 8;
 }
 
 // ---------- 스트리밍 출력: 받은 답변을 몇 글자씩 이어서 보여 준다 ----------
@@ -227,7 +239,7 @@ export async function streamReply(index) {
     if (!box?.isConnected) break;
     typed.textContent = text.slice(0, n);
     rest.textContent = text.slice(n);
-    log.scrollTop = log.scrollHeight;
+    scrollToLatest();
     await new Promise((r) => setTimeout(r, 28));
   }
   streamAt = -1;

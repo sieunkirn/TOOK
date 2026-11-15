@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const code = readFileSync(new URL('../public/js/touch-calib.js', import.meta.url), 'utf8');
-const box = {};
+const box = { atob }; // vm 새 환경에는 브라우저 atob 가 없다
 vm.runInNewContext(code, box);
 const { solveAffine, applyAffine, invertAffine } = box.TookAffine;
 
@@ -56,4 +56,16 @@ test('아핀 보정: 흔들림이 있으면 최소제곱으로 가깝게 맞추�
 test('아핀 보정: 점이 모자라거나 한 줄 위에 있으면 null', () => {
   assert.equal(solveAffine([{ raw: [0, 0], real: [0, 0] }, { raw: [1, 1], real: [1, 1] }]), null);
   assert.equal(solveAffine([0, 1, 2, 3].map((i) => ({ raw: [i * 10, i * 20], real: [i, i] }))), null);
+});
+
+test('조정값 코드(T1.…) 풀기: 어드민 복사 글에서 행렬을 꺼내고 잘못된 값은 거른다', () => {
+  const { decodeCode, BUILT_IN_CODE } = box.TookAffine;
+  const o = { m: [0, 0.53125, 64, -0.481, 0, 1113.6], rms: 1.2, max: 2.5, size: [800, 1280], at: '2026-11-15T00:00:00.000Z' };
+  const code = 'T1.' + Buffer.from(JSON.stringify(o)).toString('base64url');
+  const got = decodeCode(`[툭 터치 조정값] 이 값을 웹에 고정 적용해 줘\n${code}`);
+  assert.deepEqual([...got.m], o.m);
+  assert.equal(got.rms, 1.2);
+  assert.equal(decodeCode('T1.' + Buffer.from(JSON.stringify({ m: [0, 0, 0, 0, 0, 0] })).toString('base64url')), null); // 역행렬 없음
+  assert.equal(decodeCode('아무 글'), null);
+  assert.ok(BUILT_IN_CODE === '' || decodeCode(BUILT_IN_CODE), '웹에 고정한 값이 올바른 코드여야 한다');
 });

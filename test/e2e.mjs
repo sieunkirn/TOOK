@@ -329,7 +329,7 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
     for (const [path, ids] of [
       ['/', ['#home-standby .hs-hint']],
       ['/palette.html', ['.pal-cam .stage', '#reset', '#textures', '#find', '#lip-paints', '#mix-canvas']],
-      ['/chat.html', ['#chat-log', '#voice', '#chat-input', '#tts', '#chat-reset']],
+      ['/chat.html', ['#chat-log', '#chat-input', '#tts', '.tkb']], // 마이크는 2026-11-15 뺐다,
       ['/shades.html', ['#sh-page']],
     ]) {
       await pg.goto(BASE + path);

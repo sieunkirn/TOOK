@@ -96,7 +96,8 @@ $('compare-clear').addEventListener('click', () => {
   renderLog();
 });
 
-$('chat-reset').addEventListener('click', () => {
+// 새 대화 버튼은 합본(studio.html)에만 있다. 챗봇 화면(chat.html)은 그 자리에 '립 다시 바르기'(팔레트로 이동) 링크
+$('chat-reset')?.addEventListener('click', () => {
   speaker.stop();
   store.remove('chatMiss');
   state.messages = [];

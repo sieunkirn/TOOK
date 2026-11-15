@@ -3,7 +3,7 @@
 //  - 섞는 칸 색이 바뀌는 동안 같은 색을 took:apply 이벤트로 보내 왼쪽 카메라 입술(lip.js)에 바로 입힌다
 //  - 초기화: 팔레트를 비우고 입술 색을 기본 컬러로 되돌린다
 import { $, el, renderNav, store, api, go, tryOnCard, toast, skeletonCards, shortName } from './common.js';
-import { listenNfc, resolveTag, cardProduct, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
+import { listenNfc, resolveTag, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
 import { createMixer } from './palette-mixer.js'; // 물감·섞는 칸
 import { t as tr } from './i18n.js'; // 화면 문구 (한국어/영어)
 
@@ -111,15 +111,14 @@ const nfcHint = $('nfc-hint');
 const nfcFlash = createNfcHint(nfcHint, { ms: 3000 });
 // 기다리는 동안의 안내 문구는 뺐다: 태그를 읽었을 때만 잠깐 알려 준다
 // 읽은 제품: 그 색을 입술에 바르고, 오른쪽 ④ 자리에 제품 카드를 띄운다 (NFC 리더기)
-// masked: 실물 테스트 카드면 그 가린 번호 → 제품 카드를 카드 이름·사진으로 보여 준다 (색은 연결한 제품 색)
-async function showNfcProduct(id, masked = null) {
+async function showNfcProduct(id) {
   const found = id ? await api('api/products/' + encodeURIComponent(id)) : null;
-  const p = cardProduct(masked, found?.ok ? found.body.product : null);
+  const p = found?.ok ? found.body.product : null;
   if (!p?.color_hex) { nfcFlash(tr('pal.nfcUnknown')); return; }
   toLips(p.color_hex, { finish: p.finish, quiet: false, source: shortName(p) });
   nfcFlash(tr('pal.nfcApplied', { name: shortName(p) }));
   result.hex = p.color_hex;
-  result.recs = p.id && !String(p.id).startsWith('TEST-') ? [p.id] : []; // 실물 테스트 카드는 등록 제품이 아니라 넘기지 않는다
+  result.recs = p.id ? [p.id] : [];
   showResult(true);
   $('res-swatch').style.background = p.color_hex;
   $('res-hex').textContent = tr('pal.nfcRead');

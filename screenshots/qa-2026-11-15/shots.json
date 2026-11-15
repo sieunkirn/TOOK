@@ -1,0 +1,210 @@
+[
+  {
+    "file": "01-home-standby.png",
+    "label": "홈 · 대기 화면",
+    "group": "홈",
+    "url": "index.html",
+    "note": "제품 태그 또는 터치 대기",
+    "errors": []
+  },
+  {
+    "file": "02-home-dark.png",
+    "label": "홈 · 다크 모드",
+    "group": "홈",
+    "url": "index.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "03-home-en.png",
+    "label": "홈 · 영어",
+    "group": "홈",
+    "url": "index.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "10-palette-camera.png",
+    "label": "팔레트 · 카메라(가짜 카메라)",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "초록 화면은 크롬 테스트용 가짜 카메라 영상 (실제 얼굴 아님)",
+    "errors": []
+  },
+  {
+    "file": "11-palette-avatar.png",
+    "label": "팔레트 · 아바타 모드",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "12-palette-avatar-tone.png",
+    "label": "팔레트 · 아바타에서 내 톤 추천",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "오늘 고친 부분: 아바타는 톤을 재지 않고 안내만 표시",
+    "errors": []
+  },
+  {
+    "file": "13-palette-picked.png",
+    "label": "팔레트 · 색 고름",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "14-palette-recommend.png",
+    "label": "팔레트 · 비슷한 제품 추천",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "15-palette-dark.png",
+    "label": "팔레트 · 다크 모드",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "16-palette-en.png",
+    "label": "팔레트 · 영어",
+    "group": "팔레트",
+    "url": "palette.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "20-chat-welcome.png",
+    "label": "챗봇 · 첫 화면",
+    "group": "챗봇",
+    "url": "chat.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "21-chat-answer.png",
+    "label": "챗봇 · 추천 답변",
+    "group": "챗봇",
+    "url": "chat.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "22-chat-unknown.png",
+    "label": "챗봇 · 못 알아들은 말",
+    "group": "챗봇",
+    "url": "chat.html",
+    "note": "못 알아들은 말: 알아들은 척하지 않는 새 문구",
+    "errors": []
+  },
+  {
+    "file": "23-chat-dark.png",
+    "label": "챗봇 · 다크 모드",
+    "group": "챗봇",
+    "url": "chat.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "24-chat-en.png",
+    "label": "챗봇 · 영어",
+    "group": "챗봇",
+    "url": "chat.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "30-product.png",
+    "label": "제품 상세",
+    "group": "제품",
+    "url": "product.html?id=OY-A000001001860",
+    "note": "⚠ 제품 사진(image_url)이 있는데도 회색 \"이미지 플레이스홀더\"만 보임",
+    "errors": []
+  },
+  {
+    "file": "31-product-notfound.png",
+    "label": "제품 상세 · 없는 제품",
+    "group": "제품",
+    "url": "product.html?id=zzz",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "32-recommend.png",
+    "label": "색상 기반 추천",
+    "group": "제품",
+    "url": "recommend.html?hex=%23CE322F",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "33-recommend-nohex.png",
+    "label": "색상 기반 추천 · 색 없음",
+    "group": "제품",
+    "url": "recommend.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "34-shades.png",
+    "label": "호수 안내",
+    "group": "제품",
+    "url": "shades.html?id=D001",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "35-shades-empty.png",
+    "label": "호수 안내 · 정보 없음",
+    "group": "제품",
+    "url": "shades.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "40-lip-together.png",
+    "label": "립 컬러 매핑 (lip-together)",
+    "group": "기타",
+    "url": "lip-together.html",
+    "note": "메뉴에서 링크 없음 (추천 화면 \"다시 조색하기\"로만 진입)",
+    "errors": []
+  },
+  {
+    "file": "41-studio.png",
+    "label": "합본 (studio) · 링크 없음",
+    "group": "기타",
+    "url": "studio.html",
+    "note": "⚠ 어디서도 링크 없음. 가짜 카메라에서도 \"카메라 준비 중\"에 멈춤 (lip-together 는 정상)",
+    "errors": []
+  },
+  {
+    "file": "42-calib.png",
+    "label": "터치 보정 (calib)",
+    "group": "기타",
+    "url": "calib.html",
+    "note": "",
+    "errors": []
+  },
+  {
+    "file": "43-preview.png",
+    "label": "거울 미리보기 (preview)",
+    "group": "기타",
+    "url": "preview.html",
+    "note": "⚠ 화면 전체가 주석 처리됨. 주석 안의 \"-->\" 때문에 왼쪽 위에 '\" 로 되돌린다' 글자가 새어 나옴",
+    "errors": []
+  },
+  {
+    "file": "44-kiosk.png",
+    "label": "키오스크 틀 (kiosk)",
+    "group": "기타",
+    "url": "kiosk.html?page=index.html",
+    "note": "모든 화면이 이 5:8 틀 안에서 열림",
+    "errors": []
+  }
+]

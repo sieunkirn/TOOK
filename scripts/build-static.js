@@ -18,9 +18,9 @@ if (!existsSync(join(root, 'public/vendor/mediapipe/vision_bundle.js'))) {
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 cpSync(join(root, 'public'), out, { recursive: true });
-mkdirSync(join(out, 'lib'));
+mkdirSync(join(out, 'lib'), { recursive: true });
 for (const f of BROWSER_LIBS) cpSync(join(root, 'src/lib', f), join(out, 'lib', f));
-mkdirSync(join(out, 'data'));
+mkdirSync(join(out, 'data'), { recursive: true });
 // 서버와 같은 데이터(기본: 올리브영, TOOK_DATA=virtual 이면 가상)를 정적 버전에 넣는다
 const { dataFile, DEMO_FILE } = await import('../src/lib/repository.js');
 cpSync(fileURLToPath(dataFile()), join(out, 'data/products.json'));

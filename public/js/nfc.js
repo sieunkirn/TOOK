@@ -90,35 +90,3 @@ export function listenNfc(onTag) {
   window.tookNfc = (code) => onTag(String(code));
   return () => window.removeEventListener('keydown', onKey, true);
 }
-
-// ---------- 휴대폰 NFC(Web NFC) 인식 결과 → 등록 제품 (팔레트) ----------
-// 실물 테스트 카드: 가린 번호(앞 2바이트·끝 1바이트만 남김) → 올리브영 제품 ID.
-// 원래 카드 번호는 적지 않는다. 휴대폰 연결로 받은 결과(가린 번호만 옴)도 같은 값이다
-export const NFC_CARD_PRODUCTS = {
-  '9F:93:••:47': 'OY-A000000241210', // 토스뱅크 카드 → 롬앤 더 쥬시 래스팅 틴트 (테스트용 연결)
-  '52:62:••:54': 'OY-A000001001860', // 음식물쓰레기 종량제 카드 → 시튜에아 에어리 무스 벨벳 (테스트용 연결)
-};
-
-// 실물 테스트 카드를 읽었을 때 제품 카드에 보일 모습: 이름·사진·입술 색(토스뱅크 흰색, 음쓰 검정)은 카드 것으로 덮어쓴다.
-// 실제 판매 제품이 아니므로 가격·올리브영 링크는 비운다. 사진은 사용자가 준 카드 사진 (images/nfc-test/)
-const NFC_CARD_DISPLAY = {
-  // 브랜드 + 이름이 이어서 '토스뱅크 카드', '음쓰 카드'로 읽힌다 (알림 문구는 브랜드와 이름을 붙여 쓴다)
-  '9F:93:••:47': { id: 'TEST-CARD-TOSS', brand: '토스뱅크', brand_en: 'Toss Bank', name: '카드', name_en: 'card', image_url: 'images/nfc-test/toss-bank-card.png', color_hex: '#FFFFFF', finish: 'matte' }, // 입술: 흰색
-  '52:62:••:54': { id: 'TEST-CARD-WASTE', brand: '음쓰', brand_en: 'Food waste', name: '카드', name_en: 'card', image_url: 'images/nfc-test/food-waste-card.png', color_hex: '#000000', finish: 'matte' }, // 입술: 검정색
-};
-
-/** 연결한 제품(base) 위에 카드 모습을 덮어쓴 표시용 제품 (테스트 데이터) */
-export function cardProduct(masked, base) {
-  const d = NFC_CARD_DISPLAY[masked];
-  if (!d || !base) return base || null;
-  return { ...base, ...d, shade_name: '', price: null, list_price: null, url: null, url_en: null, source: 'test', test_card: true };
-}
-
-/** 휴대폰 NFC 인식 결과 → 제품 ID (없으면 null). 태그에 제품 ID 를 써 둔 경우(NDEF text) > 실물 테스트 카드 */
-export function resolveReading(r) {
-  for (const rec of r.records || []) {
-    const id = rec.text ? resolveTag(rec.text) : null;
-    if (id) return id;
-  }
-  return (r.masked && NFC_CARD_PRODUCTS[r.masked]) || null;
-}

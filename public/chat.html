@@ -22,7 +22,8 @@
         <button type="button" id="tts" class="icon-btn" aria-pressed="true" aria-label="답변 소리로 읽어주기" title="답변 소리로 읽어주기" data-i18n-aria="chat.tts" data-i18n-title="chat.tts">
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="tts-wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="tts-mute" d="m22 9-6 6m0-6 6 6"/></svg>
         </button>
-        <button type="button" id="chat-reset" data-i18n="chat.reset">새 대화</button>
+        <!-- 립 다시 바르기: 팔레트 거울 화면으로. 대화·섞은 색·바른 립은 그대로 둔다 (초기화 없음) -->
+        <button type="button" id="chat-to-palette" onclick="location.href='palette.html'" data-i18n="chat.toPalette">립 다시 바르기</button>
       </div>
     </div>
 
@@ -41,19 +42,14 @@
       <button type="button" id="compare-clear" data-i18n="chat.compareClear">비우기</button>
     </div>
 
-    <!-- 키보드 입력 없음: 마이크로 말하거나 답변 아래 빠른 답장 버튼을 눌러 묻는다.
-         가운데 칸은 들은 말을 보여 주기만 한다 (읽기 전용) -->
-    <form id="chat-form" class="chat-input voice-only" autocomplete="off">
-      <button type="button" id="voice" class="icon-btn voice-main" aria-pressed="false" aria-label="말로 질문하기" title="말로 질문하기" data-i18n-aria="chat.voice" data-i18n-title="chat.voice">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg>
-      </button>
+    <!-- 입력: 아래 화면 터치 키보드로 쓰거나 답변 아래 빠른 답장 버튼을 누른다. 마이크(음성 질문)는 2026-11-15 뺐다 (합본 studio.html 에는 남아 있다) -->
+    <form id="chat-form" class="chat-input voice-only no-mic" autocomplete="off">
       <label for="chat-input" class="hidden" data-i18n="chat.heard">들은 말</label>
-      <input type="text" id="chat-input" readonly tabindex="-1" placeholder="마이크를 누르고 말씀하세요 · 답변 아래 질문을 눌러도 돼요">
+      <input type="text" id="chat-input" readonly tabindex="-1" placeholder="아래 키보드로 입력하세요">
       <button type="button" id="scan-open" class="icon-btn narrow-only" aria-label="바코드로 제품 알아보기" title="바코드로 제품 알아보기" data-i18n-aria="chat.scanOpen" data-i18n-title="chat.scanOpen">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
       </button>
     </form>
-    <p id="voice-status" class="muted small" aria-live="polite"></p>
     <p id="nfc-hint" class="nfc-hint" aria-live="polite"></p>
   </section>
 

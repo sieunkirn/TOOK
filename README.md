@@ -13,6 +13,11 @@ AI 기반 개인 맞춤형 뷰티 서비스 took(툭)의 **구조·흐름·기�
 - 화면 우측 스크롤바는 보이지 않게 하되, 터치·휠을 통한 스크롤은 유지한다.
 - 키오스크 PC는 `scripts/kiosk-chrome.bat` 을 사용한다.
 
+## 기준 화면 크기
+- 키오스크 화면은 세로 **900×1440** (CSS 픽셀) 을 기준으로 한다.
+- 노트북·태블릿·휴대폰 어디서 열어도 세로 5:8 비율로만 보인다: 맨 위 창으로 연 화면은 `device-frame.js` 가 고정 비율 틀 `kiosk.html?page=…` 안으로 옮기고, 틀은 창 안에 들어가는 가장 큰 5:8 상자를 가운데에 두고 남는 곳은 검게 채운다
+- 예외: 터치 보정(`calib.html`, 화면 전체 좌표가 필요), 미리보기(`preview.html`), 자동 테스트(`navigator.webdriver`)
+
 ## 실행 방법
 ```bash
 npm install        # MediaPipe 설치 + public/vendor 로 복사 + 얼굴 랜드마크 모델 다운로드(postinstall)

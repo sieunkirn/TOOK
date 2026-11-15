@@ -27,7 +27,8 @@
 <body data-idle-reset="off">
 <div class="cb" id="cb"></div>
 <script>
-  const calib = window.__tookCalib;
+  // 키오스크 틀(kiosk.html) 안에서 열면 엔진은 맨 위 창에 있다 (touch-calib.js 의 ROOT)
+  const calib = window.__tookCalib || (() => { try { return window.top.__tookCalib; } catch { return null; } })();
   const box = document.getElementById('cb');
   const btn = (cls, title, sub, onclick) => {
     const b = document.createElement('button');

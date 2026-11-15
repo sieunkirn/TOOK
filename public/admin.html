@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>took(툭) - 관리자</title>
+<link rel="stylesheet" href="css/wireframe.css">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="js/touch-calib.js"></script>
+<script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
+<script src="js/theme-boot.js"></script>
+<style>
+  /* 관리자 화면 (2026-11-15): 홈 오른쪽 아래 '관리자' 버튼으로 온다.
+     - 터치 범위 조정: 정전식 터치 필름을 꽂은 뒤 십자 5개를 눌러 터치 좌표를 화면에 맞춘다 (js/touch-calib.js)
+     - 조정값은 이 기기 브라우저에 저장되고, '조정값 복사'로 코드를 복사해 개발 쪽에 넘기면
+       touch-calib.js 의 BUILT_IN_CODE 에 넣어 어느 기기·언제 켜도 같은 값이 적용된다
+     calib.html 처럼 맨 위 창에서 바로 열린다 (키오스크 5:8 틀 밖). 조정 전에는 터치가 어긋나 있으므로 화면 전체가 버튼 하나다 */
+  html, body { height: 100%; margin: 0; overflow: hidden; background: var(--paper); color: var(--ink); }
+  .ad { position: fixed; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto; gap: 12px; padding: 12px; box-sizing: border-box; }
+  .ad.empty { grid-template-rows: auto minmax(0, 1fr) auto; }
+  .ad h1 { grid-column: 1 / -1; margin: 4px 4px 0; font-size: 22px; }
+  .ad button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 0; border-radius: 24px; font-size: 28px; font-weight: 800; word-break: keep-all; }
+  .ad button small { font-size: 16px; font-weight: 500; color: var(--mute); }
+  .ad .primary { grid-column: 1 / -1; background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .ad .primary small { color: inherit; opacity: 0.75; }
+  .ad-code { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 15px; color: var(--mute); }
+  .ad-code textarea { width: 100%; height: 76px; box-sizing: border-box; padding: 8px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--soft); color: var(--ink); font: 13px/1.4 ui-monospace, monospace; resize: none; }
+</style>
+</head>
+<body data-idle-reset="off">
+<div class="ad" id="ad"></div>
+<script>
+  const calib = window.__tookCalib || (() => { try { return window.top.__tookCalib; } catch { return null; } })();
+  const box = document.getElementById('ad');
+  const btn = (cls, title, sub, onclick) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    if (cls) b.className = cls;
+    b.innerHTML = `${title}<small>${sub}</small>`;
+    b.addEventListener('click', onclick);
+    return b;
+  };
+  const when = (iso) => (iso ? new Date(iso).toLocaleString('ko-KR') : '');
+  // 개발 쪽(Claude)에 그대로 붙여 넣을 글
+  const copyText = () => {
+    const code = calib.exportCode();
+    if (!code) return null;
+    const s = calib.status().saved;
+    return `[툭 터치 조정값] 이 값을 웹에 고정 적용해 줘 (${when(s.at)}, 조정 오차 ${s.rms.toFixed(1)}px)\n${code}`;
+  };
+  async function copy(ta) {
+    const text = ta.value;
+    try {
+      if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); calib.toast('조정값을 복사했어요. Claude 에게 붙여 넣어 주세요'); return; }
+    } catch { /* 아래로 */ }
+    ta.focus();
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch { ok = false; }
+    calib.toast(ok ? '조정값을 복사했어요. Claude 에게 붙여 넣어 주세요' : '아래 글을 길게 눌러 복사해 주세요');
+  }
+  const render = () => {
+    const s = calib.status();
+    box.replaceChildren();
+    const h = document.createElement('h1');
+    h.textContent = '관리자';
+    box.append(h);
+    box.classList.toggle('empty', !s.saved);
+    if (!s.saved) {
+      // 조정 전: 터치가 어긋나 있어도 눌리도록 화면 전체가 시작 버튼
+      box.append(btn('primary', '화면 아무 곳이나 눌러<br>터치 범위 조정 시작', '정전식 필름을 꽂은 뒤 눌러 주세요. 십자 5개를 차례로 누르고 저장하면 정확도 테스트로 넘어가요', () => calib.startCalib()));
+    } else {
+      box.append(
+        btn('primary', '터치 범위 조정', '정전식 필름을 꽂은 뒤 십자 5개를 다시 눌러 맞춰요', () => calib.startCalib()),
+        btn('', '정확도 테스트', '동그라미 9개를 눌러 맞는지 봐요', () => calib.startTest()),
+        btn('', '조정값 복사', 'Claude 에게 붙여 넣으면 웹에 고정돼요', () => copy(box.querySelector('textarea'))),
+        btn('', '키오스크 화면으로', '조정한 채로 실제 화면을 써 봐요', () => { location.href = 'index.html'; }),
+        btn('', s.saved.source === 'builtin' ? '전체화면 ' + (s.fullscreen ? '끄기' : '켜기') : '이 기기 조정값 지우기',
+          s.saved.source === 'builtin' ? '주소창·상단 바를 숨기거나 다시 보여요' : (s.builtIn ? '웹에 고정한 값으로 돌아가요' : '조정 전 상태로 돌아가요'),
+          () => (s.saved.source === 'builtin' ? calib.toggleFullscreen() : calib.reset())),
+      );
+    }
+    const info = document.createElement('div');
+    info.className = 'ad-code';
+    const src = !s.saved ? '조정값 없음'
+      : s.saved.source === 'builtin' ? '웹에 고정한 값 사용 중'
+      : s.sameAsBuiltIn ? '이 기기에 저장한 값 사용 중 (웹에 고정한 값과 같음)'
+      : '이 기기에 저장한 값 사용 중' + (s.builtIn ? ' (웹에 고정한 값과 다름 → 복사해서 다시 고정하세요)' : ' (아직 웹에 고정 안 됨 → 복사해서 Claude 에게 붙여 넣으세요)');
+    const t = s.lastTest;
+    const line = document.createElement('span');
+    line.textContent = src
+      + (s.saved ? ` · ${when(s.saved.at)} · 조정 오차 ${s.saved.rms.toFixed(1)}px` : '')
+      + (t ? ` · 마지막 테스트 ${t.n}/${t.total} 맞음 (평균 ${t.avg.toFixed(0)}px)` : '')
+      + (s.sim ? ' · 시뮬레이션' : '');
+    info.append(line);
+    if (s.saved) {
+      const ta = document.createElement('textarea');
+      ta.readOnly = true;
+      ta.value = copyText() || '';
+      ta.setAttribute('aria-label', '복사할 조정값');
+      info.append(ta);
+    }
+    box.append(info);
+  };
+  if (calib) { calib.onChange(render); render(); }
+  else box.textContent = '터치 조정 스크립트를 불러오지 못했어요';
+</script>
+</body>
+</html>

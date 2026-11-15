@@ -9,11 +9,12 @@
 <script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
 <style>
-    /* 고정 비율 화면 (2026-11-13): Galaxy Tab S10 FE+ 세로 화면의 800×1280 비율만 유지한다.
-     가로 방향은 무시하고 세로 5:8 비율을 기준으로 화면을 가운데에 둔다.
+    /* 고정 비율 화면 (2026-11-13): 세로 900×1440(5:8) 비율만 유지한다.
+     노트북·태블릿·휴대폰 어디서 열어도(device-frame.js 가 이 틀로 옮긴다) 가로 방향은 무시하고 세로 5:8 비율을 기준으로 화면을 가운데에 둔다.
      남는 공간은 검게 채워 앱처럼 보이게 한다. */
   html, body { height: 100%; margin: 0; overflow: hidden; background: var(--paper); }
-  body.tab-lock { background: #000; }
+  html:has(body.tab-lock), body.tab-lock { background: #000; }
+  body.tab-lock { max-width: none; width: 100%; }
   #kiosk-frame { position: fixed; display: block; border: 0; transform-origin: 50% 50%; }
 </style>
 </head>
@@ -21,17 +22,17 @@
 <iframe id="kiosk-frame" title="키오스크 화면" allow="camera; microphone; autoplay; fullscreen"></iframe>
 <script>
   const frame = document.getElementById('kiosk-frame');
-  const BASE = [800, 1280]; // Galaxy Tab S10 FE+ 세로 화면 비율: 5:8
+  const BASE = [900, 1440]; // 기준 세로 화면: 5:8
   const fit = () => {
     const W = innerWidth, H = innerHeight;
     const scale = Math.min(W / BASE[0], H / BASE[1]);
-    const fw = BASE[0] * scale;
-    const fh = BASE[1] * scale;
-    frame.style.width = fw + 'px';
-    frame.style.height = fh + 'px';
-    frame.style.left = (W - fw) / 2 + 'px';
-    frame.style.top = (H - fh) / 2 + 'px';
-    frame.style.transform = 'none';
+    // 화면 속은 늘 900×1440 으로 그리고 통째로 줄이거나 키운다 (2026-11-15 QA: 기기마다 레이아웃 폭이 달라져
+    // 작은 화면에서 챗봇 키보드가 밀려나고 메뉴가 두 줄이 되던 문제). 가운데를 축으로 scale 한다
+    frame.style.width = BASE[0] + 'px';
+    frame.style.height = BASE[1] + 'px';
+    frame.style.left = (W - BASE[0]) / 2 + 'px';
+    frame.style.top = (H - BASE[1]) / 2 + 'px';
+    frame.style.transform = `scale(${scale})`;
     document.body.classList.add('tab-lock');
   };
   addEventListener('resize', fit);

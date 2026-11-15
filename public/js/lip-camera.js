@@ -276,7 +276,7 @@ async function loop(gen = state.gen) {
       if (state.analyze) collectSkin();
       render();
       setGuide(guideText());
-      if ($('match')) $('match').disabled = !state.avatar?.tone || !!state.analyze;
+      if ($('match')) $('match').disabled = false; // 아바타는 톤을 재지 않는다: 누르면 '카메라로 테스트해 주세요' 안내 (lip-look.js)
     } catch (e) {
       console.warn('[took] 아바타 그리기 오류:', e);
     }

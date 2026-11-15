@@ -124,9 +124,9 @@ const MOODS_EN = [
   { words: ['look pretty', 'look prettier', 'look good'], ack: 'You already look great, but here are colors that brighten your face.', query: { concerns: ['호감 가는'] } },
 ];
 export const GENERIC_ACKS_EN = [
-  'Got it! Let me pick a lip that is nice to wear today.',
-  'Thanks for telling me. Here are some easy-to-wear colors to start.',
-  'Okay, let me pick some everyday lips for you.',
+  "I didn't quite catch that. For now, here is a lip that is nice to wear today.",
+  "I'm not sure I understood. Here are some easy-to-wear colors to start.",
+  "I didn't quite catch that, so here are some everyday lips first.",
 ];
 
 export const START_SUGGESTIONS_EN = ['Recommend an everyday lip', 'Recommend a lip for a date', 'My lips are dry. What should I use?', 'A glossy coral under 20,000 won'];

@@ -56,6 +56,8 @@ export function showError(text) {
   $('error').textContent = text;
   $('error').classList.toggle('hidden', !text);
   $('cam-retry').classList.toggle('hidden', !text);
+  // 카메라를 못 쓸 땐 '카메라로 테스트하기'(눌린 모양)를 숨기고 '카메라 다시 연결' 하나만 둔다 (2026-11-15 QA)
+  $('use-camera')?.classList.toggle('hidden', !!text);
   if (text) setPlaceholder(false, tr('lip.camUnavailable'));
 }
 
@@ -67,8 +69,7 @@ export function setPlaceholder(loading, text) {
 
 export function guideText() {
   if (state.source === 'avatar') {
-    if (state.analyze) return tr('lip.avatarMeasuring');
-    return state.avatar?.tone ? '' : tr('lip.avatarNoTone');
+    return tr('lip.avatarNoTone'); // 아바타는 톤을 재지 않는다 (lip-look.js 'match' 버튼)
   }
   if (state.tracker === null) return tr('lip.noTracker');
   if (!state.lips) return tr('lip.centerFace');

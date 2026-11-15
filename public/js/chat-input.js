@@ -25,8 +25,9 @@ ttsBtn.addEventListener('click', () => {
 });
 renderTts();
 
+// 마이크 버튼이 있는 화면만 (챗봇 화면 chat.html 은 2026-11-15 마이크를 뺐다. 합본 studio.html 에는 있다)
 const voiceBtn = $('voice');
-setupVoiceInput({
+if (voiceBtn) setupVoiceInput({
   button: voiceBtn,
   input,
   status: $('voice-status'),
@@ -46,7 +47,7 @@ const KEYBOARD_INPUT = true;
 input.readOnly = !KEYBOARD_INPUT;
 if (KEYBOARD_INPUT) {
   input.removeAttribute('tabindex');
-  input.placeholder = C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below');
+  input.placeholder = voiceBtn ? C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below') : C('아래 키보드로 입력하세요', 'Type with the keyboard below');
 } else {
   input.tabIndex = -1;
   input.placeholder = C('마이크를 누르고 말씀해 주세요 · 오른쪽 질문을 눌러도 돼요', 'Tap the microphone and speak · or tap a question on the right');

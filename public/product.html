@@ -48,7 +48,8 @@
   });
   const { ok, body } = id ? await api('api/products/' + encodeURIComponent(id)) : { ok: false, body: { error: t('detail.noId') } };
   if (!ok) {
-    info.replaceChildren(el('p', { class: 'msg', text: body.error || t('detail.notFound') }));
+    // 서버 오류 문구는 한국어라 화면 언어 문구로 보여 준다 (ID 없음 / 못 찾음)
+    info.replaceChildren(el('p', { class: 'msg', text: id ? t('detail.notFound') : t('detail.noId') }));
     buttons.forEach((b) => (b.disabled = true));
   } else {
     const p = body.product;

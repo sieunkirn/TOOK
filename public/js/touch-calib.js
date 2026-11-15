@@ -16,6 +16,24 @@
 (function (G) {
   'use strict';
 
+  // ---------- 웹에 고정한 터치 조정값 (2026-11-15) ----------
+  // 어드민 화면(admin.html)의 '조정값 복사'로 받은 코드(T1.…)를 여기에 붙여 넣으면,
+  // 이 기기에 저장한 값이 없을 때(새 기기·브라우저 기록 삭제·시크릿 창) 언제 켜도 이 값으로 터치 범위를 맞춘다.
+  // 어드민에서 다시 조정해 저장하면 그 기기에서는 저장한 값이 먼저다. 빈 문자열이면 고정값 없음
+  const BUILT_IN_CODE = '';
+
+  // 조정값 코드 = 'T1.' + base64url(JSON {m, rms, max, size, at}). 올바르지 않으면 null
+  function decodeCode(text) {
+    try {
+      const k = String(text || '').match(/T1\.([A-Za-z0-9_-]+)/);
+      if (!k) return null;
+      const s = k[1].replace(/-/g, '+').replace(/_/g, '/');
+      const o = JSON.parse(decodeURIComponent(escape(atob(s + '==='.slice((s.length + 3) % 4)))));
+      if (!Array.isArray(o.m) || o.m.length !== 6 || !o.m.every(Number.isFinite) || Math.abs(o.m[0] * o.m[4] - o.m[1] * o.m[3]) < 1e-6) return null;
+      return { m: o.m, rms: Number(o.rms) || 0, max: Number(o.max) || 0, size: o.size, at: o.at || null };
+    } catch { return null; }
+  }
+
   // ---------- 아핀 변환 계산 (브라우저 밖 단위 테스트에서도 쓴다) ----------
   // 행렬 m = [a, b, c, d, e, f] : x' = a·x + b·y + c, y' = d·x + e·y + f
   const applyAffine = (m, x, y) => [m[0] * x + m[1] * y + m[2], m[3] * x + m[4] * y + m[5]];
@@ -85,7 +103,7 @@
     return [a, b, -(a * m[2] + b * m[5]), d, e, -(d * m[2] + e * m[5])];
   }
 
-  G.TookAffine = { solveAffine, applyAffine, invertAffine };
+  G.TookAffine = { solveAffine, applyAffine, invertAffine, decodeCode, BUILT_IN_CODE };
   if (typeof document === 'undefined' || typeof window === 'undefined') return; // 단위 테스트(node)
 
   // ---------- 브라우저 ----------
@@ -157,11 +175,18 @@
     const sim = ss.get('tookCalib.sim') === '1';
     const debug = ss.get('tookCalib.debug') === '1';
     const storeKey = sim ? SIM_KEY : KEY;
+    // 웹에 고정한 값 (시뮬레이션에는 쓰지 않는다)
+    const builtIn = (() => {
+      if (sim) return null;
+      const o = decodeCode(BUILT_IN_CODE);
+      return o ? { frame: 'screen', ...o, source: 'builtin' } : null;
+    })();
     const load = () => {
       try {
         const v = JSON.parse(ls.get(storeKey));
-        return v && Array.isArray(v.m) && v.m.length === 6 && v.m.every(Number.isFinite) && v.frame === 'screen' ? v : null; // 예전(창 안쪽 기준) 값은 버린다 → 다시 보정
-      } catch { return null; }
+        if (v && Array.isArray(v.m) && v.m.length === 6 && v.m.every(Number.isFinite) && v.frame === 'screen') return { ...v, source: 'local' }; // 예전(창 안쪽 기준) 값은 버린다 → 다시 보정
+      } catch { /* 아래로 */ }
+      return builtIn; // 이 기기에 저장한 값이 없으면 웹에 고정한 값
     };
     let saved = load();
     let calib = null; // 보정 화면 상태
@@ -529,7 +554,6 @@
       html { touch-action: none; }
       button.took-press:not(:disabled), .btn-primary.took-press, .btn-line.took-press, .photo-btn.took-press { transform: scale(0.96); transition-duration: 0.08s; }
       input[type="range"].took-press::-webkit-slider-thumb { transform: scale(1.18); }
-      .paint.took-press .paint-blob { transform: scale(0.9); }
       .tkb-key.took-press { background: var(--line-2); }
       .tkb-fn.took-press { background: var(--faint); }
       .tkb-enter.took-press { background: var(--ink-2); }
@@ -801,7 +825,7 @@
       if (act === 'retry') { calibIntro(); showBtns([]); calib.step = 0; calibShowTarget(); return; }
       if (act === 'test') { closeCalib(); startTest(); return; }
       if (act === 'save' && calib.result) {
-        saved = { frame: 'screen', m: calib.result.m, rms: calib.result.rms, max: calib.result.max, size: calib.size, at: new Date().toISOString() };
+        saved = { frame: 'screen', m: calib.result.m, rms: calib.result.rms, max: calib.result.max, size: calib.size, at: new Date().toISOString(), source: 'local' };
         const ok = ls.set(storeKey, JSON.stringify(saved));
         closeCalib();
         wins.forEach(prepareWindow);
@@ -917,13 +941,18 @@
     }
     function reset() {
       ls.del(storeKey);
-      saved = null;
+      saved = builtIn; // 이 기기에 저장한 값만 지운다. 웹에 고정한 값이 있으면 그 값으로 돌아간다
       lastSummary = null;
-      toast(sim ? '시뮬레이션 보정값을 지웠어요' : '터치 보정값을 지웠어요');
+      toast(sim ? '시뮬레이션 보정값을 지웠어요' : builtIn ? '이 기기의 조정값을 지우고 웹에 고정한 값으로 돌아갔어요' : '터치 보정값을 지웠어요');
       notify();
     }
     function status() {
-      return { sim, debug, saved: saved ? { rms: saved.rms, max: saved.max, at: saved.at } : null, lastTest: lastSummary, fullscreen: isFullscreen() };
+      return {
+        sim, debug, saved: saved ? { rms: saved.rms, max: saved.max, at: saved.at, source: saved.source || 'local' } : null,
+        builtIn: builtIn ? { rms: builtIn.rms, max: builtIn.max, at: builtIn.at } : null,
+        sameAsBuiltIn: !!(saved && builtIn && saved.m.every((v, i) => Math.abs(v - builtIn.m[i]) < 1e-6)),
+        lastTest: lastSummary, fullscreen: isFullscreen(),
+      };
     }
 
     // ---------- 전체화면 버튼 ----------
@@ -937,8 +966,7 @@
 
     // ---------- 보정값 공유 (카톡 등) ----------
     // 코드 = 'T1.' + base64url(JSON). 공유 글에는 이 값을 바로 적용하는 링크(calib.html?calibset=코드)를 같이 넣는다
-    const b64url = (s) => btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-    const unb64url = (s) => atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4));
+    const b64url = (s) => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
     function exportCode() {
       if (!saved) return null;
       const o = { m: saved.m.map((v) => Number(v.toPrecision(10))), rms: Number((saved.rms || 0).toFixed(2)), max: Number((saved.max || 0).toFixed(2)), size: saved.size, at: saved.at };
@@ -946,11 +974,9 @@
     }
     function importCode(text) {
       try {
-        const m = String(text).match(/T1\.([A-Za-z0-9_-]+)/);
-        if (!m) return false;
-        const o = JSON.parse(unb64url(m[1]));
-        if (!Array.isArray(o.m) || o.m.length !== 6 || !o.m.every(Number.isFinite) || Math.abs(o.m[0] * o.m[4] - o.m[1] * o.m[3]) < 1e-6) return false;
-        saved = { frame: 'screen', m: o.m, rms: Number(o.rms) || 0, max: Number(o.max) || 0, size: o.size, at: o.at || new Date().toISOString(), imported: true };
+        const o = decodeCode(text);
+        if (!o) return false;
+        saved = { frame: 'screen', ...o, at: o.at || new Date().toISOString(), imported: true, source: 'local' };
         ls.set(storeKey, JSON.stringify(saved));
         lastSummary = null;
         wins.forEach(prepareWindow);

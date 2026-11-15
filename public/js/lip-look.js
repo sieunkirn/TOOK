@@ -129,6 +129,11 @@ function finishMatch() {
 $('match')?.addEventListener('click', () => {
   $('match-result').textContent = '';
   if ($('match-metrics')) $('match-metrics').textContent = '';
+  // 아바타 그림은 사람 피부가 아니라 톤을 재지 않는다 (2026-11-15 QA: '잴 수 없어요' 안내와 달리 '추정 톤'이 나오던 문제)
+  if (state.source === 'avatar') {
+    $('match-result').textContent = tr('lip.avatarNoTone');
+    return;
+  }
   state.analyze = { samples: [], started: performance.now() };
   $('match').disabled = true;
 });

@@ -1,7 +1,8 @@
 // 홈 = 대기 화면 (옛 거울 ver4 대기 화면): 왼쪽 위 TOOK 로고, 오른쪽 위 시계, 가운데 점선 얼굴(천천히 밝아졌다 어두워짐), 아래 안내 두 줄.
 // 화면 아무 곳이나 누르면(키보드도) 바로 팔레트로 간다. 오른쪽 아래 다크 모드·언어 버튼은 눌러도 넘어가지 않는다.
 // 라이트·다크 모드에 따라 흰 바탕+검정 선 / 검정 바탕+흰 선 (색은 wireframe.css 의 --paper·--ink)
-import { t, languageMenu, themeToggle } from './i18n.js';
+import { t, lang, languageMenu, themeToggle } from './i18n.js';
+document.documentElement.lang = lang(); // 홈은 applyI18n 을 부르지 않아 <html lang> 을 직접 맞춘다
 import { store, logoSvg } from './common.js';
 import { REDUCE_MOTION as reduce } from './motion.js';
 
@@ -24,7 +25,13 @@ sub.className = 'hs-sub';
 sub.textContent = t('home.standbyTouch');
 const langWrap = document.createElement('div');
 langWrap.className = 'intro-lang';
-langWrap.append(themeToggle(), languageMenu({ skipIntro: false }));
+// 관리자 버튼 (2026-11-15): 터치 필름 범위 조정·조정값 복사 화면(admin.html). 키오스크 5:8 틀 밖, 맨 위 창에서 연다
+const adminBtn = document.createElement('button');
+adminBtn.type = 'button';
+adminBtn.className = 'theme-toggle home-admin';
+adminBtn.textContent = t('home.admin');
+adminBtn.addEventListener('click', () => { (window.top || window).location.href = 'admin.html'; });
+langWrap.append(adminBtn, themeToggle(), languageMenu({ skipIntro: false }));
 box.append(hint, sub, langWrap);
 
 const clock = box.querySelector('.hs-clock');
