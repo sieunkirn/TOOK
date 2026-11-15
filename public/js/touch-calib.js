@@ -20,7 +20,7 @@
   // 어드민 화면(admin.html)의 '조정값 복사'로 받은 코드(T1.…)를 여기에 붙여 넣으면,
   // 이 기기에 저장한 값이 없을 때(새 기기·브라우저 기록 삭제·시크릿 창) 언제 켜도 이 값으로 터치 범위를 맞춘다.
   // 어드민에서 다시 조정해 저장하면 그 기기에서는 저장한 값이 먼저다. 빈 문자열이면 고정값 없음
-  const BUILT_IN_CODE = '';
+  const BUILT_IN_CODE = 'T1.eyJtIjpbMC4wMjU5MzEzODc1OCwtMS44MDU4MTY4NTEsMTQwMC4zNDkwMiwwLjY0NDg1MDQ3NzYsMC4wMTE2MDU2Njc1NSwtNzAuNzQwOTUwM10sInJtcyI6MTkuMzcsIm1heCI6MjcuNTgsInNpemUiOlsxNDQwLDkwMF0sImF0IjoiMjAyNi0xMS0xNVQwOTozOToyMy42NDdaIn0'; // 2026-11-15 18:39 매장 기기 조정값 (오차 19.4px, 화면 1440×900)
 
   // 조정값 코드 = 'T1.' + base64url(JSON {m, rms, max, size, at}). 올바르지 않으면 null
   function decodeCode(text) {
