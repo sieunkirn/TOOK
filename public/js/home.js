@@ -26,12 +26,17 @@ sub.textContent = t('home.standbyTouch');
 const langWrap = document.createElement('div');
 langWrap.className = 'intro-lang';
 // 관리자 버튼 (2026-11-15): 터치 필름 범위 조정·조정값 복사 화면(admin.html). 키오스크 5:8 틀 밖, 맨 위 창에서 연다
-const adminBtn = document.createElement('button');
-adminBtn.type = 'button';
-adminBtn.className = 'theme-toggle home-admin';
-adminBtn.textContent = t('home.admin');
-adminBtn.addEventListener('click', () => { (window.top || window).location.href = 'admin.html'; });
-langWrap.append(adminBtn, themeToggle(), languageMenu({ skipIntro: false }));
+// 키오스크 틀(kiosk.html) 안에서는 손님이 보는 화면이라 버튼을 두지 않는다. 직원은 주소창에 /admin.html 로 연다
+const inKiosk = (() => { try { return window.top !== window && /kiosk(\.html)?$/.test(window.top.location.pathname); } catch { return true; } })();
+if (!inKiosk) {
+  const adminBtn = document.createElement('button');
+  adminBtn.type = 'button';
+  adminBtn.className = 'theme-toggle home-admin';
+  adminBtn.textContent = t('home.admin');
+  adminBtn.addEventListener('click', () => { (window.top || window).location.href = 'admin.html'; });
+  langWrap.append(adminBtn);
+}
+langWrap.append(themeToggle(), languageMenu({ skipIntro: false }));
 box.append(hint, sub, langWrap);
 
 const clock = box.querySelector('.hs-clock');

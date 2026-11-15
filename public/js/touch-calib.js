@@ -582,8 +582,11 @@
     const POINTER = ['pointerdown', 'pointermove', 'pointerup', 'pointercancel'];
     const BLOCK_TOUCH = ['touchstart', 'touchmove', 'touchend', 'touchcancel'];
     const BLOCK_MOUSE = ['mousedown', 'mousemove', 'mouseup', 'click', 'dblclick', 'auxclick', 'contextmenu'];
+    // 관리자 화면(admin.html)은 보정값을 걸지 않고 태블릿 터치 그대로 쓴다 (2026-11-15). 조정·정확도 테스트 화면을 연 동안만 가로챈다
+    const rawPage = /\/admin(\.html)?$/.test(root.location.pathname);
     function managed(e) {
       if (!isActive()) return false;
+      if (rawPage && !calib && !test) return false;
       if (e.type.startsWith('touch')) return true;
       if (typeof e.pointerType === 'string' && e.pointerType) return e.pointerType === 'touch' || (sim && e.pointerType === 'mouse');
       if (sim) return true; // 시뮬레이션: 마우스도 터치로 본다
