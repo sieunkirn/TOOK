@@ -21,6 +21,8 @@
   // 이 기기에 저장한 값이 없을 때(새 기기·브라우저 기록 삭제·시크릿 창) 언제 켜도 이 값으로 터치 범위를 맞춘다.
   // 어드민에서 다시 조정해 저장하면 그 기기에서는 저장한 값이 먼저다. 빈 문자열이면 고정값 없음
   const BUILT_IN_CODE = '';
+  // 이 시각보다 먼저 기기에 저장한 조정값은 버린다 (배포만으로 매장 기기의 저장값을 지우고 싶을 때 지금 시각으로 바꾼다)
+  const CLEAR_LOCAL_BEFORE = '2026-11-15T10:42:00Z';
 
   // 조정값 코드 = 'T1.' + base64url(JSON {m, rms, max, size, at}). 올바르지 않으면 null
   function decodeCode(text) {
@@ -184,8 +186,9 @@
     const load = () => {
       try {
         const v = JSON.parse(ls.get(storeKey));
-        if (v && Array.isArray(v.m) && v.m.length === 6 && v.m.every(Number.isFinite) && v.frame === 'screen') return { ...v, source: 'local' }; // 예전(창 안쪽 기준) 값은 버린다 → 다시 보정
+        if (v && Array.isArray(v.m) && v.m.length === 6 && v.m.every(Number.isFinite) && v.frame === 'screen' && !(Date.parse(v.at) < Date.parse(CLEAR_LOCAL_BEFORE))) return { ...v, source: 'local' }; // 예전(창 안쪽 기준) 값은 버린다 → 다시 보정
       } catch { /* 아래로 */ }
+      if (!sim && ls.get(storeKey)) ls.del(storeKey); // 버린 값(예전 기준·지우기 시각 이전)은 저장소에서도 지운다
       return builtIn; // 이 기기에 저장한 값이 없으면 웹에 고정한 값
     };
     let saved = load();
