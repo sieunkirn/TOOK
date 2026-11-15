@@ -728,9 +728,9 @@
         </div>
         <div data-dots style="position:absolute;inset:0;pointer-events:none"></div>
         <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;width:92%;display:none;gap:14px">
-          <button type="button" data-act="save" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">저장</button>
-          <button type="button" data-act="retry" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 하기</button>
-          <button type="button" data-act="test" style="flex:1.4 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:18px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">지금 보정값으로 테스트만</button>
+          <button type="button" data-act="save" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">저장</button>
+          <button type="button" data-act="retry" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 하기</button>
+          <button type="button" data-act="test" style="flex:1.4 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:18px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">지금 보정값으로 테스트만</button>
         </div>
         <div data-finger style="position:absolute;width:30px;height:30px;margin:-15px;border-radius:50%;background:rgba(0,0,0,.25);border:2px solid #111;display:none;pointer-events:none"></div>
         <button type="button" data-act="cancel" data-calib-exempt style="position:absolute;right:12px;top:12px;min-height:40px;padding:4px 14px;border-radius:10px;border:1px solid #999;background:#fff;color:#555;font-size:14px">닫기 (마우스·Esc)</button>`;
@@ -760,11 +760,29 @@
       for (const b of calib.ov.querySelectorAll('[data-btns] [data-act]')) b.style.display = acts.includes(b.dataset.act) ? '' : 'none';
     };
     /** 보정 화면 버튼 중 맞은 것 (q = 보정된 좌표) */
-    const btnAt = (root, q) => [...root.querySelectorAll('[data-act]')].find((b) => {
-      if (b.offsetParent === null) return false;
-      const r = b.getBoundingClientRect();
-      return q[0] >= r.left && q[0] <= r.right && q[1] >= r.top && q[1] <= r.bottom;
-    });
+    // 2026-11-15: 실제 필름은 보정 뒤에도 20~30px 어긋날 수 있어 버튼 밖을 누른 것으로 판정돼 안 눌렸다
+    // → 버튼 테두리에서 BTN_SLOP 안이면 가장 가까운 버튼을 누른 것으로 본다
+    const BTN_SLOP = 48;
+    const btnAt = (root, q) => {
+      let best = null, bestD = Infinity;
+      for (const b of root.querySelectorAll('[data-act]')) {
+        if (b.offsetParent === null) continue;
+        const r = b.getBoundingClientRect();
+        const dx = Math.max(r.left - q[0], 0, q[0] - r.right);
+        const dy = Math.max(r.top - q[1], 0, q[1] - r.bottom);
+        const d = Math.hypot(dx, dy);
+        if (d < bestD) { bestD = d; best = b; }
+      }
+      return bestD <= BTN_SLOP ? best : null;
+    };
+    // 버튼이 안 눌렸을 때 실제로 눌린 자리를 잠깐 보여 준다 (어디가 어긋났는지 보이게)
+    function missMark(ov, q) {
+      const d = rdoc.createElement('div');
+      d.style.cssText = `position:absolute;left:${q[0]}px;top:${q[1]}px;width:18px;height:18px;margin:-9px;border-radius:50%;border:3px solid #111;background:#fff;pointer-events:none;`;
+      ov.append(d);
+      setTimeout(() => d.remove(), 1200);
+      toast('버튼 밖이 눌렸어요. 동그라미 자리가 실제로 눌린 곳이에요');
+    }
     function calibIntro() {
       calib.step = -1; calib.pts = []; calib.result = null;
       showBtns(saved ? ['test'] : []); // 보정값이 있으면 그 값으로 테스트만 해 볼 수도 있다
@@ -818,7 +836,7 @@
       if (c.result) {
         const q = cur.q || applyC(c.result.m, P);
         const b = btnAt(q$('[data-btns]'), q);
-        if (b) calibAction(b.dataset.act);
+        if (b) calibAction(b.dataset.act); else missMark(c.ov, q);
         return;
       }
       // 누르고 있는 동안의 좌표 평균
@@ -887,9 +905,9 @@
         <div data-msg style="position:absolute;left:50%;top:30%;translate:-50% -50%;width:84%;text-align:center;word-break:keep-all"></div>
         <div data-dots style="position:absolute;inset:0;pointer-events:none"></div>
         <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;width:92%;display:none;gap:14px">
-          <button type="button" data-act="done" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">끝내기</button>
-          <button type="button" data-act="again" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 테스트</button>
-          <button type="button" data-act="recal" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 보정</button>
+          <button type="button" data-act="done" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">끝내기</button>
+          <button type="button" data-act="again" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 테스트</button>
+          <button type="button" data-act="recal" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 보정</button>
         </div>
         <button type="button" data-act="done" data-calib-exempt style="position:absolute;right:12px;top:12px;min-height:40px;padding:4px 14px;border-radius:10px;border:1px solid #999;background:#fff;color:#555;font-size:14px">닫기 (마우스·Esc)</button>`;
       moveIntoStage(ov);
@@ -928,7 +946,7 @@
       const q = correct(P);
       if (t.i >= TEST_TARGETS.length) { // 결과 화면: 버튼도 보정된 좌표로 누른다
         const b = btnAt(tq('[data-btns]'), q);
-        if (b) testAction(b.dataset.act);
+        if (b) testAction(b.dataset.act); else missMark(t.ov, q);
         return;
       }
       const d = Math.hypot(q[0] - t.target[0], q[1] - t.target[1]);
@@ -1049,7 +1067,7 @@
       ov.innerHTML = `<div style="width:min(86vw,560px);padding:18px;border-radius:18px;background:#fff;color:#111;display:flex;flex-direction:column;gap:12px">
         <b style="font-size:19px">이 글을 길게 눌러 복사해 카톡에 붙여 넣으세요</b>
         <textarea readonly style="width:100%;height:220px;font:13px/1.4 ui-monospace,monospace;box-sizing:border-box"></textarea>
-        <button type="button" data-act="close" style="min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">닫기</button></div>`;
+        <button type="button" data-act="close" style="min-height:96px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">닫기</button></div>`;
       ov.querySelector('textarea').value = text;
       ov.querySelector('[data-act=close]').addEventListener('click', () => ov.remove());
       rdoc.body.append(ov);
