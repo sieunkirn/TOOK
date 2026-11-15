@@ -3,6 +3,7 @@ import { fullName as koFullName, shortName as koShortName } from '../lib/catalog
 import { t, isEn, brandOf, nameOf, displayName, storeUrlOf, priceText, finishText as finishName } from './i18n.js';
 import { el } from './dom.js';
 import { go } from './store.js';
+import { hasPick, togglePick } from './chat-picks.js';
 
 // 화면에 보이는 제품 이름: 영어 화면이면 글로벌 올리브영 영어 이름(없으면 한국어 이름), 한국어면 그대로
 export const fullName = (p) => (isEn() ? displayName(p) : koFullName(p));
@@ -33,10 +34,25 @@ export function detailLink(product, from, text = t('card.detail')) {
 // 카드에는 브랜드·제품명·색상값·제형·가격과 올리브영 링크만 보여 준다 (나머지 정보는 제품 상세 화면에)
 // extraActions: 화면마다 필요한 버튼 (예: 립 컬러 매핑의 '입술에 발라보기')
 /** '입술에 발라보기' 버튼이 붙은 제품 카드. 누르면 onTry(제품) */
+// 그 옆 '챗봇에 담기'(2026-11-15): 담은 제품으로 챗봇과 이야기한다 (chat-picks.js · chat.js picksHandoff)
 export function tryOnCard(product, onTry) {
   return productCard(product, {
-    extraActions: [el('button', { type: 'button', text: t('lip.tryOn'), onclick: () => onTry(product) })],
+    extraActions: [el('button', { type: 'button', text: t('lip.tryOn'), onclick: () => onTry(product) }), pickButton(product)],
   });
+}
+
+/** '챗봇에 담기' 버튼: 누를 때마다 담기/빼기. 담은 상태면 눌린 모양('담음 ✓') */
+export function pickButton(product) {
+  const b = el('button', { type: 'button', class: 'pick-btn', 'aria-label': t('card.pickAria', { name: shortName(product) }) });
+  const sync = () => {
+    const on = hasPick(product.id);
+    b.textContent = t(on ? 'card.picked' : 'card.pick');
+    b.setAttribute('aria-pressed', String(on));
+  };
+  b.addEventListener('click', () => { togglePick(product, shortName(product)); });
+  window.addEventListener('took:picks-change', sync);
+  sync();
+  return b;
 }
 
 export function productCard(product, { extraActions = [] } = {}) {

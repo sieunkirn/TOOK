@@ -13,6 +13,7 @@ import { C, STUDIO, BARCODE_PANEL, showTab, log, input, START, state, base, AB_I
 import { runCompare, renderLog, streamAt, streamReply } from './chat-view.js';
 import { speaker } from './chat-input.js';
 import { stopScan } from './chat-products.js';
+import { getPicks } from './chat-picks.js';
 
 const TYPING_MIN_MS = 700; // 답이 아무리 빨라도 타이핑 표시를 이만큼은 보여 준다
 
@@ -177,6 +178,37 @@ async function paletteHandoff() {
   save();
 }
 await paletteHandoff();
+
+// '챗봇에 담기'로 담아 온 제품 (chat-picks.js): 그 제품들을 대화에 카드로 보여 주고 지금 목록(1번·2번…)으로 삼는다.
+//   서버 대화 상태(context.shown)에도 넣어 "첫 번째 거 자세히", "첫 번째랑 두 번째 비교해 줘", "그중에 제일 싼 거는?"이 담은 제품을 가리킨다.
+//   담은 목록이 바뀌었을 때만 새로 인사한다 (같은 목록으로 다시 열면 그대로). 모달이 열릴 때 nav.js 가 took:picks 를 보낸다
+async function picksHandoff() {
+  const picks = getPicks();
+  const key = picks.map((x) => x.id).join(',');
+  if (!picks.length || store.get('chatPicksSeen') === key) return false;
+  store.set('chatPicksSeen', key);
+  const found = await Promise.all(picks.map((x) => api('api/products/' + encodeURIComponent(x.id)).catch(() => null)));
+  const products = found.filter((r) => r?.ok && r.body.product).map((r, i) => ({ ...r.body.product, n: i + 1 }));
+  if (!products.length) return false;
+  state.list = products;
+  state.focus = [];
+  state.panel = 'list';
+  state.ctx = { ...(state.ctx || {}), shown: products.map((p) => p.id), offset: 0 };
+  const many = products.length >= 2;
+  state.messages.push({
+    role: 'bot', picks: key, products,
+    text: C(`담아 오신 제품 ${products.length}개예요. 이 제품들에 대해 궁금한 걸 물어보세요.`, `Here are the ${products.length} products you added. Ask me anything about them.`)
+      + (many ? C(' 번호로 비교하거나 가격을 견줘 볼 수도 있어요.', ' You can compare them by number or check which is cheapest.') : ''),
+    suggestions: many
+      // '…기준으로 골라 줘' = 그 제품을 기준 제품으로 (그다음 '비슷한 색'·'더 저렴한 거'가 그 제품 기준). 영어 엔진은 아직 못 알아들어 영어에선 뺀다
+      ? C(['첫 번째 거 자세히 알려 줘', '첫 번째랑 두 번째 비교해 줘', '그중에 제일 싼 거는?', '첫 번째 거 기준으로 골라 줘'], ['Tell me more about the first one', 'Compare the first and second', 'Which is the cheapest of those?'])
+      : C(['첫 번째 거 자세히 알려 줘', '첫 번째 거 기준으로 골라 줘', '이거보다 저렴한 거'], ['Tell me more about the first one', 'Something cheaper']),
+  });
+  save();
+  return true;
+}
+await picksHandoff();
+window.addEventListener('took:picks', async () => { if (await picksHandoff()) renderLog(); });
 if (!BARCODE_PANEL) {
   $('scan-open')?.remove(); // 좁은 화면의 바코드 버튼
   $('rec-panel').setAttribute('aria-label', C('추천 제품', 'Recommended products'));

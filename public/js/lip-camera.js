@@ -153,7 +153,6 @@ async function startCamera({ auto = false } = {}) {
   const gen = state.gen;
   state.source = 'camera';
   state.analyze = null;
-  setSourceButtons();
   view.classList.add('hidden');
   $('placeholder').classList.remove('hidden');
   showError('');
@@ -362,58 +361,5 @@ mountCamSettings(view.closest('.stage'), {
 });
 window.addEventListener('pagehide', stopCamera);
 
-// ---------- 아바타 (입술 위치가 저장된 샘플 그림) ----------
-export let samples = null;
-const loadImage = (src) => new Promise((ok, fail) => {
-  const img = new Image();
-  img.onload = () => ok(img);
-  img.onerror = () => fail(new Error(tr('lip.imgFail')));
-  img.src = src;
-});
-
-// 다시 누르면 다음 그림으로 바뀐다
-async function startAvatar() {
-  const next = state.source === 'avatar' ? (state.avatar.i + 1) : 0;
-  stopWaiting();
-  stopCamera();
-  const gen = state.gen;
-  state.source = 'avatar';
-  state.analyze = null;
-  showError('');
-  setSourceButtons();
-  setPlaceholder(true, tr('lip.avatarLoading'));
-  try {
-    samples ||= await fetch('samples/samples.json').then((r) => r.json());
-    const i = next % samples.length;
-    const s = samples[i];
-    const img = await loadImage(s.src);
-    if (gen !== state.gen || state.source !== 'avatar') return; // 그새 다시 눌렀거나 카메라로 바꿨다
-    state.avatar = { img, i, tone: null };
-    state.lips = { outer: s.lips.outer, inner: s.lips.inner };
-    $('placeholder').classList.add('hidden');
-    view.classList.remove('hidden');
-    setSourceButtons();
-    loop(gen);
-    // 피부 톤 측정 지점은 얼굴 인식으로 찾는다 (그림이라 인식이 안 되면 어울리는 컬러는 카메라에서만)
-    if (state.tracker === undefined) state.tracker = await loadTracker();
-    const found = state.tracker ? await detectVideo(img, performance.now()) : null;
-    if (state.source === 'avatar' && state.avatar.img === img) state.avatar.tone = found?.tone || null;
-  } catch (e) {
-    setPlaceholder(false, tr('lip.avatarFail'));
-    setGuide(e.message);
-  }
-}
-
-// 테스트 방식 버튼: 카메라 아래에 둘을 나란히. 지금 쓰는 쪽은 눌린 상태로 보인다
-const sourceRow = el('div', { class: 'row source-row', role: 'group', 'aria-label': tr('lip.sourceGroup') },
-  el('button', { type: 'button', id: 'use-avatar', onclick: startAvatar }),
-  el('button', { type: 'button', id: 'use-camera', text: tr('lip.useCamera'), onclick: () => startCamera() }));
-$('cam-retry').closest('.row').before(sourceRow);
-function setSourceButtons() {
-  const n = samples?.length;
-  $('use-avatar').textContent = state.source === 'avatar' && n ? tr('lip.avatarNext', { i: state.avatar ? state.avatar.i + 1 : 1, n }) : tr('lip.useAvatar');
-  $('use-avatar').setAttribute('aria-pressed', String(state.source === 'avatar'));
-  $('use-camera').setAttribute('aria-pressed', String(state.source === 'camera'));
-}
-setSourceButtons();
+// 아바타 테스트 버튼과 '카메라로 테스트하기' 버튼은 2026-11-15 뺐다 (카메라는 화면에 들어오면 자동으로 켜지고, 못 쓰면 '카메라 다시 연결')
 startCamera({ auto: true });

@@ -6,6 +6,7 @@ import { $, el, renderNav, store, api, go, tryOnCard, toast, skeletonCards, shor
 import { listenNfc, resolveTag, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
 import { createMixer } from './palette-mixer.js'; // 물감·섞는 칸
 import { t as tr } from './i18n.js'; // 화면 문구 (한국어/영어)
+import { openChat } from './nav.js'; // 챗봇 모달
 
 const RECOMMEND_COUNT = 6; // 고른 색과 비슷한 제품을 몇 개 보여 줄지
 
@@ -101,7 +102,8 @@ function takeData() {
 function openTake() {
   const d = takeData();
   if (!d.hex) return;
-  go('chat.html', { from: 'palette', hex: d.hex, fin: d.fin, int: String(d.int), tone: d.tone, recs: d.recs.length ? d.recs.join(',') : null });
+  // 2026-11-15: 화면을 옮기지 않고 챗봇 모달로 연다 (nav.js openChat)
+  openChat({ from: 'palette', hex: d.hex, fin: d.fin, int: String(d.int), tone: d.tone, recs: d.recs.length ? d.recs.join(',') : null });
 }
 $('take-phone').addEventListener('click', openTake);
 $('take-phone-res').addEventListener('click', openTake);

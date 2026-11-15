@@ -5,7 +5,7 @@ import { FINISH_TO_TEXTURE } from './lip-view.js';
 import { measureTone, classifyTone, matchPresets, TONE_THRESHOLDS, TEXTURES, PRESETS } from './lip-engine.js';
 import { t as tr, finishText as finishName } from './i18n.js';
 import { STUDIO, PALETTE, MATCH_FRAMES, MATCH_TIMEOUT_MS, state } from './lip-state.js';
-import { sourceFrame, samples } from './lip-camera.js';
+import { sourceFrame } from './lip-camera.js';
 
 const RECOMMEND_COUNT = 6; // 고른 색과 비슷한 제품을 몇 개 보여 줄지
 

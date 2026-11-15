@@ -2,6 +2,8 @@
 import { t, languageMenu, themeToggle, applyI18n } from './i18n.js';
 import { el } from './dom.js';
 import { store, HERE } from './store.js';
+import { STATIC } from './api.js';
+import { getPicks } from './chat-picks.js';
 import { DEVICE_MODE } from './device-frame.js';
 import { setupIdleReset } from './idle-reset.js';
 
@@ -99,6 +101,7 @@ function fullscreenButton() {
  */
 export function renderNav(opts = {}) {
   if (document.querySelector('header.nav')) return; // 합본 화면처럼 스크립트 두 개가 함께 부르면 한 번만 그린다
+  if (IN_CHAT_MODAL) return setupInModal();
   // 챗봇 화면(2026-11-13): 로고와 전체화면 버튼만 남긴다 (챗봇·팔레트·거울·다크 모드·언어·기기 해제 버튼 없음)
   const minimal = HERE === 'chat.html';
   const nav = el('header', { class: minimal ? 'nav nav-min' : 'nav' },
@@ -106,8 +109,7 @@ export function renderNav(opts = {}) {
     el('strong', {}, Object.assign(el('a', { href: 'index.html', id: 'nav-reset', class: 'nav-logo', 'aria-label': t('nav.reset'), title: t('nav.reset'), onclick: goHomeWithMotion }), { innerHTML: logoSvg() })),
     // 상단 '홈'·'팔레트' 메뉴는 2026-11-09 뺐다 (로고 = 시작 화면)
     // 오른쪽 끝: 다크 모드 켜기/끄기 + 언어 전환
-    // AI 뷰티 챗봇 (2026-11-11 손님 휴대폰을 없애고 태블릿으로 합침)
-    minimal ? null : freshLink('chat.html', t('nav.chat')),
+    // AI 뷰티 챗봇: 2026-11-15 상단 메뉴 링크 대신 오른쪽 아래 플로팅 버튼(chatFab)으로 옮겼다
     // 팔레트 (2026-11-13 다시 추가): 챗봇 옆에서 바로 팔레트로
     minimal ? null : freshLink('palette.html', t('nav.palette')),
     minimal ? null : el('div', { class: 'nav-lang' }, themeToggle(), languageMenu()),
@@ -118,4 +120,100 @@ export function renderNav(opts = {}) {
   const reset = minimal ? null : deviceResetButton();
   if (reset) nav.append(reset);
   nav.append(fullscreenButton());
+  if (!minimal) document.body.append(chatFab());
+}
+
+// ---------- AI 뷰티 챗봇 모달 (2026-11-15) ----------
+// 오른쪽 아래 플로팅 버튼을 누르면 지금 화면 위에 챗봇(chat.html)을 iframe 으로 띄운다.
+// 닫아도 iframe 은 그대로 숨겨 두어 다시 열면 대화가 그대로 있고, 다른 화면으로 가도 대화는 sessionStorage 에 남아 이어진다
+// (자동 초기화·로고 누르기 때만 지워진다)
+const IN_CHAT_MODAL = (() => { try { return !!window.frameElement?.classList.contains('chat-modal-frame'); } catch { return false; } })();
+
+// 모달 안의 챗봇: 상단 메뉴·자동 초기화는 바깥 화면이 맡는다. 조작은 바깥 화면의 자동 초기화 타이머에 알린다
+function setupInModal() {
+  document.documentElement.classList.add('in-chat-modal');
+  const host = window.parent;
+  for (const type of ['pointerdown', 'keydown', 'touchstart', 'wheel', 'input']) {
+    window.addEventListener(type, () => { try { host.dispatchEvent(new host.Event('took:activity')); } catch { /* 없음 */ } }, { capture: true, passive: true });
+  }
+  // '립 다시 바르기': 모달을 닫고, 팔레트가 아닌 화면이면 팔레트로
+  const back = document.getElementById('chat-to-palette');
+  if (back) back.onclick = () => host.tookChat?.close({ toPalette: true });
+  applyI18n();
+}
+
+let chatModal = null;
+function buildChatModal() {
+  const frame = el('iframe', { class: 'chat-modal-frame', title: t('nav.chat'), allow: 'microphone; autoplay; fullscreen' });
+  const close = el('button', { type: 'button', class: 'chat-modal-close', 'aria-label': t('chat.close'), title: t('chat.close'), onclick: () => closeChat() });
+  close.innerHTML = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+  const box = el('div', { class: 'chat-modal-box', role: 'dialog', 'aria-modal': 'true', 'aria-label': t('nav.chat') },
+    el('div', { class: 'chat-modal-head' }, el('strong', { text: t('nav.chat') }), close), frame);
+  const root = el('div', { class: 'chat-modal', hidden: '' }, box);
+  root.addEventListener('pointerdown', (e) => { if (e.target === root) closeChat(); }); // 바깥(어두운 곳)을 누르면 닫는다
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !root.hidden) closeChat(); });
+  document.body.append(root);
+  chatModal = { root, frame };
+  return chatModal;
+}
+
+/**
+ * 챗봇 모달 열기. params 가 있으면(팔레트의 '챗봇과 이어서 상담') 그 값을 넘겨 챗봇을 새로 불러온다.
+ * 없으면 이미 불러온 챗봇을 그대로 보여 준다 (처음이면 전달값 없이 연다)
+ */
+export function openChat(params = null) {
+  const m = chatModal || buildChatModal();
+  if (params) {
+    const clean = Object.fromEntries(Object.entries(params).filter(([, v]) => v !== null && v !== undefined && v !== ''));
+    store.set('nav', { page: 'chat.html', params: clean });
+    const query = new URLSearchParams(clean).toString();
+    m.frame.src = 'chat.html' + (!STATIC && query ? '?' + query : '');
+  } else if (!m.frame.getAttribute('src')) {
+    store.remove('navCurrent.chat.html');
+    m.frame.src = 'chat.html';
+  }
+  else {
+    // 이미 불러온 챗봇: 그사이 '챗봇에 담기'로 담은 제품이 있으면 그걸로 이야기를 이어 간다 (chat.js picksHandoff)
+    try { m.frame.contentWindow.dispatchEvent(new m.frame.contentWindow.Event('took:picks')); } catch { /* 아직 불러오는 중 */ }
+  }
+  m.root.hidden = false;
+  document.documentElement.classList.add('chat-modal-open');
+  m.root.querySelector('.chat-modal-box').animate([{ opacity: 0, transform: 'translateY(24px) scale(0.98)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' });
+  document.querySelector('.chat-fab')?.setAttribute('aria-expanded', 'true');
+}
+
+/** 챗봇 모달 닫기: 숨기기만 한다 (대화 유지). 읽어 주던 답은 멈춘다 */
+export function closeChat({ toPalette = false } = {}) {
+  if (!chatModal) return;
+  try { chatModal.frame.contentWindow.speechSynthesis?.cancel(); } catch { /* 없음 */ }
+  chatModal.root.hidden = true;
+  document.documentElement.classList.remove('chat-modal-open');
+  document.querySelector('.chat-fab')?.setAttribute('aria-expanded', 'false');
+  document.querySelector('.chat-fab')?.focus();
+  if (toPalette && HERE !== 'palette.html') location.href = 'palette.html';
+}
+window.tookChat = { open: openChat, close: closeChat };
+
+// AI 뷰티 챗봇 플로팅 버튼 (오른쪽 아래 동그란 말풍선). 누르면 챗봇 모달을 연다
+function chatFab() {
+  const b = el('button', {
+    type: 'button', class: 'chat-fab', 'aria-label': t('nav.chat'), title: t('nav.chat'), 'aria-haspopup': 'dialog', 'aria-expanded': 'false',
+    onclick: () => openChat(),
+  });
+  b.innerHTML = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+    + '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.6"/></svg>';
+  // 담은 제품 수: 오른쪽 위 작은 동그라미 숫자 ('챗봇에 담기', chat-picks.js)
+  const badge = el('span', { class: 'chat-fab-badge', 'aria-hidden': 'true' });
+  b.append(badge);
+  const sync = () => {
+    const n = getPicks().length;
+    badge.textContent = n ? String(n) : '';
+    b.setAttribute('aria-label', n ? `${t('nav.chat')} · ${t('pick.count', { n })}` : t('nav.chat'));
+  };
+  window.addEventListener('took:picks-change', (e) => {
+    sync();
+    if (e.detail?.count) badge.animate([{ transform: 'scale(1.5)' }, { transform: 'none' }], { duration: 300, easing: 'ease-out' });
+  });
+  sync();
+  return b;
 }

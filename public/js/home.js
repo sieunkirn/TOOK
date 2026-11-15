@@ -1,5 +1,6 @@
 // 홈 = 대기 화면 (옛 거울 ver4 대기 화면): 왼쪽 위 TOOK 로고, 오른쪽 위 시계, 가운데 점선 얼굴(천천히 밝아졌다 어두워짐), 아래 안내 두 줄.
-// 화면 아무 곳이나 누르면(키보드도) 바로 팔레트로 간다. 오른쪽 아래 다크 모드·언어 버튼은 눌러도 넘어가지 않는다.
+// 안내 아래 버튼 두 개(위아래, 2026-11-15): '카메라로 발라 보기' → 팔레트, '제품 태그하기' → 챗봇 화면(리더기에 제품을 올리면 설명).
+// 예전처럼 화면 아무 곳이나 눌러 넘어가지는 않는다. 오른쪽 아래 다크 모드·언어 버튼은 그대로.
 // 라이트·다크 모드에 따라 흰 바탕+검정 선 / 검정 바탕+흰 선 (색은 wireframe.css 의 --paper·--ink)
 import { t, lang, languageMenu, themeToggle } from './i18n.js';
 document.documentElement.lang = lang(); // 홈은 applyI18n 을 부르지 않아 <html lang> 을 직접 맞춘다
@@ -15,14 +16,27 @@ const FACE_SVG = '<svg class="hs-face" viewBox="0 0 200 250" aria-hidden="true" 
   + '<path d="M62 108H86M114 108H138M62 126H86M114 126H138"/><path d="M90 160Q100 170 110 160"/><path d="M82 190H118"/></g></svg>';
 
 const box = document.getElementById('home-standby');
-box.setAttribute('aria-label', t('home.touch'));
 box.innerHTML = `<div class="hs-top" aria-hidden="true">${logoSvg('hs-logo')}<time class="hs-clock"></time></div>${FACE_SVG}`;
 const hint = document.createElement('p');
 hint.className = 'hs-hint';
-hint.textContent = t('home.standby');
-const sub = document.createElement('p');
-sub.className = 'hs-sub';
-sub.textContent = t('home.standbyTouch');
+hint.textContent = t('home.choose');
+// 시작 버튼 두 개 (로그인 화면의 버튼처럼 한 열에 두 줄)
+const startBtn = (cls, label, desc, onClick) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'hs-btn ' + cls;
+  b.innerHTML = '<strong></strong><span></span>';
+  b.querySelector('strong').textContent = label;
+  b.querySelector('span').textContent = desc;
+  b.addEventListener('click', onClick);
+  return b;
+};
+const actions = document.createElement('div');
+actions.className = 'hs-actions';
+actions.append(
+  startBtn('hs-btn-main', t('home.toPalette'), t('home.toPaletteDesc'), () => start('palette')),
+  startBtn('hs-btn-line', t('home.toTag'), t('home.toTagDesc'), () => start('tag')),
+);
 const langWrap = document.createElement('div');
 langWrap.className = 'intro-lang';
 // 관리자 버튼 (2026-11-15): 터치 필름 범위 조정·조정값 복사 화면(admin.html). 키오스크 5:8 틀 밖, 맨 위 창에서 연다
@@ -37,7 +51,7 @@ if (!inKiosk) {
   langWrap.append(adminBtn);
 }
 langWrap.append(themeToggle(), languageMenu({ skipIntro: false }));
-box.append(hint, sub, langWrap);
+box.append(hint, actions, langWrap);
 
 const clock = box.querySelector('.hs-clock');
 const tick = () => {
@@ -75,18 +89,20 @@ function leave() {
     { duration: LEAVE_MS, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
   setTimeout(() => { location.href = 'palette.html'; }, LEAVE_MS);
 }
-const go = (e) => {
-  // 다크 모드·언어 버튼을 누르거나 그 안에서 키를 누르면 넘어가지 않고 버튼이 받는다
-  if (leaving || e.target?.closest?.('.intro-lang') || langWrap.contains(document.activeElement)) return;
+// 버튼: 팔레트는 로고가 날아가는 움직임과 함께, 제품 태그는 챗봇 화면으로 바로 (둘 다 이전 전달값 없이 새로 연다)
+function start(where) {
+  if (leaving) return;
   leaving = true;
-  e.preventDefault();
-  store.remove('navCurrent.palette.html'); // 팔레트는 이전 전달값 없이 새로 연다
+  if (where === 'tag') {
+    store.remove('navCurrent.chat.html');
+    location.href = 'chat.html';
+    return;
+  }
+  store.remove('navCurrent.palette.html');
   leave();
-};
+}
 // 팔레트 상단 로고로 왔으면(common.js goHomeWithMotion): 로고는 이미 제자리, 얼굴 → 안내 글 순서로 떠오른다
 try {
   if (sessionStorage.getItem('took.homeFx') && !reduce) box.classList.add('hs-arrive');
   sessionStorage.removeItem('took.homeFx');
 } catch { /* 저장 불가 환경 */ }
-box.addEventListener('pointerdown', go);
-addEventListener('keydown', go, true);

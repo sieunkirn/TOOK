@@ -299,6 +299,23 @@ Object.assign(STRINGS.en, {
 STRINGS.ko['theme.dark'] = '다크 모드'; STRINGS.ko['theme.light'] = '라이트 모드';
 STRINGS.en['theme.dark'] = 'Dark mode'; STRINGS.en['theme.light'] = 'Light mode';
 STRINGS.ko['home.admin'] = '관리자'; STRINGS.en['home.admin'] = 'Admin';
+// 홈 시작 버튼 두 개 · 제품 카드의 '챗봇에 담기' (2026-11-15)
+Object.assign(STRINGS.ko, {
+  'home.choose': '어떻게 시작할까요?',
+  'home.toPalette': '카메라로 발라 보기', 'home.toPaletteDesc': '거울 앞에서 립 색을 섞어 바로 발라 봐요',
+  'home.toTag': '제품 태그하기', 'home.toTagDesc': '가진 립 제품을 리더기에 올리면 챗봇이 알려 드려요',
+  'card.pick': '챗봇에 담기', 'card.picked': '담음 ✓', 'card.pickAria': '{name}을(를) 챗봇에 담기',
+  'pick.added': '챗봇에 담았어요. 오른쪽 아래 챗봇 버튼을 눌러 물어보세요', 'pick.removed': '챗봇에서 뺐어요', 'pick.full': '챗봇에는 {n}개까지 담을 수 있어요',
+  'pick.count': '담은 제품 {n}개',
+});
+Object.assign(STRINGS.en, {
+  'home.choose': 'How would you like to start?',
+  'home.toPalette': 'Try on with the camera', 'home.toPaletteDesc': 'Mix lip colors and try them on in the mirror',
+  'home.toTag': 'Tag a product', 'home.toTagDesc': 'Put your lip product on the reader and the chatbot explains it',
+  'card.pick': 'Add to chat', 'card.picked': 'Added ✓', 'card.pickAria': 'Add {name} to the chat',
+  'pick.added': 'Added to the chat. Tap the chat button at the bottom right to ask about it', 'pick.removed': 'Removed from the chat', 'pick.full': 'You can add up to {n} products to the chat',
+  'pick.count': '{n} products added',
+});
 
 const svg = (inner, size) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
 const GLOBE = '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/>';

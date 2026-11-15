@@ -721,6 +721,30 @@ body main.home-standby { position: fixed; inset: 0; z-index: 1; margin: 0; paddi
   .palette-page .mix-summary { gap: 5px; }
   .palette-page .pal-finish { height: 248px; width: calc(50% - var(--gap)); padding: 22px 24px 22px 8px; border-radius: 0 0 28px 0; background: transparent; justify-content: flex-end; }
 }
+/* 세로: 추천을 받으면 결과 판이 서랍 크기에서 화면(카메라+서랍 영역)의 절반까지 커지고, 제품은 한 줄에 2개씩 (넘치면 위아래로 밀어 본다) 2026-11-15 */
+@media (orientation: portrait) and (min-width: 700px) {
+  .palette-page .palette.show-result .pal-result { height: calc(50% - var(--gap)); overflow: hidden; animation: pal-grow 0.45s var(--ease) backwards; }
+  .palette-page .palette.show-result #rec-status { flex: none; }
+  .palette-page .palette.show-result .pal-rec { flex: 1 1 auto; min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 12px; overflow-y: auto; overscroll-behavior-y: contain; padding-bottom: 4px; }
+  .palette-page .palette.show-result .pal-rec > p { grid-column: 1 / -1; }
+  /* 카드: 왼쪽 사진, 오른쪽 브랜드·제품명·가격, 아래 버튼 */
+  .palette-page .palette.show-result .pal-rec .card { display: grid; grid-template-columns: 112px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 14px; row-gap: 10px; padding: 12px; align-items: center; }
+  .palette-page .palette.show-result .pal-rec .card-img { grid-row: 1; width: 112px; height: 112px; aspect-ratio: 1; object-fit: cover; border-radius: 14px; margin: 0; }
+  .palette-page .palette.show-result .pal-rec .card dl { display: block; margin: 0; font-size: 15px; line-height: 1.4; }
+  .palette-page .palette.show-result .pal-rec .card dt { display: none; }
+  .palette-page .palette.show-result .pal-rec .card dd { margin: 0; overflow: hidden; text-overflow: ellipsis; }
+  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(1) { color: var(--mute); font-size: 14px; white-space: nowrap; }
+  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(2) { font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(3) { font-weight: 700; margin-top: 4px; }
+  .palette-page .palette.show-result .pal-rec .card .actions { grid-column: 1 / -1; display: flex; gap: 8px; margin: 0; flex-wrap: nowrap; }
+  .palette-page .palette.show-result .pal-rec .card .actions > * { flex: 1 1 0; min-height: 44px; font-size: 14px; padding: 4px 8px; white-space: nowrap; }
+  .palette-page .palette.show-result #take-phone-res { flex: none; }
+  /* 카메라 오류 때의 '카메라 다시 연결'은 커진 판에 가리지 않게 위쪽 절반 가운데로 */
+  .palette-page .palette.show-result .pal-cam > .row:not(.source-row) { top: 25%; }
+  /* 챗봇 버튼은 커진 판 위로 */
+  .palette-page:has(.palette.show-result) .chat-fab { bottom: calc((100dvh - var(--nav-h)) / 2 + 16px); }
+}
+@keyframes pal-grow { from { height: var(--dock-h); } }
 /* 가로: 추천 제품은 서랍 높이에 맞춰 한 줄로 늘어놓고, 넘치면 옆으로 밀어 본다 */
 @media (orientation: landscape) and (min-width: 960px) {
   .palette-page .palette.show-result .pal-result { overflow: hidden; gap: 10px; }
@@ -981,3 +1005,51 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar { display
 .cam-settings .cam-refresh { align-self: flex-start; }
 .cam-settings .cam-actions { display: flex; gap: 8px; margin-top: 6px; }
 .cam-settings .cam-actions span { flex: 1; }
+
+/* AI 뷰티 챗봇 플로팅 버튼 (2026-11-15, 상단 메뉴 링크 대신): 오른쪽 아래 동그란 검은 버튼. 팔레트 화면은 아래 서랍 위에 띄운다 */
+.chat-fab { position: fixed; right: 24px; bottom: 24px; z-index: 40; width: 68px; height: 68px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--paper); text-decoration: none; box-shadow: var(--shadow-up); transition: transform 0.2s var(--ease); -webkit-tap-highlight-color: transparent; }
+.chat-fab { border: 0; padding: 0; min-height: 0; cursor: pointer; }
+.chat-fab:hover { transform: scale(1.05); }
+.chat-fab:active { transform: scale(0.94); }
+.chat-fab:focus-visible { outline: 3px solid var(--mute); outline-offset: 3px; }
+.palette-page .chat-fab { bottom: calc(var(--dock-h, 0px) + var(--gap, 16px) + 16px); }
+@media print { .chat-fab, .chat-modal { display: none; } }
+html.chat-modal-open .chat-fab { opacity: 0; pointer-events: none; }
+
+/* 챗봇 모달 (nav.js openChat): 어두운 바탕 위 큰 흰 상자, 안에 챗봇 화면(chat.html)을 iframe 으로. 닫아도 숨기기만 해서 대화가 남는다 */
+.chat-modal { position: fixed; inset: 0; z-index: 900; display: flex; align-items: center; justify-content: center; padding: calc(var(--nav-h) + 12px) 20px 20px; background: rgba(0, 0, 0, 0.45); }
+.chat-modal[hidden] { display: none; }
+.chat-modal-box { display: flex; flex-direction: column; width: 100%; max-width: 1100px; height: 100%; overflow: hidden; border-radius: 28px; background: var(--paper); box-shadow: var(--shadow-up); }
+.chat-modal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 6px 24px; }
+.chat-modal-head strong { font-size: 18px; }
+.chat-modal-close { width: 52px; height: 52px; min-height: 52px; padding: 0; display: grid; place-items: center; border-radius: 50%; border: 0; background: var(--soft); color: var(--ink); }
+.chat-modal-frame { flex: 1 1 auto; width: 100%; min-height: 0; border: 0; background: var(--paper); }
+/* 모달 안의 챗봇 화면: 상단 메뉴가 없으니 화면 높이를 다 쓰고, 이름은 모달 머리에 있으니 뺀다 */
+html.in-chat-modal { --nav-h: 0px; }
+html.in-chat-modal body { background: var(--paper); }
+html.in-chat-modal .chat-head > div:first-child { display: none; }
+html.in-chat-modal .chat-head { justify-content: flex-end; }
+
+/* 홈 시작 버튼 두 개 (2026-11-15, js/home.js): 로그인 화면처럼 한 열에 두 줄. 위 = 검은 버튼(카메라·팔레트), 아래 = 테두리 버튼(제품 태그 → 챗봇).
+   화면 아무 곳이나 눌러 넘어가지 않으니 얼굴·안내를 조금 위로 올린다 */
+body main.home-standby { cursor: default; }
+/* 버튼은 화면 아래쪽(다크 모드·언어 버튼 바로 위), 안내 문구는 버튼 위에 붙인다 */
+.home-standby { --hs-actions-bottom: calc(max(16px, 3vh) + 72px); }
+.home-standby .hs-face { top: 38%; }
+.home-standby .hs-hint { top: auto; bottom: calc(var(--hs-actions-bottom) + 92px * 2 + 14px + 28px); }
+.home-standby .hs-actions { position: absolute; left: 50%; bottom: var(--hs-actions-bottom); translate: -50% 0; width: min(560px, calc(100% - 64px)); display: flex; flex-direction: column; gap: 14px; }
+.home-standby .hs-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 100%; min-height: 92px; padding: 14px 24px; border-radius: 22px; font: inherit; cursor: pointer; transition: transform 0.15s var(--ease), background-color 0.2s; }
+.home-standby .hs-btn strong { font-size: clamp(20px, 2.8vw, 26px); font-weight: 700; }
+.home-standby .hs-btn span { font-size: clamp(13px, 1.7vw, 16px); opacity: 0.7; word-break: keep-all; }
+.home-standby .hs-btn:active { transform: scale(0.97); }
+.home-standby .hs-btn-main { border: 0; background: var(--ink); color: var(--paper); }
+.home-standby .hs-btn-line { border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); }
+.home-standby .hs-btn-line:hover { background: var(--soft); }
+.home-standby.hs-leaving .hs-actions { animation: hs-text-out 0.4s cubic-bezier(.4, 0, .2, 1) forwards; }
+.home-standby.hs-arrive .hs-actions { animation: hs-rise 0.6s cubic-bezier(.2, .8, .2, 1) 0.4s both; }
+
+/* 챗봇 플로팅 버튼의 담은 제품 수 · 카드의 '챗봇에 담기' (2026-11-15, js/chat-picks.js) */
+.chat-fab { overflow: visible; }
+.chat-fab-badge { position: absolute; top: -4px; right: -4px; min-width: 26px; height: 26px; padding: 0 7px; display: grid; place-items: center; border-radius: 999px; background: var(--paper); color: var(--ink); border: 2px solid var(--ink); font-size: 14px; font-weight: 800; line-height: 1; }
+.chat-fab-badge:empty { display: none; }
+.pick-btn[aria-pressed="true"] { background: var(--ink) !important; color: var(--paper) !important; border-color: var(--ink) !important; }
