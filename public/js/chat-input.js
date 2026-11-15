@@ -40,29 +40,19 @@ if (voiceBtn) setupVoiceInput({
   },
 });
 
-// ---------- 입력: 음성·빠른 답장 + (테스트 단계) 키보드 ----------
-// 키오스크는 음성 전용이 목표지만, 지금은 테스트를 위해 가운데 칸에 직접 쓰고 Enter 로도 보낼 수 있다 (합본 화면도 같게).
-// 음성 전용으로 되돌리려면 KEYBOARD_INPUT 을 false 로 바꾼다 (칸은 들은 말만 보여 주는 읽기 전용이 되고 보내기 버튼도 없어진다)
-const KEYBOARD_INPUT = true;
-input.readOnly = !KEYBOARD_INPUT;
-if (KEYBOARD_INPUT) {
-  input.removeAttribute('tabindex');
-  input.placeholder = voiceBtn ? C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below') : C('아래 키보드로 입력하세요', 'Type with the keyboard below');
-} else {
-  input.tabIndex = -1;
-  input.placeholder = C('마이크를 누르고 말씀해 주세요 · 오른쪽 질문을 눌러도 돼요', 'Tap the microphone and speak · or tap a question on the right');
-  $('chat-send')?.remove();
-}
+// ---------- 입력: 화면 키보드·빠른 답장 (합본 화면은 마이크도) ----------
+// 가운데 칸에 직접 쓰고 '보내기'(Enter)로 보낸다
+input.readOnly = false;
+input.removeAttribute('tabindex');
+input.placeholder = voiceBtn ? C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below') : C('아래 키보드로 입력하세요', 'Type with the keyboard below');
 $('chat-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  if (KEYBOARD_INPUT) send(input.value);
+  send(input.value);
 });
 // 화면 터치 키보드: 입력줄 아래에 한/영 키보드를 항상 열어 둔다 (2026-11-11 고정, 기기 키보드 대신, js/touch-keyboard.js)
-if (KEYBOARD_INPUT) {
-  attachTouchKeyboard({
-    input,
-    form: $('chat-form'),
-    pinned: true,
-    onToggle: (on) => { if (on) requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; }); },
-  });
-}
+attachTouchKeyboard({
+  input,
+  form: $('chat-form'),
+  pinned: true,
+  onToggle: (on) => { if (on) requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; }); },
+});

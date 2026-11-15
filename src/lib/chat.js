@@ -43,10 +43,9 @@ function brandIndexEn(brands) {
  * @param {string} [input.tone] 립 컬러 매핑에서 측정한 퍼스널 톤(spring/summer/autumn/winter)
  * @param {'ko'|'en'} [input.lang] 묻고 답하는 언어 (영어면 chat-en.js 로 알아듣고 영어로 답한다)
  */
-// imageOnly: 대표 이미지가 있는 제품만 추천 대상으로 쓴다 (테스트용 '이미지ver.' 버튼)
-export function answer({ message, baseProductId = null, selectedHex = null, limit = 5, context = null, tone = null, imageOnly = false, lang = 'ko' }) {
+export function answer({ message, baseProductId = null, selectedHex = null, limit = 5, context = null, tone = null, lang = 'ko' }) {
   setEn(lang === 'en');
-  const { products, base, ref, shown, toneHint } = buildEnv({ baseProductId, selectedHex, context, tone, imageOnly });
+  const { products, base, ref, shown, toneHint } = buildEnv({ baseProductId, selectedHex, context, tone });
   const brands = [...new Set(allProducts().map((p) => p.brand))];
   // 말·입력 보정: 한글 금액("만 오천 원")과 비슷한 발음("그로시" → "글로시")을 챗봇이 아는 말로 바꾼 뒤 해석한다 (영어는 그대로)
   const spoken = isEn() ? { text: String(message || '').trim(), corrections: [] } : normalizeForChat(message, brands);

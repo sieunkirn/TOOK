@@ -76,16 +76,14 @@ async function handleApi(req, res, url) {
     if (!hex) return sendJson(res, 400, { error: 'hex 파라미터(예: #B3122E)가 필요합니다.' });
     const limit = Math.min(30, Math.max(1, Number(q.get('limit')) || 10));
     const excludeIds = (q.get('exclude') || '').split(',').filter(Boolean);
-    // image=1: 대표 이미지가 있는 제품만 대상으로 추천 (테스트용 '이미지ver.' 버튼)
-    const pool = q.get('image') === '1' ? allProducts().filter((p) => p.image_url) : undefined;
-    const products = recommendByColor(hex, { finish: q.get('finish') || null, limit, excludeIds, products: pool });
+    const products = recommendByColor(hex, { finish: q.get('finish') || null, limit, excludeIds });
     return sendJson(res, 200, { hex, products });
   }
   if (req.method === 'POST' && path === '/api/chat') {
     const body = await readBody(req);
     if (!body.message || typeof body.message !== 'string') return sendJson(res, 400, { error: 'message 가 필요합니다.' });
     // 규칙 챗봇 먼저, 규칙이 뜻을 못 잡은 말만 LLM (설정했을 때). engine 으로 어느 쪽이 답했는지 알려 준다
-    return sendJson(res, 200, await hybridAnswer({ message: body.message, baseProductId: body.baseProductId, selectedHex: body.selectedHex, context: body.context, tone: body.tone, imageOnly: body.imageOnly === true, lang: body.lang === 'en' ? 'en' : 'ko',
+    return sendJson(res, 200, await hybridAnswer({ message: body.message, baseProductId: body.baseProductId, selectedHex: body.selectedHex, context: body.context, tone: body.tone, lang: body.lang === 'en' ? 'en' : 'ko',
       // 상담 프롬프트의 '지금 상황': 어느 기기에서 묻는지, 매장 팔레트에서 넘어온 제형·농도 (src/lib/llm/agent.js contextNote)
       session: typeof body.session === 'string' ? body.session.slice(0, 32) : null, // 말투 다듬기 A/B 나누기용 무작위 id (개인정보 아님)
       handoff: body.handoff && typeof body.handoff === 'object' ? { finish: String(body.handoff.finish || ''), intensity: Number(body.handoff.intensity) } : null }));

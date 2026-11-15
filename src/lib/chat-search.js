@@ -204,9 +204,9 @@ export function relaxHint(q, env) {
 }
 
 // 검색에 쓰는 환경(대상 제품·기준 제품·기준 색·방금 보여 준 제품·측정한 톤). answer() 와 LLM 층(searchProducts)이 같이 쓴다
-export function buildEnv({ baseProductId = null, selectedHex = null, context = null, tone = null, imageOnly = false }) {
+export function buildEnv({ baseProductId = null, selectedHex = null, context = null, tone = null }) {
   // 영어로 답할 때는 글로벌 올리브영 영어 이름이 있는 제품 안에서만 찾는다 (영어 이름을 지어내지 않고, 한국어 이름이 섞이지 않게)
-  const products = (imageOnly ? allProducts().filter((p) => p.image_url) : allProducts()).filter((p) => !isEn() || p.name_en);
+  const products = allProducts().filter((p) => !isEn() || p.name_en);
   const base = baseProductId ? findById(baseProductId) : null;
   const selHex = normalizeHex(selectedHex || '');
   const shown = ((context && typeof context === 'object' ? context.shown : null) || []).map(findById).filter(Boolean);

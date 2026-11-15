@@ -47,13 +47,12 @@ async function staticApi(path, options) {
     if (!hex) return fail(400, 'hex 파라미터가 필요합니다.');
     const limit = Math.min(30, Math.max(1, Number(q.get('limit')) || 10));
     const excludeIds = (q.get('exclude') || '').split(',').filter(Boolean);
-    const pool = q.get('image') === '1' ? catalog.allProducts().filter((p) => p.image_url) : undefined;
-    return ok({ hex, products: rec.recommendByColor(hex, { finish: q.get('finish') || null, limit, excludeIds, products: pool }) });
+    return ok({ hex, products: rec.recommendByColor(hex, { finish: q.get('finish') || null, limit, excludeIds }) });
   }
   if (url.pathname === '/api/chat') {
     const body = JSON.parse(options.body || '{}');
     if (!body.message) return fail(400, 'message 가 필요합니다.');
-    return ok({ engine: 'rule-based', ...chat.answer({ message: body.message, baseProductId: body.baseProductId, selectedHex: body.selectedHex, context: body.context, tone: body.tone, imageOnly: body.imageOnly === true, lang: body.lang === 'en' ? 'en' : 'ko' }) });
+    return ok({ engine: 'rule-based', ...chat.answer({ message: body.message, baseProductId: body.baseProductId, selectedHex: body.selectedHex, context: body.context, tone: body.tone, lang: body.lang === 'en' ? 'en' : 'ko' }) });
   }
   return fail(404, '알 수 없는 API 입니다.');
 }
