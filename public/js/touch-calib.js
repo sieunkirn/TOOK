@@ -689,6 +689,24 @@
         + (rdoc.fullscreenElement ? ' · 전체화면' : '');
     }
 
+    // ---------- 세로 5:8 상자 (2026-11-15) ----------
+    // 조정·테스트 화면도 툭 서비스 화면(kiosk.html)과 같은 900×1440 세로 상자 안에서 한다. 남는 곳은 검게.
+    // 표시는 상자 안에만 놓이고, 좌표는 지금처럼 맨 위 창 기준으로 잰다 (아핀 변환은 화면 전체에 그대로 적용된다)
+    const BASE = [900, 1440];
+    const stageBox = () => {
+      const W = root.innerWidth, H = root.innerHeight;
+      const k = Math.min(W / BASE[0], H / BASE[1]);
+      const w = BASE[0] * k, h = BASE[1] * k;
+      return { x: (W - w) / 2, y: (H - h) / 2, w, h };
+    };
+    const STAGE_HTML = '<div data-stage style="position:absolute;background:#fff;overflow:hidden"></div>';
+    function fitStage(ov) {
+      const b = stageBox();
+      Object.assign(ov.querySelector('[data-stage]').style, { left: b.x + 'px', top: b.y + 'px', width: b.w + 'px', height: b.h + 'px' });
+    }
+    // 상자 안 글·버튼: 상자 폭에 맞춰 글자 크기를 정한다 (기준 900px 폭에서 22px, 작아도 13px)
+    const stageFont = () => Math.max(13, Math.round(stageBox().w / 900 * 22));
+
     // ---------- 보정 화면 ----------
     const TARGETS = [[0.1, 0.1], [0.9, 0.1], [0.9, 0.9], [0.1, 0.9], [0.5, 0.5]];
     function startCalib() {
@@ -700,22 +718,23 @@
       primary = null;
       const ov = rdoc.createElement('div');
       ov.id = 'took-calib';
-      ov.style.cssText = `position:fixed;inset:0;z-index:${Z};background:#fff;color:#111;font:500 17px/1.45 system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;`;
-      ov.innerHTML = `
-        <div data-msg style="position:absolute;left:50%;top:34%;translate:-50% -50%;width:min(80%,520px);text-align:center;word-break:keep-all"></div>
+      ov.style.cssText = `position:fixed;inset:0;z-index:${Z};background:#000;color:#111;font:500 ${stageFont()}px/1.45 system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;`;
+      ov.innerHTML = `${STAGE_HTML}
+        <div data-msg style="position:absolute;left:50%;top:34%;translate:-50% -50%;width:84%;text-align:center;word-break:keep-all"></div>
         <div data-cross style="position:absolute;width:64px;height:64px;margin:-32px;display:none">
           <div style="position:absolute;left:31px;top:0;width:2px;height:64px;background:#111"></div>
           <div style="position:absolute;top:31px;left:0;height:2px;width:64px;background:#111"></div>
           <div data-ring style="position:absolute;inset:16px;border:2px solid #111;border-radius:50%"></div>
         </div>
         <div data-dots style="position:absolute;inset:0;pointer-events:none"></div>
-        <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;display:none;gap:14px">
-          <button type="button" data-act="save" style="min-width:140px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">저장</button>
-          <button type="button" data-act="retry" style="min-width:140px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 하기</button>
-          <button type="button" data-act="test" style="min-width:220px;min-height:64px;font-size:18px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">지금 보정값으로 테스트만</button>
+        <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;width:92%;display:none;gap:14px">
+          <button type="button" data-act="save" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">저장</button>
+          <button type="button" data-act="retry" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 하기</button>
+          <button type="button" data-act="test" style="flex:1.4 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:18px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">지금 보정값으로 테스트만</button>
         </div>
         <div data-finger style="position:absolute;width:30px;height:30px;margin:-15px;border-radius:50%;background:rgba(0,0,0,.25);border:2px solid #111;display:none;pointer-events:none"></div>
         <button type="button" data-act="cancel" data-calib-exempt style="position:absolute;right:12px;top:12px;min-height:40px;padding:4px 14px;border-radius:10px;border:1px solid #999;background:#fff;color:#555;font-size:14px">닫기 (마우스·Esc)</button>`;
+      moveIntoStage(ov);
       rdoc.body.append(ov);
       calib = { ov, step: -1, pts: [], cur: null, result: null };
       wins.forEach(prepareWindow);
@@ -725,6 +744,14 @@
       });
       root.addEventListener('keydown', calibKey, true);
       calibIntro();
+    }
+    // 글·버튼·닫기는 상자 안으로 (십자·점은 맨 위 창 좌표 그대로 overlay 에 둔다)
+    function moveIntoStage(ov) {
+      const st = ov.querySelector('[data-stage]');
+      st.append(...ov.querySelectorAll(':scope > [data-msg], :scope > [data-btns], :scope > [data-calib-exempt]'));
+      fitStage(ov);
+      const onResize = () => { if (ov.isConnected) { fitStage(ov); ov.style.fontSize = stageFont() + 'px'; } else root.removeEventListener('resize', onResize); };
+      root.addEventListener('resize', onResize);
     }
     function calibKey(e) { if (e.key === 'Escape') { e.preventDefault(); calibAction('cancel'); } }
     const q$ = (s) => calib.ov.querySelector(s);
@@ -751,8 +778,9 @@
       const [u, v] = TARGETS[calib.step];
       const c = q$('[data-cross]');
       c.style.display = 'block';
-      c.style.left = u * root.innerWidth + 'px';
-      c.style.top = v * root.innerHeight + 'px';
+      const B = stageBox();
+      c.style.left = B.x + u * B.w + 'px';
+      c.style.top = B.y + v * B.h + 'px';
       q$('[data-ring]').style.background = '';
       q$('[data-msg]').innerHTML = `${calib.step + 1} / ${TARGETS.length}<br>십자 가운데를 눌렀다 떼 주세요`;
     }
@@ -796,8 +824,9 @@
       // 누르고 있는 동안의 좌표 평균
       const raw = [cur.sx / cur.n, cur.sy / cur.n];
       const [u, v] = TARGETS[c.step];
-      // 실제 좌표도 화면 기준으로 (표시 자리 + 이 터치 때의 창 위치)
-      c.pts.push({ raw, real: [u * root.innerWidth + curOff[0], v * root.innerHeight + curOff[1]], off: curOff.slice() });
+      // 실제 좌표도 화면 기준으로 (5:8 상자 안 표시 자리 + 이 터치 때의 창 위치)
+      const B = stageBox();
+      c.pts.push({ raw, real: [B.x + u * B.w + curOff[0], B.y + v * B.h + curOff[1]], off: curOff.slice() });
       c.step++;
       if (c.step < TARGETS.length) { calibShowTarget(); return; }
       q$('[data-cross]').style.display = 'none';
@@ -853,16 +882,17 @@
       primary = null;
       const ov = rdoc.createElement('div');
       ov.id = 'took-calib-test';
-      ov.style.cssText = `position:fixed;inset:0;z-index:${Z};background:#fff;color:#111;font:500 17px/1.45 system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;`;
-      ov.innerHTML = `
-        <div data-msg style="position:absolute;left:50%;top:30%;translate:-50% -50%;width:min(80%,520px);text-align:center;word-break:keep-all"></div>
+      ov.style.cssText = `position:fixed;inset:0;z-index:${Z};background:#000;color:#111;font:500 ${stageFont()}px/1.45 system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;`;
+      ov.innerHTML = `${STAGE_HTML}
+        <div data-msg style="position:absolute;left:50%;top:30%;translate:-50% -50%;width:84%;text-align:center;word-break:keep-all"></div>
         <div data-dots style="position:absolute;inset:0;pointer-events:none"></div>
-        <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;display:none;gap:14px">
-          <button type="button" data-act="done" style="min-width:140px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">끝내기</button>
-          <button type="button" data-act="again" style="min-width:140px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 테스트</button>
-          <button type="button" data-act="recal" style="min-width:140px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 보정</button>
+        <div data-btns style="position:absolute;left:50%;top:62%;translate:-50% 0;width:92%;display:none;gap:14px">
+          <button type="button" data-act="done" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:0;background:#111;color:#fff">끝내기</button>
+          <button type="button" data-act="again" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 테스트</button>
+          <button type="button" data-act="recal" style="flex:1 1 0;min-width:0;padding:0 8px;min-height:64px;font-size:19px;font-weight:700;border-radius:14px;border:2px solid #111;background:#fff;color:#111">다시 보정</button>
         </div>
         <button type="button" data-act="done" data-calib-exempt style="position:absolute;right:12px;top:12px;min-height:40px;padding:4px 14px;border-radius:10px;border:1px solid #999;background:#fff;color:#555;font-size:14px">닫기 (마우스·Esc)</button>`;
+      moveIntoStage(ov);
       rdoc.body.append(ov);
       test = { ov, i: 0, res: [], cur: null };
       wins.forEach(prepareWindow);
@@ -882,7 +912,8 @@
       tq('[data-btns]').style.display = 'none';
       if (t.i === 0) tq('[data-dots]').innerHTML = '';
       const [u, v] = TEST_TARGETS[t.i];
-      const x = u * root.innerWidth, y = v * root.innerHeight;
+      const B = stageBox();
+      const x = B.x + u * B.w, y = B.y + v * B.h;
       t.target = [x, y];
       tq('[data-dots]').querySelector('[data-now]')?.remove();
       tq('[data-dots]').insertAdjacentHTML('beforeend', `<div data-now>${ring(x, y, HIT_R, 'border:3px solid #111;background:rgba(0,0,0,.08)')}${ring(x, y, 3, 'background:#111')}</div>`);
