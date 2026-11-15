@@ -3,5 +3,11 @@
   "framework": null,
   "installCommand": "npm install",
   "buildCommand": "npm run build:web",
-  "outputDirectory": "dist/static"
+  "outputDirectory": "dist/static",
+  "redirects": [
+    { "source": "/", "destination": "/kiosk", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/kiosk", "destination": "/kiosk.html" }
+  ]
 }
