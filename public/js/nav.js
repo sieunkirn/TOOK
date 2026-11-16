@@ -1,5 +1,5 @@
-// 상단 메뉴: TOOK 로고(누르면 홈으로), 챗봇 링크, 다크 모드·언어 버튼, 자동 초기화 연결.
-import { t, languageMenu, themeToggle, applyI18n } from './i18n.js';
+// 상단 메뉴: TOOK 로고(누르면 홈으로), 챗봇 링크, 다크 모드 버튼, 자동 초기화 연결. (언어 버튼은 홈에만, 2026-11-17)
+import { t, themeToggle, applyI18n } from './i18n.js';
 import { el } from './dom.js';
 import { store, HERE } from './store.js';
 import { STATIC } from './api.js';
@@ -100,11 +100,11 @@ export function renderNav(opts = {}) {
     // TOOK_prototype 무드 화면(body.tui-mood)은 새 로고(마크 + TOOK)
     el('strong', {}, Object.assign(el('a', { href: 'index.html', id: 'nav-reset', class: 'nav-logo', 'aria-label': t('nav.reset'), title: t('nav.reset'), onclick: goHomeWithMotion }), { innerHTML: document.body.classList.contains('tui-mood') ? logoFull() : logoSvg() })),
     // 상단 '홈'·'팔레트' 메뉴는 2026-11-09 뺐다 (로고 = 시작 화면)
-    // 오른쪽 끝: 다크 모드 켜기/끄기 + 언어 전환
+    // 오른쪽 끝: 다크 모드 켜기/끄기 (언어 전환은 2026-11-17 사용자 요청으로 홈 화면에서만 — 여기서는 뺐다)
     // AI 뷰티 챗봇: 2026-11-15 상단 메뉴 링크 대신 오른쪽 아래 플로팅 버튼(chatFab)으로 옮겼다
     // 팔레트 (2026-11-13 다시 추가): 챗봇 옆에서 바로 팔레트로
     minimal ? null : freshLink('palette.html', t('nav.palette')),
-    minimal ? null : el('div', { class: 'nav-lang' }, themeToggle(), languageMenu()),
+    minimal ? null : el('div', { class: 'nav-lang' }, themeToggle()),
   );
   document.body.prepend(nav);
   applyI18n();

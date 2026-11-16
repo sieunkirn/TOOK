@@ -14,10 +14,10 @@
 // 얼굴 프레임: 네 모서리 괄호가 카메라에서 찾은 얼굴을 따라가 감싼다 (스마트미러의 얼굴 트래킹 표시). 얼굴이 없으면 제자리에서 숨 쉬듯 빛난다
 //       카메라는 화면 전체 (2026-11-17)
 // 예전 팔레트 기능도 이 디자인 안에: 내 톤으로 추천받기(타원 아래 알약 → 제목 아래 결과·추천 컬러 3개), 텍스처,
-//       추천 카드 '입술에 발라보기'·'챗봇에 담기', 오른쪽 아래 챗봇 플로팅 버튼(모달), 언어(오른쪽 위)
+//       추천 카드 '입술에 발라보기'·'챗봇에 담기', 오른쪽 아래 챗봇 플로팅 버튼(모달). 언어 버튼은 홈에만 (2026-11-17)
 // 카메라·입술 추적·색 입히기는 lip.js 그대로 (took:apply 이벤트로 색을 보낸다)
 import { $, store, api, skeletonCards, tryOnCard, shortName } from './common.js';
-import { t as tr, langToggle } from './i18n.js';
+import { t as tr } from './i18n.js';
 import { openChat } from './nav.js'; // 챗봇 모달
 import { getPicks } from './chat-picks.js'; // '챗봇에 담기'로 담은 제품
 import { listenNfc, resolveTag, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
@@ -351,7 +351,7 @@ const GRID_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
 sbtn.innerHTML = `<span class="fc-sbtn-logo">${markSvg()}</span><span class="fc-sbtn-grid">${GRID_SVG}</span>`;
 sbtn.addEventListener('click', () => setMode(mode === 'arc' ? 'recs' : 'arc'));
 // (오른쪽 위 다크/화이트 모드 동그라미는 2026-11-16 사용자 요청으로 뺐다)
-$('fc-lang').replaceWith(Object.assign(langToggle('fc-lang'), { id: 'fc-lang' }));
+// (언어 버튼은 2026-11-17 사용자 요청으로 홈에만 — 여기서 바꾸지 않는다)
 // 챗봇 플로팅 버튼: 누르면 지금 화면 위에 챗봇 모달. 담은 제품 수는 오른쪽 위 숫자
 const chatBtn = $('fc-chat');
 const badge = $('fc-chat-badge');

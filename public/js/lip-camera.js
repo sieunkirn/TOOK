@@ -2,7 +2,7 @@
 import { $, el } from './common.js';
 import { loadTracker, detectVideo, resetTracker } from './lip-tracker.js';
 import { drawLipFrame, trackLips, stopStream, cameraErrorMessage, filmMode } from './lip-view.js';
-import { getCamSettings, videoConstraints, mountCamSettings } from './camera-settings.js';
+import { getCamSettings, videoConstraints } from './camera-settings.js';
 import { t as tr } from './i18n.js';
 import { video, view, viewCtx, STALL_MS, MAX_AUTO_RESTARTS, MAX_TRACK_ERRORS, RAF_STALL_MS, TIMER_FRAME_MS, state, setGuide, showError, setPlaceholder, guideText } from './lip-state.js';
 import { collectSkin } from './lip-look.js';
@@ -350,15 +350,8 @@ setInterval(() => {
 document.addEventListener('visibilitychange', () => { if (!document.hidden) state.lastFrameAt = performance.now(); });
 
 $('cam-retry').addEventListener('click', () => startCamera());
-// 카메라 화면 오른쪽 위 ⚙: 카메라·해상도를 바꾸면 카메라를 다시 켜고, 반전·회전은 다음 프레임부터 바로 적용된다
-mountCamSettings(view.closest('.stage'), {
-  onApply: (s, { restart }) => {
-    if (restart) lowRes = false; // 설정에서 카메라·해상도를 바꾸면 고른 해상도로 다시 시도
-    if (state.source === 'camera' && (restart || !state.stream)) startCamera();
-    else render();
-  },
-  currentDeviceId: () => state.stream?.getVideoTracks()[0]?.getSettings().deviceId || '',
-});
+// 카메라 화면의 ⚙ 카메라 설정 버튼은 2026-11-17 사용자 요청으로 뺐다.
+// 기기에 저장해 둔 설정(웹캠 고르기·해상도·좌우 반전·회전, camera-settings.js localStorage)은 그대로 적용된다 (getCamSettings·videoConstraints)
 window.addEventListener('pagehide', stopCamera);
 
 // 아바타 테스트 버튼과 '카메라로 테스트하기' 버튼은 2026-11-15 뺐다 (카메라는 화면에 들어오면 자동으로 켜지고, 못 쓰면 '카메라 다시 연결')

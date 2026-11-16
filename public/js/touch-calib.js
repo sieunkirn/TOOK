@@ -3,13 +3,14 @@
 // 안드로이드가 필름 전체 면적을 화면 전체에 그대로 대응시켜서 축이 뒤바뀌고(회전·반전) 크기·위치가 어긋난다.
 // 루팅 없이 OS 에서 고칠 수 없어서 웹 안에서 "들어온 원본 좌표 → 손가락이 실제로 닿은 화면 좌표" 아핀 변환을 건다.
 //
-// - 보정값이 없으면 아무것도 막지 않는다 (10초 길게 누르기 감지만 수동(passive)으로 듣는다)
+// - 보정값이 없으면 아무것도 막지 않는다 (홈 화면 10초 길게 누르기 감지만 수동(passive)으로 듣는다)
 // - 보정값이 있으면 pointerType 이 touch 인 입력만 바꾼다. 마우스는 그대로 (블루투스 마우스로 설정 작업)
 // - 모든 화면 <head> 에 일반 스크립트로 넣는다. 미리보기 틀(preview.html·kiosk.html) 안의 화면이면
 //   좌표를 맨 위 창 기준으로 올려 맨 위 창의 엔진 하나가 변환하고, 변환한 자리의 요소를 같은 출처 iframe 안까지 찾아 내려간다
 //
 // 주소 뒤에 붙이는 값
-//   ?calib=1      보정 화면 열기 (화면 아무 곳이나 10초 길게 눌러도 열린다)
+//   ?calib=1      보정 화면 열기
+// 관리자 화면(admin.html: 터치 범위 조정·조정값 복사)은 홈 화면을 10초 길게 눌러야만 열린다 (2026-11-17 사용자 요청. 다른 화면에서는 길게 눌러도 안 열린다)
 //   ?calib=reset  저장한 보정값 지우기
 //   ?calibdebug=1 원본 좌표(빨강)·보정 좌표(초록)를 화면에 표시 (=0 으로 끈다, 탭을 닫을 때까지 유지)
 //   ?calibsim=1   기기 없이 PC 에서 검증: 입력에 가짜 왜곡(90° 회전 + 가로 0.85·세로 0.77 + 이동)을 먼저 걸고 마우스도 터치로 본다 (=0 으로 끈다)
@@ -638,22 +639,27 @@
       return control?.request?.();
     }
 
-    // ---------- 10초 길게 누르기 → 보정 화면 ----------
+    // ---------- 홈 화면 10초 길게 누르기 → 관리자 화면 (admin.html) ----------
+    // 2026-11-17 사용자 요청: 홈 화면에서만 (예전: 아무 화면이나 길게 누르면 보정 화면). 키오스크 틀 안이면 틀 속 화면(win)이 홈일 때.
     // 보정이 어긋나 있어도 들어갈 수 있게 원본 터치(touch 이벤트, 시뮬레이션은 마우스)로만 잰다. 막지 않고 듣기만 한다
     let lp = null;
+    const isHome = (win) => { try { return /(^|\/)(index\.html)?$/.test(win.location.pathname); } catch { return false; } };
+    function openAdmin() {
+      try { root.location.href = new URL('admin.html', root.location.href).href; } catch { startCalib(); }
+    }
     function longPress(e, win) {
       const t = e.type;
       const startT = (sim ? t === 'mousedown' : t === 'touchstart' && e.touches?.length === 1);
       const endT = sim ? t === 'mouseup' : (t === 'touchend' || t === 'touchcancel' || (t === 'touchstart' && e.touches?.length > 1));
-      if (startT && !calib && !test) {
+      if (startT && !calib && !test && isHome(win)) {
         clearLongPress();
         const t0 = performance.now();
         lp = { tick: setInterval(() => {
           const left = Math.ceil((LONG_PRESS_MS - (performance.now() - t0)) / 1000);
-          if (left <= 0) { clearLongPress(); startCalib(); return; }
-          if (performance.now() - t0 > 3000) showHint(`계속 누르고 있으면 터치 보정 화면이 열려요 · ${left}`);
+          if (left <= 0) { clearLongPress(); openAdmin(); return; }
+          if (performance.now() - t0 > 3000) showHint(`계속 누르고 있으면 관리자 화면이 열려요 · ${left}`);
         }, 250) };
-      } else if (endT) clearLongPress();
+      } else if (endT || startT) clearLongPress();
     }
     function clearLongPress() {
       if (lp) clearInterval(lp.tick);
