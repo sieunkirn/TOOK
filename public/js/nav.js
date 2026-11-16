@@ -6,6 +6,7 @@ import { STATIC } from './api.js';
 import { getPicks } from './chat-picks.js';
 import { DEVICE_MODE } from './device-frame.js';
 import { setupIdleReset } from './idle-reset.js';
+import { logoFull } from './brand.js';
 
 // 전달값 없이 페이지를 새로 여는 링크 (메뉴 등)
 function freshLink(page, text) {
@@ -26,35 +27,14 @@ export const logoSvg = (cls = '') => `<svg class="${cls}" viewBox="212 36 442 12
 
 // 상단 로고 → 시작 화면(홈) 전환: 시작 화면 → 팔레트 움직임의 반대.
 //  1) 종이색 막이 화면을 부드럽게 덮고(0.45초) 2) 메뉴의 TOOK 로고가 시작 화면의 큰 로고 자리로 커지며 날아간다(0.65초)
-//  3) 시작 화면(home.js)은 로고가 이미 그 자리에 있고, 얼굴 → 안내 글 순서로 떠오른다 (sessionStorage took.homeFx)
+//  (2026-11-16 이후: 움직임 없이 홈 1번 마크 화면으로 간다)
 // 저장한 상태는 먼저 비운다(처음 상태로). 동작 줄이기 설정이면 바로 이동
-const HOME_FX_MS = 650;
 // keep: 챗봇의 '거울 화면으로' 버튼처럼 저장한 상태(대화·섞은 색)를 지우지 않고 돌아갈 때
 function goHomeWithMotion(e, { keep = false } = {}) {
+  // 2026-11-16 홈이 TOOK_prototype 화면으로 바뀌어, 옛 홈 로고 자리로 날아가던 움직임은 뺐다.
+  // 초기화하면 홈은 1번(마크) 화면부터: 터치 → TOOK 로고 → 시작 버튼 (사용자 요청)
   if (!keep) store.clear();
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; // 링크 그대로
-  const svg = document.querySelector('header.nav .nav-logo svg');
-  if (!svg) return;
-  e.preventDefault();
-  try { sessionStorage.setItem('took.homeFx', '1'); } catch { /* 저장 불가 환경: 시작 화면은 그냥 나온다 */ }
-  const from = svg.getBoundingClientRect();
-  // 시작 화면 로고 자리: 같은 스타일의 시작 화면을 보이지 않게 잠깐 만들어 잰다
-  const probe = el('main', { class: 'home-standby', style: 'visibility:hidden;pointer-events:none' });
-  probe.innerHTML = `<div class="hs-top">${logoSvg('hs-logo')}</div>`;
-  document.body.append(probe);
-  const to = probe.querySelector('svg').getBoundingClientRect();
-  probe.remove();
-  const veil = el('div', { class: 'home-veil', 'aria-hidden': 'true' });
-  const fly = el('div', { class: 'home-fly', 'aria-hidden': 'true' });
-  fly.innerHTML = logoSvg();
-  Object.assign(fly.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' });
-  document.body.append(veil, fly);
-  svg.style.visibility = 'hidden';
-  veil.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 450, easing: 'ease-out', fill: 'forwards' });
-  const k = to.width / from.width;
-  fly.animate([{ transform: 'none' }, { transform: `translate(${to.left - from.left}px, ${to.top - from.top}px) scale(${k})` }],
-    { duration: HOME_FX_MS, delay: 80, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
-  setTimeout(() => { location.href = 'index.html'; }, HOME_FX_MS + 120);
+  void e; // 링크 그대로 index.html 로 이동
 }
 
 // '기기 선택 해제': 이 기기를 태블릿으로 고정한 경우(DEVICE_MODE)에만 상단 메뉴에 보인다.
@@ -99,14 +79,26 @@ function fullscreenButton() {
  * @param {{ idle?: { seconds?: () => number, active?: () => boolean, onReset?: () => void } }} [opts]
  *   idle: 화면마다 자동 초기화를 바꿀 때 (거울 모드: 30초, 대기 화면이면 기다리기만, 초기화하면 홈 대신 대기 화면으로)
  */
+let navDone = false;
 export function renderNav(opts = {}) {
-  if (document.querySelector('header.nav')) return; // 합본 화면처럼 스크립트 두 개가 함께 부르면 한 번만 그린다
+  if (navDone || document.querySelector('header.nav')) return; // 합본 화면처럼 스크립트 두 개가 함께 부르면 한 번만 그린다
   if (IN_CHAT_MODAL) return setupInModal();
+  // 상단 메뉴 없는 화면 (<body data-nav="none">, 2026-11-16 TOOK_prototype 디자인의 Find Your Color):
+  // 메뉴·챗봇 버튼은 그리지 않고 문구 적용과 키오스크 자동 초기화만 한다 (로고·버튼은 화면이 직접 그린다)
+  if (document.body.dataset.nav === 'none') {
+    navDone = true;
+    applyI18n();
+    setupIdleReset(opts.idle);
+    return;
+  }
   // 챗봇 화면(2026-11-13): 로고와 전체화면 버튼만 남긴다 (챗봇·팔레트·거울·다크 모드·언어·기기 해제 버튼 없음)
-  const minimal = HERE === 'chat.html';
+  // TOOK_prototype 무드 화면(body.tui-mood: 제품 상세·호수 안내 등)도 로고만 (2026-11-16). 챗봇 플로팅 버튼은 챗봇 화면이 아닐 때 그대로
+  const mood = document.body.classList.contains('tui-mood');
+  const minimal = HERE === 'chat.html' || mood;
   const nav = el('header', { class: minimal ? 'nav nav-min' : 'nav' },
     // 로고(TOOK 그림): 누르면 저장된 상태를 모두 지우고 홈(대기 화면)으로. 읽어 주는 이름은 'took(초기화)'
-    el('strong', {}, Object.assign(el('a', { href: 'index.html', id: 'nav-reset', class: 'nav-logo', 'aria-label': t('nav.reset'), title: t('nav.reset'), onclick: goHomeWithMotion }), { innerHTML: logoSvg() })),
+    // TOOK_prototype 무드 화면(body.tui-mood)은 새 로고(마크 + TOOK)
+    el('strong', {}, Object.assign(el('a', { href: 'index.html', id: 'nav-reset', class: 'nav-logo', 'aria-label': t('nav.reset'), title: t('nav.reset'), onclick: goHomeWithMotion }), { innerHTML: document.body.classList.contains('tui-mood') ? logoFull() : logoSvg() })),
     // 상단 '홈'·'팔레트' 메뉴는 2026-11-09 뺐다 (로고 = 시작 화면)
     // 오른쪽 끝: 다크 모드 켜기/끄기 + 언어 전환
     // AI 뷰티 챗봇: 2026-11-15 상단 메뉴 링크 대신 오른쪽 아래 플로팅 버튼(chatFab)으로 옮겼다
@@ -120,7 +112,7 @@ export function renderNav(opts = {}) {
   const reset = minimal ? null : deviceResetButton();
   if (reset) nav.append(reset);
   nav.append(fullscreenButton());
-  if (!minimal) document.body.append(chatFab());
+  if (!minimal || (mood && HERE !== 'chat.html')) document.body.append(chatFab());
 }
 
 // ---------- AI 뷰티 챗봇 모달 (2026-11-15) ----------

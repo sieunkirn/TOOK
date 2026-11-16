@@ -1,0 +1,306 @@
+/* TOOK_prototype 디자인 (2026-11-16): Figma '앱' 페이지 1~11번 화면(900×1440)을 그대로 옮긴 화면.
+   홈(index.html, js/home.js) = 1~3번, Find Your Color(palette.html, js/find-color.js) = 4~11번.
+   모든 위치·크기는 원본 PNG 픽셀 좌표 그대로 (900×1440 무대 .tui-stage 안의 px).
+   원본은 컬러 디자인이라 CLAUDE.md 무채색 규칙의 예외다 (사용자 요청: "디자인을 그대로") */
+
+/* 무대(900×1440) 바깥 여백은 앱 바탕(검정)과 구분되는 밝은 회색. 무대 안은 검정 */
+html:has(body.tui), body.tui { height: 100%; margin: 0; padding: 0; overflow: hidden; background: #d4d4d4; }
+body.tui { max-width: none; width: 100%; color: #fff; }
+.tui-stage {
+  position: fixed; left: calc(50% - 450px); top: calc(50% - 720px); width: 900px; height: 1440px; margin: 0; padding: 0;
+  transform: scale(var(--k, 1)); transform-origin: 50% 50%;
+  background: #000; color: #fff; overflow: hidden; contain: layout paint; max-width: none; animation: none;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+:where(.tui-stage) button { all: unset; box-sizing: border-box; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+/* wireframe.css 의 button:hover(회색 바탕)가 이 디자인의 버튼 색을 덮지 않게 (터치 뒤 hover 가 남는 태블릿 포함) */
+.tui .tui-stage button.fc-sw:hover:not(:disabled) { background: var(--c); }
+.tui .tui-stage button.hs-opt:hover:not(:disabled), .tui .tui-stage button.fc-theme:hover:not(:disabled) { background: transparent; color: #fff; }
+.tui .tui-stage button.fc-sbtn:hover:not(:disabled) { background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; color: #fff; }
+.tui .tui-stage button.fc-cta:hover:not(:disabled) { background: #000; color: #fff; }
+html[data-theme="dark"] .tui .tui-stage button.fc-cta:hover:not(:disabled) { background: #fff; color: #000; }
+html[data-theme="dark"] .tui .tui-stage button.fc-theme:hover:not(:disabled) { background: #fff; }
+.tui .tui-stage .fc-camerr button#cam-retry:hover:not(:disabled) { background: transparent; color: #fff; }
+:where(.tui-stage) button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.tui-stage svg { display: block; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ================= 홈 1~3번 ================= */
+.tui-home .tui-stage { cursor: pointer; }
+/* 1번: 가운데 빛나는 마크 (원본 x 379~520, y 649~790) */
+.hs-glowmark { position: absolute; left: 378px; top: 648px; width: 145px; height: 144px; pointer-events: none;
+  filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.62)); transition: opacity .5s ease; }
+.hs-glowmark svg { width: 100%; height: 100%; }
+/* 2번: 로고 (원본 x 144~755, y 648~791). 3번: 268px 위로, 빛 번짐 */
+.hs-logo { position: absolute; left: 144px; top: 648px; width: 612px; height: 144px; color: #fff; overflow: visible;
+  transform-origin: 0 0; transition: transform .8s cubic-bezier(.65, 0, .35, 1), filter .8s ease; }
+.hs-logo .lg-mark, .hs-logo .lg-word { transition: transform .75s cubic-bezier(.65, 0, .35, 1), opacity .6s ease; }
+.tui-stage[data-step="1"] .hs-logo .lg-mark { transform: translateX(234px); }
+.tui-stage[data-step="1"] .hs-logo .lg-word { opacity: 0; transform: translateX(40px); }
+.tui-stage:not([data-step="1"]) .hs-glowmark { opacity: 0; }
+.tui-stage[data-step="3"] .hs-logo { transform: translateY(-268px); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.88)); }
+.hs-instant, .hs-instant * { transition: none !important; }
+
+/* 3번: 알약 버튼 (원본 03.png 위쪽 버튼: x 286~620, y 814~890 / 손잡이 x 300~453, y 822~881)
+   세 단계 색: a 평소(어두운 분홍) · b 손가락을 댄 순간(분홍) · c 떼는 순간(흰색). 빛 번짐 = 버튼을 흐리게 복사한 층(.hs-glow) */
+.hs-start {
+  position: absolute; left: 286px; top: 814px; width: 334px; height: 77px;
+  opacity: 0; pointer-events: none; transition: opacity .6s ease .25s;
+  --track: linear-gradient(90deg, #3d2730 0%, #4a2433 30%, #5c1432 52%, #57203a 70%, #3d2b33 90%, #46313a 100%);
+  --knob: linear-gradient(90deg, #968189 0%, #9d7a88 25%, #a0577a 60%, #a32c5e 100%);
+  --knob-x: 14px;
+  --glow: linear-gradient(90deg, #d0c8cc 0%, #d8a8bd 15%, #e8186f 38%, #e01868 60%, #cc8aa6 78%, #d8d2d4 100%);
+}
+.tui-stage[data-step="3"] .hs-start { opacity: 1; pointer-events: auto; }
+.hs-start[data-side="voice"] { --knob-x: 167px; }
+.hs-glow { position: absolute; inset: -3px; border-radius: 42px; pointer-events: none; background: var(--glow);
+  filter: blur(14px); transition: background .2s ease; }
+.hs-glow i { display: none; }
+.hs-pill {
+  position: absolute; inset: 0; border-radius: 39px; box-sizing: border-box; background: var(--track);
+  box-shadow: inset 0 0 0 1.2px rgba(255, 255, 255, 0.16), inset 0 2px 4px rgba(255, 255, 255, 0.08);
+}
+.hs-knob {
+  position: absolute; left: var(--knob-x); top: 8px; width: 153px; height: 59px; border-radius: 30px; pointer-events: none;
+  background: radial-gradient(70px 40px at 22% 45%, rgba(255, 255, 255, 0.10), transparent 70%), var(--knob);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45), inset 0 3px 5px rgba(255, 255, 255, 0.12), inset 0 -3px 5px rgba(255, 255, 255, 0.10);
+  transition: left .28s cubic-bezier(.3, .7, .2, 1);
+}
+.hs-opt { position: absolute; top: 0; height: 77px; color: #fff; z-index: 1; }
+.hs-opt-scan { left: 0; width: 167px; }
+.hs-opt-voice { left: 167px; width: 167px; }
+/* 아이콘 위치 (원본: 스캔 x 355~391 y 835~870, 음성 막대 x 506~565 y 836~869) */
+.hs-ico-scan { position: absolute; left: 69px; top: 21px; width: 36px; height: 35px; transition: color .2s ease; }
+.hs-ico-wave { position: absolute; left: 53px; top: 22px; width: 60px; height: 34px; transition: color .2s ease; }
+/* b: 분홍 */
+.hs-start[data-state="b"] {
+  --track: linear-gradient(90deg, #a99199 0%, #c07e9b 35%, #c5809c 52%, #b993a3 75%, #a6949c 92%, #b1a1a8 100%);
+  --knob: linear-gradient(90deg, #f2dee5 0%, #fdc7dd 25%, #ffa3c9 60%, #ff88ba 100%);
+}
+.hs-start[data-state="b"] .hs-knob { background: radial-gradient(70px 40px at 22% 45%, rgba(255, 255, 255, 0.35), transparent 70%), var(--knob); }
+/* c: 흰색, 고른 쪽 아이콘은 빨강 */
+.hs-start[data-state="c"] {
+  --track: linear-gradient(90deg, #a9a7a6 0%, #c6c6c6 30%, #c4c4c4 60%, #a8a8a8 90%, #b0b0b0 100%);
+  --knob: linear-gradient(180deg, #f5f5f5 0%, #ffffff 40%, #fafafa 100%);
+  --glow: linear-gradient(90deg, #d0d0d0 0%, #d8d8d8 15%, #e8e8e8 38%, #e0e0e0 60%, #cccccc 78%, #d8d8d8 100%);
+}
+.hs-start[data-state="c"] .hs-knob { background: var(--knob); }
+.hs-start[data-state="c"][data-side="scan"] .hs-ico-scan, .hs-start[data-state="c"][data-side="voice"] .hs-ico-wave { color: #ff0040; }
+.tui-stage.hs-leaving .hs-start { opacity: 0; transition: opacity .35s ease; }
+
+/* ================= Find Your Color 4~11번 (palette.html, js/palette.js) ================= */
+/* 상태: #stage[data-mode] arc 4 · sheet 10/11 (5~9번은 2026-11-16 뺐다), [data-dim] 점 격자가 어두운 상태 */
+.fc { --move: .42s cubic-bezier(.65, 0, .35, 1); }
+.fc-instant, .fc-instant * { transition: none !important; }
+/* 왼쪽 위 로고 (원본 x 40~229, y 66~110) — 누르면 처음으로 */
+.fc-logo { position: absolute; left: 39.8px; top: 65.8px; width: 190.6px; height: 44.85px; color: #fff; z-index: 6; }
+.fc-logo svg { width: 100%; height: 100%; }
+/* 오른쪽 위 동그라미 = 다크 모드 (원본 11번: 지름 46, 가운데 836.5, 87.5) */
+.fc-theme { position: absolute !important; left: 813.5px; top: 64.5px; width: 46px; height: 46px; border-radius: 50%; z-index: 6;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.28); transition: background .2s ease, box-shadow .2s ease; }
+html[data-theme="dark"] .fc-theme { background: #fff; box-shadow: none; }
+/* 제목 (원본 Find Your Color x 349~553 y 124~145 / 부제 x 353~549 y 165~182) */
+.fc-title { position: absolute; left: 0; right: 0; top: 116px; margin: 0; text-align: center; color: #fff;
+  font-size: 29.4px; line-height: 40px; font-weight: 580; letter-spacing: -0.005em; }
+.fc-sub { position: absolute; left: 0; right: 0; top: 160px; margin: 0; text-align: center; color: #fff;
+  font-size: 20.2px; line-height: 26px; font-weight: 300; letter-spacing: -0.01em; }
+
+/* 얼굴 자리: 타원(392×492, 가운데 450, 594.25) + 괄호 네 개 (66×66, 선 6) */
+.fc-face { position: absolute; inset: 0; pointer-events: none; }
+.fc-oval { position: absolute; left: 254px; top: 348.25px; width: 392px; height: 492px; border-radius: 50%; overflow: hidden; background: #000;
+  --rim: 0.36; --dots: 0.88; --cam: 1; }
+.fc[data-dim="1"] .fc-oval { --rim: 0.13; --dots: 0.25; }
+/* 카메라 영상은 늘 원래 밝기 (2026-11-16: 어두운 상태라 45% 로 보여 카메라가 안 되는 것처럼 보였다). 시트·추천 결과를 볼 때만 살짝 어둡게 */
+.fc[data-mode="sheet"] .fc-oval { --cam: 0.6; }
+.fc-rim { position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 50px rgba(255, 255, 255, var(--rim)), inset 0 0 130px rgba(255, 255, 255, calc(var(--rim) * 0.16)); pointer-events: none; transition: box-shadow .4s ease; }
+.fc-dots { position: absolute; inset: 0; width: 100%; height: 100%; opacity: var(--dots); transition: opacity .4s ease; }
+/* 카메라: 이전 버전 방식 그대로 (2026-11-16 사용자 요청). lip-camera.js 가 영상이 나오면 #view 의 hidden 을 빼고,
+   못 쓰면 안내(#error)·'카메라 다시 연결'을 띄운다. 예전처럼 화면 쪽에서 투명하게 두거나(첫 프레임 대기) 오류 때 영상을 숨기지 않고,
+   ⚙ 카메라 설정(웹캠 고르기·회전·반전·해상도)도 늘 보인다. 디자인은 그대로: 타원 안에 꽉 차게, 켜지기 전·못 쓸 때는 점 격자 */
+.fc-cam { position: absolute !important; inset: 0; width: auto !important; aspect-ratio: auto !important; border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; overflow: hidden; }
+.fc-cam #view { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: var(--cam); transition: opacity .4s ease; }
+.fc-oval:has(#view:not(.hidden)) .fc-dots { opacity: 0; }
+/* 준비 중·못 쓸 때 안내(placeholder): 점 격자 위에 흰 글씨로, 아래 오류 안내(.fc-camerr)와 겹치지 않게 타원 위쪽에 */
+.tui-stage .fc-cam .placeholder { flex-direction: column; justify-content: flex-start; gap: 12px; padding: 118px 40px 0; border: 0; border-radius: 0; background: transparent;
+  color: #fff; font-size: 16px; line-height: 1.5; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9); }
+.fc-cam .placeholder.loading .spinner { border-color: rgba(255, 255, 255, 0.3); border-top-color: #fff; }
+.tui .tui-stage .fc-cam button.cam-gear { top: 14px; right: auto; left: calc(50% - 22px); width: 44px; height: 44px; min-height: 0; pointer-events: auto;
+  border: 1px solid rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.45); color: #fff; }
+.tui .tui-stage .fc-cam button.cam-gear:hover:not(:disabled) { background: #fff; color: #000; }
+.fc-br { position: absolute; width: 66px; height: 66px; box-sizing: border-box; border: 0 solid #fff; }
+.fc-br-tl { left: 248px; top: 356px; border-top-width: 6px; border-left-width: 6px; border-top-left-radius: 30px; }
+.fc-br-tr { left: 588px; top: 356px; border-top-width: 6px; border-right-width: 6px; border-top-right-radius: 30px; }
+.fc-br-bl { left: 248px; top: 775px; border-bottom-width: 6px; border-left-width: 6px; border-bottom-left-radius: 30px; }
+.fc-br-br { left: 588px; top: 775px; border-bottom-width: 6px; border-right-width: 6px; border-bottom-right-radius: 30px; }
+/* 어두운 상태(4·10·11번)의 괄호 빛 번짐: 괄호보다 3.5px 넓힌 흰 선을 흐리게 (원본처럼 가까이는 밝고 멀리 빨리 사라짐) */
+.fc-br::before { content: ""; position: absolute; inset: -3.5px; border: 0 solid #fff; border-radius: inherit; filter: blur(5px); opacity: 0; transition: opacity .4s ease; }
+.fc-br-tl::before { inset: -9.5px -3.5px -3.5px -9.5px; border-top-width: 13px; border-left-width: 13px; border-top-left-radius: 33.5px; }
+.fc-br-tr::before { inset: -9.5px -9.5px -3.5px -3.5px; border-top-width: 13px; border-right-width: 13px; border-top-right-radius: 33.5px; }
+.fc-br-bl::before { inset: -3.5px -3.5px -9.5px -9.5px; border-bottom-width: 13px; border-left-width: 13px; border-bottom-left-radius: 33.5px; }
+.fc-br-br::before { inset: -3.5px -9.5px -9.5px -3.5px; border-bottom-width: 13px; border-right-width: 13px; border-bottom-right-radius: 33.5px; }
+.fc[data-dim="1"] .fc-br::before { opacity: 0.44; }
+/* 카메라를 쓸 수 없을 때 안내 (타원 안 가운데) */
+.fc-camerr { position: absolute; left: 274px; top: 560px; width: 352px; text-align: center; pointer-events: auto; z-index: 2; }
+.fc-camerr .msg { border: 0; background: none; padding: 0; margin: 0 0 12px; color: rgba(255, 255, 255, 0.8); font-size: 15px; line-height: 1.45; }
+.fc-camerr #cam-retry { display: inline-block; padding: 10px 20px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.8); color: #fff; font-size: 16px; }
+.fc-camerr #cam-retry.hidden, .fc-camerr .msg.hidden { display: none; }
+
+/* 컬러 다이얼 canvas (y 820~1440) + 유리 손잡이 (원본 4번: 손잡이 아래 띠 색을 렌즈처럼 늘려 채움) */
+.fc-wheel { position: absolute; left: 0; top: 820px; width: 900px; height: 620px; z-index: 1; touch-action: none; outline: none; cursor: grab; }
+.fc.fc-dragging, .fc.fc-dragging .fc-wheel { cursor: grabbing; }
+.fc-handle { position: absolute; z-index: 2; pointer-events: none; box-sizing: border-box; transition: opacity .25s ease;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.32) 13%, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.12) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
+    linear-gradient(90deg, var(--h1) 6%, var(--h2) 50%, var(--h3) 94%); }
+.fc-handle-edge { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.fc-handle-edge path { fill: none; stroke: rgba(255, 255, 255, 0.85); stroke-width: 2.4; }
+.fc-handle.off { opacity: 0; }
+
+/* 색 동그라미 */
+.fc-swatches { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.fc-sw { position: absolute !important; border-radius: 50%; background: var(--c); box-sizing: border-box; pointer-events: auto;
+  transition: left var(--move), top var(--move), width var(--move), height var(--move), opacity .3s ease, background-color .15s linear; }
+.fc-sw.big { border: var(--bw) solid #fff; box-shadow: 0 0 10px 12.7px rgba(255, 255, 255, 0.435), inset 0 0 16px rgba(255, 255, 255, 0.76); }
+.fc-sw.off { opacity: 0; pointer-events: none; }
+.fc-sw:focus-visible { outline: 2px solid #fff; outline-offset: 6px; }
+
+/* 하단 시트 (원본 4번 윗변 1348.4, 10·11번 932.25, 모서리 48) + 가운데 버튼 (지름 136, 흰 테 8) */
+.fc-sheet { position: absolute; left: 0; width: 900px; height: 800px; top: 1530px; z-index: 4; border-radius: 48px 48px 0 0;
+  background: #fff; color: #000; transition: top .45s cubic-bezier(.65, 0, .35, 1), background .2s ease; }
+html[data-theme="dark"] .fc-sheet { background: #474747; box-shadow: inset 0 0 0 1px #757575; color: #fff; }
+.fc-sbtn { position: absolute !important; left: 382px; top: 1462px; width: 136px; height: 136px; border-radius: 50%; z-index: 5; box-sizing: border-box;
+  border: 8px solid transparent; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.62), 0 0 9px 1px rgba(255, 255, 255, 0.72), 0 3px 4px rgba(0, 0, 0, 0.5);
+  color: #fff; transition: top .45s cubic-bezier(.65, 0, .35, 1); }
+.fc-sbtn > span { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity .25s ease; }
+.fc-sbtn-logo svg { width: 80px; height: 80px; margin: 0 0 0 -1px; }
+.fc-sbtn-grid svg { width: 48px; height: 48px; }
+.fc-sbtn .fc-sbtn-logo, .fc-sbtn.logo .fc-sbtn-grid { opacity: 0; }
+.fc-sbtn.logo .fc-sbtn-logo { opacity: 1; }
+.fc-cta { position: absolute !important; left: 40px; top: 386.15px; width: 820px; height: 78.2px; border-radius: 39.1px; box-sizing: border-box;
+  background: #000; color: #fff; display: flex !important; align-items: center; justify-content: center; gap: 9px;
+  font-size: 23.5px; font-weight: 600; letter-spacing: 0.035em; word-spacing: 0.06em; }
+.fc-cta-arrow { width: 19px; height: 19px; margin-top: 2px; }
+html[data-theme="dark"] .fc-cta { background: #fff; color: #000; }
+/* 추천 제품 (시트 안, 버튼과 '제품 찾기' 사이) */
+.fc-results { position: absolute; left: 0; right: 0; top: 96px; height: 276px; display: none; }
+.fc-sheet.has-recs .fc-results { display: block; }
+.fc-rec-status { margin: 0 40px 10px; font-size: 16px; font-weight: 600; color: inherit; opacity: .75; }
+.fc-rec-list { display: flex; gap: 14px; overflow-x: auto; padding: 0 40px 8px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.fc-rec-list::-webkit-scrollbar { display: none; }
+.fc-rec-list .card { flex: 0 0 228px; scroll-snap-align: start; padding: 10px; gap: 4px; border-radius: 18px; background: #f3f3f3; color: #000; box-shadow: none; }
+html[data-theme="dark"] .fc-rec-list .card { background: #5a5a5a; color: #fff; }
+.fc-rec-list .card:hover { transform: none; }
+.fc-rec-list .card-img { height: 92px; width: 100%; aspect-ratio: auto; object-fit: contain; border-radius: 12px; margin: 0 0 4px; }
+.fc-rec-list .card dl { font-size: 13px; gap: 1px 8px; }
+.fc-rec-list .card dt { color: inherit; opacity: .6; }
+.fc-rec-list .card dd { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fc-rec-list .card .actions { padding-top: 6px; gap: 6px; }
+.fc-rec-list .card .actions button { all: unset; box-sizing: border-box; cursor: pointer; padding: 7px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+  background: #000; color: #fff; }
+.fc-rec-list .card .actions button.pick-btn { background: transparent; color: inherit; box-shadow: inset 0 0 0 1px currentColor; }
+html[data-theme="dark"] .fc-rec-list .card .actions button:not(.pick-btn) { background: #fff; color: #000; }
+/* NFC 로 읽은 제품 안내 (잠깐) */
+.fc-toast { position: absolute; left: 0; right: 0; top: 216px; margin: 0; text-align: center; font-size: 17px; color: #fff; z-index: 6; pointer-events: none; }
+.fc-toast:empty { display: none; }
+/* 시작 화면에서 넘어올 때: 로고는 제자리, 나머지가 아래에서 떠오른다 */
+html.enter-fx .fc > :not(.fc-logo) { animation: fc-in .8s cubic-bezier(.2, .8, .2, 1) both; }
+html.enter-fx .fc .fc-face { animation-delay: .08s; }
+html.enter-fx .fc .fc-wheel, html.enter-fx .fc .fc-swatches { animation-delay: .16s; }
+html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s; }
+@keyframes fc-in { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+
+/* ================= 예전 기능을 이 디자인으로 (2026-11-16) ================= */
+/* 유리 알약 공통: Find Your Color 의 matte 버튼 모양 (위가 밝은 흰 테두리 + 짙은 바탕) */
+.fc-lang, .hs-lang, .fc-match, .fc-tex {
+  position: absolute !important; box-sizing: border-box; border: 1.2px solid transparent; border-radius: 999px; color: #fff; text-align: center;
+  background: linear-gradient(#171717, #171717) padding-box, linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.04) 100%) border-box;
+  box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.14);
+  transition: opacity .3s ease, transform .45s cubic-bezier(.65, 0, .35, 1);
+}
+.tui .tui-stage button.fc-lang:hover:not(:disabled), .tui .tui-stage button.hs-lang:hover:not(:disabled),
+.tui .tui-stage button.fc-match:hover:not(:disabled), .tui .tui-stage button.fc-tex:hover:not(:disabled) {
+  color: #fff; background: linear-gradient(#171717, #171717) padding-box, linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.04) 100%) border-box; }
+/* 언어: 오른쪽 위 (팔레트는 다크 모드 동그라미 왼쪽, 홈은 3번 화면에서만) */
+.fc-lang, .hs-lang { top: 66.5px; height: 42px; min-width: 84px; padding: 0 16px; font-size: 17px; line-height: 39px; font-weight: 600; z-index: 6; }
+.fc-lang { right: 104px; }
+.hs-lang { right: 40px; opacity: 0; pointer-events: none; transition: opacity .6s ease .25s; }
+.tui-stage[data-step="3"] .hs-lang { opacity: 1; pointer-events: auto; }
+.tui-stage.hs-leaving .hs-lang { opacity: 0; }
+/* 내 톤으로 추천받기: 타원 아래 · 색 동그라미 위 (y 858~900) */
+.fc-match { left: 330px; top: 858px; width: 240px; height: 42px; font-size: 18px; line-height: 39px; font-weight: 600; z-index: 3; letter-spacing: -0.01em; }
+.fc-match:disabled { opacity: .38; cursor: default; }
+.fc .fc-match:active:not(:disabled) { box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.3), 0 0 0 7px #353535; }
+/* 톤 측정 결과 + 추천 컬러 3개: 제목 아래 유리 상자 (결과가 있을 때만) */
+.fc-matchbox { position: absolute; left: 150px; width: 600px; top: 200px; z-index: 6; display: none; box-sizing: border-box; padding: 12px 18px 14px; border-radius: 22px; text-align: center;
+  background: rgba(18, 18, 18, 0.9); border: 1px solid rgba(255, 255, 255, 0.16); border-top-color: rgba(255, 255, 255, 0.4); }
+.fc-matchbox:has(#match-result:not(:empty)) { display: block; }
+.fc-matchbox p { margin: 0; font-size: 15px; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
+.fc-match-sw { display: flex; justify-content: center; gap: 18px; margin-top: 10px; }
+.fc-match-sw.hidden { display: none; }
+.fc-match-sw button { all: unset; box-sizing: border-box; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; border: 2px solid #fff;
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.45); }
+/* 텍스처 알약: 색 동그라미와 다이얼 사이 (원본 7번 matte 버튼 모양, 가운데 450, 1105) */
+.fc-tex { left: 386px; top: 1086.75px; width: 128px; height: 36.5px; z-index: 3; font-size: 25.5px; line-height: 28px; font-weight: 400; letter-spacing: -0.025em; }
+.fc .fc-tex:active { box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.3), 0 0 0 8px #353535; }
+.fc[data-mode="sheet"] .fc-tex, .fc[data-mode="sheet"] .fc-match, .fc[data-mode="recs"] .fc-tex, .fc[data-mode="recs"] .fc-match, .fc[data-mode="recs"] .fc-matchbox { opacity: 0; pointer-events: none; }
+/* 농도: 시트 안 위쪽 (가운데 버튼 아래). 결과를 볼 때는 숨긴다 */
+.fc-intensity { position: absolute; left: 40px; right: 40px; top: 120px; display: flex; align-items: center; gap: 18px; font-size: 18px; font-weight: 600; }
+.fc-intensity label { flex: none; }
+.fc-intensity input[type="range"] { flex: 1; accent-color: #fc54a5; height: 30px; }
+.fc-intensity output { flex: none; width: 56px; text-align: right; font-variant-numeric: tabular-nums; }
+/* 챗봇 플로팅 버튼: 시트 단추와 같은 흰 테 검정 원 (지름 80) + 담은 제품 수 */
+.fc-chat { position: absolute !important; left: 778px; top: 1354px; width: 80px; height: 80px; border-radius: 50%; z-index: 5; box-sizing: border-box; display: grid !important; place-items: center;
+  border: 5px solid transparent; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; color: #fff;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.55), 0 0 8px 1px rgba(255, 255, 255, 0.6), 0 3px 4px rgba(0, 0, 0, 0.45);
+  transition: top .45s cubic-bezier(.65, 0, .35, 1), left .45s cubic-bezier(.65, 0, .35, 1), opacity .2s ease; }
+.fc-chat svg { width: 36px; height: 36px; }
+.tui .tui-stage button.fc-chat:hover:not(:disabled) { color: #fff; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; }
+.fc-chat-badge { position: absolute; top: -6px; right: -6px; min-width: 28px; height: 28px; padding: 0 7px; box-sizing: border-box; display: grid; place-items: center; border-radius: 999px;
+  background: linear-gradient(90deg, #ff88ba, #a32c5e); color: #fff; font-size: 15px; font-weight: 700; box-shadow: 0 0 10px rgba(232, 24, 111, 0.6); }
+.fc-chat-badge:empty { display: none; }
+html.chat-modal-open .fc-chat { opacity: 0; pointer-events: none; }
+
+/* ---------- 추천 결과 (recs): 시트가 화면 아래 절반 (y 720~1440), 위에 제품 색 동그라미 줄, 아래 카드 2열 (사용자 레퍼런스) ---------- */
+.fc[data-mode="recs"] .fc-face { transform: translateY(-150px); } /* 입술이 시트에 가리지 않게 얼굴 자리를 올린다 */
+.fc-face { transition: transform .45s cubic-bezier(.65, 0, .35, 1); }
+.fc-results { display: none; }
+.fc[data-mode="recs"] .fc-results { display: block; position: absolute; left: 0; right: 0; top: 86px !important; bottom: 0; height: auto !important; }
+.fc[data-mode="recs"] .fc-cta, .fc[data-mode="recs"] .fc-intensity { opacity: 0; pointer-events: none; }
+.fc-cta, .fc-intensity { transition: opacity .25s ease; }
+.fc-rec-dots { display: flex; gap: 28px; padding: 0 49px; height: 59px; align-items: center; }
+.fc-rec-dots button { all: unset; box-sizing: border-box; cursor: pointer; flex: none; width: 59px; height: 59px; border-radius: 50%; background: var(--c);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.35); transition: box-shadow .2s ease; }
+.fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #000, 0 0 12px 4px rgba(232, 24, 111, 0.45); }
+html[data-theme="dark"] .fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #474747, 0 0 0 5px #fff, 0 0 12px 4px rgba(232, 24, 111, 0.45); }
+.fc[data-mode="recs"] .fc-rec-status { margin: 10px 49px 8px; font-size: 15px; }
+.fc[data-mode="recs"] .fc-rec-list { display: grid; grid-template-columns: repeat(2, 380px); column-gap: 41px; row-gap: 32px; justify-content: center;
+  overflow-x: hidden; overflow-y: auto; height: calc(100% - 59px - 46px); box-sizing: border-box; padding: 4px 0 40px; scroll-snap-type: y proximity; }
+.fc[data-mode="recs"] .fc-rec-list .card { height: 284px; box-sizing: border-box; flex: none; scroll-snap-align: start; padding: 14px 16px; gap: 6px; border-radius: 24px; display: flex; flex-direction: column; }
+.fc[data-mode="recs"] .fc-rec-list .card-img { height: 120px !important; flex: none; }
+.fc[data-mode="recs"] .fc-rec-list .card dl { font-size: 15px; }
+.fc[data-mode="recs"] .fc-rec-list .card .actions { margin-top: auto; }
+.fc[data-mode="recs"] .fc-rec-list .card .actions button { padding: 9px 14px; font-size: 14px; }
+
+/* 챗봇 모달: 검정 유리 상자 */
+body.tui .chat-modal { padding: 40px 28px; background: rgba(0, 0, 0, 0.72); }
+body.tui .chat-modal-box { max-width: none; border-radius: 32px; background: #000; color: #fff; border: 1px solid rgba(255, 255, 255, 0.18); border-top-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 40px rgba(232, 24, 111, 0.25); }
+body.tui .chat-modal-head { padding: 14px 16px 6px 28px; }
+body.tui .chat-modal-head strong { font-size: 22px; font-weight: 600; color: #fff; }
+body.tui .chat-modal-close, body.tui .chat-modal-close:hover:not(:disabled) { color: #fff; border: 1.2px solid transparent;
+  background: linear-gradient(#171717, #171717) padding-box, linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.04) 100%) border-box; }
+body.tui .chat-modal-frame { background: #000; }
+
+/* 시작 화면에서 넘어올 때 wireframe.css 의 "화면 전체(main) 떠오르기"(html.enter-fx main)를 끈다: 무대·로고는 그대로 있고 나머지만 떠오른다 (깜빡임 없이 이어지게) */
+html.enter-fx main.tui-stage, html main.tui-stage { animation: none; }
+
+/* 비활성 "내 톤으로 추천받기": wireframe.css 의 button:disabled(흰 바탕)가 덮지 않게 */
+.tui .tui-stage button.fc-match:disabled { color: #fff; background: linear-gradient(#171717, #171717) padding-box, linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.04) 100%) border-box; }
+/* 카메라 안내 ("얼굴이 화면 가운데에 오도록 맞춰 주세요" 등): 타원 아래쪽 안에 작게 */
+.fc-camerr #guide { position: static !important; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; margin: 0; }
+.fc-guide { position: absolute; left: 254px; width: 392px; top: 788px; z-index: 2; margin: 0; text-align: center; font-size: 15px; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9); pointer-events: none; }
+.fc-guide:empty, .fc[data-mode="recs"] .fc-guide { display: none; }

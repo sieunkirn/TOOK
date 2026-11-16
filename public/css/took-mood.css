@@ -1,0 +1,144 @@
+/* TOOK_prototype 무드 테마 (2026-11-16, body.tui-mood): 챗봇(chat.html)·제품 상세(product.html)·호수 안내(shades.html)·색상 추천(recommend.html) 공통.
+   홈·Find Your Color 와 같은 검정 바탕 + 흰 글자 + 유리 알약(위가 밝은 흰 테두리) + 분홍 빛 번짐.
+   로고·제목 자리도 Find Your Color 와 같다 (로고 x 40 y 66, 제목 가운데 y 124). 구조·동작은 그대로, 색과 모양만 바꾼다 */
+
+body.tui-mood {
+  --c-bg: #000; --c-surface: #121212; --c-surface-2: #1c1c1c; --c-line: rgba(255, 255, 255, 0.14);
+  --c-text: #fff; --c-mute: rgba(255, 255, 255, 0.58);
+  --c-pink: #fc54a5; --c-pink-deep: #a32c5e;
+  --glass-edge: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.04) 100%);
+  --pink-pill: linear-gradient(90deg, #9d7a88 0%, #a0577a 45%, #a32c5e 100%);
+  background: #000; color: #fff; max-width: none;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+html:has(body.tui-mood) { background: #000; color-scheme: dark; }
+body.tui-mood ::selection { background: var(--c-pink); color: #fff; }
+
+/* ---------- 머리: 로고(왼쪽 위) · 가운데 제목 · 오른쪽 위 버튼 ---------- */
+body.tui-mood header.nav { position: absolute; inset: 0 0 auto 0; height: 0; padding: 0; border: 0; background: transparent; box-shadow: none; z-index: 20; }
+body.tui-mood header.nav .nav-logo { position: absolute; left: 39.8px; top: 65.8px; width: 190.6px; height: 44.85px; padding: 0; color: #fff; background: none !important; }
+body.tui-mood header.nav .nav-logo svg { width: 100%; height: 100%; display: block; }
+body.tui-mood header.nav .nav-fullscreen { display: none; } /* 전체화면은 fullscreen-keep.js 가 다음 터치에서 다시 켠다 */
+body.tui-mood main.fit.chat-user { max-width: none; height: 100dvh; padding: 112px 40px 28px; background: #000; overflow: hidden; animation: none; }
+body.tui-mood .chat-shell.area { background: transparent; border: 0; box-shadow: none; padding: 0; gap: 14px; height: 100%; }
+body.tui-mood .chat-head { position: relative; justify-content: center; min-height: 72px; padding-bottom: 8px; }
+body.tui-mood .chat-head strong { display: block; text-align: center; font-size: 29.4px; font-weight: 580; letter-spacing: -0.005em; color: #fff; }
+body.tui-mood .chat-head > div:first-child::after { content: "AI Beauty Chat"; display: block; margin-top: 6px; text-align: center; font-size: 20.2px; font-weight: 300; color: #fff; letter-spacing: -0.01em; }
+body.tui-mood .chat-head .row { position: absolute; right: 0; top: -50px; gap: 10px; }
+
+/* 유리 알약 버튼 (Find Your Color 의 matte 버튼과 같은 모양) */
+body.tui-mood .chat-head button, body.tui-mood #base-clear, body.tui-mood #compare-run, body.tui-mood #compare-clear,
+body.tui-mood .chat-log .suggest button, body.tui-mood .chat-log .quick-replies button {
+  border: 1.2px solid transparent; border-radius: 999px; color: #fff;
+  background: linear-gradient(#171717, #171717) padding-box, var(--glass-edge) border-box;
+  box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.22), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+body.tui-mood .chat-head .icon-btn { width: 52px; min-height: 52px; padding: 0; display: grid; place-items: center; }
+body.tui-mood .chat-head .icon-btn, body.tui-mood .chat-head .icon-btn[aria-pressed="true"], body.tui-mood .chat-head .icon-btn:hover:not(:disabled) {
+  color: #fff; background: linear-gradient(#171717, #171717) padding-box, var(--glass-edge) border-box; }
+body.tui-mood .chat-head .icon-btn[aria-pressed="false"] { color: var(--c-mute); }
+body.tui-mood #chat-to-palette { min-height: 52px; padding: 0 22px; font-size: 17px; font-weight: 600;
+  background: var(--pink-pill) padding-box, var(--glass-edge) border-box;
+  box-shadow: 0 0 14px 1px rgba(232, 24, 111, 0.55), inset 0 2px 5px rgba(255, 255, 255, 0.22); }
+body.tui-mood .chat-head button:hover:not(:disabled), body.tui-mood .chat-log .suggest button:hover:not(:disabled),
+body.tui-mood .chat-log .quick-replies button:hover:not(:disabled), body.tui-mood #base-clear:hover:not(:disabled),
+body.tui-mood #compare-run:hover:not(:disabled), body.tui-mood #compare-clear:hover:not(:disabled) {
+  color: #fff; background: linear-gradient(#262626, #262626) padding-box, var(--glass-edge) border-box; }
+body.tui-mood #chat-to-palette:hover:not(:disabled) { background: var(--pink-pill) padding-box, var(--glass-edge) border-box; }
+
+/* ---------- 대화 ---------- */
+body.tui-mood .chat-log { background: transparent; border: 0; padding: 18px 2px 4px; color: #fff;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 28px); mask-image: linear-gradient(to bottom, transparent 0, #000 28px); }
+body.tui-mood .chat-log .bubble { background: var(--c-surface); color: #fff; border: 1px solid var(--c-line); border-top-color: rgba(255, 255, 255, 0.32);
+  border-radius: 24px 24px 24px 8px; padding: 14px 18px; font-size: 18px; line-height: 1.55; }
+body.tui-mood .chat-log .bubble.user { background: var(--pink-pill); border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 24px 24px 8px 24px;
+  box-shadow: 0 0 18px rgba(232, 24, 111, 0.45), inset 0 2px 6px rgba(255, 255, 255, 0.18); }
+body.tui-mood .chat-log .who, body.tui-mood .chat-log .user .who { color: var(--c-mute); font-size: 13px; }
+body.tui-mood .chat-log .user .who { color: rgba(255, 255, 255, 0.75); }
+body.tui-mood .chat-log .suggest button, body.tui-mood .chat-log .quick-replies button { min-height: 44px; padding: 4px 18px; font-size: 15px; font-weight: 600; }
+body.tui-mood .typing-dots i, body.tui-mood .typing-dots span { background: #fff; }
+body.tui-mood .muted, body.tui-mood .small.muted { color: var(--c-mute); }
+body.tui-mood a, body.tui-mood a:visited { color: #fff; }
+
+/* 제품 카드 */
+body.tui-mood .card, body.tui-mood .card.mini { background: var(--c-surface-2); color: #fff; border: 1px solid var(--c-line); box-shadow: none; border-radius: 20px; }
+body.tui-mood .card:hover { transform: none; box-shadow: none; }
+body.tui-mood .card dt { color: var(--c-mute); }
+body.tui-mood .card-img { background: #fff; border-radius: 14px; }
+body.tui-mood .card-img-empty { background: #2a2a2a; color: var(--c-mute); }
+body.tui-mood .card .actions button { color: #000; background: #fff; border: 0; border-radius: 999px; }
+body.tui-mood .card .actions button.pick-btn, body.tui-mood .card .actions button[aria-pressed] { color: #fff; background: transparent; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7); }
+body.tui-mood .card .actions button[aria-pressed="true"] { background: var(--pink-pill); box-shadow: 0 0 10px rgba(232, 24, 111, 0.5); }
+body.tui-mood .card .actions a { color: #fff; }
+body.tui-mood .card.skeleton, body.tui-mood .skeleton * { background-color: #1c1c1c; }
+/* 카드 넘기기 (1 / 2 ›): Find Your Color 의 흰 테 검정 단추와 같은 모양 */
+body.tui-mood .pc-count { color: #fff; }
+body.tui-mood .pc-arrow { color: #fff !important; border: 4px solid #fff; background: #000 !important; box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.6), inset 0 0 6px rgba(255, 255, 255, 0.45); }
+body.tui-mood .pc-arrow:disabled, body.tui-mood .pc-arrow:disabled:hover { opacity: .3; background: #000 !important; color: #fff !important; border-color: rgba(255, 255, 255, 0.6); box-shadow: none; }
+body.tui-mood .pc-arrow:hover:not(:disabled) { background: #000; color: #fff; }
+
+/* 기준 제품·비교함·제품 넘겨받기 */
+body.tui-mood #base-chip, body.tui-mood .compare-box, body.tui-mood .handoff-card { background: var(--c-surface); color: #fff; border: 1px solid var(--c-line); border-radius: 18px; }
+body.tui-mood .compare-table th, body.tui-mood .compare-table td { border-color: var(--c-line); color: #fff; }
+
+/* ---------- 입력줄 · 화면 키보드 ---------- */
+body.tui-mood .chat-input, body.tui-mood .chat-input.voice-only { background: transparent; }
+body.tui-mood .chat-input.voice-only #chat-input { background: #0f0f0f; color: #fff; border: 1.2px solid transparent;
+  background: linear-gradient(#0f0f0f, #0f0f0f) padding-box, var(--glass-edge) border-box; min-height: 56px; font-size: 18px; }
+body.tui-mood .chat-input.voice-only #chat-input::placeholder { color: var(--c-mute); }
+body.tui-mood .chat-input .icon-btn { color: #fff; background: transparent; }
+body.tui-mood .tkb { background: #0d0d0d; border: 1px solid var(--c-line); border-top-color: rgba(255, 255, 255, 0.3); }
+body.tui-mood .tkb-key { background: #1f1f1f; color: #fff; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+body.tui-mood .tkb-key:active { background: #3a3a3a; }
+body.tui-mood .tkb-fn { background: #141414; color: #fff; }
+body.tui-mood .tkb-space { color: var(--c-mute); }
+body.tui-mood .tkb-shift[aria-pressed="true"] { background: #fff; color: #000; }
+body.tui-mood .tkb-enter { color: #fff; background: var(--pink-pill); box-shadow: 0 0 16px rgba(232, 24, 111, 0.5), inset 0 2px 6px rgba(255, 255, 255, 0.2); }
+body.tui-mood .tkb-enter:active { background: var(--c-pink-deep); }
+body.tui-mood .tkb-hide { color: var(--c-mute); }
+body.tui-mood .nfc-hint { background: var(--c-surface); color: var(--c-mute); border: 1px solid var(--c-line); }
+
+/* 바코드 패널(넓은 화면에서만)·토스트 */
+body.tui-mood .chat-side.area { background: var(--c-surface); color: #fff; border: 1px solid var(--c-line); box-shadow: none; }
+body.tui-mood .scanner-state { background: #000; color: #fff; }
+body.tui-mood .toast { background: #fff; color: #000; }
+
+/* 모달 안(팔레트 위에 뜬 챗봇): 로고·제목 자리 없이 대화부터 */
+html.in-chat-modal body.tui-mood main.fit.chat-user { padding: 8px 24px 20px; }
+html.in-chat-modal body.tui-mood .chat-head { min-height: 0; padding: 0; justify-content: flex-end; }
+html.in-chat-modal body.tui-mood .chat-head > div:first-child { display: none; }
+html.in-chat-modal body.tui-mood .chat-head .row { position: static; }
+html.in-chat-modal body.tui-mood { background: #000; }
+
+/* ---------- 공통: 제품 상세·호수 안내·색상 추천 화면 (챗봇과 같은 무드) ---------- */
+body.tui-mood main:not(.chat-user) { max-width: none; min-height: 100dvh; box-sizing: border-box; padding: 140px 40px 40px; background: #000; color: #fff; animation: none; }
+body.tui-mood h1, body.tui-mood h2, body.tui-mood h3 { color: #fff; font-weight: 600; letter-spacing: -0.01em; }
+body.tui-mood main:not(.chat-user) > h1:first-child, body.tui-mood .sh-page h1 { text-align: center; font-size: 29.4px; font-weight: 580; }
+body.tui-mood .area, body.tui-mood section.area { background: var(--c-surface); color: #fff; border: 1px solid var(--c-line); border-top-color: rgba(255, 255, 255, 0.3); border-radius: 24px; box-shadow: none; }
+body.tui-mood .label { color: var(--c-mute); }
+body.tui-mood p, body.tui-mood dd, body.tui-mood td { color: inherit; }
+body.tui-mood table th, body.tui-mood table td { border-color: var(--c-line); color: #fff; }
+body.tui-mood table th { color: var(--c-mute); font-weight: 500; }
+body.tui-mood .msg { background: var(--c-surface); color: #fff; border-left-color: var(--c-pink); }
+body.tui-mood input[type="text"], body.tui-mood input[type="search"], body.tui-mood select, body.tui-mood textarea { background: #0f0f0f; color: #fff; border: 1px solid var(--c-line); }
+/* 버튼: 유리 알약, 주 버튼은 흰 알약 */
+body.tui-mood main button:not(.tkb-key):not(.pc-arrow):not(.icon-btn), body.tui-mood main .btn-line {
+  border: 1.2px solid transparent; border-radius: 999px; color: #fff;
+  background: linear-gradient(#171717, #171717) padding-box, var(--glass-edge) border-box;
+  box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.22), inset 0 2px 4px rgba(255, 255, 255, 0.1); }
+body.tui-mood main button:not(.tkb-key):not(.pc-arrow):not(.icon-btn):hover:not(:disabled) { color: #fff; background: linear-gradient(#262626, #262626) padding-box, var(--glass-edge) border-box; }
+body.tui-mood main button.btn-dark, body.tui-mood main .btn-primary, body.tui-mood main button[aria-pressed="true"]:not(.icon-btn) {
+  color: #fff; background: var(--pink-pill) padding-box, var(--glass-edge) border-box; box-shadow: 0 0 12px rgba(232, 24, 111, 0.45), inset 0 2px 5px rgba(255, 255, 255, 0.2); }
+body.tui-mood main button:disabled { opacity: .4; }
+/* 챗봇 플로팅 버튼: 흰 테 검정 원 (Find Your Color 와 같음) */
+body.tui-mood .chat-fab { width: 80px; height: 80px; right: 40px; bottom: 40px; border: 5px solid transparent; color: #fff;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.55), 0 0 8px 1px rgba(255, 255, 255, 0.6); }
+body.tui-mood .chat-fab-badge { background: linear-gradient(90deg, #ff88ba, #a32c5e); color: #fff; }
+/* 챗봇 모달 (제품 상세 등에서 열 때) */
+body.tui-mood .chat-modal { padding: 40px 28px; background: rgba(0, 0, 0, 0.72); }
+body.tui-mood .chat-modal-box { max-width: none; border-radius: 32px; background: #000; color: #fff; border: 1px solid rgba(255, 255, 255, 0.18); border-top-color: rgba(255, 255, 255, 0.45); }
+body.tui-mood .chat-modal-head strong { color: #fff; }
+body.tui-mood .chat-modal-close, body.tui-mood .chat-modal-close:hover:not(:disabled) { color: #fff; background: linear-gradient(#171717, #171717) padding-box, var(--glass-edge) border-box; border: 1.2px solid transparent; }
+body.tui-mood .chat-modal-frame { background: #000; }
+body.tui-mood .placeholder { background: #1c1c1c; color: var(--c-mute); }

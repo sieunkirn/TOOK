@@ -14,9 +14,10 @@
      노트북·태블릿·휴대폰 어디서 열어도(device-frame.js 가 이 틀로 옮긴다) 가로 방향은 무시하고 세로 5:8 비율을 기준으로 화면을 가운데에 둔다.
      남는 공간은 검게 채워 앱처럼 보이게 한다. */
   html, body { height: 100%; margin: 0; overflow: hidden; background: var(--paper); }
-  html:has(body.tab-lock), body.tab-lock { background: #000; }
+  /* 900×1440 앱 화면 바깥 여백: 앱 바탕(검정)과 구분되는 밝은 회색 (2026-11-16 요청). 앱 화면 자체는 검정 */
+  html:has(body.tab-lock), body.tab-lock { background: #d4d4d4; }
   body.tab-lock { max-width: none; width: 100%; }
-  #kiosk-frame { position: fixed; display: block; border: 0; transform-origin: 50% 50%; }
+  #kiosk-frame { position: fixed; display: block; border: 0; transform-origin: 50% 50%; background: #000; }
 </style>
 </head>
 <body data-idle-reset="off" class="tab-lock">

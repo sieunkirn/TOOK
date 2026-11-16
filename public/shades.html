@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <meta name="referrer" content="no-referrer">
 <title>took(툭) - 호수 안내</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="css/wireframe.css">
+<link rel="stylesheet" href="css/took-mood.css"><!-- TOOK_prototype 무드 (2026-11-16) -->
 <link rel="manifest" href="manifest.webmanifest">
 <script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
@@ -14,7 +16,7 @@
 </head>
 <!-- 호수 안내: 한 제품의 모든 호수를 색 동그라미로 펼치고(shades.js), 누르면 설명, '발라 보기'를 누르면 입술에 입힌다(lip.js).
      처음에는 카메라 구역을 숨기고, 발라 보기를 누른 뒤에 연다 -->
-<body data-layout="shades" class="sh-body">
+<body data-layout="shades" class="sh-body tui-mood">
 <main class="sh-page" id="sh-page">
   <div id="sh-head" class="sh-head"></div>
 

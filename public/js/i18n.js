@@ -96,7 +96,7 @@ const STRINGS = {
     'lip.colorAria': '컬러 {hex}', 'lip.matchFaceFail': '얼굴을 충분히 인식하지 못했습니다. 밝은 곳에서 정면을 보고 다시 시도해 주세요.',
     'lip.matchSkinFail': '피부색을 측정하지 못했습니다. 밝은 곳에서 정면을 보고 다시 시도해 주세요.',
     'lip.matchNear': " 경계에 가까워 '{label}'일 수도 있어요.", 'lip.matchResult': '추정 톤: {label} ({desc}).{near} ',
-    'lip.matchPalette': '추천 컬러를 누르면 팔레트에 한 방울 떨어져요. 팔레트에도 같은 물감을 표시해 두었어요.',
+    'lip.matchPalette': '아래 추천 컬러를 누르면 바로 발라 볼 수 있어요.',
     'lip.matchApplied': '추천 컬러 3가지 중 첫 번째를 적용했어요.',
     'lip.mHue': '피부 색상각 {v}° (웜 기준 {t}° 이상)', 'lip.mLight': '피부 밝기 L {v} (밝은 톤 기준 {t})', 'lip.mNoContrast': '눈썹 대비 측정 안 됨',
     'lip.mContrast': '피부-눈썹 대비 {v} (기준 {t})', 'lip.mWb': '눈 흰자 기준 조명 보정 적용', 'lip.mNoWb': '조명 보정 못 함(눈 흰자 인식 실패)',
@@ -204,7 +204,7 @@ const STRINGS = {
     'lip.colorAria': 'Color {hex}', 'lip.matchFaceFail': "Couldn't see your face clearly. Face forward in a bright place and try again.",
     'lip.matchSkinFail': "Couldn't measure your skin color. Face forward in a bright place and try again.",
     'lip.matchNear': " It's near the boundary, so it could also be '{label}'.", 'lip.matchResult': 'Estimated tone: {label} ({desc}).{near} ',
-    'lip.matchPalette': 'Tap a suggested color to drop it on the palette. The same paints are marked on the palette.',
+    'lip.matchPalette': 'Tap a suggested color below to try it on right away.',
     'lip.matchApplied': 'Applied the first of 3 suggested colors.',
     'lip.mHue': 'Skin hue {v}° (warm if ≥ {t}°)', 'lip.mLight': 'Skin lightness L {v} (light if ≥ {t})', 'lip.mNoContrast': 'Brow contrast not measured',
     'lip.mContrast': 'Skin–brow contrast {v} (threshold {t})', 'lip.mWb': 'Lighting corrected with eye whites', 'lip.mNoWb': 'Lighting not corrected (eye whites not found)',
@@ -316,8 +316,25 @@ Object.assign(STRINGS.en, {
   'pick.added': 'Added to the chat. Tap the chat button at the bottom right to ask about it', 'pick.removed': 'Removed from the chat', 'pick.full': 'You can add up to {n} products to the chat',
   'pick.count': '{n} products added',
 });
+// TOOK_prototype 디자인 화면 (2026-11-16): 홈 알약 버튼 · Find Your Color(팔레트)
+Object.assign(STRINGS.ko, {
+  'home.toChat': 'AI 뷰티 챗봇과 이야기하기', 'home.tapToStart': '화면을 눌러 시작하세요',
+  'fc.pageTitle': 'took(툭) - Find Your Color', 'fc.title': 'Find Your Color', 'fc.sub': '나만의 컬러를 찾아보세요',
+  'fc.find': '이 컬러로 제품 찾기', 'fc.sheet': '제품 찾기 열기', 'fc.sheetClose': '제품 찾기 닫기', 'fc.dial': '컬러 다이얼',
+  'fc.theme': '다크 모드 켜기/끄기', 'fc.swatch': '컬러 {hex}',
+  'fc.texture': '텍스처: {name} (누르면 바뀌어요)', 'fc.chat': 'AI 뷰티 챗봇 열기',
+  'fc.searching': '비슷한 제품을 찾고 있어요', 'fc.found': '이 컬러와 비슷한 제품 {n}개', 'fc.none': '비슷한 제품이 없어요', 'fc.back': '← 컬러 다시 고르기',
+});
+Object.assign(STRINGS.en, {
+  'home.toChat': 'Talk to the AI beauty chatbot', 'home.tapToStart': 'Tap the screen to start',
+  'fc.pageTitle': 'took - Find Your Color', 'fc.title': 'Find Your Color', 'fc.sub': 'Find your own color',
+  'fc.find': 'Find products in this color', 'fc.sheet': 'Open product search', 'fc.sheetClose': 'Close product search', 'fc.dial': 'Color dial',
+  'fc.theme': 'Toggle dark mode', 'fc.swatch': 'Color {hex}',
+  'fc.texture': 'Texture: {name} (tap to change)', 'fc.chat': 'Open the AI beauty chatbot',
+  'fc.searching': 'Looking for similar products', 'fc.found': '{n} products similar to this color', 'fc.none': 'No similar products', 'fc.back': '← Choose the color again',
+});
 
-const svg = (inner, size) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+const svg =(inner, size) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
 const GLOBE = '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/>';
 const CHEVRON = '<path d="m6 9 6 6 6-6"/>';
 
@@ -325,6 +342,26 @@ const CHEVRON = '<path d="m6 9 6 6 6-6"/>';
  * 언어 선택 메뉴. 버튼을 누르면 아래에 목록이 열리고, 다른 언어를 고르면 화면이 그 언어로 다시 열린다.
  * @param {{ skipIntro?: boolean }} [opts] 홈 대기 화면에서는 skipIntro: false (같은 대기 화면을 새 언어로)
  */
+/**
+ * 한국어 ↔ 영어 한 번에 바꾸는 작은 버튼 (TOOK_prototype 디자인 화면용, 2026-11-16).
+ * 홈에서 바꾸면 다시 열 때 대기·로고 화면을 건너뛰고 시작 버튼(3번) 화면으로 (took.homeFx)
+ */
+export function langToggle(cls = '') {
+  const cur = lang();
+  const next = cur === 'ko' ? 'en' : 'ko';
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = cls;
+  b.lang = next;
+  b.textContent = next === 'en' ? 'EN' : '한국어';
+  b.setAttribute('aria-label', t('lang.menu') + ' · ' + LANG_NAMES[next].native);
+  b.addEventListener('click', () => {
+    try { if (/(^|\/)(index\.html)?$/.test(location.pathname)) sessionStorage.setItem('took.homeFx', '1'); } catch { /* 저장 불가 환경 */ }
+    setLang(next, { skipIntro: false });
+  });
+  return b;
+}
+
 export function languageMenu({ skipIntro = true } = {}) {
   const cur = lang();
   const box = document.createElement('div');

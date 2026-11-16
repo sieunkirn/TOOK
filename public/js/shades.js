@@ -3,11 +3,13 @@
 //  2) '발라 보기'를 누르면 카메라 구역이 열리고 그 색을 입술에 입힌다 (lip.js 의 took:apply)
 //  3) 발라 보는 중에 다른 동그라미를 누르면 입술 색이 바로 바뀐다 (동그라미는 한 줄로 줄어든다)
 //  4) 고른 호수의 재고 수량을 설명 아래에 보여 준다 (매대 위치 안내는 2026-11-11 삭제)
+//  5) '근처 매장 재고'를 누르면 가까운 매장 5곳의 재고와 추천 매장을 보여 준다 (store-stock.js, 시연용)
 // 호수·재고는 시연용 데이터(src/data/products.demo.json)다. 화면에 '테스트 데이터'로 표시한다.
 // 주소 값: id(제품), from(돌아갈 곳: chat), try=1(이 색을 바로 발라 본다)
 import { $, renderNav, api, el, qs, won, toast } from './common.js';
 import { isEn, brandOf, nameOf, finishText, t as tr } from './i18n.js';
 import { shadeLabel, stockText } from './shade-label.js';
+import { openStoreStock } from './store-stock.js'; // 근처 매장 재고 (시연용)
 
 renderNav();
 
@@ -64,6 +66,7 @@ function renderDetail() {
     Number.isFinite(p.stock) ? el('p', { class: 'shelf-stock', text: p.stock === 0 ? C('이 매장 품절', 'Sold out here') : stockText(p) }) : null,
     el('div', { class: 'sh-actions' },
       trying ? null : el('button', { type: 'button', class: 'btn-dark', text: C('발라 보기', 'Try it on'), onclick: () => tryOn(p) }),
+      el('button', { type: 'button', class: 'btn-line', text: C('근처 매장 재고', 'Nearby stores'), onclick: () => openStoreStock(p.id, `${nameOf(p)} ${shadeLabel(p)}`) }),
     ),
   );
 }

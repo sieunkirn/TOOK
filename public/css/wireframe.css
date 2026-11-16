@@ -1053,3 +1053,22 @@ body main.home-standby { cursor: default; }
 .chat-fab-badge { position: absolute; top: -4px; right: -4px; min-width: 26px; height: 26px; padding: 0 7px; display: grid; place-items: center; border-radius: 999px; background: var(--paper); color: var(--ink); border: 2px solid var(--ink); font-size: 14px; font-weight: 800; line-height: 1; }
 .chat-fab-badge:empty { display: none; }
 .pick-btn[aria-pressed="true"] { background: var(--ink) !important; color: var(--paper) !important; border-color: var(--ink) !important; }
+
+/* 근처 매장 재고 창 (store-stock.js, 시연용 데이터) */
+dialog.store-sheet { width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); padding: 20px; border: 0; border-radius: 20px; background: var(--paper); color: var(--ink); box-shadow: var(--shadow-up); }
+dialog.store-sheet::backdrop { background: rgba(0, 0, 0, .45); }
+.store-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.store-head strong { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+.store-sub { margin: 4px 0 0; font-size: 14px; color: var(--ink-2); word-break: keep-all; }
+.store-close { flex: none; width: 48px; height: 48px; min-height: 48px; padding: 0; border: 0; border-radius: 50%; background: var(--soft); color: var(--ink); font-size: 18px; }
+.store-pick { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--soft); font-size: 16px; font-weight: 700; line-height: 1.45; word-break: keep-all; }
+.store-list { margin: 12px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.store-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--line); }
+.store-row.best { box-shadow: inset 0 0 0 2px var(--ink); }
+.store-row.out { color: var(--ink-2); }
+.store-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.store-name { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 700; }
+.store-badge { font-size: 12px; font-weight: 700; color: var(--paper); background: var(--ink); border-radius: 6px; padding: 1px 6px; }
+.store-meta { font-size: 13px; color: var(--ink-2); }
+.store-qty { flex: none; font-size: 15px; font-weight: 700; }
+.store-note { margin: 12px 0 0; font-size: 12px; color: var(--ink-2); word-break: keep-all; }

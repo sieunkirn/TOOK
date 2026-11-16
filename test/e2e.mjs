@@ -84,8 +84,9 @@ async function assertAchromatic(page) {
       if (m[4] !== undefined && Number(m[4]) === 0) return false;
       return Math.max(+m[1], +m[2], +m[3]) - Math.min(+m[1], +m[2], +m[3]) > 2;
     };
-    // CLAUDE.md 의 실제 색 예외: 립 매핑 영상·프리셋, 색 견본, 제품 사진, 팔레트의 물감·섞는 칸·조제한 색·레시피
-    const colorDemo = (el) => el.closest('#swatches, #match-swatches, .stage, .color-dot, .card-img, .paints, .mix-wrap, .result-swatch, .recipe-bar, .fly-drop, #demo-lips, .mirror-standby');
+    // CLAUDE.md 의 실제 색 예외: 립 매핑 영상·프리셋, 색 견본, 제품 사진, 팔레트의 물감·섞는 칸·조제한 색·레시피,
+    // TOOK_prototype 디자인 화면 전체(홈·Find Your Color 의 .tui-stage, 같은 무드의 챗봇 .tui-mood, 2026-11-16)
+    const colorDemo = (el) => el.closest('.tui-stage, .tui-mood, #swatches, #match-swatches, .stage, .color-dot, .card-img, .paints, .mix-wrap, .result-swatch, .recipe-bar, .fly-drop, #demo-lips, .mirror-standby');
     for (const el of document.querySelectorAll('*')) {
       if (colorDemo(el)) continue;
       const cs = getComputedStyle(el);
@@ -142,182 +143,60 @@ await step('스크롤바: 표시만 숨기고 스크롤 동작은 유지', async
 });
 const savedLipHex = (pg) => pg.evaluate(() => JSON.parse(sessionStorage.getItem('took.lipColor') || 'null')?.hex);
 
-await step('홈: 대기 화면 → 화면을 누르면 팔레트 → 상단 메뉴로 챗봇', async () => {
+// 홈·팔레트는 2026-11-16 TOOK_prototype 디자인(컬러)으로 바뀌어 무채색 검사를 하지 않는다
+await step('홈: 대기 마크 → 로고 → 시작 버튼(누르는 3단계) → 팔레트 / 음성 쪽은 챗봇', async () => {
   await page.goto(BASE + '/');
-  assert.match(await page.textContent('#home-standby .hs-hint'), /제품을 태그해보세요/);
-  await assertAchromatic(page);
+  assert.equal(await page.getAttribute('#stage', 'data-step'), '1');
+  await page.click('#stage');
+  assert.equal(await page.getAttribute('#stage', 'data-step'), '2');
+  await page.waitForFunction(() => document.getElementById('stage').dataset.step === '3', null, { timeout: 4000 });
   await shot('01-home');
-  await page.click('#home-standby .hs-hint');
+  const scan = await page.locator('.hs-opt-scan').boundingBox();
+  await page.mouse.move(scan.x + scan.width / 2, scan.y + scan.height / 2);
+  await page.mouse.down();
+  assert.equal(await page.getAttribute('.hs-start', 'data-state'), 'b');
+  await page.mouse.up();
+  assert.equal(await page.getAttribute('.hs-start', 'data-state'), 'c');
   await page.waitForURL(at('palette.html'));
-  await page.click('header.nav a[href="chat.html"]');
+  await page.goto(BASE + '/index.html?step=3');
+  await page.click('.hs-opt-voice');
   await page.waitForURL(at('chat.html'));
-  // 챗봇 상단: 팔레트로 가는 버튼, 거울(대기) 화면으로 돌아가는 버튼
-  await page.click('header.nav a[href="palette.html"]');
-  await page.waitForURL(at('palette.html'));
-  await page.click('header.nav a[href="chat.html"]');
-  await page.waitForURL(at('chat.html'));
-  await page.click('header.nav a.nav-mirror');
-  await page.waitForURL((u) => /\/(index\.html)?$/.test(u.pathname));
-  await page.waitForSelector('#home-standby');
 });
 
-// ---------- 팔레트 (홈에서 바로 들어오는 주 화면) ----------
-await step('팔레트: 아바타로 시작 → 물감 섞기 → 조제한 색과 비슷한 제품 → 입술에 발라보기 → 다시 섞기', async () => {
+// ---------- 팔레트 = Find Your Color (홈에서 바로 들어오는 주 화면) ----------
+await step('팔레트: 다이얼 끌기 → 띠 톡 누르기 → 색 동그라미 → 시트 → 이 컬러로 제품 찾기 → 입술에 발라보기', async () => {
   await page.goto(BASE + '/palette.html');
-  await page.click('#use-avatar');
-  await page.waitForSelector('#view:not(.hidden)');
-  // 그라디언트 맵: 띠의 두 곳을 눌러 두 방울
-  await page.click('#lip-paints .gmap-bar', { position: { x: 20, y: 20 } });
-  await page.click('#lip-paints .gmap-bar', { position: { x: 160, y: 20 } });
-  await assertAchromatic(page);
-  await shot('02-palette-mix');
-  await page.waitForTimeout(1500); // 떨어뜨린 물감이 다 섞일 때까지
+  assert.equal(await page.getAttribute('#stage', 'data-mode'), 'arc');
+  // 무대(900×1440) 좌표 → 화면 좌표 (창 크기에 맞게 줄어 있다)
+  const box = await page.locator('#stage').boundingBox();
+  const sp = (x, y) => [box.x + (x * box.width) / 900, box.y + (y * box.height) / 1440];
+  const phi = () => page.evaluate(() => window.tookFind.sel.phi);
+  await page.mouse.move(...sp(300, 1300));
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i++) await page.mouse.move(...sp(300 + i * 12, 1300));
+  await page.mouse.up();
+  assert.equal(await page.getAttribute('#stage', 'data-mode'), 'arc', '5~9번 상태는 없다: 끌어도 4번 그대로');
+  assert.ok((await phi()) < -5, '띠 왼쪽에서 끌기 시작하면 유리 손잡이가 그쪽으로 와서 손가락을 따라간다 (색 띠는 고정)');
+  await shot('02-palette-dial');
+  const hex = await page.evaluate(() => window.tookFind.sel.base);
+  assert.notEqual(hex, '#FC54A5', '다이얼을 돌리면 기준 색이 바뀐다');
+  await page.waitForFunction((h) => window.tookLipHex === h, hex);
+  // 띠 오른쪽(위에서 +37°)을 톡 누르면 손잡이가 그 자리로 미끄러져 간다
+  await page.mouse.click(...sp(700, 1608.5 - Math.sqrt(412 ** 2 - 250.5 ** 2)));
+  await page.waitForTimeout(600);
+  assert.ok(Math.abs((await phi()) - 37.4) < 2, '누른 자리로 손잡이가 간다');
+  await page.click('.fc-sw >> nth=1');
+  await page.click('#fc-sbtn');
+  assert.equal(await page.getAttribute('#stage', 'data-mode'), 'sheet');
+  const chosen = await page.evaluate(() => window.tookLipHex);
   await page.click('#find');
   await page.waitForSelector('#rec-list .card[data-product-id]');
-  const mixed = (await page.textContent('#res-hex')).match(/#[0-9A-F]{6}/i)?.[0];
-  assert.ok(mixed, '조제한 색의 색상값이 보여야 한다');
   const ids = await page.$$eval('#rec-list .card', (cs) => cs.map((c) => c.dataset.productId));
-  assert.deepEqual(ids, recommendByColor(mixed, { limit: 6 }).map((p) => p.id), `조제한 색 ${mixed} 의 추천 순서`);
+  assert.deepEqual(ids, recommendByColor(chosen, { limit: 6 }).map((p) => p.id), `고른 색 ${chosen} 의 추천 순서`);
   await shot('03-palette-recommend');
   await page.click('#rec-list .card >> nth=0 >> text=입술에 발라보기');
-  await page.click('#back-mix');
-  await page.waitForSelector('#find', { state: 'visible' });
-});
-
-// ---------- 흐름 A: 립 컬러 매핑 ----------
-// 고른 색: 눌린 프리셋(aria-pressed)과 저장한 립 색으로 확인한다 (화면에 색상값 글자는 따로 보이지 않는다)
-const pressedSwatchHex = (pg) => pg.getAttribute('#swatches button[aria-pressed="true"]', 'data-hex');
-await step('흐름 A: 카메라 자동 실행 → 입술 추적 준비(작업 스레드) → 얼굴 안내', async () => {
-  await page.goto(BASE + '/lip-together.html');
-  await page.waitForSelector('#use-camera[aria-pressed="true"]');
-  await page.waitForSelector('#view:not(.hidden)');
-  // 가짜 카메라 영상에는 얼굴이 없으므로 얼굴을 맞추라는 안내가 정상
-  await page.waitForFunction(() => document.getElementById('guide').textContent.includes('얼굴이 화면 가운데'), null, { timeout: 40000 });
-  await assertAchromatic(page);
-  await shot('04-lip-camera');
-});
-
-let chosenHex;
-await step('흐름 A: 프리셋 선택 → 선택 컬러 표시 → 같은 화면에서 유사도 순 추천', async () => {
-  await page.click('#swatches button >> nth=3');
-  chosenHex = await page.getAttribute('#swatches button >> nth=3', 'data-hex');
-  assert.equal(await pressedSwatchHex(page), chosenHex);
-  assert.equal(await savedLipHex(page), chosenHex);
-  await page.click('#recommend');
-  await page.waitForSelector('#rec-panel:not(.hidden) #rec-list .card[data-product-id]');
-  const ids = await page.$$eval('#rec-list .card', (cs) => cs.map((c) => c.dataset.productId));
-  assert.deepEqual(ids, recommendByColor(chosenHex, { limit: 6 }).map((p) => p.id));
-  // 카드에는 브랜드·제품명·가격만 보인다
-  const labels = await page.$$eval('#rec-list .card:first-child dt', (ds) => ds.map((d) => d.textContent));
-  assert.deepEqual(labels, ['브랜드', '제품명', '가격']);
-  await assertAchromatic(page);
-  await shot('05-lip-recommend');
-});
-
-await step('흐름 A: 추천 카드 입술에 발라보기 → 제품 색 적용 → 조절 화면으로 돌아가기', async () => {
-  const first = allProducts().find((p) => p.id === recommendByColor(chosenHex, { limit: 1 })[0].id);
-  await page.click('#rec-list .card >> nth=0 >> text=입술에 발라보기');
-  assert.equal(await savedLipHex(page), first.color_hex);
-  await page.click('#rec-back');
-  await page.waitForSelector('#controls:not(.hidden)');
-});
-
-await step('추천 화면: 유사도 순 10개, 제형 필터, 상세 → 이전 화면 → 다시 조색하기', async () => {
-  await page.goto(BASE + '/recommend.html?hex=' + encodeURIComponent(chosenHex));
-  await refColorHas(page, chosenHex);
-  await page.waitForSelector('#rec-list .card[data-product-id]');
-  const ids = await page.$$eval('#rec-list .card', (cs) => cs.map((c) => c.dataset.productId));
-  assert.deepEqual(ids, recommendByColor(chosenHex, { limit: 10 }).map((p) => p.id));
-  // 카드에 제형이 보이지 않으므로 제품 ID 로 확인한다
-  const matte = recommendByColor(chosenHex, { finish: 'matte', limit: 10 }).map((p) => p.id);
-  await page.selectOption('#finish-filter', 'matte');
-  await page.waitForFunction((want) => [...document.querySelectorAll('#rec-list .card')].map((c) => c.dataset.productId).join() === want, matte.join());
-  await page.selectOption('#finish-filter', '');
-  await page.waitForFunction(() => document.querySelectorAll('#rec-list .card').length === 10);
-  // 카드에는 상세 보기 링크가 없어 주소로 들어간다 (from=recommend 로 '이전 화면'이 추천 화면을 가리킨다)
-  await page.goto(BASE + `/product.html?id=${ids[0]}&from=recommend`);
-  await page.waitForSelector('#product-info table');
-  assert.ok((await page.textContent('#product-info')).includes(allProducts().find((x) => x.id === ids[0]).barcode));
-  await assertAchromatic(page);
-  await shot('06-product');
-  await page.click('#back');
-  await page.waitForURL(at('recommend.html'));
-  await page.click('#recolor');
-  await page.waitForURL(at('lip-together.html'));
-});
-
-// ---------- 카메라 오류 ----------
-for (const [name, error, message] of [
-  ['카메라 권한 거부 → 안내 메시지와 다시 연결 버튼', 'NotAllowedError', /권한이 거부/],
-  ['카메라 장치 없음 → 꽂으면 자동 연결 안내', 'NotFoundError', /다시 꽂으면 자동으로 연결/],
-]) {
-  await step(name, async () => {
-    const pg = await ctx.newPage();
-    watch(pg, error);
-    await pg.addInitScript((err) => {
-      navigator.mediaDevices.getUserMedia = () => Promise.reject(new DOMException('test', err));
-    }, error);
-    await pg.goto(BASE + '/lip-together.html');
-    await pg.click('#use-camera');
-    await pg.waitForSelector('#error:not(.hidden)');
-    assert.match(await pg.textContent('#error'), message);
-    assert.ok(await pg.isVisible('#cam-retry'));
-    await pg.close();
-  });
-}
-
-// ---------- 흐름 B: 바코드 (챗봇 화면의 바코드 패널은 꺼 두었고, 합본 화면의 바코드 탭이 쓴다) ----------
-const target = allProducts().find((p) => p.id === 'P014');
-await step('흐름 B: 합본 화면 바코드 번호 입력 → 제품 설명 → 기준 제품 설정', async () => {
-  await openFresh(page, '/studio.html');
-  await page.click('.studio-tabs [data-tab="scan"]');
-  await page.fill('#scan-input', target.barcode);
-  await page.press('#scan-input', 'Enter');
-  await page.waitForSelector('#base-chip:not(.hidden)', { state: 'attached' });
-  assert.ok((await page.textContent('#chat-log')).includes(target.name));
-  await shot('07-studio-barcode');
-});
-
-await step('흐름 B: 미등록 바코드 → 등록되지 않았다는 답', async () => {
-  await page.click('.studio-tabs [data-tab="scan"]');
-  await page.fill('#scan-input', '8800000000000');
-  await page.press('#scan-input', 'Enter');
-  await page.waitForFunction(() => document.getElementById('chat-log').textContent.includes('등록되지 않은 바코드예요'));
-});
-
-// ---------- 흐름 C ----------
-// 답변이 한 글자씩 다 찍힐 때까지 기다린다 (찍히는 동안에는 다음 질문을 받지 않는다)
-const replyDone = (pg) => pg.waitForFunction(() => !document.querySelector('#chat-log .bubble.streaming'));
-// 마지막 답변 말풍선에 붙은 제품 카드의 제품 ID
-const lastReplyCardIds = () => [...([...document.querySelectorAll('#chat-log .bubble.bot')].pop()?.querySelectorAll('.card') || [])].map((c) => c.dataset.productId);
-await step('흐름 C: 챗봇 직접 질문 → 추천 → 상세 → 챗봇으로 돌아와 대화 유지', async () => {
-  await openFresh(page, '/chat.html');
-  // 기준 색상 없음 → 비슷한 색상은 결과를 꾸며내지 않음
-  await page.fill('#chat-input', '비슷한 색상 찾아 줘');
-  await page.press('#chat-input', 'Enter');
-  await page.waitForFunction(() => document.getElementById('chat-log').textContent.includes('기준 색상이 없어'));
-  await replyDone(page);
-  assert.equal(await page.locator('#chat-log .card').count(), 0);
-  await page.fill('#chat-input', '2만원 이하 레드 추천해 줘');
-  await page.press('#chat-input', 'Enter');
-  // 추천 제품은 답변 말풍선 안에 카드로 붙는다
-  await page.waitForFunction(`(${lastReplyCardIds})().length > 0`);
-  await replyDone(page);
-  const ids = await page.evaluate(lastReplyCardIds);
-  for (const id of ids) {
-    const p = allProducts().find((x) => x.id === id);
-    assert.ok(p.color_family === 'red' && p.price <= 20000, id);
-  }
-  assert.equal(ids.length, allProducts().filter((p) => p.color_family === 'red' && p.price <= 20000).length);
-  await assertAchromatic(page);
-  await shot('08-chat-direct');
-  await page.click(`#chat-log .card[data-product-id="${ids[0]}"] >> text=상세 보기`);
-  await page.waitForURL(at('product.html'));
-  await page.waitForSelector('#product-info table');
-  await page.click('#back');
-  await page.waitForURL(at('chat.html'));
-  await page.waitForFunction(() => document.getElementById('chat-log').textContent.includes('2만원 이하 레드')
-    && document.querySelectorAll('#chat-log .card').length > 0);
+  await page.click('#fc-sbtn');
+  assert.equal(await page.getAttribute('#stage', 'data-mode'), 'arc');
 });
 
 // 세로 키오스크(갤럭시탭 세로 800×1280, 조금 낮은 820×1180): 주 화면은 스크롤 없이 한 화면에 들어온다
@@ -327,8 +206,8 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
   for (const vp of [KIOSK, { width: 820, height: 1180 }]) {
     await pg.setViewportSize(vp);
     for (const [path, ids] of [
-      ['/', ['#home-standby .hs-hint']],
-      ['/palette.html', ['.pal-cam .stage', '#reset', '#textures', '#find', '#lip-paints', '#mix-canvas']],
+      ['/', ['#stage']],
+      ['/palette.html', ['.fc-oval', '.fc-wheel', '#fc-swatches', '#fc-sbtn', '.fc-logo']],
       ['/chat.html', ['#chat-log', '#chat-input', '#tts', '.tkb']], // 마이크는 2026-11-15 뺐다,
       ['/shades.html', ['#sh-page']],
     ]) {

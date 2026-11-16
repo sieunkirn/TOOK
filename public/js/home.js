@@ -1,108 +1,146 @@
-// 홈 = 대기 화면 (옛 거울 ver4 대기 화면): 왼쪽 위 TOOK 로고, 오른쪽 위 시계, 가운데 점선 얼굴(천천히 밝아졌다 어두워짐), 아래 안내 두 줄.
-// 안내 아래 버튼 두 개(위아래, 2026-11-15): '카메라로 발라 보기' → 팔레트, '제품 태그하기' → 챗봇 화면(리더기에 제품을 올리면 설명).
-// 예전처럼 화면 아무 곳이나 눌러 넘어가지는 않는다. 오른쪽 아래 다크 모드·언어 버튼은 그대로.
-// 라이트·다크 모드에 따라 흰 바탕+검정 선 / 검정 바탕+흰 선 (색은 wireframe.css 의 --paper·--ink)
-import { t, lang, languageMenu, themeToggle } from './i18n.js';
-document.documentElement.lang = lang(); // 홈은 applyI18n 을 부르지 않아 <html lang> 을 직접 맞춘다
-import { store, logoSvg } from './common.js';
+// 홈 = TOOK_prototype(Figma '앱' 페이지) 1~3번 화면 그대로 (2026-11-16). 좌표는 모두 900×1440 무대 기준 (ui-stage.js)
+//  1 대기: 검정 화면 가운데 빛나는 마크. 1.5초 뒤 저절로(또는 누르면 바로) 2로 (2026-11-16 사용자 요청)
+//  2 로고: 마크가 왼쪽으로 가며 TOOK 글자가 나타난다. 잠시 뒤(또는 누르면) 3으로
+//  3 시작: 로고가 위로 올라가며 빛나고 알약 버튼이 나온다.
+//     왼쪽 스캔 아이콘 = 카메라로 발라 보기(팔레트 Find Your Color), 오른쪽 음성 아이콘 = AI 뷰티 챗봇
+//     버튼은 원본 3번 화면의 세 모양 순서대로 빛난다: 평소(어두운 분홍) → 손가락을 대면(분홍) → 떼는 순간(흰색) → 다음 화면
+// 예전 홈(점선 얼굴·시계·버튼 두 개·다크 모드·언어 버튼)은 프로토타입에 없어 뺐다 (git 기록 a840e68 에 있음)
+import { store } from './common.js';
+import { t, lang, langToggle } from './i18n.js';
 import { REDUCE_MOTION as reduce } from './motion.js';
+import { logoFull, markGlowSvg } from './brand.js';
+import { fitStage } from './ui-stage.js';
 
+document.documentElement.lang = lang(); // 홈은 applyI18n 을 부르지 않아 <html lang> 을 직접 맞춘다
+try { sessionStorage.removeItem('took.homeSkipIntro'); } catch { /* 저장 불가 환경 */ }
 
-try { sessionStorage.removeItem('took.homeSkipIntro'); } catch { /* 저장 불가 환경 */ } // 옛 인트로 건너뛰기 표시 (지금은 쓰지 않음)
+// 스캔 아이콘: 네 모서리 괄호 (원본 36×35, 선 굵기 3.5)
+const SCAN_SVG = '<svg class="hs-ico-scan" viewBox="0 0 36 35" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">'
+  + '<path d="M2.2 10.6V6.8a4.6 4.6 0 0 1 4.6-4.6h3.6"/><path d="M25.6 2.2h3.6a4.6 4.6 0 0 1 4.6 4.6v3.6"/>'
+  + '<path d="M33.8 24.4v3.8a4.6 4.6 0 0 1-4.6 4.6h-3.6"/><path d="M10.4 32.8H6.8a4.6 4.6 0 0 1-4.6-4.6v-3.8"/></g></svg>';
+// 음성 아이콘: 둥근 막대 다섯 개 (원본 위치·높이 그대로)
+const WAVE_SVG = '<svg class="hs-ico-wave" viewBox="0 0 60 34" aria-hidden="true" focusable="false"><g fill="currentColor">'
+  + '<rect x="0" y="12" width="6" height="9" rx="3"/><rect x="11" y="4" width="8" height="25" rx="4"/><rect x="25" y="0" width="7.4" height="33" rx="3.7"/>'
+  + '<rect x="38" y="4" width="7.4" height="25" rx="3.7"/><rect x="51" y="9" width="8" height="16" rx="4"/></g></svg>';
 
-const FACE_SVG = '<svg class="hs-face" viewBox="0 0 200 250" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="0 9.5">'
-  + '<path d="M100 16C146 16 164 50 164 96C164 150 150 190 128 212C118 222 110 226 100 226C90 226 82 222 72 212C50 190 36 150 36 96C36 50 54 16 100 16Z"/>'
-  + '<path d="M37 112C27 108 24 122 28 138C31 150 37 155 42 152"/><path d="M163 112C173 108 176 122 172 138C169 150 163 155 158 152"/>'
-  + '<path d="M62 108H86M114 108H138M62 126H86M114 126H138"/><path d="M90 160Q100 170 110 160"/><path d="M82 190H118"/></g></svg>';
+const stage = document.getElementById('stage');
+fitStage(stage);
+stage.innerHTML = `<div class="hs-glowmark" aria-hidden="true">${markGlowSvg()}</div>${logoFull('hs-logo')}
+  <div class="hs-start" data-state="a" data-side="scan">
+    <div class="hs-glow" aria-hidden="true"><i></i></div>
+    <div class="hs-pill" role="group">
+      <span class="hs-knob" aria-hidden="true"></span>
+      <button type="button" class="hs-opt hs-opt-scan">${SCAN_SVG}</button>
+      <button type="button" class="hs-opt hs-opt-voice">${WAVE_SVG}</button>
+    </div>
+  </div>
+  <p class="sr-only" id="hs-help"></p>`;
+stage.append(langToggle('hs-lang')); // 한국어/영어 (3번 시작 화면 오른쪽 위에서만 보인다)
+const pill = stage.querySelector('.hs-pill');
+const box = stage.querySelector('.hs-start'); // 눌린 단계(data-state a·b·c)와 고른 쪽(data-side)
+pill.setAttribute('aria-label', t('home.choose'));
+stage.querySelector('.hs-opt-scan').setAttribute('aria-label', t('home.toPalette'));
+stage.querySelector('.hs-opt-voice').setAttribute('aria-label', t('home.toChat'));
+stage.querySelector('#hs-help').textContent = t('home.tapToStart');
 
-const box = document.getElementById('home-standby');
-box.innerHTML = `<div class="hs-top" aria-hidden="true">${logoSvg('hs-logo')}<time class="hs-clock"></time></div>${FACE_SVG}`;
-const hint = document.createElement('p');
-hint.className = 'hs-hint';
-hint.textContent = t('home.choose');
-// 시작 버튼 두 개 (로그인 화면의 버튼처럼 한 열에 두 줄)
-const startBtn = (cls, label, desc, onClick) => {
-  const b = document.createElement('button');
-  b.type = 'button';
-  b.className = 'hs-btn ' + cls;
-  b.innerHTML = '<strong></strong><span></span>';
-  b.querySelector('strong').textContent = label;
-  b.querySelector('span').textContent = desc;
-  b.addEventListener('click', onClick);
-  return b;
-};
-const actions = document.createElement('div');
-actions.className = 'hs-actions';
-actions.append(
-  startBtn('hs-btn-main', t('home.toPalette'), t('home.toPaletteDesc'), () => start('palette')),
-  startBtn('hs-btn-line', t('home.toTag'), t('home.toTagDesc'), () => start('tag')),
-);
-const langWrap = document.createElement('div');
-langWrap.className = 'intro-lang';
-// 관리자 버튼 (2026-11-15): 터치 필름 범위 조정·조정값 복사 화면(admin.html). 키오스크 5:8 틀 밖, 맨 위 창에서 연다
-// 키오스크 틀(kiosk.html) 안에서는 손님이 보는 화면이라 버튼을 두지 않는다. 직원은 주소창에 /admin.html 로 연다
-const inKiosk = (() => { try { return window.top !== window && /kiosk(\.html)?$/.test(window.top.location.pathname); } catch { return true; } })();
-if (!inKiosk) {
-  const adminBtn = document.createElement('button');
-  adminBtn.type = 'button';
-  adminBtn.className = 'theme-toggle home-admin';
-  adminBtn.textContent = t('home.admin');
-  adminBtn.addEventListener('click', () => { (window.top || window).location.href = 'admin.html'; });
-  langWrap.append(adminBtn);
+// ---------- 1 → 2 → 3 ----------
+const MARK_MS = 1500; // 1번 마크 화면을 보여 주는 시간
+const LOGO_MS = 1300; // 2번 로고 화면을 보여 주는 시간
+let step = 0;
+let autoTimer = null;
+function go(n, { instant = false } = {}) {
+  clearTimeout(autoTimer);
+  step = n;
+  stage.classList.toggle('hs-instant', instant || reduce);
+  stage.dataset.step = String(n);
+  if (instant || reduce) requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.remove('hs-instant')));
+  if (n === 1) autoTimer = setTimeout(() => go(2), MARK_MS);
+  if (n === 2) autoTimer = setTimeout(() => go(3), LOGO_MS);
 }
-langWrap.append(themeToggle(), languageMenu({ skipIntro: false }));
-box.append(hint, actions, langWrap);
+// 1·2번 화면은 아무 곳이나 누르면 다음으로 (원본 프로토타입처럼 손을 뗄 때 한 번만)
+stage.addEventListener('pointerup', (e) => {
+  if (step === 1) go(2);
+  else if (step === 2 && !e.target.closest('.hs-pill')) go(3);
+});
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'Enter' || e.key === ' ') && step < 3) { e.preventDefault(); go(step + 1); }
+});
 
-const clock = box.querySelector('.hs-clock');
-const tick = () => {
-  const now = new Date();
-  clock.textContent = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
-  clock.dateTime = now.toISOString();
-};
-tick();
-setInterval(tick, 1000);
-
+// ---------- 3번 알약 버튼: 누르는 동안 세 단계로 빛난다 ----------
+let pressing = null;
 let leaving = false;
-const LEAVE_MS = 650;
-// 팔레트로 넘어가는 움직임: 얼굴·안내·시계·버튼은 살짝 커지며 사라지고, 왼쪽 위 TOOK 로고는 팔레트 상단 메뉴의 로고 자리로 줄어들며 날아간다.
-// 팔레트 화면은 로고가 그 자리에 있는 채로 나머지가 아래에서 떠오른다 (palette.html 머리 스크립트 + wireframe.css .enter-fx)
-function navLogoRect() {
-  // 상단 메뉴는 팔레트에서 그려지므로, 같은 스타일의 메뉴를 보이지 않게 잠깐 만들어 로고 자리를 잰다
-  const probe = document.createElement('header');
-  probe.className = 'nav';
-  probe.style.cssText = 'position:fixed;top:0;left:0;right:0;visibility:hidden;pointer-events:none';
-  probe.innerHTML = `<strong><a class="nav-logo">${logoSvg()}</a></strong>`;
-  document.body.append(probe);
-  const r = probe.querySelector('svg').getBoundingClientRect();
-  probe.remove();
-  return r;
-}
-function leave() {
-  try { sessionStorage.setItem('took.enterFx', '1'); } catch { /* 저장 불가 환경: 팔레트는 그냥 열린다 */ }
-  if (reduce) { location.href = 'palette.html'; return; }
-  box.classList.add('hs-leaving');
-  const logo = box.querySelector('.hs-logo');
-  const from = logo.getBoundingClientRect();
-  const to = navLogoRect();
-  const k = to.height / from.height;
-  logo.animate([{ transform: 'none' }, { transform: `translate(${to.left - from.left}px, ${to.top - from.top}px) scale(${k})` }],
-    { duration: LEAVE_MS, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
-  setTimeout(() => { location.href = 'palette.html'; }, LEAVE_MS);
-}
-// 버튼: 팔레트는 로고가 날아가는 움직임과 함께, 제품 태그는 챗봇 화면으로 바로 (둘 다 이전 전달값 없이 새로 연다)
-function start(where) {
+const sideOf = (el) => (el?.closest('.hs-opt-voice') ? 'voice' : el?.closest('.hs-opt-scan') ? 'scan' : null);
+pill.addEventListener('pointerdown', (e) => {
+  if (step !== 3 || leaving) return;
+  const side = sideOf(e.target);
+  if (!side) return;
+  pressing = { side, id: e.pointerId };
+  box.dataset.side = side;
+  box.dataset.state = 'b';
+});
+pill.addEventListener('pointerup', (e) => {
+  if (!pressing || leaving) return;
+  const { side } = pressing;
+  pressing = null;
+  // 손가락이 버튼 밖으로 나가서 떼면 취소
+  const r = pill.getBoundingClientRect();
+  if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) { box.dataset.state = 'a'; return; }
+  press(side);
+});
+pill.addEventListener('pointercancel', () => { pressing = null; if (!leaving) box.dataset.state = 'a'; });
+pill.addEventListener('pointerleave', (e) => { if (pressing && e.pointerType === 'mouse') { pressing = null; box.dataset.state = 'a'; } });
+// 키보드(Enter·Space)로 누를 때: 같은 세 단계를 짧게 보여 준다
+pill.addEventListener('click', (e) => {
+  if (e.detail !== 0 || leaving) return;
+  const side = sideOf(e.target);
+  if (!side) return;
+  box.dataset.side = side;
+  box.dataset.state = 'b';
+  setTimeout(() => press(side), 160);
+});
+
+function press(side) {
   if (leaving) return;
   leaving = true;
-  if (where === 'tag') {
+  box.dataset.side = side;
+  box.dataset.state = 'c';
+  setTimeout(() => start(side), reduce ? 0 : 320);
+}
+
+// ---------- 다음 화면으로 ----------
+// 팔레트: 로고가 Find Your Color 화면 왼쪽 위 작은 로고 자리로 줄어들며 날아가고, 나머지는 사라진다
+const SMALL_LOGO = { left: 39.8, top: 65.8, k: 190.6 / 612 }; // palette 화면의 로고 (원본 04.png: x 40~229, y 66~110)
+function start(where) {
+  if (where === 'voice') {
     store.remove('navCurrent.chat.html');
     location.href = 'chat.html';
     return;
   }
   store.remove('navCurrent.palette.html');
-  leave();
+  try { sessionStorage.setItem('took.enterFx', '1'); } catch { /* 저장 불가 환경: 팔레트는 그냥 열린다 */ }
+  if (reduce) { location.href = 'palette.html'; return; }
+  stage.classList.add('hs-leaving');
+  const logo = stage.querySelector('.hs-logo');
+  // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 translateY(-268px) 로 올라가 있으므로
+  // 그 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(왼쪽 위 39.8, 65.8 · 배율 190.6/612)에 정확히 멈춘다 (transform-origin 0 0)
+  const BASE = { left: 144, top: 648 };
+  const dx = SMALL_LOGO.left - BASE.left;
+  const dy = SMALL_LOGO.top - BASE.top;
+  const from = getComputedStyle(logo).transform; // 지금 보이는 자리 그대로 (translateY(-268px))
+  logo.style.transition = 'none';
+  logo.animate([
+    { transform: from === 'none' ? 'translateY(-268px)' : from, filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.88))' },
+    { transform: `translate(${dx}px, ${dy}px) scale(${SMALL_LOGO.k})`, filter: 'drop-shadow(0 0 0 rgba(255, 255, 255, 0))' }, // 팔레트 로고는 빛 번짐 없음
+  ], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
+  setTimeout(() => { location.href = 'palette.html'; }, 700);
 }
-// 팔레트 상단 로고로 왔으면(common.js goHomeWithMotion): 로고는 이미 제자리, 얼굴 → 안내 글 순서로 떠오른다
+
+// 언어를 바꿔 다시 열렸으면(took.homeFx) 바로 3번(시작 버튼) 화면, 그 밖에(처음·초기화·로고) 1번(마크)부터
+let arrive = false;
 try {
-  if (sessionStorage.getItem('took.homeFx') && !reduce) box.classList.add('hs-arrive');
+  arrive = !!sessionStorage.getItem('took.homeFx');
   sessionStorage.removeItem('took.homeFx');
 } catch { /* 저장 불가 환경 */ }
+const want = Number(new URLSearchParams(location.search).get('step')); // 화면 확인용 ?step=1|2|3
+go(want >= 1 && want <= 3 ? want : arrive ? 3 : 1, { instant: true });
+window.tookHome = { go };
