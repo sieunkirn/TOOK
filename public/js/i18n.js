@@ -303,6 +303,7 @@ STRINGS.ko['home.admin'] = '관리자'; STRINGS.en['home.admin'] = 'Admin';
 Object.assign(STRINGS.ko, {
   'home.choose': '어떻게 시작할까요?',
   'home.toPalette': '카메라로 발라 보기', 'home.toPaletteDesc': '거울 앞에서 립 색을 섞어 바로 발라 봐요',
+  'home.labelScan': '컬러 찾기', 'home.labelVoice': 'AI 뷰티 상담',
   'home.toTag': '제품 태그하기', 'home.toTagDesc': '가진 립 제품을 리더기에 올리면 챗봇이 알려 드려요',
   'card.pick': '챗봇에 담기', 'card.picked': '담음 ✓', 'card.pickAria': '{name}을(를) 챗봇에 담기',
   'pick.added': '챗봇에 담았어요. 오른쪽 아래 챗봇 버튼을 눌러 물어보세요', 'pick.removed': '챗봇에서 뺐어요', 'pick.full': '챗봇에는 {n}개까지 담을 수 있어요',
@@ -311,6 +312,7 @@ Object.assign(STRINGS.ko, {
 Object.assign(STRINGS.en, {
   'home.choose': 'How would you like to start?',
   'home.toPalette': 'Try on with the camera', 'home.toPaletteDesc': 'Mix lip colors and try them on in the mirror',
+  'home.labelScan': 'Find color', 'home.labelVoice': 'AI beauty chat',
   'home.toTag': 'Tag a product', 'home.toTagDesc': 'Put your lip product on the reader and the chatbot explains it',
   'card.pick': 'Add to chat', 'card.picked': 'Added ✓', 'card.pickAria': 'Add {name} to the chat',
   'pick.added': 'Added to the chat. Tap the chat button at the bottom right to ask about it', 'pick.removed': 'Removed from the chat', 'pick.full': 'You can add up to {n} products to the chat',
@@ -320,16 +322,18 @@ Object.assign(STRINGS.en, {
 Object.assign(STRINGS.ko, {
   'home.toChat': 'AI 뷰티 챗봇과 이야기하기', 'home.tapToStart': '화면을 눌러 시작하세요',
   'fc.pageTitle': 'took(툭) - Find Your Color', 'fc.title': 'Find Your Color', 'fc.sub': '나만의 컬러를 찾아보세요',
-  'fc.find': '이 컬러로 제품 찾기', 'fc.sheet': '제품 찾기 열기', 'fc.sheetClose': '제품 찾기 닫기', 'fc.dial': '컬러 다이얼',
-  'fc.theme': '다크 모드 켜기/끄기', 'fc.swatch': '컬러 {hex}',
+  'fc.sheet': '추천 제품 보기', 'fc.sheetClose': '추천 제품 닫기', 'fc.dial': '컬러 농도 바 (왼쪽 연하게, 오른쪽 진하게)',
+  'fc.theme': '다크 모드 켜기/끄기', 'fc.swatch': '컬러 {hex}', 'fc.families': '컬러 계열',
+  'fc.family': '{name} 계열 · {hex}', 'fc.fam.red': '빨강', 'fc.fam.pink': '핑크', 'fc.fam.purple': '보라', 'fc.fam.orange': '오렌지', 'fc.fam.nude': '누드',
   'fc.texture': '텍스처: {name} (누르면 바뀌어요)', 'fc.chat': 'AI 뷰티 챗봇 열기',
   'fc.searching': '비슷한 제품을 찾고 있어요', 'fc.found': '이 컬러와 비슷한 제품 {n}개', 'fc.none': '비슷한 제품이 없어요', 'fc.back': '← 컬러 다시 고르기',
 });
 Object.assign(STRINGS.en, {
   'home.toChat': 'Talk to the AI beauty chatbot', 'home.tapToStart': 'Tap the screen to start',
   'fc.pageTitle': 'took - Find Your Color', 'fc.title': 'Find Your Color', 'fc.sub': 'Find your own color',
-  'fc.find': 'Find products in this color', 'fc.sheet': 'Open product search', 'fc.sheetClose': 'Close product search', 'fc.dial': 'Color dial',
-  'fc.theme': 'Toggle dark mode', 'fc.swatch': 'Color {hex}',
+  'fc.sheet': 'Show matching products', 'fc.sheetClose': 'Close matching products', 'fc.dial': 'Color depth bar (left lighter, right deeper)',
+  'fc.theme': 'Toggle dark mode', 'fc.swatch': 'Color {hex}', 'fc.families': 'Color families',
+  'fc.family': '{name} · {hex}', 'fc.fam.red': 'Red', 'fc.fam.pink': 'Pink', 'fc.fam.purple': 'Purple', 'fc.fam.orange': 'Orange', 'fc.fam.nude': 'Nude',
   'fc.texture': 'Texture: {name} (tap to change)', 'fc.chat': 'Open the AI beauty chatbot',
   'fc.searching': 'Looking for similar products', 'fc.found': '{n} products similar to this color', 'fc.none': 'No similar products', 'fc.back': '← Choose the color again',
 });

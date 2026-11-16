@@ -89,7 +89,10 @@ export function setupIdleReset(custom = {}) {
     };
     update();
     const ring = el('div', { class: 'idle-ring', style: `--idle-s: ${IDLE_WARN_S}s` });
-    ring.innerHTML = '<svg viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52" pathLength="100"/></svg>';
+    // #idle-grad: 무드 화면(body.tui·tui-mood)에서 줄어드는 원의 분홍 그라데이션 (wireframe.css). 다른 화면은 검정 선 그대로
+    ring.innerHTML = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="idle-grad" x1="0" y1="0" x2="1" y2="1">'
+      + '<stop offset="0" stop-color="#ffb3d3"/><stop offset=".5" stop-color="#fc54a5"/><stop offset="1" stop-color="#e8186f"/></linearGradient></defs>'
+      + '<circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52" pathLength="100"/></svg>';
     ring.append(num);
     const icon = (path) => {
       const s = el('span', { class: 'idle-icon', 'aria-hidden': 'true' });

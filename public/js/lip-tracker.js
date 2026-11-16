@@ -78,6 +78,18 @@ function toneSamplePoints(face) {
   return tone;
 }
 
+// 얼굴 전체를 감싸는 네모 (팔레트 화면의 얼굴 따라가는 프레임용)
+function faceBox(face) {
+  let x0 = 1, y0 = 1, x1 = 0, y1 = 0;
+  for (const p of face) {
+    if (p.x < x0) x0 = p.x;
+    if (p.x > x1) x1 = p.x;
+    if (p.y < y0) y0 = p.y;
+    if (p.y > y1) y1 = p.y;
+  }
+  return { x0, y0, x1, y1 };
+}
+
 function toLips(result) {
   const face = result?.faceLandmarks?.[0];
   if (!face) return null;
@@ -85,6 +97,7 @@ function toLips(result) {
     outer: LIPS_OUTER.map((i) => pt(face[i])),
     inner: LIPS_INNER.map((i) => pt(face[i])),
     tone: toneSamplePoints(face),
+    box: faceBox(face),
   };
 }
 

@@ -12,7 +12,7 @@ export const FINISH_TO_TEXTURE = { glossy: 'glossy', matte: 'matte', satin: 'sat
  * 입술 좌표(원본 프레임 기준 0~1)를 반전·회전한 캔버스 기준 좌표로 옮긴다.
  * 그리는 순서와 같다: 먼저 좌우 반전, 그다음 시계 방향 회전
  */
-function mapPoint(p, mirror, rotate) {
+export function mapPoint(p, mirror, rotate) {
   const u = mirror ? 1 - p.x : p.x;
   const v = p.y;
   switch (rotate) {

@@ -1,7 +1,7 @@
 // 홈 = TOOK_prototype(Figma '앱' 페이지) 1~3번 화면 그대로 (2026-11-16). 좌표는 모두 900×1440 무대 기준 (ui-stage.js)
 //  1 대기: 검정 화면 가운데 빛나는 마크. 1.5초 뒤 저절로(또는 누르면 바로) 2로 (2026-11-16 사용자 요청)
 //  2 로고: 마크가 왼쪽으로 가며 TOOK 글자가 나타난다. 잠시 뒤(또는 누르면) 3으로
-//  3 시작: 로고가 위로 올라가며 빛나고 알약 버튼이 나온다.
+//  3 시작: 로고가 위로 올라가며 빛나고 알약 버튼이 나온다. 로고·버튼은 한 덩어리로 화면 가운데쯤, 버튼은 원본보다 1.2배 크게 + 아래 이름표 (2026-11-16 사용자 요청 "버튼 배치 더 예쁘게")
 //     왼쪽 스캔 아이콘 = 카메라로 발라 보기(팔레트 Find Your Color), 오른쪽 음성 아이콘 = AI 뷰티 챗봇
 //     버튼은 원본 3번 화면의 세 모양 순서대로 빛난다: 평소(어두운 분홍) → 손가락을 대면(분홍) → 떼는 순간(흰색) → 다음 화면
 // 예전 홈(점선 얼굴·시계·버튼 두 개·다크 모드·언어 버튼)은 프로토타입에 없어 뺐다 (git 기록 a840e68 에 있음)
@@ -33,6 +33,7 @@ stage.innerHTML = `<div class="hs-glowmark" aria-hidden="true">${markGlowSvg()}<
       <button type="button" class="hs-opt hs-opt-scan">${SCAN_SVG}</button>
       <button type="button" class="hs-opt hs-opt-voice">${WAVE_SVG}</button>
     </div>
+    <div class="hs-labels" aria-hidden="true"><span class="hs-label-scan">${t('home.labelScan')}</span><span class="hs-label-voice">${t('home.labelVoice')}</span></div>
   </div>
   <p class="sr-only" id="hs-help"></p>`;
 stage.append(langToggle('hs-lang')); // 한국어/영어 (3번 시작 화면 오른쪽 위에서만 보인다)
@@ -121,7 +122,7 @@ function start(where) {
   if (reduce) { location.href = 'palette.html'; return; }
   stage.classList.add('hs-leaving');
   const logo = stage.querySelector('.hs-logo');
-  // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 translateY(-268px) 로 올라가 있으므로
+  // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 translateY(-200px) 로 올라가 있으므로
   // 그 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(왼쪽 위 39.8, 65.8 · 배율 190.6/612)에 정확히 멈춘다 (transform-origin 0 0)
   const BASE = { left: 144, top: 648 };
   const dx = SMALL_LOGO.left - BASE.left;
@@ -129,7 +130,7 @@ function start(where) {
   const from = getComputedStyle(logo).transform; // 지금 보이는 자리 그대로 (translateY(-268px))
   logo.style.transition = 'none';
   logo.animate([
-    { transform: from === 'none' ? 'translateY(-268px)' : from, filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.88))' },
+    { transform: from === 'none' ? 'translateY(-200px)' : from, filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.88))' },
     { transform: `translate(${dx}px, ${dy}px) scale(${SMALL_LOGO.k})`, filter: 'drop-shadow(0 0 0 rgba(255, 255, 255, 0))' }, // 팔레트 로고는 빛 번짐 없음
   ], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
   setTimeout(() => { location.href = 'palette.html'; }, 700);

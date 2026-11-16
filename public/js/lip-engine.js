@@ -167,7 +167,7 @@ export function smoothLips(prev, next) {
   const move = next.outer.reduce((s, p, i) => s + Math.hypot(p.x - prev.outer[i].x, p.y - prev.outer[i].y), 0) / next.outer.length;
   const k = Math.min(1, 0.4 + (move / mouthW) * 20); // 입 너비의 3% 이상 움직이면 평활 없음
   const mix = (a, b) => b.map((p, i) => ({ x: a[i].x + (p.x - a[i].x) * k, y: a[i].y + (p.y - a[i].y) * k }));
-  return { outer: mix(prev.outer, next.outer), inner: mix(prev.inner, next.inner), tone: next.tone };
+  return { outer: mix(prev.outer, next.outer), inner: mix(prev.inner, next.inner), tone: next.tone, box: next.box };
 }
 
 // ---------- 어울리는 컬러 추정 (규칙 기반 참고용, 진단 아님) ----------
