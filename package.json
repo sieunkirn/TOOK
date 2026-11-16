@@ -19,6 +19,7 @@
     "samples": "node scripts/make-samples.js",
     "build:static": "node scripts/build-static.js",
     "build:web": "node scripts/build-static.js --web",
+    "build:apk": "node scripts/build-apk.js",
     "e2e:static": "node scripts/build-static.js && MODE=static node test/e2e.mjs"
   },
   "dependencies": {

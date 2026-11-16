@@ -17,8 +17,10 @@ export const startSuggestions = () => (isEn() ? START_SUGGESTIONS_EN : START_SUG
 
 // 장난 인사 (2026-11-17 사용자 요청): "안녕하살법" → "안녕하살법 받아치기!!". 받아치기를 받아치면 한 번 더 붙여 되받는다
 // ("안녕하살법 받아치기" → "안녕하살법 받아치기 받아치기!!"). 띄어 써도 알아듣고, 한/영 어느 쪽 대화에서든. 아니면 null
+// 반영 테스트 (2026-11-17 사용자 요청): "이케이케" → "카라스노"
 export function hasalReply(message) {
   const t = String(message || '').replace(/\s+/g, '');
+  if (t.includes('이케이케')) return '카라스노';
   if (!t.includes('안녕하살법')) return null;
   const n = Math.min(9, (t.match(/받아치기/g) || []).length);
   return '안녕하살법' + ' 받아치기'.repeat(n + 1) + '!!';
