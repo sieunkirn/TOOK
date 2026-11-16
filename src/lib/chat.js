@@ -11,7 +11,7 @@ import { has, MOODS, GENERIC_ACKS } from './chat-words.js';
 import { isEn, setEn, L, finL, won, nameOf, shortOf, josa, euro, ord } from './chat-lang.js';
 import { parseMessage, normalizeForChat } from './chat-parse.js';
 import { runSearch, relaxHint, buildEnv, friendlySummary, searchPart, phraseOf, phraseOfEn } from './chat-search.js';
-import { offTopicReply, openerFor, compareSummary, resultSuggestions, startSuggestions } from './chat-reply.js';
+import { offTopicReply, hasalReply, openerFor, compareSummary, resultSuggestions, startSuggestions } from './chat-reply.js';
 
 export { PII_RE, CHAT_VOCAB } from './chat-words.js';
 export { josa } from './chat-lang.js';
@@ -71,6 +71,10 @@ export function answer({ message, baseProductId = null, selectedHex = null, limi
     unsure: !!o.unsure, // 규칙으로는 뜻을 못 잡은 답 (못 알아들음·막연한 불만·기준 색 없는 색 비교): LLM 층이 대신 답해 볼 수 있다
     context: o.context || ctx,
   });
+
+  // 장난 인사 "안녕하살법" → 받아치기 (말 보정·검색보다 먼저, 보정 안내 없이 그대로)
+  const hasal = hasalReply(message);
+  if (hasal) return { ...out({ reply: '', suggestions: startSuggestions() }), reply: hasal };
 
   const q = searchPart(c);
   const isSearch = Object.keys(q).length > 0 || (c.mine && toneHint);

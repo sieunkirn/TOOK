@@ -15,6 +15,15 @@ const START_SUGGESTIONS_KO = ['데일리 립 추천해 줘', '데이트 립 추�
 // 처음 질문 추천 (지금 답하는 언어로)
 export const startSuggestions = () => (isEn() ? START_SUGGESTIONS_EN : START_SUGGESTIONS_KO);
 
+// 장난 인사 (2026-11-17 사용자 요청): "안녕하살법" → "안녕하살법 받아치기!!". 받아치기를 받아치면 한 번 더 붙여 되받는다
+// ("안녕하살법 받아치기" → "안녕하살법 받아치기 받아치기!!"). 띄어 써도 알아듣고, 한/영 어느 쪽 대화에서든. 아니면 null
+export function hasalReply(message) {
+  const t = String(message || '').replace(/\s+/g, '');
+  if (!t.includes('안녕하살법')) return null;
+  const n = Math.min(9, (t.match(/받아치기/g) || []).length);
+  return '안녕하살법' + ' 받아치기'.repeat(n + 1) + '!!';
+}
+
 // 립 추천 밖의 말: 제품을 내밀지 않고 할 수 없는 것을 부드럽게 말한 뒤 할 수 있는 걸 권한다
 export function offTopicReply(text) {
   const reply = (r, suggestions = startSuggestions()) => ({ reply: r, suggestions });

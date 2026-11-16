@@ -164,10 +164,10 @@ await step('홈: 대기 마크 → 로고 → 시작 버튼(누르는 3단계) �
 });
 
 // ---------- 팔레트 = Find Your Color (홈에서 바로 들어오는 주 화면) ----------
-await step('팔레트: 농도 바 끌기 → 띠 톡 누르기 → 색 계열 동그라미 → 로고 버튼 → 바로 추천 제품 → 입술에 발라보기', async () => {
+await step('팔레트: 원형 다이얼 돌리기 → 칸 톡 누르기 → 질감 동그라미 밀기·톡 → matte 알약 → 로고 버튼 → 바로 추천 제품 → 입술에 발라보기', async () => {
   await page.goto(BASE + '/palette.html');
   assert.equal(await page.getAttribute('#stage', 'data-mode'), 'arc');
-  assert.equal(await page.locator('.fc-sw').count(), 4, '색 계열 동그라미 4개 (빨강·핑크·오렌지·누드)');
+  assert.equal(await page.locator('.fc-sw').count(), 5, '질감 동그라미 5개 (matte·glossy·satin·sheer·shimmer)');
   // 팔레트 색은 모두 립 DB(올리브영 립 제품)에 실제로 있는 색
   const dbHex = new Set(JSON.parse(await readFile(new URL('../src/data/products.oliveyoung.json', import.meta.url), 'utf8')).map((p) => p.color_hex.toUpperCase()));
   const famStops = await page.evaluate(() => window.tookFind.FAMILIES.flatMap((f) => f.stops));
@@ -175,39 +175,59 @@ await step('팔레트: 농도 바 끌기 → 띠 톡 누르기 → 색 계열 �
   // 무대(900×1440) 좌표 → 화면 좌표 (창 크기에 맞게 줄어 있다)
   const box = await page.locator('#stage').boundingBox();
   const sp = (x, y) => [box.x + (x * box.width) / 900, box.y + (y * box.height) / 1440];
-  const phi = () => page.evaluate(() => window.tookFind.sel.phi);
+  const seg = () => page.evaluate(() => Math.round((-window.tookFind.rot() / window.tookFind.SEG) * 1e6) / 1e6); // 손잡이 아래 칸 번호 (부동소수 오차 정리)
   const chosen = () => page.evaluate(() => window.tookFind.chosen());
+  const settle = (to) => page.waitForFunction((s) => Math.abs(-window.tookFind.rot() / window.tookFind.SEG - s) < 1e-6, to, { timeout: 3000 }).catch(() => {});
+  // 다이얼을 오른쪽으로 끌면 색 띠가 손가락을 따라 돌고(손잡이는 제자리) 놓으면 칸에 멈춘다
+  const s0 = await seg();
+  const c0 = await chosen();
   await page.mouse.move(...sp(300, 1300));
   await page.mouse.down();
   for (let i = 1; i <= 8; i++) await page.mouse.move(...sp(300 + i * 12, 1300));
   await page.mouse.up();
+  await page.waitForTimeout(900); // 손가락 속도만큼 조금 더 돌다 칸에 멈출 때까지
   assert.equal(await page.getAttribute('#stage', 'data-mode'), 'arc', '5~9번 상태는 없다: 끌어도 4번 그대로');
-  assert.ok((await phi()) < -5, '띠 왼쪽에서 끌기 시작하면 유리 손잡이가 그쪽으로 와서 손가락을 따라간다 (색 띠는 고정)');
+  const s1 = await seg();
+  assert.ok(s1 < s0 && Number.isInteger(s1), `오른쪽으로 끌면 왼쪽 칸이 손잡이 아래로 오고 칸에 멈춘다 (${s0} → ${s1})`);
   await shot('02-palette-dial');
-  const light = await chosen();
-  assert.notEqual(light, '#FC54A5', '바를 왼쪽으로 옮기면 같은 핑크 계열의 연한 색');
-  await page.waitForFunction((h) => window.tookLipHex === h, light);
-  assert.ok(famStops.includes(light), '손잡이를 놓으면 DB 색 칸에 멈춘다');
-  // 띠 오른쪽(위에서 +37°)을 톡 누르면 손잡이가 가장 가까운 칸(+30.7°, 7칸 중 6번째)으로 미끄러져 간다 → 더 진한 색
-  await page.mouse.click(...sp(700, 1608.5 - Math.sqrt(412 ** 2 - 250.5 ** 2)));
-  await page.waitForFunction(() => Math.abs(window.tookFind.sel.phi - 92 / 6 * 2) < 0.01, null, { timeout: 3000 }).catch(() => {}); // 손잡이가 미끄러져 멈출 때까지 (화면이 바쁘면 느리다)
-  assert.ok(Math.abs((await phi()) - 92 / 6 * 2) < 0.01, `누른 자리에서 가장 가까운 칸으로 손잡이가 간다 (${await phi()})`);
-  const lum = (h) => parseInt(h.slice(1, 3), 16) + parseInt(h.slice(3, 5), 16) + parseInt(h.slice(5, 7), 16);
-  assert.ok(lum(await chosen()) < lum(light), '바 오른쪽은 더 진한 색');
-  // 오렌지 계열을 누르면 그 동그라미가 커지고 입술 색이 오렌지 계열의 같은 칸으로 (손잡이 자리 = 진하기는 그대로)
-  await page.click('.fc-sw >> nth=2');
-  assert.equal(await page.getAttribute('.fc-sw >> nth=2', 'aria-pressed'), 'true');
-  assert.equal(await page.evaluate(() => window.tookFind.sel.fam), 2);
-  const orange = await chosen();
-  assert.equal(orange, await page.evaluate(() => window.tookFind.FAMILIES[2].stops[5]));
-  await page.waitForFunction((h) => window.tookLipHex === h, orange);
+  const turned = await chosen();
+  assert.notEqual(turned, c0, '다이얼을 돌리면 색이 바뀐다');
+  await page.waitForFunction((h) => window.tookLipHex === h, turned);
+  assert.ok(famStops.includes(turned), '다이얼을 놓으면 DB 색 칸에 멈춘다');
+  // 손잡이 오른쪽 2칸 자리를 톡 누르면 그 칸이 손잡이 아래로 돌아온다
+  const a = (2 * (360 / 28) * Math.PI) / 180;
+  await page.mouse.click(...sp(449.5 + 412 * Math.sin(a), 1608.5 - 412 * Math.cos(a)));
+  await settle(s1 + 2);
+  assert.equal(await seg(), s1 + 2, `누른 칸이 손잡이 아래로 온다 (${await seg()})`);
+  const picked = await chosen();
+  assert.equal(picked, await page.evaluate(() => window.tookFind.segHex(-window.tookFind.rot() / window.tookFind.SEG)));
+  await page.waitForFunction((h) => window.tookLipHex === h, picked);
+  // 질감 동그라미: 가운데(matte)에서 왼쪽으로 밀면 다음 질감, 옆 동그라미를 톡 누르면 그게 가운데로. 다이얼은 그대로
+  const texName = () => page.textContent('#fc-tex-name');
+  await page.evaluate(() => window.tookFind.setTexture('matte'));
+  await page.waitForTimeout(400);
+  assert.equal(await texName(), 'matte');
+  await page.mouse.move(...sp(450, 1005));
+  await page.mouse.down();
+  for (let i = 1; i <= 10; i++) await page.mouse.move(...sp(450 - i * 13, 1005));
+  await page.waitForTimeout(150);
+  await page.mouse.up();
+  assert.equal(await page.evaluate(() => window.tookFind.sel.texture), 'glossy', '동그라미 줄을 옆으로 밀면 질감이 바뀐다');
+  assert.equal(await texName(), 'glossy', 'matte 알약에 지금 질감 이름');
+  assert.equal(await seg(), s1 + 2, '질감 동그라미를 밀어도 다이얼은 그대로');
+  await page.waitForTimeout(400);
+  await page.mouse.click(...sp(601, 1005)); // 오른쪽 이웃 = satin
+  assert.equal(await page.evaluate(() => window.tookFind.sel.texture), 'satin');
+  await page.click('#fc-tex'); // 알약은 예전 그대로 누르면 다음 질감
+  assert.equal(await page.evaluate(() => window.tookFind.sel.texture), 'sheer');
+  assert.equal(await page.getAttribute('.fc-sw[data-tex="sheer"]', 'aria-pressed'), 'true');
   // 로고 버튼 → 농도·'제품 찾기' 단계 없이 바로 추천 제품
   await page.click('#fc-sbtn');
   assert.equal(await page.getAttribute('#stage', 'data-mode'), 'recs');
   assert.equal(await page.locator('#find, #intensity:visible').count(), 0, '시트에 농도·제품 찾기 버튼은 없다');
   await page.waitForSelector('#rec-list .card[data-product-id]');
   const ids = await page.$$eval('#rec-list .card', (cs) => cs.map((c) => c.dataset.productId));
-  assert.deepEqual(ids, recommendByColor(orange, { limit: 6 }).map((p) => p.id), `고른 색 ${orange} 의 추천 순서`);
+  assert.deepEqual(ids, recommendByColor(picked, { limit: 6 }).map((p) => p.id), `고른 색 ${picked} 의 추천 순서`);
   await shot('03-palette-recommend');
   await page.click('#rec-list .card >> nth=0 >> text=입술에 발라보기');
   await page.click('#fc-sbtn');

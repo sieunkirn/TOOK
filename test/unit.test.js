@@ -101,6 +101,14 @@ test('챗봇: 매트 + 가격 상한 + 조건 미일치', () => {
   assert.equal(unknown.products.length, 0);
 });
 
+test('챗봇: 안녕하살법 받아치기 (받아치기를 받아치면 한 번 더)', () => {
+  assert.equal(answer({ message: '안녕하살법' }).reply, '안녕하살법 받아치기!!');
+  assert.equal(answer({ message: '안녕 하살법!' }).reply, '안녕하살법 받아치기!!');
+  assert.equal(answer({ message: '안녕하살법 받아치기' }).reply, '안녕하살법 받아치기 받아치기!!');
+  assert.equal(answer({ message: '안녕하살법', lang: 'en' }).reply, '안녕하살법 받아치기!!');
+  assert.equal(answer({ message: '안녕하살법' }).products.length, 0);
+});
+
 test('챗봇: 기준 제품 정보 질문', () => {
   const r = answer({ message: '이 제품 가격 얼마야?', baseProductId: 'P001' });
   assert.match(r.reply, /18,000원/);
