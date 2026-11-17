@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="css/wireframe.css">
 <link rel="stylesheet" href="css/took-mood.css"><!-- TOOK_prototype 무드 (검정·분홍 빛, 2026-11-16) -->
+<link rel="stylesheet" href="css/chat-start.css"><!-- 대화 전 시작 화면 (아멜리 HEVA 시작 화면 구성, 2026-11-17) -->
 <link rel="manifest" href="manifest.webmanifest">
 <script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
@@ -36,6 +37,9 @@
       <button type="button" id="base-clear" data-i18n="chat.baseClear">해제</button>
     </div>
 
+    <!-- 시작 화면 (대화가 없을 때만, js/chat-start.js): 위로 바뀌며 지나가는 예시 질문 → 입력창(아래 chat-form) → 화면 키보드 -->
+    <section id="cs-top" class="cs-top" hidden></section>
+
     <div id="chat-log" class="chat-log" role="log" aria-live="polite"></div>
 
     <div id="compare-box" class="compare-box hidden" role="region" aria-label="비교함" data-i18n-aria="chat.compare">
@@ -50,6 +54,10 @@
     <form id="chat-form" class="chat-input voice-only no-mic" autocomplete="off">
       <label for="chat-input" class="hidden" data-i18n="chat.heard">들은 말</label>
       <input type="text" id="chat-input" readonly tabindex="-1" placeholder="아래 키보드로 입력하세요">
+      <!-- 보내기: 글자가 있을 때만 켜진다 (화면 키보드의 '보내기'와 같은 동작) -->
+      <button type="submit" id="chat-send" class="cs-send" disabled aria-label="보내기" title="보내기" data-i18n-aria="chat.send" data-i18n-title="chat.send">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M12.76 22q-.6 0-.87-.43a4.4 4.4 0 0 1-.45-1.07l-1.37-4.54q-.12-.43-.09-.69.04-.27.29-.53l8.77-9.46a.24.24 0 0 0 .08-.17.2.2 0 0 0-.07-.15.24.24 0 0 0-.16-.06q-.09-.01-.17.07L9.3 13.77q-.29.26-.55.29-.27.03-.68-.1l-4.64-1.41a4.2 4.2 0 0 1-1.02-.45Q2 11.84 2 11.24q0-.46.37-.8t.91-.54L18.06 4.24q.3-.11.56-.17.27-.07.48-.07.42 0 .66.24t.24.66q0 .23-.07.48-.06.26-.17.56l-5.67 14.77q-.25.56-.6.92-.35.37-.73.37"/></svg>
+      </button>
       <button type="button" id="scan-open" class="icon-btn narrow-only" aria-label="바코드로 제품 알아보기" title="바코드로 제품 알아보기" data-i18n-aria="chat.scanOpen" data-i18n-title="chat.scanOpen">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
       </button>

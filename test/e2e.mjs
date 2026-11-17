@@ -243,7 +243,8 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
     for (const [path, ids] of [
       ['/', ['#stage']],
       ['/palette.html', ['.fc-camarea', '.fc-wheel', '#fc-swatches', '#fc-sbtn', '.fc-logo']],
-      ['/chat.html', ['#chat-log', '#chat-input', '#tts', '.tkb']], // 마이크는 2026-11-15 뺐다,
+      // 대화가 없으면 시작 화면(예시 질문·입력창·키보드, 2026-11-17): 대화 칸은 첫 질문 뒤에 보인다. 마이크는 2026-11-15 뺐다
+      ['/chat.html', ['#cs-top', '#chat-input', '#chat-send', '#tts', '.tkb']],
       ['/shades.html', ['#sh-page']],
     ]) {
       await pg.goto(BASE + path);
@@ -269,6 +270,46 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
       await pg.screenshot({ path: `${SHOTS}/${n}.png` });
     }
   }
+  await pg.close();
+});
+
+// 챗봇 시작 화면 (2026-11-17, 아멜리 HEVA 시작 화면 구성): js/chat-start.js
+await step('챗봇 시작 화면: 예시 질문이 바뀌고, 누르면 입력창에 써 넣기만 → 고쳐서 보내면 대화 화면 / 키보드는 항상', async () => {
+  const pg = await ctx.newPage();
+  watch(pg, 'chat-start');
+  await pg.setViewportSize(KIOSK);
+  await openFresh(pg, '/chat.html');
+  assert.ok(await pg.evaluate(() => document.body.classList.contains('cs-on')), '대화가 없으면 시작 화면');
+  assert.ok(await pg.locator('.cs-slide').count() >= 10);
+  assert.ok(await pg.locator('#chat-send').isDisabled(), '글자가 없으면 보내기 꺼짐');
+  assert.ok(await pg.locator('.tkb').isVisible(), '시작 화면도 키보드를 항상 연다');
+  const first = await pg.locator('.cs-slide.is-cur').textContent();
+  await pg.waitForFunction((t) => document.querySelector('.cs-slide.is-cur').textContent !== t, first, { timeout: 4500 });
+  // 화면 키보드로 쓰면 보내기가 켜지고, 다 지우면 다시 꺼진다
+  await pg.click('#chat-input');
+  await pg.click('.tkb-key[data-ch="ㄷ"]');
+  assert.ok(!(await pg.locator('#chat-send').isDisabled()), '글자가 있으면 보내기 켜짐');
+  await pg.click('.tkb-back');
+  assert.ok(await pg.locator('#chat-send').isDisabled());
+  // 지금 보이는 예시를 읽고 바로 누른다 (3초마다 바뀌므로 한 번에) → 입력창에 써 넣기만 하고 보내지 않는다
+  const ex = await pg.evaluate(() => {
+    const s = document.querySelector('.cs-slide.is-cur');
+    const text = [...s.children].map((c) => c.textContent).join(' ');
+    document.querySelector('.cs-rot').click();
+    return text.trim();
+  });
+  await pg.waitForFunction((t) => document.getElementById('chat-input').value === t, ex, { timeout: 5000 });
+  assert.equal(await pg.locator('.chat-log .bubble.user').count(), 0, '예시를 눌러도 바로 보내지 않는다');
+  assert.ok(await pg.evaluate(() => document.body.classList.contains('cs-on')));
+  // 화면 키보드로 고친 뒤(끝에 한 글자 더) 보내기
+  await pg.click('.tkb-key[data-k="mode"]'); // 123 (숫자·기호)
+  await pg.click('.tkb-key[data-ch="?"]');
+  await pg.click('#chat-send');
+  await pg.waitForSelector('.chat-log .bubble.user');
+  assert.equal((await pg.locator('.chat-log .bubble.user .btext').first().textContent()).trim(), ex + '?');
+  assert.ok(await pg.evaluate(() => !document.body.classList.contains('cs-on')), '첫 질문 뒤에는 대화 화면');
+  assert.ok(await pg.locator('#cs-top').isHidden());
+  assert.ok(await pg.locator('.tkb').isVisible(), '대화 화면은 키보드를 항상 연다');
   await pg.close();
 });
 

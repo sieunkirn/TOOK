@@ -1,0 +1,48 @@
+/* 챗봇 시작 화면 (2026-11-17, js/chat-start.js): 아멜리 HEVA 챗봇 시작 화면의 예시 질문 + 입력창 (휴대폰 375px → 키오스크 약 1.5배).
+   색은 TOOK 무드(검정 바탕 · 흰 글자 · 분홍 빛)로 바꿨다: HEVA 의 하늘색 → 분홍, 갈색 글자 → 흰 글자.
+   body.cs-on = 대화가 없는 시작 화면. 대화 칸 자리 위쪽(처음 만든 자리, 버튼 줄 아래 42px)에 예시 질문, 입력창과 화면 키보드는 기존처럼 아래에 항상 열려 있다.
+   took-mood.css 의 'main 안 모든 버튼 = 유리 알약' 규칙을 이기도록 아이디(#cs-top·#chat-form)로 시작한다 */
+
+body.tui-mood { --cs-hl: rgba(252, 84, 165, 0.5); }
+
+/* ---------- 시작 화면 틀: 대화 칸 대신 예시 질문 ---------- */
+body.cs-on .chat-shell > #chat-log, body.cs-on .chat-shell > #compare-box { display: none !important; }
+#cs-top[hidden] { display: none; }
+
+/* ---------- 예시 질문 (HEVA: 높이 112px 칸에 아래로 붙여 쌓고, 위로 밀려 바뀜) ---------- */
+#cs-top { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: flex-start; padding: 42px 0 0; overflow: hidden; }
+#cs-top .cs-rot { display: flex; flex-direction: row; align-items: flex-end; gap: 18px; width: 100%; min-height: 0; margin: 0; padding: 0;
+  border: 0; border-radius: 0; background: none; box-shadow: none; color: #fff; font: inherit; text-align: left; cursor: pointer; transform: none; }
+#cs-top .cs-rot:hover:not(:disabled), #cs-top .cs-rot:active:not(:disabled) { background: none; box-shadow: none; transform: none; }
+#cs-top .cs-rot:focus-visible { outline: 3px solid rgba(255, 255, 255, 0.6); outline-offset: 8px; border-radius: 12px; }
+#cs-top .cs-rot-box { position: relative; flex: 1 1 auto; min-width: 0; height: 168px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden; }
+#cs-top .cs-slide { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  opacity: 0; z-index: 0; transform: none; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; }
+#cs-top .cs-slide.is-cur { opacity: 1; z-index: 1; transform: translateY(0); }
+#cs-top .cs-slide.is-prev { transform: translateY(-100%); }
+#cs-top .cs-slide.is-next { transform: translateY(100%); }
+#cs-top .cs-ctx { display: block; font-size: 23px; line-height: 36px; font-weight: 500; color: rgba(255, 255, 255, 0.82); white-space: pre-wrap; }
+/* 굵은 질문 한 줄 + 글자 뒤 형광펜 밑줄 (HEVA: 높이 8px, 아래 4px 띄움) */
+#cs-top .cs-q { position: relative; isolation: isolate; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; max-width: 100%;
+  font-size: 27px; line-height: 48px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+#cs-top .cs-hl { position: absolute; left: 0; right: 0; bottom: 6px; height: 12px; background: var(--cs-hl); z-index: -1; }
+/* ↵ (이 질문 쓰기): HEVA 는 하늘색 동그라미 → 분홍 알약색 */
+#cs-top .cs-use { flex: none; width: 46px; height: 46px; margin-bottom: 4px; display: grid; place-items: center; border-radius: 50%; color: #fff;
+  background: var(--pink-pill); box-shadow: 0 0 12px rgba(232, 24, 111, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.22); }
+#cs-top .cs-rot:active .cs-use { transform: scale(0.92); }
+
+/* ---------- 입력창 (시작 화면·대화 화면 공통): 2px 테두리 + 은은한 빛, 오른쪽 보내기 ---------- */
+body.tui-mood #chat-form.chat-input { flex: none; display: flex; align-items: center; gap: 12px; padding: 6px 10px 6px 24px; border-radius: 14px;
+  border: 2px solid rgba(252, 84, 165, 0.6); background: rgba(12, 12, 12, 0.85); box-shadow: 0 0 16px rgba(252, 84, 165, 0.25); }
+body.tui-mood #chat-form.chat-input:focus-within { border-color: rgba(252, 84, 165, 0.9); background: rgba(12, 12, 12, 0.85); box-shadow: 0 0 20px rgba(252, 84, 165, 0.35); }
+body.tui-mood #chat-form #chat-input { flex: 1 1 auto; min-width: 0; min-height: 62px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none;
+  color: #fff; font-size: 22px; font-weight: 500; text-align: left; }
+body.tui-mood #chat-form #chat-input::placeholder { color: rgba(255, 255, 255, 0.45); }
+body.tui-mood #chat-form #chat-send.cs-send { flex: none; width: 60px; height: 60px; min-height: 60px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 10px;
+  color: #fff; background: var(--pink-pill); box-shadow: 0 0 12px rgba(232, 24, 111, 0.45), inset 0 2px 5px rgba(255, 255, 255, 0.2); opacity: 1; }
+body.tui-mood #chat-form #chat-send.cs-send:disabled { background: transparent; box-shadow: none; color: #a3a3a3; cursor: default; }
+body.tui-mood #chat-form #chat-send.cs-send:disabled svg { opacity: 0.38; }
+
+@media (prefers-reduced-motion: reduce) {
+  #cs-top .cs-slide { transition: none; }
+}

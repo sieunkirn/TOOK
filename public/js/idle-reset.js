@@ -6,7 +6,8 @@ import { store } from './store.js';
 // ---------- 키오스크 자동 초기화 ----------
 // 손님이 떠난 뒤 다음 손님에게 앞 손님의 대화·측정한 톤·고른 색이 보이지 않게, 한동안 조작이 없으면 안내 후 지우고 홈으로 간다.
 // - 대기 시간 기본 90초. 기기마다 바꾸려면 그 기기 브라우저에서 localStorage['took.idleSeconds'] = '120' (10초 이상)
-// - 안내가 뜬 뒤 15초 안에 '계속하기'나 화면 아무 곳을 누르면 그대로 이어서 쓴다
+// - 안내(줄어드는 원 + 남은 초)가 뜬 뒤 15초 안에 화면 아무 곳이나 누르면 그대로 이어서 쓴다
+//   ('계속'·'처음으로' 버튼은 2026-11-17 사용자 요청으로 뺐다: 초만 보인다)
 // - 읽어주기·음성 듣기 중에는 기다린다. 홈에 지울 것이 없으면 아무것도 하지 않는다
 // - 직원용 화면은 <body data-idle-reset="off"> 로 끈다
 const IDLE_DEFAULT_S = 90;
@@ -20,7 +21,7 @@ function idleSeconds() {
   return IDLE_DEFAULT_S;
 }
 
-/** 저장한 상태를 모두 지우고 홈으로 (자동 초기화·'처음으로' 버튼) */
+/** 저장한 상태를 모두 지우고 홈으로 (자동 초기화) */
 export function resetToHome() {
   store.clear();
   location.href = 'index.html';
@@ -71,14 +72,16 @@ export function setupIdleReset(custom = {}) {
     if (document.hidden || busy() || (onHome && !hasSessionState())) return schedule();
     showWarning();
   };
+  // 계속 쓰기: 안내는 0.3초 동안 사라지며 그동안 화면을 덮고 있는다 (안내를 닫은 그 터치가 아래 버튼까지 누르지 않게)
   const dismiss = () => {
     clearInterval(countdown);
-    dialog?.remove();
+    const d = dialog;
     dialog = null;
+    if (d) { d.classList.add('idle-closing'); setTimeout(() => d.remove(), 350); }
     schedule();
   };
-  // 안내: 글 대신 줄어드는 원 + 남은 초, 그리고 아이콘 버튼 두 개(손가락 = 계속, 집 = 처음으로).
-  // 자세한 설명은 화면 읽기 프로그램용으로만 둔다
+  // 안내: 줄어드는 원 + 남은 초만 (2026-11-17 사용자 요청: '계속'·'처음으로' 버튼 없음).
+  // 화면 아무 곳이나 누르거나 키를 누르면 계속 쓰고, 0초가 되면 처음 화면으로. 자세한 설명은 화면 읽기 프로그램용으로만 둔다
   function showWarning() {
     let left = IDLE_WARN_S;
     const num = el('span', { class: 'idle-num', 'aria-hidden': 'true', text: String(left) });
@@ -94,24 +97,13 @@ export function setupIdleReset(custom = {}) {
       + '<stop offset="0" stop-color="#ffb3d3"/><stop offset=".5" stop-color="#fc54a5"/><stop offset="1" stop-color="#e8186f"/></linearGradient></defs>'
       + '<circle class="track" cx="60" cy="60" r="52"/><circle class="bar" cx="60" cy="60" r="52" pathLength="100"/></svg>';
     ring.append(num);
-    const icon = (path) => {
-      const s = el('span', { class: 'idle-icon', 'aria-hidden': 'true' });
-      s.innerHTML = `<svg viewBox="0 0 24 24">${path}</svg>`;
-      return s;
-    };
-    const HAND = '<path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1.2a5 5 0 0 1-4-2L4.6 15.6a1.5 1.5 0 0 1 2.3-1.9L9 16"/>';
-    const HOME = '<path d="M3 11 12 4l9 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/>';
-    const keep = el('button', { type: 'button', class: 'primary', 'aria-label': t('idle.keepAria'), onclick: dismiss }, icon(HAND), el('span', { text: t('idle.keep') }));
-    dialog = el('div', { class: 'idle-overlay', role: 'alertdialog', 'aria-modal': 'true', 'aria-label': t('idle.title'), 'aria-describedby': 'idle-desc',
-      // 안내 바깥을 눌러도 계속 쓰는 것으로 본다
-      onpointerdown: (e) => { if (e.target === dialog) dismiss(); } },
-    el('div', { class: 'idle-box' },
-      ring,
-      desc,
-      el('div', { class: 'idle-actions' }, keep,
-        el('button', { type: 'button', 'aria-label': t('idle.homeAria'), onclick: reset }, icon(HOME), el('span', { text: t('idle.home') })))));
+    dialog = el('div', { class: 'idle-overlay', role: 'alertdialog', 'aria-modal': 'true', 'aria-label': t('idle.title'), 'aria-describedby': 'idle-desc', tabindex: '-1',
+      // 화면 어디를 눌러도(안내 상자 포함) 계속 쓰는 것으로 본다. 키보드도 아무 키나
+      onpointerdown: (e) => { e.preventDefault(); dismiss(); },
+      onkeydown: (e) => { e.preventDefault(); dismiss(); } },
+    el('div', { class: 'idle-box' }, ring, desc));
     document.body.append(dialog);
-    keep.focus();
+    dialog.focus();
     countdown = setInterval(() => {
       left -= 1;
       if (left <= 0) {

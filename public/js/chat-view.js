@@ -5,6 +5,7 @@ import { lang as uiLang, t as tr, finishText as finishName } from './i18n.js';
 import { C, STUDIO, BARCODE_PANEL, log, START, state, base, track, save } from './chat-state.js';
 import { speaker } from './chat-input.js';
 import { send } from './chat.js';
+import { syncStart } from './chat-start.js'; // 대화가 없을 때의 시작 화면 (chat.html 에만 있다)
 
 // ---------- 비교함 ----------
 const COMPARE_MAX = 3;
@@ -207,6 +208,7 @@ export function renderLog() {
       el('div', { class: 'who', text: C('took 챗봇', 'took chat') }),
       el('div', { class: 'typing-dots', 'aria-hidden': 'true' }, el('i'), el('i'), el('i'))) : null,
   ].filter(Boolean));
+  syncStart();
   scrollToLatest();
 }
 

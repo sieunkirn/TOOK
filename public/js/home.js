@@ -133,7 +133,11 @@ function start(where) {
     { transform: from === 'none' ? 'translateY(-200px)' : from, filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.88))' },
     { transform: `translate(${dx}px, ${dy}px) scale(${SMALL_LOGO.k})`, filter: 'drop-shadow(0 0 0 rgba(255, 255, 255, 0))' }, // 팔레트 로고는 빛 번짐 없음
   ], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
-  setTimeout(() => { location.href = 'palette.html'; }, 700);
+  setTimeout(() => {
+    // 키오스크 틀(kiosk.html) 안이면 페이지가 바뀌는 동안 틀이 같은 자리에 로고를 붙잡아 둔다 (팔레트가 그려지기 전 검은 깜빡임 막기)
+    try { if (window.parent !== window) window.parent.tookHold?.(true); } catch { /* 틀 밖 */ }
+    location.href = 'palette.html';
+  }, 700);
 }
 
 // 언어를 바꿔 다시 열렸으면(took.homeFx) 바로 3번(시작 버튼) 화면, 그 밖에(처음·초기화·로고) 1번(마크)부터

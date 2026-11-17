@@ -28,6 +28,15 @@
       }
     } catch (e) { /* 저장 불가 환경 */ }
   })();
+  // 키오스크 틀이 붙잡아 둔 로고(kiosk.html tookHold)를 이 화면의 로고가 처음 그려진 뒤 내린다 (홈 → 팔레트 검은 깜빡임 막기)
+  (function waitLogo(n) {
+    requestAnimationFrame(function () {
+      if (!document.querySelector('.fc-logo') && n < 120) { waitLogo(n + 1); return; }
+      requestAnimationFrame(function () {
+        try { if (window.parent !== window && window.parent.tookHold) window.parent.tookHold(false); } catch (e) { /* 틀 밖 */ }
+      });
+    });
+  })(0);
 </script>
 </head>
 <!-- 팔레트 = Find Your Color (TOOK_prototype 4~11번 화면 그대로, 2026-11-16). 900×1440 무대에 원본 좌표 그대로 그린다.
