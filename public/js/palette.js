@@ -19,8 +19,8 @@
 import { $, store, api, skeletonCards, tryOnCard, shortName } from './common.js';
 import { t as tr } from './i18n.js';
 import { openChat, closeChat } from './nav.js'; // 챗봇 모달 (두 번째 창)
-import { getPicks, putPicksFirst } from './chat-picks.js'; // '챗봇에 담기'로 담은 제품
-import { createNfcWindow } from './nfc-window.js'; // NFC 태그 창 (세 번째 창, 2026-11-18)
+import { getPicks } from './chat-picks.js'; // '챗봇에 담기'로 담은 제품
+import { createNfcWindow } from './nfc-window.js'; // NFC 태그 시트 (세 번째 창, 2026-11-19)
 import { listenNfc, findTagProduct, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
 import { watchVideoBarcodes } from './barcode-scan.js'; // 거울에 비춘 제품 바코드 → 그 제품 색을 입술에
 import { hexToRgb } from '../lib/color.js';
@@ -369,7 +369,7 @@ sbtn.addEventListener('click', () => setMode(mode === 'arc' ? 'recs' : 'arc'));
 // 9점 = 지금 색의 추천 제품 열기/닫기(가운데 로고 버튼과 같은 일), 집 = 처음으로(로고와 같은 일). 담은 제품 수는 음성 버튼 오른쪽 위 숫자
 const chatBtn = $('fc-chat');
 const badge = $('fc-chat-badge');
-chatBtn.addEventListener('click', () => { nfcWin.close({ quick: true }); openChat(); });
+chatBtn.addEventListener('click', () => { nfcWin.close(); openChat(); });
 $('fc-mb-scan').addEventListener('click', () => { if (mode !== 'arc') setMode('arc'); });
 $('fc-mb-grid').addEventListener('click', () => setMode(mode === 'arc' ? 'recs' : 'arc'));
 $('fc-mb-home').addEventListener('click', (e) => { e.preventDefault(); store.clear(); location.href = 'index.html'; });
@@ -457,7 +457,7 @@ function spinTo(to, ms = 320, live = true) {
 }
 stage.addEventListener('pointerdown', (e) => {
   if (drag || mode !== 'arc' || (e.pointerType === 'mouse' && e.button !== 0)) return;
-  if (e.target.closest('button, a, .fc-swatches, .nw')) return; // .nw = NFC 태그 창 (위에 떠 있는 동안 다이얼은 안 돈다)
+  if (e.target.closest('button, a, .fc-swatches, .nt')) return; // .nt = NFC 태그 시트 (위에 떠 있는 동안 다이얼은 안 돈다)
   const p = toStage(stage, e);
   if (p.y < DRAG_ZONE[0] || p.y > DRAG_ZONE[1]) return;
   e.preventDefault();
@@ -678,12 +678,12 @@ async function loadRecs() {
 }
 // 추천 카드: '입술에 발라보기' · '챗봇에 담기' (담은 제품은 오른쪽 아래 챗봇 버튼으로 이어서 물어본다)
 // '입술에 발라보기': 그 제품 색·제형을 그대로 입힌다
-function tryProduct(p) {
+function tryProduct(p, { quiet = false } = {}) { // quiet: 아래 알림 없이 (NFC 시트는 입술 색이 바뀌는 것으로 충분하고, 알림이 시트 버튼을 가린다)
   sel.exact = p.color_hex;
   if (p.finish) setTexture(p.finish === 'velvet' ? 'matte' : p.finish); // 제품 제형 → 가장 가까운 텍스처
   save();
   placeSwatches();
-  window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: p.color_hex, finish: p.finish, quiet: false, source: shortName(p) } }));
+  window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: p.color_hex, finish: p.finish, quiet, source: shortName(p) } }));
 }
 
 // ---------- NFC 태그·바코드: 립 제품을 리더기에 올리거나 바코드를 거울(카메라)에 비추면 그 제품 색을 바로 입술에 바르고 시트에 제품 카드 ----------
@@ -710,23 +710,24 @@ function wearProduct(p, kind = 'nfc') {
   showDots([p]);
   recList.replaceChildren(tryOnCard(p, tryProduct));
 }
-// NFC 태그 창 (세 번째 창, js/nfc-window.js): 왼쪽 메뉴 NFC 버튼으로 연다. 열려 있는 동안 읽은 태그·바코드는 창에서 보여 주고,
-// 닫혀 있으면 예전처럼 거울에서 바로 바른다. 창의 [거울에 발라보기] = 창을 닫고 바르기, [챗봇에게 물어보기] = 그 제품을 기준으로 챗봇 창,
-// [챗봇에서 비교 상담] = 태그한 제품을 '챗봇에 담기' 맨 앞에 두고 챗봇 창 (chat.js picksHandoff 가 "첫 번째랑 두 번째 비교"로 이어 간다)
+// NFC 태그 시트 (세 번째 창, js/nfc-window.js, 2026-11-19): 메뉴 버튼 없이 리더기가 태그를 읽으면 그 제품 색을 바로 입술에 바르고,
+// 아래(다이얼 자리)에 시트를 올려 실제 호수 줄을 보여 준다(누를 때마다 입술 색이 바뀜). 얼굴은 가리지 않는다.
+// [이 색과 비슷한 립 보기] = 거울의 추천 제품(지금 색), [챗봇에게 물어보기] = 그 제품(고른 호수)을 기준으로 챗봇 창
 const nfcWin = createNfcWindow({
   stage,
-  onOpen: () => closeChat(),
-  onTry: (p) => wearProduct(p, 'nfc'),
-  onAsk: (p) => openChat({ base: p.id }),
-  onCompareChat: (list) => { putPicksFirst(list.map((p) => ({ id: p.id, name: shortName(p) }))); openChat(); },
+  onOpen: () => { closeChat(); if (mode !== 'arc') setMode('arc'); },
+  onWear: (p) => {
+    const near = nearestPick(p.color_hex);
+    sel.fam = near.fam;
+    sel.k = near.k;
+    spinTo(-nearestSeg(segOf(near.fam, near.k)) * SEG, 0, false);
+    tryProduct(p, { quiet: true });
+  },
+  onSimilar: () => { colorChanged(); setMode('recs'); },
+  onAsk: (p) => openChat({ base: lineOf(p) }),
 });
-$('fc-mb-nfc').addEventListener('click', () => nfcWin.open());
-// 2026-11-18 사용자 선택 "NFC 창 띄우기": 창이 닫혀 있을 때 태그해도 NFC 창을 열고 거기서 보여 준다 (챗봇 창이 열려 있으면 닫힌다).
-// 바로 바르기는 창의 [거울에 발라보기]로. 거울 카메라 바코드는 아래처럼 창이 닫혀 있으면 예전대로 바로 바른다
-function tagToWindow(code) {
-  nfcWin.open();
-  nfcWin.tag(code);
-}
+const tagToWindow = (code) => nfcWin.show(code);
+const lineOf = (p) => p.line || p.id; // 호수 상품(OY-…-01)이면 그 제품 줄 (챗봇 기준 제품)
 listenNfc(tagToWindow);
 // 홈에서 태그하고 넘어온 경우 (home.js 가 took.pendingTag 에 남긴 번호): 들어오자마자 NFC 창에서 그 제품을 보여 준다
 {
@@ -740,7 +741,7 @@ listenNfc(tagToWindow);
 watchVideoBarcodes({
   video,
   active: () => lip.source === 'camera' && !document.hidden && !document.documentElement.classList.contains('chat-modal-open'),
-  onCode: (code) => (nfcWin.isOpen() ? nfcWin.tag(code) : showTagProduct(code, 'barcode')), // NFC 창이 열려 있으면 그 창에서
+  onCode: (code) => (nfcWin.isOpen() ? nfcWin.show(code) : showTagProduct(code, 'barcode')), // NFC 창이 열려 있으면 그 창에서
 });
 
 // ---------- 시작 ----------

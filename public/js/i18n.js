@@ -347,35 +347,17 @@ Object.assign(STRINGS.en, {
   'fc.texture': 'Texture: {name} (tap to change)', 'fc.textures': 'Textures (swipe to change)', 'fc.chat': 'Open the AI beauty chatbot', 'fc.menu': 'Menu', 'fc.menuScan': 'Find your color (this screen)',
   'fc.searching': 'Looking for similar products', 'fc.found': '{n} products similar to this color', 'fc.none': 'No similar products', 'fc.back': '← Choose the color again',
 });
-// NFC 태그 창 (2026-11-18, js/nfc-window.js): 거울 위 세 번째 창
+// NFC 태그 시트 (2026-11-19, js/nfc-window.js): 태그하면 바로 바르고 아래에 호수 줄
 Object.assign(STRINGS.ko, {
-  'fc.menuNfc': 'NFC 태그 창 열기',
-  'nw.title': 'NFC 태그', 'nw.live': '태그 기다리는 중', 'nw.liveHit': '읽었어요', 'nw.liveMiss': '모르는 태그', 'nw.close': '닫기',
-  'nw.heroSub': '립 제품을 리더기에 톡 올려 주세요',
-  'nw.step1': '립 제품 집기', 'nw.step2': '리더기에 톡', 'nw.step3': '거울에서 발라보기',
-  'nw.barcodeHint': '바코드는 거울 카메라에 비춰도 읽어요',
-  'nw.tagged': 'Tagged', 'nw.try': '거울에 발라보기', 'nw.ask': '챗봇에게 물어보기',
-  'nw.more': '다른 제품도 올려 보세요 · 나란히 비교해 드려요', 'nw.shades': '호수 {n}가지',
-  'nw.shelf': '태그한 제품', 'nw.shelfHint': '2개 이상 태그하면 나란히 비교할 수 있어요',
-  'nw.compare': '나란히\n비교', 'nw.compareClose': '비교\n닫기',
-  'nw.cmpTitle': '나란히 비교', 'nw.cmpSub': '태그한 제품을 한눈에 견줘 보세요',
-  'nw.cheapest': '가장 저렴', 'nw.lightest': '가장 밝은 색', 'nw.deepest': '가장 진한 색',
-  'nw.finish': '제형', 'nw.price': '가격', 'nw.tryShort': '발라보기', 'nw.cmpChat': '챗봇에서 비교 상담하기',
+  'nw.close': '닫기', 'nw.recent': '방금 태그한 립', 'nw.ask': '챗봇에게 물어보기', 'nw.similar': '이 색과 비슷한 립 보기',
+  'nw.pickShade': '들고 계신 호수를 골라 주세요', 'nw.wearing': '지금 입은 호수', 'nw.shadeCount': '{n}가지',
+  'nw.noShades': '호수 정보 준비 중이에요 · 대표 색을 발랐어요',
   'nw.unknown': '등록되지 않은 태그예요', 'nw.unknownSub': '다른 제품을 올리거나 직원에게 알려 주세요',
 });
 Object.assign(STRINGS.en, {
-  'fc.menuNfc': 'Open the NFC tag window',
-  'nw.title': 'NFC Tag', 'nw.live': 'Waiting for a tag', 'nw.liveHit': 'Got it', 'nw.liveMiss': 'Unknown tag', 'nw.close': 'Close',
-  'nw.heroSub': 'Tap your lip product on the reader',
-  'nw.step1': 'Pick a lip', 'nw.step2': 'Tap the reader', 'nw.step3': 'Try it in the mirror',
-  'nw.barcodeHint': 'You can also show the barcode to the mirror camera',
-  'nw.tagged': 'Tagged', 'nw.try': 'Try it on', 'nw.ask': 'Ask the chatbot',
-  'nw.more': 'Tap another product to compare side by side', 'nw.shades': '{n} shades',
-  'nw.shelf': 'Tagged', 'nw.shelfHint': 'Tag 2 or more to compare',
-  'nw.compare': 'Compare', 'nw.compareClose': 'Close\ncompare',
-  'nw.cmpTitle': 'Side by side', 'nw.cmpSub': 'See your tagged products at a glance',
-  'nw.cheapest': 'Lowest price', 'nw.lightest': 'Lightest', 'nw.deepest': 'Deepest',
-  'nw.finish': 'Finish', 'nw.price': 'Price', 'nw.tryShort': 'Try on', 'nw.cmpChat': 'Compare in the chat',
+  'nw.close': 'Close', 'nw.recent': 'Just tagged', 'nw.ask': 'Ask the chatbot', 'nw.similar': 'Similar lips',
+  'nw.pickShade': 'Pick the shade you are holding', 'nw.wearing': 'Wearing', 'nw.shadeCount': '{n} shades',
+  'nw.noShades': 'Shade info coming soon · showing the main color',
   'nw.unknown': "This tag isn't registered", 'nw.unknownSub': 'Try another product or ask a staff member',
 });
 

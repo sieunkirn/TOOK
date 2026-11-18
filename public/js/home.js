@@ -1,7 +1,7 @@
 // 홈 1~4번 화면. 좌표는 모두 900×1440 무대 기준 (ui-stage.js)
 // 2026-11-18 시안: 1~3번은 로고 자리가 똑같다 (가로 가운데, 로고 세로 중심 = 화면 50%). 화면마다 바뀌는 건 배경과 문구뿐
-// 배경 영상 두 개: videos/home.mp4 의 0~4.95초 제품 클로즈업 → videos/home-lips.mp4 입술 클로즈업(10초 반복)
-// home-lips.mp4 = Figma AI 로 만든 입술 사진(assets-src/home-lips-ai.png)에 느린 줌·광택 빛 띠·비네팅·그레인을 입혀 렌더 (2026-11-18)
+// 배경 영상은 기존 videos/home.mp4 하나 (2026-11-19 사용자 요청: 따로 만든 입술 영상은 빼고 기존 영상만).
+// 0~4.95초 제품 클로즈업 → 그 뒤 원래 영상의 입술 장면. 2·3번 동안은 입술 장면(4.95초~끝)만 되풀이한다
 //  1 제품 장면 + 가운데 로고. home.mp4 가 입술 장면(4.95초)에 닿으면(또는 누르면) 2로
 //  2 입술 영상 + 같은 로고. 1.5초 뒤(또는 누르면) 3으로
 //  3 2번 + 로고 아래 "Tap The Screen". 입술 영상 반복. 누르면 바로 팔레트로 (2026-11-18 사용자 요청)
@@ -31,7 +31,7 @@ const WAVE_SVG = '<svg class="hs-ico-wave" viewBox="0 0 60 34" aria-hidden="true
 const stage = document.getElementById('stage');
 fitStage(stage);
 // 쌓는 순서: 배경 영상(소리 없음) → 어두운 덮개 → 로고 → 문구
-stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><video class="hs-video hs-lips" src="videos/home-lips.mp4" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hs-dim" aria-hidden="true"></div>${logoFull('hs-logo')}
+stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hs-dim" aria-hidden="true"></div>${logoFull('hs-logo')}
   <p class="hs-tap" aria-hidden="true">Tap The Screen</p>
   <div class="hs-start" data-state="a" data-side="scan">
     <div class="hs-glow" aria-hidden="true"><i></i></div>
@@ -44,8 +44,7 @@ stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted 
   </div>
   <p class="sr-only" id="hs-help"></p>`;
 stage.append(langToggle('hs-lang')); // 한국어/영어 (4번 시작 화면 오른쪽 위에서만 보인다)
-const video = stage.querySelector('.hs-video:not(.hs-lips)'); // 제품
-const lipsVideo = stage.querySelector('.hs-lips'); // 입술
+const video = stage.querySelector('.hs-video');
 const pill = stage.querySelector('.hs-pill');
 const box = stage.querySelector('.hs-start'); // 눌린 단계(data-state a·b·c)와 고른 쪽(data-side)
 pill.setAttribute('aria-label', t('home.choose'));
@@ -54,7 +53,7 @@ stage.querySelector('.hs-opt-voice').setAttribute('aria-label', t('home.toChat')
 stage.querySelector('#hs-help').textContent = t('home.tapToStart');
 
 // ---------- 1 → 2 → 3 (배경 영상 장면에 맞춘다) ----------
-const LIPS_AT = 4.95; // home.mp4 에서 제품 장면이 끝나는 시각(초). 그 뒤 원래 영상의 입술 장면은 쓰지 않는다
+const LIPS_AT = 4.95; // home.mp4 에서 제품 장면이 끝나고 입술 장면이 시작하는 시각(초)
 const PRODUCT_MAX_MS = 6000; // 영상이 안 나와도(자동 재생 막힘 등) 이 시간이 지나면 2로
 const LIPS_MS = 1500; // 2번 화면을 보여 주는 시간 (3번은 누를 때까지 기다린다)
 let step = 0;
@@ -62,9 +61,15 @@ let autoTimer = null;
 function toLips() {
   if (stage.classList.contains('hs-lips-on')) return;
   stage.classList.add('hs-lips-on');
-  lipsVideo.play().catch(() => {});
-  video.pause();
+  if (video.currentTime < LIPS_AT) video.currentTime = LIPS_AT; // 눌러서 건너뛰었으면 입술 장면으로
+  video.play().catch(() => {});
 }
+// 입술 장면 되풀이: 끝나면 처음(제품 장면)이 아니라 입술 장면 시작으로 (구간 이동은 서버의 부분 요청 Range 가 필요하다)
+video.addEventListener('ended', () => {
+  if (!stage.classList.contains('hs-lips-on')) return;
+  video.currentTime = LIPS_AT;
+  video.play().catch(() => {});
+});
 function go(n, { instant = false } = {}) {
   clearTimeout(autoTimer);
   step = n;

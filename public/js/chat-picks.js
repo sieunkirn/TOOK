@@ -16,15 +16,6 @@ function setPicks(list) {
   window.dispatchEvent(new CustomEvent('took:picks-change', { detail: { count: list.length } }));
 }
 
-/**
- * 여러 제품을 담은 목록 맨 앞에 한꺼번에 둔다 (NFC 창의 '챗봇에서 비교 상담', 2026-11-18).
- * 이미 담긴 제품은 앞으로 옮기고, 넘치면 뒤(예전에 담은 것)에서 뺀다 → 챗봇이 "첫 번째랑 두 번째 비교해 줘"로 이 제품들을 가리킨다
- */
-export function putPicksFirst(items) {
-  const ids = new Set(items.map((x) => x.id));
-  setPicks([...items.map(({ id, name }) => ({ id, name })), ...getPicks().filter((x) => !ids.has(x.id))].slice(0, PICK_MAX));
-}
-
 /** 담기 / 빼기. 담았으면 true */
 export function togglePick(product, name) {
   const list = getPicks();

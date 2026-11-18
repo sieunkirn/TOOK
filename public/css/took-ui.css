@@ -29,8 +29,6 @@ body.tui { max-width: none; width: 100%; color: #fff; }
    쌓는 순서: 배경 영상(제품→입술 장면) → 어두운 덮개 → 로고 → 문구. 좌표는 900×1440 무대 기준, 창 크기에는 무대가 통째로 비례 조정된다 (ui-stage.js) */
 .tui-home .tui-stage { cursor: pointer; }
 .hs-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
-.hs-lips { opacity: 0; }
-.hs-lips-on .hs-lips { opacity: 1; } /* 2번부터 입술 영상 (videos/home-lips.mp4) */
 .hs-dim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); pointer-events: none; z-index: 0; }
 .hs-logo, .hs-tap, .hs-start, .hs-lang { z-index: 1; }
 /* 로고: 원본 로고 그대로 612×144, 가로 가운데(left 144), 세로 중심 = 화면 높이 50% (top 648 → 중심 720). 1~3번은 자리 고정 */
@@ -270,29 +268,26 @@ html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s;
 .fc[data-mode="recs"] .fc-tex, .fc[data-mode="recs"] .fc-match, .fc[data-mode="recs"] .fc-matchbox { opacity: 0; pointer-events: none; }
 /* 왼쪽 세로 메뉴 (GP-홈화면 Figma 2026-11-18, 흰색·검정만). 바깥 유리 알약 x 28.1 y 604.5 61.9×231 흰 37%,
    위 한 쌍(스캔·음성) 흰 48% 알약, 손잡이 = 흰 44% 원 46.8 (고른 쪽: 평소 스캔, 챗봇 창이 열리면 음성), 9점 = 검정 원 54.9, 집 = 흰 44% 원 54.9 */
-/* 2026-11-18 세 번째 창(NFC 태그)을 넣어 위 한 쌍이 세 칸(스캔·음성·NFC)이 됐다: 한 칸(50.4)만큼 길어지고, 가운데가 같도록 위로 25.2 올렸다 */
-.fc-menu { position: absolute; left: 28.1px; top: 579.32px; width: 61.91px; height: 281.37px; z-index: 6; box-sizing: border-box; border-radius: 200px;
+.fc-menu { position: absolute; left: 28.1px; top: 604.52px; width: 61.91px; height: 230.97px; z-index: 6; box-sizing: border-box; border-radius: 200px;
   background: rgba(255, 255, 255, 0.37); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.08);
   transition: transform .45s cubic-bezier(.65, 0, .35, 1); }
 .fc[data-mode="recs"] .fc-menu { transform: translateY(-140px); } /* 추천 결과: 시트(y 720~) 위로 */
 .fc-menu > * { position: absolute; box-sizing: border-box; border-radius: 50%; }
-.fc-menu-pair { left: 3.15px; top: 3.03px; width: 55.6px; height: 157.28px; border-radius: 200px; background: rgba(255, 255, 255, 0.48); pointer-events: none; }
+.fc-menu-pair { left: 3.15px; top: 3.03px; width: 55.6px; height: 106.88px; border-radius: 200px; background: rgba(255, 255, 255, 0.48); pointer-events: none; }
 .fc-menu-knob { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; pointer-events: none; background: rgba(255, 255, 255, 0.44);
   -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6);
   transition: transform .3s cubic-bezier(.3, .7, .2, 1); }
 html.chat-modal-open .fc-menu-knob { transform: translate(-0.48px, 50.4px); }
-html.nfc-win-open .fc-menu-knob { transform: translate(-0.48px, 100.8px); }
 .fc-menu .fc-mb { display: block; cursor: pointer; color: #fff; text-decoration: none; -webkit-tap-highlight-color: transparent; }
 .fc-menu .fc-mb svg { width: 100%; height: 100%; }
 .fc-mb-scan { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; }
 .fc-mb-voice { left: 7.53px; top: 57px; width: 46.83px; height: 46.83px; }
-.fc-mb-nfc { left: 7.53px; top: 107.4px; width: 46.83px; height: 46.83px; }
-.tui .tui-stage .fc-menu .fc-mb-scan, html.chat-modal-open .tui-stage .fc-menu .fc-mb-voice, html.nfc-win-open .tui-stage .fc-menu .fc-mb-nfc { color: #000; } /* 손잡이 위 아이콘 = 검정 선 */
-html.chat-modal-open .tui-stage .fc-menu .fc-mb-scan, html.nfc-win-open .tui-stage .fc-menu .fc-mb-scan { color: #fff; }
-.fc-mb-grid { left: 3.49px; top: 163.9px; width: 54.93px; height: 54.93px; background: #000;
+.tui .tui-stage .fc-menu .fc-mb-scan, html.chat-modal-open .tui-stage .fc-menu .fc-mb-voice { color: #000; } /* 손잡이 위 아이콘 = 검정 선 */
+html.chat-modal-open .tui-stage .fc-menu .fc-mb-scan { color: #fff; }
+.fc-mb-grid { left: 3.49px; top: 113.5px; width: 54.93px; height: 54.93px; background: #000;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.34), 0 4px 4px rgba(0, 0, 0, 0.25); }
-.fc-mb-home { left: 3.49px; top: 222.56px; width: 54.93px; height: 54.93px; background: rgba(255, 255, 255, 0.44); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+.fc-mb-home { left: 3.49px; top: 172.16px; width: 54.93px; height: 54.93px; background: rgba(255, 255, 255, 0.44); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 .fc-menu .fc-mb-home:link, .fc-menu .fc-mb-home:visited { color: #fff; }
 .fc[data-mode="recs"] .fc-mb-grid { box-shadow: inset 0 0 0 2px #fff, 0 4px 4px rgba(0, 0, 0, 0.25); } /* 추천 제품이 열려 있음 */
 .tui .tui-stage .fc-menu button.fc-mb:hover:not(:disabled) { background: transparent; }
