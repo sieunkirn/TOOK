@@ -21,7 +21,6 @@ const PAGES = [
   ['08-studio', '/studio.html'],
   // ['09-preview', '/preview.html', { width: 1440, height: 900 }], // 거울 화면 미리보기: 2026-11-13 주석 처리
   ['10-kiosk', '/kiosk.html'],
-  ['11-calib', '/calib.html'],
 ];
 
 const browser = await chromium.launch({ args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] });

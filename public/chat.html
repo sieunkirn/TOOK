@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="css/took-mood.css"><!-- TOOK_prototype 무드 (검정·분홍 빛, 2026-11-16) -->
 <link rel="stylesheet" href="css/chat-start.css"><!-- 대화 전 시작 화면 (아멜리 HEVA 시작 화면 구성, 2026-11-17) -->
 <link rel="manifest" href="manifest.webmanifest">
-<script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
 </head>
 <body class="tui-mood">
@@ -58,67 +57,16 @@
       <button type="submit" id="chat-send" class="cs-send" disabled aria-label="보내기" title="보내기" data-i18n-aria="chat.send" data-i18n-title="chat.send">
         <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M12.76 22q-.6 0-.87-.43a4.4 4.4 0 0 1-.45-1.07l-1.37-4.54q-.12-.43-.09-.69.04-.27.29-.53l8.77-9.46a.24.24 0 0 0 .08-.17.2.2 0 0 0-.07-.15.24.24 0 0 0-.16-.06q-.09-.01-.17.07L9.3 13.77q-.29.26-.55.29-.27.03-.68-.1l-4.64-1.41a4.2 4.2 0 0 1-1.02-.45Q2 11.84 2 11.24q0-.46.37-.8t.91-.54L18.06 4.24q.3-.11.56-.17.27-.07.48-.07.42 0 .66.24t.24.66q0 .23-.07.48-.06.26-.17.56l-5.67 14.77q-.25.56-.6.92-.35.37-.73.37"/></svg>
       </button>
-      <button type="button" id="scan-open" class="icon-btn narrow-only" aria-label="바코드로 제품 알아보기" title="바코드로 제품 알아보기" data-i18n-aria="chat.scanOpen" data-i18n-title="chat.scanOpen">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
-      </button>
     </form>
     <p id="nfc-hint" class="nfc-hint" aria-live="polite"></p>
   </section>
 
-  <aside class="area chat-side" id="rec-panel" aria-label="바코드 찾기와 추천 제품" data-i18n-aria="chat.side">
+  <aside class="area chat-side" id="rec-panel" aria-label="추천 제품" data-i18n-aria="chat.side">
     <div class="panel-head">
-      <div class="label" id="panel-label">바코드로 제품 알아보기</div>
-      <div class="row">
-        <button type="button" id="panel-toggle" class="hidden"></button>
-        <button type="button" id="scan-close" class="narrow-only" data-i18n="chat.close">닫기</button>
-      </div>
+      <div class="label" id="panel-label">추천 제품</div>
     </div>
 
-    <!-- 바코드: USB·블루투스 바코드 스캐너가 연결돼 있다고 보고 구성한다.
-         스캐너는 키보드처럼 번호를 치므로 화면 어디에 커서가 있든 찍으면 바로 대화로 설명한다 (chat.js).
-         스캐너가 없을 때 쓰는 휴대폰·PC 카메라·사진은 맨 아래에 접어 둔다 -->
-    <div id="scan-view">
-      <section class="scanner-ready" aria-label="바코드 스캐너" data-i18n-aria="chat.scanner">
-        <svg class="scanner-art" viewBox="0 0 120 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 18h40l10 18-6 6H40l-8 30H18l6-30H14z"/>
-          <path class="beam" d="M66 30l40-14M66 36h42M66 42l40 14" stroke-width="2"/>
-          <path d="M96 12v56M102 12v56M108 12v56" stroke-width="2" opacity=".35"/>
-        </svg>
-        <strong class="scanner-title" data-i18n="chat.scannerTitle">스캐너로 립 제품의 바코드를 찍어 주세요</strong>
-        <p class="muted small" data-i18n="chat.scannerDesc">찍으면 어떤 제품인지 바로 대화로 설명하고, 그 제품을 기준으로 비슷한 색·더 저렴한 제품을 찾아 드려요.</p>
-        <span class="scanner-state" id="scanner-state"><i aria-hidden="true"></i><span data-i18n="chat.scannerReady">스캐너 대기 중</span></span>
-      </section>
-      <p id="scan-note" class="msg small hidden"></p>
-
-      <p id="scan-status" class="small" aria-live="polite"></p>
-      <div id="scan-result"></div>
-
-      <form id="scan-form" class="scan-form" autocomplete="off">
-        <label for="scan-input" class="small" data-i18n="chat.typeNumber">스캐너가 못 읽으면 번호로 입력</label>
-        <div class="row">
-          <input type="text" id="scan-input" inputmode="numeric" placeholder="예: 8809100000017">
-          <button type="submit" data-i18n="chat.ok">확인</button>
-        </div>
-      </form>
-
-      <details class="scan-alt" id="scan-alt">
-        <summary class="small" data-i18n="chat.noScanner">스캐너가 없을 때</summary>
-        <strong class="small" data-i18n="chat.pcCam">PC 카메라로 찍기</strong>
-        <div class="scan-stage">
-          <video id="scan-video" class="hidden" playsinline muted></video>
-          <div class="placeholder" id="scan-placeholder" style="position:absolute;inset:0" data-i18n="chat.camOff">카메라가 꺼져 있어요</div>
-          <div class="scan-guide hidden" id="scan-guide" aria-hidden="true"></div>
-        </div>
-        <div class="row">
-          <button type="button" id="scan-start" data-i18n="chat.camStart">카메라로 바코드 찍기</button>
-          <button type="button" id="scan-stop" class="hidden" data-i18n="chat.camStop">카메라 끄기</button>
-          <label for="scan-photo" class="btn-line photo-btn" data-i18n="chat.photo">사진으로 찍기</label>
-          <input type="file" id="scan-photo" accept="image/*" capture="environment" class="hidden">
-        </div>
-      </details>
-    </div>
-
-    <div id="list-view" class="hidden">
+    <div id="list-view">
       <p id="rec-status" class="muted small" aria-live="polite"></p>
       <div id="rec-list" class="mini-list"></div>
     </div>

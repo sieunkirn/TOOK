@@ -2,7 +2,7 @@
 import { $, el, go, detailLink, won, fullName, shortName, storeLink, toast, shadePicker } from './common.js';
 import { compareSummary } from '../lib/chat.js';
 import { lang as uiLang, t as tr, finishText as finishName } from './i18n.js';
-import { C, STUDIO, BARCODE_PANEL, log, START, state, base, track, save } from './chat-state.js';
+import { C, STUDIO, log, START, state, base, track, save } from './chat-state.js';
 import { speaker } from './chat-input.js';
 import { send } from './chat.js';
 import { syncStart } from './chat-start.js'; // 대화가 없을 때의 시작 화면 (chat.html 에만 있다)
@@ -178,16 +178,7 @@ function welcome() {
 }
 
 export function renderPanel() {
-  if (!STUDIO) {
-    // 챗봇 화면: 오른쪽 패널 하나를 바코드 ↔ 추천 목록으로 바꿔 쓴다 (합본 화면은 탭이 따로 있다)
-    const scan = state.panel === 'scan';
-    $('scan-view').classList.toggle('hidden', !scan);
-    $('list-view').classList.toggle('hidden', scan);
-    $('panel-label').textContent = scan ? C('바코드로 제품 알아보기', 'Look up by barcode') : C('추천 제품', 'Recommended products');
-    const toggle = $('panel-toggle');
-    toggle.textContent = scan ? C(`추천 목록 보기 (${state.list.length})`, `See recommendations (${state.list.length})`) : C('바코드로 찾기', 'Find by barcode');
-    toggle.classList.toggle('hidden', !BARCODE_PANEL || (scan && !state.list.length));
-  }
+  if (!STUDIO) $('panel-label').textContent = C('추천 제품', 'Recommended products'); // 챗봇 화면 오른쪽 패널 = 추천 목록
   const status = $('rec-status');
   if (!state.list.length) {
     status.textContent = state.ctx?.query

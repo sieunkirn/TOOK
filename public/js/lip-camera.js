@@ -1,7 +1,7 @@
 // 립 매핑 화면: 입술을 비추는 쪽. 카메라 켜고 끄기·멈춤 감시·입술 추적 루프, 아바타 그림, 화면 그리기.
 import { $, el } from './common.js';
 import { loadTracker, detectVideo, resetTracker } from './lip-tracker.js';
-import { drawLipFrame, trackLips, stopStream, cameraErrorMessage, filmMode } from './lip-view.js';
+import { drawLipFrame, trackLips, stopStream, cameraErrorMessage } from './lip-view.js';
 import { getCamSettings, videoConstraints } from './camera-settings.js';
 import { t as tr } from './i18n.js';
 import { video, view, viewCtx, STALL_MS, MAX_AUTO_RESTARTS, MAX_TRACK_ERRORS, RAF_STALL_MS, TIMER_FRAME_MS, state, setGuide, showError, setPlaceholder, guideText } from './lip-state.js';
@@ -162,18 +162,9 @@ async function startCamera({ auto = false } = {}) {
     return;
   }
   setGuide(tr('lip.camRequesting'));
-  // 터치 필름 보정이 켜진 기기: Android 카메라 허용 창은 페이지 밖이라 필름 터치가 보정되지 않는다
-  // → 허용 창이 뜰 상황이면(권한 상태 prompt) 마우스로 허용하라고 미리 알려 준다
-  const film = filmMode();
-  if (film) {
-    navigator.permissions?.query({ name: 'camera' }).then((p) => {
-      console.info(`[took] 터치 필름 모드 · 카메라 권한 상태: ${p.state}`);
-      if (p.state === 'prompt' && gen === state.gen && !state.stream) showError(tr('lip.camPromptFilm'));
-    }).catch(() => { /* 권한 조회 미지원 */ });
-  }
   // 권한 창이 안 보이는 환경(앱 안 브라우저, 기기 설정에서 Chrome 카메라 권한 꺼짐 등)에서는
   // getUserMedia 가 끝나지 않고 계속 기다린다 → 잠시 뒤 확인할 곳을 안내한다 (요청은 계속 기다린다)
-  const noAnswer = setTimeout(() => { if (gen === state.gen) showError(tr(film ? 'lip.camPromptFilm' : 'lip.camNoAnswer')); }, 8000);
+  const noAnswer = setTimeout(() => { if (gen === state.gen) showError(tr('lip.camNoAnswer')); }, 8000);
   try {
     state.stream = await openStream(gen);
   } catch (e) {

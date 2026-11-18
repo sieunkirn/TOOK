@@ -5,6 +5,10 @@ AI 기반 개인 맞춤형 뷰티 서비스 took(툭)의 **구조·흐름·기�
 
 프로젝트 규칙(디자인·개발·데이터 원칙, 작업 방식)은 [CLAUDE.md](CLAUDE.md) 에 있습니다.
 
+> **이 브랜치(`no-calib-no-barcode`, 2026-11-18)**: 거울 터치 필름 보정(`touch-calib.js`·`calib.html`·관리자 화면 `admin.html`)과
+> 바코드 기능(챗봇·합본의 바코드 찾기, `barcode-scan.js`·`barcode-test.html`, ZXing)을 **아예 뺀 버전**이다. 터치는 기기 그대로 쓴다.
+> NFC 태그로 제품 찾기는 남겨 두었다(태그에 써 둔 바코드 번호로 찾는 길 포함). 원래 버전은 `main` 브랜치.
+
 ## 전체화면 원칙
 - 모든 화면은 브라우저 주소창까지 숨기는 전체화면 모드로 동작한다.
 - 상단 메뉴의 **전체화면 종료/시작** 버튼으로만 앱의 전체화면 상태를 바꾼다. 자동 초기화 테스트 버튼은 제거했다.
@@ -16,7 +20,7 @@ AI 기반 개인 맞춤형 뷰티 서비스 took(툭)의 **구조·흐름·기�
 ## 기준 화면 크기
 - 키오스크 화면은 세로 **900×1440** (CSS 픽셀) 을 기준으로 한다.
 - 노트북·태블릿·휴대폰 어디서 열어도 세로 5:8 비율로만 보인다: 맨 위 창으로 연 화면은 `device-frame.js` 가 고정 비율 틀 `kiosk.html?page=…` 안으로 옮기고, 틀은 창 안에 들어가는 가장 큰 5:8 상자를 가운데에 두고 남는 곳은 검게 채운다
-- 예외: 터치 보정(`calib.html`, 화면 전체 좌표가 필요), 미리보기(`preview.html`), 자동 테스트(`navigator.webdriver`)
+- 예외: 미리보기(`preview.html`), 자동 테스트(`navigator.webdriver`)
 
 ## 실행 방법
 ```bash
@@ -69,15 +73,6 @@ cloudflared tunnel --url http://localhost:3000   # 출력되는 https://○○�
 - 휴대폰(갤럭시 S24 Web NFC)으로 읽어 PC·태블릿 화면에 띄우던 기능(`nfc-phone.html`·`nfc-relay.js`·팔레트의 '휴대폰으로 NFC 읽기'·서버의 네 자리 번호 연결 API)은 2026-11-11 삭제 (복구는 git 기록에서)
 - 태그 해석·매핑 도우미(`public/js/nfc-test.js`)와 그 단위 테스트도 삭제. 복구는 git 기록에서
 
-### 거울 유리 터치 필름 좌표 보정 (`public/js/touch-calib.js`)
-1. 갤럭시탭 Chrome 에서 사이트를 열고 메뉴 → **홈 화면에 추가** → 홈 화면 아이콘으로 실행 (전체화면·세로 고정, `manifest.webmanifest`)
-2. **`calib.html`(터치 보정 화면)** 을 열어 화면 아무 곳이나 누르기 (또는 어느 화면에서든 **10초 길게 누르기**) → 처음 한 번 누르고, 십자 5개를 차례로 1초씩 눌렀다 떼기
-3. 확인 화면에서 손가락 자리에 점이 따라오는지와 남은 오차(px)를 보고 **저장** (어긋나면 **다시 하기**). 보정값은 그 브라우저 localStorage 에 남는다
-4. 저장하면 바로 **정확도 테스트**: 동그라미 9개를 차례로 누르면 "9개 중 몇 개 맞음 · 평균/최대 오차"가 나온다 (보정 화면 첫 장의 '지금 보정값으로 테스트만'으로 다시 볼 수 있다)
-- `calib.html` 은 보정 후 정확도 테스트·전체화면·보정값 공유·다시 보정·키오스크 이동·보정 지우기 버튼이 된다. 보정 전에는 터치가 어긋나 있어서 화면 전체가 버튼 하나다
-- PC 테스트: 노트북에서 열면 나오는 미리보기(`preview.html`) 왼쪽 **터치 보정** 상자에서 '필름 흉내'(마우스에 가짜 왜곡) → '보정 시작' → 저장 → 테스트 9개. '보정 지우기'·'필름 흉내' 끄기로 원래대로
-- 보정은 전체화면 상태 기준이다 (주소창이 보이면 어긋난다). 보정값이 없으면 기존 동작 그대로. 주소로도 된다: `?calib=1`·`?calibtest=1`·`?calib=reset`·`?calibdebug=1`(원본 빨강·보정 초록 좌표)·`?calibsim=1`
-
 ### iPad(가로 화면)에서 실행
 1. PC 에서 `npm run cert` (openssl 로 자체 서명 인증서 생성, PC 의 IP 포함) → `npm start`
 2. 콘솔에 표시되는 `https://<PC IP>:3000` 을 같은 Wi-Fi 의 iPad Safari 에서 열기
@@ -129,7 +124,7 @@ src/lib/spoken.js       말·입력 보정 (한글 금액 → 숫자, 비슷한 
 src/lib/chat.js         규칙 기반 챗봇의 대화 흐름(answer). 단어 사전 chat-words.js · 말 해석 chat-parse.js · 제품 찾기 chat-search.js · 답 문장 chat-reply.js · 언어·표기 chat-lang.js · 영어 chat-en.js
 src/lib/browser-libs.js 브라우저도 같이 쓰는 src/lib 파일 목록 (서버·정적 빌드 공용)
 public/*.html           index, lip-together(립 컬러 매핑), chat(AI 뷰티 챗봇), studio(합본), palette(팔레트), recommend, product
-public/js/              페이지 스크립트, lip.js(립 매핑 화면 시작. 상태·안내 lip-state.js · 카메라·아바타·그리기 lip-camera.js · 색 고르기·어울리는 컬러·추천 lip-look.js), chat.js(챗봇 화면: 질문 보내기·버튼 연결. 상태 chat-state.js · 그리기 chat-view.js · 음성·키보드 chat-input.js · 바코드·NFC chat-products.js), common.js(공통 모듈 입구: api.js 서버 API · store.js 세션 저장·화면 이동 · dom.js · product-view.js 제품 카드 · nav.js 상단 메뉴 · idle-reset.js 자동 초기화 · device-frame.js 미리보기 틀), lip-tracker.js(입술 추적), lip-engine.js(립 컬러 합성 공용), motion.js(화면 움직임: 카드 등장·세그먼트 밑판·슬라이더 채우기·가격 올라가기·토스트·스켈레톤)
+public/js/              페이지 스크립트, lip.js(립 매핑 화면 시작. 상태·안내 lip-state.js · 카메라·아바타·그리기 lip-camera.js · 색 고르기·어울리는 컬러·추천 lip-look.js), chat.js(챗봇 화면: 질문 보내기·버튼 연결. 상태 chat-state.js · 그리기 chat-view.js · 음성·키보드 chat-input.js · NFC chat-products.js), common.js(공통 모듈 입구: api.js 서버 API · store.js 세션 저장·화면 이동 · dom.js · product-view.js 제품 카드 · nav.js 상단 메뉴 · idle-reset.js 자동 초기화 · device-frame.js 미리보기 틀), lip-tracker.js(입술 추적), lip-engine.js(립 컬러 합성 공용), motion.js(화면 움직임: 카드 등장·세그먼트 밑판·슬라이더 채우기·가격 올라가기·토스트·스켈레톤)
 public/css/wireframe.css 무채색 토스풍 스타일 (회색 바탕·흰 카드·둥근 모서리·부드러운 움직임)
 ```
 
@@ -149,20 +144,11 @@ public/css/wireframe.css 무채색 토스풍 스타일 (회색 바탕·흰 카�
 ## 바코드로 찾기
 2026-11-11 삭제(화면 `find.html`·메뉴). 복구는 git 기록에서.
 
-## 바코드 카메라 테스트 (`barcode-test.html`, 직원용 · 2026-11-18)
-바코드 스캐너 없이 기기 카메라(웹캠)만으로 립 제품 바코드가 읽히는지 시험하는 화면. 관리자 화면(홈 10초 길게 누르기)의 '바코드 카메라 테스트'로 연다.
-- 인식은 챗봇·합본과 같은 `js/barcode-scan.js`(ZXing), 조회는 같은 `api/products/barcode/` → 실제 데이터에 있는 호수인지 바로 보여 준다(없는 번호는 지어내지 않고 '등록되지 않은 바코드')
-- 보여 주는 것: 카메라 켜는 데 걸린 시간·카메라 이름·해상도, 읽은 번호·바코드 종류(EAN-13 / UPC-A 등)·읽기까지 걸린 시간(켠 뒤 / '다시 읽기' 누른 뒤 / 직전 읽기 뒤), 찾은 제품·호수·색, 읽은 기록(최근 30개). 읽으면 '삑' 소리와 안내 네모 깜빡임
-- 카메라 고르기(노트북 내장 ↔ USB 웹캠, 이 기기에 기억), 번호 입력·사진으로 읽기도 같은 화면에서
-- 시험용 바코드: 실제 데이터 바코드 3개(EAN-13 단품·세트, UPC-A)와 일부러 등록되지 않은 번호 1개를 화면에 그린다. 휴대폰으로 이 화면을 열어 키오스크 카메라에 비추면 제품 없이 시험할 수 있다
-- 같은 날 `barcode-scan.js` 에 읽기 변형 하나(가운데 절반 2배 확대, 흐림 없음)를 더했다. 합성 장면 12가지(배경 밝기·바코드 크기·흐림)에서 기존 변형이 모두 놓친 3가지 중 2가지를 읽는다. 실제 웹캠으로는 아직 시험 전
-
 ## 합본 화면 (`studio.html`, 상단 탭 '합본')
-왼쪽에는 립 매핑 카메라가 항상 켜져 있고, 오른쪽 탭에서 **색 조제 · 챗봇 · 추천 · 바코드**를 한 화면에서 쓴다.
+왼쪽에는 립 매핑 카메라가 항상 켜져 있고, 오른쪽 탭에서 **색 조제 · 챗봇 · 추천**을 한 화면에서 쓴다.
 - 색 조제: 어울리는 컬러 추천, 프리셋, 색상·채도·밝기 슬라이더로 직접 조제, 텍스처·농도, '이 컬러로 제품 추천 받기'
 - 챗봇: AI 뷰티 챗봇과 같은 대화(음성·읽어주기·비교함). 립 매핑에서 고른 색을 기준 색으로 쓴다
 - 추천: 챗봇·추천 버튼으로 받은 제품 목록. 카드의 '입술에 발라보기'로 왼쪽 카메라 입술에 그 색을 바로 입힘
-- 바코드: 휴대폰 QR 연결·PC 카메라·사진·번호 입력. 인식한 제품 설명은 챗봇 탭에
 - 구현: 립 매핑(`lip.js`)과 챗봇(`chat.js`)을 그대로 불러오고 창 이벤트(`took:color`, `took:recommend`, `took:apply`, `took:show-tab`)로 주고받는다
 
 ## 팔레트 (`palette.html`, 상단 탭 '팔레트', 테스트)

@@ -7,7 +7,7 @@
 //       기기에 덮어 설치할 수 없다(앱을 지우고 새로 설치).
 // 음성 인식(Web Speech API)은 안드로이드 WebView 에 없어서 앱에서는 동작하지 않는다.
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { homedir, tmpdir } from 'node:os';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -64,13 +64,6 @@ const w = (...p) => join(work, ...p);
 
 // ---------- 2. 리소스(아이콘)·매니페스트·앱 안 파일 묶기 ----------
 cpSync(www, w('assets', 'www'), { recursive: true });
-// 앱은 일반 안드로이드 기기용: 거울 터치 필름 보정값(touch-calib.js BUILT_IN_CODE)을 빼서 터치를 그대로 쓴다 (2026-11-17 사용자 요청)
-// 웹(Vercel)에는 그대로 남는다. 앱에서도 관리자 화면에서 직접 보정해 저장하면 그 기기에서는 적용된다
-const calibFile = w('assets', 'www', 'js', 'touch-calib.js');
-const calibSrc = readFileSync(calibFile, 'utf8');
-const calibOff = calibSrc.replace(/const BUILT_IN_CODE = '[^']*';/, "const BUILT_IN_CODE = ''; // 앱: 보정값 없음");
-if (calibOff === calibSrc && !/const BUILT_IN_CODE = '';/.test(calibSrc)) fail('touch-calib.js 에서 BUILT_IN_CODE 를 찾지 못했습니다.');
-writeFileSync(calibFile, calibOff);
 mkdirSync(w('res', 'mipmap-xxxhdpi'), { recursive: true });
 copyFileSync(join(root, 'public', 'images', 'icons', 'icon-192.png'), w('res', 'mipmap-xxxhdpi', 'ic_launcher.png'));
 copyFileSync(join(root, 'android', 'AndroidManifest.xml'), w('AndroidManifest.xml'));

@@ -2,7 +2,7 @@
   "name": "took",
   "version": "0.1.0",
   "private": true,
-  "description": "took(툭) - 립 컬러 매핑 / 색상 기반 추천 / 바코드 검색 / 규칙형 뷰티 챗봇 (로우파이 와이어프레임 단계)",
+  "description": "took(툭) - 립 컬러 매핑 / 색상 기반 추천 / 규칙형 뷰티 챗봇 (로우파이 와이어프레임 단계)",
   "type": "module",
   "scripts": {
     "postinstall": "node scripts/vendor.js",
@@ -15,7 +15,7 @@
     "shades:build": "node scripts/build-shades-source.js",
     "shades:import-raw": "node scripts/import-shades-raw.js",
     "start": "node server.js",
-    "test": "node --test test/unit.test.js test/touch-calib.test.js test/shades.test.js",
+    "test": "node --test test/unit.test.js test/shades.test.js",
     "e2e": "node test/e2e.mjs",
     "eval:chat": "node scripts/eval-chat.js",
     "eval:friendly": "node scripts/eval-friendly.js",
@@ -27,8 +27,7 @@
     "e2e:static": "node scripts/build-static.js && MODE=static node test/e2e.mjs"
   },
   "dependencies": {
-    "@mediapipe/tasks-vision": "0.10.14",
-    "@zxing/library": "0.21.3"
+    "@mediapipe/tasks-vision": "0.10.14"
   },
   "engines": {
     "node": ">=18"

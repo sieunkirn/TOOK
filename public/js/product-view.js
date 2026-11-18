@@ -195,7 +195,7 @@ export function productCard(product, { extraActions = [], from = null, onShade =
 export function productDetailTable(p) {
   const rows = [
     ['ID', p.id], [t('detail.source'), p.source === 'oliveyoung' ? t('detail.sourceOy') : t('detail.sourceVirtual')],
-    [t('detail.barcode'), p.barcode || t('detail.none')], [t('card.brand'), brandOf(p)], [t('card.name'), nameOf(p)], [t('detail.type'), t('type.' + p.type)],
+    [t('card.brand'), brandOf(p)], [t('card.name'), nameOf(p)], [t('detail.type'), t('type.' + p.type)],
     [t('detail.shade'), shadeText(p)], [t('detail.hex'), p.color_hex],
     ...(p.color_source === 'oliveyoung_color_chip' ? [[t('detail.colorSource'), t('detail.colorChip')]] : []),
     [t('detail.lab'), `L* ${p.color_lab.L} / a* ${p.color_lab.a} / b* ${p.color_lab.b}`],

@@ -124,7 +124,7 @@ const openFresh = async (pg, path) => {
   await pg.goto(BASE + path);
 };
 await step('전체화면: 모든 HTML 화면에 전체화면 유지 스크립트 포함', async () => {
-  for (const path of ['/', '/calib.html', '/chat.html', '/kiosk.html', '/lip-together.html', '/palette.html', '/preview.html', '/product.html?id=P001', '/recommend.html?hex=%23B3122E', '/shades.html', '/studio.html']) {
+  for (const path of ['/', '/chat.html', '/kiosk.html', '/lip-together.html', '/palette.html', '/preview.html', '/product.html?id=P001', '/recommend.html?hex=%23B3122E', '/shades.html', '/studio.html']) {
     await page.goto(BASE + path);
     assert.equal(await page.locator('script[src="js/fullscreen-keep.js"]').count(), 1, path);
   }

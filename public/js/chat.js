@@ -1,18 +1,17 @@
 // 사용자용 AI 뷰티 챗봇: 대화와 다음 질문 버튼, 마이크로 말해서 묻기.
 // 넓은 화면은 추천 제품을 오른쪽 패널에 고정하고(대화엔 짧은 목록만), 좁은 화면은 대화 안에 카드로 보여 준다(CSS 로 전환).
 // 제품 카드의 '+ 비교'로 비교함에 담고(최대 3개) '비교하기'를 누르면 대화에 비교표를 보여 준다.
-// 오른쪽 패널은 추천 목록이 없을 때 '바코드로 제품 알아보기'(카메라 스캔·번호 입력)를 보여 주고, 인식한 제품을 대화로 설명한다.
 // 답변은 규칙 기반 엔진(src/lib/chat.js)이 만든다.
-// 파일 구성: chat-state.js(상태) · chat-view.js(그리기) · chat-input.js(음성·키보드) · chat-products.js(바코드·NFC)
+// 파일 구성: chat-state.js(상태) · chat-view.js(그리기) · chat-input.js(음성·키보드) · chat-products.js(NFC)
 //           이 파일은 질문 보내기(send)와 버튼 연결, 화면을 처음 열 때 할 일을 맡는다.
 import { $, api, store, qs, won, fullName } from './common.js';
 import { normalizeHex } from '../lib/color.js';
 import { lang as uiLang, t as tr } from './i18n.js';
 import { spokenReply } from './voice.js';
-import { C, STUDIO, BARCODE_PANEL, showTab, log, input, START, state, base, AB_ID, track, save, loadBase, setBrands } from './chat-state.js';
+import { C, STUDIO, showTab, log, input, START, state, base, AB_ID, track, save, loadBase, setBrands } from './chat-state.js';
 import { runCompare, renderLog, streamAt, streamReply } from './chat-view.js';
 import { speaker } from './chat-input.js';
-import { stopScan } from './chat-products.js';
+import './chat-products.js'; // NFC 태그
 import { getPicks } from './chat-picks.js';
 
 const TYPING_MIN_MS = 700; // 답이 아무리 빨라도 타이핑 표시를 이만큼은 보여 준다
@@ -52,10 +51,9 @@ export async function send(text) {
     if (newList) {
       state.list = products;
       state.focus = [];
-      // 새 추천 목록이 오면 패널을 목록으로 바꾼다 (바코드 카메라는 끈다)
+      // 새 추천 목록이 오면 패널을 목록으로 바꾼다
       if (products.length) {
         state.panel = 'list';
-        stopScan();
         showTab('rec'); // 합본 화면: 추천 탭으로
       }
     } else {
@@ -115,18 +113,12 @@ $('base-clear').addEventListener('click', async () => {
 });
 
 // 브랜드 목록(음성 후보 고르기용)은 등록 제품 데이터에서 가져온다
-api('api/products').then(async ({ ok, body }) => {
+api('api/products').then(({ ok, body }) => {
   if (!ok) return;
   setBrands([...new Set(body.products.map((p) => p.brand))]);
-  // 바코드가 하나도 없는 데이터(올리브영 수집 데이터)면 미리 알려 준다
-  const demo = await api('api/demo-products');
-  if (!body.products.some((p) => p.barcode) && !demo.body.products?.length) {
-    $('scan-note').textContent = C('지금 쓰는 올리브영 상품 데이터에는 바코드 정보가 아직 없어요. 바코드를 찍어도 "등록되지 않은 제품"으로 나오니, 찾는 립을 말로 물어봐 주세요.', 'The current OLIVE YOUNG product data has no barcodes yet, so scans show as "not registered". Please ask for the lip you want instead.');
-    $('scan-note').classList.remove('hidden');
-  }
 });
 await loadBase();
-// 바코드 검색·제품 상세에서 기준 제품을 가지고 들어온 경우 안내
+// 제품 상세에서 기준 제품을 가지고 들어온 경우 안내
 if (qs('base') && base && !state.messages.some((m) => m.baseNotice === base.id)) {
   state.messages.push({
     role: 'bot', baseNotice: base.id,
@@ -209,10 +201,7 @@ async function picksHandoff() {
 }
 await picksHandoff();
 window.addEventListener('took:picks', async () => { if (await picksHandoff()) renderLog(); });
-if (!BARCODE_PANEL) {
-  $('scan-open')?.remove(); // 좁은 화면의 바코드 버튼
-  $('rec-panel').setAttribute('aria-label', C('추천 제품', 'Recommended products'));
-}
+$('rec-panel').setAttribute('aria-label', C('추천 제품', 'Recommended products'));
 renderLog();
 
 // 합본 화면: 립 매핑에서 고른 색을 챗봇의 기준 색으로 쓰고, '이 컬러로 제품 추천'을 챗봇 질문으로 처리한다
@@ -224,7 +213,3 @@ if (STUDIO) {
     send(C('지금 고른 색과 비슷한 제품 추천해 줘', 'Recommend products similar to my chosen color'));
   });
 }
-// 스캐너가 없을 때: 접으면 PC 카메라를 끈다 (휴대폰 QR 연결은 2026-11-13 삭제)
-$('scan-alt')?.addEventListener('toggle', (e) => {
-  if (!e.target.open) stopScan();
-});

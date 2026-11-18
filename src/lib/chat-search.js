@@ -174,7 +174,7 @@ export function runSearch(q, { products, base, ref, toneHint }) {
   list = applyPreferences(list, q, toneHint, { conditions, reasons, notes, tips });
 
   if ((q.similar || q.lightness) && !ref) {
-    notes.push(L('기준 색상이 없어 색 비교는 못 했어요. 바코드로 제품을 찍거나 팔레트에서 색을 만든 뒤 물어봐 주세요.', 'There is no reference color to compare with. Scan a product barcode or mix a color on the palette, then ask again.'));
+    notes.push(L('기준 색상이 없어 색 비교는 못 했어요. 팔레트에서 색을 고르거나 제품을 리더기에 올린 뒤 물어봐 주세요.', 'There is no reference color to compare with. Pick a color on the palette or tap a product on the reader, then ask again.'));
   }
   if (q.lightness && ref) {
     const refL = hexToLab(ref.hex).L;

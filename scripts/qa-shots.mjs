@@ -72,7 +72,6 @@ await shot('35-shades-empty.png', '호수 안내 · 정보 없음', '제품', 's
 // 5. 기타 화면
 await shot('40-lip-together.png', '립 컬러 매핑 (lip-together)', '기타', 'lip-together.html', { wait: 4000, full: true });
 await shot('41-studio.png', '합본 (studio) · 링크 없음', '기타', 'studio.html', { wait: 4000 });
-await shot('42-calib.png', '터치 보정 (calib)', '기타', 'calib.html');
 await shot('43-preview.png', '거울 미리보기 (preview)', '기타', 'preview.html', { wait: 3000 });
 await shot('44-kiosk.png', '키오스크 틀 (kiosk)', '기타', 'kiosk.html?page=index.html', { wait: 3000 });
 
