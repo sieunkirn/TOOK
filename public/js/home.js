@@ -10,6 +10,7 @@ import { t, lang, langToggle } from './i18n.js';
 import { REDUCE_MOTION as reduce } from './motion.js';
 import { logoFull, markGlowSvg } from './brand.js';
 import { fitStage } from './ui-stage.js';
+import { listenNfc } from './nfc.js';
 
 document.documentElement.lang = lang(); // 홈은 applyI18n 을 부르지 않아 <html lang> 을 직접 맞춘다
 try { sessionStorage.removeItem('took.homeSkipIntro'); } catch { /* 저장 불가 환경 */ }
@@ -108,6 +109,18 @@ function press(side) {
   box.dataset.state = 'c';
   setTimeout(() => start(side), reduce ? 0 : 320);
 }
+
+// ---------- NFC 태그 (2026-11-18): 홈 어느 단계에서든 립 제품을 리더기에 대면 팔레트로 넘어가 그 제품 색을 바로 바른다 ----------
+// 찾기·안내(등록되지 않은 태그 포함)는 팔레트가 한다: 읽은 번호를 took.pendingTag 에 넘긴다 (palette.js)
+listenNfc((code) => {
+  if (leaving) return;
+  try { sessionStorage.setItem('took.pendingTag', code); } catch { /* 저장 불가 환경: 팔레트만 열린다 */ }
+  leaving = true;
+  clearTimeout(autoTimer);
+  if (step === 3) { box.dataset.side = 'scan'; box.dataset.state = 'c'; start('scan'); return; }
+  store.remove('navCurrent.palette.html');
+  location.href = 'palette.html';
+});
 
 // ---------- 다음 화면으로 ----------
 // 팔레트: 로고가 Find Your Color 화면 왼쪽 위 작은 로고 자리로 줄어들며 날아가고, 나머지는 사라진다

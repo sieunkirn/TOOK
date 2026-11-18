@@ -142,3 +142,14 @@ test('NFC 태그: 태그에 써 둔 바코드 번호로 호수까지 찾는다 (
   assert.equal((await findTagProduct('A000000241210', api)).id, 'OY-A000000241210'); // 제품 ID 는 그대로
   assert.equal((await findTagProduct('TEST0001', api)).id, 'OY-A000000241210'); // 표가 먼저
 });
+
+test('NFC 테스트 카드: 리더기 번호(띄어쓰기 포함)로 찾고, 블루투스 입력에서 글자가 몇 개 빠져도 같은 카드로 본다', async () => {
+  const { matchTag, resolveTag } = await import('../public/js/nfc.js');
+  assert.equal(resolveTag('04 37 9D 1A 32 24 90'), 'OY-A000001001860'); // 2번 그대로
+  assert.equal(resolveTag('04 37 9D 32 24 90'), 'OY-A000001001860'); // 2번에서 한 바이트 빠짐
+  assert.equal(resolveTag('04 08 A 32 24 91'), 'OY-A000000241210'); // 1번 메모 그대로
+  assert.equal(resolveTag('04 08 AC 5F 32 24 91'), 'OY-A000000241210'); // 1번 온전한 14글자(가정)
+  assert.equal(resolveTag('04 BC E5 1A 32 24 90'), 'OY-A000000205485'); // 3번 온전한 14글자(가정)
+  assert.equal(matchTag('04 A1 B2 C3 D4 E5 F6'), null); // 다른 태그
+  assert.equal(matchTag('322490'), null); // 너무 짧으면 맞추지 않는다
+});

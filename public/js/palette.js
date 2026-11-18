@@ -706,6 +706,12 @@ async function showTagProduct(code, kind = 'nfc') {
   recList.replaceChildren(tryOnCard(p, tryProduct));
 }
 listenNfc((code) => showTagProduct(code, 'nfc'));
+// 홈에서 태그하고 넘어온 경우 (home.js 가 took.pendingTag 에 남긴 번호): 들어오자마자 그 제품을 바른다
+{
+  let pending = null;
+  try { pending = sessionStorage.getItem('took.pendingTag'); sessionStorage.removeItem('took.pendingTag'); } catch { /* 저장 불가 환경 */ }
+  if (pending) showTagProduct(pending, 'nfc');
+}
 // 바코드 (2026-11-18): 입술 카메라 영상을 그대로 써서 상품 바코드(EAN·UPC)를 천천히 계속 찾는다 (카메라를 새로 열지 않음).
 // 카메라가 켜져 있을 때만, 화면이 보이고 챗봇 창이 닫혀 있을 때만 읽는다 (챗봇 창은 자기 '바코드 비추기'로 읽는다).
 // 같은 제품은 4초 동안 안 보였다가 다시 비춰야 또 바른다

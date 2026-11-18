@@ -20,7 +20,7 @@
   html, body { height: 100%; margin: 0; overflow: hidden; background: #000; color: var(--ink); }
   /* 툭 서비스 화면(kiosk.html)과 같은 세로 900×1440(5:8) 상자를 창에 맞춰 키우거나 줄인다. 남는 곳은 검게 (2026-11-15) */
   /* 버튼 배치 (2026-11-18 사용자 지정): 터치 범위 조정 / 조정값 복사·조정값 초기화 / 스마트 미러 화면으로·호수 검수 */
-  /* 바코드 카메라 테스트 (2026-11-18): 위 배치는 그대로 두고 맨 아래 정보 위에 한 줄(.tool)을 더한다 */
+  /* 바코드 카메라 테스트 → NFC 테스트 (2026-11-18): 위 배치는 그대로 두고 맨 아래 정보 위에 한 줄(.tool)을 더한다 */
   .ad { position: fixed; left: 50%; top: 50%; width: 900px; height: 1440px; transform: translate(-50%, -50%) scale(var(--k, 1)); background: var(--paper); display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto auto; gap: 12px; padding: 12px; box-sizing: border-box; }
   .ad.empty { grid-template-rows: auto minmax(0, 1fr) minmax(0, 0.3fr) auto auto; }
   .ad .tool { grid-column: 1 / -1; min-height: 120px; font-size: 24px; }
@@ -48,15 +48,20 @@
     b.addEventListener('click', onclick);
     return b;
   };
+  // NFC 태그 확인 (2026-11-18): 리더기에 태그를 대면 읽은 번호와 표(nfc.js NFC_TAGS)에서 찾은 결과를 맨 아래 정보 줄에 보여 준다
+  // 새 태그를 등록하거나 글자가 빠진 번호를 바로잡을 때 쓴다. 줄은 다시 그려도 그대로 쓰도록 한 번만 만든다
+  const nfcLine = document.createElement('span');
+  nfcLine.textContent = 'NFC 태그 확인: 리더기에 태그를 대 보세요';
+  window.__nfcLine = nfcLine;
   const when = (iso) => (iso ? new Date(iso).toLocaleString('ko-KR') : '');
   // 호수 전체 검수 (2026-11-18): 로컬 수집·검수 서버(npm run shades:server, scripts/shades-server.js)의 /all 화면.
   // 그 서버가 켜진 컴퓨터에서만 열린다. 키오스크 화면은 두고 새 탭으로 연다 (검수가 끝나면 탭을 닫으면 된다)
   const SHADES_REVIEW = 'http://localhost:8766/all';
   const shadesBtn = (cls = '') => btn(cls, '호수 검수', '모든 제품·호수를 보고 넣기/빼기/색 고치기 · 이 컴퓨터에서 npm run shades:server 가 켜져 있어야 열려요 (새 탭)',
     () => { const w = window.open(SHADES_REVIEW, '_blank'); if (!w) location.href = SHADES_REVIEW; });
-  // 바코드 카메라 테스트 (2026-11-18): 스캐너 없이 이 기기 카메라로 바코드를 읽어 등록 호수를 확인하는 시험 화면
-  const barcodeTestBtn = () => btn('tool', '바코드 카메라 테스트', '스캐너 없이 이 기기 카메라로 립 제품 바코드를 읽어, 등록된 호수인지 확인해요',
-    () => { location.href = 'barcode-test.html'; });
+  // NFC 테스트 (2026-11-18 사용자 요청: 바코드 카메라 테스트 버튼 자리를 바꿈. barcode-test.html 파일은 남아 있어 주소로는 열린다)
+  const nfcTestBtn = () => btn('tool', 'NFC 테스트', '리더기에 카드를 대면 몇 번 카드인지, 읽은 번호와 찾은 제품을 크게 보여 줘요',
+    () => { location.href = 'nfc-test.html'; });
   // 개발 쪽(Claude)에 그대로 붙여 넣을 글
   const copyText = () => {
     const code = calib.exportCode();
@@ -84,7 +89,7 @@
     box.classList.toggle('empty', !s.saved);
     if (!s.saved) {
       // 조정 전: 터치가 어긋나 있어도 눌리도록 화면 전체가 시작 버튼
-      box.append(btn('primary', '화면 아무 곳이나 눌러<br>터치 범위 조정 시작', '정전식 필름을 꽂은 뒤 눌러 주세요. 십자 5개를 차례로 누르고 저장하면 정확도 테스트로 넘어가요', () => calib.startCalib()), shadesBtn('wide'), barcodeTestBtn());
+      box.append(btn('primary', '화면 아무 곳이나 눌러<br>터치 범위 조정 시작', '정전식 필름을 꽂은 뒤 눌러 주세요. 십자 5개를 차례로 누르고 저장하면 정확도 테스트로 넘어가요', () => calib.startCalib()), shadesBtn('wide'), nfcTestBtn());
     } else {
       // 조정값 초기화: 이 기기에 저장한 값을 지운다 (웹에 고정한 값이 있으면 그 값으로). 웹 고정값을 쓰는 중이면 지울 값이 없다
       const local = s.saved.source !== 'builtin';
@@ -97,7 +102,7 @@
         resetBtn,
         btn('', '스마트 미러 화면으로', '조정한 채로 실제 화면을 써 봐요', () => { location.href = 'index.html'; }),
         shadesBtn(),
-        barcodeTestBtn(),
+        nfcTestBtn(),
       );
     }
     const info = document.createElement('div');
@@ -112,7 +117,7 @@
       + (s.saved ? ` · ${when(s.saved.at)} · 조정 오차 ${s.saved.rms.toFixed(1)}px` : '')
       + (t ? ` · 마지막 테스트 ${t.n}/${t.total} 맞음 (평균 ${t.avg.toFixed(0)}px)` : '')
       + (s.sim ? ' · 시뮬레이션' : '');
-    info.append(line);
+    info.append(line, nfcLine);
     if (s.saved) {
       const ta = document.createElement('textarea');
       ta.readOnly = true;
@@ -131,6 +136,20 @@
   fitBox();
   // 조정 전에는 터치가 어긋나 상자 밖 검은 여백이 눌릴 수도 있다 → 여백을 눌러도 조정 시작
   document.addEventListener('click', (e) => { if (calib && !calib.status().saved && !box.contains(e.target)) calib.startCalib(); });
+</script>
+<script type="module">
+  import { listenNfc, matchTag, resolveTag, normalizeTag, NFC_LABELS } from './js/nfc.js';
+  listenNfc((code) => {
+    const line = window.__nfcLine;
+    if (!line) return;
+    const n = normalizeTag(code);
+    const key = matchTag(n);
+    const id = resolveTag(n);
+    const time = new Date().toLocaleTimeString('ko-KR');
+    line.textContent = `NFC 태그 확인 (${time}): 읽은 번호 ${n} (${n.length}글자)`
+      + (key ? ` → ${NFC_LABELS[key] || key}` + (key === n ? '' : ' (글자 빠짐 감안)') + ` · ${id}`
+        : id ? ` → 제품 ID · ${id}` : ' → 표에 없음 (바코드 번호면 팔레트·챗봇에서 찾아요)');
+  });
 </script>
 </body>
 </html>
