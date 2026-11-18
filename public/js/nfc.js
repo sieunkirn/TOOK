@@ -118,6 +118,11 @@ export function createNfcHint(node, { idleText = '', ms }) {
   };
 }
 
+// 키가 실제로 들어온 시각(ms, 1970년 기준). 처리한 시각(performance.now)으로 재면 팔레트가 카메라·입술 추적으로 잠깐 멈춘 사이
+// 들어온 글자들이 늦게 한꺼번에 처리되면서 간격이 NFC_GAP 을 넘어 번호 앞부분이 잘린다 → 이벤트에 찍힌 시각(timeStamp)으로 잰다 (2026-11-18).
+// 키오스크 틀(kiosk.html)이 넘겨 준 키는 틀이 원래 키의 시각을 tookAt 에 담아 준다 (틀과 화면은 시각 기준점이 달라서 절대 시각으로 맞춘다)
+const keyTime = (e) => e.tookAt || (e.timeStamp ? performance.timeOrigin + e.timeStamp : Date.now());
+
 // ACR1555U(블루투스 키보드 모드) 기본 출력은 '04 A1 B2 C3 D4 E5 F6' + Enter 처럼 바이트 사이에 띄어쓰기가 들어간다.
 // 그래서 빠르게 이어 들어오는 띄어쓰기는 버리지 않고 건너뛴다(raw 에는 남겨 입력칸에서 지울 때 쓴다).
 export function listenNfc(onTag) {
@@ -135,7 +140,7 @@ export function listenNfc(onTag) {
     return null;
   };
   const onKey = (e) => {
-    const now = performance.now();
+    const now = keyTime(e);
     if (now - last > NFC_GAP) { buf = ''; raw = ''; }
     last = now;
     if (e.key === 'Enter' && buf.length >= 6) {
@@ -156,7 +161,13 @@ export function listenNfc(onTag) {
     }
     const ch = keyChar(e);
     if (ch) { buf += ch; raw += ch; }
-    else if (e.key === ' ' && buf) raw += ' ';
+    else if (e.key === ' ' && buf) {
+      raw += ' ';
+      // 리더기가 바이트 사이에 치는 띄어쓰기가 포커스가 남은 버튼을 누르지 않게 막는다 (2026-11-18, 실제 키 입력으로 확인한 문제).
+      // 입력칸은 막지 않는다: 사람이 치는 띄어쓰기일 수 있고, 태그면 아래 Enter 처리에서 찍힌 글자를 지운다
+      const tg = e.target;
+      if (!(tg instanceof HTMLInputElement || tg instanceof HTMLTextAreaElement || tg?.isContentEditable)) e.preventDefault();
+    }
     else if (e.key !== 'Shift') { buf = ''; raw = ''; }
   };
   window.addEventListener('keydown', onKey, true);

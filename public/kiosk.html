@@ -68,7 +68,9 @@
   frame.addEventListener('load', () => { try { frame.contentWindow.focus(); } catch { /* 다른 출처 */ } });
   addEventListener('keydown', (e) => {
     try {
-      frame.contentWindow.dispatchEvent(new KeyboardEvent('keydown', { key: e.key, code: e.code, shiftKey: e.shiftKey, bubbles: true, cancelable: true }));
+      const fwd = new KeyboardEvent('keydown', { key: e.key, code: e.code, shiftKey: e.shiftKey, bubbles: true, cancelable: true });
+      fwd.tookAt = e.tookAt || performance.timeOrigin + e.timeStamp; // 원래 키가 들어온 시각 (nfc.js 가 글자 사이 간격을 잴 때 쓴다)
+      frame.contentWindow.dispatchEvent(fwd);
       frame.contentWindow.focus();
     } catch { /* 화면이 아직 없음 */ }
   });

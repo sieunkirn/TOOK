@@ -1,14 +1,18 @@
-// 홈 = TOOK_prototype(Figma '앱' 페이지) 1~3번 화면 그대로 (2026-11-16). 좌표는 모두 900×1440 무대 기준 (ui-stage.js)
-//  1 대기: 검정 화면 가운데 빛나는 마크. 1.5초 뒤 저절로(또는 누르면 바로) 2로 (2026-11-16 사용자 요청)
-//  2 로고: 마크가 왼쪽으로 가며 TOOK 글자가 나타난다. 잠시 뒤(또는 누르면) 3으로
-//  3 시작: 로고가 위로 올라가며 빛나고 알약 버튼이 나온다. 로고·버튼은 한 덩어리로 화면 가운데쯤, 버튼은 원본보다 1.2배 크게 + 아래 이름표 (2026-11-16 사용자 요청 "버튼 배치 더 예쁘게")
+// 홈 1~4번 화면. 좌표는 모두 900×1440 무대 기준 (ui-stage.js)
+// 2026-11-18 시안: 1~3번은 로고 자리가 똑같다 (가로 가운데, 로고 세로 중심 = 화면 50%). 화면마다 바뀌는 건 배경과 문구뿐
+// 배경 영상 두 개: videos/home.mp4 의 0~4.95초 제품 클로즈업 → videos/home-lips.mp4 입술 클로즈업(10초 반복)
+// home-lips.mp4 = Figma AI 로 만든 입술 사진(assets-src/home-lips-ai.png)에 느린 줌·광택 빛 띠·비네팅·그레인을 입혀 렌더 (2026-11-18)
+//  1 제품 장면 + 가운데 로고. home.mp4 가 입술 장면(4.95초)에 닿으면(또는 누르면) 2로
+//  2 입술 영상 + 같은 로고. 1.5초 뒤(또는 누르면) 3으로
+//  3 2번 + 로고 아래 "Tap The Screen". 입술 영상 반복. 누르면 바로 팔레트로 (2026-11-18 사용자 요청)
+//  4 (지금은 평소 흐름에 없음, ?step=4 로만) 시작: 로고가 위로 올라가며 빛나고 알약 버튼이 나온다. 로고·버튼은 한 덩어리로 화면 가운데쯤, 버튼은 원본보다 1.2배 크게 + 아래 이름표 (2026-11-16 사용자 요청 "버튼 배치 더 예쁘게")
 //     왼쪽 스캔 아이콘 = 카메라로 발라 보기(팔레트 Find Your Color), 오른쪽 음성 아이콘 = AI 뷰티 챗봇
 //     버튼은 원본 3번 화면의 세 모양 순서대로 빛난다: 평소(어두운 분홍) → 손가락을 대면(분홍) → 떼는 순간(흰색) → 다음 화면
 // 예전 홈(점선 얼굴·시계·버튼 두 개·다크 모드·언어 버튼)은 프로토타입에 없어 뺐다 (git 기록 a840e68 에 있음)
 import { store } from './common.js';
 import { t, lang, langToggle } from './i18n.js';
 import { REDUCE_MOTION as reduce } from './motion.js';
-import { logoFull, markGlowSvg } from './brand.js';
+import { logoFull } from './brand.js';
 import { fitStage } from './ui-stage.js';
 import { listenNfc } from './nfc.js';
 
@@ -26,8 +30,9 @@ const WAVE_SVG = '<svg class="hs-ico-wave" viewBox="0 0 60 34" aria-hidden="true
 
 const stage = document.getElementById('stage');
 fitStage(stage);
-// 배경 영상 (2026-11-18 사용자 요청): 무대 전체에 소리 없이 반복 재생, 로고·버튼은 그 위에
-stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hs-glowmark" aria-hidden="true">${markGlowSvg()}</div>${logoFull('hs-logo')}
+// 쌓는 순서: 배경 영상(소리 없음) → 어두운 덮개 → 로고 → 문구
+stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><video class="hs-video hs-lips" src="videos/home-lips.mp4" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hs-dim" aria-hidden="true"></div>${logoFull('hs-logo')}
+  <p class="hs-tap" aria-hidden="true">Tap The Screen</p>
   <div class="hs-start" data-state="a" data-side="scan">
     <div class="hs-glow" aria-hidden="true"><i></i></div>
     <div class="hs-pill" role="group">
@@ -38,7 +43,9 @@ stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted 
     <div class="hs-labels" aria-hidden="true"><span class="hs-label-scan">${t('home.labelScan')}</span><span class="hs-label-voice">${t('home.labelVoice')}</span></div>
   </div>
   <p class="sr-only" id="hs-help"></p>`;
-stage.append(langToggle('hs-lang')); // 한국어/영어 (3번 시작 화면 오른쪽 위에서만 보인다)
+stage.append(langToggle('hs-lang')); // 한국어/영어 (4번 시작 화면 오른쪽 위에서만 보인다)
+const video = stage.querySelector('.hs-video:not(.hs-lips)'); // 제품
+const lipsVideo = stage.querySelector('.hs-lips'); // 입술
 const pill = stage.querySelector('.hs-pill');
 const box = stage.querySelector('.hs-start'); // 눌린 단계(data-state a·b·c)와 고른 쪽(data-side)
 pill.setAttribute('aria-label', t('home.choose'));
@@ -46,35 +53,52 @@ stage.querySelector('.hs-opt-scan').setAttribute('aria-label', t('home.toPalette
 stage.querySelector('.hs-opt-voice').setAttribute('aria-label', t('home.toChat'));
 stage.querySelector('#hs-help').textContent = t('home.tapToStart');
 
-// ---------- 1 → 2 → 3 ----------
-const MARK_MS = 1500; // 1번 마크 화면을 보여 주는 시간
-const LOGO_MS = 1300; // 2번 로고 화면을 보여 주는 시간
+// ---------- 1 → 2 → 3 (배경 영상 장면에 맞춘다) ----------
+const LIPS_AT = 4.95; // home.mp4 에서 제품 장면이 끝나는 시각(초). 그 뒤 원래 영상의 입술 장면은 쓰지 않는다
+const PRODUCT_MAX_MS = 6000; // 영상이 안 나와도(자동 재생 막힘 등) 이 시간이 지나면 2로
+const LIPS_MS = 1500; // 2번 화면을 보여 주는 시간 (3번은 누를 때까지 기다린다)
 let step = 0;
 let autoTimer = null;
+function toLips() {
+  if (stage.classList.contains('hs-lips-on')) return;
+  stage.classList.add('hs-lips-on');
+  lipsVideo.play().catch(() => {});
+  video.pause();
+}
 function go(n, { instant = false } = {}) {
   clearTimeout(autoTimer);
   step = n;
   stage.classList.toggle('hs-instant', instant || reduce);
   stage.dataset.step = String(n);
   if (instant || reduce) requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.remove('hs-instant')));
-  if (n === 1) autoTimer = setTimeout(() => go(2), MARK_MS);
-  if (n === 2) autoTimer = setTimeout(() => go(3), LOGO_MS);
+  if (n === 1) { autoTimer = setTimeout(() => go(2), PRODUCT_MAX_MS); watchCut(); }
+  if (n >= 2) toLips(); // 2번부터는 입술 장면 (누르거나 ?step= 으로 건너뛴 경우 영상도 그 장면으로)
+  if (n === 2) autoTimer = setTimeout(() => go(3), LIPS_MS);
 }
-// 1·2번 화면은 아무 곳이나 누르면 다음으로 (원본 프로토타입처럼 손을 뗄 때 한 번만)
-stage.addEventListener('pointerup', (e) => {
-  if (step === 1) go(2);
-  else if (step === 2 && !e.target.closest('.hs-pill')) go(3);
-});
+// 1번: 영상이 입술 장면에 닿는 순간 2로
+function watchCut() {
+  if (step !== 1) return;
+  if (video.currentTime >= LIPS_AT) { go(2); return; }
+  requestAnimationFrame(watchCut);
+}
+// 1·2번 화면은 아무 곳이나 누르면 다음으로, 3번("Tap The Screen")은 누르면 바로 팔레트로 (2026-11-18 사용자 요청. 손을 뗄 때 한 번만)
+function next() {
+  if (leaving) return;
+  if (step === 1 || step === 2) go(step + 1);
+  else if (step === 3) { leaving = true; clearTimeout(autoTimer); start('scan'); }
+}
+stage.addEventListener('pointerup', next);
 document.addEventListener('keydown', (e) => {
-  if ((e.key === 'Enter' || e.key === ' ') && step < 3) { e.preventDefault(); go(step + 1); }
+  if ((e.key === 'Enter' || e.key === ' ') && step < 4) { e.preventDefault(); next(); }
 });
 
-// ---------- 3번 알약 버튼: 누르는 동안 세 단계로 빛난다 ----------
+// ---------- 4번 알약 버튼: 누르는 동안 세 단계로 빛난다 ----------
+// 2026-11-18부터 3번에서 바로 팔레트로 가서 평소 흐름에는 나오지 않는다 (?step=4 로만 열림)
 let pressing = null;
 let leaving = false;
 const sideOf = (el) => (el?.closest('.hs-opt-voice') ? 'voice' : el?.closest('.hs-opt-scan') ? 'scan' : null);
 pill.addEventListener('pointerdown', (e) => {
-  if (step !== 3 || leaving) return;
+  if (step !== 4 || leaving) return;
   const side = sideOf(e.target);
   if (!side) return;
   pressing = { side, id: e.pointerId };
@@ -117,7 +141,7 @@ listenNfc((code) => {
   try { sessionStorage.setItem('took.pendingTag', code); } catch { /* 저장 불가 환경: 팔레트만 열린다 */ }
   leaving = true;
   clearTimeout(autoTimer);
-  if (step === 3) { box.dataset.side = 'scan'; box.dataset.state = 'c'; start('scan'); return; }
+  if (step === 4) { box.dataset.side = 'scan'; box.dataset.state = 'c'; start('scan'); return; }
   store.remove('navCurrent.palette.html');
   location.href = 'palette.html';
 });
@@ -136,15 +160,16 @@ function start(where) {
   if (reduce) { location.href = 'palette.html'; return; }
   stage.classList.add('hs-leaving');
   const logo = stage.querySelector('.hs-logo');
-  // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 translateY(-200px) 로 올라가 있으므로
-  // 그 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(위 가운데 354.33, 66.31 · 배율 190/612)에 정확히 멈춘다 (transform-origin 0 0)
+  // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 그 자리 그대로(none), 4번에서는 translateY(-200px)
+  // 지금 보이는 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(위 가운데 354.33, 66.31 · 배율 190/612)에 정확히 멈춘다 (transform-origin 0 0)
   const BASE = { left: 144, top: 648 };
   const dx = SMALL_LOGO.left - BASE.left;
   const dy = SMALL_LOGO.top - BASE.top;
-  const from = getComputedStyle(logo).transform; // 지금 보이는 자리 그대로 (translateY(-268px))
+  const cs = getComputedStyle(logo);
+  const from = cs.transform; // 지금 보이는 자리 그대로
   logo.style.transition = 'none';
   logo.animate([
-    { transform: from === 'none' ? 'translateY(-200px)' : from, filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.88))' },
+    { transform: from === 'none' ? 'translate(0px, 0px)' : from, filter: cs.filter === 'none' ? 'drop-shadow(0 0 0 rgba(255, 255, 255, 0))' : cs.filter },
     { transform: `translate(${dx}px, ${dy}px) scale(${SMALL_LOGO.k})`, filter: 'drop-shadow(0 0 0 rgba(255, 255, 255, 0))' }, // 팔레트 로고는 빛 번짐 없음
   ], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
   setTimeout(() => {
@@ -154,12 +179,12 @@ function start(where) {
   }, 700);
 }
 
-// 언어를 바꿔 다시 열렸으면(took.homeFx) 바로 3번(시작 버튼) 화면, 그 밖에(처음·초기화·로고) 1번(마크)부터
+// 언어를 바꿔 다시 열렸으면(took.homeFx) 바로 3번(Tap The Screen) 화면, 그 밖에(처음·초기화·로고) 1번부터
 let arrive = false;
 try {
   arrive = !!sessionStorage.getItem('took.homeFx');
   sessionStorage.removeItem('took.homeFx');
 } catch { /* 저장 불가 환경 */ }
-const want = Number(new URLSearchParams(location.search).get('step')); // 화면 확인용 ?step=1|2|3
-go(want >= 1 && want <= 3 ? want : arrive ? 3 : 1, { instant: true });
+const want = Number(new URLSearchParams(location.search).get('step')); // 화면 확인용 ?step=1|2|3|4
+go(want >= 1 && want <= 4 ? want : arrive ? 3 : 1, { instant: true });
 window.tookHome = { go };

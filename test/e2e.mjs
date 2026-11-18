@@ -158,7 +158,7 @@ await step('홈: 대기 마크 → 로고 → 시작 버튼(누르는 3단계) �
   await page.mouse.up();
   assert.equal(await page.getAttribute('.hs-start', 'data-state'), 'c');
   await page.waitForURL(at('palette.html'));
-  await page.goto(BASE + '/index.html?step=3');
+  await page.goto(BASE + '/index.html?step=4');
   await page.click('.hs-opt-voice');
   await page.waitForURL(at('chat.html'));
 });

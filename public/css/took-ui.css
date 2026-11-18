@@ -24,23 +24,27 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 .tui-stage svg { display: block; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* ================= 홈 1~3번 ================= */
+/* ================= 홈 1~4번 ================= */
+/* 2026-11-18 시안: 1 제품 배경+로고 · 2 입술 배경+로고 · 3 입술 배경+로고+"Tap The Screen"(누르면 팔레트) · 4 알약 버튼(?step=4 로만)
+   쌓는 순서: 배경 영상(제품→입술 장면) → 어두운 덮개 → 로고 → 문구. 좌표는 900×1440 무대 기준, 창 크기에는 무대가 통째로 비례 조정된다 (ui-stage.js) */
 .tui-home .tui-stage { cursor: pointer; }
-/* 홈 배경 영상 (2026-11-18 사용자 요청): 900×1440 무대를 꽉 채워 반복 재생 */
 .hs-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
-.hs-glowmark, .hs-logo, .hs-start, .hs-lang { z-index: 1; }
-/* 1번: 가운데 빛나는 마크 (원본 x 379~520, y 649~790) */
-.hs-glowmark { position: absolute; left: 378px; top: 648px; width: 145px; height: 144px; pointer-events: none;
-  filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.62)); transition: opacity .5s ease; }
-.hs-glowmark svg { width: 100%; height: 100%; }
-/* 2번: 로고 (원본 x 144~755, y 648~791). 3번: 200px 위로(원본 268px — 버튼과 한 덩어리로 가운데 오게 2026-11-16 조정), 빛 번짐 */
+.hs-lips { opacity: 0; }
+.hs-lips-on .hs-lips { opacity: 1; } /* 2번부터 입술 영상 (videos/home-lips.mp4) */
+.hs-dim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); pointer-events: none; z-index: 0; }
+.hs-logo, .hs-tap, .hs-start, .hs-lang { z-index: 1; }
+/* 로고: 원본 로고 그대로 612×144, 가로 가운데(left 144), 세로 중심 = 화면 높이 50% (top 648 → 중심 720). 1~3번은 자리 고정 */
 .hs-logo { position: absolute; left: 144px; top: 648px; width: 612px; height: 144px; color: #fff; overflow: visible;
-  transform-origin: 0 0; transition: transform .8s cubic-bezier(.65, 0, .35, 1), filter .8s ease; }
-.hs-logo .lg-mark, .hs-logo .lg-word { transition: transform .75s cubic-bezier(.65, 0, .35, 1), opacity .6s ease; }
-.tui-stage[data-step="1"] .hs-logo .lg-mark { transform: translateX(234px); }
-.tui-stage[data-step="1"] .hs-logo .lg-word { opacity: 0; transform: translateX(40px); }
-.tui-stage:not([data-step="1"]) .hs-glowmark { opacity: 0; }
-.tui-stage[data-step="3"] .hs-logo { transform: translateY(-200px); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.88)); }
+  transform-origin: 0 0; filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.55));
+  transition: transform .8s cubic-bezier(.65, 0, .35, 1), filter .8s ease; }
+/* 안내 문구: Inter Regular 32 흰색 가운데, 위치 890 (로고 아래 98px). 로고와 따로 배치해 문구가 있든 없든 로고는 움직이지 않는다 */
+.hs-tap { position: absolute; left: 0; right: 0; top: 890px; margin: 0; height: 39px; line-height: 39px; text-align: center; color: #fff;
+  font-family: Inter, "Pretendard Variable", Pretendard, system-ui, sans-serif; font-size: 32px; font-weight: 400; letter-spacing: normal;
+  white-space: nowrap; pointer-events: none; visibility: hidden; }
+.tui-stage[data-step="3"] .hs-tap { visibility: visible; }
+.tui-stage.hs-leaving .hs-tap { opacity: 0; transition: opacity .35s ease; } /* 3번에서 누르면 문구가 사라지고 로고만 팔레트 자리로 날아간다 */
+/* 4번: 로고가 200px 위로 올라가며 버튼과 한 덩어리 */
+.tui-stage[data-step="4"] .hs-logo { transform: translateY(-200px); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.88)); }
 .hs-instant, .hs-instant * { transition: none !important; }
 
 /* 3번: 알약 버튼 (원본 03.png 위쪽 버튼: x 286~620, y 814~890 / 손잡이 x 300~453, y 822~881)
@@ -53,7 +57,7 @@ body.tui { max-width: none; width: 100%; color: #fff; }
   --knob-x: 14px;
   --glow: linear-gradient(90deg, #d0c8cc 0%, #d8a8bd 15%, #e8186f 38%, #e01868 60%, #cc8aa6 78%, #d8d2d4 100%);
 }
-.tui-stage[data-step="3"] .hs-start { opacity: 1; pointer-events: auto; }
+.tui-stage[data-step="4"] .hs-start { opacity: 1; pointer-events: auto; }
 /* 버튼 배치 (2026-11-16 사용자 요청 "더 예쁘게"): 원본 크기의 1.2배(가운데 기준), 로고 아래 간격을 맞춰 로고와 한 덩어리로 화면 가운데쯤.
    아래에 작은 이름표(왼쪽 컬러 찾기 · 오른쪽 AI 뷰티 상담) — 고른 쪽은 또렷하게 */
 .hs-start { left: 283px; top: 822px; transform: scale(1.2); transform-origin: 50% 50%; } /* 가운데 = 로고 가운데(450) */
@@ -245,7 +249,7 @@ html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s;
 /* 언어: 홈 3번 화면 오른쪽 위에서만 (2026-11-17 사용자 요청: 언어는 홈에서만 바꾼다. 팔레트 버튼은 뺐다) */
 .fc-lang, .hs-lang { top: 66.5px; height: 42px; min-width: 84px; padding: 0 16px; font-size: 17px; line-height: 39px; font-weight: 600; z-index: 6; }
 .hs-lang { right: 40px; opacity: 0; pointer-events: none; transition: opacity .6s ease .25s; }
-.tui-stage[data-step="3"] .hs-lang { opacity: 1; pointer-events: auto; }
+.tui-stage[data-step="4"] .hs-lang { opacity: 1; pointer-events: auto; }
 .tui-stage.hs-leaving .hs-lang { opacity: 0; }
 /* 내 톤으로 추천받기: 부제 아래 · 얼굴 프레임 위 (y 252~294). GP-홈화면 Figma 에는 없는 예전 기능 (2026-11-18 자리만 옮김) */
 .fc-match { left: 330px; top: 252px; width: 240px; height: 42px; font-size: 18px; line-height: 39px; font-weight: 600; z-index: 3; letter-spacing: -0.01em; }
@@ -266,26 +270,29 @@ html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s;
 .fc[data-mode="recs"] .fc-tex, .fc[data-mode="recs"] .fc-match, .fc[data-mode="recs"] .fc-matchbox { opacity: 0; pointer-events: none; }
 /* 왼쪽 세로 메뉴 (GP-홈화면 Figma 2026-11-18, 흰색·검정만). 바깥 유리 알약 x 28.1 y 604.5 61.9×231 흰 37%,
    위 한 쌍(스캔·음성) 흰 48% 알약, 손잡이 = 흰 44% 원 46.8 (고른 쪽: 평소 스캔, 챗봇 창이 열리면 음성), 9점 = 검정 원 54.9, 집 = 흰 44% 원 54.9 */
-.fc-menu { position: absolute; left: 28.1px; top: 604.52px; width: 61.91px; height: 230.97px; z-index: 6; box-sizing: border-box; border-radius: 200px;
+/* 2026-11-18 세 번째 창(NFC 태그)을 넣어 위 한 쌍이 세 칸(스캔·음성·NFC)이 됐다: 한 칸(50.4)만큼 길어지고, 가운데가 같도록 위로 25.2 올렸다 */
+.fc-menu { position: absolute; left: 28.1px; top: 579.32px; width: 61.91px; height: 281.37px; z-index: 6; box-sizing: border-box; border-radius: 200px;
   background: rgba(255, 255, 255, 0.37); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.08);
   transition: transform .45s cubic-bezier(.65, 0, .35, 1); }
 .fc[data-mode="recs"] .fc-menu { transform: translateY(-140px); } /* 추천 결과: 시트(y 720~) 위로 */
 .fc-menu > * { position: absolute; box-sizing: border-box; border-radius: 50%; }
-.fc-menu-pair { left: 3.15px; top: 3.03px; width: 55.6px; height: 106.88px; border-radius: 200px; background: rgba(255, 255, 255, 0.48); pointer-events: none; }
+.fc-menu-pair { left: 3.15px; top: 3.03px; width: 55.6px; height: 157.28px; border-radius: 200px; background: rgba(255, 255, 255, 0.48); pointer-events: none; }
 .fc-menu-knob { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; pointer-events: none; background: rgba(255, 255, 255, 0.44);
   -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6);
   transition: transform .3s cubic-bezier(.3, .7, .2, 1); }
 html.chat-modal-open .fc-menu-knob { transform: translate(-0.48px, 50.4px); }
+html.nfc-win-open .fc-menu-knob { transform: translate(-0.48px, 100.8px); }
 .fc-menu .fc-mb { display: block; cursor: pointer; color: #fff; text-decoration: none; -webkit-tap-highlight-color: transparent; }
 .fc-menu .fc-mb svg { width: 100%; height: 100%; }
 .fc-mb-scan { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; }
 .fc-mb-voice { left: 7.53px; top: 57px; width: 46.83px; height: 46.83px; }
-.tui .tui-stage .fc-menu .fc-mb-scan, html.chat-modal-open .tui-stage .fc-menu .fc-mb-voice { color: #000; } /* 손잡이 위 아이콘 = 검정 선 */
-html.chat-modal-open .tui-stage .fc-menu .fc-mb-scan { color: #fff; }
-.fc-mb-grid { left: 3.49px; top: 113.5px; width: 54.93px; height: 54.93px; background: #000;
+.fc-mb-nfc { left: 7.53px; top: 107.4px; width: 46.83px; height: 46.83px; }
+.tui .tui-stage .fc-menu .fc-mb-scan, html.chat-modal-open .tui-stage .fc-menu .fc-mb-voice, html.nfc-win-open .tui-stage .fc-menu .fc-mb-nfc { color: #000; } /* 손잡이 위 아이콘 = 검정 선 */
+html.chat-modal-open .tui-stage .fc-menu .fc-mb-scan, html.nfc-win-open .tui-stage .fc-menu .fc-mb-scan { color: #fff; }
+.fc-mb-grid { left: 3.49px; top: 163.9px; width: 54.93px; height: 54.93px; background: #000;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.34), 0 4px 4px rgba(0, 0, 0, 0.25); }
-.fc-mb-home { left: 3.49px; top: 172.16px; width: 54.93px; height: 54.93px; background: rgba(255, 255, 255, 0.44); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+.fc-mb-home { left: 3.49px; top: 222.56px; width: 54.93px; height: 54.93px; background: rgba(255, 255, 255, 0.44); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 .fc-menu .fc-mb-home:link, .fc-menu .fc-mb-home:visited { color: #fff; }
 .fc[data-mode="recs"] .fc-mb-grid { box-shadow: inset 0 0 0 2px #fff, 0 4px 4px rgba(0, 0, 0, 0.25); } /* 추천 제품이 열려 있음 */
 .tui .tui-stage .fc-menu button.fc-mb:hover:not(:disabled) { background: transparent; }

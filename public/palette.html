@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"><!-- 제목 Find Your Color = Inter Semi Bold (GP-홈화면 Figma) -->
 <link rel="stylesheet" href="css/wireframe.css">
 <link rel="stylesheet" href="css/took-ui.css">
+<link rel="stylesheet" href="css/took-nfc.css"><!-- 세 번째 창: NFC 태그 (js/nfc-window.js, 2026-11-18) -->
 <link rel="manifest" href="manifest.webmanifest">
 <script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
@@ -103,13 +104,15 @@
     </div>
   </section>
   <button type="button" class="fc-sbtn" id="fc-sbtn" aria-expanded="false" data-i18n-aria="fc.sheet" aria-label="제품 찾기 열기"></button>
-  <!-- 왼쪽 세로 메뉴 (GP-홈화면 Figma, 2026-11-18): 유리 알약 안에 위 = 스캔(이 화면)·음성(AI 뷰티 챗봇) 한 쌍(손잡이가 고른 쪽),
+  <!-- 왼쪽 세로 메뉴 (GP-홈화면 Figma, 2026-11-18): 유리 알약 안에 위 = 스캔(이 화면)·음성(AI 뷰티 챗봇)·NFC(태그 창) 세 칸(손잡이가 고른 쪽),
        아래 = 9점(지금 색의 추천 제품 열기/닫기) · 집(처음으로). 예전 오른쪽 아래 챗봇 플로팅 버튼은 음성 버튼으로 옮겼다 (숫자 = '챗봇에 담기'로 담은 제품 수) -->
   <nav class="fc-menu" id="fc-menu" aria-label="메뉴" data-i18n-aria="fc.menu">
     <span class="fc-menu-pair" aria-hidden="true"></span>
     <span class="fc-menu-knob" aria-hidden="true"></span>
     <button type="button" class="fc-mb fc-mb-scan" id="fc-mb-scan" aria-current="page" data-i18n-aria="fc.menuScan" aria-label="컬러 찾기 (지금 화면)"><svg viewBox="0 0 46.83 46.83" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14.66 18.75Q14.66 15.09 18.71 15.09"/><path d="M31.22 18.75Q31.22 15.09 27.17 15.09"/><path d="M14.66 28.08Q14.66 31.75 18.71 31.75"/><path d="M31.22 28.08Q31.22 31.75 27.17 31.75"/></g></svg></button>
     <button type="button" class="fc-mb fc-mb-voice" id="fc-chat" data-i18n-aria="fc.chat" aria-label="AI 뷰티 챗봇 열기"><svg viewBox="0 0 46.83 46.83" aria-hidden="true" focusable="false"><g fill="currentColor"><rect x="21.27" y="16.68" width="3.37" height="13.48" rx="1.68"/><rect x="15.79" y="18.34" width="3.37" height="10.16" rx="1.68"/><rect x="26.75" y="18.34" width="3.37" height="10.16" rx="1.68"/><rect x="32.23" y="20.22" width="3.37" height="6.39" rx="1.68"/><ellipse cx="12.37" cy="23.42" rx="1.3" ry="1.82"/></g></svg><span class="fc-chat-badge" id="fc-chat-badge"></span></button>
+    <!-- 세 번째 창 (2026-11-18 사용자 요청 "창이 3개: 거울·챗봇·NFC 태깅"): NFC 태그 창 (js/nfc-window.js). 손잡이는 열린 창 쪽으로 -->
+    <button type="button" class="fc-mb fc-mb-nfc" id="fc-mb-nfc" aria-haspopup="dialog" data-i18n-aria="fc.menuNfc" aria-label="NFC 태그 창 열기"><svg viewBox="0 0 46.83 46.83" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M15.6 18.4Q18.6 23.4 15.6 28.4"/><path d="M21.2 14.6Q26.6 23.4 21.2 32.2"/><path d="M26.8 10.8Q34.6 23.4 26.8 36"/></g></svg></button>
     <button type="button" class="fc-mb fc-mb-grid" id="fc-mb-grid" data-i18n-aria="fc.sheet" aria-label="추천 제품 보기"><svg viewBox="0 0 54.93 54.93" aria-hidden="true" focusable="false"><g fill="currentColor"><circle cx="20.36" cy="19.49" r="2.09"/><circle cx="27.94" cy="19.49" r="2.09"/><circle cx="35.53" cy="19.49" r="2.09"/><circle cx="20.36" cy="27.46" r="2.09"/><circle cx="27.94" cy="27.46" r="2.09"/><circle cx="35.53" cy="27.46" r="2.09"/><circle cx="20.36" cy="35.44" r="2.09"/><circle cx="27.94" cy="35.44" r="2.09"/><circle cx="35.53" cy="35.44" r="2.09"/></g></svg></button>
     <a class="fc-mb fc-mb-home" id="fc-mb-home" href="index.html" data-i18n-aria="nav.reset" aria-label="took(초기화)"><svg viewBox="0 0 54.93 54.93" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.99 26.89L27.46 18.99L36.94 26.89"/><path d="M20.62 24.88V35.94H34.31V24.88"/><path d="M24.83 35.94V29.62H30.1V35.94"/></g></svg></a>
   </nav>

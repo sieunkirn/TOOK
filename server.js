@@ -104,7 +104,7 @@ async function handleApi(req, res, url) {
   return sendJson(res, 404, { error: '알 수 없는 API 입니다.' });
 }
 
-async function serveStatic(res, pathname) {
+async function serveStatic(res, pathname, range) {
   let file;
   if (pathname.startsWith('/lib/')) {
     const name = pathname.slice(5);
@@ -118,7 +118,21 @@ async function serveStatic(res, pathname) {
   try {
     const s = await stat(file);
     if (!s.isFile()) return notFound(res);
-    res.writeHead(200, { 'Content-Type': MIME[extname(file)] || 'application/octet-stream' });
+    const type = MIME[extname(file)] || 'application/octet-stream';
+    // 부분 요청(Range): 영상 구간 이동(currentTime)이 되려면 필요하다 (홈 배경 영상의 입술 장면 반복, 2026-11-18)
+    const m = /^bytes=(\d*)-(\d*)$/.exec(range || '');
+    if (m && (m[1] || m[2])) {
+      const start = m[1] ? Number(m[1]) : Math.max(0, s.size - Number(m[2]));
+      const end = m[1] && m[2] ? Math.min(Number(m[2]), s.size - 1) : s.size - 1;
+      if (start > end || start >= s.size) {
+        res.writeHead(416, { 'Content-Range': `bytes */${s.size}` });
+        return res.end();
+      }
+      const buf = (await readFile(file)).subarray(start, end + 1);
+      res.writeHead(206, { 'Content-Type': type, 'Accept-Ranges': 'bytes', 'Content-Range': `bytes ${start}-${end}/${s.size}`, 'Content-Length': buf.length });
+      return res.end(buf);
+    }
+    res.writeHead(200, { 'Content-Type': type, 'Accept-Ranges': 'bytes' });
     res.end(await readFile(file));
   } catch {
     notFound(res);
@@ -135,7 +149,7 @@ async function handler(req, res) {
     const url = new URL(req.url, 'http://localhost');
     try {
       if (url.pathname.startsWith('/api/')) await handleApi(req, res, url);
-      else await serveStatic(res, url.pathname);
+      else await serveStatic(res, url.pathname, req.headers.range);
     } catch (e) {
       sendJson(res, 500, { error: e.message });
     }
