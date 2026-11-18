@@ -18,7 +18,7 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 /* wireframe.css 의 button:hover(회색 바탕)가 이 디자인의 버튼 색을 덮지 않게 (터치 뒤 hover 가 남는 태블릿 포함) */
 .tui .tui-stage button.fc-sw:hover:not(:disabled) { background: var(--c); }
 .tui .tui-stage button.hs-opt:hover:not(:disabled) { background: transparent; color: #fff; }
-.tui .tui-stage button.fc-sbtn:hover:not(:disabled) { background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; color: #fff; }
+.tui .tui-stage button.fc-sbtn:hover:not(:disabled) { background: #000; color: #fff; }
 .tui .tui-stage .fc-camerr button#cam-retry:hover:not(:disabled) { background: transparent; color: #fff; }
 :where(.tui-stage) button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 .tui-stage svg { display: block; }
@@ -26,6 +26,9 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 
 /* ================= 홈 1~3번 ================= */
 .tui-home .tui-stage { cursor: pointer; }
+/* 홈 배경 영상 (2026-11-18 사용자 요청): 900×1440 무대를 꽉 채워 반복 재생 */
+.hs-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
+.hs-glowmark, .hs-logo, .hs-start, .hs-lang { z-index: 1; }
 /* 1번: 가운데 빛나는 마크 (원본 x 379~520, y 649~790) */
 .hs-glowmark { position: absolute; left: 378px; top: 648px; width: 145px; height: 144px; pointer-events: none;
   filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.62)); transition: opacity .5s ease; }
@@ -98,16 +101,16 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 /* 상태: #stage[data-mode] arc 4 · recs 추천 결과 (5~9번·10/11번 시트는 2026-11-16 뺐다), [data-dim] 괄호 빛 번짐이 있는 상태 */
 .fc { --move: .42s cubic-bezier(.65, 0, .35, 1); }
 .fc-instant, .fc-instant * { transition: none !important; }
-/* 왼쪽 위 로고 (원본 x 40~229, y 66~110) — 누르면 처음으로 */
-.fc-logo { position: absolute; left: 39.8px; top: 65.8px; width: 190.6px; height: 44.85px; color: #fff; z-index: 6; }
+/* 위 가운데 로고 (GP-홈화면 Figma 2026-11-18: x 354.33~544.33, y 66.31~110.85) — 누르면 처음으로 */
+.fc-logo { position: absolute; left: 354.33px; top: 66.31px; width: 190px; height: 44.7px; color: #fff; z-index: 6; }
 /* 로고는 홈(index.html)으로 가는 링크라 홈을 한 번 연 뒤에는 wireframe.css 의 a:visited(검정)가 덮어 검게 보였다 (2026-11-17) */
 .fc-logo:visited, .fc-logo:link { color: #fff; }
 .fc-logo svg { width: 100%; height: 100%; }
-/* 제목 (원본 Find Your Color x 349~553 y 124~145 / 부제 x 353~549 y 165~182) */
-.fc-title { position: absolute; left: 0; right: 0; top: 116px; margin: 0; text-align: center; color: #fff;
-  font-size: 29.4px; line-height: 40px; font-weight: 580; letter-spacing: -0.005em; }
-.fc-sub { position: absolute; left: 0; right: 0; top: 160px; margin: 0; text-align: center; color: #fff;
-  font-size: 20.2px; line-height: 26px; font-weight: 300; letter-spacing: -0.01em; }
+/* 제목 (GP-홈화면: Inter Semi Bold 28 가운데 y 180 / 부제 Pretendard Light 20 가운데 y 218.7, 자간 0) */
+.fc-title { position: absolute; left: 0; right: 0; top: 160px; margin: 0; text-align: center; color: #fff;
+  font-family: Inter, "Pretendard Variable", Pretendard, system-ui, sans-serif; font-size: 28px; line-height: 40px; font-weight: 600; letter-spacing: 0; }
+.fc-sub { position: absolute; left: 0; right: 0; top: 205.7px; margin: 0; text-align: center; color: #fff;
+  font-size: 20px; line-height: 26px; font-weight: 300; letter-spacing: 0; }
 
 /* 얼굴 자리: 카메라 칸 + 괄호 네 개 (66×66, 선 6). 2026-11-16 디자이너 의견: 화면에는 프레임만 — 원본의 타원·점 격자는 카메라 자리를 보려던 작업용 선이라 뺐다.
    카메라 칸 = 괄호 네 개가 이루는 네모(x 248~654, y 356~841). 가장자리는 검정으로 부드럽게 사라져 모양(테두리)이 보이지 않는다 */
@@ -165,12 +168,12 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 
 /* 질감 동그라미 줄 (2026-11-17): 지금 색(--c)을 질감별로 그린 동그라미 5개. 원본 4번처럼 고른 질감이 가운데(450) 크게(131·흰 테 3.5·빛 번짐),
    나머지는 75, 옆으로 갈수록 흐리게. 줄(y 930~1080)을 옆으로 밀면 넘어간다 — 위치·크기·흐림은 js/palette.js 가 매 프레임 */
-.fc-swatches { position: absolute; left: 0; top: 930px; width: 900px; height: 150px; z-index: 3; touch-action: none; cursor: grab; outline: none; transition: opacity .3s ease; }
+.fc-swatches { position: absolute; left: 0; top: 897.14px; width: 900px; height: 150px; z-index: 3; touch-action: none; cursor: grab; outline: none; transition: opacity .3s ease; }
 .fc.fc-texdrag .fc-swatches { cursor: grabbing; }
 .fc[data-mode="recs"] .fc-swatches { opacity: 0; pointer-events: none; }
 .fc-sw { position: absolute !important; border-radius: 50%; box-sizing: border-box; pointer-events: auto; overflow: hidden;
-  background: var(--c); border: calc(3.5px * var(--on, 0)) solid #fff;
-  box-shadow: 0 0 10px calc(12.7px * var(--on, 0)) rgba(255, 255, 255, calc(0.435 * var(--on, 0))), inset 0 0 16px rgba(255, 255, 255, calc(0.76 * var(--on, 0)));
+  background: var(--c); border: calc(4px * var(--on, 0)) solid #fff; /* GP-홈화면: 고른 동그라미 131, 흰 선 4 안쪽 + 흰 선 9 링(142.8)을 18.2 블러 */
+  box-shadow: 0 0 18px calc(6px * var(--on, 0)) rgba(255, 255, 255, calc(0.6 * var(--on, 0))), inset 0 0 12px rgba(255, 255, 255, calc(0.55 * var(--on, 0)));
   transition: background-color .15s linear; }
 .fc-sw::before, .fc-sw::after { content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; }
 .fc-swatches:focus-visible .fc-sw[aria-pressed="true"] { outline: 2px solid #fff; outline-offset: 6px; }
@@ -190,12 +193,12 @@ body.tui { max-width: none; width: 100%; color: #fff; }
   linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent 45%, rgba(255, 215, 235, 0.22)); }
 
 /* 하단 시트 (원본 4번 윗변 1348.4, 추천 결과 720, 모서리 48) + 가운데 버튼 (지름 136, 흰 테 8) */
-.fc-sheet { position: absolute; left: 0; width: 900px; height: 800px; top: 1530px; z-index: 4; border-radius: 48px 48px 0 0;
+.fc-sheet { position: absolute; left: 0; width: 900px; height: 800px; top: 1530px; z-index: 4; border-radius: 50px 50px 0 0;
   background: #fff; color: #000; transition: top .45s cubic-bezier(.65, 0, .35, 1), background .2s ease; }
 html[data-theme="dark"] .fc-sheet { background: #474747; box-shadow: inset 0 0 0 1px #757575; color: #fff; }
-.fc-sbtn { position: absolute !important; left: 382px; top: 1462px; width: 136px; height: 136px; border-radius: 50%; z-index: 5; box-sizing: border-box;
-  border: 8px solid transparent; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box;
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.62), 0 0 9px 1px rgba(255, 255, 255, 0.72), 0 3px 4px rgba(0, 0, 0, 0.5);
+.fc-sbtn { position: absolute !important; left: 382.88px; top: 1280.85px; width: 135.06px; height: 135.06px; border-radius: 50%; z-index: 5; box-sizing: border-box;
+  border: 8.12px solid #fff; background: #000; /* GP-홈화면: 흰 원 135 + 검정 원 118.8 + 흰 링 빛(블러 8.1), 그림자 0 4 4 25% */
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25), inset 0 0 7px rgba(255, 255, 255, 0.45), 0 0 8px rgba(255, 255, 255, 0.55), 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff; transition: top .45s cubic-bezier(.65, 0, .35, 1); }
 .fc-sbtn > span { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity .25s ease; }
 .fc-sbtn-logo svg { width: 80px; height: 80px; margin: 0 0 0 -1px; }
@@ -219,7 +222,7 @@ html[data-theme="dark"] .fc-rec-list .card { background: #5a5a5a; color: #fff; }
 .fc-rec-list .card .actions button.pick-btn { background: transparent; color: inherit; box-shadow: inset 0 0 0 1px currentColor; }
 html[data-theme="dark"] .fc-rec-list .card .actions button:not(.pick-btn) { background: #fff; color: #000; }
 /* NFC 로 읽은 제품 안내 (잠깐) */
-.fc-toast { position: absolute; left: 0; right: 0; top: 216px; margin: 0; text-align: center; font-size: 17px; color: #fff; z-index: 6; pointer-events: none; }
+.fc-toast { position: absolute; left: 0; right: 0; top: 310px; margin: 0; text-align: center; font-size: 17px; color: #fff; z-index: 6; pointer-events: none; }
 .fc-toast:empty { display: none; }
 /* 시작 화면에서 넘어올 때: 로고는 제자리, 나머지가 아래에서 떠오른다 */
 html.enter-fx .fc > :not(.fc-logo) { animation: fc-in .8s cubic-bezier(.2, .8, .2, 1) both; }
@@ -244,12 +247,12 @@ html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s;
 .hs-lang { right: 40px; opacity: 0; pointer-events: none; transition: opacity .6s ease .25s; }
 .tui-stage[data-step="3"] .hs-lang { opacity: 1; pointer-events: auto; }
 .tui-stage.hs-leaving .hs-lang { opacity: 0; }
-/* 내 톤으로 추천받기: 타원 아래 · 색 동그라미 위 (y 858~900) */
-.fc-match { left: 330px; top: 858px; width: 240px; height: 42px; font-size: 18px; line-height: 39px; font-weight: 600; z-index: 3; letter-spacing: -0.01em; }
+/* 내 톤으로 추천받기: 부제 아래 · 얼굴 프레임 위 (y 252~294). GP-홈화면 Figma 에는 없는 예전 기능 (2026-11-18 자리만 옮김) */
+.fc-match { left: 330px; top: 252px; width: 240px; height: 42px; font-size: 18px; line-height: 39px; font-weight: 600; z-index: 3; letter-spacing: -0.01em; }
 .fc-match:disabled { opacity: .38; cursor: default; }
 .fc .fc-match:active:not(:disabled) { box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.3), 0 0 0 7px #353535; }
 /* 톤 측정 결과 + 추천 컬러 3개: 제목 아래 유리 상자 (결과가 있을 때만) */
-.fc-matchbox { position: absolute; left: 150px; width: 600px; top: 200px; z-index: 6; display: none; box-sizing: border-box; padding: 12px 18px 14px; border-radius: 22px; text-align: center;
+.fc-matchbox { position: absolute; left: 150px; width: 600px; top: 304px; z-index: 6; display: none; box-sizing: border-box; padding: 12px 18px 14px; border-radius: 22px; text-align: center;
   background: rgba(18, 18, 18, 0.9); border: 1px solid rgba(255, 255, 255, 0.16); border-top-color: rgba(255, 255, 255, 0.4); }
 .fc-matchbox:has(#match-result:not(:empty)) { display: block; }
 .fc-matchbox p { margin: 0; font-size: 15px; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
@@ -261,17 +264,37 @@ html.enter-fx .fc .fc-sheet, html.enter-fx .fc .fc-sbtn { animation-delay: .24s;
 .fc-tex { left: 386px; top: 1086.75px; width: 128px; height: 36.5px; z-index: 3; font-size: 25.5px; line-height: 28px; font-weight: 400; letter-spacing: -0.025em; }
 .fc .fc-tex:active { box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.3), 0 0 0 8px #353535; }
 .fc[data-mode="recs"] .fc-tex, .fc[data-mode="recs"] .fc-match, .fc[data-mode="recs"] .fc-matchbox { opacity: 0; pointer-events: none; }
-/* 챗봇 플로팅 버튼: 시트 단추와 같은 흰 테 검정 원 (지름 80) + 담은 제품 수 */
-.fc-chat { position: absolute !important; left: 778px; top: 1354px; width: 80px; height: 80px; border-radius: 50%; z-index: 5; box-sizing: border-box; display: grid !important; place-items: center;
-  border: 5px solid transparent; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; color: #fff;
-  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.55), 0 0 8px 1px rgba(255, 255, 255, 0.6), 0 3px 4px rgba(0, 0, 0, 0.45);
-  transition: top .45s cubic-bezier(.65, 0, .35, 1), left .45s cubic-bezier(.65, 0, .35, 1), opacity .2s ease; }
-.fc-chat svg { width: 36px; height: 36px; }
-.tui .tui-stage button.fc-chat:hover:not(:disabled) { color: #fff; background: linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #fff 55%, #f2f2f2 100%) border-box; }
-.fc-chat-badge { position: absolute; top: -6px; right: -6px; min-width: 28px; height: 28px; padding: 0 7px; box-sizing: border-box; display: grid; place-items: center; border-radius: 999px;
-  background: linear-gradient(90deg, #ff88ba, #a32c5e); color: #fff; font-size: 15px; font-weight: 700; box-shadow: 0 0 10px rgba(232, 24, 111, 0.6); }
+/* 왼쪽 세로 메뉴 (GP-홈화면 Figma 2026-11-18, 흰색·검정만). 바깥 유리 알약 x 28.1 y 604.5 61.9×231 흰 37%,
+   위 한 쌍(스캔·음성) 흰 48% 알약, 손잡이 = 흰 44% 원 46.8 (고른 쪽: 평소 스캔, 챗봇 창이 열리면 음성), 9점 = 검정 원 54.9, 집 = 흰 44% 원 54.9 */
+.fc-menu { position: absolute; left: 28.1px; top: 604.52px; width: 61.91px; height: 230.97px; z-index: 6; box-sizing: border-box; border-radius: 200px;
+  background: rgba(255, 255, 255, 0.37); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.08);
+  transition: transform .45s cubic-bezier(.65, 0, .35, 1); }
+.fc[data-mode="recs"] .fc-menu { transform: translateY(-140px); } /* 추천 결과: 시트(y 720~) 위로 */
+.fc-menu > * { position: absolute; box-sizing: border-box; border-radius: 50%; }
+.fc-menu-pair { left: 3.15px; top: 3.03px; width: 55.6px; height: 106.88px; border-radius: 200px; background: rgba(255, 255, 255, 0.48); pointer-events: none; }
+.fc-menu-knob { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; pointer-events: none; background: rgba(255, 255, 255, 0.44);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transition: transform .3s cubic-bezier(.3, .7, .2, 1); }
+html.chat-modal-open .fc-menu-knob { transform: translate(-0.48px, 50.4px); }
+.fc-menu .fc-mb { display: block; cursor: pointer; color: #fff; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.fc-menu .fc-mb svg { width: 100%; height: 100%; }
+.fc-mb-scan { left: 8.01px; top: 6.6px; width: 46.83px; height: 46.83px; }
+.fc-mb-voice { left: 7.53px; top: 57px; width: 46.83px; height: 46.83px; }
+.tui .tui-stage .fc-menu .fc-mb-scan, html.chat-modal-open .tui-stage .fc-menu .fc-mb-voice { color: #000; } /* 손잡이 위 아이콘 = 검정 선 */
+html.chat-modal-open .tui-stage .fc-menu .fc-mb-scan { color: #fff; }
+.fc-mb-grid { left: 3.49px; top: 113.5px; width: 54.93px; height: 54.93px; background: #000;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.34), 0 4px 4px rgba(0, 0, 0, 0.25); }
+.fc-mb-home { left: 3.49px; top: 172.16px; width: 54.93px; height: 54.93px; background: rgba(255, 255, 255, 0.44); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+.fc-menu .fc-mb-home:link, .fc-menu .fc-mb-home:visited { color: #fff; }
+.fc[data-mode="recs"] .fc-mb-grid { box-shadow: inset 0 0 0 2px #fff, 0 4px 4px rgba(0, 0, 0, 0.25); } /* 추천 제품이 열려 있음 */
+.tui .tui-stage .fc-menu button.fc-mb:hover:not(:disabled) { background: transparent; }
+.tui .tui-stage .fc-menu button.fc-mb-grid, .tui .tui-stage .fc-menu button.fc-mb-grid:hover:not(:disabled) { background: #000; color: #fff; }
+.fc-menu .fc-mb:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* '챗봇에 담기'로 담은 제품 수: 음성 버튼 오른쪽 위 (흰색·검정만) */
+.fc-chat-badge { position: absolute; top: -4px; right: -10px; min-width: 22px; height: 22px; padding: 0 5px; box-sizing: border-box; display: grid; place-items: center; border-radius: 999px;
+  background: #000; color: #fff; border: 1.5px solid #fff; font-size: 12px; font-weight: 700; line-height: 1; }
 .fc-chat-badge:empty { display: none; }
-html.chat-modal-open .fc-chat { opacity: 0; pointer-events: none; }
 
 /* ---------- 추천 결과 (recs): 시트가 화면 아래 절반 (y 720~1440), 위에 제품 색 동그라미 줄, 아래 카드 2열 (사용자 레퍼런스) ---------- */
 /* 입술이 시트에 가리지 않게 카메라를 올리는 건 js/palette.js (입술 위치를 따라 .fc-face transform, 2026-11-17 카메라 전체 화면) */
@@ -280,8 +303,8 @@ html.chat-modal-open .fc-chat { opacity: 0; pointer-events: none; }
 .fc-rec-dots { display: flex; gap: 28px; padding: 0 44px; height: 59px; align-items: center; } /* 왼쪽 끝 = 카드 왼쪽 끝 (44px) */
 .fc-rec-dots button { all: unset; box-sizing: border-box; cursor: pointer; flex: none; width: 59px; height: 59px; border-radius: 50%; background: var(--c);
   box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.35); transition: box-shadow .2s ease; }
-.fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #000, 0 0 12px 4px rgba(232, 24, 111, 0.45); }
-html[data-theme="dark"] .fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #474747, 0 0 0 5px #fff, 0 0 12px 4px rgba(232, 24, 111, 0.45); }
+.fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #000, 0 0 12px 4px rgba(255, 255, 255, 0.45); }
+html[data-theme="dark"] .fc-rec-dots button[aria-pressed="true"] { box-shadow: 0 0 0 3px #474747, 0 0 0 5px #fff, 0 0 12px 4px rgba(255, 255, 255, 0.45); }
 .fc[data-mode="recs"] .fc-rec-status { margin: 10px 44px 8px; font-size: 15px; }
 /* 추천 제품 카드 = 385.48 × 289.11 (2026-11-16 사용자 지정 크기), 2열 사이 41 → 양옆 여백 44 */
 .fc[data-mode="recs"] .fc-rec-list { display: grid; grid-template-columns: repeat(2, 385.48px); column-gap: 41px; row-gap: 32px; justify-content: center;
@@ -321,7 +344,7 @@ html[data-theme="dark"] .fc[data-mode="recs"] .fc-rec-list .card > .opt, html[da
 /* 챗봇 모달: 검정 유리 상자 */
 body.tui .chat-modal { padding: 40px 28px; background: rgba(0, 0, 0, 0.72); }
 body.tui .chat-modal-box { max-width: none; border-radius: 32px; background: #000; color: #fff; border: 1px solid rgba(255, 255, 255, 0.18); border-top-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 40px rgba(232, 24, 111, 0.25); }
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.18); }
 body.tui .chat-modal-head { padding: 14px 16px 6px 28px; }
 body.tui .chat-modal-head strong { font-size: 22px; font-weight: 600; color: #fff; }
 body.tui .chat-modal-close, body.tui .chat-modal-close:hover:not(:disabled) { color: #fff; border: 1.2px solid transparent;

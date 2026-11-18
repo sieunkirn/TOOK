@@ -42,6 +42,12 @@ body.tui-mood #chat-form #chat-send.cs-send { flex: none; width: 60px; height: 6
   color: #fff; background: var(--pink-pill); box-shadow: 0 0 12px rgba(232, 24, 111, 0.45), inset 0 2px 5px rgba(255, 255, 255, 0.2); opacity: 1; }
 body.tui-mood #chat-form #chat-send.cs-send:disabled { background: transparent; box-shadow: none; color: #a3a3a3; cursor: default; }
 body.tui-mood #chat-form #chat-send.cs-send:disabled svg { opacity: 0.38; }
+/* 바코드 비추기 버튼 (미러 챗봇, 2026-11-18): 보내기 버튼 왼쪽, 같은 크기의 어두운 유리 네모. 누르면 카메라 창 (js/chat-products.js) */
+body.tui-mood #chat-form #scan-open { order: 1; flex: none; width: 60px; height: 60px; min-height: 60px; padding: 0; display: grid; place-items: center;
+  border-radius: 10px; border: 1.2px solid rgba(255, 255, 255, 0.28); background: #1a1a1a; color: #fff; box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.08); }
+body.tui-mood #chat-form #scan-open svg { width: 28px; height: 28px; }
+body.tui-mood #chat-form #scan-open:active { background: #2a2a2a; }
+body.tui-mood #chat-form #chat-send { order: 2; }
 
 @media (prefers-reduced-motion: reduce) {
   #cs-top .cs-slide { transition: none; }

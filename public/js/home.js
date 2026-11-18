@@ -25,7 +25,8 @@ const WAVE_SVG = '<svg class="hs-ico-wave" viewBox="0 0 60 34" aria-hidden="true
 
 const stage = document.getElementById('stage');
 fitStage(stage);
-stage.innerHTML = `<div class="hs-glowmark" aria-hidden="true">${markGlowSvg()}</div>${logoFull('hs-logo')}
+// 배경 영상 (2026-11-18 사용자 요청): 무대 전체에 소리 없이 반복 재생, 로고·버튼은 그 위에
+stage.innerHTML = `<video class="hs-video" src="videos/home.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hs-glowmark" aria-hidden="true">${markGlowSvg()}</div>${logoFull('hs-logo')}
   <div class="hs-start" data-state="a" data-side="scan">
     <div class="hs-glow" aria-hidden="true"><i></i></div>
     <div class="hs-pill" role="group">
@@ -110,7 +111,7 @@ function press(side) {
 
 // ---------- 다음 화면으로 ----------
 // 팔레트: 로고가 Find Your Color 화면 왼쪽 위 작은 로고 자리로 줄어들며 날아가고, 나머지는 사라진다
-const SMALL_LOGO = { left: 39.8, top: 65.8, k: 190.6 / 612 }; // palette 화면의 로고 (원본 04.png: x 40~229, y 66~110)
+const SMALL_LOGO = { left: 354.33, top: 66.31, k: 190 / 612 }; // palette 화면의 로고 (GP-홈화면 2026-11-18: 위 가운데 x 354.33~544.33, y 66.31~110.85)
 function start(where) {
   if (where === 'voice') {
     store.remove('navCurrent.chat.html');
@@ -123,7 +124,7 @@ function start(where) {
   stage.classList.add('hs-leaving');
   const logo = stage.querySelector('.hs-logo');
   // transform 은 로고의 원래 자리(CSS left 144, top 648) 기준이다. 3번 화면에서는 translateY(-200px) 로 올라가 있으므로
-  // 그 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(왼쪽 위 39.8, 65.8 · 배율 190.6/612)에 정확히 멈춘다 (transform-origin 0 0)
+  // 그 상태에서 출발해, 원래 자리 기준으로 팔레트 로고 자리(위 가운데 354.33, 66.31 · 배율 190/612)에 정확히 멈춘다 (transform-origin 0 0)
   const BASE = { left: 144, top: 648 };
   const dx = SMALL_LOGO.left - BASE.left;
   const dy = SMALL_LOGO.top - BASE.top;

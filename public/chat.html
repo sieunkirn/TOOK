@@ -63,6 +63,20 @@
       </button>
     </form>
     <p id="nfc-hint" class="nfc-hint" aria-live="polite"></p>
+
+    <!-- 바코드 비추기 (미러 챗봇, 2026-11-18): 입력줄의 바코드 버튼을 누르면 뜬다. 바코드 스캐너 없이 카메라로 읽는다.
+         팔레트 위에 뜬 챗봇이면 팔레트의 입술 카메라 영상을 같이 쓰고(카메라를 새로 열지 않음), 아니면 카메라를 연다 (js/chat-products.js) -->
+    <section id="cam-sheet" class="cam-sheet" hidden aria-label="바코드 비추기" data-i18n-aria="chat.camSheet">
+      <div class="cam-sheet-box">
+        <strong class="cam-sheet-title" data-i18n="chat.camSheetTitle">립 제품 바코드를 네모 안에 비춰 주세요</strong>
+        <div class="cam-sheet-stage">
+          <video id="cam-video" playsinline muted></video>
+          <div class="cam-sheet-guide" aria-hidden="true"></div>
+        </div>
+        <p id="cam-status" class="cam-sheet-status" aria-live="polite"></p>
+        <button type="button" id="cam-close" data-i18n="chat.close">닫기</button>
+      </div>
+    </section>
   </section>
 
   <aside class="area chat-side" id="rec-panel" aria-label="바코드 찾기와 추천 제품" data-i18n-aria="chat.side">

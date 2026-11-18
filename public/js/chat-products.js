@@ -3,6 +3,7 @@ import { $, api, el, won, fullName, shortName } from './common.js';
 import { isEn, finishText as finishName } from './i18n.js';
 import { listenNfc, findTagProduct, createNfcHint } from './nfc.js';
 import { createBarcodeScanner, cameraErrorMessage, decodeImageFile } from './barcode-scan.js';
+import { getCamSettings } from './camera-settings.js';
 import { C, STUDIO, BARCODE_PANEL, showTab, input, START, state, save, loadBase } from './chat-state.js';
 import { productMini, renderPanel, renderLog, streamReply } from './chat-view.js';
 import { speaker } from './chat-input.js';
@@ -88,7 +89,9 @@ async function describeProduct(p) {
 // ---------- NFC 태그 (외부 리더기, js/nfc.js) ----------
 // 제품에 붙은 태그를 리더기에 톡 올리면 그 제품을 설명하고 기준 제품으로 정한다. 합본 화면은 바코드를 쓰므로 켜지 않는다
 const nfcHint = $('nfc-hint');
-const NFC_IDLE = C('립 제품을 리더기에 올려도 정보를 알려 드려요', 'You can also tap a lip product on the reader');
+const NFC_IDLE = BARCODE_PANEL
+  ? C('립 제품을 리더기에 올려도 정보를 알려 드려요', 'You can also tap a lip product on the reader')
+  : C('립 제품을 리더기에 올리거나, 바코드 버튼을 눌러 카메라에 비춰도 알려 드려요', 'Tap a lip product on the reader, or press the barcode button and show it to the camera');
 const nfcFlash = createNfcHint(nfcHint, { idleText: NFC_IDLE, ms: 2500 });
 async function handleTag(raw) {
   speaker.stop();
@@ -208,11 +211,85 @@ $('panel-toggle').addEventListener('click', () => {
   renderPanel();
 });
 $('scan-open').addEventListener('click', () => {
+  if (!BARCODE_PANEL) { openCamSheet(); return; } // 미러 챗봇: 바코드 비추기 카메라 창
   state.panel = 'scan';
   document.body.classList.add('scan-open');
   renderPanel();
   $('rec-panel').scrollIntoView({ block: 'start' });
 });
+
+// ---------- 바코드 비추기 (미러 챗봇, 2026-11-18) ----------
+// 바코드 스캐너가 없어서, 입력줄의 바코드 버튼을 누르면 카메라 창을 띄워 바코드를 읽는다. 읽으면 창을 닫고 대화로 제품을 설명한다.
+// 팔레트 위에 뜬 챗봇이면 팔레트가 켜 둔 입술 카메라 영상을 같이 쓴다: 같은 웹캠을 두 번 열면 입술 카메라가 끊길 수 있어서.
+// 그 영상이 없으면(챗봇만 따로 연 경우) 카메라 설정에서 고른 카메라를 연다
+const camSheet = $('cam-sheet');
+const camVideo = $('cam-video');
+let camProgressAt = 0;
+const camScanner = camSheet && createBarcodeScanner({
+  video: camVideo,
+  onCode: (code) => {
+    closeCamSheet();
+    handleBarcode(code, 'camera');
+  },
+  onProgress: ({ ms }) => {
+    if (ms - camProgressAt < 1000) return;
+    camProgressAt = ms;
+    if (ms > 8000) $('cam-status').textContent = C('잘 안 읽히면 바코드를 조금 더 가까이, 흐리면 조금 떨어뜨려 주세요. 반짝이면 살짝 기울여 주세요.', 'Not reading? Bring the barcode a little closer, or farther if blurry. Tilt it slightly if it shines.');
+  },
+});
+
+function hostCameraStream() {
+  try {
+    if (!window.frameElement?.classList.contains('chat-modal-frame')) return null;
+    const s = window.parent.document.getElementById('video')?.srcObject;
+    return s?.getVideoTracks().some((t) => t.readyState === 'live') ? s : null;
+  } catch {
+    return null;
+  }
+}
+
+async function openCamSheet() {
+  if (!camScanner) return;
+  speaker.stop();
+  camSheet.hidden = false;
+  $('cam-status').textContent = C('카메라를 켜는 중이에요…', 'Turning on the camera…');
+  // 거울처럼 보이게: 카메라 설정의 좌우 반전·회전을 미리보기에도 (읽기는 원본 영상으로 한다)
+  const cam = getCamSettings();
+  camVideo.style.transform = `rotate(${Number(cam.rotate) || 0}deg) scaleX(${cam.mirror ? -1 : 1})`;
+  camProgressAt = 0;
+  try {
+    const shared = hostCameraStream();
+    await camScanner.start(shared ? { stream: shared } : { deviceId: cam.deviceId || undefined });
+    if (!camSheet.hidden) $('cam-status').textContent = C('바코드가 네모를 가득 채우게 들어 주세요', 'Hold the barcode so it fills the box');
+  } catch (e) {
+    $('cam-status').textContent = camSheetError(e);
+  }
+}
+
+// 카메라 창의 오류 안내 (이 창에는 번호 입력칸이 없어서 따로 쓴다)
+function camSheetError(e) {
+  switch (e?.name) {
+    case 'NotAllowedError':
+    case 'SecurityError':
+      return C('카메라 권한이 막혀 있어요. 주소창에서 카메라를 허용하거나 직원에게 알려 주세요.', 'Camera permission is blocked. Allow the camera in the address bar or ask a staff member.');
+    case 'NotFoundError':
+    case 'OverconstrainedError':
+      return C('연결된 카메라를 찾지 못했어요. 직원에게 알려 주세요.', "Couldn't find a camera. Please ask a staff member.");
+    case 'NotReadableError':
+      return C('카메라를 다른 곳에서 쓰고 있어요. 잠시 뒤 다시 눌러 주세요.', 'The camera is in use elsewhere. Please try again shortly.');
+    default:
+      return C('카메라를 켜지 못했어요: ', "Couldn't turn on the camera: ") + (e?.message || e);
+  }
+}
+
+function closeCamSheet() {
+  if (!camSheet || camSheet.hidden) return;
+  camScanner.stop();
+  camSheet.hidden = true;
+}
+$('cam-close')?.addEventListener('click', closeCamSheet);
+window.addEventListener('took:chat-hidden', closeCamSheet); // 팔레트 위 챗봇 창을 닫으면 카메라 창도 닫는다 (nav.js closeChat)
+if (!BARCODE_PANEL) $('scan-open').classList.remove('narrow-only'); // 미러 챗봇은 화면이 넓어도 바코드 버튼을 보인다
 $('scan-close').addEventListener('click', () => {
   stopScan();
   document.body.classList.remove('scan-open');

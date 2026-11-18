@@ -178,6 +178,7 @@ export function openChat(params = null) {
 export function closeChat({ toPalette = false } = {}) {
   if (!chatModal) return;
   try { chatModal.frame.contentWindow.speechSynthesis?.cancel(); } catch { /* 없음 */ }
+  try { chatModal.frame.contentWindow.dispatchEvent(new chatModal.frame.contentWindow.Event('took:chat-hidden')); } catch { /* 없음 */ } // 바코드 비추기 카메라 창도 닫는다
   chatModal.root.hidden = true;
   document.documentElement.classList.remove('chat-modal-open');
   document.querySelector('.chat-fab')?.setAttribute('aria-expanded', 'false');

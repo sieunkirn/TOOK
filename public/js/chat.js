@@ -210,7 +210,7 @@ async function picksHandoff() {
 await picksHandoff();
 window.addEventListener('took:picks', async () => { if (await picksHandoff()) renderLog(); });
 if (!BARCODE_PANEL) {
-  $('scan-open')?.remove(); // 좁은 화면의 바코드 버튼
+  // 바코드 버튼은 남긴다: 미러 챗봇에서는 '바코드 비추기' 카메라 창을 연다 (chat-products.js, 2026-11-18)
   $('rec-panel').setAttribute('aria-label', C('추천 제품', 'Recommended products'));
 }
 renderLog();

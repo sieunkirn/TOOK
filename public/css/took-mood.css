@@ -115,6 +115,20 @@ body.tui-mood .chat-side.area { background: var(--c-surface); color: #fff; borde
 body.tui-mood .scanner-state { background: #000; color: #fff; }
 body.tui-mood .toast { background: #fff; color: #000; }
 
+/* 바코드 비추기 카메라 창 (미러 챗봇, 2026-11-18): 화면 위에 어둡게 깔고 가운데 카메라 + 안내 네모 + 닫기 */
+body.tui-mood .cam-sheet { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 40px; box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(6px); }
+body.tui-mood .cam-sheet[hidden] { display: none; }
+body.tui-mood .cam-sheet-box { width: 100%; max-width: 760px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 28px;
+  border-radius: 28px; background: var(--c-surface); border: 1px solid var(--c-line); border-top-color: rgba(255, 255, 255, 0.3); color: #fff; }
+body.tui-mood .cam-sheet-title { font-size: 24px; font-weight: 600; text-align: center; word-break: keep-all; }
+body.tui-mood .cam-sheet-stage { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 20px; background: #000; }
+body.tui-mood .cam-sheet-stage video { width: 100%; height: 100%; object-fit: cover; display: block; }
+body.tui-mood .cam-sheet-guide { position: absolute; left: 12%; right: 12%; top: 30%; bottom: 30%; border: 3px solid rgba(255, 255, 255, 0.85); border-radius: 16px;
+  box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.35); pointer-events: none; }
+body.tui-mood .cam-sheet-status { margin: 0; min-height: 1.6em; font-size: 18px; color: var(--c-mute); text-align: center; word-break: keep-all; }
+body.tui-mood .cam-sheet #cam-close { min-width: 200px; min-height: 60px; font-size: 20px; }
+
 /* 모달 안(팔레트 위에 뜬 챗봇): 로고·제목 자리 없이 대화부터 */
 html.in-chat-modal body.tui-mood main.fit.chat-user { padding: 8px 24px 20px; }
 html.in-chat-modal body.tui-mood .chat-head { min-height: 0; padding: 0; justify-content: flex-end; }

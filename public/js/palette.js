@@ -21,8 +21,9 @@ import { t as tr } from './i18n.js';
 import { openChat } from './nav.js'; // 챗봇 모달
 import { getPicks } from './chat-picks.js'; // '챗봇에 담기'로 담은 제품
 import { listenNfc, findTagProduct, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
+import { watchVideoBarcodes } from './barcode-scan.js'; // 거울에 비춘 제품 바코드 → 그 제품 색을 입술에
 import { hexToRgb } from '../lib/color.js';
-import { state as lip } from './lip-state.js';
+import { state as lip, video } from './lip-state.js';
 import { applyLook } from './lip-look.js';
 import { sourceFrame } from './lip-camera.js';
 import { mapPoint } from './lip-view.js';
@@ -69,14 +70,16 @@ function nearestPick(hex) {
   return best;
 }
 
-// ---------- 위치 (원본 04.png 좌표) ----------
-const G = { cx: 449.5, cy: 1608.5, ro: 427.95, ri: 396.65, ind: -90, gap: 0.6, dot: { r: 363.5, d: 13, step: 9.27, a: [0.9, 0.86, 0.75, 0.56, 0.3] } };
-const HANDLE = { cx: 449.5, cy: 1478, r1: 254.5, r2: 310.5, half: 9, rc: 10 }; // 유리 손잡이 = 다이얼보다 작은 원의 부채꼴 (위 가운데에 고정)
-const SHEET_AT = { arc: [1348.4, 1348.5], recs: [720, 720] }; // 하단 시트 윗변 · 가운데 버튼 중심
+// ---------- 위치 (GP-홈화면 Figma 좌표, 2026-11-18) ----------
+// 다이얼 링 = 지름 860.15 원(가운데 450, 1577.47)의 안쪽 33 띠. 흰 점 = (450, 1585.92)에서 반지름 373, 지름 13.56.
+// 링 안 검정 반원(dome) = 가운데 (451.08, 1574.79) 반지름 380.65, 위 y 1194.14 투명 → 15.6%(y 1312.83)부터 검정 — 흰 점이 아래로 갈수록 사라진다
+const G = { cx: 450, cy: 1577.47, ro: 430.08, ri: 397.08, ind: -90, gap: 0.6, dot: { cx: 450, cy: 1585.92, r: 373, d: 13.56, step: 9.27, n: 5 } };
+const DOME = { cx: 451.08, cy: 1574.79, r: 380.65, y0: 1194.14, y1: 1312.83 };
+const HANDLE = { cx: 450, cy: 1446.39, r1: 254.5, r2: 310.5, half: 9, rc: 10 }; // 유리 손잡이 = 다이얼보다 작은 원의 부채꼴 (위 가운데 링 위에 고정)
+const SHEET_AT = { arc: [1348.385, 1348.385], recs: [720, 720] }; // 하단 시트 윗변 · 가운데 버튼 중심
 const WHEEL_TOP = 820; // 다이얼 canvas 가 덮는 범위 (y 820~1440)
-const DRAG_ZONE = [1075, 1340]; // 이 높이 사이(색 동그라미 아래 ~ 시트 위) 어디서든 끌면 다이얼이 돈다 (버튼·텍스처 줄 위는 제외)
+const DRAG_ZONE = [1045, 1340]; // 이 높이 사이(색 동그라미 아래 ~ 시트 위) 어디서든 끌면 다이얼이 돈다 (버튼·텍스처 줄 위는 제외)
 const TEXTURES = ['matte', 'glossy', 'satin', 'sheer', 'shimmer']; // lip-engine.js TEXTURES 와 같은 이름
-const CHAT_AT = { arc: [818, 1394], recs: [818, 672] }; // 챗봇 플로팅 버튼 가운데 (시트 위 오른쪽)
 
 // ---------- 상태 ----------
 const saved = store.get('fcSel') || {};
@@ -129,8 +132,10 @@ $('fc-tex').addEventListener('click', () => setTexture(TEXTURES[(TEXTURES.indexO
 // 놓으면 하나에 딱 멈춘다(세게 밀면 한두 개 더). 옆 동그라미를 톡 누르면 그게 가운데로.
 // (색 계열 동그라미는 뺐다: 계열 4개 × 7칸 색이 모두 다이얼에 있다)
 // 터치 보정(touch-calib.js)의 가짜 포인터에서도 되도록 스크롤 대신 포인터 이벤트로 직접 움직인다
-const swBox = $('fc-swatches'); // 줄 = y 930~1080 (css)
-const ROW = { y: 1005 - 930, big: 131, d: 75, first: 151, gap: 110 }; // 원본 04.png: 큰 동그라미 가운데 450, 이웃 601 → 711 → 821
+const swBox = $('fc-swatches'); // 줄 = y 897.14~1047.14 (css)
+// GP-홈화면: 큰 동그라미 131 가운데 (451.08, 972.14), 이웃 75.58 가운데 601.04 → 711.62 → 822.2 (사이 35).
+// 오른쪽 줄 위 검정 그라디언트(x 563.25~860, 투명→검정) = 옆 동그라미가 멀수록 어두워진다 (왼쪽도 똑같이)
+const ROW = { cx: 451.08, y: 972.14 - 897.14, big: 131, d: 75.58, first: 149.96, gap: 110.58, fade0: 112.17, fadeW: 296.75 };
 const TEX_W = 130; // 손가락이 이만큼 움직이면 한 개 넘어간다
 const swatches = TEXTURES.map((name) => {
   const b = document.createElement('button');
@@ -147,7 +152,7 @@ let texAnim = 0;
 let texDrag = null;
 const texMax = TEXTURES.length - 1;
 /** 가운데에서 d 개 떨어진 동그라미의 가운데 x (원본 간격: 큰 것 옆 151, 그다음부터 110) */
-const rowX = (d) => { const a = Math.abs(d); return 450 + Math.sign(d) * (a <= 1 ? a * ROW.first : ROW.first + (a - 1) * ROW.gap); };
+const rowX = (d) => { const a = Math.abs(d); return ROW.cx + Math.sign(d) * (a <= 1 ? a * ROW.first : ROW.first + (a - 1) * ROW.gap); };
 function drawTex() {
   swatches.forEach((b, i) => {
     const d = i - texPos;
@@ -155,8 +160,9 @@ function drawTex() {
     const on = Math.max(0, 1 - a); // 가운데일수록 1 (크기·흰 테·빛 번짐)
     const size = ROW.d + (ROW.big - ROW.d) * on;
     const x = rowX(d);
+    const g = Math.max(0, Math.min(1, (Math.abs(x - ROW.cx) - ROW.fade0) / ROW.fadeW)); // 검정 그라디언트가 덮는 정도 (카메라 위라 흐리게 + 어둡게)
     Object.assign(b.style, { left: (x - size / 2).toFixed(1) + 'px', top: (ROW.y - size / 2).toFixed(1) + 'px', width: size.toFixed(1) + 'px', height: size.toFixed(1) + 'px',
-      opacity: a <= 1 ? '1' : Math.max(0, 1 - (a - 1) * 0.32).toFixed(3), zIndex: String(10 - Math.round(a)) });
+      opacity: (1 - g).toFixed(3), filter: g > 0.001 ? `brightness(${(1 - g * 0.6).toFixed(3)})` : '', zIndex: String(10 - Math.round(a)) });
     b.style.setProperty('--on', on.toFixed(3));
   });
 }
@@ -280,16 +286,22 @@ function frame(now) {
       ctx.closePath();
       ctx.fill();
     }
-    ctx.globalAlpha = 1;
-    // 흰 점(눈금)은 손잡이처럼 제자리
-    for (let k = -4; k <= 4; k++) {
-      const a = G.dot.a[Math.abs(k)] * alpha;
+    // 흰 점(눈금)은 손잡이처럼 제자리. 그 위를 링 안 검정 반원이 덮어 아래로 갈수록 사라진다 (Figma 와 같은 겹침 순서)
+    ctx.fillStyle = '#fff';
+    for (let k = -G.dot.n; k <= G.dot.n; k++) {
       const t = rad(G.ind + k * G.dot.step);
-      ctx.fillStyle = `rgba(255,255,255,${a.toFixed(3)})`;
       ctx.beginPath();
-      ctx.arc(G.cx + G.dot.r * Math.cos(t), cy + G.dot.r * Math.sin(t), G.dot.d / 2, 0, Math.PI * 2);
+      ctx.arc(G.dot.cx + G.dot.r * Math.cos(t), G.dot.cy - WHEEL_TOP + G.dot.r * Math.sin(t), G.dot.d / 2, 0, Math.PI * 2);
       ctx.fill();
     }
+    const dome = ctx.createLinearGradient(0, DOME.y0 - WHEEL_TOP, 0, DOME.y1 - WHEEL_TOP);
+    dome.addColorStop(0, 'rgba(0,0,0,0)');
+    dome.addColorStop(1, '#000');
+    ctx.fillStyle = dome;
+    ctx.beginPath();
+    ctx.arc(DOME.cx, DOME.cy - WHEEL_TOP, DOME.r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
   }
   if (alphaAnim) rafId = requestAnimationFrame(frame);
 }
@@ -352,10 +364,14 @@ sbtn.innerHTML = `<span class="fc-sbtn-logo">${markSvg()}</span><span class="fc-
 sbtn.addEventListener('click', () => setMode(mode === 'arc' ? 'recs' : 'arc'));
 // (오른쪽 위 다크/화이트 모드 동그라미는 2026-11-16 사용자 요청으로 뺐다)
 // (언어 버튼은 2026-11-17 사용자 요청으로 홈에만 — 여기서 바꾸지 않는다)
-// 챗봇 플로팅 버튼: 누르면 지금 화면 위에 챗봇 모달. 담은 제품 수는 오른쪽 위 숫자
+// 왼쪽 세로 메뉴 (GP-홈화면 2026-11-18): 음성 = 챗봇 모달(예전 오른쪽 아래 플로팅 버튼), 스캔 = 이 화면(추천 결과면 다이얼로 돌아오기),
+// 9점 = 지금 색의 추천 제품 열기/닫기(가운데 로고 버튼과 같은 일), 집 = 처음으로(로고와 같은 일). 담은 제품 수는 음성 버튼 오른쪽 위 숫자
 const chatBtn = $('fc-chat');
 const badge = $('fc-chat-badge');
 chatBtn.addEventListener('click', () => openChat());
+$('fc-mb-scan').addEventListener('click', () => { if (mode !== 'arc') setMode('arc'); });
+$('fc-mb-grid').addEventListener('click', () => setMode(mode === 'arc' ? 'recs' : 'arc'));
+$('fc-mb-home').addEventListener('click', (e) => { e.preventDefault(); store.clear(); location.href = 'index.html'; });
 function syncPicks(e) {
   const n = getPicks().length;
   badge.textContent = n ? String(n) : '';
@@ -394,15 +410,15 @@ function setMode(m, { instant = false } = {}) {
   placeSwatches();
   const [top, btnY] = SHEET_AT[mode];
   sheet.style.top = top + 'px';
-  sbtn.style.top = btnY - 68 + 'px';
+  sbtn.style.top = btnY - 67.53 + 'px';
   sbtn.classList.toggle('logo', mode === 'arc');
   const open = mode !== 'arc';
   sbtn.setAttribute('aria-expanded', String(open));
   sbtn.setAttribute('aria-label', tr(open ? 'fc.sheetClose' : 'fc.sheet'));
+  const grid = $('fc-mb-grid');
+  grid.setAttribute('aria-expanded', String(open));
+  grid.setAttribute('aria-label', tr(open ? 'fc.sheetClose' : 'fc.sheet'));
   sheet.inert = !open;
-  const [cx, cy] = CHAT_AT[mode];
-  chatBtn.style.left = cx - 40 + 'px';
-  chatBtn.style.top = cy - 40 + 'px';
   wheel.setAttribute('aria-valuetext', chosen());
   if (open) queueRecs(0); // 로고 버튼을 누르면 바로 지금 색의 추천 제품
 }
@@ -505,7 +521,8 @@ const camArea = document.querySelector('.fc-camarea');
 const viewEl = $('view');
 const HOME = [248, 356, 654, 841]; // 얼굴이 없을 때 괄호 네 개가 이루는 네모 (x0, y0, x1, y1, 원본 4번 자리)
 // 괄호가 다닐 수 있는 화면 범위 (카메라가 화면 꽉 차므로 제목 아래 ~ 색 동그라미 위, 2026-11-17). 추천 결과에서는 시트 위 카메라 창 안
-const TRACK_AREA = { arc: [24, 214, 876, 925], recs: [24, 214, 876, 620] }; // recs 아래 = 챗봇 버튼(y 632~) 위
+// 2026-11-18 GP-홈화면: 왼쪽 세로 메뉴(x ~90)·'내 톤으로 추천받기'(y ~294) 를 비켜서. recs 아래 = 가운데 버튼(y 652~) 위
+const TRACK_AREA = { arc: [104, 304, 876, 900], recs: [104, 304, 876, 620] };
 const MIN_BOX = [200, 236]; // 괄호(66×66)끼리 겹치지 않는 최소 크기
 const brs = ['tl', 'tr', 'bl', 'br'].map((k) => faceSec.querySelector('.fc-br-' + k));
 const fb = HOME.slice(); // 지금 괄호 네모
@@ -668,11 +685,12 @@ function tryProduct(p) {
   window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: p.color_hex, finish: p.finish, quiet: false, source: shortName(p) } }));
 }
 
-// ---------- NFC 태그: 립 제품을 리더기에 올리면 그 제품 색을 바로 입술에 바르고 시트에 제품 카드 ----------
+// ---------- NFC 태그·바코드: 립 제품을 리더기에 올리거나 바코드를 거울(카메라)에 비추면 그 제품 색을 바로 입술에 바르고 시트에 제품 카드 ----------
 const nfcFlash = createNfcHint($('nfc-hint'), { ms: 3000 });
-async function showNfcProduct(code) {
+// kind: 'nfc' | 'barcode' (안내 문구만 다르다)
+async function showTagProduct(code, kind = 'nfc') {
   const p = await findTagProduct(code, api); // 태그 표·제품 ID·바코드 번호(호수까지) 순서로 찾는다
-  if (!p?.color_hex) { nfcFlash(tr('pal.nfcUnknown')); return; }
+  if (!p?.color_hex) { nfcFlash(tr(kind === 'barcode' ? 'pal.barcodeUnknown' : 'pal.nfcUnknown')); return; }
   const near = nearestPick(p.color_hex);
   sel.fam = near.fam;
   sel.k = near.k;
@@ -683,11 +701,19 @@ async function showNfcProduct(code) {
   recSeq++; // 찾는 중이던 추천은 버리고 이 제품 카드를 보여 준다
   want = shown = chosen();
   setMode('recs');
-  recStatus.textContent = tr('pal.nfcRead');
+  recStatus.textContent = tr(kind === 'barcode' ? 'pal.barcodeRead' : 'pal.nfcRead');
   showDots([p]);
   recList.replaceChildren(tryOnCard(p, tryProduct));
 }
-listenNfc(showNfcProduct);
+listenNfc((code) => showTagProduct(code, 'nfc'));
+// 바코드 (2026-11-18): 입술 카메라 영상을 그대로 써서 상품 바코드(EAN·UPC)를 천천히 계속 찾는다 (카메라를 새로 열지 않음).
+// 카메라가 켜져 있을 때만, 화면이 보이고 챗봇 창이 닫혀 있을 때만 읽는다 (챗봇 창은 자기 '바코드 비추기'로 읽는다).
+// 같은 제품은 4초 동안 안 보였다가 다시 비춰야 또 바른다
+watchVideoBarcodes({
+  video,
+  active: () => lip.source === 'camera' && !document.hidden && !document.documentElement.classList.contains('chat-modal-open'),
+  onCode: (code) => showTagProduct(code, 'barcode'),
+});
 
 // ---------- 시작 ----------
 lip.texture = sel.texture;

@@ -75,6 +75,7 @@ const STRINGS = {
     'pal.gradAria': '색상 선택 (누르거나 끌어 색을 고르세요)', 'pal.finishArea': '텍스처와 제품 추천', 'pal.textures': '텍스처',
     'pal.nfcApplied': '{name} 색을 발랐어요', 'pal.nfcUnknown': '등록되지 않은 태그예요',
     'pal.nfcRead': 'NFC 로 읽은 제품',
+    'pal.barcodeRead': '바코드로 읽은 제품', 'pal.barcodeUnknown': '등록되지 않은 바코드예요',
     'pal.intensity': '농도', 'pal.find': '이 색과 비슷한 제품 추천', 'pal.result': '추천 제품', 'pal.backMix': '← 다시 선택',
     'pal.resetDone': '색을 초기화했어요', 'pal.mixed': '선택한 색 {hex}', 'pal.searching': '{hex} 와 비슷한 제품을 찾는 중...',
     'pal.found': '선택한 색 {hex} 와 비슷한 제품 {n}개 (색이 가까운 순)',
@@ -125,6 +126,7 @@ const STRINGS = {
     'chat.compareClear': '비우기',
     'chat.heard': '들은 말',
     'chat.scanOpen': '바코드로 제품 알아보기',
+    'chat.camSheet': '바코드 비추기', 'chat.camSheetTitle': '립 제품 바코드를 네모 안에 비춰 주세요',
     'chat.side': '바코드 찾기와 추천 제품',
     'chat.close': '닫기',
     'chat.scanner': '바코드 스캐너',
@@ -186,6 +188,7 @@ const STRINGS = {
     'pal.gradAria': 'Choose a color (tap or drag to select it)', 'pal.finishArea': 'Texture and product picks', 'pal.textures': 'Texture',
     'pal.nfcApplied': 'Trying on {name}', 'pal.nfcUnknown': 'Unregistered tag',
     'pal.nfcRead': 'Product from NFC',
+    'pal.barcodeRead': 'Product from barcode', 'pal.barcodeUnknown': "This barcode isn't registered",
     'pal.intensity': 'Intensity', 'pal.find': 'Find products in this color', 'pal.result': 'Recommended products', 'pal.backMix': '← Choose again',
     'pal.resetDone': 'Colors reset', 'pal.mixed': 'Selected color {hex}', 'pal.searching': 'Finding products similar to {hex}...',
     'pal.found': '{n} products similar to selected color {hex} (closest first)',
@@ -236,6 +239,7 @@ const STRINGS = {
     'chat.compareClear': "Clear",
     'chat.heard': "What I heard",
     'chat.scanOpen': "Look up by barcode",
+    'chat.camSheet': "Show a barcode", 'chat.camSheetTitle': "Hold the lip product's barcode inside the box",
     'chat.side': "Barcode lookup and recommendations",
     'chat.close': "Close",
     'chat.scanner': "Barcode scanner",
@@ -331,7 +335,7 @@ Object.assign(STRINGS.ko, {
   'fc.sheet': '추천 제품 보기', 'fc.sheetClose': '추천 제품 닫기', 'fc.dial': '컬러 다이얼 (돌려서 색 고르기, 손잡이 아래 칸이 고른 색)',
   'fc.theme': '다크 모드 켜기/끄기', 'fc.swatch': '컬러 {hex}', 'fc.families': '컬러 계열',
   'fc.family': '{name} 계열 · {hex}', 'fc.fam.red': '빨강', 'fc.fam.pink': '핑크', 'fc.fam.purple': '보라', 'fc.fam.orange': '오렌지', 'fc.fam.nude': '누드',
-  'fc.texture': '텍스처: {name} (누르면 바뀌어요)', 'fc.textures': '질감 (옆으로 밀어 바꾸기)', 'fc.chat': 'AI 뷰티 챗봇 열기',
+  'fc.texture': '텍스처: {name} (누르면 바뀌어요)', 'fc.textures': '질감 (옆으로 밀어 바꾸기)', 'fc.chat': 'AI 뷰티 챗봇 열기', 'fc.menu': '메뉴', 'fc.menuScan': '컬러 찾기 (지금 화면)',
   'fc.searching': '비슷한 제품을 찾고 있어요', 'fc.found': '이 컬러와 비슷한 제품 {n}개', 'fc.none': '비슷한 제품이 없어요', 'fc.back': '← 컬러 다시 고르기',
 });
 Object.assign(STRINGS.en, {
@@ -340,7 +344,7 @@ Object.assign(STRINGS.en, {
   'fc.sheet': 'Show matching products', 'fc.sheetClose': 'Close matching products', 'fc.dial': 'Color dial (turn it; the segment under the handle is your color)',
   'fc.theme': 'Toggle dark mode', 'fc.swatch': 'Color {hex}', 'fc.families': 'Color families',
   'fc.family': '{name} · {hex}', 'fc.fam.red': 'Red', 'fc.fam.pink': 'Pink', 'fc.fam.purple': 'Purple', 'fc.fam.orange': 'Orange', 'fc.fam.nude': 'Nude',
-  'fc.texture': 'Texture: {name} (tap to change)', 'fc.textures': 'Textures (swipe to change)', 'fc.chat': 'Open the AI beauty chatbot',
+  'fc.texture': 'Texture: {name} (tap to change)', 'fc.textures': 'Textures (swipe to change)', 'fc.chat': 'Open the AI beauty chatbot', 'fc.menu': 'Menu', 'fc.menuScan': 'Find your color (this screen)',
   'fc.searching': 'Looking for similar products', 'fc.found': '{n} products similar to this color', 'fc.none': 'No similar products', 'fc.back': '← Choose the color again',
 });
 
