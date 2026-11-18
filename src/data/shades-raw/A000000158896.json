@@ -1,0 +1,226 @@
+{
+ "goodsNo": "A000000158896",
+ "collected_at": "2026-11-17T04:56:24.560Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809625244453",
+   "alt": "01 포멜로코",
+   "img": "item/2021/10/3884672359171443806.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C05D51",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625244460",
+   "alt": "02 로지엔탈",
+   "img": "item/2021/10/5377972241465644059.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD4C4D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625244491",
+   "alt": "05 비비 캔디",
+   "img": "item/2021/10/3086501016641404156.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D84B6F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625244507",
+   "alt": "06 모비쉬",
+   "img": "item/2021/10/8370708297383146435.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB5964",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809625244514",
+   "alt": "07 쿨 로즈 업",
+   "img": "item/2021/10/7369594016626833629.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A34652",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625245245",
+   "alt": "09 코랄 쥬빌레",
+   "img": "item/2022/3/2665518912225156042.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F14B52",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809625247218",
+   "alt": "12 웜밍 업",
+   "img": "item/2023/5/9023632122775261249.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC806A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809625247225",
+   "alt": "13 쿨링 업",
+   "img": "item/2023/5/7477141159551149564.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E67885",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809625247232",
+   "alt": "14 언로즈",
+   "img": "item/2023/5/4137575495834286354.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F4606A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809625247249",
+   "alt": "15 베리 피즈",
+   "img": "item/2023/5/2910919794752418885.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F36581",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8800258089114",
+   "alt": "[조앤프렌즈][단품] 02 로지엔탈",
+   "img": "item/2025/10/921042354078943866.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B24E4E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "023",
+   "barcode": "8800258089732",
+   "alt": "[미니틴트기획] 14 언로즈",
+   "img": "item/2025/11/4145140493637995967.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F3606A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "022",
+   "barcode": "8800258089107",
+   "alt": "[조앤프렌즈][단품] 07 쿨로즈업",
+   "img": "item/2025/10/4228323011389839465.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A94855",
+   "white": 0,
+   "grey": 0.003
+  },
+  {
+   "opt": "003",
+   "barcode": "8809625244477",
+   "alt": "03 머스키",
+   "img": "item/2021/10/5737448596997584277.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#873732",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809625244484",
+   "alt": "04 라드 우드",
+   "img": "item/2021/10/7201640413642972562.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#703A36",
+   "white": 0,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8809625244521",
+   "alt": "08 커런트 잼",
+   "img": "item/2021/10/819455264497114888.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#943B45",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625245252",
+   "alt": "10 퍼지 레드",
+   "img": "item/2022/3/89564013014399370.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E93D48",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809625245269",
+   "alt": "11 푸시아 바이브",
+   "img": "item/2022/3/1758413801053219496.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E83A53",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8809625249793",
+   "alt": "[이나피스퀘어] 17 피치 다운",
+   "img": "item/2024/6/2027165490826633308.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE6B65",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8809625249809",
+   "alt": "[이나피스퀘어] 18 배드 베리",
+   "img": "item/2024/6/140532276829110110.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F434E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

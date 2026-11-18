@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000164124",
+ "collected_at": "2026-11-17T05:08:34.554Z",
+ "options": [
+  {
+   "opt": "012",
+   "barcode": "8809642484290",
+   "alt": "[NEW SS] 13 어딕티드",
+   "img": "item/2023/7/7802139429790118525.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7515A",
+   "white": 0.485,
+   "grey": 0.006
+  },
+  {
+   "opt": "001",
+   "barcode": "8809642481954",
+   "alt": "01 뉴 얼루어",
+   "img": "item/2022/3/891028328641248831.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF636A",
+   "white": 0.486,
+   "grey": 0.007
+  },
+  {
+   "opt": "006",
+   "barcode": "8809642482005",
+   "alt": "06 리파인드",
+   "img": "item/2022/3/3276687820162572285.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#993F47",
+   "white": 0.486,
+   "grey": 0.01
+  },
+  {
+   "opt": "008",
+   "barcode": "8809642482029",
+   "alt": "08 클래시컬",
+   "img": "item/2022/3/9012163883392420093.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#99081D",
+   "white": 0.484,
+   "grey": 0.009
+  },
+  {
+   "opt": "010",
+   "barcode": "8809642484276",
+   "alt": "[NEW SS] 11 블러쉬드",
+   "img": "item/2023/7/301536190237562877.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC6C65",
+   "white": 0.485,
+   "grey": 0.006
+  },
+  {
+   "opt": "011",
+   "barcode": "8809642484283",
+   "alt": "[NEW SS] 12 체리쉬드",
+   "img": "item/2023/7/1001301753217579695.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D03D59",
+   "white": 0.485,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8809642481978",
+   "alt": "03 하모니어스",
+   "img": "item/2022/3/1259355758250346812.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C3443C",
+   "white": 0.485,
+   "grey": 0.007
+  }
+ ]
+}

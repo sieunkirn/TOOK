@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000227860",
+ "collected_at": "2026-11-17T05:11:40.696Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8809464543779",
+   "alt": "02 뮤즈코랄",
+   "img": "item/2025/5/9118634391486148354.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE9690",
+   "white": 0.636,
+   "grey": 0.01
+  },
+  {
+   "opt": "006",
+   "barcode": "8809464543793",
+   "alt": "04 로지필터",
+   "img": "item/2025/5/8241188783147821309.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE9389",
+   "white": 0.662,
+   "grey": 0.013
+  },
+  {
+   "opt": "005",
+   "barcode": "8809464543809",
+   "alt": "05 페일모브",
+   "img": "item/2025/5/8710940640530909690.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB8A97",
+   "white": 0.677,
+   "grey": 0.012
+  },
+  {
+   "opt": "004",
+   "barcode": "8809464544158",
+   "alt": "00 퓨어글램",
+   "img": "item/2025/5/2987047196350423825.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F8E3EC",
+   "white": 0.696,
+   "grey": 0.848
+  },
+  {
+   "opt": "007",
+   "barcode": "8809464543786",
+   "alt": "03 밀크베리",
+   "img": "item/2025/5/6060966264355216813.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE99B1",
+   "white": 0.655,
+   "grey": 0.008
+  },
+  {
+   "opt": "002",
+   "barcode": "8809464544172",
+   "alt": "07 체리몰리",
+   "img": "item/2025/5/3728923775432498794.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF325D",
+   "white": 0.675,
+   "grey": 0.005
+  }
+ ]
+}

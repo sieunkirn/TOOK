@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000234351",
+ "collected_at": "2026-11-17T05:12:44.800Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800302530012",
+   "alt": "02 레이니모브",
+   "img": "item/2025/10/7234478705244201837.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D8758C",
+   "white": 0.31,
+   "grey": 0.005
+  },
+  {
+   "opt": "003",
+   "barcode": "8800302530029",
+   "alt": "03 베어모카",
+   "img": "item/2025/10/4436233674529089050.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C56F69",
+   "white": 0.3,
+   "grey": 0.006
+  },
+  {
+   "opt": "006",
+   "barcode": "8800302530159",
+   "alt": "06 알유레디",
+   "img": "item/2026/1/8122529893960116067.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F24F44",
+   "white": 0.314,
+   "grey": 0.004
+  },
+  {
+   "opt": "007",
+   "barcode": "8800302530166",
+   "alt": "07 토피커피",
+   "img": "item/2026/1/6904793281574778162.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB4733",
+   "white": 0.31,
+   "grey": 0.005
+  },
+  {
+   "opt": "008",
+   "barcode": "8800302530173",
+   "alt": "08 러비루비",
+   "img": "item/2026/1/3772967272051459212.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA3456",
+   "white": 0.336,
+   "grey": 0.003
+  },
+  {
+   "opt": "001",
+   "barcode": "8800302530005",
+   "alt": "01 피치플링",
+   "img": "item/2025/10/8093937363938849674.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F18174",
+   "white": 0.309,
+   "grey": 0.006
+  },
+  {
+   "opt": "004",
+   "barcode": "8800302530036",
+   "alt": "04 플럼나잇",
+   "img": "item/2025/10/553065050335756664.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B4405A",
+   "white": 0.308,
+   "grey": 0.004
+  },
+  {
+   "opt": "005",
+   "barcode": "8800302530142",
+   "alt": "05 피오니샤벳",
+   "img": "item/2025/10/1256403235095185240.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EF6C94",
+   "white": 0.309,
+   "grey": 0.002
+  }
+ ]
+}

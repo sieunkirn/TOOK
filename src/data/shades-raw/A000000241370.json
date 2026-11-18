@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000241370",
+ "collected_at": "2026-11-18T00:57:49.137Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809976271207",
+   "alt": "내추럴 베이지",
+   "img": "item/2025/11/4507059342380579573.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B88170",
+   "white": 0.843,
+   "grey": 0.048
+  },
+  {
+   "opt": "002",
+   "barcode": "8809976271214",
+   "alt": "로지 브라운",
+   "img": "item/2025/11/4056502422708456319.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9A6261",
+   "white": 0.851,
+   "grey": 0.056
+  },
+  {
+   "opt": "003",
+   "barcode": "8809976271245",
+   "alt": "멜로우 코랄",
+   "img": "item/2025/11/6973579089601099232.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D06160",
+   "white": 0.849,
+   "grey": 0.029
+  },
+  {
+   "opt": "004",
+   "barcode": "8809976271252",
+   "alt": "무디 체리",
+   "img": "item/2025/11/236944055270738239.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#793F43",
+   "white": 0.848,
+   "grey": 0.057
+  },
+  {
+   "opt": "005",
+   "barcode": "8809976271238",
+   "alt": "세렌 로즈",
+   "img": "item/2025/11/3389526347897765691.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC5961",
+   "white": 0.825,
+   "grey": 0.031
+  },
+  {
+   "opt": "006",
+   "barcode": "8809976271221",
+   "alt": "헤이지 레드",
+   "img": "item/2025/11/6559471319961207502.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A71625",
+   "white": 0.825,
+   "grey": 0.03
+  }
+ ]
+}

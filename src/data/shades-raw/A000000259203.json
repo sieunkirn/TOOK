@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000259203",
+ "collected_at": "2026-11-17T05:07:15.123Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800303330703",
+   "alt": "[단품] 01 누디행",
+   "img": "item/2026/6/3376763168655964538.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE8F8B",
+   "white": 0.785,
+   "grey": 0.165
+  },
+  {
+   "opt": "010",
+   "barcode": "8800303330710",
+   "alt": "[단품] 02 분홍행",
+   "img": "item/2026/6/7321710959615970714.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D98C95",
+   "white": 0.785,
+   "grey": 0.142
+  },
+  {
+   "opt": "009",
+   "barcode": "8800303330727",
+   "alt": "[단품] 03 피치행",
+   "img": "item/2026/6/3271172001457050291.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D77D84",
+   "white": 0.783,
+   "grey": 0.121
+  },
+  {
+   "opt": "004",
+   "barcode": "8800303331120",
+   "alt": "[단품] 07 너티행",
+   "img": "item/2026/6/2089767078004766009.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB7C72",
+   "white": 0.784,
+   "grey": 0.145
+  },
+  {
+   "opt": "005",
+   "barcode": "8800303331113",
+   "alt": "[단품] 08 피그행",
+   "img": "item/2026/6/8605170289904519212.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE696E",
+   "white": 0.783,
+   "grey": 0.112
+  },
+  {
+   "opt": "003",
+   "barcode": "8800303331731",
+   "alt": "[단품] 09 여리행",
+   "img": "item/2026/6/676718807164564215.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA8C95",
+   "white": 0.782,
+   "grey": 0.137
+  },
+  {
+   "opt": "008",
+   "barcode": "8800303330734",
+   "alt": "[단품] 04 모브행",
+   "img": "item/2026/6/4496493268757436677.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C1738B",
+   "white": 0.783,
+   "grey": 0.125
+  },
+  {
+   "opt": "007",
+   "barcode": "8800303330741",
+   "alt": "[단품] 05 플럼행",
+   "img": "item/2026/6/7112210280251641057.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AE5C74",
+   "white": 0.782,
+   "grey": 0.108
+  },
+  {
+   "opt": "006",
+   "barcode": "8800303331106",
+   "alt": "[단품] 06 로지행",
+   "img": "item/2026/6/3035770257317183926.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C27982",
+   "white": 0.785,
+   "grey": 0.128
+  },
+  {
+   "opt": "002",
+   "barcode": "8800303333223",
+   "alt": "[단품] 10 화사행",
+   "img": "item/2026/6/3264997108310525181.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E799A8",
+   "white": 0.784,
+   "grey": 0.132
+  }
+ ]
+}

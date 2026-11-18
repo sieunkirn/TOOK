@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000243857",
+ "collected_at": "2026-11-17T05:06:15.537Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809693602438",
+   "alt": " 01 피그 라떼",
+   "img": "item/2025/12/7546794966480316908.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D87276",
+   "white": 0.844,
+   "grey": 0.025
+  },
+  {
+   "opt": "003",
+   "barcode": "8809693602476",
+   "alt": "02 플레인 피치",
+   "img": "item/2025/12/6789245194788988953.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB8381",
+   "white": 0.843,
+   "grey": 0.027
+  },
+  {
+   "opt": "005",
+   "barcode": "8809693602452",
+   "alt": "03 무디 그레이프",
+   "img": "item/2025/12/1163766186262116181.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#916877",
+   "white": 0.845,
+   "grey": 0.115
+  },
+  {
+   "opt": "004",
+   "barcode": "8809693602469",
+   "alt": "05 로즈 모카",
+   "img": "item/2025/12/8479486492321138271.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A26F64",
+   "white": 0.843,
+   "grey": 0.088
+  },
+  {
+   "opt": "002",
+   "barcode": "8809693602483",
+   "alt": "04 모브 오디",
+   "img": "item/2025/12/704258169695643464.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8E4655",
+   "white": 0.843,
+   "grey": 0.047
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000233656",
+ "collected_at": "2026-11-17T05:12:36.898Z",
+ "options": [
+  {
+   "opt": "019",
+   "barcode": "8809349125106",
+   "alt": "[NEW]02 도쿄블라썸(+미니글로스)",
+   "img": "item/2026/6/7493473693148633496.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7A4AC",
+   "white": 0.73,
+   "grey": 0.216
+  },
+  {
+   "opt": "018",
+   "barcode": "8809349125113",
+   "alt": "[NEW]14 도쿄바닐라(+미니글로스)",
+   "img": "item/2026/6/7374614874322628685.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5AB9F",
+   "white": 0.708,
+   "grey": 0.214
+  },
+  {
+   "opt": "001",
+   "barcode": "8809349124291",
+   "alt": "01 멜트어웨이",
+   "img": "item/2025/8/5967035960544641227.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E77771",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809349124307",
+   "alt": "02 도쿄블라썸",
+   "img": "item/2025/8/1111703286741199052.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1808F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809349124444",
+   "alt": "10 허니넛",
+   "img": "item/2026/1/5149038421785897998.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F19B88",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809349124765",
+   "alt": "[기획] 12 쇼유어모브(+미니틴트)",
+   "img": "item/2026/2/1361516603932773602.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E3C9C9",
+   "white": 0.548,
+   "grey": 0.525
+  },
+  {
+   "opt": "014",
+   "barcode": "8809349124772",
+   "alt": "[기획] 13 6번필터(+미니틴트)",
+   "img": "item/2026/2/7518455279751387214.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E3C0BD",
+   "white": 0.531,
+   "grey": 0.111
+  }
+ ]
+}

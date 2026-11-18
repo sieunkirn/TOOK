@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000128184",
+ "collected_at": "2026-11-17T05:00:38.284Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809644495102",
+   "alt": "08 품절대란",
+   "img": "item/2022/4/7153097158965067472.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF0A38",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809691972076",
+   "alt": "16 하트백만개 ",
+   "img": "item/2022/4/6173561187363749507.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA0236",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809862288951",
+   "alt": "39 햇살주의보",
+   "img": "item/2022/12/7197221055070289239.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F55C57",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "033",
+   "barcode": "8800290366914",
+   "alt": "[+볼체인] 47 햇살예보 (온)",
+   "img": "item/2025/7/6713463554850013452.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE4D55",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "034",
+   "barcode": "8800290366907",
+   "alt": "[+볼체인] 48 하트백개 (온)",
+   "img": "item/2025/7/7973499181216075495.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD284C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "035",
+   "barcode": "8800290366891",
+   "alt": "[+볼체인] 49 품절임박 (온)",
+   "img": "item/2025/7/8509887581711123466.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D44854",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8809828411300",
+   "alt": "26 누디플로우",
+   "img": "item/2022/4/2048797826264847940.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC5E5B",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

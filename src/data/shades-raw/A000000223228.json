@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000223228",
+ "collected_at": "2026-11-18T01:01:15.710Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809949515376",
+   "alt": " 01 플레인피치",
+   "img": "item/2025/3/5667335521079427926.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E39265",
+   "white": 0.911,
+   "grey": 0.024
+  },
+  {
+   "opt": "002",
+   "barcode": "8809949515383",
+   "alt": "02 미니멀핑크",
+   "img": "item/2025/3/6618668353936194322.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CC6784",
+   "white": 0.86,
+   "grey": 0.019
+  },
+  {
+   "opt": "003",
+   "barcode": "8809949515390",
+   "alt": "03 마르살라",
+   "img": "item/2025/3/1613732328767802815.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AB5850",
+   "white": 0.874,
+   "grey": 0.055
+  },
+  {
+   "opt": "004",
+   "barcode": "8809949515406",
+   "alt": "04 모브 에센셜",
+   "img": "item/2025/3/3730726337055678691.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B05C65",
+   "white": 0.901,
+   "grey": 0.041
+  },
+  {
+   "opt": "005",
+   "barcode": "8809949535923",
+   "alt": "05 스쿱 핑크",
+   "img": "item/2025/6/8995724189970637241.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C17682",
+   "white": 0.836,
+   "grey": 0.037
+  },
+  {
+   "opt": "006",
+   "barcode": "8809949535930",
+   "alt": "06 베리 피그",
+   "img": "item/2025/6/218298228684788792.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B25B62",
+   "white": 0.866,
+   "grey": 0.024
+  },
+  {
+   "opt": "007",
+   "barcode": "8809949535947",
+   "alt": "07 아이시 바인",
+   "img": "item/2025/6/2939384914454937243.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B3788C",
+   "white": 0.847,
+   "grey": 0.045
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000256116",
+ "collected_at": "2026-11-17T04:58:16.587Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800366201316",
+   "alt": "[단품] 1호 퓨어 티",
+   "img": "item/2026/5/194347815528135326.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF7488",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800366201323",
+   "alt": "[단품] 2호 허니드 피치",
+   "img": "item/2026/5/4219356272049226797.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF8570",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800366201354",
+   "alt": "[단품] 3호 멀베리 티",
+   "img": "item/2026/5/4721870079081464029.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D57489",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800366201347",
+   "alt": "[단품] 4호 루이보스",
+   "img": "item/2026/5/739618896648696811.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD6B58",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800366201330",
+   "alt": "[단품] 5호 로지스커스",
+   "img": "item/2026/5/3162285696458153715.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E44259",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800366201378",
+   "alt": "[트임 쉐이퍼 기획] 2호 허니드 피치",
+   "img": "item/2026/5/1594449336596220933.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E5B8A3",
+   "white": 0.567,
+   "grey": 0.115
+  },
+  {
+   "opt": "004",
+   "barcode": "8800366201361",
+   "alt": "[트임 쉐이퍼 기획] 1호 퓨어 티",
+   "img": "item/2026/5/7312057028893032686.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DEB6B9",
+   "white": 0.611,
+   "grey": 0.329
+  }
+ ]
+}

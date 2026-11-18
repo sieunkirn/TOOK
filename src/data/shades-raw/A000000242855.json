@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000242855",
+ "collected_at": "2026-11-18T00:57:52.539Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809820711507",
+   "alt": "03 모브 아우라",
+   "img": "item/2025/12/7591343633326056929.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB142D",
+   "white": 0,
+   "grey": 0.073
+  },
+  {
+   "opt": "004",
+   "barcode": "8809820711514",
+   "alt": "04 핑크 플래시",
+   "img": "item/2025/12/8041685710525809843.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE4E4D",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

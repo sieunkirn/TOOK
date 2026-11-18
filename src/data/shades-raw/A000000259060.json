@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000259060",
+ "collected_at": "2026-11-17T04:55:13.484Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800327721747",
+   "alt": "01 누디 베어",
+   "img": "item/2026/7/7575968835714432863.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8A58D",
+   "white": 0.001,
+   "grey": 0.076
+  },
+  {
+   "opt": "002",
+   "barcode": "8800327721754",
+   "alt": "02 니어 핑크",
+   "img": "item/2026/7/6258387518467681909.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2918B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800327721761",
+   "alt": "03 휘그 뮤트",
+   "img": "item/2026/7/6562355475725382370.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E593A3",
+   "white": 0.056,
+   "grey": 0.085
+  },
+  {
+   "opt": "005",
+   "barcode": "8800327721778",
+   "alt": "05 진저 캄",
+   "img": "item/2026/7/1767591703944612471.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC6B6A",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800327721822",
+   "alt": "06 핑크 몰트",
+   "img": "item/2026/7/5007683947340480288.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE6E7D",
+   "white": 0.009,
+   "grey": 0.035
+  },
+  {
+   "opt": "007",
+   "barcode": "8800327721792",
+   "alt": "07 토피 크레마",
+   "img": "item/2026/7/3684924346231439239.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB7A73",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "008",
+   "barcode": "8800327721808",
+   "alt": "08 코지 엠버",
+   "img": "item/2026/7/926701024283772881.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B16563",
+   "white": 0.003,
+   "grey": 0.027
+  },
+  {
+   "opt": "009",
+   "barcode": "8800327721815",
+   "alt": "09 로지 멀베리",
+   "img": "item/2026/7/2565632154538377473.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5E6B",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "8800327721839",
+   "alt": "10 넛 슈가",
+   "img": "item/2026/7/8212170205519517571.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE796B",
+   "white": 0.025,
+   "grey": 0.032
+  },
+  {
+   "opt": "004",
+   "barcode": "8800327721785",
+   "alt": "04 허쉬 뮤즈",
+   "img": "item/2026/7/3419318315041404774.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D15C66",
+   "white": 0.007,
+   "grey": 0.011
+  }
+ ]
+}

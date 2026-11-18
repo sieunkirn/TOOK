@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000263798",
+ "collected_at": "2026-11-17T05:05:15.644Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800344078756",
+   "alt": "01 스위티베리",
+   "img": "item/2026/8/8473727270795822208.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EFB3C7",
+   "white": 0.877,
+   "grey": 0.319
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344078763",
+   "alt": "02 탠저린버블",
+   "img": "item/2026/8/3096113854661516622.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F1C7B1",
+   "white": 0.874,
+   "grey": 0.352
+  },
+  {
+   "opt": "004",
+   "barcode": "8800344078787",
+   "alt": "04 츄잉그레이프",
+   "img": "item/2026/8/8312257421346036281.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3B2C6",
+   "white": 0.864,
+   "grey": 0.375
+  },
+  {
+   "opt": "005",
+   "barcode": "8800344078794",
+   "alt": "05 트로피칼믹스",
+   "img": "item/2026/8/2065489954062394905.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F5A299",
+   "white": 0.891,
+   "grey": 0.244
+  },
+  {
+   "opt": "006",
+   "barcode": "8800344078800",
+   "alt": "06 체리펀치",
+   "img": "item/2026/8/1300248673250503611.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E28D95",
+   "white": 0.887,
+   "grey": 0.249
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344078770",
+   "alt": "03 라즈베리베일",
+   "img": "item/2026/8/8097345786182998306.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EDB9BA",
+   "white": 0.868,
+   "grey": 0.385
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000230959",
+ "collected_at": "2026-11-18T01:01:28.268Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809689681829",
+   "alt": "101 트랭퀄데이",
+   "img": "item/2025/7/5227364540618745099.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E15C65",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809689681836",
+   "alt": "102 덜셋 드림",
+   "img": "item/2025/7/2603410315025869316.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D96466",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809689681843",
+   "alt": "103 얼씨 로자",
+   "img": "item/2025/7/6555370606656565909.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB5B6A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809689681850",
+   "alt": "104 이씨리얼 라일락",
+   "img": "item/2025/7/8994221326112975145.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D9657E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809689681867",
+   "alt": "105 체리쉬 러브",
+   "img": "item/2025/7/923420690052459399.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C94A4E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

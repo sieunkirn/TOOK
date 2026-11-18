@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000249454",
+ "collected_at": "2026-11-17T04:58:00.815Z",
+ "options": [
+  {
+   "opt": "016",
+   "barcode": "8800326571664",
+   "alt": "[NEW] 13 밀키 베리",
+   "img": "item/2026/10/07/83d_07163334.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA7A8D",
+   "white": 0.044,
+   "grey": 0.017
+  },
+  {
+   "opt": "009",
+   "barcode": "8800326570421",
+   "alt": "[기획]02슈가피치(+미니립앤치크)",
+   "img": "item/2026/2/3963749737122696450.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB9691",
+   "white": 0.336,
+   "grey": 0.02
+  },
+  {
+   "opt": "010",
+   "barcode": "8800326570445",
+   "alt": "[기획]03캔디 듀(+미니립앤치크)",
+   "img": "item/2026/2/297340032575508859.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F48AA3",
+   "white": 0.337,
+   "grey": 0.014
+  },
+  {
+   "opt": "015",
+   "barcode": "8800326570483",
+   "alt": "[기획]10 로지 듀(+러브듀미니)",
+   "img": "item/2026/3/857537689762096007.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2D9D4",
+   "white": 0.388,
+   "grey": 0.542
+  },
+  {
+   "opt": "001",
+   "barcode": "8809526848934",
+   "alt": "01 크리미 피치",
+   "img": "item/2026/2/1842497174418455473.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E89287",
+   "white": 0.004,
+   "grey": 0.003
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526848965",
+   "alt": "04 피오니",
+   "img": "item/2026/2/1147543440001096661.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6719D",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526848972",
+   "alt": "05 리치 코랄",
+   "img": "item/2026/2/3014787874386419830.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E15D5D",
+   "white": 0.002,
+   "grey": 0.003
+  },
+  {
+   "opt": "006",
+   "barcode": "8809526848989",
+   "alt": "06 메이플 시럽",
+   "img": "item/2026/2/2853258847623622688.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B25A54",
+   "white": 0.001,
+   "grey": 0.004
+  },
+  {
+   "opt": "008",
+   "barcode": "8809526849009",
+   "alt": "08 피버",
+   "img": "item/2026/2/8857648087773199248.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8E1B23",
+   "white": 0.001,
+   "grey": 0.006
+  },
+  {
+   "opt": "012",
+   "barcode": "8800326570568",
+   "alt": "09 러브 듀",
+   "img": "item/2026/3/7561455888536771168.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F7888F",
+   "white": 0.008,
+   "grey": 0.004
+  },
+  {
+   "opt": "014",
+   "barcode": "8800326570537",
+   "alt": "[기획]09 러브 듀(+로지듀미니)*",
+   "img": "item/2026/3/6841421077577672510.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F2D7CF",
+   "white": 0.388,
+   "grey": 0.501
+  },
+  {
+   "opt": "007",
+   "barcode": "8809526848996",
+   "alt": "07 티 로즈",
+   "img": "item/2026/2/2722106685897825802.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AB4A58",
+   "white": 0,
+   "grey": 0.004
+  }
+ ]
+}

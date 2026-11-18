@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000268671",
+ "collected_at": "2026-11-18T00:59:48.400Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8806194087504",
+   "alt": "01 토피 라떼",
+   "img": "item/2026/9/390159139221752840.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#985951",
+   "white": 0.003,
+   "grey": 0.405
+  },
+  {
+   "opt": "002",
+   "barcode": "8806194087511",
+   "alt": "02 베이비 리치",
+   "img": "item/2026/9/3721973673823348218.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#954A51",
+   "white": 0.004,
+   "grey": 0.401
+  },
+  {
+   "opt": "003",
+   "barcode": "8806194087528",
+   "alt": "03 콜드 로지",
+   "img": "item/2026/9/1088710522211005923.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#833442",
+   "white": 0.004,
+   "grey": 0.402
+  }
+ ]
+}

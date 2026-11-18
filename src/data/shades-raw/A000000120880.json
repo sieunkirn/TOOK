@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000120880",
+ "collected_at": "2026-11-17T05:03:00.412Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809625240196",
+   "alt": "04 번트하트",
+   "img": "item/2020/7/4573995376175672679.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B4651",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809625240202",
+   "alt": "05 위티",
+   "img": "item/2020/7/6537979679761098811.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#96413B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625240219",
+   "alt": "06 딥소울",
+   "img": "item/2020/7/1235082074082225714.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#83312F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625240493",
+   "alt": "07 피즈",
+   "img": "item/2020/7/4253845306854305594.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD0E28",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625240509",
+   "alt": "08 아이시",
+   "img": "item/2020/7/5420656166726999783.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A2485A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809625241919",
+   "alt": "12 앤셜리",
+   "img": "item/2020/7/8623646050587411914.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC2029",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809625241933",
+   "alt": "14 피칸타르트",
+   "img": "item/2020/7/3862343501957873021.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#913239",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809625241940",
+   "alt": "15 러스크러스크",
+   "img": "item/2020/7/6995704474404373350.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#984131",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809625242275",
+   "alt": "16 버니누드",
+   "img": "item/2020/7/7868137155083660461.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A54F56",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8809625242756",
+   "alt": "21 빌런 베스트",
+   "img": "item/2020/11/3195733793291143806.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#55171F",
+   "white": 0,
+   "grey": 0.005
+  },
+  {
+   "opt": "025",
+   "barcode": "8809625243739",
+   "alt": "22 그레인 누드",
+   "img": "item/2021/3/1996872395549924181.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC5445",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809625243746",
+   "alt": "23 빈티지 토프",
+   "img": "item/2021/3/1627494340448570636.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#823734",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625240172",
+   "alt": "02 조이풀",
+   "img": "item/2020/7/7257176974035541759.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C13731",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625240189",
+   "alt": "03 펄시레드",
+   "img": "item/2020/7/4353063247495425575.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F080A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809625241926",
+   "alt": "13 베리케이크",
+   "img": "item/2020/7/2634740399583334317.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D53D4A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8809625242770",
+   "alt": "19 얼그레이 숄",
+   "img": "item/2020/11/130718932866475728.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#843B3B",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "020",
+   "barcode": "8809625242763",
+   "alt": "20 베리 니트",
+   "img": "item/2020/11/4953065671426346611.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#6D3333",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "023",
+   "barcode": "8809625243753",
+   "alt": "24 페이드 레드",
+   "img": "item/2021/3/1969781960231673539.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8E2E2C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "022",
+   "barcode": "8809625243760",
+   "alt": "25 너드 핑크",
+   "img": "item/2021/3/2724185067582581295.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8A3943",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "goodsNo": "A000000207123",
+ "collected_at": "2026-11-17T04:57:54.967Z",
+ "options": [
+  {
+   "opt": "039",
+   "barcode": "8800303331793",
+   "alt": "[단품] 00 로지 보틀",
+   "img": "item/2026/3/1767287185547291180.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B66C74",
+   "white": 0.772,
+   "grey": 0.083
+  },
+  {
+   "opt": "037",
+   "barcode": "8800303331823",
+   "alt": "[단품] 02 빈티지 보틀",
+   "img": "item/2026/3/944253704097160324.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C85F67",
+   "white": 0.77,
+   "grey": 0.047
+  },
+  {
+   "opt": "036",
+   "barcode": "8800303331830",
+   "alt": "[단품] 03 모브 보틀",
+   "img": "item/2026/3/2338351538036203461.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B65B6E",
+   "white": 0.762,
+   "grey": 0.064
+  },
+  {
+   "opt": "033",
+   "barcode": "8800303331861",
+   "alt": "[단품] 11 누디 보틀",
+   "img": "item/2026/3/1521067500179040877.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C4898E",
+   "white": 0.772,
+   "grey": 0.098
+  },
+  {
+   "opt": "032",
+   "barcode": "8800303331878",
+   "alt": "[단품] 12 코코 보틀",
+   "img": "item/2026/3/1913136302062978650.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#964F4D",
+   "white": 0.769,
+   "grey": 0.079
+  },
+  {
+   "opt": "031",
+   "barcode": "8800303331885",
+   "alt": "[단품] 13 마룬 보틀",
+   "img": "item/2026/3/7956013396329132020.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#79394D",
+   "white": 0.767,
+   "grey": 0.091
+  },
+  {
+   "opt": "030",
+   "barcode": "8800303331892",
+   "alt": "[단품] 14 데일리 보틀",
+   "img": "item/2026/3/4062270925678820266.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC8993",
+   "white": 0.772,
+   "grey": 0.066
+  },
+  {
+   "opt": "040",
+   "barcode": "8800303331908",
+   "alt": "[단품] 15 스프링 보틀",
+   "img": "item/2026/5/4331246680177386993.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D88681",
+   "white": 0.771,
+   "grey": 0.071
+  },
+  {
+   "opt": "029",
+   "barcode": "8800303331915",
+   "alt": "[단품] 16 썸머 보틀",
+   "img": "item/2026/3/7446200439474256797.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D58693",
+   "white": 0.775,
+   "grey": 0.077
+  },
+  {
+   "opt": "028",
+   "barcode": "8800303331922",
+   "alt": "[단품] 17 어텀 보틀",
+   "img": "item/2026/3/8075553612121488505.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE7474",
+   "white": 0.769,
+   "grey": 0.079
+  },
+  {
+   "opt": "027",
+   "barcode": "8800303331939",
+   "alt": "[단품] 18 윈터 보틀",
+   "img": "item/2026/3/1716349266446190180.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B5657F",
+   "white": 0.769,
+   "grey": 0.07
+  },
+  {
+   "opt": "026",
+   "barcode": "8800303331946",
+   "alt": "[단품] 19 초코 보틀",
+   "img": "item/2026/3/303297660434696126.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C18986",
+   "white": 0.768,
+   "grey": 0.096
+  },
+  {
+   "opt": "025",
+   "barcode": "8800303331953",
+   "alt": "[단품] 20 페탈 보틀",
+   "img": "item/2026/3/5301491489281453817.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB8787",
+   "white": 0.773,
+   "grey": 0.059
+  },
+  {
+   "opt": "038",
+   "barcode": "8800303331809",
+   "alt": "[단품] 01 차이 보틀",
+   "img": "item/2026/3/6827514638710127711.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB6E66",
+   "white": 0.769,
+   "grey": 0.068
+  },
+  {
+   "opt": "035",
+   "barcode": "8800303331847",
+   "alt": "[단품] 04 시나몬 보틀",
+   "img": "item/2026/3/2632435765274727587.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A64F4A",
+   "white": 0.764,
+   "grey": 0.067
+  },
+  {
+   "opt": "034",
+   "barcode": "8800303331854",
+   "alt": "[단품] 05 뱅쇼 보틀",
+   "img": "item/2026/3/672457769401067590.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A93743",
+   "white": 0.764,
+   "grey": 0.046
+  },
+  {
+   "opt": "024",
+   "barcode": "8800303331960",
+   "alt": "[단품] 21 블룸 보틀",
+   "img": "item/2026/3/7335025388044155375.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E77B9B",
+   "white": 0.774,
+   "grey": 0.049
+  }
+ ]
+}

@@ -104,6 +104,33 @@ main { padding: 24px; max-width: 1200px; margin: 0 auto; }
 .card dt { color: #555; }
 .card dd { margin: 0; }
 .card .actions { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; padding-top: 6px; }
+/* 카드의 '호수' 칸: 작은 색 견본(실제 색) + 호수 이름. 누를 수 있으면 글자 버튼(밑줄)으로 호수 안내에 간다 */
+.card .shade-link { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; min-height: 0; padding: 0; margin: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; }
+.card button.shade-link { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.card .shade-dot { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25); }
+.card .shade-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card .shade-total { flex: none; font-weight: 400; opacity: 0.7; }
+/* 카드 안의 호수 고르기 (올리브영 '옵션을 선택해 주세요'처럼): 머리 칸 + 아래로 펼치는 목록 */
+.card > .opt, .opt.opt-detail { grid-column: 1 / -1; border: 1px solid #888; border-radius: 12px; overflow: hidden; margin-top: 6px; }
+.opt.opt-detail { margin-top: 12px; }
+.opt .opt-head { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 48px; padding: 6px 12px; margin: 0; border: 0; border-radius: 0; background: none; color: inherit; font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
+.opt .opt-label { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 8px; }
+.opt .opt-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.opt .opt-placeholder { font-weight: 400; }
+.opt .opt-count { flex: none; margin-left: auto; font-size: 12px; opacity: 0.6; }
+.opt .opt-chev { flex: none; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.opt.open .opt-chev { transform: translateY(2px) rotate(-135deg); }
+/* 펼친 목록 = 색 격자 (아코디언): 색 동그라미 + 호수 번호 */
+.opt .opt-list { list-style: none; margin: 0; padding: 10px 8px 8px; max-height: 280px; overflow-y: auto; overscroll-behavior: contain; border-top: 1px solid #ccc;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 10px 4px; }
+.opt .opt-list[hidden] { display: none; }
+.opt .opt-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; min-height: 0; padding: 2px 0; margin: 0; border: 0; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+.opt .opt-cell-dot { width: 32px; height: 32px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
+.opt [aria-selected="true"] .opt-cell-dot { outline: 2px solid currentColor; outline-offset: 2px; }
+.opt .opt-cell-no { max-width: 100%; font-size: 11px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.opt .opt-chip { flex: none; width: 28px; height: 28px; border-radius: 6px; object-fit: cover; background: #fff; }
+.opt .opt-dot { border-radius: 50%; }
+.opt .opt-msg { grid-column: 1 / -1; padding: 4px; font-size: 13px; opacity: 0.7; }
 
 /* 립 컬러 매핑 */
 .stage { position: relative; width: 100%; aspect-ratio: 4 / 3; border: 1px solid #888; background: #fff; }
@@ -772,11 +799,12 @@ body main.home-standby { position: fixed; inset: 0; z-index: 1; margin: 0; paddi
   .palette-page .palette.show-result .pal-rec .card { display: grid; grid-template-columns: 84px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 12px; row-gap: 8px; padding: 10px; align-items: start; }
   .palette-page .palette.show-result .pal-rec .card-img { grid-row: 1; width: 84px; height: 84px; aspect-ratio: 1; object-fit: cover; border-radius: 12px; margin: 0; }
   .palette-page .palette.show-result .pal-rec .card dl { display: block; margin: 0; font-size: 14px; line-height: 1.35; }
-  .palette-page .palette.show-result .pal-rec .card dt, .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(4) { display: none; }
+  .palette-page .palette.show-result .pal-rec .card dt { display: none; }
   .palette-page .palette.show-result .pal-rec .card dd { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(1) { color: var(--mute); font-size: 13px; }
   .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(2) { font-weight: 700; }
-  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(5) { font-weight: 700; }
+  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(3) { font-weight: 700; }
+  .palette-page .palette.show-result .pal-rec .card dd:nth-of-type(4) { font-size: 13px; }
   .palette-page .palette.show-result .pal-rec .card .actions { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 6px; align-items: center; margin: 0; flex-wrap: nowrap; }
   .palette-page .palette.show-result .pal-rec .card .actions > * { font-size: 13px; min-height: 32px; padding: 4px 10px; white-space: nowrap; }
 }

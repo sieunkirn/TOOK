@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000185439",
+ "collected_at": "2026-11-18T01:00:23.364Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8809836580456",
+   "alt": "[NEW]005 디바",
+   "img": "item/2023/8/7838406290213422124.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C591A0",
+   "white": 0.7,
+   "grey": 0.453
+  },
+  {
+   "opt": "006",
+   "barcode": "8809836580463",
+   "alt": "[NEW]006 비하인드",
+   "img": "item/2023/8/6526993612168878659.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CCA1AF",
+   "white": 0.701,
+   "grey": 0.471
+  },
+  {
+   "opt": "007",
+   "barcode": "8809836580470",
+   "alt": "[NEW]007 레어",
+   "img": "item/2023/8/278490150529939317.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B78E8D",
+   "white": 0.7,
+   "grey": 0.468
+  },
+  {
+   "opt": "008",
+   "barcode": "8809836580487",
+   "alt": "[NEW]008 피치",
+   "img": "item/2023/8/8960227125328021974.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BD9B9E",
+   "white": 0.699,
+   "grey": 0.489
+  },
+  {
+   "opt": "001",
+   "barcode": "8809836580418",
+   "alt": "001 시그니처",
+   "img": "item/2023/8/3617610473010443772.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF9F9F",
+   "white": 0.699,
+   "grey": 0.491
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836580425",
+   "alt": "002 스파이시",
+   "img": "item/2023/8/6312561555918320871.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B78C90",
+   "white": 0.694,
+   "grey": 0.465
+  },
+  {
+   "opt": "003",
+   "barcode": "8809836580432",
+   "alt": "003 포쉬",
+   "img": "item/2023/8/7367927885552209183.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C2A0AB",
+   "white": 0.702,
+   "grey": 0.466
+  },
+  {
+   "opt": "004",
+   "barcode": "8809836580449",
+   "alt": "004 셀럽",
+   "img": "item/2023/8/1110684521055046612.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0929D",
+   "white": 0.698,
+   "grey": 0.453
+  }
+ ]
+}

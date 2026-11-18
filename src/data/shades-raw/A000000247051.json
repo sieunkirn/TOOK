@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000247051",
+ "collected_at": "2026-11-18T00:58:28.008Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8800322110720",
+   "alt": "01. 베어 락",
+   "img": "item/2026/1/2760222552514465166.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C4847B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800322110737",
+   "alt": "02. 미스티 락",
+   "img": "item/2026/1/8870678185236695788.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B67677",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800322110744",
+   "alt": "03. 베일 락",
+   "img": "item/2026/1/8727111043073762150.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A9676B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800322110775",
+   "alt": "06. 플래시 락",
+   "img": "item/2026/1/5046857701807000083.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB4B58",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

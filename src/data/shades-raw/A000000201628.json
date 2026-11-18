@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000201628",
+ "collected_at": "2026-11-17T05:10:13.470Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809451797932",
+   "alt": "마르살라",
+   "img": "item/2025/11/2495040035148185992.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA9E9B",
+   "white": 0,
+   "grey": 0.212
+  },
+  {
+   "opt": "005",
+   "barcode": "8809451798069",
+   "alt": "에스닉 로즈",
+   "img": "item/2025/11/4747719021765612611.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D99DA3",
+   "white": 0,
+   "grey": 0.135
+  },
+  {
+   "opt": "006",
+   "barcode": "8809451797994",
+   "alt": "재패니즈 로즈",
+   "img": "item/2025/11/8096964964723525929.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D492A1",
+   "white": 0,
+   "grey": 0.107
+  },
+  {
+   "opt": "001",
+   "barcode": "8809451797925",
+   "alt": "젤러시레드",
+   "img": "item/2025/11/6860558193495884653.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA8EA0",
+   "white": 0,
+   "grey": 0.086
+  },
+  {
+   "opt": "003",
+   "barcode": "8809451798120",
+   "alt": "블루밍 핑크",
+   "img": "item/2025/11/1883486049357751234.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4ADB7",
+   "white": 0,
+   "grey": 0.086
+  },
+  {
+   "opt": "004",
+   "barcode": "8809451798106",
+   "alt": "핑크 피오니",
+   "img": "item/2025/11/8367110067816054260.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E1A8BB",
+   "white": 0,
+   "grey": 0.031
+  },
+  {
+   "opt": "007",
+   "barcode": "8809451797963",
+   "alt": "뮤즈코랄",
+   "img": "item/2025/11/3373688685067535187.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4A3AD",
+   "white": 0,
+   "grey": 0.056
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000197122",
+ "collected_at": "2026-11-17T05:09:53.095Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8806334378189",
+   "alt": "01 키시",
+   "img": "item/2023/11/1757386426149080704.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E95560",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8806334378165",
+   "alt": "03 쿠잉",
+   "img": "item/2023/11/876061796698736842.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9787A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8806334389376",
+   "alt": "05 포쉬",
+   "img": "item/2023/11/1769929587828323879.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F36C96",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8806334379117",
+   "alt": "06 두지",
+   "img": "item/2023/11/7465891256179493289.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C12F55",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8806334391690",
+   "alt": "07 쉘리",
+   "img": "item/2023/11/57974520797409192.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD99BF",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8806334391706",
+   "alt": "08 코랄린",
+   "img": "item/2023/11/8683350712257870506.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE885B",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

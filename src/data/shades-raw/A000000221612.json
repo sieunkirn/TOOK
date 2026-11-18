@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000221612",
+ "collected_at": "2026-11-17T05:07:00.125Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809693601936",
+   "alt": "01 크림 베이지",
+   "img": "item/2025/2/8140048571859441061.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1B1A4",
+   "white": 0.738,
+   "grey": 0.316
+  },
+  {
+   "opt": "002",
+   "barcode": "8809693601943",
+   "alt": "02 크리미 로즈",
+   "img": "item/2025/2/276080450042283667.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFAA9A",
+   "white": 0.788,
+   "grey": 0.356
+  },
+  {
+   "opt": "003",
+   "barcode": "8809693601950",
+   "alt": "03 누디 핑크",
+   "img": "item/2025/2/7981710865303923424.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7A9A8",
+   "white": 0.808,
+   "grey": 0.396
+  },
+  {
+   "opt": "004",
+   "barcode": "8809693601967",
+   "alt": "04 누디 살몬",
+   "img": "item/2025/2/7951756362244253552.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5A492",
+   "white": 0.794,
+   "grey": 0.367
+  },
+  {
+   "opt": "005",
+   "barcode": "8809693601974",
+   "alt": "05 미스티 핑크",
+   "img": "item/2025/2/4802157336747822957.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8878B",
+   "white": 0.783,
+   "grey": 0.352
+  },
+  {
+   "opt": "006",
+   "barcode": "8809693601981",
+   "alt": "06 피그 브라운",
+   "img": "item/2025/2/7905310866119702711.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D69186",
+   "white": 0.784,
+   "grey": 0.336
+  },
+  {
+   "opt": "011",
+   "barcode": "8809693602094",
+   "alt": "07 바닐라 베이지",
+   "img": "item/2025/5/7602290771932664025.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2C0B2",
+   "white": 0.737,
+   "grey": 0.337
+  },
+  {
+   "opt": "010",
+   "barcode": "8809693602100",
+   "alt": " 08 누디 피치",
+   "img": "item/2025/5/6354215871109169357.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6B09E",
+   "white": 0.757,
+   "grey": 0.316
+  },
+  {
+   "opt": "009",
+   "barcode": "8809693602117",
+   "alt": "09 소프트 그레이",
+   "img": "item/2025/5/359672381431767342.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6AEA7",
+   "white": 0.759,
+   "grey": 0.415
+  }
+ ]
+}

@@ -151,12 +151,12 @@ function replyNamedProduct(turn) {
   const named = findNamedProduct(spoken.text);
   if (named) {
     const shades = shadesOf(named);
-    // 호수가 있는 제품은 카드에 '색상 보기'가 붙는다. 제품 하나를 가리키므로 호수 이름은 뺀다
-    const card = shades.length ? { ...named, shade_name: null, shade_count: shades.length } : named;
+    // 호수가 있는 제품은 카드 안에 호수 고르기 칸이 붙는다. 제품 하나를 가리키므로 호수는 고르지 않은 상태로 둔다
+    const card = shades.length ? { ...named, shade_name: null, shade_no: null, shade_color: null, shade_color_en: null, shade_count: shades.length } : named;
     const name = shortOf(card);
     const reply = shades.length
-      ? L(`${josa(name, '을', '를')} 찾았어요. 색이 ${shades.length}가지 있어요. '색상 보기'를 누르면 호수와 색 이름을 한 화면에서 볼 수 있어요.`,
-        `Found ${name}. It comes in ${shades.length} shades. Tap "See shades" to view every shade number and name on one screen.`)
+      ? L(`${josa(name, '을', '를')} 찾았어요. 색이 ${shades.length}가지 있어요. 카드의 '호수를 선택해 주세요'를 누르면 호수와 색 이름을 펼쳐 볼 수 있어요.`,
+        `Found ${name}. It comes in ${shades.length} shades. Tap "Choose a shade" on the card to see every shade number and name.`)
       : L(`${josa(name, '을', '를')} 찾았어요.${named.color_options ? ` 색은 ${named.color_options}가지예요.` : ''} 호수별 색 정보는 아직 등록되지 않았어요.`,
         `Found ${name}.${named.color_options ? ` It comes in ${named.color_options} shades.` : ''} Individual shade info isn't registered yet.`);
     return out({

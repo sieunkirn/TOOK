@@ -5,9 +5,11 @@
 // 사람은 그렇게 빨리 칠 수 없으므로(글자 사이 NFC_GAP ms 이하), 그런 입력만 태그로 보고 onTag(code) 를 부른다.
 // 어느 칸에 커서가 있든 동작하고, 그 칸에 찍힌 글자는 지운다.
 //
-// 태그 → 제품 찾기 (resolveTag):
-//  1) 태그에 제품 ID 를 써 둔 경우: 'OY-A000000241210' 또는 'A000000241210' 그대로 제품 ID 로 쓴다 (목록 등록 없이 바로 됨, 권장)
-//  2) 태그 번호(UID)만 나오는 경우: 아래 NFC_TAGS 표에 '태그 번호 → 제품 ID' 를 적어 둔다
+// 태그 → 제품 찾기 (findTagProduct, 아래 순서):
+//  1) 태그 번호(UID)만 나오는 경우: 아래 NFC_TAGS 표에 '태그 번호 → 제품 ID' 를 적어 둔다 (표가 가장 먼저)
+//  2) 태그에 제품 ID 를 써 둔 경우: 'OY-A000000241210' 또는 'A000000241210' 그대로 제품 ID 로 쓴다 (목록 등록 없이 바로 됨, 호수 구분은 없음)
+//  3) 태그에 그 제품 포장의 바코드 번호(8~14자리 숫자, 예: 8809625240172)를 써 둔 경우: 바코드 검색과 같은 데이터로 찾는다
+//     (목록 등록 없이 바로 되고 호수까지 찾음, 가장 권장). 숫자만 치는 USB 바코드 스캐너를 꽂아도 같은 길로 찾는다.
 // 등록되지 않은 태그는 제품을 지어내지 않고 '등록되지 않은 태그'로 알린다.
 
 // 태그 번호 → 제품 ID. 실제 태그를 붙이면 리더기에 대 보고 나온 번호를 여기에 적는다.
@@ -35,6 +37,30 @@ export function resolveTag(raw) {
   if (NFC_TAGS[code]) return NFC_TAGS[code];
   if (/^OY-A\d{9,}$/.test(code)) return code;
   if (/^A\d{9,}$/.test(code)) return 'OY-' + code;
+  return null;
+}
+
+// 태그에 써 둔 바코드 번호 (8~14자리 숫자가 아니면 null)
+export function tagBarcode(raw) {
+  const code = normalizeTag(raw);
+  return /^\d{8,14}$/.test(code) ? code : null;
+}
+
+/**
+ * 태그 → 등록 제품 (없으면 null). 표·제품 ID 를 먼저 보고, 아니면 바코드 번호로 찾는다(호수까지).
+ * api 는 common.js 의 api (주소 → { ok, body }). 이 파일을 node 테스트에서도 불러오도록 인자로 받는다.
+ */
+export async function findTagProduct(raw, api) {
+  const id = resolveTag(raw);
+  if (id) {
+    const r = await api('api/products/' + encodeURIComponent(id));
+    return (r?.ok && r.body?.product) || null;
+  }
+  const code = tagBarcode(raw);
+  if (code) {
+    const r = await api('api/products/barcode/' + code);
+    return (r?.ok && r.body?.found && r.body.product) || null;
+  }
   return null;
 }
 

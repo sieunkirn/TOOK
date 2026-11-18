@@ -1,0 +1,292 @@
+{
+ "goodsNo": "A000000225046",
+ "collected_at": "2026-11-17T04:53:46.608Z",
+ "options": [
+  {
+   "opt": "048",
+   "barcode": "8800303333230",
+   "alt": "[카라멜 시리즈] 19 바닐라 카라멜",
+   "img": "item/2026/10/14/b39_14143348.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB988A",
+   "white": 0.614,
+   "grey": 0.374
+  },
+  {
+   "opt": "047",
+   "barcode": "8800303333247",
+   "alt": "[카라멜 시리즈] 20 크림 카라멜",
+   "img": "item/2026/10/14/d38_14143342.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD8B89",
+   "white": 0.608,
+   "grey": 0.34
+  },
+  {
+   "opt": "046",
+   "barcode": "8800303333254",
+   "alt": "[카라멜 시리즈] 21 플럼 카라멜",
+   "img": "item/2026/10/14/96a_14143335.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B87C83",
+   "white": 0.603,
+   "grey": 0.319
+  },
+  {
+   "opt": "045",
+   "barcode": "8800303333261",
+   "alt": "[카라멜 시리즈] 22 베리 카라멜",
+   "img": "item/2026/10/14/593_14143323.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B76A74",
+   "white": 0.594,
+   "grey": 0.286
+  },
+  {
+   "opt": "044",
+   "barcode": "8800303333278",
+   "alt": "[카라멜 시리즈] 23 토피 카라멜",
+   "img": "item/2026/10/14/80b_14143315.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B3827B",
+   "white": 0.606,
+   "grey": 0.332
+  },
+  {
+   "opt": "011",
+   "barcode": "8809871384910",
+   "alt": "[단품] 01 피치당",
+   "img": "item/2025/9/1587813370809207441.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E78C95",
+   "white": 0.728,
+   "grey": 0.264
+  },
+  {
+   "opt": "010",
+   "barcode": "8809871384927",
+   "alt": "[단품] 02 피그당",
+   "img": "item/2025/9/7231259330888635376.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA8592",
+   "white": 0.741,
+   "grey": 0.266
+  },
+  {
+   "opt": "009",
+   "barcode": "8809871384934",
+   "alt": "[단품] 03 포도당",
+   "img": "item/2025/9/7260893486955247173.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF839C",
+   "white": 0.743,
+   "grey": 0.271
+  },
+  {
+   "opt": "008",
+   "barcode": "8809871384941",
+   "alt": "[단품] 04 체리당",
+   "img": "item/2025/9/6902714917689832691.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA6C87",
+   "white": 0.739,
+   "grey": 0.252
+  },
+  {
+   "opt": "007",
+   "barcode": "8809871384958",
+   "alt": "[단품] 05 자몽당",
+   "img": "item/2025/9/1058885834356470772.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D77A79",
+   "white": 0.744,
+   "grey": 0.272
+  },
+  {
+   "opt": "006",
+   "barcode": "8809871386129",
+   "alt": "[단품] 06 땅콩당",
+   "img": "item/2025/9/4919545662590266935.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA898D",
+   "white": 0.746,
+   "grey": 0.328
+  },
+  {
+   "opt": "005",
+   "barcode": "8809871386136",
+   "alt": "[단품] 07 호두당",
+   "img": "item/2025/9/3289940661518870284.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE817F",
+   "white": 0.745,
+   "grey": 0.341
+  },
+  {
+   "opt": "004",
+   "barcode": "8809871386143",
+   "alt": "[단품] 08 대추당",
+   "img": "item/2025/9/1752898210375984604.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A67881",
+   "white": 0.743,
+   "grey": 0.319
+  },
+  {
+   "opt": "003",
+   "barcode": "8809871387744",
+   "alt": "[단품] 09 살구 퐁당",
+   "img": "item/2025/9/5218425786623804358.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E89797",
+   "white": 0.744,
+   "grey": 0.278
+  },
+  {
+   "opt": "002",
+   "barcode": "8809871387751",
+   "alt": "[단품] 10 딸기 퐁당",
+   "img": "item/2025/9/883716491462136657.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E396AA",
+   "white": 0.743,
+   "grey": 0.272
+  },
+  {
+   "opt": "001",
+   "barcode": "8809871387768",
+   "alt": "[단품] 11 앵두 퐁당",
+   "img": "item/2025/9/450743297869557020.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E78F98",
+   "white": 0.742,
+   "grey": 0.277
+  },
+  {
+   "opt": "017",
+   "barcode": "8800303330550",
+   "alt": "[단품] 12 사과당",
+   "img": "item/2025/9/405725448438318184.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D6757B",
+   "white": 0.639,
+   "grey": 0.265
+  },
+  {
+   "opt": "018",
+   "barcode": "8800303331014",
+   "alt": "[단품] 13 라떼당",
+   "img": "item/2026/1/4249122710735076253.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B67F71",
+   "white": 0.754,
+   "grey": 0.3
+  },
+  {
+   "opt": "019",
+   "barcode": "8800303331021",
+   "alt": "[단품] 14 메이플당",
+   "img": "item/2026/1/561703745902645790.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC8377",
+   "white": 0.736,
+   "grey": 0.344
+  },
+  {
+   "opt": "035",
+   "barcode": "8800303331175",
+   "alt": "[단품] 15 에스프레소당",
+   "img": "item/2026/4/7528825156311761840.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#967870",
+   "white": 0.714,
+   "grey": 0.392
+  },
+  {
+   "opt": "028",
+   "barcode": "8800303332202",
+   "alt": "[단품] 16 풋사과당",
+   "img": "item/2026/1/8701473885762243457.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF9899",
+   "white": 0.694,
+   "grey": 0.263
+  },
+  {
+   "opt": "029",
+   "barcode": "8800303332219",
+   "alt": "[단품] 17 햇사과당",
+   "img": "item/2026/1/206916637423089289.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF5A63",
+   "white": 0.689,
+   "grey": 0.214
+  },
+  {
+   "opt": "036",
+   "barcode": "8800303332806",
+   "alt": "[올영단독컬러] 18 오디당",
+   "img": "item/2026/4/690540963397686097.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B3888A",
+   "white": 0.757,
+   "grey": 0.355
+  },
+  {
+   "opt": "041",
+   "barcode": "8800303333391",
+   "alt": "[단품] 24 구아바당",
+   "img": "item/2026/9/6966520144011630393.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D08B9B",
+   "white": 0.599,
+   "grey": 0.282
+  },
+  {
+   "opt": "043",
+   "barcode": "8800303333605",
+   "alt": "[은우쌤 PICK] 25 돌체라떼당",
+   "img": "item/2026/10/14/296_14143140.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C19C8E",
+   "white": 0.598,
+   "grey": 0.268
+  },
+  {
+   "opt": "042",
+   "barcode": "8800303333612",
+   "alt": "[K-갸루] 26 딸기라떼당",
+   "img": "item/2026/10/14/c3e_14143115.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CFA8AC",
+   "white": 0.615,
+   "grey": 0.27
+  }
+ ]
+}

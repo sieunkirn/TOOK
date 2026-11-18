@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000248529",
+ "collected_at": "2026-11-17T04:55:47.162Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809879852930",
+   "alt": "01 베이지듀",
+   "img": "item/2026/2/2729405338578994775.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E48E7B",
+   "white": 0.006,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809879852954",
+   "alt": "03 네이키드 넛",
+   "img": "item/2026/2/8428202501112445509.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE6B62",
+   "white": 0.006,
+   "grey": 0.003
+  },
+  {
+   "opt": "004",
+   "barcode": "8809879852961",
+   "alt": "04 베이비 버니",
+   "img": "item/2026/2/1557215898026652228.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE8D9B",
+   "white": 0.006,
+   "grey": 0.002
+  },
+  {
+   "opt": "005",
+   "barcode": "8809879852978",
+   "alt": "[단품] 05 몬핑크",
+   "img": "item/2026/2/8237186228250248266.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE927F",
+   "white": 0.006,
+   "grey": 0.007
+  },
+  {
+   "opt": "006",
+   "barcode": "8809879852985",
+   "alt": "[단품] 06 무아 (OY 단독컬러)",
+   "img": "item/2026/2/2188501671743263551.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E27684",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809879853333",
+   "alt": "07 클라우드 그레이프",
+   "img": "item/2026/5/3639909246403969252.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C9818C",
+   "white": 0.004,
+   "grey": 0.003
+  },
+  {
+   "opt": "008",
+   "barcode": "8809879853340",
+   "alt": "08 바닐라 로즈",
+   "img": "item/2026/5/2316279058667524256.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F27577",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809879853357",
+   "alt": "09 차이 티",
+   "img": "item/2026/5/7821221373120784165.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C55D5E",
+   "white": 0.01,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8809879852947",
+   "alt": "02 네이키드 피그*",
+   "img": "item/2026/2/6556235150739150045.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C05B59",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "8809879853494",
+   "alt": "[기획] 06 무아 (OY 단독컬러)*",
+   "img": "item/2026/8/2152097364493269826.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F0CED7",
+   "white": 0.646,
+   "grey": 0.306
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000257297",
+ "collected_at": "2026-11-17T05:01:07.042Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800253025513",
+   "alt": "01 블랙 체리",
+   "img": "item/2026/5/3299929368806579054.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6E1F3D",
+   "white": 0.748,
+   "grey": 0.531
+  },
+  {
+   "opt": "005",
+   "barcode": "8800253025544",
+   "alt": "02 블랙 플럼",
+   "img": "item/2026/5/3074711466030245685.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#601E3D",
+   "white": 0.725,
+   "grey": 0.558
+  },
+  {
+   "opt": "007",
+   "barcode": "8800253025520",
+   "alt": "03 블랙 애플",
+   "img": "item/2026/5/1969454139245251325.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#651F29",
+   "white": 0.754,
+   "grey": 0.56
+  },
+  {
+   "opt": "006",
+   "barcode": "8800253025537",
+   "alt": "04 블랙 애프리콧",
+   "img": "item/2026/5/1220603617411940187.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7C4340",
+   "white": 0.738,
+   "grey": 0.533
+  },
+  {
+   "opt": "004",
+   "barcode": "8800253025551",
+   "alt": "05 블랙 피그",
+   "img": "item/2026/5/4121840250528483781.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7C4C43",
+   "white": 0.73,
+   "grey": 0.552
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344076257",
+   "alt": "06 블랙 리치",
+   "img": "item/2026/5/1030906561941961089.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#704B54",
+   "white": 0.744,
+   "grey": 0.543
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344076264",
+   "alt": "07 블랙 구아바",
+   "img": "item/2026/5/2650442083250678510.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#7E5A67",
+   "white": 0.738,
+   "grey": 0.544
+  }
+ ]
+}

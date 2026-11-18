@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000244284",
+ "collected_at": "2026-11-18T00:58:06.674Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800288647940",
+   "alt": "02 러스티드 로즈버드",
+   "img": "item/2025/12/5431502065633855551.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#2F1918",
+   "white": 0.002,
+   "grey": 0.575
+  },
+  {
+   "opt": "003",
+   "barcode": "8800288647957",
+   "alt": "03 번트 달리아",
+   "img": "item/2025/12/7516390753374908544.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#2B1413",
+   "white": 0.002,
+   "grey": 0.575
+  },
+  {
+   "opt": "007",
+   "barcode": "8800288647995",
+   "alt": "07 블루밍 아젤리아",
+   "img": "item/2025/12/4996000338783010984.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#3C1317",
+   "white": 0.002,
+   "grey": 0.572
+  },
+  {
+   "opt": "010",
+   "barcode": "8800288648022",
+   "alt": "10 프로스티드 사쿠라",
+   "img": "item/2025/12/2825752372148175225.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#3B1F22",
+   "white": 0.002,
+   "grey": 0.573
+  },
+  {
+   "opt": "001",
+   "barcode": "8800288647933",
+   "alt": "01 드라이드 캐모마일",
+   "img": "item/2025/12/4132825890537475450.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#3A1F1C",
+   "white": 0.003,
+   "grey": 0.575
+  },
+  {
+   "opt": "004",
+   "barcode": "8800288647964",
+   "alt": "04 클래식 포피",
+   "img": "item/2025/12/6097862923479232239.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#321013",
+   "white": 0.002,
+   "grey": 0.574
+  },
+  {
+   "opt": "005",
+   "barcode": "8800288647971",
+   "alt": "05 더스키 아네모네",
+   "img": "item/2025/12/7486682317308790147.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#2C0F14",
+   "white": 0.002,
+   "grey": 0.574
+  },
+  {
+   "opt": "006",
+   "barcode": "8800288647988",
+   "alt": "06 스모키 로즈우드",
+   "img": "item/2025/12/7631468793226946131.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#2F1113",
+   "white": 0.002,
+   "grey": 0.573
+  },
+  {
+   "opt": "008",
+   "barcode": "8800288648008",
+   "alt": "08 헤이지 제라늄",
+   "img": "item/2025/12/4461033917526508898.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#3C1518",
+   "white": 0.002,
+   "grey": 0.572
+  },
+  {
+   "opt": "009",
+   "barcode": "8800288648015",
+   "alt": "09 블러싱 튤립",
+   "img": "item/2025/12/2561017774385835945.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#341A1A",
+   "white": 0.002,
+   "grey": 0.573
+  }
+ ]
+}

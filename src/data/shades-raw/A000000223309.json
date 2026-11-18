@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000223309",
+ "collected_at": "2026-11-17T05:11:14.004Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800259980830",
+   "alt": "애프리콧 슈",
+   "img": "item/2025/3/1588039902421418674.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F9998F",
+   "white": 0.805,
+   "grey": 0.017
+  },
+  {
+   "opt": "002",
+   "barcode": "8800259980854",
+   "alt": "크림베리 슈",
+   "img": "item/2025/3/7170163365158927508.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F57B83",
+   "white": 0.796,
+   "grey": 0.015
+  },
+  {
+   "opt": "003",
+   "barcode": "8800259980878",
+   "alt": "라즈베리 슈",
+   "img": "item/2025/3/9203961180141253435.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C15F79",
+   "white": 0.798,
+   "grey": 0.011
+  },
+  {
+   "opt": "004",
+   "barcode": "8800259980847",
+   "alt": "탠저린 파이",
+   "img": "item/2025/3/4628767261560660666.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C54B48",
+   "white": 0.803,
+   "grey": 0.013
+  },
+  {
+   "opt": "005",
+   "barcode": "8800259980861",
+   "alt": "체리 파이 ",
+   "img": "item/2025/3/899408631980910889.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B8132E",
+   "white": 0.806,
+   "grey": 0.013
+  },
+  {
+   "opt": "006",
+   "barcode": "8800259980885",
+   "alt": "플럼 파이 ",
+   "img": "item/2025/3/2693992038611270603.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9D375D",
+   "white": 0.767,
+   "grey": 0.01
+  }
+ ]
+}

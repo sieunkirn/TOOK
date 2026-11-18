@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000258051",
+ "collected_at": "2026-11-18T00:59:21.443Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8800344075809",
+   "alt": "피치베일",
+   "img": "item/2026/6/3443165763277798789.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA7A77",
+   "white": 0.701,
+   "grey": 0.023
+  },
+  {
+   "opt": "007",
+   "barcode": "8800344075816",
+   "alt": "코튼베리",
+   "img": "item/2026/6/5271750766203839768.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB7793",
+   "white": 0.71,
+   "grey": 0.003
+  },
+  {
+   "opt": "006",
+   "barcode": "8800344075823",
+   "alt": "써니코랄",
+   "img": "item/2026/6/3439758945304122751.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ED6A6E",
+   "white": 0.667,
+   "grey": 0.012
+  },
+  {
+   "opt": "005",
+   "barcode": "8800344075830",
+   "alt": "핑크허밍",
+   "img": "item/2026/6/5713045524133843261.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E55877",
+   "white": 0.667,
+   "grey": 0.008
+  },
+  {
+   "opt": "004",
+   "barcode": "8800344075847",
+   "alt": "그레이프휩",
+   "img": "item/2026/6/2558019779187119367.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C24667",
+   "white": 0.687,
+   "grey": 0.008
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344075854",
+   "alt": "코코넛크림",
+   "img": "item/2026/6/2478543698664014714.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE6563",
+   "white": 0.676,
+   "grey": 0.019
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344075861",
+   "alt": "너티드롭",
+   "img": "item/2026/6/2142673134226113075.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE4D4B",
+   "white": 0.713,
+   "grey": 0.01
+  },
+  {
+   "opt": "001",
+   "barcode": "8800344075878",
+   "alt": "칠링애플",
+   "img": "item/2026/6/6986965467897404527.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF3047",
+   "white": 0.687,
+   "grey": 0.008
+  }
+ ]
+}

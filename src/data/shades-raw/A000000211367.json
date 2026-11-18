@@ -1,0 +1,193 @@
+{
+ "goodsNo": "A000000211367",
+ "collected_at": "2026-11-17T04:55:31.963Z",
+ "options": [
+  {
+   "opt": "028",
+   "barcode": "8809879853562",
+   "alt": "[넛츠컬렉션 기획] 11 네이키드 핑크*",
+   "img": "item/2026/10/27/d34_27135001.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6787D",
+   "white": 0.746,
+   "grey": 0.058
+  },
+  {
+   "opt": "001",
+   "barcode": "8809879850356",
+   "alt": "01 네이키드",
+   "img": "item/2026/5/7024661116921658013.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B26251",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809879850363",
+   "alt": "02 겟 러브",
+   "img": "item/2026/5/5613922671089515114.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7525B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809879850370",
+   "alt": "03 보니타",
+   "img": "item/2026/5/2152027662590651541.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#993F4A",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809879850387",
+   "alt": "04 베를린",
+   "img": "item/2026/5/6571016661914546299.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B25249",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809879850394",
+   "alt": "05 산스",
+   "img": "item/2026/5/1008718574757045756.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B71C36",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809879850400",
+   "alt": "06 로맨스",
+   "img": "item/2026/5/8298208723330782540.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E95E5C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809879850943",
+   "alt": "10 유레카",
+   "img": "item/2026/5/5786765330041345722.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F8626E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809879850950",
+   "alt": "11 네이키드핑크",
+   "img": "item/2026/5/2283387931119010599.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A2404C",
+   "white": 0.011,
+   "grey": 0.002
+  },
+  {
+   "opt": "010",
+   "barcode": "8809879850967",
+   "alt": "12 조지아",
+   "img": "item/2026/5/1619030563152278409.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E36B72",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809879850998",
+   "alt": "15 모던핑크",
+   "img": "item/2026/5/3876978397643263840.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA4151",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809879851001",
+   "alt": "16 베어 애프리콧",
+   "img": "item/2026/5/5930524957041574544.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E98068",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809879851506",
+   "alt": "17 노체 핑크",
+   "img": "item/2026/5/8740263692266742826.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB7794",
+   "white": 0.015,
+   "grey": 0.006
+  },
+  {
+   "opt": "022",
+   "barcode": "8809879853272",
+   "alt": "18 네이키드 아몬드",
+   "img": "item/2026/5/4057616837281131605.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B75E50",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "023",
+   "barcode": "8809879853289",
+   "alt": "19 네이키드 피기",
+   "img": "item/2026/5/6693439079588742721.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC5B56",
+   "white": 0.035,
+   "grey": 0.009
+  },
+  {
+   "opt": "024",
+   "barcode": "8809879853296",
+   "alt": "[OY단독] 20 네이키드 겟러브",
+   "img": "item/2026/5/7954285588889562624.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F47370",
+   "white": 0.086,
+   "grey": 0.01
+  },
+  {
+   "opt": "029",
+   "barcode": "8809879853555",
+   "alt": "[넛츠컬렉션 기획] 01 네이키드*",
+   "img": "item/2026/10/27/ac7_27135008.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B7806C",
+   "white": 0.746,
+   "grey": 0.058
+  }
+ ]
+}

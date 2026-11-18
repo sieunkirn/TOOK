@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000255256",
+ "collected_at": "2026-11-17T04:52:30.839Z",
+ "options": [
+  {
+   "opt": "012",
+   "barcode": "8809611869790",
+   "alt": "[이시안공동개발] 911 이지핑크",
+   "img": "item/2026/8/2281173260908168144.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC7E84",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "011",
+   "barcode": "8809611869806",
+   "alt": "[이시안공동개발] 912 레이지피그",
+   "img": "item/2026/8/6082585045708793293.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D37572",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809611869127",
+   "alt": "901 트루피치",
+   "img": "item/2026/5/1655877286537113891.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E49C9B",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809611869134",
+   "alt": "902 비지코랄",
+   "img": "item/2026/5/696397423323804083.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E47771",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809611869141",
+   "alt": "903 누드오드",
+   "img": "item/2026/5/8010383920184399426.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C87A6C",
+   "white": 0,
+   "grey": 0.01
+  },
+  {
+   "opt": "007",
+   "barcode": "8809611869158",
+   "alt": "904 시티핑크",
+   "img": "item/2026/5/7681895472259898792.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA7787",
+   "white": 0,
+   "grey": 0.013
+  },
+  {
+   "opt": "006",
+   "barcode": "8809611869165",
+   "alt": "905 로지하이",
+   "img": "item/2026/5/6855883239012188116.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF5766",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809611869172",
+   "alt": "906 솔티피그",
+   "img": "item/2026/5/8363827409218292190.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B44B50",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "004",
+   "barcode": "8809611869189",
+   "alt": "907 젠틀로즈",
+   "img": "item/2026/5/1733052782397250497.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD3C4A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809611869196",
+   "alt": "908 인카페인",
+   "img": "item/2026/5/4064818709141844518.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#824338",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809611869202",
+   "alt": "909 길티모브",
+   "img": "item/2026/5/4884268265886454429.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8555F",
+   "white": 0,
+   "grey": 0.007
+  },
+  {
+   "opt": "001",
+   "barcode": "8809611869219",
+   "alt": "910 보스체리",
+   "img": "item/2026/5/3747278652036973227.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#641B2A",
+   "white": 0,
+   "grey": 0.053
+  }
+ ]
+}

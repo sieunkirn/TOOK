@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000187348",
+ "collected_at": "2026-11-17T05:07:09.619Z",
+ "options": [
+  {
+   "opt": "006",
+   "barcode": "8809871384187",
+   "alt": "03 라일락 로",
+   "img": "item/2023/6/1367437635597955527.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C35971",
+   "white": 0.694,
+   "grey": 0.025
+  },
+  {
+   "opt": "009",
+   "barcode": "8809871384514",
+   "alt": "06 핑크 로",
+   "img": "item/2023/9/5200704653292599833.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D86A8D",
+   "white": 0.629,
+   "grey": 0.025
+  },
+  {
+   "opt": "011",
+   "barcode": "8809871384972",
+   "alt": "09 클래식 로",
+   "img": "item/2024/11/8558785985981582833.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A4605C",
+   "white": 0.661,
+   "grey": 0.056
+  },
+  {
+   "opt": "001",
+   "barcode": "8809871384163",
+   "alt": "01 가데니아로",
+   "img": "item/2023/6/1908707040213440015.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D36C68",
+   "white": 0.718,
+   "grey": 0.048
+  },
+  {
+   "opt": "005",
+   "barcode": "8809871384170",
+   "alt": "02 플레르 로",
+   "img": "item/2023/6/2059287715527746779.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE5465",
+   "white": 0.716,
+   "grey": 0.034
+  },
+  {
+   "opt": "007",
+   "barcode": "8809871384194",
+   "alt": "04 매그놀리아 로",
+   "img": "item/2023/6/5062726407263926621.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BD554C",
+   "white": 0.693,
+   "grey": 0.057
+  },
+  {
+   "opt": "008",
+   "barcode": "8809871384200",
+   "alt": "05 피오니 로",
+   "img": "item/2023/6/6053682719528093987.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D94A64",
+   "white": 0.66,
+   "grey": 0.02
+  },
+  {
+   "opt": "010",
+   "barcode": "8809871384521",
+   "alt": "07 피치 로",
+   "img": "item/2023/9/1006351242963400375.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F5786A",
+   "white": 0.674,
+   "grey": 0.042
+  },
+  {
+   "opt": "012",
+   "barcode": "8809871384965",
+   "alt": "08 스윗 로",
+   "img": "item/2024/11/6130519334699752521.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BB5965",
+   "white": 0.7,
+   "grey": 0.027
+  }
+ ]
+}

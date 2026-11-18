@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000242018",
+ "collected_at": "2026-11-17T05:06:00.345Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "6902395980186",
+   "alt": "[OY단독] 튤립 퍼즈(쿨 베스트)",
+   "img": "item/2026/1/897736323974850438.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB5F71",
+   "white": 0.012,
+   "grey": 0.001
+  },
+  {
+   "opt": "004",
+   "barcode": "6902395980155",
+   "alt": "밀키 일루션(쿨 베스트)",
+   "img": "item/2026/1/8207729360537909293.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA6570",
+   "white": 0.012,
+   "grey": 0.04
+  },
+  {
+   "opt": "005",
+   "barcode": "6902395980162",
+   "alt": "핑크 스킴(웜 베스트)",
+   "img": "item/2026/1/6158562047396105776.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D17E7C",
+   "white": 0.004,
+   "grey": 0.007
+  },
+  {
+   "opt": "002",
+   "barcode": "6902395980131",
+   "alt": "누드 위스퍼(웜 추천)",
+   "img": "item/2026/1/7241067742962992087.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA5641",
+   "white": 0,
+   "grey": 0.003
+  },
+  {
+   "opt": "003",
+   "barcode": "6902395980148",
+   "alt": "얼리어(웜 추천)",
+   "img": "item/2026/1/9179672762442131360.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B36254",
+   "white": 0.05,
+   "grey": 0.009
+  },
+  {
+   "opt": "006",
+   "barcode": "6902395980179",
+   "alt": "코랄 드렌치(웜 추천)",
+   "img": "item/2026/1/5149700030703721880.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD595D",
+   "white": 0.029,
+   "grey": 0.001
+  },
+  {
+   "opt": "007",
+   "barcode": "6902395980193",
+   "alt": "썬 퍼즈(웜 추천)",
+   "img": "item/2026/1/9164566682060507588.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C1422E",
+   "white": 0.018,
+   "grey": 0.002
+  },
+  {
+   "opt": "008",
+   "barcode": "6902395980209",
+   "alt": "칠리 플레임(겨울쿨 추천)",
+   "img": "item/2026/1/997643229883308511.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B61E42",
+   "white": 0.028,
+   "grey": 0.003
+  },
+  {
+   "opt": "009",
+   "barcode": "6902395980216",
+   "alt": "드리프트우드(겨울쿨 추천)",
+   "img": "item/2026/1/6549046375644754486.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9A0C16",
+   "white": 0.026,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "6902395980223",
+   "alt": "콰이어트 토프(가을웜 추천)",
+   "img": "item/2026/1/7882490050277965410.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C362C",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "011",
+   "barcode": "6902395980230",
+   "alt": "로즈 사이(가을웜 추천)",
+   "img": "item/2026/1/5228821408644696724.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B24548",
+   "white": 0.009,
+   "grey": 0.002
+  }
+ ]
+}

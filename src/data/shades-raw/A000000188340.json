@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000188340",
+ "collected_at": "2026-11-17T05:09:24.059Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8809625249403",
+   "alt": "[NEW] C00 코드 네임 콜드",
+   "img": "item/2024/5/6374215388694160302.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8B7D8",
+   "white": 0.049,
+   "grey": 0.036
+  },
+  {
+   "opt": "014",
+   "barcode": "8800258080845",
+   "alt": "[NEW/단독기획] C03 헤이즈 베이지",
+   "img": "item/2024/8/4964774576977510763.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C8B3C9",
+   "white": 0.7,
+   "grey": 0.234
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625249410",
+   "alt": "[NEW] C01 모어 라일락",
+   "img": "item/2024/5/731692341458769120.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9D3A62",
+   "white": 0.01,
+   "grey": 0.009
+  },
+  {
+   "opt": "013",
+   "barcode": "8809625249434",
+   "alt": "[NEW] C03 헤이즈 베이지",
+   "img": "item/2024/5/7136927632561364526.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#814349",
+   "white": 0,
+   "grey": 0.011
+  },
+  {
+   "opt": "001",
+   "barcode": "8809625247003",
+   "alt": "01 몰튼 피넛",
+   "img": "item/2023/7/9026232399665425495.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A74C4F",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625247010",
+   "alt": "02 바이 선셋",
+   "img": "item/2023/7/321698442536178702.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A83B45",
+   "white": 0.026,
+   "grey": 0.009
+  },
+  {
+   "opt": "003",
+   "barcode": "8809625247027",
+   "alt": "03 레디쉬 허",
+   "img": "item/2023/7/633106303124690713.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BD4F5B",
+   "white": 0.007,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8809625247034",
+   "alt": "04 포지 로지",
+   "img": "item/2023/7/6840064492954847753.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF464B",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625247041",
+   "alt": "05 쿨 베이브",
+   "img": "item/2023/7/8462622370313406113.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BA5672",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625247058",
+   "alt": "06 핀 베리",
+   "img": "item/2023/7/7137587372581519822.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#953349",
+   "white": 0.003,
+   "grey": 0.004
+  },
+  {
+   "opt": "007",
+   "barcode": "8809625248154",
+   "alt": "07 탠드 아워",
+   "img": "item/2023/8/5029930951317129878.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AD4C5E",
+   "white": 0.005,
+   "grey": 0.006
+  },
+  {
+   "opt": "008",
+   "barcode": "8809625248161",
+   "alt": "08 쿨리쉬",
+   "img": "item/2023/8/710404467042052440.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B33F62",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809625248178",
+   "alt": "09 디핀 체리",
+   "img": "item/2023/8/7994313483803361730.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C1366B",
+   "white": 0.011,
+   "grey": 0.003
+  }
+ ]
+}

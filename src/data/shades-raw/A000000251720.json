@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000251720",
+ "collected_at": "2026-11-17T04:53:30.807Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8806190735164",
+   "alt": "[올영단독/착색 2단계] 애플 바닐라",
+   "img": "item/2026/11/09/869_09141551.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A5645C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8806190736994",
+   "alt": "[NEW/착색 0단계] 애플 허니",
+   "img": "item/2026/11/09/902_09141656.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC5D5E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8806190736963",
+   "alt": "[NEW/착색 0단계] 애플 애프리콧",
+   "img": "item/2026/11/09/5e2_09141709.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E97765",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8806190736987",
+   "alt": "[NEW/착색 0단계] 애플 시나몬",
+   "img": "item/2026/11/09/241_09141716.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A35544",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8806190736970",
+   "alt": "[NEW/착색 0단계] 애플 그레이프",
+   "img": "item/2026/11/09/d6c_09141702.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7D4260",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8806190714619",
+   "alt": "[착색 5단계] 애플 베리",
+   "img": "item/2026/11/09/33e_09141547.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA475E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8806190735133",
+   "alt": "[올영단독/착색 2단계] 애플 로즈힙",
+   "img": "item/2026/11/09/ef2_09141627.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA5560",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8806190735171",
+   "alt": "[올영단독/착색 2단계] 애플 구아바",
+   "img": "item/2026/11/09/f67_09141612.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4524F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8806190726858",
+   "alt": "[착색 5단계] 애플 피오니",
+   "img": "item/2026/11/09/503_09141559.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC86A5",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8806190735140",
+   "alt": "[올영단독/착색 2단계] 애플 아사이베리",
+   "img": "item/2026/11/09/4fa_09141620.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD4367",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8806190726841",
+   "alt": "[착색 0단계] 애플 클리어",
+   "img": "item/2026/11/09/098_09141605.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C2C2C2",
+   "white": 0.96,
+   "grey": 1
+  },
+  {
+   "opt": "012",
+   "barcode": "8806190714633",
+   "alt": "[착색 0단계] 애플 민트",
+   "img": "item/2026/11/09/151_09141648.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DAF3F1",
+   "white": 0.005,
+   "grey": 0.758
+  },
+  {
+   "opt": "010",
+   "barcode": "8806190728845",
+   "alt": "[착색 5단계]애플 휘그",
+   "img": "item/2026/11/09/27e_09141637.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8528E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

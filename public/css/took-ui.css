@@ -299,6 +299,24 @@ html[data-theme="dark"] .fc-rec-dots button[aria-pressed="true"] { box-shadow: 0
 .fc[data-mode="recs"] .fc-rec-list .card dd:nth-of-type(3) { margin-top: 8px; font-size: 18px; font-weight: 700; }
 .fc[data-mode="recs"] .fc-rec-list .card .actions { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 0; }
 .fc[data-mode="recs"] .fc-rec-list .card .actions button { min-height: 0; padding: 10px 8px; font-size: 14.5px; text-align: center; }
+/* 카드 안 호수 고르기 (2026-11-17): 카드 크기가 고정이라 오른쪽 칸(가격 아래) 맨 밑에 머리 칸을 두고,
+   목록은 머리 칸 아래로 카드 위에 떠서 펼친다 (카드 높이는 그대로) */
+.fc[data-mode="recs"] .fc-rec-list .card { position: relative; }
+.fc[data-mode="recs"] .fc-rec-list .card > .opt { grid-column: 2; grid-row: 1; align-self: end; position: relative; z-index: 2; margin: 0; overflow: visible;
+  border: 0; border-radius: 12px; background: #fff; color: #000; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
+.fc[data-mode="recs"] .fc-rec-list .card > .opt.open { border-radius: 12px 12px 0 0; }
+.fc[data-mode="recs"] .fc-rec-list .card:has(.opt.open) { z-index: 3; } /* 펼친 목록이 아래 카드 위로 */
+.fc .opt .opt-head { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 8px; width: 100%; min-height: 46px; padding: 6px 10px; cursor: pointer; font-size: 14px; }
+.fc .opt .opt-head .opt-count { display: none; } /* 오른쪽 칸이 좁아 'N가지'는 빼고 호수 이름을 두 줄까지 */
+.fc .opt .opt-head .opt-name { white-space: normal; line-height: 1.25; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.fc .opt .opt-head .opt-chev { margin-left: auto; }
+/* 펼친 색 격자: 카드 크기가 고정이라 아래 카드 위에 떠서 열린다 (2026-11-17 사용자 선택 '방법 2') */
+.fc .opt .opt-list { position: absolute; right: 0; top: 100%; width: 357px; /* 오른쪽 끝을 머리 칸에 맞추고 카드 폭만큼 */ max-height: 300px; background: #fff; color: #000; border: 0; border-radius: 0 0 12px 12px;
+  grid-template-columns: repeat(7, 1fr); padding: 12px 10px 10px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
+.fc .opt .opt-cell { all: unset; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; cursor: pointer; }
+.fc .opt .opt-cell-dot { width: 34px; height: 34px; }
+.fc .opt .opt-cell-no { font-size: 12px; }
+html[data-theme="dark"] .fc[data-mode="recs"] .fc-rec-list .card > .opt, html[data-theme="dark"] .fc .opt .opt-list { background: #474747; color: #fff; }
 
 /* 챗봇 모달: 검정 유리 상자 */
 body.tui .chat-modal { padding: 40px 28px; background: rgba(0, 0, 0, 0.72); }

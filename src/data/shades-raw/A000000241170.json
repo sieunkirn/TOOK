@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000241170",
+ "collected_at": "2026-11-18T00:57:45.230Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "8809451797932",
+   "alt": "젤러시 플럼퍼 | 마르살라",
+   "img": "item/2025/11/2495040035148185992.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA9E9B",
+   "white": 0,
+   "grey": 0.212
+  },
+  {
+   "opt": "008",
+   "barcode": "8809451797963",
+   "alt": "젤러시 플럼퍼 | 뮤즈코랄",
+   "img": "item/2025/11/3373688685067535187.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4A3AD",
+   "white": 0,
+   "grey": 0.056
+  },
+  {
+   "opt": "009",
+   "barcode": "8809451798120",
+   "alt": "젤러시 플럼퍼 | 블루밍 핑크",
+   "img": "item/2025/11/1883486049357751234.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4ADB7",
+   "white": 0,
+   "grey": 0.086
+  },
+  {
+   "opt": "010",
+   "barcode": "8809451798069",
+   "alt": "젤러시 플럼퍼 | 에스닉 로즈",
+   "img": "item/2025/11/4747719021765612611.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D99DA3",
+   "white": 0,
+   "grey": 0.135
+  },
+  {
+   "opt": "011",
+   "barcode": "8809451797994",
+   "alt": "젤러시 플럼퍼 | 재패니즈로즈",
+   "img": "item/2025/11/8096964964723525929.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D492A1",
+   "white": 0,
+   "grey": 0.107
+  },
+  {
+   "opt": "012",
+   "barcode": "8809451797925",
+   "alt": "젤러시 플럼퍼 | 젤러시레드",
+   "img": "item/2025/11/6860558193495884653.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA8EA0",
+   "white": 0,
+   "grey": 0.086
+  },
+  {
+   "opt": "013",
+   "barcode": "8809451798106",
+   "alt": "젤러시 플럼퍼 | 핑크 피오니",
+   "img": "item/2025/11/8367110067816054260.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E1A8BB",
+   "white": 0,
+   "grey": 0.031
+  },
+  {
+   "opt": "001",
+   "barcode": "8809451798137",
+   "alt": "글로우 틴트 플럼퍼 | 핑크 피치",
+   "img": "item/2024/8/5237987825726096174.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7961",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "014",
+   "barcode": "8809451798144",
+   "alt": "글로우 틴트 플럼퍼 | 코지 모브",
+   "img": "item/2024/8/1751036749382279351.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C65F6F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809451798151",
+   "alt": "글로우 틴트 플럼퍼 | 듀이 핑크",
+   "img": "item/2024/8/2381888247009920767.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DC4B81",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809451798168",
+   "alt": "글로우 틴트 플럼퍼 | 채슈넛 로즈",
+   "img": "item/2024/8/3374622494509123212.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC4B4B",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "017",
+   "barcode": "8809451798175",
+   "alt": "글로우 틴트 플럼퍼 | 딥 진저",
+   "img": "item/2024/8/1481120976831224465.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D64C07",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8809451798182",
+   "alt": "글로우 틴트 플럼퍼 | 누디 브라운",
+   "img": "item/2024/8/3756226848934549776.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF5646",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000188931",
+ "collected_at": "2026-11-17T05:09:28.128Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809716942473",
+   "alt": "03 자비없는 포도인 척",
+   "img": "item/2023/8/6278868498534856389.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#7A2441",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809716942480",
+   "alt": "04 우아한 산딸기인 척",
+   "img": "item/2023/8/3321662007717708620.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B92D49",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

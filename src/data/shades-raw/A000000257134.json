@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000257134",
+ "collected_at": "2026-11-18T00:59:16.892Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8809611868496",
+   "alt": "602 버니",
+   "img": "item/2026/5/8081874095575314197.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D67A71",
+   "white": 0.02,
+   "grey": 0.004
+  },
+  {
+   "opt": "009",
+   "barcode": "8809611868502",
+   "alt": "604 미스티",
+   "img": "item/2026/5/6394031789857413632.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D38894",
+   "white": 0.023,
+   "grey": 0.005
+  },
+  {
+   "opt": "008",
+   "barcode": "8809611868519",
+   "alt": "606 미닝",
+   "img": "item/2026/5/7610613331711568690.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C37970",
+   "white": 0.021,
+   "grey": 0.007
+  },
+  {
+   "opt": "007",
+   "barcode": "8809611868526",
+   "alt": "608 위스퍼",
+   "img": "item/2026/5/3380991971437282695.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD6882",
+   "white": 0.02,
+   "grey": 0.004
+  },
+  {
+   "opt": "005",
+   "barcode": "8809611868540",
+   "alt": "613 피크",
+   "img": "item/2026/5/6772160342626748180.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B55852",
+   "white": 0.018,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8809611868557",
+   "alt": "615 스킵",
+   "img": "item/2026/5/112012946499791164.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B7484C",
+   "white": 0.018,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8809611868564",
+   "alt": "620 템포",
+   "img": "item/2026/5/4060609056496810864.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8D2B4C",
+   "white": 0.017,
+   "grey": 0.003
+  },
+  {
+   "opt": "002",
+   "barcode": "8809611868571",
+   "alt": "(단독컬러) 621 코어",
+   "img": "item/2026/5/1984438145239569371.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5049",
+   "white": 0.015,
+   "grey": 0.008
+  },
+  {
+   "opt": "001",
+   "barcode": "8809611868588",
+   "alt": "(단독컬러) 622 쓰루",
+   "img": "item/2026/5/4972024882070911815.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F4356",
+   "white": 0.017,
+   "grey": 0.006
+  },
+  {
+   "opt": "006",
+   "barcode": "8809611868533",
+   "alt": "611 온리",
+   "img": "item/2026/5/372006141278801597.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB4963",
+   "white": 0.017,
+   "grey": 0.003
+  }
+ ]
+}

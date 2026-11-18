@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000189915",
+ "collected_at": "2026-11-17T05:09:37.669Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "602004149046",
+   "alt": "[단품] 06 필로우 플레이",
+   "img": "item/2023/11/4792937560721543294.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE9C9E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "602004149138",
+   "alt": "[단품] 12 펄",
+   "img": "item/2023/11/7720797306251551798.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E08284",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "602004149312",
+   "alt": "[단품] 28 테디",
+   "img": "item/2023/11/3069951255908028776.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E17671",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

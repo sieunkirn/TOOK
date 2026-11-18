@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000200344",
+ "collected_at": "2026-11-17T05:10:09.285Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809701411106",
+   "alt": "캔디밀크",
+   "img": "item/2024/1/3267094060829435167.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#352328",
+   "white": 0.005,
+   "grey": 0.617
+  },
+  {
+   "opt": "002",
+   "barcode": "8809701411113",
+   "alt": "스트로베리밀크",
+   "img": "item/2024/1/4475358763005537886.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#31171C",
+   "white": 0.003,
+   "grey": 0.615
+  },
+  {
+   "opt": "003",
+   "barcode": "8809701411120",
+   "alt": "뮤트밀크",
+   "img": "item/2024/1/5844536049992435458.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#28191C",
+   "white": 0.003,
+   "grey": 0.615
+  },
+  {
+   "opt": "004",
+   "barcode": "8809701411137",
+   "alt": "모브밀크",
+   "img": "item/2024/1/1359345102986085609.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#2B1E26",
+   "white": 0.004,
+   "grey": 0.616
+  }
+ ]
+}

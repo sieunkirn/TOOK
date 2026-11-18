@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000249846",
+ "collected_at": "2026-11-17T05:06:34.985Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8801882243132",
+   "alt": " 베베",
+   "img": "item/2026/3/8149983976187868640.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EDB9C7",
+   "white": 0.746,
+   "grey": 0.126
+  },
+  {
+   "opt": "002",
+   "barcode": "8801882241602",
+   "alt": "베리유",
+   "img": "item/2026/3/2726751948384548254.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE779D",
+   "white": 0.716,
+   "grey": 0.006
+  },
+  {
+   "opt": "003",
+   "barcode": "8801882241596",
+   "alt": "퍼피",
+   "img": "item/2026/3/5037065112509880589.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D68D85",
+   "white": 0.725,
+   "grey": 0.094
+  },
+  {
+   "opt": "004",
+   "barcode": "8801882241558",
+   "alt": "러브티",
+   "img": "item/2026/3/2361099040846324615.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FEB7BC",
+   "white": 0.74,
+   "grey": 0.124
+  }
+ ]
+}

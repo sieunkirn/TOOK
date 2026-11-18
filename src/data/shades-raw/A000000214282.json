@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000214282",
+ "collected_at": "2026-11-17T05:00:54.555Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809629624121",
+   "alt": "2호 애증",
+   "img": "item/2024/11/8586661003217397063.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B1230",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809629624138",
+   "alt": "3호 혼돈",
+   "img": "item/2024/11/7281278519941504790.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#880A24",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809629624145",
+   "alt": "4호 감정",
+   "img": "item/2024/11/6275535308184969789.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B2D24",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809629624169",
+   "alt": "6호 만남",
+   "img": "item/2024/11/5511638450374949359.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D38179",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809629624572",
+   "alt": "[레미콜라보] 7호 달콤(온라인단독)",
+   "img": "item/2025/7/2588754704650277565.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C4B1C5",
+   "white": 0.707,
+   "grey": 0.189
+  },
+  {
+   "opt": "001",
+   "barcode": "8809629624114",
+   "alt": "1호 소원",
+   "img": "item/2024/11/5682165482069042326.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A24A5C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809629624152",
+   "alt": "5호 추억",
+   "img": "item/2024/11/2840520637921118898.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AB4935",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

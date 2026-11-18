@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000225818",
+ "collected_at": "2026-11-17T05:11:29.059Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809603933164",
+   "alt": "01 체리 수플레",
+   "img": "item/2025/5/819797331028734852.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2726B",
+   "white": 0.002,
+   "grey": 0.003
+  },
+  {
+   "opt": "002",
+   "barcode": "8809603933171",
+   "alt": "02 무화과 필링",
+   "img": "item/2025/5/3740491856520806695.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC554E",
+   "white": 0.004,
+   "grey": 0.005
+  },
+  {
+   "opt": "003",
+   "barcode": "8809603933188",
+   "alt": "03 피치 머랭",
+   "img": "item/2025/5/5455226825379512534.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B23E4D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809603933195",
+   "alt": "21 살구 타르트",
+   "img": "item/2025/5/8973289724766543807.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F09382",
+   "white": 0.014,
+   "grey": 0.017
+  },
+  {
+   "opt": "005",
+   "barcode": "8809603933430",
+   "alt": "25 라즈베리 콕",
+   "img": "item/2025/5/4257885627633737611.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C23330",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "006",
+   "barcode": "8809603933812",
+   "alt": "31 로지 무스",
+   "img": "item/2025/5/9212524906691491838.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E44D62",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809603933829",
+   "alt": "32 포멜로 티",
+   "img": "item/2025/5/6372521800844309166.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#971A3E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809603933836",
+   "alt": "33 플럼 카라멜",
+   "img": "item/2025/5/6113395306252377076.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6F212D",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

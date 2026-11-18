@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000172372",
+ "collected_at": "2026-11-18T01:00:16.469Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8809820741405",
+   "alt": "[NEW] 12 피치 카라멜",
+   "img": "item/2024/5/8858308525299954478.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E59681",
+   "white": 0.024,
+   "grey": 0.019
+  },
+  {
+   "opt": "006",
+   "barcode": "8809820740446",
+   "alt": "06 모브 모어",
+   "img": "item/2022/8/5496535190613229599.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF4F58",
+   "white": 0.819,
+   "grey": 0.046
+  },
+  {
+   "opt": "004",
+   "barcode": "8809820740422",
+   "alt": "04 번트칠리",
+   "img": "item/2022/8/2578119402904558956.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C53C2F",
+   "white": 0.779,
+   "grey": 0.04
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000267645",
+ "collected_at": "2026-11-17T05:00:28.925Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8800353608784",
+   "alt": "[틴트/기획] 02 너티피치",
+   "img": "item/2026/9/857185666769140405.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4A398",
+   "white": 0.558,
+   "grey": 0.135
+  },
+  {
+   "opt": "011",
+   "barcode": "8800353608807",
+   "alt": "[틴트/기획] 06 로즈커드",
+   "img": "item/2026/9/8113087383314645060.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E7929A",
+   "white": 0.55,
+   "grey": 0.103
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353608791",
+   "alt": "[틴트/기획] 08 피치토피",
+   "img": "item/2026/9/3751595082429608544.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E19491",
+   "white": 0.561,
+   "grey": 0.113
+  },
+  {
+   "opt": "001",
+   "barcode": "8800353608708",
+   "alt": "[틴트] 01 베리미니",
+   "img": "item/2026/9/2832327849883304401.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F399A7",
+   "white": 0.07,
+   "grey": 0.032
+  },
+  {
+   "opt": "003",
+   "barcode": "8800353608722",
+   "alt": "[틴트] 03 로지애플",
+   "img": "item/2026/9/5386786948862624470.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E26872",
+   "white": 0.031,
+   "grey": 0.031
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353608739",
+   "alt": "[틴트] 04 소르베리",
+   "img": "item/2026/9/7785581897965440568.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E46B8F",
+   "white": 0.039,
+   "grey": 0.009
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353608746",
+   "alt": "[틴트] 05 체리토마토",
+   "img": "item/2026/9/6505294494301151242.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D55B68",
+   "white": 0.01,
+   "grey": 0.005
+  },
+  {
+   "opt": "007",
+   "barcode": "8800353608760",
+   "alt": "[틴트] 07 타로차이",
+   "img": "item/2026/9/6652584800692121062.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0737E",
+   "white": 0.005,
+   "grey": 0.001
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353609057",
+   "alt": "[틴트][온라인단독] 09 시나모카",
+   "img": "item/2026/9/7547795233790558179.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D37461",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8800353608814",
+   "alt": "[글로스] 01 아이싱",
+   "img": "item/2026/9/3357243921843038533.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8A4AE",
+   "white": 0.071,
+   "grey": 0.029
+  },
+  {
+   "opt": "014",
+   "barcode": "8800353608821",
+   "alt": "[글로스] 02 피치드",
+   "img": "item/2026/9/3316251646537463179.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D98A86",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8800353608838",
+   "alt": "[글로스] 03 바닐로",
+   "img": "item/2026/9/2099014960514860343.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5919D",
+   "white": 0.008,
+   "grey": 0.073
+  },
+  {
+   "opt": "016",
+   "barcode": "8800353608845",
+   "alt": "[글로스] 04 피치넛",
+   "img": "item/2026/9/4099877945567178911.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC9487",
+   "white": 0.035,
+   "grey": 0.081
+  }
+ ]
+}

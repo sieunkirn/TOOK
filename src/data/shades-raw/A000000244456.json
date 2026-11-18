@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000244456",
+ "collected_at": "2026-11-17T05:02:49.290Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "773602784417",
+   "alt": "벨벳 테디",
+   "img": "item/2026/2/3134059609223206962.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.889
+  },
+  {
+   "opt": "002",
+   "barcode": "773602784387",
+   "alt": "웜 허그",
+   "img": "item/2026/2/1155585923089133712.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.886
+  },
+  {
+   "opt": "003",
+   "barcode": "773602784318",
+   "alt": "해빗",
+   "img": "item/2026/2/1378110968690453043.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.89
+  },
+  {
+   "opt": "004",
+   "barcode": "773602784271",
+   "alt": "핑크 로지스",
+   "img": "item/2026/2/7559042974518085603.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.891
+  },
+  {
+   "opt": "005",
+   "barcode": "773602786404",
+   "alt": "썸띵 보로우드",
+   "img": "item/2026/2/2695955306199491145.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.006,
+   "grey": 0.884
+  },
+  {
+   "opt": "006",
+   "barcode": "773602784288",
+   "alt": "테이큰",
+   "img": "item/2026/2/173461162097626234.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.892
+  },
+  {
+   "opt": "008",
+   "barcode": "773602784165",
+   "alt": "멀 잇 오버",
+   "img": "item/2026/2/4230401668751275066.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.878
+  },
+  {
+   "opt": "023",
+   "barcode": "773602784189",
+   "alt": "디보티드 투 칠리",
+   "img": "item/2026/7/3592203191504555022.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.874
+  },
+  {
+   "opt": "025",
+   "barcode": "773602784141",
+   "alt": "맥 스매쉬",
+   "img": "item/2026/7/7023934004999946334.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.872
+  },
+  {
+   "opt": "027",
+   "barcode": "773602784127",
+   "alt": "빌리언 달러 스마일",
+   "img": "item/2026/7/8697996826586816256.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.869
+  },
+  {
+   "opt": "028",
+   "barcode": "773602784110",
+   "alt": "버닝 러브",
+   "img": "item/2026/7/3015190710352733581.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.875
+  },
+  {
+   "opt": "007",
+   "barcode": "773602784158",
+   "alt": "어 리틀 템드",
+   "img": "item/2026/2/764360808466530768.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.004,
+   "grey": 0.871
+  }
+ ]
+}

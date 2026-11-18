@@ -1,0 +1,270 @@
+{
+ "goodsNo": "A000000235351",
+ "collected_at": "2026-11-17T04:55:41.293Z",
+ "options": [
+  {
+   "opt": "030",
+   "barcode": "8800280698476",
+   "alt": "베어(BARE)",
+   "img": "item/2026/8/2580666193165885790.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B15E54",
+   "white": 0.017,
+   "grey": 0.009
+  },
+  {
+   "opt": "029",
+   "barcode": "8800280698247",
+   "alt": "로제(ROSE)",
+   "img": "item/2026/8/5313127017866973884.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D15F66",
+   "white": 0.034,
+   "grey": 0.004
+  },
+  {
+   "opt": "028",
+   "barcode": "8800280698254",
+   "alt": "포지(POSY)",
+   "img": "item/2026/8/8320525347136897463.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB6167",
+   "white": 0.029,
+   "grey": 0.002
+  },
+  {
+   "opt": "027",
+   "barcode": "8800280698261",
+   "alt": "버번(BOURBON)",
+   "img": "item/2026/8/2667681208019344620.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C38477",
+   "white": 0.017,
+   "grey": 0.002
+  },
+  {
+   "opt": "024",
+   "barcode": "8800280697257",
+   "alt": "샌드(SAND)",
+   "img": "item/2026/6/6932853595049903570.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#945C4E",
+   "white": 0.018,
+   "grey": 0.057
+  },
+  {
+   "opt": "026",
+   "barcode": "8800280697271",
+   "alt": "구아나(GUANA)",
+   "img": "item/2026/6/8439275776405369690.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC6156",
+   "white": 0.013,
+   "grey": 0.015
+  },
+  {
+   "opt": "022",
+   "barcode": "8800280697295",
+   "alt": "[기획] 탠지(TANZY) +헤어클립",
+   "img": "item/2026/6/8719622503028279670.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6D6C0",
+   "white": 0.7,
+   "grey": 0.379
+  },
+  {
+   "opt": "015",
+   "barcode": "8800280695550",
+   "alt": "[기획] 피크(PEAK) +틴트링",
+   "img": "item/2026/1/4766536258659359303.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#231415",
+   "white": 0.052,
+   "grey": 0.81
+  },
+  {
+   "opt": "009",
+   "barcode": "8800280695345",
+   "alt": "메이(MAY)",
+   "img": "item/2026/1/3905474830065906532.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B65167",
+   "white": 0.016,
+   "grey": 0.002
+  },
+  {
+   "opt": "011",
+   "barcode": "8800280695307",
+   "alt": "듀이(DEWY)",
+   "img": "item/2026/1/1541446830286375257.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3686B",
+   "white": 0.013,
+   "grey": 0.001
+  },
+  {
+   "opt": "012",
+   "barcode": "8800280695314",
+   "alt": "허쉬(HUSH)",
+   "img": "item/2026/1/7023295710529126376.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F5268",
+   "white": 0.004,
+   "grey": 0.005
+  },
+  {
+   "opt": "013",
+   "barcode": "8800280695338",
+   "alt": "론(LORN)",
+   "img": "item/2026/1/865387355400330264.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#924645",
+   "white": 0.04,
+   "grey": 0.006
+  },
+  {
+   "opt": "016",
+   "barcode": "8800280693983",
+   "alt": "보일(BOIL)",
+   "img": "item/2026/1/7445809840067582716.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D38A86",
+   "white": 0.024,
+   "grey": 0.002
+  },
+  {
+   "opt": "017",
+   "barcode": "8800280693938",
+   "alt": "로스트(ROAST)",
+   "img": "item/2026/1/3536358500691455037.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B56C6F",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "001",
+   "barcode": "8800280694003",
+   "alt": "누디(NUDI)",
+   "img": "item/2025/9/9036951350783267192.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3BC9B",
+   "white": 0.028,
+   "grey": 0.004
+  },
+  {
+   "opt": "002",
+   "barcode": "8800280693990",
+   "alt": "데니아(DENIA)",
+   "img": "item/2025/9/7018978252261883595.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2A69B",
+   "white": 0.043,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8800280693976",
+   "alt": "오브디(OVEDI)",
+   "img": "item/2025/9/7955314976520691645.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B06B64",
+   "white": 0.078,
+   "grey": 0.017
+  },
+  {
+   "opt": "004",
+   "barcode": "8800280693969",
+   "alt": "번트(BURNT)",
+   "img": "item/2025/9/4511387419184429285.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#81443C",
+   "white": 0.099,
+   "grey": 0.114
+  },
+  {
+   "opt": "005",
+   "barcode": "8800280693952",
+   "alt": "베이(BEI)",
+   "img": "item/2025/9/1679535402488408664.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB9996",
+   "white": 0.186,
+   "grey": 0.012
+  },
+  {
+   "opt": "006",
+   "barcode": "8800280693945",
+   "alt": "블러쉬(BLUSH)",
+   "img": "item/2025/9/1001824679940223897.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D49CA2",
+   "white": 0.064,
+   "grey": 0.03
+  },
+  {
+   "opt": "007",
+   "barcode": "8800280693921",
+   "alt": "시엔나(SIENNA)",
+   "img": "item/2025/9/2908922120616300473.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA6D73",
+   "white": 0.02,
+   "grey": 0.01
+  },
+  {
+   "opt": "008",
+   "barcode": "8800280693914",
+   "alt": "세피아(SEPIA)",
+   "img": "item/2025/9/8126558351761585553.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#76494B",
+   "white": 0.039,
+   "grey": 0.011
+  },
+  {
+   "opt": "031",
+   "barcode": "8800280699381",
+   "alt": "[더블기획] 베이비+엔젤(WARM)",
+   "img": "item/2026/11/05/414_05163911.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BCA7A7",
+   "white": 0.594,
+   "grey": 0.712
+  },
+  {
+   "opt": "032",
+   "barcode": "8800280699374",
+   "alt": "[더블기획] 카밍+디뮤어(COOL)",
+   "img": "item/2026/11/05/410_05163924.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B6A7AB",
+   "white": 0.596,
+   "grey": 0.721
+  }
+ ]
+}

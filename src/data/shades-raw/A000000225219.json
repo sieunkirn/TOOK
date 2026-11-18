@@ -1,0 +1,292 @@
+{
+ "goodsNo": "A000000225219",
+ "collected_at": "2026-11-17T05:08:16.519Z",
+ "options": [
+  {
+   "opt": "041",
+   "barcode": "8800276319576",
+   "alt": "[NEW] 벨벳 13 연귤 슈",
+   "img": "item/2025/7/3735922861151298761.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2877F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800276316759",
+   "alt": "글로우 01 헤이즈 젬",
+   "img": "item/2025/5/1517164555559980170.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5BBB7",
+   "white": 0.047,
+   "grey": 0.245
+  },
+  {
+   "opt": "024",
+   "barcode": "8800276316766",
+   "alt": "글로우 02 차이 젬",
+   "img": "item/2025/5/3149412844772944152.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EDA7A5",
+   "white": 0.01,
+   "grey": 0.07
+  },
+  {
+   "opt": "023",
+   "barcode": "8800276316773",
+   "alt": "글로우 03 누가 젬",
+   "img": "item/2025/5/5524144888370842897.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0B2A2",
+   "white": 0.013,
+   "grey": 0.053
+  },
+  {
+   "opt": "022",
+   "barcode": "8800276316780",
+   "alt": "글로우 04 포멜로 젬",
+   "img": "item/2025/5/5286053929630568714.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE7C74",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "017",
+   "barcode": "8800276316834",
+   "alt": "글로우 09 모브 젬",
+   "img": "item/2025/5/7463485392438704718.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C67986",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "015",
+   "barcode": "8800276316858",
+   "alt": "글로우 11 카카오 젬",
+   "img": "item/2025/5/5083459269904370698.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C87D79",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "036",
+   "barcode": "8800276316582",
+   "alt": "벨벳 01 베이지 슈",
+   "img": "item/2025/5/5390618026108323388.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0AEA5",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "035",
+   "barcode": "8800276316599",
+   "alt": "벨벳 02 얼루어 슈",
+   "img": "item/2025/5/7970146296562259553.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1A2A3",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "033",
+   "barcode": "8800276316612",
+   "alt": "벨벳 04 마롱 슈",
+   "img": "item/2025/5/6688291127407613180.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C37C70",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809812960470",
+   "alt": "용기 2 핑크 스피넬",
+   "img": "item/2025/5/8475297664336363228.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2D3E2",
+   "white": 0.555,
+   "grey": 0.142
+  },
+  {
+   "opt": "005",
+   "barcode": "8809812960487",
+   "alt": "용기 3 코랄 시트린",
+   "img": "item/2025/5/959644526213443849.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FDBEBF",
+   "white": 0.553,
+   "grey": 0.072
+  },
+  {
+   "opt": "003",
+   "barcode": "8809812960500",
+   "alt": "용기 5 로지 쿼츠",
+   "img": "item/2025/5/2906360146272385275.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F687A4",
+   "white": 0.554,
+   "grey": 0.067
+  },
+  {
+   "opt": "002",
+   "barcode": "8809812960517",
+   "alt": "용기 6 아쿠아마린",
+   "img": "item/2025/5/6243388733515150117.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BFE2EE",
+   "white": 0.553,
+   "grey": 0.119
+  },
+  {
+   "opt": "042",
+   "barcode": "8800276319583",
+   "alt": "[NEW] 벨벳 14 버니 슈",
+   "img": "item/2025/7/7551114227840602596.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FDA0A6",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "044",
+   "barcode": "8800276319606",
+   "alt": "[NEW] 벨벳 16 로즈티 슈",
+   "img": "item/2025/7/7713098095924689526.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D57682",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8800276316803",
+   "alt": "글로우 06 리본 젬",
+   "img": "item/2025/5/7024017011420096128.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EE7681",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "018",
+   "barcode": "8800276316827",
+   "alt": "글로우 08 포도 젬",
+   "img": "item/2025/5/3690622335106023188.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0496C",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "012",
+   "barcode": "8800276316889",
+   "alt": "글로우 14 메를로 젬",
+   "img": "item/2025/5/4080486426109594761.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A64E5D",
+   "white": 0,
+   "grey": 0.005
+  },
+  {
+   "opt": "031",
+   "barcode": "8800276316636",
+   "alt": "벨벳 06 레이디 슈",
+   "img": "item/2025/5/7642509004167933240.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE8E95",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8800276316643",
+   "alt": "벨벳 07 핑크 슈",
+   "img": "item/2025/5/5166373106005815124.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CC7B88",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "027",
+   "barcode": "8800276316674",
+   "alt": "벨벳 10 플럼 슈",
+   "img": "item/2025/5/5911824011803144761.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B04458",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8800276316698",
+   "alt": "벨벳 12 가넷 슈",
+   "img": "item/2025/5/653978624905567414.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#943139",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809812960463",
+   "alt": "용기 1 크림 문스톤",
+   "img": "item/2025/5/3382699465570046543.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DBD6C7",
+   "white": 0.835,
+   "grey": 0.763
+  },
+  {
+   "opt": "040",
+   "barcode": "8809812960524",
+   "alt": "[NEW] 용기 7 피스타치오 에메랄드",
+   "img": "item/2025/7/7389839142850591695.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#80B396",
+   "white": 0.563,
+   "grey": 0.073
+  },
+  {
+   "opt": "039",
+   "barcode": "8809812960579",
+   "alt": "[NEW] 용기 10 블루 라리마",
+   "img": "item/2025/7/8917606905187792548.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8AC3D4",
+   "white": 0.57,
+   "grey": 0.087
+  }
+ ]
+}

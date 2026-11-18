@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000265682",
+ "collected_at": "2026-11-17T04:59:21.979Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809896482035",
+   "alt": "01 발레리나핑크",
+   "img": "item/2026/8/737132097390809338.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.005,
+   "grey": 0.819
+  },
+  {
+   "opt": "005",
+   "barcode": "8809896482042",
+   "alt": "02 데이지코랄",
+   "img": "item/2026/8/8081217178428377745.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.005,
+   "grey": 0.832
+  },
+  {
+   "opt": "004",
+   "barcode": "8809896483001",
+   "alt": "03 블러쉬레드",
+   "img": "item/2026/8/8551145063728099507.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.004,
+   "grey": 0.859
+  },
+  {
+   "opt": "003",
+   "barcode": "8809896484060",
+   "alt": "04 쥬시체리",
+   "img": "item/2026/8/1205895514412946736.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.838
+  },
+  {
+   "opt": "002",
+   "barcode": "8809896484077",
+   "alt": "05 윈터플럼",
+   "img": "item/2026/8/5211955973365908783.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.816
+  }
+ ]
+}

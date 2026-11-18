@@ -71,6 +71,15 @@ const toWon = (v) => {
   return Number.isFinite(n) && n > 0 ? n : null;
 };
 
+/** 색상 계열 추정기: Lab → 계열 라벨이 있는 기준 색(가상 제품 데이터) 중 가장 가까운 색의 계열 (호수 데이터 import-shades.js 도 같이 쓴다) */
+export function familyFinder(reference) {
+  const refs = reference.map((p) => ({ lab: hexToLab(p.color_hex), family: p.color_family }));
+  return (lab) => refs.reduce((best, r) => {
+    const d = deltaE2000(lab, r.lab);
+    return !best || d < best.d ? { d, family: r.family } : best;
+  }, null).family;
+}
+
 /**
  * @param {object[]} rows 크롤링 JSON
  * @param {object[]} reference 계열 라벨이 있는 기준 색 (가상 제품 데이터)
@@ -78,11 +87,7 @@ const toWon = (v) => {
  * @param {Record<string, string>} [localImages] 상품번호 → public 기준 이미지 파일 경로 (있으면 주소보다 먼저 쓴다)
  */
 export function convert(rows, reference, images = {}, localImages = {}) {
-  const refs = reference.map((p) => ({ lab: hexToLab(p.color_hex), family: p.color_family }));
-  const familyOf = (lab) => refs.reduce((best, r) => {
-    const d = deltaE2000(lab, r.lab);
-    return !best || d < best.d ? { d, family: r.family } : best;
-  }, null).family;
+  const familyOf = familyFinder(reference);
   const products = [];
   const skipped = [];
   const seen = new Set();
@@ -152,7 +157,13 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const manifestFile = join(dirname(src), 'oliveyoung_image_manifest.json');
   const images = existsSync(manifestFile) ? imageMap(JSON.parse(readFileSync(manifestFile, 'utf8'))) : {};
   const localImages = copyLocalImages(rows, dirname(src));
-  const { products, skipped } = convert(rows, reference, images, localImages);
+  const converted = convert(rows, reference, images, localImages);
+  // 사람이 지운 제품(중복 등, src/data/products-removed.json)은 다시 가져와도 넣지 않는다
+  const removedFile = join(root, 'src/data/products-removed.json');
+  const removed = new Set(existsSync(removedFile) ? JSON.parse(readFileSync(removedFile, 'utf8')).map((r) => r.id) : []);
+  const products = converted.products.filter((p) => !removed.has(p.id));
+  const { skipped } = converted;
+  if (removed.size) console.log(`지운 제품 목록에 있어 뺀 것: ${converted.products.length - products.length}개`);
   const out = join(root, 'src/data/products.oliveyoung.json');
   writeFileSync(out, JSON.stringify(products, null, 2) + '\n');
   const finishes = products.reduce((m, p) => ((m[p.finish || '정보 없음'] = (m[p.finish || '정보 없음'] || 0) + 1), m), {});

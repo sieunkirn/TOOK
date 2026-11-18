@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000223250",
+ "collected_at": "2026-11-17T04:58:06.483Z",
+ "options": [
+  {
+   "opt": "017",
+   "barcode": "8809506709873",
+   "alt": "[NEW/미니틴트 기획]13 실키 로즈",
+   "img": "item/2026/7/4299578868404376945.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D98287",
+   "white": 0.463,
+   "grey": 0.144
+  },
+  {
+   "opt": "011",
+   "barcode": "8809506709668",
+   "alt": "[재출시]09 어텀 뮬리",
+   "img": "item/2025/6/9027445297658277099.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A4293E",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8809506708272",
+   "alt": "02 페어링 코랄",
+   "img": "item/2025/4/6587851717366954152.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE685F",
+   "white": 0.012,
+   "grey": 0.008
+  },
+  {
+   "opt": "004",
+   "barcode": "8809506708296",
+   "alt": "04 로지미어",
+   "img": "item/2025/4/6531367115038106097.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC4B4D",
+   "white": 0.007,
+   "grey": 0.005
+  },
+  {
+   "opt": "006",
+   "barcode": "8809506708319",
+   "alt": "06 그레이피그",
+   "img": "item/2025/4/1145643367860482019.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8E4244",
+   "white": 0.006,
+   "grey": 0.024
+  },
+  {
+   "opt": "007",
+   "barcode": "8809506708326",
+   "alt": "07 레드 다이브",
+   "img": "item/2025/4/1728642493087238500.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8E3A38",
+   "white": 0.011,
+   "grey": 0.003
+  },
+  {
+   "opt": "018",
+   "barcode": "8809506709880",
+   "alt": "[NEW/미니틴트 기획]14 어반 브릭",
+   "img": "item/2026/7/5616673723643185831.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E08D8C",
+   "white": 0.469,
+   "grey": 0.136
+  },
+  {
+   "opt": "005",
+   "barcode": "8809506708302",
+   "alt": "05 페일 헤이즈",
+   "img": "item/2025/4/3341302100060247512.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B2594F",
+   "white": 0.019,
+   "grey": 0.016
+  },
+  {
+   "opt": "013",
+   "barcode": "8809506709682",
+   "alt": "[재출시]11 젠틀 브릭",
+   "img": "item/2025/6/2957782490096167941.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#842525",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809506709675",
+   "alt": "10 로즈 슈",
+   "img": "item/2025/6/3236974025771027181.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CF5465",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809506709699",
+   "alt": "12 튤립 샤워",
+   "img": "item/2025/6/8925210985958763807.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D55C55",
+   "white": 0.001,
+   "grey": 0
+  }
+ ]
+}

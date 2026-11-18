@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000256713",
+ "collected_at": "2026-11-18T00:59:06.790Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800332431662",
+   "alt": " 얼리 피치",
+   "img": "item/2026/5/5668383077126832066.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F8B6B2",
+   "white": 0.88,
+   "grey": 0.182
+  },
+  {
+   "opt": "002",
+   "barcode": "8800332431679",
+   "alt": "피치 베어",
+   "img": "item/2026/5/6332030004153228583.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F1A5AB",
+   "white": 0.878,
+   "grey": 0.184
+  },
+  {
+   "opt": "003",
+   "barcode": "8800332431686",
+   "alt": "핑크 멜츠",
+   "img": "item/2026/5/1398642540522731950.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0BDC9",
+   "white": 0.887,
+   "grey": 0.206
+  },
+  {
+   "opt": "004",
+   "barcode": "8800332431693",
+   "alt": "슈 로지",
+   "img": "item/2026/5/5710616639499311598.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E891A9",
+   "white": 0.878,
+   "grey": 0.146
+  },
+  {
+   "opt": "005",
+   "barcode": "8800332431709",
+   "alt": "오트 로즈",
+   "img": "item/2026/5/6959877534224294271.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EEB0AD",
+   "white": 0.882,
+   "grey": 0.196
+  },
+  {
+   "opt": "006",
+   "barcode": "8800332431716",
+   "alt": "코코 베이지",
+   "img": "item/2026/5/6005986341469777431.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EAB3A5",
+   "white": 0.881,
+   "grey": 0.212
+  },
+  {
+   "opt": "007",
+   "barcode": "8800332431723",
+   "alt": "로즈넛",
+   "img": "item/2026/5/1711880670081429785.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D69E99",
+   "white": 0.88,
+   "grey": 0.195
+  },
+  {
+   "opt": "008",
+   "barcode": "8800332431730",
+   "alt": "베리 바인",
+   "img": "item/2026/5/5787243965169179006.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D699AD",
+   "white": 0.878,
+   "grey": 0.156
+  },
+  {
+   "opt": "009",
+   "barcode": "8800332431747",
+   "alt": "콜드 체리",
+   "img": "item/2026/5/9121896563255392621.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE6E8E",
+   "white": 0.876,
+   "grey": 0.112
+  },
+  {
+   "opt": "010",
+   "barcode": "8800332431754",
+   "alt": "레드 브릭",
+   "img": "item/2026/5/2804814979654134218.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F77582",
+   "white": 0.875,
+   "grey": 0.127
+  }
+ ]
+}

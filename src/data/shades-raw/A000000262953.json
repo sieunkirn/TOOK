@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000262953",
+ "collected_at": "2026-11-17T04:55:35.676Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809820717608",
+   "alt": "[단품] 01 살짝핑크",
+   "img": "item/2026/8/8130569064009753906.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E98495",
+   "white": 0.055,
+   "grey": 0.002
+  },
+  {
+   "opt": "008",
+   "barcode": "8809820717530",
+   "alt": "[단품] 02 왠지코랄",
+   "img": "item/2026/8/2195626847874928199.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F4867C",
+   "white": 0.103,
+   "grey": 0.017
+  },
+  {
+   "opt": "007",
+   "barcode": "8809820717547",
+   "alt": "[단품] 03 은근베이지",
+   "img": "item/2026/8/6753025638697311089.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD8683",
+   "white": 0.087,
+   "grey": 0.004
+  },
+  {
+   "opt": "006",
+   "barcode": "8809820717554",
+   "alt": "[단품] 04 피치인듯",
+   "img": "item/2026/8/4531462575501433598.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EFA082",
+   "white": 0.026,
+   "grey": 0.139
+  },
+  {
+   "opt": "005",
+   "barcode": "8809820717561",
+   "alt": "[단품] 05 슬며시로즈",
+   "img": "item/2026/8/3243437507293167639.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC5967",
+   "white": 0.107,
+   "grey": 0.003
+  },
+  {
+   "opt": "004",
+   "barcode": "8809820717578",
+   "alt": "[단품] 06 괜히브라운",
+   "img": "item/2026/8/2780959254261448690.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C2685B",
+   "white": 0.099,
+   "grey": 0.01
+  },
+  {
+   "opt": "009",
+   "barcode": "8809820717851",
+   "alt": "[단품] 07 살포시 피그 (온라인단독)",
+   "img": "item/2026/11/02/cc8_02144016.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC544B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809820718391",
+   "alt": "[스트레스볼/기획] 03 은근베이지",
+   "img": "item/2026/8/7088052135300046287.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DAB3B3",
+   "white": 0.55,
+   "grey": 0.411
+  }
+ ]
+}

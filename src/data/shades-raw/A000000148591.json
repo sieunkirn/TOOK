@@ -1,0 +1,259 @@
+{
+ "goodsNo": "A000000148591",
+ "collected_at": "2026-11-17T04:54:19.781Z",
+ "options": [
+  {
+   "opt": "045",
+   "barcode": "8805545401105",
+   "alt": "[쿠로미에디션] 레이다운+키캡키링",
+   "img": "item/2026/10/26/220_26180936.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE8987",
+   "white": 0.652,
+   "grey": 0.372
+  },
+  {
+   "opt": "047",
+   "barcode": "8805545400863",
+   "alt": "[쿠로미에디션] 핑크구아바+키캡키링",
+   "img": "item/2026/10/26/fd2_26180945.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF7A86",
+   "white": 0.655,
+   "grey": 0.39
+  },
+  {
+   "opt": "001",
+   "barcode": "8809664983429",
+   "alt": "레이다운(웜 베스트)",
+   "img": "item/2026/1/5149412759492072839.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E08374",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809664983467",
+   "alt": "핑크 구아바(쿨 베스트)",
+   "img": "item/2026/1/4934959175154880038.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB545F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "041",
+   "barcode": "6902395978374",
+   "alt": "[OY단독] 소프트 스포큰(웜 추천)",
+   "img": "item/2025/9/1374410596914423589.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C16768",
+   "white": 0.014,
+   "grey": 0.003
+  },
+  {
+   "opt": "002",
+   "barcode": "8809664983443",
+   "alt": "캐주얼 어페어(웜 추천)",
+   "img": "item/2026/1/4704091328085103272.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C24D50",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809664983450",
+   "alt": "코랄 문(봄웜 추천)",
+   "img": "item/2026/1/2479737996468115785.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5594D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809664983474",
+   "alt": "스팟 플레이어(쿨 추천)",
+   "img": "item/2026/1/2697284974284525672.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D32C3E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809664983481",
+   "alt": "플레이 오프(뉴트럴 추천)",
+   "img": "item/2026/1/3457397325300370984.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC1E20",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809664983436",
+   "alt": "베이크 베이지(웜 추천)",
+   "img": "item/2026/1/4616693843574920643.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B64E34",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809664983498",
+   "alt": "더블 윈드(쿨 추천)",
+   "img": "item/2026/1/7973186163383693957.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B24959",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809664983511",
+   "alt": "세피아(웜 추천)",
+   "img": "item/2026/1/7314684202876947225.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A53327",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809664984617",
+   "alt": "얼리 아워(쿨 추천)",
+   "img": "item/2026/1/5077563421038684382.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE5051",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809664985478",
+   "alt": "체이싱 로즈(웜 추천)",
+   "img": "item/2026/1/7308569499899937981.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC5B58",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809664985461",
+   "alt": "퍼스트 레터(뉴트럴 추천)",
+   "img": "item/2026/1/114246731479207457.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE574C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809664985454",
+   "alt": "모어 피치(웜 추천)",
+   "img": "item/2026/1/7226136326203252835.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1764C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809664988202",
+   "alt": "웜스(웜 추천)",
+   "img": "item/2023/2/2502137020561883091.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D47865",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809664988219",
+   "alt": "나이트 토크(쿨 추천)",
+   "img": "item/2023/2/8274005600172755333.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B75F64",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809664988226",
+   "alt": "디어 마치(뉴트럴 추천)",
+   "img": "item/2023/2/1372116548844496956.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD6860",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "035",
+   "barcode": "8800249651016",
+   "alt": "탱이 피버(봄웜 추천)",
+   "img": "item/2025/8/2583724864827878228.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F46341",
+   "white": 0.003,
+   "grey": 0.007
+  },
+  {
+   "opt": "038",
+   "barcode": "8800249651009",
+   "alt": "플럼 바이트(겨울쿨 추천)",
+   "img": "item/2025/8/2313549220155526026.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#93175C",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "039",
+   "barcode": "8800249650675",
+   "alt": "베리 잇(여름쿨 추천)",
+   "img": "item/2025/8/3354268307409134366.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E93274",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "046",
+   "barcode": "8805545401068",
+   "alt": "[오늘 드림/NEW] 모브실루엣+키캡키링",
+   "img": "item/2026/10/26/757_26180939.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B68593",
+   "white": 0.657,
+   "grey": 0.418
+  }
+ ]
+}

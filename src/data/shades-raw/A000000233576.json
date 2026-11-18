@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000233576",
+ "collected_at": "2026-11-17T04:58:33.001Z",
+ "options": [
+  {
+   "opt": "015",
+   "barcode": "8800312061629",
+   "alt": "(미니튜브 증정) 05스트로베리팝",
+   "img": "item/2025/8/8711190578506703967.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE8796",
+   "white": 0.104,
+   "grey": 0.165
+  },
+  {
+   "opt": "001",
+   "barcode": "8800312060936",
+   "alt": "01스위티듀",
+   "img": "item/2025/8/874623436833080260.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB627F",
+   "white": 0.012,
+   "grey": 0.199
+  },
+  {
+   "opt": "002",
+   "barcode": "8800312060929",
+   "alt": "02바닐라듀",
+   "img": "item/2025/8/280227662522734449.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6656C",
+   "white": 0.001,
+   "grey": 0.194
+  },
+  {
+   "opt": "003",
+   "barcode": "8800312060943",
+   "alt": "03위듀아웃",
+   "img": "item/2025/8/7256786089183123058.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D66671",
+   "white": 0.001,
+   "grey": 0.207
+  },
+  {
+   "opt": "004",
+   "barcode": "8800312060950",
+   "alt": "04멜바듀",
+   "img": "item/2025/8/6605227700637349509.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB675F",
+   "white": 0.006,
+   "grey": 0.197
+  },
+  {
+   "opt": "006",
+   "barcode": "8800312060974",
+   "alt": "06베리팝",
+   "img": "item/2025/8/1382809253953811940.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB4266",
+   "white": 0.006,
+   "grey": 0.197
+  },
+  {
+   "opt": "008",
+   "barcode": "8800312060998",
+   "alt": "08리치팝",
+   "img": "item/2025/8/8249562680701071784.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D34E4D",
+   "white": 0,
+   "grey": 0.197
+  },
+  {
+   "opt": "009",
+   "barcode": "8800312061001",
+   "alt": "09애플딥",
+   "img": "item/2025/8/329721044298363343.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C93946",
+   "white": 0.002,
+   "grey": 0.196
+  },
+  {
+   "opt": "010",
+   "barcode": "8800312061025",
+   "alt": "10체리딥",
+   "img": "item/2025/8/3280381221975881625.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B33553",
+   "white": 0.008,
+   "grey": 0.198
+  },
+  {
+   "opt": "011",
+   "barcode": "8800312061018",
+   "alt": "11플럼딥",
+   "img": "item/2025/8/1487355066064747079.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E2A50",
+   "white": 0.008,
+   "grey": 0.198
+  },
+  {
+   "opt": "012",
+   "barcode": "8800312061032",
+   "alt": "12피그딥",
+   "img": "item/2025/8/3336630702873502678.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C74750",
+   "white": 0.003,
+   "grey": 0.197
+  },
+  {
+   "opt": "007",
+   "barcode": "8800312060981",
+   "alt": "07피치팝",
+   "img": "item/2025/8/1454966924708514330.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE4E5F",
+   "white": 0,
+   "grey": 0.194
+  }
+ ]
+}

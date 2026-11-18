@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000245004",
+ "collected_at": "2026-11-18T00:58:13.613Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809712392340",
+   "alt": "01 토아",
+   "img": "item/2026/1/2268385494715507413.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF7879",
+   "white": 0.815,
+   "grey": 0.296
+  },
+  {
+   "opt": "008",
+   "barcode": "8809712392357",
+   "alt": "02 코타",
+   "img": "item/2026/1/7323102577926170090.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD756B",
+   "white": 0.813,
+   "grey": 0.297
+  },
+  {
+   "opt": "007",
+   "barcode": "8809712392364",
+   "alt": "03 온 릿",
+   "img": "item/2026/1/8966244726906553.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA7989",
+   "white": 0.816,
+   "grey": 0.299
+  },
+  {
+   "opt": "006",
+   "barcode": "8809712392371",
+   "alt": "04 베이브",
+   "img": "item/2026/1/7145877345379643053.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB877F",
+   "white": 0.816,
+   "grey": 0.348
+  },
+  {
+   "opt": "005",
+   "barcode": "8809712392388",
+   "alt": "05 토프 신",
+   "img": "item/2026/3/3139697755233133272.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#975C5B",
+   "white": 0.811,
+   "grey": 0.323
+  },
+  {
+   "opt": "004",
+   "barcode": "8809712392395",
+   "alt": "06 모스",
+   "img": "item/2026/1/5444422506174044587.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C83B53",
+   "white": 0.811,
+   "grey": 0.276
+  },
+  {
+   "opt": "003",
+   "barcode": "8809712392401",
+   "alt": "07 체이즈",
+   "img": "item/2026/1/7544148029030937357.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD4369",
+   "white": 0.814,
+   "grey": 0.282
+  },
+  {
+   "opt": "002",
+   "barcode": "8809712392418",
+   "alt": "08 로 피그",
+   "img": "item/2026/1/3481685409210382745.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E5763",
+   "white": 0.819,
+   "grey": 0.32
+  }
+ ]
+}

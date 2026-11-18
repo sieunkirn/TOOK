@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000209466",
+ "collected_at": "2026-11-17T05:10:39.967Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809451798137",
+   "alt": "01 핑크 피치 (온)",
+   "img": "item/2024/8/5237987825726096174.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7961",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8809451798144",
+   "alt": "02 코지 모브 (온)",
+   "img": "item/2024/8/1751036749382279351.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C65F6F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809451798151",
+   "alt": "03 듀이 핑크 (온)",
+   "img": "item/2024/8/2381888247009920767.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DC4B81",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809451798168",
+   "alt": "04 채슈넛 로즈 (온)\\t",
+   "img": "item/2024/8/3374622494509123212.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC4B4B",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "005",
+   "barcode": "8809451798175",
+   "alt": "05 딥 진저 (온)",
+   "img": "item/2024/8/1481120976831224465.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D64C07",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809451798182",
+   "alt": " 06 누디 브라운 (온)",
+   "img": "item/2024/8/3756226848934549776.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF5646",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

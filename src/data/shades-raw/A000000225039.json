@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000225039",
+ "collected_at": "2026-11-17T05:07:05.420Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8800303330000",
+   "alt": "V02 생기갑 (미니)",
+   "img": "item/2025/4/7311536759355312766.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC6D69",
+   "white": 0.783,
+   "grey": 0.318
+  },
+  {
+   "opt": "008",
+   "barcode": "8800303330017",
+   "alt": "V12 다정보스 (미니)",
+   "img": "item/2025/4/8346933635286278030.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD7469",
+   "white": 0.782,
+   "grey": 0.341
+  },
+  {
+   "opt": "007",
+   "barcode": "8800303330024",
+   "alt": "V14 매정보스 (미니)",
+   "img": "item/2025/4/6970689590696482518.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B46C6D",
+   "white": 0.782,
+   "grey": 0.347
+  },
+  {
+   "opt": "006",
+   "barcode": "8800303330031",
+   "alt": "V17 꽃보다 살랑 (미니)",
+   "img": "item/2025/4/3388530639576870152.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E08B8B",
+   "white": 0.784,
+   "grey": 0.332
+  },
+  {
+   "opt": "005",
+   "barcode": "8800303330048",
+   "alt": "V21 다큐의 정석 (미니)",
+   "img": "item/2025/4/8661641623062657319.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6969A",
+   "white": 0.785,
+   "grey": 0.383
+  },
+  {
+   "opt": "004",
+   "barcode": "8800303330055",
+   "alt": "V24 흥행의 정석 (미니)",
+   "img": "item/2025/4/8343276920232977666.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC7B7B",
+   "white": 0.782,
+   "grey": 0.351
+  },
+  {
+   "opt": "002",
+   "barcode": "8800303330079",
+   "alt": "V40 썸머 로즈 (미니)",
+   "img": "item/2025/4/7368649860508420949.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DCA0A7",
+   "white": 0.784,
+   "grey": 0.351
+  },
+  {
+   "opt": "001",
+   "barcode": "8800303330086",
+   "alt": "V48 즐거운 인생 (미니)",
+   "img": "item/2025/4/6717589919332632529.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF9592",
+   "white": 0.785,
+   "grey": 0.367
+  },
+  {
+   "opt": "003",
+   "barcode": "8800303330062",
+   "alt": "V25 막장의 정석 (미니)",
+   "img": "item/2025/4/3669689585403597744.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A57269",
+   "white": 0.781,
+   "grey": 0.382
+  }
+ ]
+}

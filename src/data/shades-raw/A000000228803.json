@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000228803",
+ "collected_at": "2026-11-17T04:59:30.887Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800261383810",
+   "alt": "01 어펙션 (웜 추천)",
+   "img": "item/2026/1/1751691361625878961.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F06C6E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8800261383827",
+   "alt": "02 신시어 (쿨 추천)",
+   "img": "item/2026/1/9214988499865893218.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D2617C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800261383834",
+   "alt": "03 클래시 (쿨 추천)",
+   "img": "item/2026/1/7394827685684164305.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D15667",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800261383841",
+   "alt": "04 어도러블 (웜 베스트)",
+   "img": "item/2026/1/6630129050946090490.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E75148",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800261383858",
+   "alt": "05 코디얼 (웜 추천)",
+   "img": "item/2026/1/7823664348414850778.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9425E",
+   "white": 0.001,
+   "grey": 0.003
+  },
+  {
+   "opt": "006",
+   "barcode": "8800261383865",
+   "alt": "06 어필 (웜&쿨 베스트)",
+   "img": "item/2026/1/4869394075890113840.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D23443",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "005",
+   "barcode": "8800261383872",
+   "alt": "07쌔씨 (쿨 추천)",
+   "img": "item/2026/1/626886125663015244.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4447A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800261383889",
+   "alt": "08 훅드 (쿨 추천)",
+   "img": "item/2026/1/5561577333990177281.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B2254A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800261383896",
+   "alt": "09 소버 (웜 베스트)",
+   "img": "item/2026/1/8748823184863848542.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A72D26",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8800261383902",
+   "alt": "10 패션 (웜&쿨 베스트)",
+   "img": "item/2026/1/8014447006682933584.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF1735",
+   "white": 0,
+   "grey": 0.006
+  }
+ ]
+}

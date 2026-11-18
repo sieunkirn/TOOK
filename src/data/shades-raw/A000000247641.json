@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000247641",
+ "collected_at": "2026-11-17T05:03:06.246Z",
+ "options": [
+  {
+   "opt": "018",
+   "barcode": "8809712393163",
+   "alt": "05 모보 기획 (+클리어 비치백)",
+   "img": "item/2026/6/4307035245460035847.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7A626E",
+   "white": 0.082,
+   "grey": 0.662
+  },
+  {
+   "opt": "017",
+   "barcode": "8809712392944",
+   "alt": "02 픽키 기획 (+메쉬 파우치백)",
+   "img": "item/2026/5/7852696738346869586.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6B5053",
+   "white": 0.013,
+   "grey": 0.582
+  },
+  {
+   "opt": "016",
+   "barcode": "8809712392951",
+   "alt": "03 테니 기획 (+메쉬 파우치백)",
+   "img": "item/2026/5/5213091728561105889.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#694A4B",
+   "white": 0.012,
+   "grey": 0.55
+  },
+  {
+   "opt": "014",
+   "barcode": "8809712392449",
+   "alt": "01 핀치",
+   "img": "item/2026/2/3210980568248574780.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F3A59C",
+   "white": 0.714,
+   "grey": 0.329
+  },
+  {
+   "opt": "011",
+   "barcode": "8809712392470",
+   "alt": "04 태피",
+   "img": "item/2026/2/4504140112786492337.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C78F7E",
+   "white": 0.712,
+   "grey": 0.335
+  },
+  {
+   "opt": "009",
+   "barcode": "8809712392494",
+   "alt": "06 센즈",
+   "img": "item/2026/2/8400963438512895651.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E19196",
+   "white": 0.708,
+   "grey": 0.321
+  },
+  {
+   "opt": "008",
+   "barcode": "8809712392500",
+   "alt": "07 릿츠",
+   "img": "item/2026/2/8730770998236454119.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3697D",
+   "white": 0.71,
+   "grey": 0.29
+  },
+  {
+   "opt": "007",
+   "barcode": "8809712392517",
+   "alt": "08 언비티",
+   "img": "item/2026/2/5694898682996313369.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF5D82",
+   "white": 0.712,
+   "grey": 0.293
+  },
+  {
+   "opt": "019",
+   "barcode": "8809712393170",
+   "alt": "06 센즈 기획 (+클리어 비치백)",
+   "img": "item/2026/6/4894433356191532016.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#835C60",
+   "white": 0.052,
+   "grey": 0.66
+  },
+  {
+   "opt": "015",
+   "barcode": "8809712392968",
+   "alt": "06 센즈 기획 (+메쉬 파우치백)",
+   "img": "item/2026/5/2943179974184300957.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#634648",
+   "white": 0.01,
+   "grey": 0.568
+  },
+  {
+   "opt": "004",
+   "barcode": "8809712392661",
+   "alt": "04 태피 기획 (+코튼 립파우치)",
+   "img": "item/2026/2/8643658763170069319.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#5E4443",
+   "white": 0.206,
+   "grey": 0.713
+  },
+  {
+   "opt": "010",
+   "barcode": "8809712392487",
+   "alt": "05 모보",
+   "img": "item/2026/2/8057344325423943261.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C48BA0",
+   "white": 0.712,
+   "grey": 0.335
+  },
+  {
+   "opt": "003",
+   "barcode": "8809712392678",
+   "alt": "05 모보 기획 (+코튼 립파우치)",
+   "img": "item/2026/2/2128758036201587393.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#533C44",
+   "white": 0.247,
+   "grey": 0.774
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000200585",
+ "collected_at": "2026-11-18T01:00:34.699Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "4973167091418",
+   "alt": "M01 딥레드 크림슨",
+   "img": "item/2024/1/5711987120975735573.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#952F2A",
+   "white": 0.798,
+   "grey": 0.023
+  },
+  {
+   "opt": "002",
+   "barcode": "4973167091425",
+   "alt": "M02 이모탈 체리블라썸",
+   "img": "item/2024/1/109703911846683133.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C65551",
+   "white": 0.772,
+   "grey": 0.016
+  },
+  {
+   "opt": "003",
+   "barcode": "4973167091432",
+   "alt": "M03 셀레브레이션 컨페티",
+   "img": "item/2024/1/7574715195948499138.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE5363",
+   "white": 0.784,
+   "grey": 0.021
+  },
+  {
+   "opt": "004",
+   "barcode": "4973167091449",
+   "alt": "M04 고스트문 0:00AM",
+   "img": "item/2024/1/4318572942587432924.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9B4629",
+   "white": 0.763,
+   "grey": 0.023
+  },
+  {
+   "opt": "005",
+   "barcode": "4973167091456",
+   "alt": "M05 미스티머드",
+   "img": "item/2024/1/2654956833674284053.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A0554B",
+   "white": 0.769,
+   "grey": 0.026
+  },
+  {
+   "opt": "006",
+   "barcode": "4973167521533",
+   "alt": "M06 프레시 라테라이트",
+   "img": "item/2024/1/7653143204201330529.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F3D32",
+   "white": 0.765,
+   "grey": 0.045
+  },
+  {
+   "opt": "007",
+   "barcode": "4973167521540",
+   "alt": "M07 번 토스트",
+   "img": "item/2024/1/77780174050196438.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#974C3B",
+   "white": 0.785,
+   "grey": 0.027
+  },
+  {
+   "opt": "008",
+   "barcode": "4973167521557",
+   "alt": "M08 로어링 방케",
+   "img": "item/2024/1/6293917937407358795.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B05D64",
+   "white": 0.785,
+   "grey": 0.025
+  },
+  {
+   "opt": "009",
+   "barcode": "4973167533819",
+   "alt": "EX-1 만다린 쉬폰 뭉게구름",
+   "img": "item/2024/5/4851776860742491385.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D77C61",
+   "white": 0.793,
+   "grey": 0.022
+  },
+  {
+   "opt": "010",
+   "barcode": "4973167533826",
+   "alt": "EX-2 양털구름 요람",
+   "img": "item/2024/5/7722072456850146452.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE6E7B",
+   "white": 0.794,
+   "grey": 0.03
+  }
+ ]
+}

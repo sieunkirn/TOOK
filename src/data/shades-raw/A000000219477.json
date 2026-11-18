@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000219477",
+ "collected_at": "2026-11-17T05:06:50.702Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800258082498",
+   "alt": "00 립 매트",
+   "img": "item/2025/2/7060938370168218188.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0DFE4",
+   "white": 0.695,
+   "grey": 1
+  },
+  {
+   "opt": "006",
+   "barcode": "8800258082535",
+   "alt": "04 올드 체리",
+   "img": "item/2025/2/9215712736352785670.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A64955",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800258082542",
+   "alt": "05 누디 망고",
+   "img": "item/2025/2/6263589106750004307.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF7F4B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800258082559",
+   "alt": "06 스트로베리 휩",
+   "img": "item/2025/2/6414149784435244523.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F48394",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800258082504",
+   "alt": "01 피치 퍼프",
+   "img": "item/2025/2/4748837057207030136.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C8655E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800258082511",
+   "alt": "02 허쉬 그레이프",
+   "img": "item/2025/2/1608810794041902584.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C55F6A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800258082528",
+   "alt": "03 토프 던",
+   "img": "item/2025/2/7415574684992346089.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9E5749",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800258082566",
+   "alt": "07 테디 베이지",
+   "img": "item/2025/2/2320578615182179723.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D68A6A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800258082573",
+   "alt": "08 버터 핑크",
+   "img": "item/2025/2/6987592986154165980.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D87E80",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

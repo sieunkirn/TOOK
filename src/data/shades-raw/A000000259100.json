@@ -1,0 +1,182 @@
+{
+ "goodsNo": "A000000259100",
+ "collected_at": "2026-11-18T00:59:25.015Z",
+ "options": [
+  {
+   "opt": "016",
+   "barcode": "8809836584607",
+   "alt": "10 모어기획(+이너피스 왁스볼)",
+   "img": "item/2026/8/9026444177643795424.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C9B7BF",
+   "white": 0.544,
+   "grey": 0.373
+  },
+  {
+   "opt": "017",
+   "barcode": "8809836584614",
+   "alt": "11 파우트 기획(+이너피스 왁스볼)",
+   "img": "item/2026/8/3962940052050164747.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C1B0B8",
+   "white": 0.545,
+   "grey": 0.4
+  },
+  {
+   "opt": "018",
+   "barcode": "8809836584621",
+   "alt": "14 캄 기획(+이너피스 왁스볼)",
+   "img": "item/2026/8/3492628064443950243.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6B5BD",
+   "white": 0.545,
+   "grey": 0.384
+  },
+  {
+   "opt": "019",
+   "barcode": "8809836584638",
+   "alt": "15 피스풀 기획(+이너피스 왁스볼)",
+   "img": "item/2026/8/4643505339268924816.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CAB8C0",
+   "white": 0.544,
+   "grey": 0.376
+  },
+  {
+   "opt": "004",
+   "barcode": "8809836584171",
+   "alt": "05 네스트 기획(+UV 쉴드 블러셔)",
+   "img": "item/2026/6/2857124871819818038.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2A5A3",
+   "white": 0.458,
+   "grey": 0.143
+  },
+  {
+   "opt": "015",
+   "barcode": "8809836584010",
+   "alt": "01 울리",
+   "img": "item/2026/6/5420452690402551026.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE8D92",
+   "white": 0.643,
+   "grey": 0.01
+  },
+  {
+   "opt": "014",
+   "barcode": "8809836584027",
+   "alt": "02 프랄린",
+   "img": "item/2026/6/2885302103498452791.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE8989",
+   "white": 0.591,
+   "grey": 0.01
+  },
+  {
+   "opt": "013",
+   "barcode": "8809836584034",
+   "alt": "03 윔지",
+   "img": "item/2026/6/4531434363139719378.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F86367",
+   "white": 0.59,
+   "grey": 0.008
+  },
+  {
+   "opt": "012",
+   "barcode": "8809836584041",
+   "alt": "04 플러터",
+   "img": "item/2026/6/6798778292482338982.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC5F70",
+   "white": 0.59,
+   "grey": 0.009
+  },
+  {
+   "opt": "011",
+   "barcode": "8809836584065",
+   "alt": "06 베이크드",
+   "img": "item/2026/6/8369962517977358434.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA726C",
+   "white": 0.591,
+   "grey": 0.014
+  },
+  {
+   "opt": "010",
+   "barcode": "8809836584072",
+   "alt": "07 디어리",
+   "img": "item/2026/6/2158469407112639759.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E7818F",
+   "white": 0.592,
+   "grey": 0.008
+  },
+  {
+   "opt": "009",
+   "barcode": "8809836584089",
+   "alt": "08 러비",
+   "img": "item/2026/6/3011341577552414747.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E08095",
+   "white": 0.593,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8809836584096",
+   "alt": "09 플리에",
+   "img": "item/2026/6/1076117448490977829.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E76682",
+   "white": 0.591,
+   "grey": 0.008
+  },
+  {
+   "opt": "005",
+   "barcode": "8809836584126",
+   "alt": "12 트레이스",
+   "img": "item/2026/6/3554847331581081313.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B94C63",
+   "white": 0.591,
+   "grey": 0.011
+  },
+  {
+   "opt": "003",
+   "barcode": "8809836584188",
+   "alt": "10 모어 기획(+UV 쉴드 블러셔)",
+   "img": "item/2026/6/7303937709409389850.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DBA4A7",
+   "white": 0.463,
+   "grey": 0.157
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836584195",
+   "alt": "11 파우트 기획(+UV 쉴드 블러셔)",
+   "img": "item/2026/6/4894603782459959039.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DBAAAF",
+   "white": 0.467,
+   "grey": 0.169
+  }
+ ]
+}

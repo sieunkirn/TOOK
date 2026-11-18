@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000187640",
+ "collected_at": "2026-11-17T05:06:55.682Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809629622813",
+   "alt": "02 레드 플레이버",
+   "img": "item/2023/6/3286216544170806708.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7F031C",
+   "white": 0.002,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809629622820",
+   "alt": "03 탠 크러시",
+   "img": "item/2023/6/405136029874419614.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9C2318",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809629623964",
+   "alt": "[NEW] 04 비터 카라멜",
+   "img": "item/2025/6/5870521546854250259.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B45F50",
+   "white": 0.004,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "8809629623957",
+   "alt": "[NEW] 05 솔티 피그",
+   "img": "item/2025/6/7601100609233312514.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB646E",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809629623940",
+   "alt": "[NEW] 06 너티 피치",
+   "img": "item/2025/6/9195707741153357855.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF5864",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809629622806",
+   "alt": "01 핑크 더비",
+   "img": "item/2023/6/7870479105292025081.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B14161",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

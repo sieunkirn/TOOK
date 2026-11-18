@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000158893",
+ "collected_at": "2026-11-17T04:58:42.863Z",
+ "options": [
+  {
+   "opt": "018",
+   "barcode": "8800344923810",
+   "alt": "[미니글로스기획] 13 커스터드 모브",
+   "img": "item/2026/10/27/64a_27163157.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D68994",
+   "white": 0.417,
+   "grey": 0.036
+  },
+  {
+   "opt": "013",
+   "barcode": "8809625245993",
+   "alt": "12 캐니언",
+   "img": "item/2022/9/3255672253564874126.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A95248",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625245290",
+   "alt": "09 코튼 멜바",
+   "img": "item/2022/6/7767235313797597939.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE726B",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809625244200",
+   "alt": "07 체리 웨이",
+   "img": "item/2021/10/4037508341574238167.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC253C",
+   "white": 0.012,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625244217",
+   "alt": "08 베리 디바인",
+   "img": "item/2021/10/6093139865908402523.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7B1D39",
+   "white": 0.007,
+   "grey": 0.001
+  },
+  {
+   "opt": "012",
+   "barcode": "8809625246006",
+   "alt": "13 커스터드 모브",
+   "img": "item/2022/9/7149552771408698474.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AC515B",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625245306",
+   "alt": "10 머머 핑크",
+   "img": "item/2022/6/6628212456261292430.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE6298",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "009",
+   "barcode": "8809625245450",
+   "alt": "11 라일락 크림",
+   "img": "item/2022/6/8598301024069791889.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F277A5",
+   "white": 0.009,
+   "grey": 0.001
+  },
+  {
+   "opt": "001",
+   "barcode": "8809625244149",
+   "alt": "01 인 코랄",
+   "img": "item/2021/10/8084744072454701622.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DD4151",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809625244156",
+   "alt": "02 솔티 피치",
+   "img": "item/2021/10/3845964392963802590.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C85445",
+   "white": 0.08,
+   "grey": 0.024
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625244187",
+   "alt": "05 태피",
+   "img": "item/2021/10/4427703649675941169.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E53062",
+   "white": 0.039,
+   "grey": 0.007
+  },
+  {
+   "opt": "007",
+   "barcode": "8809625244163",
+   "alt": "03 이프 로즈",
+   "img": "item/2021/10/4939895682775081958.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B94949",
+   "white": 0.031,
+   "grey": 0.007
+  },
+  {
+   "opt": "004",
+   "barcode": "8809625244194",
+   "alt": "06 툴리안",
+   "img": "item/2021/10/346903696743400595.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D13F5F",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625244170",
+   "alt": "04 칠리 업",
+   "img": "item/2021/10/3177904575964295032.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#982528",
+   "white": 0.033,
+   "grey": 0.003
+  }
+ ]
+}

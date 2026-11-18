@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000232806",
+ "collected_at": "2026-11-17T05:12:25.461Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800260950280",
+   "alt": "몰리",
+   "img": "item/2025/8/323325164611477579.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CD8385",
+   "white": 0.789,
+   "grey": 0.375
+  },
+  {
+   "opt": "009",
+   "barcode": "8800260950358",
+   "alt": "매버릭",
+   "img": "item/2025/8/6207587314531562897.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#89635F",
+   "white": 0.801,
+   "grey": 0.434
+  }
+ ]
+}

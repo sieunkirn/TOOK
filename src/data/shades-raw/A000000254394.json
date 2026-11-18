@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000254394",
+ "collected_at": "2026-11-18T00:58:59.677Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809672513076",
+   "alt": "201 토슈즈 엔젤",
+   "img": "item/2026/4/6021968782808403938.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE7F8D",
+   "white": 0.016,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8809672513083",
+   "alt": "202 피치 엔젤",
+   "img": "item/2026/4/1544563319647124207.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2827F",
+   "white": 0.063,
+   "grey": 0.008
+  },
+  {
+   "opt": "003",
+   "barcode": "8809672513090",
+   "alt": "203 라일락 엔젤",
+   "img": "item/2026/4/2393582527290113043.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD8CA9",
+   "white": 0.054,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8809672513106",
+   "alt": "204 베이비 키스",
+   "img": "item/2026/4/90082281727471437.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0727D",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "8809672513113",
+   "alt": "205 베이비 베리",
+   "img": "item/2026/4/5022226851887945411.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D56D90",
+   "white": 0.022,
+   "grey": 0.002
+  },
+  {
+   "opt": "006",
+   "barcode": "8809672513120",
+   "alt": "206 멜트 크림",
+   "img": "item/2026/4/157675897665289758.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D28884",
+   "white": 0.087,
+   "grey": 0.016
+  },
+  {
+   "opt": "007",
+   "barcode": "8809672513137",
+   "alt": "207 비터 피그",
+   "img": "item/2026/4/8529522803417132715.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D67172",
+   "white": 0.11,
+   "grey": 0.019
+  },
+  {
+   "opt": "008",
+   "barcode": "8809672513144",
+   "alt": "208 비터 초코",
+   "img": "item/2026/4/1883958910744180852.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD5D53",
+   "white": 0.05,
+   "grey": 0.002
+  }
+ ]
+}

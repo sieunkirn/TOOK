@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000187713",
+ "collected_at": "2026-11-17T05:09:18.356Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8806194064918",
+   "alt": "01 베이비 오렌지",
+   "img": "item/2023/6/778525825648316658.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE948F",
+   "white": 0.865,
+   "grey": 0.669
+  },
+  {
+   "opt": "001",
+   "barcode": "8806194065342",
+   "alt": "02 오마이로즈",
+   "img": "item/2023/6/8194078655201456748.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A2928F",
+   "white": 0.865,
+   "grey": 0.659
+  },
+  {
+   "opt": "004",
+   "barcode": "8806194065359",
+   "alt": "03 푸시아판타지",
+   "img": "item/2023/6/4331936496221120834.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E9192",
+   "white": 0.865,
+   "grey": 0.655
+  },
+  {
+   "opt": "003",
+   "barcode": "8806194065366",
+   "alt": "04 레드핫",
+   "img": "item/2023/6/1861858190963520101.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#968F8E",
+   "white": 0.863,
+   "grey": 0.667
+  },
+  {
+   "opt": "002",
+   "barcode": "8806194065373",
+   "alt": "05 칠리페퍼",
+   "img": "item/2023/6/211080606216578545.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#938E8E",
+   "white": 0.863,
+   "grey": 0.67
+  }
+ ]
+}

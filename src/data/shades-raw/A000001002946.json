@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000001002946",
+ "collected_at": "2026-11-17T04:56:20.866Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800378120001",
+   "alt": "01 미스티핑크",
+   "img": "item/2026/10/15/3ea_13183136.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC767C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800378120018",
+   "alt": "02 애쉬 마르살라",
+   "img": "item/2026/10/15/578_13183154.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B8706A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800378120025",
+   "alt": "03 미드나잇 로즈",
+   "img": "item/2026/10/15/af1_13183151.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD6C72",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800378120032",
+   "alt": "04 로즈 브라운",
+   "img": "item/2026/10/15/f25_13183149.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E5E5C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800378120049",
+   "alt": "05 어반 핑크",
+   "img": "item/2026/10/15/109_13183147.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B65B68",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800378120056",
+   "alt": "06 선셋 코퍼",
+   "img": "item/2026/10/15/3f9_13183143.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B2615A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800378120063",
+   "alt": "07 칠 브릭",
+   "img": "item/2026/10/15/ceb_13183145.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A85962",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8800378120070",
+   "alt": "08 로우 카카오",
+   "img": "item/2026/10/15/8d4_13183139.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#905A4F",
+   "white": 0,
+   "grey": 0.001
+  }
+ ]
+}

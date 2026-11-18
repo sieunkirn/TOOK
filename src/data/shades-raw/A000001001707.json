@@ -1,0 +1,15 @@
+{
+ "goodsNo": "A000001001707",
+ "collected_at": "2026-11-17T05:04:16.989Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "602004175151",
+   "alt": "",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  }
+ ]
+}

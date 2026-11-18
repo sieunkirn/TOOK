@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000209460",
+ "collected_at": "2026-11-17T05:10:36.338Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809451797857",
+   "alt": "03 비비드 코랄 (온)",
+   "img": "item/2024/8/7252149488731569444.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF6C62",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809451798274",
+   "alt": "(NEW)06 비비드 피오니(온)",
+   "img": "item/2024/8/6350289247695548478.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF6486",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809451797833",
+   "alt": "01 비비드 레드 (온)",
+   "img": "item/2024/8/5518480005077770435.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F5484F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809451797840",
+   "alt": "02 비비드 핑크(온)",
+   "img": "item/2024/8/1747527725357947380.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF5792",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809451797864",
+   "alt": "04 비비드 오렌지(온)",
+   "img": "item/2024/8/8730088292627927085.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF8151",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809451798267",
+   "alt": "(NEW)05 비비드 로즈(온)",
+   "img": "item/2024/8/8485151408033996283.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB193F",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

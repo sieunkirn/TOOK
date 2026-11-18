@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000180678",
+ "collected_at": "2026-11-17T05:08:55.772Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "773602673025",
+   "alt": "멀잇 오버 앤 오버",
+   "img": "item/2023/2/8443329798740259029.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B4363B",
+   "white": 0.838,
+   "grey": 0.033
+  },
+  {
+   "opt": "003",
+   "barcode": "773602646081",
+   "alt": "모스트 큐리어스",
+   "img": "item/2023/2/5959716360082475988.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0253B",
+   "white": 0.842,
+   "grey": 0.027
+  },
+  {
+   "opt": "004",
+   "barcode": "773602646050",
+   "alt": "비셔스",
+   "img": "item/2023/2/3329296161247394750.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B5261D",
+   "white": 0.722,
+   "grey": 0.026
+  },
+  {
+   "opt": "005",
+   "barcode": "773602646142",
+   "alt": "루비 트루",
+   "img": "item/2023/2/2274063101682367045.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D62032",
+   "white": 0.815,
+   "grey": 0.026
+  },
+  {
+   "opt": "006",
+   "barcode": "773602646197",
+   "alt": "그레이셔스",
+   "img": "item/2023/2/2584874001965871053.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E93D51",
+   "white": 0.812,
+   "grey": 0.017
+  },
+  {
+   "opt": "007",
+   "barcode": "773602673032",
+   "alt": "엑스트라 칠리",
+   "img": "item/2023/2/4742669432931213065.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A31802",
+   "white": 0.69,
+   "grey": 0.029
+  },
+  {
+   "opt": "008",
+   "barcode": "773602646036",
+   "alt": "보데이셔스",
+   "img": "item/2023/2/3551641425524037527.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A64641",
+   "white": 0.847,
+   "grey": 0.044
+  },
+  {
+   "opt": "009",
+   "barcode": "773602646098",
+   "alt": "하이퍼볼리",
+   "img": "item/2023/2/2440163814930876526.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E43250",
+   "white": 0.687,
+   "grey": 0.016
+  },
+  {
+   "opt": "011",
+   "barcode": "773602646166",
+   "alt": "것시",
+   "img": "item/2023/3/1790025516490733275.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB0102",
+   "white": 0.722,
+   "grey": 0.022
+  },
+  {
+   "opt": "001",
+   "barcode": "773602646111",
+   "alt": "도옌",
+   "img": "item/2023/2/8004499488473044574.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE1C1C",
+   "white": 0.773,
+   "grey": 0.022
+  },
+  {
+   "opt": "010",
+   "barcode": "773602646104",
+   "alt": "데카던스",
+   "img": "item/2023/2/388218410571313354.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#952B3F",
+   "white": 0.803,
+   "grey": 0.037
+  }
+ ]
+}

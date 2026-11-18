@@ -1,0 +1,270 @@
+{
+ "goodsNo": "A000000229501",
+ "collected_at": "2026-11-17T05:02:27.690Z",
+ "options": [
+  {
+   "opt": "025",
+   "barcode": "8800357980572",
+   "alt": "[엔젤링 그립 기획] 101 토슈즈 하트",
+   "img": "item/2026/3/6098603861423803528.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EAA4A4",
+   "white": 0.569,
+   "grey": 0.121
+  },
+  {
+   "opt": "026",
+   "barcode": "8800357980589",
+   "alt": "[엔젤링 그립 기획] 114 베이비 토즈",
+   "img": "item/2026/3/5963659881190067425.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F3B3B6",
+   "white": 0.589,
+   "grey": 0.207
+  },
+  {
+   "opt": "027",
+   "barcode": "8800357980596",
+   "alt": "[엔젤링 그립 기획] 115 베어 스텝",
+   "img": "item/2026/3/8735476331055062466.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EABDB7",
+   "white": 0.599,
+   "grey": 0.248
+  },
+  {
+   "opt": "001",
+   "barcode": "8800296552410",
+   "alt": "101 토슈즈하트",
+   "img": "item/2025/6/1035185480847809921.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E78281",
+   "white": 0.054,
+   "grey": 0.01
+  },
+  {
+   "opt": "007",
+   "barcode": "8800296552458",
+   "alt": "105 워터멜론 슈가",
+   "img": "item/2025/6/5234015578873390699.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD3E4F",
+   "white": 0.016,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "8800296552427",
+   "alt": "102 핑크 슈가",
+   "img": "item/2025/6/8658201490394695040.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA7683",
+   "white": 0.027,
+   "grey": 0.002
+  },
+  {
+   "opt": "006",
+   "barcode": "8800296552465",
+   "alt": "106 원 바이트 피그",
+   "img": "item/2025/6/330558876225736024.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C55E69",
+   "white": 0.023,
+   "grey": 0.003
+  },
+  {
+   "opt": "009",
+   "barcode": "8800296552434",
+   "alt": "103 피치 펀치",
+   "img": "item/2025/6/4486541192237561012.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E46E66",
+   "white": 0.029,
+   "grey": 0.004
+  },
+  {
+   "opt": "005",
+   "barcode": "8800296552472",
+   "alt": "107 토피 애플",
+   "img": "item/2025/6/7655480010148543811.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B34441",
+   "white": 0.016,
+   "grey": 0.012
+  },
+  {
+   "opt": "008",
+   "barcode": "8800296552441",
+   "alt": "104 그레이프 팝",
+   "img": "item/2025/6/7840918011828077647.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF627B",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "004",
+   "barcode": "8800296552489",
+   "alt": "108 플럼 피즈",
+   "img": "item/2025/6/2157828873563998067.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C04665",
+   "white": 0.022,
+   "grey": 0.001
+  },
+  {
+   "opt": "003",
+   "barcode": "8800296552496",
+   "alt": "109 선셋 멜트",
+   "img": "item/2025/6/1285975509662986095.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC4C50",
+   "white": 0.02,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8800296552502",
+   "alt": "110 라즈베리 엑소",
+   "img": "item/2025/6/5740486647419887124.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E32D68",
+   "white": 0.014,
+   "grey": 0.001
+  },
+  {
+   "opt": "016",
+   "barcode": "8800296555800",
+   "alt": "111 넛맥 가나슈",
+   "img": "item/2025/10/2887481149621964277.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8A635A",
+   "white": 0.033,
+   "grey": 0.02
+  },
+  {
+   "opt": "015",
+   "barcode": "8800296555817",
+   "alt": "112 아사이 드리즐",
+   "img": "item/2025/10/1970158438853244055.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#722E3D",
+   "white": 0.043,
+   "grey": 0.032
+  },
+  {
+   "opt": "017",
+   "barcode": "8800296559587",
+   "alt": "113 토슈즈 스핀",
+   "img": "item/2026/3/6796771323055008011.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F59192",
+   "white": 0.031,
+   "grey": 0.003
+  },
+  {
+   "opt": "018",
+   "barcode": "8800296559594",
+   "alt": "114 베이비 토즈",
+   "img": "item/2026/3/1241501169178844918.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE979F",
+   "white": 0.023,
+   "grey": 0.004
+  },
+  {
+   "opt": "019",
+   "barcode": "8800296559600",
+   "alt": "115 베어 스텝",
+   "img": "item/2026/3/334048098627297942.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD978F",
+   "white": 0.031,
+   "grey": 0.005
+  },
+  {
+   "opt": "020",
+   "barcode": "8800296559617",
+   "alt": "116  애프리콧 베일",
+   "img": "item/2026/3/8031441529704742465.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FFA387",
+   "white": 0.037,
+   "grey": 0.003
+  },
+  {
+   "opt": "021",
+   "barcode": "8800296559624",
+   "alt": "117 핑크 퍼프",
+   "img": "item/2026/3/6121239423952260547.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA8C9E",
+   "white": 0.048,
+   "grey": 0.005
+  },
+  {
+   "opt": "022",
+   "barcode": "8800296559631",
+   "alt": "118 바이올렛 리본",
+   "img": "item/2026/3/7236551946853431209.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE8BAE",
+   "white": 0.013,
+   "grey": 0.004
+  },
+  {
+   "opt": "023",
+   "barcode": "8800296559648",
+   "alt": "119 모브 휩",
+   "img": "item/2026/3/6905957392953417123.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB8698",
+   "white": 0.031,
+   "grey": 0.003
+  },
+  {
+   "opt": "024",
+   "barcode": "8800296559655",
+   "alt": "120 모카 휩",
+   "img": "item/2026/3/8556958276518471826.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6816F",
+   "white": 0.021,
+   "grey": 0.001
+  },
+  {
+   "opt": "011",
+   "barcode": "8800296552403",
+   "alt": "[웜피치] 단독 기획(선셋멜트+피치)",
+   "img": "item/2025/7/7092650242442050739.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E2A09A",
+   "white": 0.4,
+   "grey": 0.199
+  }
+ ]
+}

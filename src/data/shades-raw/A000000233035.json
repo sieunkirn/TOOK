@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000233035",
+ "collected_at": "2026-11-17T05:12:29.631Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809836582849",
+   "alt": "004 더스키",
+   "img": "item/2025/8/8396610549198028094.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA716D",
+   "white": 0.471,
+   "grey": 0.03
+  },
+  {
+   "opt": "005",
+   "barcode": "8809836582856",
+   "alt": "005 캘리 번",
+   "img": "item/2025/8/7112273012452286870.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3434F",
+   "white": 0.465,
+   "grey": 0.015
+  },
+  {
+   "opt": "006",
+   "barcode": "8809836582863",
+   "alt": "006 베이샤",
+   "img": "item/2025/8/5215987837414841701.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C97B8A",
+   "white": 0.474,
+   "grey": 0.027
+  },
+  {
+   "opt": "008",
+   "barcode": "8809836582887",
+   "alt": "008 히트웨이브",
+   "img": "item/2025/8/6419350236548058593.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0616E",
+   "white": 0.47,
+   "grey": 0.015
+  },
+  {
+   "opt": "009",
+   "barcode": "8809836582894",
+   "alt": "009 멜로즈",
+   "img": "item/2025/8/4749677599612224964.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA5370",
+   "white": 0.469,
+   "grey": 0.016
+  },
+  {
+   "opt": "001",
+   "barcode": "8809836582818",
+   "alt": "001 누드 비치",
+   "img": "item/2025/8/2609756124065280128.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DB9088",
+   "white": 0.473,
+   "grey": 0.031
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836582825",
+   "alt": "002 팜 크러쉬",
+   "img": "item/2025/8/3364720434429208470.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E0857F",
+   "white": 0.471,
+   "grey": 0.025
+  }
+ ]
+}

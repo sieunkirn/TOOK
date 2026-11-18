@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000220304",
+ "collected_at": "2026-11-17T05:11:10.168Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809931830395",
+   "alt": "01 베어 핑크",
+   "img": "item/2025/2/4318442057015851840.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5C0BD",
+   "white": 0.807,
+   "grey": 0.593
+  },
+  {
+   "opt": "002",
+   "barcode": "8809931830401",
+   "alt": "02 메리 베리",
+   "img": "item/2025/2/2749728084854903450.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3B7B4",
+   "white": 0.775,
+   "grey": 0.602
+  },
+  {
+   "opt": "003",
+   "barcode": "8809931830418",
+   "alt": "03 모브 리쉬",
+   "img": "item/2025/2/9083175020550338810.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D8BEB9",
+   "white": 0.822,
+   "grey": 0.609
+  },
+  {
+   "opt": "004",
+   "barcode": "8809931830425",
+   "alt": "04 포그 누드",
+   "img": "item/2025/2/1969910995728551172.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C2A199",
+   "white": 0.828,
+   "grey": 0.535
+  },
+  {
+   "opt": "006",
+   "barcode": "8809931830784",
+   "alt": "06 멜로우즈",
+   "img": "item/2025/2/1395502576859001312.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CBB3AB",
+   "white": 0.815,
+   "grey": 0.599
+  },
+  {
+   "opt": "007",
+   "barcode": "8809931831583",
+   "alt": " 07 너티 누드",
+   "img": "item/2025/5/1651911245721630490.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3B4AE",
+   "white": 0.792,
+   "grey": 0.539
+  },
+  {
+   "opt": "005",
+   "barcode": "8809931830432",
+   "alt": "05 피버 코랄*",
+   "img": "item/2025/2/456450516983762598.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D3C3BC",
+   "white": 0.785,
+   "grey": 0.647
+  }
+ ]
+}

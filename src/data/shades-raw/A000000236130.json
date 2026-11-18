@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000236130",
+ "collected_at": "2026-11-17T05:13:01.927Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809603909756",
+   "alt": "101 유주",
+   "img": "item/2025/10/4290488735174649438.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEA8A8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809603909763",
+   "alt": "102 레미",
+   "img": "item/2025/10/6687304645823937303.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA9880",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809603909770",
+   "alt": "103 해인",
+   "img": "item/2025/10/724684547895593191.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC8CA8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809603909787",
+   "alt": "104 소희",
+   "img": "item/2025/10/7954459720368919941.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F286AF",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809603909794",
+   "alt": "105 블레어",
+   "img": "item/2025/10/6854696646316123347.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D56C77",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809603909800",
+   "alt": "106 아오키",
+   "img": "item/2025/10/6055371311977119671.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D6A597",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

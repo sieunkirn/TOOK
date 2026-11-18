@@ -27,7 +27,7 @@ const backBtn = () => el('button', {
 });
 
 const lightness = (L) => (L >= 65 ? C('밝은 편', 'Light') : L >= 45 ? C('중간 밝기', 'Medium') : C('진한 편', 'Deep'));
-const colorName = (p) => (isEn() ? p.shade_color_en : p.shade_color);
+const colorName = (p) => (isEn() ? p.shade_color_en || p.shade_color : p.shade_color); // 영어 이름이 없는 호수는 한국어 이름
 
 let shades = [];
 let current = null;
@@ -42,7 +42,7 @@ function renderGrid() {
       'aria-label': shadeLabel(p) + (p.stock === 0 ? C(' 품절', ' sold out') : ''),
       onclick: () => select(p),
     }, dot,
-    el('span', { class: 'sh-no', text: p.shade_no }),
+    p.shade_no ? el('span', { class: 'sh-no', text: p.shade_no }) : null,
     el('span', { class: 'sh-name', text: colorName(p) }),
     p.stock === 0 ? el('span', { class: 'sh-out', text: C('품절', 'Sold out') }) : null);
   }));
@@ -56,19 +56,20 @@ function renderDetail() {
   const dot = el('span', { class: 'sh-big-dot', 'aria-hidden': 'true' });
   dot.style.background = p.color_hex;
   const facts = [tr('family.' + p.color_family), lightness(p.color_lab.L), p.finish ? finishText(p.finish) : null].filter(Boolean);
-  box.replaceChildren(
+  // null 은 빼고 넣는다 (replaceChildren 은 null 을 'null' 글자로 넣는다. 올리브영 호수는 설명·재고가 없다)
+  box.replaceChildren(...[
     el('div', { class: 'sh-detail-top' }, dot,
       el('div', { class: 'sh-detail-name' },
-        el('span', { class: 'sh-detail-no', text: C(`${p.shade_no}호`, `No. ${p.shade_no}`) }),
+        p.shade_no ? el('span', { class: 'sh-detail-no', text: C(`${p.shade_no}호`, `No. ${p.shade_no}`) }) : null, // 3CE 처럼 번호 없는 호수
         el('strong', { text: colorName(p) }))),
-    isEn() ? null : el('p', { class: 'sh-desc', text: p.description }),
+    isEn() || !p.description ? null : el('p', { class: 'sh-desc', text: p.description }),
     el('ul', { class: 'sh-facts', 'aria-label': C('색 특징', 'Color details') }, ...facts.map((f) => el('li', { text: f }))),
     Number.isFinite(p.stock) ? el('p', { class: 'shelf-stock', text: p.stock === 0 ? C('이 매장 품절', 'Sold out here') : stockText(p) }) : null,
     el('div', { class: 'sh-actions' },
       trying ? null : el('button', { type: 'button', class: 'btn-dark', text: C('발라 보기', 'Try it on'), onclick: () => tryOn(p) }),
       el('button', { type: 'button', class: 'btn-line', text: C('근처 매장 재고', 'Nearby stores'), onclick: () => openStoreStock(p.id, `${nameOf(p)} ${shadeLabel(p)}`) }),
     ),
-  );
+  ].filter(Boolean));
 }
 
 function toLips(p) {
@@ -104,19 +105,25 @@ function tryOn(p) {
 
 async function start() {
   const id = qs('id');
-  const { ok, body } = await api('api/demo-products');
-  const first = ok ? body.products.find((p) => p.id === id) : null;
+  // id 는 제품(올리브영)·호수·시연용 제품 어느 것이든 된다. 호수를 가리키면 그 호수를 먼저 고른다
+  const { ok, body } = id ? await api('api/shades?id=' + encodeURIComponent(id)) : { ok: false, body: {} };
+  shades = ok ? body.shades : [];
+  const first = shades.find((p) => p.id === id) || shades[0] || null;
   if (!first) {
     $('sh-head').replaceChildren(backBtn(), el('p', { class: 'msg', text: C('호수 정보가 등록되지 않은 제품이에요.', 'No shade info is registered for this product.') }));
     return;
   }
-  shades = body.products.filter((p) => p.line === first.line);
+  // 출처 표시: 시연용 가상 제품은 '테스트 데이터', 올리브영 호수는 색이 사진에서 뽑은 추정값이라는 것
+  const note = first.source === 'demo'
+    ? C('테스트 데이터', 'Test data')
+    : C('올리브영 판매 호수 · 색은 색상 칩 사진 기준', 'Shades sold at OLIVE YOUNG · colors from chip photos');
   $('sh-head').replaceChildren(backBtn(),
     el('div', { class: 'sh-title' },
       el('span', { class: 'sh-brand', text: [brandOf(first), won(first.price)].join(' · ') }),
       el('h1', { text: nameOf(first) }),
-      el('p', { class: 'sh-count', text: C(`${shades.length}가지 색 · 테스트 데이터`, `${shades.length} shades · Test data`) })));
+      el('p', { class: 'sh-count', text: C(`${shades.length}가지 색 · ${note}`, `${shades.length} shades · ${note}`) })));
   renderGrid();
   if (qs('try') === '1') { select(first); tryOn(first); }
+  else if (first.id === id) select(first); // 카드에서 특정 호수를 눌러 들어오면 그 호수를 골라 둔다
 }
 start();

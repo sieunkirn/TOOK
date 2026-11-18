@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000225815",
+ "collected_at": "2026-11-17T05:11:25.484Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "4973167012918",
+   "alt": "[한정컬러] EX-5 뱀파이어프라페",
+   "img": "item/2025/4/3052813620495761135.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD5556",
+   "white": 0,
+   "grey": 0.013
+  },
+  {
+   "opt": "001",
+   "barcode": "4973167012895",
+   "alt": "[한정컬러] EX-3 모카머랭팬케이크",
+   "img": "item/2025/4/4824797840851561672.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C3675B",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "002",
+   "barcode": "4973167012901",
+   "alt": "[한정컬러] EX-4 핑크바나나휩",
+   "img": "item/2025/4/4763078059927884820.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CF5B5E",
+   "white": 0,
+   "grey": 0.006
+  }
+ ]
+}

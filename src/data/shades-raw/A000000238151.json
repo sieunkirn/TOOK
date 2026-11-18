@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000238151",
+ "collected_at": "2026-11-17T05:13:08.872Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809972900194",
+   "alt": "01 크림캔디",
+   "img": "item/2025/10/2479718095457414504.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1625A",
+   "white": 0.383,
+   "grey": 0.019
+  },
+  {
+   "opt": "002",
+   "barcode": "8809972900200",
+   "alt": "02 크림카라멜",
+   "img": "item/2025/10/597194430367269971.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA5046",
+   "white": 0.35,
+   "grey": 0.03
+  },
+  {
+   "opt": "003",
+   "barcode": "8809972900217",
+   "alt": "03 크림체리",
+   "img": "item/2025/10/7479521800307460667.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0636F",
+   "white": 0.456,
+   "grey": 0.027
+  },
+  {
+   "opt": "004",
+   "barcode": "8809972900842",
+   "alt": "04 크림모카",
+   "img": "item/2025/10/6726853373023325218.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A3575A",
+   "white": 0.545,
+   "grey": 0.038
+  },
+  {
+   "opt": "005",
+   "barcode": "8809972900859",
+   "alt": "05 크림젤리",
+   "img": "item/2025/10/8383488819903326485.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA807B",
+   "white": 0.463,
+   "grey": 0.048
+  }
+ ]
+}

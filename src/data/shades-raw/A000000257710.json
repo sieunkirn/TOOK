@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000257710",
+ "collected_at": "2026-11-17T04:59:25.891Z",
+ "options": [
+  {
+   "opt": "011",
+   "barcode": "8809716947768",
+   "alt": "[기획/시나모롤파우치]10리치 위스키인척",
+   "img": "item/2026/8/5935317223116036889.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D05A61",
+   "white": 0.095,
+   "grey": 0.017
+  },
+  {
+   "opt": "012",
+   "barcode": "8809716947751",
+   "alt": "[기획/시나모롤파우치]09살구 잭콕인 척",
+   "img": "item/2026/8/510563733939558616.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C96754",
+   "white": 0.094,
+   "grey": 0.022
+  },
+  {
+   "opt": "013",
+   "barcode": "8809716947744",
+   "alt": "[기획/시나모롤파우치]02체리 크러쉬인척",
+   "img": "item/2026/8/2576360204440459378.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8010D",
+   "white": 0.086,
+   "grey": 0.011
+  },
+  {
+   "opt": "014",
+   "barcode": "8809716947737",
+   "alt": "[기획/시나모롤파우치]01복숭아하이볼인척",
+   "img": "item/2026/8/7615247420045289109.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF6D78",
+   "white": 0.111,
+   "grey": 0.014
+  },
+  {
+   "opt": "004",
+   "barcode": "8809716947447",
+   "alt": "08 석류 보드카인 척",
+   "img": "item/2026/5/8333332341567363224.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#871D1C",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809716947430",
+   "alt": "07 깔루아 포도인 척",
+   "img": "item/2026/5/2121607817893902254.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5B67",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809716947423",
+   "alt": "06 자몽 토닉인 척",
+   "img": "item/2026/5/2833691983708622495.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C24E43",
+   "white": 0.003,
+   "grey": 0.001
+  },
+  {
+   "opt": "007",
+   "barcode": "8809716947416",
+   "alt": "05 핑크레몬 피즈인 척",
+   "img": "item/2026/5/1508661928128952272.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE190B",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "008",
+   "barcode": "8809716947409",
+   "alt": "04 블랙베리 데낄라인 척",
+   "img": "item/2026/5/4998855688189753452.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9A0020",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809716947393",
+   "alt": "03 플럼 마티니인 척",
+   "img": "item/2026/5/7931143422663922804.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D90149",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809716947379",
+   "alt": "01 복숭아 하이볼인 척",
+   "img": "item/2026/5/4775727133708466049.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF6E79",
+   "white": 0.004,
+   "grey": 0
+  }
+ ]
+}

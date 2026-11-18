@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000210009",
+ "collected_at": "2026-11-18T01:00:53.093Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809968207771",
+   "alt": "712 에브리코랄",
+   "img": "item/2024/8/6888837109664000168.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FAA5A3",
+   "white": 0.896,
+   "grey": 0.115
+  },
+  {
+   "opt": "007",
+   "barcode": "8809968207788",
+   "alt": "714 뱀프틴트",
+   "img": "item/2024/8/861679926124496101.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A71227",
+   "white": 0.847,
+   "grey": 0.048
+  },
+  {
+   "opt": "008",
+   "barcode": "8809968207795",
+   "alt": "718 체리틴",
+   "img": "item/2024/8/1820056398651349217.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C07A9A",
+   "white": 0.846,
+   "grey": 0.034
+  },
+  {
+   "opt": "009",
+   "barcode": "8809968207801",
+   "alt": "720 로즈앳나잇",
+   "img": "item/2024/8/7422004059715486450.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#693F7A",
+   "white": 0.847,
+   "grey": 0.017
+  },
+  {
+   "opt": "010",
+   "barcode": "8809968207818",
+   "alt": "723 테이스틴",
+   "img": "item/2024/8/5476764135551079447.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B73D36",
+   "white": 0.846,
+   "grey": 0.052
+  },
+  {
+   "opt": "011",
+   "barcode": "8809968207825",
+   "alt": "730 레어레어틴",
+   "img": "item/2024/8/8475247887543830812.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA8DC3",
+   "white": 0.847,
+   "grey": 0.02
+  },
+  {
+   "opt": "012",
+   "barcode": "8809968207832",
+   "alt": "736 타닌러브",
+   "img": "item/2024/8/8045825107171722892.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C86084",
+   "white": 0.847,
+   "grey": 0.025
+  }
+ ]
+}

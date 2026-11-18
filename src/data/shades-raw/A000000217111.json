@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000217111",
+ "collected_at": "2026-11-17T05:01:32.182Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809298738037",
+   "alt": "01 페일 베이지",
+   "img": "item/2024/12/5333117529710095220.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D2A887",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809298738068",
+   "alt": "04 딥 마호가니",
+   "img": "item/2024/12/8332954562409076604.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#632422",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809298738075",
+   "alt": "05 페일 오키드",
+   "img": "item/2024/12/2851635800280665954.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C69B97",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809298738082",
+   "alt": "06 라이트 페탈",
+   "img": "item/2024/12/3604578478160510917.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C55A59",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809298738105",
+   "alt": "08 딥 플럼",
+   "img": "item/2024/12/6726044830792426870.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6E3039",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809298738280",
+   "alt": "09 베이지 로즈",
+   "img": "item/2025/4/7409527857845356719.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D58F82",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809298738297",
+   "alt": "10 포슬린 로즈",
+   "img": "item/2025/4/2532808646543017230.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB9499",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809298738044",
+   "alt": "02 라이트 앰버",
+   "img": "item/2024/12/2978200687915278812.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C37954",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809298738051",
+   "alt": "03 뉴트럴 테라코타",
+   "img": "item/2024/12/3383171891283143208.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC7361",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809298738099",
+   "alt": "07 뉴트럴 라벤더",
+   "img": "item/2024/12/6520314481465766847.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#885B5F",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

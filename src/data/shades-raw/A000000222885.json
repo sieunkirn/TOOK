@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000222885",
+ "collected_at": "2026-11-17T04:56:54.015Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809563959600",
+   "alt": "1호 하이피 레드",
+   "img": "item/2025/3/4666590343760359135.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B80E37",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "003",
+   "barcode": "8809563942374",
+   "alt": "3호 사워 피치",
+   "img": "item/2025/3/707323535886405730.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1585B",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809563942411",
+   "alt": "6호 세레나데",
+   "img": "item/2025/3/6828155729485508273.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C24E58",
+   "white": 0.023,
+   "grey": 0.028
+  },
+  {
+   "opt": "007",
+   "barcode": "8809563942428",
+   "alt": "7호 베리 타르트",
+   "img": "item/2025/3/2351087266370899924.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF4467",
+   "white": 0,
+   "grey": 0.006
+  },
+  {
+   "opt": "008",
+   "barcode": "8809563942435",
+   "alt": "8호 보바 피그",
+   "img": "item/2025/3/3317503908045358308.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B86167",
+   "white": 0,
+   "grey": 0.008
+  },
+  {
+   "opt": "009",
+   "barcode": "8809563942442",
+   "alt": "9호 타로 모브",
+   "img": "item/2025/3/1837199808016850067.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B4465B",
+   "white": 0.002,
+   "grey": 0.004
+  },
+  {
+   "opt": "011",
+   "barcode": "8809563933587",
+   "alt": "[NEW] 12호 허니 코트",
+   "img": "item/2025/7/6671955695642878670.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C06D75",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8809563942367",
+   "alt": "2호 누가 필링",
+   "img": "item/2025/3/9111829828473824156.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#ED7E72",
+   "white": 0.008,
+   "grey": 0.016
+  },
+  {
+   "opt": "004",
+   "barcode": "8809563942381",
+   "alt": "4호 프림 누드",
+   "img": "item/2025/3/4462146739478478638.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B96157",
+   "white": 0.002,
+   "grey": 0.011
+  },
+  {
+   "opt": "005",
+   "barcode": "8809563942398",
+   "alt": "5호 문릿",
+   "img": "item/2025/3/1467617014209276571.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC4745",
+   "white": 0.002,
+   "grey": 0.006
+  },
+  {
+   "opt": "010",
+   "barcode": "8809563942459",
+   "alt": "10호 플럼 퓨레",
+   "img": "item/2025/3/8200180264350934022.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#690A1D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809563933594",
+   "alt": "[NEW] 13호 로즈 크레마",
+   "img": "item/2025/7/442158586275676906.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9D2136",
+   "white": 0.003,
+   "grey": 0.029
+  }
+ ]
+}

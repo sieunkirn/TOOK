@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000232835",
+ "collected_at": "2026-11-17T05:07:36.564Z",
+ "options": [
+  {
+   "opt": "023",
+   "barcode": "8800303333377",
+   "alt": "[기획/2개입] 06땅콩당+18 오디당",
+   "img": "item/2026/8/4779430675973893463.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B7C0D0",
+   "white": 0.542,
+   "grey": 0.267
+  },
+  {
+   "opt": "002",
+   "barcode": "8800303331182",
+   "alt": "02 피그당 (미니)",
+   "img": "item/2025/11/7780683754944733363.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB8797",
+   "white": 0.677,
+   "grey": 0.163
+  },
+  {
+   "opt": "003",
+   "barcode": "8800303331199",
+   "alt": "07 호두당 (미니)",
+   "img": "item/2025/11/4089551857442021509.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B88682",
+   "white": 0.663,
+   "grey": 0.259
+  },
+  {
+   "opt": "004",
+   "barcode": "8800303331205",
+   "alt": "12 사과당 (미니)",
+   "img": "item/2025/11/1167774792456003131.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4696F",
+   "white": 0.675,
+   "grey": 0.162
+  },
+  {
+   "opt": "022",
+   "barcode": "8800303333384",
+   "alt": "[기획/2개입] 16풋사과당+24구아바당",
+   "img": "item/2026/8/4659782644179548622.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D8ACBE",
+   "white": 0.542,
+   "grey": 0.183
+  },
+  {
+   "opt": "019",
+   "barcode": "8800303332240",
+   "alt": "11 앵두 퐁당 (미니)",
+   "img": "item/2026/1/3907801489666147931.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F48F9A",
+   "white": 0.697,
+   "grey": 0.173
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000245975",
+ "collected_at": "2026-11-17T05:02:37.297Z",
+ "options": [
+  {
+   "opt": "016",
+   "barcode": "8800331324316",
+   "alt": "[산리오/OY단독 컬러] 30호 슈어",
+   "img": "item/2026/8/5273358445590304533.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ECBF88",
+   "white": 0.453,
+   "grey": 0.111
+  },
+  {
+   "opt": "002",
+   "barcode": "8809642488267",
+   "alt": "4호 피버",
+   "img": "item/2026/1/8814405327265010985.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D12D3B",
+   "white": 0.483,
+   "grey": 0.008
+  },
+  {
+   "opt": "003",
+   "barcode": "8809642488281",
+   "alt": "6호 로 그레이프",
+   "img": "item/2026/1/2264960757200755810.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B1445B",
+   "white": 0.486,
+   "grey": 0.006
+  },
+  {
+   "opt": "004",
+   "barcode": "8809642488311",
+   "alt": "9호 로 라일락",
+   "img": "item/2026/1/1925796986340024568.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE7187",
+   "white": 0.486,
+   "grey": 0.006
+  },
+  {
+   "opt": "005",
+   "barcode": "8809642488328",
+   "alt": "10호 로 체리",
+   "img": "item/2026/1/3781049852787954208.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D6315A",
+   "white": 0.484,
+   "grey": 0.005
+  },
+  {
+   "opt": "007",
+   "barcode": "8809642488373",
+   "alt": "15호 바이트",
+   "img": "item/2026/1/7069261577248118401.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB2347",
+   "white": 0.484,
+   "grey": 0.007
+  },
+  {
+   "opt": "008",
+   "barcode": "8809642488410",
+   "alt": "[NEW] 19호 베어 튤립",
+   "img": "item/2026/1/8025949853344348537.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D66A65",
+   "white": 0.485,
+   "grey": 0.008
+  },
+  {
+   "opt": "009",
+   "barcode": "8809642488441",
+   "alt": "[NEW] 22호 로 커런트",
+   "img": "item/2026/1/7438385677089679404.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C66A7C",
+   "white": 0.488,
+   "grey": 0.009
+  },
+  {
+   "opt": "010",
+   "barcode": "8800331321278",
+   "alt": "[NEW] 28호 바닐라 로즈",
+   "img": "item/2026/1/3722685910221386204.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D36F6E",
+   "white": 0.486,
+   "grey": 0.009
+  },
+  {
+   "opt": "011",
+   "barcode": "8800331321056",
+   "alt": "[OY단독컬러] 29호 허니듀",
+   "img": "item/2026/1/8651126184026455902.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF7566",
+   "white": 0.491,
+   "grey": 0.009
+  },
+  {
+   "opt": "012",
+   "barcode": "8800331321049",
+   "alt": "[OY단독컬러] 30호 슈어",
+   "img": "item/2026/1/4973507182046586730.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA90A6",
+   "white": 0.499,
+   "grey": 0.008
+  },
+  {
+   "opt": "013",
+   "barcode": "8800331324286",
+   "alt": "[산리오] 2호 로 로즈",
+   "img": "item/2026/8/4822513290161076167.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CAADC0",
+   "white": 0.483,
+   "grey": 0.167
+  },
+  {
+   "opt": "014",
+   "barcode": "8800331324293",
+   "alt": "[산리오] 4호 피버",
+   "img": "item/2026/8/4165720835257087663.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C6A8BC",
+   "white": 0.465,
+   "grey": 0.157
+  },
+  {
+   "opt": "015",
+   "barcode": "8800331324309",
+   "alt": "[산리오/OY단독 컬러] 29호 허니듀",
+   "img": "item/2026/8/3686823859981420487.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EBBE7D",
+   "white": 0.453,
+   "grey": 0.11
+  },
+  {
+   "opt": "017",
+   "barcode": "8800331324262",
+   "alt": "[산리오 한정컬러/NEW] 블러쉬드 로즈",
+   "img": "item/2026/8/5980835414289337700.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B4C3C4",
+   "white": 0.455,
+   "grey": 0.199
+  },
+  {
+   "opt": "018",
+   "barcode": "8800331324279",
+   "alt": "[산리오 한정컬러/NEW] 치키 코랄",
+   "img": "item/2026/8/5970620243310225488.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B5C2BF",
+   "white": 0.453,
+   "grey": 0.198
+  },
+  {
+   "opt": "001",
+   "barcode": "8809642488243",
+   "alt": "2호 로 로즈",
+   "img": "item/2026/1/3724592585555741480.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DD6062",
+   "white": 0.485,
+   "grey": 0.006
+  },
+  {
+   "opt": "006",
+   "barcode": "8809642488342",
+   "alt": "12호 로 휘그",
+   "img": "item/2026/1/6573267509280002711.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F48D77",
+   "white": 0.486,
+   "grey": 0.01
+  }
+ ]
+}

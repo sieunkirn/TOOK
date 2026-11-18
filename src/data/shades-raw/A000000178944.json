@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000178944",
+ "collected_at": "2026-11-17T05:08:45.303Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8809826711280",
+   "alt": "모어딥플럼",
+   "img": "item/2023/1/9124308778442124918.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A2002F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809826711242",
+   "alt": "소프트베이지",
+   "img": "item/2023/1/682490715977063730.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E47F61",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809826711259",
+   "alt": "돌체로즈",
+   "img": "item/2023/1/8765505988485589308.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#912636",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809826711266",
+   "alt": "핑키모브",
+   "img": "item/2023/1/4853598558873705032.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D1515E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809826711273",
+   "alt": "폴인레드",
+   "img": "item/2023/1/4580546250965190929.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BA0121",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

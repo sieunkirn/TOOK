@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000213198",
+ "collected_at": "2026-11-17T05:10:51.438Z",
+ "options": [
+  {
+   "opt": "016",
+   "barcode": "8809337726575",
+   "alt": "[기획] 113 피오니+글리터본품*",
+   "img": "item/2025/5/8701484726100180068.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#382A2F",
+   "white": 0.027,
+   "grey": 0.666
+  },
+  {
+   "opt": "005",
+   "barcode": "8809337726391",
+   "alt": "105 하모니*",
+   "img": "item/2024/10/8254579840962511540.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#922F41",
+   "white": 0.762,
+   "grey": 0.03
+  },
+  {
+   "opt": "002",
+   "barcode": "8809337726353",
+   "alt": "102 캔디*",
+   "img": "item/2024/10/4281902222498845648.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E86473",
+   "white": 0.764,
+   "grey": 0.019
+  },
+  {
+   "opt": "006",
+   "barcode": "8809337726407",
+   "alt": "106 츄이*",
+   "img": "item/2024/10/6870210070086697359.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE92BE",
+   "white": 0.77,
+   "grey": 0.014
+  },
+  {
+   "opt": "007",
+   "barcode": "8809337726414",
+   "alt": "107 페탈*",
+   "img": "item/2024/10/776785472284265235.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE7485",
+   "white": 0.768,
+   "grey": 0.037
+  },
+  {
+   "opt": "009",
+   "barcode": "8809337726445",
+   "alt": "109 헤비*",
+   "img": "item/2024/10/5258754510668788378.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#681E31",
+   "white": 0.76,
+   "grey": 0.043
+  },
+  {
+   "opt": "010",
+   "barcode": "8809337726452",
+   "alt": "110 칠링*",
+   "img": "item/2024/10/1519765328403025806.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#681E31",
+   "white": 0.76,
+   "grey": 0.043
+  }
+ ]
+}

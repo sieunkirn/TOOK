@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000208284",
+ "collected_at": "2026-11-17T05:10:29.096Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809526844417",
+   "alt": "03 블레싱 코랄",
+   "img": "item/2024/7/3426997196740953459.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5857C",
+   "white": 0.852,
+   "grey": 0.414
+  },
+  {
+   "opt": "008",
+   "barcode": "8809526844462",
+   "alt": "08 베리 플럼",
+   "img": "item/2024/7/7327912460573018973.JPG",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB8997",
+   "white": 0.873,
+   "grey": 0.48
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526844424",
+   "alt": "04 넛 브라운",
+   "img": "item/2024/7/5522250621181671646.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB827A",
+   "white": 0.849,
+   "grey": 0.392
+  }
+ ]
+}

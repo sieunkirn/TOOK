@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000262863",
+ "collected_at": "2026-11-18T00:59:41.269Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800353604960",
+   "alt": "[레오파드 헬로키티]01 웜톤",
+   "img": "item/2026/8/6806385555529660414.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1BCBB",
+   "white": 0.584,
+   "grey": 0.318
+  },
+  {
+   "opt": "002",
+   "barcode": "8800353604977",
+   "alt": "[레오파드 헬로키티]02 쿨톤",
+   "img": "item/2026/8/6468950730524814340.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4B5BF",
+   "white": 0.583,
+   "grey": 0.006
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000203735",
+ "collected_at": "2026-11-17T04:56:43.528Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809716943340",
+   "alt": "01 바닐라빈 크림인 척",
+   "img": "item/2024/4/4074275310875517855.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F49C94",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809716943357",
+   "alt": "02 로즈 커스터드인 척",
+   "img": "item/2024/4/3410291748059845865.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EDA1AB",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809716943371",
+   "alt": "04 복숭아 푸딩인 척",
+   "img": "item/2024/4/8826982901130585761.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE8882",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809716943401",
+   "alt": "07 믹스베리 수플레인 척",
+   "img": "item/2024/4/2010453326530265505.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E977B1",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809716943418",
+   "alt": "08 카야 버터인 척",
+   "img": "item/2024/4/5637753407681396697.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E48E85",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809716943913",
+   "alt": "09 무화과 토스트인 척",
+   "img": "item/2024/8/2638221251664926799.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C76E64",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809716943920",
+   "alt": "10 무화과 요거트인 척",
+   "img": "item/2024/8/1314616157512177337.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE8A98",
+   "white": 0,
+   "grey": 0.006
+  },
+  {
+   "opt": "019",
+   "barcode": "8809716944453",
+   "alt": "11 체리사과 파르페인 척",
+   "img": "item/2025/2/5847576031671419890.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E7444F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8809716944460",
+   "alt": "12 쁘띠사과 쉬폰케익인 척",
+   "img": "item/2025/2/3002933765034281848.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D4514A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809716943364",
+   "alt": "03 딸기 베이비슈인 척",
+   "img": "item/2024/4/3299849097904622739.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC9EC2",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809716943388",
+   "alt": "05 꿀자몽 크레페인 척",
+   "img": "item/2024/4/7356353156139185249.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE9EA8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809716943395",
+   "alt": "06 생체리 토핑인 척",
+   "img": "item/2024/4/1457318115352608862.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F75D99",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8809716945733",
+   "alt": "13 슈가 레이스인 척",
+   "img": "item/2025/9/2783915213934211303.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F0A39B",
+   "white": 0.005,
+   "grey": 0.003
+  },
+  {
+   "opt": "024",
+   "barcode": "8809716945740",
+   "alt": "14 로지 셔링인 척",
+   "img": "item/2025/9/7494847396074636498.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E896A7",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

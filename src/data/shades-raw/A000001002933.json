@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000001002933",
+ "collected_at": "2026-11-18T01:00:01.910Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800287118984",
+   "alt": "허니베이지",
+   "img": "item/2026/10/21/bbd_13163922.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD7164",
+   "white": 0.646,
+   "grey": 0.024
+  },
+  {
+   "opt": "006",
+   "barcode": "8800287118991",
+   "alt": "슈슈핑크",
+   "img": "item/2026/10/21/9e2_13164014.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C57476",
+   "white": 0.67,
+   "grey": 0.029
+  },
+  {
+   "opt": "005",
+   "barcode": "8800287119004",
+   "alt": "크리미살몬",
+   "img": "item/2026/10/21/bf9_13164005.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1837B",
+   "white": 0.699,
+   "grey": 0.019
+  },
+  {
+   "opt": "004",
+   "barcode": "8800287119011",
+   "alt": "멜로우로즈",
+   "img": "item/2026/10/21/ed0_13163956.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB5D63",
+   "white": 0.692,
+   "grey": 0.023
+  },
+  {
+   "opt": "002",
+   "barcode": "8800287119035",
+   "alt": "타로무스",
+   "img": "item/2026/10/21/d3f_13163930.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A7595A",
+   "white": 0.712,
+   "grey": 0.022
+  },
+  {
+   "opt": "003",
+   "barcode": "8800287119028",
+   "alt": "슈가진저",
+   "img": "item/2026/10/21/147_13163945.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C05E5B",
+   "white": 0.691,
+   "grey": 0.044
+  }
+ ]
+}

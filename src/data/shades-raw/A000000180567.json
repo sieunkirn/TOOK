@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000180567",
+ "collected_at": "2026-11-17T05:00:33.771Z",
+ "options": [
+  {
+   "opt": "048",
+   "barcode": "8806194080499",
+   "alt": "[NEW] 솔티넛",
+   "img": "item/2026/10/01/ce8_01133528.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB8788",
+   "white": 0.78,
+   "grey": 0.481
+  },
+  {
+   "opt": "049",
+   "barcode": "8806194080505",
+   "alt": "[NEW] 베리잼",
+   "img": "item/2026/10/01/a2d_01133538.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB848F",
+   "white": 0.781,
+   "grey": 0.459
+  },
+  {
+   "opt": "050",
+   "barcode": "8806194080529",
+   "alt": "[NEW] 피그휩",
+   "img": "item/2026/10/01/d07_01133547.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA868C",
+   "white": 0.781,
+   "grey": 0.466
+  },
+  {
+   "opt": "033",
+   "barcode": "8806194080338",
+   "alt": "크림 티라미수",
+   "img": "item/2026/10/01/60e_01133019.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB9695",
+   "white": 0.783,
+   "grey": 0.48
+  },
+  {
+   "opt": "034",
+   "barcode": "8806194080345",
+   "alt": "피칸 파이",
+   "img": "item/2026/10/01/11c_01133042.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD898D",
+   "white": 0.785,
+   "grey": 0.465
+  },
+  {
+   "opt": "035",
+   "barcode": "8806194080352",
+   "alt": "라즈베리 수플레",
+   "img": "item/2026/10/01/411_01133132.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF8A98",
+   "white": 0.782,
+   "grey": 0.465
+  },
+  {
+   "opt": "036",
+   "barcode": "8806194080369",
+   "alt": "걸스 모브",
+   "img": "item/2026/10/01/708_01133143.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B08598",
+   "white": 0.781,
+   "grey": 0.443
+  },
+  {
+   "opt": "037",
+   "barcode": "8806194080376",
+   "alt": "모브 브루",
+   "img": "item/2026/10/01/f36_01133155.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#967785",
+   "white": 0.782,
+   "grey": 0.475
+  },
+  {
+   "opt": "038",
+   "barcode": "8806194080383",
+   "alt": "로즈타르트",
+   "img": "item/2026/10/01/098_01133208.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A17D84",
+   "white": 0.781,
+   "grey": 0.472
+  },
+  {
+   "opt": "039",
+   "barcode": "8806194080390",
+   "alt": "애플팝",
+   "img": "item/2026/10/01/1b8_01133229.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A9797F",
+   "white": 0.781,
+   "grey": 0.459
+  },
+  {
+   "opt": "040",
+   "barcode": "8806194080406",
+   "alt": "로지 모카",
+   "img": "item/2026/10/01/699_01133303.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E8184",
+   "white": 0.782,
+   "grey": 0.487
+  },
+  {
+   "opt": "041",
+   "barcode": "8806194080413",
+   "alt": "핫 시나몬",
+   "img": "item/2026/10/01/92c_01133332.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9C8082",
+   "white": 0.782,
+   "grey": 0.513
+  },
+  {
+   "opt": "042",
+   "barcode": "8806194080420",
+   "alt": "윈터 뱅쇼",
+   "img": "item/2026/10/01/d1f_01133355.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C717E",
+   "white": 0.782,
+   "grey": 0.482
+  },
+  {
+   "opt": "043",
+   "barcode": "8806194080437",
+   "alt": "리치 플럼",
+   "img": "item/2026/10/01/228_01133406.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#987588",
+   "white": 0.781,
+   "grey": 0.455
+  },
+  {
+   "opt": "044",
+   "barcode": "8806194080444",
+   "alt": "애프터 코랄",
+   "img": "item/2026/10/01/705_01133433.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B28488",
+   "white": 0.781,
+   "grey": 0.446
+  },
+  {
+   "opt": "045",
+   "barcode": "8806194080451",
+   "alt": "쿨 로지",
+   "img": "item/2026/10/01/5d6_01133445.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE8394",
+   "white": 0.781,
+   "grey": 0.442
+  },
+  {
+   "opt": "046",
+   "barcode": "8806194080468",
+   "alt": "베리슈",
+   "img": "item/2026/10/01/f84_01133503.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B18899",
+   "white": 0.781,
+   "grey": 0.447
+  },
+  {
+   "opt": "047",
+   "barcode": "8806194080475",
+   "alt": "너티크림",
+   "img": "item/2026/10/01/faf_01133516.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF848A",
+   "white": 0.781,
+   "grey": 0.457
+  }
+ ]
+}

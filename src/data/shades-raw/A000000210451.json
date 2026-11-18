@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000210451",
+ "collected_at": "2026-11-18T01:01:01.064Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800258080296",
+   "alt": "01 베어 바닐라",
+   "img": "item/2024/8/9053556530108456408.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EFA3A2",
+   "white": 0.766,
+   "grey": 0.017
+  },
+  {
+   "opt": "008",
+   "barcode": "8800258080302",
+   "alt": "02 태피 플롯",
+   "img": "item/2024/8/7040479954741201803.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EF94A5",
+   "white": 0.767,
+   "grey": 0.013
+  },
+  {
+   "opt": "007",
+   "barcode": "8800258080319",
+   "alt": "03 너티 무브",
+   "img": "item/2024/8/1197907736532526951.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE8765",
+   "white": 0.765,
+   "grey": 0.01
+  },
+  {
+   "opt": "006",
+   "barcode": "8800258080326",
+   "alt": "04 물 그레이프",
+   "img": "item/2024/8/3707016807385538630.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D56A80",
+   "white": 0.769,
+   "grey": 0.011
+  },
+  {
+   "opt": "005",
+   "barcode": "8800258080333",
+   "alt": "05 애플 오즈",
+   "img": "item/2024/8/5502182410510899853.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DB4855",
+   "white": 0.764,
+   "grey": 0.01
+  },
+  {
+   "opt": "004",
+   "barcode": "8800258080340",
+   "alt": "06 베리 바이트",
+   "img": "item/2024/8/5338047179875551978.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC3551",
+   "white": 0.762,
+   "grey": 0.009
+  },
+  {
+   "opt": "003",
+   "barcode": "8800258080357",
+   "alt": "07 칠리 러쉬",
+   "img": "item/2024/8/9069087662107454564.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BB5148",
+   "white": 0.764,
+   "grey": 0.013
+  },
+  {
+   "opt": "002",
+   "barcode": "8800258080364",
+   "alt": "08 디핀 레드",
+   "img": "item/2024/8/9055609766168169935.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8A3D51",
+   "white": 0.764,
+   "grey": 0.04
+  }
+ ]
+}

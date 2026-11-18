@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000200360",
+ "collected_at": "2026-11-17T05:06:29.894Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8809701411465",
+   "alt": "[NEW] 로지체리",
+   "img": "item/2024/12/5681628458305676504.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#42212C",
+   "white": 0.002,
+   "grey": 0.564
+  },
+  {
+   "opt": "010",
+   "barcode": "8809701411458",
+   "alt": "[NEW] 페일체리",
+   "img": "item/2024/12/1507513444791618690.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#472F38",
+   "white": 0.006,
+   "grey": 0.567
+  },
+  {
+   "opt": "002",
+   "barcode": "8809701410833",
+   "alt": "모브체리",
+   "img": "item/2024/1/469126346766651223.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#391D27",
+   "white": 0.003,
+   "grey": 0.566
+  },
+  {
+   "opt": "003",
+   "barcode": "8809701410840",
+   "alt": "뮤트체리",
+   "img": "item/2024/1/1336137563383481038.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#3C292A",
+   "white": 0.005,
+   "grey": 0.569
+  },
+  {
+   "opt": "004",
+   "barcode": "8809701410857",
+   "alt": "베리체리",
+   "img": "item/2024/1/9205195850356896247.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#2E0A11",
+   "white": 0.004,
+   "grey": 0.565
+  },
+  {
+   "opt": "005",
+   "barcode": "8809701410864",
+   "alt": "크림체리",
+   "img": "item/2024/1/7560208647307032275.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#49302C",
+   "white": 0.006,
+   "grey": 0.569
+  },
+  {
+   "opt": "006",
+   "barcode": "8809701410871",
+   "alt": "버터체리",
+   "img": "item/2024/1/7877596332490630488.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#381D16",
+   "white": 0.005,
+   "grey": 0.569
+  },
+  {
+   "opt": "007",
+   "barcode": "8809701411168",
+   "alt": "리얼체리",
+   "img": "item/2024/1/1905217462706330023.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#160001",
+   "white": 0.002,
+   "grey": 0.568
+  }
+ ]
+}

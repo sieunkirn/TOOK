@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000224155",
+ "collected_at": "2026-11-17T05:04:55.541Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809958790030",
+   "alt": "프리사이즈 리프터 4.5g 32%",
+   "img": "item/2025/4/8333794281088153859.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EDABAA",
+   "white": 0.603,
+   "grey": 0.126
+  },
+  {
+   "opt": "002",
+   "barcode": "8809958790047",
+   "alt": "프리사이즈 리프터 4.5g 68%",
+   "img": "item/2025/4/3335624663501885571.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E0736F",
+   "white": 0.473,
+   "grey": 0.119
+  }
+ ]
+}

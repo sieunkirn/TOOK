@@ -8,5 +8,5 @@ export { toast, skeletonCards } from './motion.js'; // 화면 움직임(모든 �
 export { STATIC, api } from './api.js';
 export { store, go, qs } from './store.js';
 export { $, el } from './dom.js';
-export { fullName, shortName, storeLink, won, detailLink, tryOnCard, productCard, productDetailTable } from './product-view.js';
+export { fullName, shortName, storeLink, won, detailLink, tryOnCard, productCard, productDetailTable, shadeLabelOf, shadePicker } from './product-view.js';
 export { logoSvg, renderNav } from './nav.js';

@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000179969",
+ "collected_at": "2026-11-17T05:04:29.256Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809900981530",
+   "alt": "02 웅니버스",
+   "img": "item/2023/2/8919793878347305537.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD6F63",
+   "white": 0.007,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809900981547",
+   "alt": "03 소울쿨만",
+   "img": "item/2023/2/6233811574540014183.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D34162",
+   "white": 0.005,
+   "grey": 0.001
+  },
+  {
+   "opt": "004",
+   "barcode": "8809900981554",
+   "alt": "04 당모피치",
+   "img": "item/2023/2/605787985410943829.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC6770",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809900981561",
+   "alt": "05 생기완충",
+   "img": "item/2023/2/6231772546059783517.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C94A57",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809900986023",
+   "alt": "07 쿨릉도원",
+   "img": "item/2023/4/8609039362000564141.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D78C93",
+   "white": 0.029,
+   "grey": 0.008
+  },
+  {
+   "opt": "015",
+   "barcode": "8800290363685",
+   "alt": "15 핑쿨거래",
+   "img": "item/2025/4/3857736947316369815.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD526E",
+   "white": 0.003,
+   "grey": 0.011
+  },
+  {
+   "opt": "016",
+   "barcode": "8800290363678",
+   "alt": "16 핑잼인간",
+   "img": "item/2025/4/4603707096118940223.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C85668",
+   "white": 0.014,
+   "grey": 0.098
+  },
+  {
+   "opt": "017",
+   "barcode": "8800290363661",
+   "alt": "17 로지붐업",
+   "img": "item/2025/4/5409839381633088172.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A43C4F",
+   "white": 0.004,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8809900986030",
+   "alt": "08 여쿨러팅",
+   "img": "item/2023/4/8562737226471622696.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C33F5D",
+   "white": 0.002,
+   "grey": 0.012
+  }
+ ]
+}

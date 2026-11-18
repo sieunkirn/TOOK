@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000204373",
+ "collected_at": "2026-11-17T05:01:17.169Z",
+ "options": [
+  {
+   "opt": "019",
+   "barcode": "8800328101050",
+   "alt": "[NEW] BE03 차이 슈",
+   "img": "item/2026/4/5597061767564011948.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F79B91",
+   "white": 0.003,
+   "grey": 0.007
+  },
+  {
+   "opt": "020",
+   "barcode": "8800328101067",
+   "alt": "[NEW] CR07 피치 브리즈",
+   "img": "item/2026/4/4449510143093700241.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD887C",
+   "white": 0.009,
+   "grey": 0.016
+  },
+  {
+   "opt": "017",
+   "barcode": "8800248703778",
+   "alt": "PK06 캔디",
+   "img": "item/2025/1/3241499154019378146.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF7D8E",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "018",
+   "barcode": "8800248703785",
+   "alt": "CR06 슈가 애프리콧",
+   "img": "item/2025/1/5023357242093204067.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF8D72",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "012",
+   "barcode": "8800248701125",
+   "alt": "CR04 피치 소르베",
+   "img": "item/2024/8/3447963617881001745.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C74E46",
+   "white": 0.031,
+   "grey": 0.002
+  },
+  {
+   "opt": "001",
+   "barcode": "8809759909303",
+   "alt": "CR01 로지 필로우",
+   "img": "item/2024/4/5105090527694948613.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D05841",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809759909334",
+   "alt": "PK01 핑크 구아바",
+   "img": "item/2024/4/5594402532881226008.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F25360",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "8800248701132",
+   "alt": "PK04 플라밍고",
+   "img": "item/2024/8/4743417490779434975.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB4E4D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8800328101074",
+   "alt": "[NEW] PK07 핑크 플로우",
+   "img": "item/2026/4/4688971266007795133.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7A85",
+   "white": 0.004,
+   "grey": 0.002
+  },
+  {
+   "opt": "011",
+   "barcode": "8800248701149",
+   "alt": "PK05 피그파이",
+   "img": "item/2024/8/6391823728915193965.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A94148",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809759909365",
+   "alt": "PP01 헤이즈 모브",
+   "img": "item/2024/4/7036584984806875033.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA6C82",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "007",
+   "barcode": "8809759909297",
+   "alt": "RD01 러브미",
+   "img": "item/2024/4/6657737250733286471.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B51B23",
+   "white": 0,
+   "grey": 0.001
+  }
+ ]
+}

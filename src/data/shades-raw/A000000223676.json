@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000223676",
+ "collected_at": "2026-11-17T05:11:18.149Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809526846428",
+   "alt": "[기존용기] 04 쿨누디 23",
+   "img": "item/2025/6/5826767353905762144.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA8C90",
+   "white": 0.795,
+   "grey": 0.017
+  },
+  {
+   "opt": "002",
+   "barcode": "8809526846404",
+   "alt": "[기존용기] 02 웜누디 23",
+   "img": "item/2025/6/3108596668383280742.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C98F84",
+   "white": 0.718,
+   "grey": 0.02
+  },
+  {
+   "opt": "003",
+   "barcode": "8809526846411",
+   "alt": "[기존용기] 03 쿨누디 21",
+   "img": "item/2025/6/4042128722286966000.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA9FA3",
+   "white": 0.771,
+   "grey": 0.018
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526846435",
+   "alt": "[기존용기] 05 시멘트",
+   "img": "item/2025/6/7453604223257913903.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AD918A",
+   "white": 0.742,
+   "grey": 0.112
+  }
+ ]
+}

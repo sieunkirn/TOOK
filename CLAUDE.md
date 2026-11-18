@@ -36,6 +36,9 @@ AI 기반 개인 맞춤형 뷰티 서비스 took(툭)을 개발한다.
 - 초기에는 가상 제품 데이터를 사용해도 된다.
 - 실제 데이터와 테스트용 데이터를 구분한다.
 - 등록되지 않은 제품 정보를 임의로 만들어 내지 않는다.
+- 호수(2026-11-17): 실제 호수는 src/data/shades.oliveyoung.json(원본) → npm run import:shades → products.shades.json. 호수 이름·바코드는 올리브영 옵션 목록, 색상값은 옵션 색상 칩 사진에서 뽑은 추정값이다(color_source 로 표시). 색 칩 사진을 쓸 수 없는 호수는 빼고 skipped 에 적는다.
+- 호수가 없는 올리브영 제품('호수 정보 준비 중'·'정보 없음')은 미러 화면 목록(allProducts: 추천·챗봇·검색)에서 뺀다 (2026-11-18, catalog.js). 전체 검수에서 호수를 넣고 앱에 반영하면 다시 나온다. ID·바코드로 찾기는 그대로 된다.
+- 호수 전체 수집: scripts/shades-collect.browser.js(올리브영 페이지에서 실행, 서버 직접 요청은 403 차단이라 브라우저로만) → src/data/shades-raw/ → npm run shades:build(판정 규칙: ok 자동 사용 · bad 자동 제외 · review 는 사람이 npm run shades:server 의 /review 에서 넣기/빼기, 결과는 shades-review.json). 판정 기준은 build-shades-source.js 의 classify. 전체 검수(모든 제품·호수 넣기/빼기/색 고치기/되돌리기, '앱에 반영')는 같은 서버의 /all (scripts/shades-review-all.html).
 
 ## 작업 방식
 1. 기존 코드 분석

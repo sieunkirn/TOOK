@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000225032",
+ "collected_at": "2026-11-18T01:00:09.125Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8809871384842",
+   "alt": "01 가데니아 로 (미니)",
+   "img": "item/2025/4/747948566042681030.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CE8380",
+   "white": 0.793,
+   "grey": 0.347
+  },
+  {
+   "opt": "008",
+   "barcode": "8809871384859",
+   "alt": "02 플레르 로 (미니)",
+   "img": "item/2025/4/211756993966784192.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE7581",
+   "white": 0.81,
+   "grey": 0.368
+  },
+  {
+   "opt": "007",
+   "barcode": "8809871384866",
+   "alt": "03 라일락 로 (미니)",
+   "img": "item/2025/4/3909465743244652905.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C18393",
+   "white": 0.825,
+   "grey": 0.395
+  },
+  {
+   "opt": "006",
+   "barcode": "8809871384873",
+   "alt": "04 매그놀리아 로 (미니)",
+   "img": "item/2025/4/6800619130157941108.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C08B88",
+   "white": 0.828,
+   "grey": 0.422
+  },
+  {
+   "opt": "005",
+   "barcode": "8809871384880",
+   "alt": "05 피오니 로 (미니)",
+   "img": "item/2025/4/8005147444316982774.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB6B80",
+   "white": 0.816,
+   "grey": 0.333
+  },
+  {
+   "opt": "003",
+   "barcode": "8809871384903",
+   "alt": "07 피치 로 (미니)",
+   "img": "item/2025/4/1926553806558507934.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E58E84",
+   "white": 0.809,
+   "grey": 0.362
+  },
+  {
+   "opt": "002",
+   "barcode": "8809871387775",
+   "alt": "08 스윗 로 (미니)",
+   "img": "item/2025/4/4632599906930890509.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B6757D",
+   "white": 0.816,
+   "grey": 0.38
+  },
+  {
+   "opt": "001",
+   "barcode": "8809871387782",
+   "alt": "09 클래식 로 (미니)",
+   "img": "item/2025/4/1664873741970683038.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B1837F",
+   "white": 0.814,
+   "grey": 0.405
+  }
+ ]
+}

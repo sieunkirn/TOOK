@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000232145",
+ "collected_at": "2026-11-17T04:53:57.555Z",
+ "options": [
+  {
+   "opt": "020",
+   "barcode": "8800327722621",
+   "alt": "[NEW] 15 밀키 휘그",
+   "img": "item/2026/9/2272326386495932098.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB8D88",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809815649419",
+   "alt": "01 누드 휩",
+   "img": "item/2025/8/3631398402215171299.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E69C86",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809815649426",
+   "alt": "02 너티 핑크",
+   "img": "item/2025/8/4951306544180014778.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B56962",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809815649433",
+   "alt": "03 베베 살몬",
+   "img": "item/2025/8/3218560510867628585.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE7663",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809815649440",
+   "alt": "04 버니 플러쉬",
+   "img": "item/2025/8/1403774671178840327.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C57480",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809815649457",
+   "alt": "05 로지 오트",
+   "img": "item/2025/8/284981107235871900.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B26465",
+   "white": 0.001,
+   "grey": 0.002
+  },
+  {
+   "opt": "007",
+   "barcode": "8809815649464",
+   "alt": "06 레드 웨이",
+   "img": "item/2025/8/3893655789136455025.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B14748",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809815649471",
+   "alt": "07 뮤티드 체리",
+   "img": "item/2025/8/4911042534977658586.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B6515C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809815649488",
+   "alt": "08 로제 브리즈",
+   "img": "item/2025/8/1595125597483111313.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF6166",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809815649495",
+   "alt": "09 쿨 스테인",
+   "img": "item/2025/8/8658505667622870818.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8667F",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "011",
+   "barcode": "8809815649501",
+   "alt": "10 크러쉬드 베리",
+   "img": "item/2025/8/5719154686838834807.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D16176",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809815649518",
+   "alt": "11 로스팅 피그",
+   "img": "item/2025/8/9009968883690726957.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#76232C",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "013",
+   "barcode": "8800327720474",
+   "alt": "12 베어리 애프리콧",
+   "img": "item/2026/2/6408940853165017933.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E17D71",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8800327720481",
+   "alt": "[단독] 13 어반 레드",
+   "img": "item/2026/2/8545349521531815181.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD4A51",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8800327722607",
+   "alt": "[미니글로스기획] 05 로지 오트",
+   "img": "item/2026/9/4467287727476491252.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C3A09E",
+   "white": 0.631,
+   "grey": 0.31
+  },
+  {
+   "opt": "016",
+   "barcode": "8800327721280",
+   "alt": "[파우치기획] 07 뮤티드 체리",
+   "img": "item/2026/3/1713285842167099494.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.071,
+   "grey": 0.944
+  },
+  {
+   "opt": "017",
+   "barcode": "8800327721297",
+   "alt": "[파우치기획] 13 어반 레드",
+   "img": "item/2026/3/8530741505997135780.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.071,
+   "grey": 0.943
+  },
+  {
+   "opt": "015",
+   "barcode": "8800327720498",
+   "alt": "14 로우 체리",
+   "img": "item/2026/2/5384434167002571506.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C13A4E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

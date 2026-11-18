@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000227015",
+ "collected_at": "2026-11-17T04:59:38.040Z",
+ "options": [
+  {
+   "opt": "034",
+   "barcode": "8800353608364",
+   "alt": "[NEW/립파우치 기획]16 바닐라 블랑",
+   "img": "item/2026/10/16/f2e_16102323.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E99E91",
+   "white": 0.009,
+   "grey": 0.006
+  },
+  {
+   "opt": "031",
+   "barcode": "8800353608395",
+   "alt": "[NEW/립파우치 기획]19 멀베리 쉘",
+   "img": "item/2026/10/16/7ec_16102248.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5848A",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "033",
+   "barcode": "8800353608371",
+   "alt": "[NEW]17 핑크 누가",
+   "img": "item/2026/10/16/e06_16102311.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF97A5",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "032",
+   "barcode": "8800353608388",
+   "alt": "[NEW]18 로제 컴핏",
+   "img": "item/2026/10/16/612_16102300.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F28483",
+   "white": 0.001,
+   "grey": 0.003
+  },
+  {
+   "opt": "030",
+   "barcode": "8800353608401",
+   "alt": "[NEW]20 카라멜 필링",
+   "img": "item/2026/10/16/8d9_16102234.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF8176",
+   "white": 0.01,
+   "grey": 0.008
+  },
+  {
+   "opt": "001",
+   "barcode": "8809506707770",
+   "alt": "01 밀키 바인",
+   "img": "item/2025/8/1945143999225376486.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C1678A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809506707817",
+   "alt": "05 코트니",
+   "img": "item/2025/8/1331986650072884534.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7D4751",
+   "white": 0.002,
+   "grey": 0.002
+  },
+  {
+   "opt": "011",
+   "barcode": "8809506708418",
+   "alt": "[립글로스 기획]07 그레이피그",
+   "img": "item/2026/2/64123895445454428.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7A9C3",
+   "white": 0.57,
+   "grey": 0.257
+  },
+  {
+   "opt": "008",
+   "barcode": "8809506707848",
+   "alt": "08 로지스트",
+   "img": "item/2025/8/2031667871828271692.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B66369",
+   "white": 0.002,
+   "grey": 0.002
+  },
+  {
+   "opt": "009",
+   "barcode": "8809506708241",
+   "alt": "09 누가 티",
+   "img": "item/2025/8/178245995645579695.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#925455",
+   "white": 0.003,
+   "grey": 0.004
+  },
+  {
+   "opt": "020",
+   "barcode": "8809506709897",
+   "alt": "12 코튼 로즈",
+   "img": "item/2025/8/8493064902336068293.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B94B56",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "026",
+   "barcode": "8800353600900",
+   "alt": "14 터프 레드",
+   "img": "item/2026/5/1345126322295811024.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE6059",
+   "white": 0.747,
+   "grey": 0.005
+  },
+  {
+   "opt": "027",
+   "barcode": "8800353600917",
+   "alt": "15 레블 핑크",
+   "img": "item/2026/5/1052172231350088087.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E36986",
+   "white": 0.748,
+   "grey": 0.009
+  },
+  {
+   "opt": "024",
+   "barcode": "8800327140630",
+   "alt": "[헬로키티]14 터프 레드",
+   "img": "item/2026/3/2239740781999549002.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#222225",
+   "white": 0.736,
+   "grey": 0.937
+  },
+  {
+   "opt": "007",
+   "barcode": "8809506707831",
+   "alt": "07 그레이피그",
+   "img": "item/2025/8/8859627764954364782.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9E5569",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "013",
+   "barcode": "8809506709255",
+   "alt": "[립세럼 기획]07 그레이피그",
+   "img": "item/2026/2/7090174450071646954.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CC93A9",
+   "white": 0.456,
+   "grey": 0.147
+  },
+  {
+   "opt": "021",
+   "barcode": "8809506709903",
+   "alt": "13 레더 샌드",
+   "img": "item/2025/8/8066212519112608185.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9F4545",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "025",
+   "barcode": "8800327140647",
+   "alt": "[헬로키티]15 레블 핑크",
+   "img": "item/2026/3/2388287768215342115.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E1D6DE",
+   "white": 0.878,
+   "grey": 0.835
+  }
+ ]
+}

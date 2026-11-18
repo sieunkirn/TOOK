@@ -1,0 +1,237 @@
+{
+ "goodsNo": "A000000184327",
+ "collected_at": "2026-11-17T05:01:59.572Z",
+ "options": [
+  {
+   "opt": "034",
+   "barcode": "8800299143578",
+   "alt": "[NEW] 29 피치 바닐라",
+   "img": "item/2026/2/7753432123296498611.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F89784",
+   "white": 0.772,
+   "grey": 0.052
+  },
+  {
+   "opt": "038",
+   "barcode": "8800299144261",
+   "alt": "[NEW]17 피그 베리 (+미니틴트)*",
+   "img": "item/2026/2/2491266037624092922.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F9B2B6",
+   "white": 0.704,
+   "grey": 0.039
+  },
+  {
+   "opt": "028",
+   "barcode": "8809581537910",
+   "alt": "25 얼그레이 로즈",
+   "img": "item/2024/8/6903319846126675584.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.013,
+   "grey": 0.74
+  },
+  {
+   "opt": "029",
+   "barcode": "8809581537927",
+   "alt": "26 로즈 블랙티",
+   "img": "item/2024/8/5632436643736656224.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.014,
+   "grey": 0.729
+  },
+  {
+   "opt": "022",
+   "barcode": "8809581535787",
+   "alt": "22 러브 코랄",
+   "img": "item/2024/2/7286902815973871610.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F17F70",
+   "white": 0.799,
+   "grey": 0.046
+  },
+  {
+   "opt": "020",
+   "barcode": "8809581535763",
+   "alt": "20 베어 누드",
+   "img": "item/2024/2/4083534156070458698.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE6F5E",
+   "white": 0.859,
+   "grey": 0.056
+  },
+  {
+   "opt": "017",
+   "barcode": "8809581534018",
+   "alt": "17 피그 베리",
+   "img": "item/2023/7/3936178688761048538.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2656F",
+   "white": 0.764,
+   "grey": 0.041
+  },
+  {
+   "opt": "013",
+   "barcode": "8809581533974",
+   "alt": "13 코랄 피즈",
+   "img": "item/2023/7/5939104183077004402.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB6460",
+   "white": 0.796,
+   "grey": 0.041
+  },
+  {
+   "opt": "008",
+   "barcode": "8809581533530",
+   "alt": "08 파파야 밀크",
+   "img": "item/2023/4/980453545929756008.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#030202",
+   "white": 0.011,
+   "grey": 0.698
+  },
+  {
+   "opt": "007",
+   "barcode": "8809581532649",
+   "alt": "07 체리 소다",
+   "img": "item/2023/4/2592478026748007420.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.004,
+   "grey": 0.707
+  },
+  {
+   "opt": "006",
+   "barcode": "8809581532632",
+   "alt": "06 로즈 애플",
+   "img": "item/2023/4/2045196384284609111.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.006,
+   "grey": 0.722
+  },
+  {
+   "opt": "005",
+   "barcode": "8809581532625",
+   "alt": "05 모브 베리",
+   "img": "item/2023/4/2027168992283184558.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.004,
+   "grey": 0.757
+  },
+  {
+   "opt": "035",
+   "barcode": "8800299143585",
+   "alt": "[NEW] 30 로즈 드림",
+   "img": "item/2026/2/966712115515900059.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E88F93",
+   "white": 0.776,
+   "grey": 0.044
+  },
+  {
+   "opt": "030",
+   "barcode": "8809581538634",
+   "alt": "27 슈가 롤*",
+   "img": "item/2024/11/925581350546788140.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D6766F",
+   "white": 0.848,
+   "grey": 0.022
+  },
+  {
+   "opt": "023",
+   "barcode": "8809581535510",
+   "alt": "23 스위티 핑크",
+   "img": "item/2024/2/2482888390316954409.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E56D80",
+   "white": 0.807,
+   "grey": 0.039
+  },
+  {
+   "opt": "021",
+   "barcode": "8809581535770",
+   "alt": "21 모브 무드",
+   "img": "item/2024/2/6212386082704403942.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D06F73",
+   "white": 0.82,
+   "grey": 0.071
+  },
+  {
+   "opt": "016",
+   "barcode": "8809581534025",
+   "alt": "16 칠리 셔벗*",
+   "img": "item/2023/7/6234533292991379369.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F0695C",
+   "white": 0.775,
+   "grey": 0.039
+  },
+  {
+   "opt": "014",
+   "barcode": "8809581533943",
+   "alt": "14 피치 크러쉬",
+   "img": "item/2023/7/3339000322671476569.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FD5C69",
+   "white": 0.782,
+   "grey": 0.034
+  },
+  {
+   "opt": "009",
+   "barcode": "8809581533547",
+   "alt": "09 피치 푸딩",
+   "img": "item/2023/4/3024356468204136176.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.008,
+   "grey": 0.713
+  },
+  {
+   "opt": "004",
+   "barcode": "8809581532618",
+   "alt": "04 플럼 듀",
+   "img": "item/2023/4/4905639495708075255.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.721
+  },
+  {
+   "opt": "003",
+   "barcode": "8809581532601",
+   "alt": "03 핑크 구아바",
+   "img": "item/2023/4/4361250824260693560.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.005,
+   "grey": 0.73
+  }
+ ]
+}

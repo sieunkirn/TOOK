@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000238825",
+ "collected_at": "2026-11-17T05:13:24.925Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809506709767",
+   "alt": "01 아멜리에",
+   "img": "item/2025/11/4129001949365630396.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F5979B",
+   "white": 0,
+   "grey": 0.01
+  },
+  {
+   "opt": "002",
+   "barcode": "8809506709774",
+   "alt": "02 그녀에게",
+   "img": "item/2025/11/2458883883266720234.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B56467",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809506709781",
+   "alt": "03 클레멘타인",
+   "img": "item/2025/11/2858038421897242397.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F48D85",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809506709798",
+   "alt": "04 프리실라",
+   "img": "item/2025/11/92366967414400730.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD617B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809506709804",
+   "alt": "05 노르웨이의 숲",
+   "img": "item/2025/11/5762571997466983587.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7D5649",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800327140074",
+   "alt": "06 콰이어트 씬",
+   "img": "item/2025/11/1944238045261617095.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB806E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

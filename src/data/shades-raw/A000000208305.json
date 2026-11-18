@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000208305",
+ "collected_at": "2026-11-18T01:00:49.414Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809977270179",
+   "alt": "01 뮤티드 피치",
+   "img": "item/2024/10/8458503714479170386.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E66F84",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809977270186",
+   "alt": "02 멜로우 베이지",
+   "img": "item/2024/10/2415708238560950567.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D57874",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809977270193",
+   "alt": "03 키튼 코랄",
+   "img": "item/2024/10/3054548907865880422.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F76B6C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809977270209",
+   "alt": "04 유스 핑크",
+   "img": "item/2024/10/4651409260194193999.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F54C7C",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809977270216",
+   "alt": "05 리파인 모브",
+   "img": "item/2024/10/2654619149189884819.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA5A7A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809977270223",
+   "alt": "06 리치 레드",
+   "img": "item/2024/10/4520994522003751005.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F2072F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809977270872",
+   "alt": "08 모브 뮬리",
+   "img": "item/2024/10/6588699121816162827.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EF6D88",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809977270889",
+   "alt": "09 로지 체리",
+   "img": "item/2024/10/3251110224724844130.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FD3552",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

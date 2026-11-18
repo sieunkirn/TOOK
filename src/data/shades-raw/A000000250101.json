@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000250101",
+ "collected_at": "2026-11-17T05:04:49.948Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8801882188167",
+   "alt": " 디아",
+   "img": "item/2026/3/6868872784295154819.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C22857",
+   "white": 0.774,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8801882188136",
+   "alt": "쥬시",
+   "img": "item/2026/3/736588429954128652.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE8A99",
+   "white": 0.757,
+   "grey": 0.028
+  },
+  {
+   "opt": "005",
+   "barcode": "8801882188129",
+   "alt": "슈가",
+   "img": "item/2026/3/4817515323428874073.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F5A5AF",
+   "white": 0.776,
+   "grey": 0.04
+  },
+  {
+   "opt": "006",
+   "barcode": "8801882188112",
+   "alt": "키스",
+   "img": "item/2026/3/5714897133462651460.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ED5678",
+   "white": 0.743,
+   "grey": 0.007
+  },
+  {
+   "opt": "002",
+   "barcode": "8801882188150",
+   "alt": "허그",
+   "img": "item/2026/3/1294607291313217020.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E3A89A",
+   "white": 0.752,
+   "grey": 0.086
+  }
+ ]
+}

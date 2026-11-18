@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000201779",
+ "collected_at": "2026-11-17T05:10:16.751Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809506705851",
+   "alt": "01 더블글로스",
+   "img": "item/2026/1/2587815263103222913.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CEBFD7",
+   "white": 0.611,
+   "grey": 0.06
+  },
+  {
+   "opt": "002",
+   "barcode": "8809506705868",
+   "alt": "02 웜꿀조합",
+   "img": "item/2026/1/4173728691230841276.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFC3D4",
+   "white": 0.608,
+   "grey": 0.037
+  },
+  {
+   "opt": "003",
+   "barcode": "8809506705875",
+   "alt": "03 쿨꿀조합",
+   "img": "item/2026/1/3346383426557705116.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E3BEDE",
+   "white": 0.612,
+   "grey": 0.265
+  }
+ ]
+}

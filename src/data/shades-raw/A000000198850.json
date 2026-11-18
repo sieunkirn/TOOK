@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000198850",
+ "collected_at": "2026-11-17T05:10:05.467Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8809680146198",
+   "alt": "[올영단독] 05 누드 펌킨",
+   "img": "item/2024/1/6700294422057848999.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FFAEA3",
+   "white": 0.016,
+   "grey": 0.001
+  },
+  {
+   "opt": "013",
+   "barcode": "8809680148598",
+   "alt": "09 체리 키키",
+   "img": "item/2024/10/2004385362357247003.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA6A8B",
+   "white": 0.013,
+   "grey": 0.001
+  },
+  {
+   "opt": "014",
+   "barcode": "8809680148604",
+   "alt": "10 로즐리",
+   "img": "item/2024/10/5927930257609489948.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF8B98",
+   "white": 0.018,
+   "grey": 0.001
+  },
+  {
+   "opt": "001",
+   "barcode": "8809680146150",
+   "alt": "01 복숭아 러브",
+   "img": "item/2024/1/6297036370652430882.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FFAFBA",
+   "white": 0.014,
+   "grey": 0.001
+  },
+  {
+   "opt": "004",
+   "barcode": "8809680146181",
+   "alt": "04 애플 라이크",
+   "img": "item/2024/1/2456669169528685653.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF3345",
+   "white": 0.015,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809680146228",
+   "alt": "08 포도 베베",
+   "img": "item/2024/1/3324229028771081635.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D65975",
+   "white": 0.018,
+   "grey": 0.001
+  }
+ ]
+}

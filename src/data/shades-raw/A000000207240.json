@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000207240",
+ "collected_at": "2026-11-18T01:00:38.481Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809758804432",
+   "alt": "01 플라밍고",
+   "img": "item/2024/6/2367086772743260195.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C2BCCF",
+   "white": 0.597,
+   "grey": 0.399
+  },
+  {
+   "opt": "002",
+   "barcode": "8809758804449",
+   "alt": "02 플로리드",
+   "img": "item/2024/6/7508617509361554581.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C1BBCE",
+   "white": 0.595,
+   "grey": 0.382
+  },
+  {
+   "opt": "003",
+   "barcode": "8809758804470",
+   "alt": "03 브라운로즈 ",
+   "img": "item/2024/6/9193357369609299928.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0BACD",
+   "white": 0.595,
+   "grey": 0.393
+  },
+  {
+   "opt": "004",
+   "barcode": "8809758804463",
+   "alt": "04 시에나",
+   "img": "item/2024/6/7559724974485841089.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BFB9CC",
+   "white": 0.594,
+   "grey": 0.389
+  },
+  {
+   "opt": "005",
+   "barcode": "8809758804456",
+   "alt": "05 스칼렛",
+   "img": "item/2024/6/580897979126331567.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0B9CC",
+   "white": 0.594,
+   "grey": 0.372
+  },
+  {
+   "opt": "006",
+   "barcode": "8809758804487",
+   "alt": "06 마룬",
+   "img": "item/2024/6/495609605518656389.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BDB7CB",
+   "white": 0.594,
+   "grey": 0.381
+  }
+ ]
+}

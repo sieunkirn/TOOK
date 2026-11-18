@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000185183",
+ "collected_at": "2026-11-17T05:09:00.998Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809583812572",
+   "alt": "01 써피",
+   "img": "item/2023/5/2135691559273256666.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF768A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809583812619",
+   "alt": "05 펀치",
+   "img": "item/2023/5/7678682579335214288.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF7560",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8809583812589",
+   "alt": "02 핑크러쉬",
+   "img": "item/2023/5/6784438943731202418.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF587E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809583812626",
+   "alt": "06 디어",
+   "img": "item/2023/5/4745619687908954285.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7170",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809583812831",
+   "alt": "08 베베",
+   "img": "item/2023/8/7151454593709759490.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D97263",
+   "white": 0.022,
+   "grey": 0.003
+  },
+  {
+   "opt": "011",
+   "barcode": "8809583813166",
+   "alt": "11 피치로즈",
+   "img": "item/2024/2/8074057121482977226.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E67577",
+   "white": 0.001,
+   "grey": 0.001
+  }
+ ]
+}

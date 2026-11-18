@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000001001860",
+ "collected_at": "2026-11-17T04:52:19.258Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800378120544",
+   "alt": "114 탄 애프리콧",
+   "img": "item/2026/10/15/65d_13175538.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A1665B",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "001",
+   "barcode": "8800378120209",
+   "alt": "101 블러쉬드",
+   "img": "item/2026/10/15/372_13175536.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C28186",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8800378120216",
+   "alt": "102 미스티 플럼",
+   "img": "item/2026/10/15/a33_13175600.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#955E65",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8800378120223",
+   "alt": "103 스모키 모브",
+   "img": "item/2026/10/15/b7b_13175558.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#894B5A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8800378120230",
+   "alt": "104 베어 로즈",
+   "img": "item/2026/10/15/a9c_13175556.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C5353",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8800378120247",
+   "alt": "105 소버 레드",
+   "img": "item/2026/10/15/4d4_13175554.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8E5555",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800378120254",
+   "alt": "106 멜로우 스킨",
+   "img": "item/2026/10/15/dc3_13175552.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C78381",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800378120261",
+   "alt": "107 매트 진저",
+   "img": "item/2026/10/15/843_13175550.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#996058",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800378120278",
+   "alt": "108 어반 샌드",
+   "img": "item/2026/10/15/db9_13175548.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#976B63",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "006",
+   "barcode": "8800378120285",
+   "alt": "109 쉐도우 엄버",
+   "img": "item/2026/10/15/9e9_13175546.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7D4D47",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800378120292",
+   "alt": "111 마호가니",
+   "img": "item/2026/10/15/16a_13175544.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B4E48",
+   "white": 0.008,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8800378120520",
+   "alt": "112 마스 코랄",
+   "img": "item/2026/10/15/a5f_13175542.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A45C56",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800378120537",
+   "alt": "113 던 핑크",
+   "img": "item/2026/10/15/c1b_13175540.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#884E52",
+   "white": 0,
+   "grey": 0.004
+  }
+ ]
+}

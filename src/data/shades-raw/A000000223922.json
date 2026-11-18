@@ -1,0 +1,259 @@
+{
+ "goodsNo": "A000000223922",
+ "collected_at": "2026-11-17T04:58:22.116Z",
+ "options": [
+  {
+   "opt": "038",
+   "barcode": "8806194087085",
+   "alt": "[NEW/정식출시] 20 이브 로즈 시럽",
+   "img": "item/2026/11/12/ecd_12102543.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#080504",
+   "white": 0.005,
+   "grey": 0.683
+  },
+  {
+   "opt": "036",
+   "barcode": "8806194085210",
+   "alt": "18 멜로즈 시럽 기획 (+ 음영 펜슬)",
+   "img": "item/2026/8/5858566216526715986.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#DAA295",
+   "white": 0.181,
+   "grey": 0.101
+  },
+  {
+   "opt": "032",
+   "barcode": "8806194084732",
+   "alt": "[키츠샵 공동개발] 16 밀키누드시럽",
+   "img": "item/2026/7/6517328788560202367.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#0A0806",
+   "white": 0.008,
+   "grey": 0.68
+  },
+  {
+   "opt": "033",
+   "barcode": "8806194084749",
+   "alt": "[키츠샵 공동개발] 17 포지베일시럽",
+   "img": "item/2026/7/8840623965851050286.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#0B0707",
+   "white": 0.01,
+   "grey": 0.68
+  },
+  {
+   "opt": "035",
+   "barcode": "8806194084763",
+   "alt": "[키츠샵 공동개발] 19 던 모브 시럽",
+   "img": "item/2026/7/6137512663631376782.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#080506",
+   "white": 0.007,
+   "grey": 0.68
+  },
+  {
+   "opt": "001",
+   "barcode": "8806194074337",
+   "alt": "01 밀크티 시럽",
+   "img": "item/2025/3/8333275600260385955.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#BB7452",
+   "white": 0.738,
+   "grey": 0.039
+  },
+  {
+   "opt": "003",
+   "barcode": "8806194074351",
+   "alt": "[김고은PICK] 03 피치 시럽",
+   "img": "item/2025/3/1900068985648435567.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#BF5445",
+   "white": 0.738,
+   "grey": 0.03
+  },
+  {
+   "opt": "004",
+   "barcode": "8806194074368",
+   "alt": "04 무화과 시럽",
+   "img": "item/2025/3/4780453324215895987.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#CB645D",
+   "white": 0.74,
+   "grey": 0.027
+  },
+  {
+   "opt": "005",
+   "barcode": "8806194074375",
+   "alt": "[올영 단독] 05 사과 시럽",
+   "img": "item/2025/3/8532603064097290630.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#C3433A",
+   "white": 0.737,
+   "grey": 0.025
+  },
+  {
+   "opt": "007",
+   "barcode": "8806194074634",
+   "alt": "[올영 단독] 07 쿨 로즈 시럽",
+   "img": "item/2025/3/5256761094984675233.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#974759",
+   "white": 0.74,
+   "grey": 0.044
+  },
+  {
+   "opt": "009",
+   "barcode": "8806194076591",
+   "alt": "[올영 단독] 09 웜 로즈 시럽",
+   "img": "item/2025/3/2668377786394183736.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#A7494D",
+   "white": 0.74,
+   "grey": 0.032
+  },
+  {
+   "opt": "015",
+   "barcode": "8806194078434",
+   "alt": "11 캣츠 핑크 시럽",
+   "img": "item/2025/7/1555338962128675125.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#ED7687",
+   "white": 0.669,
+   "grey": 0.018
+  },
+  {
+   "opt": "037",
+   "barcode": "8806194085227",
+   "alt": "19 던모브 시럽 기획 (+ 음영 펜슬)",
+   "img": "item/2026/8/3679609851841189135.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C29397",
+   "white": 0.143,
+   "grey": 0.115
+  },
+  {
+   "opt": "034",
+   "barcode": "8806194084756",
+   "alt": "[키츠샵 공동개발] 18 멜로즈 시럽",
+   "img": "item/2026/7/794441184002300196.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#090605",
+   "white": 0.007,
+   "grey": 0.679
+  },
+  {
+   "opt": "024",
+   "barcode": "8806194082608",
+   "alt": "04 무화과시럽 기획 (+립 세럼 증정)",
+   "img": "item/2026/2/5844288526017411522.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#B69097",
+   "white": 0.544,
+   "grey": 0.374
+  },
+  {
+   "opt": "025",
+   "barcode": "8806194082615",
+   "alt": "07 쿨로즈시럽 기획 (+립 세럼 증정)",
+   "img": "item/2026/2/5546088533187564933.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#AE8E9A",
+   "white": 0.555,
+   "grey": 0.385
+  },
+  {
+   "opt": "018",
+   "barcode": "8806194079936",
+   "alt": "12 탱글포도시럽 단품",
+   "img": "item/2025/10/8012926898740125090.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#060203",
+   "white": 0.004,
+   "grey": 0.678
+  },
+  {
+   "opt": "020",
+   "barcode": "8806194079943",
+   "alt": "13 츄릅리치시럽 단품",
+   "img": "item/2025/10/8601545779499445170.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#070304",
+   "white": 0.004,
+   "grey": 0.678
+  },
+  {
+   "opt": "002",
+   "barcode": "8806194074344",
+   "alt": "02 살구 시럽",
+   "img": "item/2025/3/402213972844317180.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#CF754E",
+   "white": 0.737,
+   "grey": 0.034
+  },
+  {
+   "opt": "006",
+   "barcode": "8806194074627",
+   "alt": "06 플럼 시럽",
+   "img": "item/2025/3/879268816822027832.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#8A354C",
+   "white": 0.739,
+   "grey": 0.032
+  },
+  {
+   "opt": "008",
+   "barcode": "8806194074641",
+   "alt": "08 그레이프 시럽",
+   "img": "item/2025/3/4595997293129046007.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#AA5A60",
+   "white": 0.742,
+   "grey": 0.042
+  },
+  {
+   "opt": "010",
+   "barcode": "8806194076607",
+   "alt": "10 베리 시럽",
+   "img": "item/2025/3/776947782635972937.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#E67E8D",
+   "white": 0.743,
+   "grey": 0.023
+  },
+  {
+   "opt": "022",
+   "barcode": "8806194079950",
+   "alt": "14 달콤허니시럽",
+   "img": "item/2025/11/4072841404798459827.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#AA5D54",
+   "white": 0.625,
+   "grey": 0.039
+  }
+ ]
+}

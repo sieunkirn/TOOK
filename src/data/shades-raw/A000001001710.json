@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000001001710",
+ "collected_at": "2026-11-17T04:59:34.459Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800365710291",
+   "alt": "G01 피오니 피즈",
+   "img": "item/2026/10/21/a27_20092157.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC5261",
+   "white": 0.715,
+   "grey": 0.017
+  },
+  {
+   "opt": "002",
+   "barcode": "8800365710307",
+   "alt": "G02 핑크 커런트",
+   "img": "item/2026/10/21/0bf_20092227.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0687E",
+   "white": 0.706,
+   "grey": 0.034
+  },
+  {
+   "opt": "003",
+   "barcode": "8800365710314",
+   "alt": "G03 로즈 에이드",
+   "img": "item/2026/10/21/456_20092244.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B15A60",
+   "white": 0.744,
+   "grey": 0.042
+  },
+  {
+   "opt": "004",
+   "barcode": "8800365710321",
+   "alt": "G04 베리 밀크",
+   "img": "item/2026/10/21/bee_20092248.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A0405F",
+   "white": 0.727,
+   "grey": 0.038
+  },
+  {
+   "opt": "005",
+   "barcode": "8800365710338",
+   "alt": "G05 코코아 밀크",
+   "img": "item/2026/10/21/8b7_20092254.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#784743",
+   "white": 0.732,
+   "grey": 0.079
+  },
+  {
+   "opt": "006",
+   "barcode": "8800365710345",
+   "alt": "G06 클리어 블러쉬",
+   "img": "item/2026/10/21/4d8_20092258.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C92C63",
+   "white": 0.743,
+   "grey": 0.03
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000185529",
+ "collected_at": "2026-11-17T05:09:12.107Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809925112308",
+   "alt": "01 레몬 밤",
+   "img": "item/2023/5/209147603756782601.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD4A3C",
+   "white": 0.072,
+   "grey": 0.507
+  },
+  {
+   "opt": "004",
+   "barcode": "8809925112735",
+   "alt": "04 애플 드롭",
+   "img": "item/2023/5/2959108028822808994.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A2182B",
+   "white": 0.103,
+   "grey": 0.472
+  },
+  {
+   "opt": "002",
+   "barcode": "8809925112759",
+   "alt": "06 그레이프 셔벗",
+   "img": "item/2023/5/6580685896378181115.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#95293C",
+   "white": 0.119,
+   "grey": 0.467
+  },
+  {
+   "opt": "012",
+   "barcode": "8809925188334",
+   "alt": "14 코코 누드",
+   "img": "item/2026/7/4192945851647424793.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C97B88",
+   "white": 0.369,
+   "grey": 0.28
+  },
+  {
+   "opt": "013",
+   "barcode": "8809925181700",
+   "alt": "13 텐저린 밀크",
+   "img": "item/2026/7/2983477932935410453.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5756F",
+   "white": 0.388,
+   "grey": 0.239
+  },
+  {
+   "opt": "014",
+   "barcode": "8809925181694",
+   "alt": "12 샤이 모브",
+   "img": "item/2026/7/262719559505832853.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A9685D",
+   "white": 0.322,
+   "grey": 0.301
+  },
+  {
+   "opt": "008",
+   "barcode": "8809925133310",
+   "alt": "08 슈가 퍼플",
+   "img": "item/2023/8/110546703855183861.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C06295",
+   "white": 0.036,
+   "grey": 0.363
+  },
+  {
+   "opt": "007",
+   "barcode": "8809925133327",
+   "alt": "09 코코 밀크",
+   "img": "item/2023/8/8198263032989879010.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A2493A",
+   "white": 0.033,
+   "grey": 0.362
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000212152",
+ "collected_at": "2026-11-18T01:01:04.830Z",
+ "options": [
+  {
+   "opt": "012",
+   "barcode": "8809968130482",
+   "alt": "502 스펑키",
+   "img": "item/2024/10/7568429877427965663.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#7E303F",
+   "white": 0.03,
+   "grey": 0.002
+  },
+  {
+   "opt": "007",
+   "barcode": "8809968130536",
+   "alt": "507 플레이풀",
+   "img": "item/2024/10/1539173968460233962.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#792B33",
+   "white": 0.029,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809968130550",
+   "alt": "509 딜라잇풀",
+   "img": "item/2024/10/6579640127557726040.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D94D52",
+   "white": 0.032,
+   "grey": 0.002
+  }
+ ]
+}

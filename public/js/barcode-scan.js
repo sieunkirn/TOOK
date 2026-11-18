@@ -36,10 +36,12 @@ export function cameraErrorMessage(e) {
 }
 
 // 웹캠 영상은 작고 흐리고 잡음이 많아 원본 그대로는 거의 읽히지 않는다(시험: 18가지 중 1가지).
-// 프레임마다 아래 변형을 하나씩 돌아가며 읽는다: 원본 / 살짝 흐림(잡음·계단 현상 제거) / 가운데 확대 / 세로로 든 바코드(90° 회전) / 더 흐림.
+// 프레임마다 아래 변형을 하나씩 돌아가며 읽는다: 원본 / 살짝 흐림(잡음·계단 현상 제거) / 가운데 확대 / 세로로 든 바코드(90° 회전) / 더 흐림
+// / 가운데 절반을 흐림 없이 2배 확대(2026-11-18 추가: 바코드가 작거나 흐리고 배경이 넓을 때. 바코드 카메라 테스트 화면의 합성 장면 12가지에서
+// 기존 5가지가 모두 놓친 3가지 중 2가지를 읽음, 이것 하나만으로 11가지).
 // crop: 가운데 비율, up: 확대 배율, smooth: 흐림(px), rotate: 회전(도)
 const VARIANTS = [
-  {}, { smooth: 1 }, { crop: 0.6, up: 1.6, smooth: 1 }, { rotate: 90, smooth: 1 }, { smooth: 2 }, { crop: 0.6, up: 2, smooth: 1.5 },
+  {}, { smooth: 1 }, { crop: 0.6, up: 1.6, smooth: 1 }, { rotate: 90, smooth: 1 }, { smooth: 2 }, { crop: 0.6, up: 2, smooth: 1.5 }, { crop: 0.5, up: 2 },
 ];
 const MAX_WORK_WIDTH = 1600; // 확대해도 이 폭을 넘지 않게 해 한 번 읽는 시간을 줄인다
 
@@ -101,8 +103,10 @@ export async function decodeImageFile(file) {
 }
 
 /**
- * @param {{ video: HTMLVideoElement, onCode: (code: string) => void,
+ * @param {{ video: HTMLVideoElement,
+ *   onCode: (code: string, info: { format: string, variant: number, frames: number, ms: number }) => void,
  *   onProgress?: (info: { frames: number, width: number, height: number, ms: number }) => void }} opts
+ * start({ deviceId }) 로 카메라를 고를 수 있다 (없으면 휴대폰 후면·PC 기본 카메라). forget() 은 같은 번호도 다시 알리게 한다.
  */
 export function createBarcodeScanner({ video, onCode, onProgress }) {
   let stream = null;
@@ -113,15 +117,16 @@ export function createBarcodeScanner({ video, onCode, onProgress }) {
   const frameCtx = frame.getContext('2d', { willReadFrequently: true });
 
 
-  async function start() {
+  async function start({ deviceId } = {}) {
     if (running) return;
     if (!navigator.mediaDevices?.getUserMedia) throw new Error('이 브라우저 또는 접속 주소에서는 카메라를 쓸 수 없어요. (HTTPS 또는 localhost 필요)');
     const ZXing = await loadZXing();
     const reader = makeReader(ZXing);
 
-    // 휴대폰은 후면 카메라, PC 는 웹캠. 바코드는 해상도가 높을수록 잘 읽힌다
+    // 휴대폰은 후면 카메라, PC 는 웹캠(고른 카메라가 있으면 그것). 바코드는 해상도가 높을수록 잘 읽힌다
+    const which = deviceId ? { deviceId: { exact: deviceId } } : { facingMode: 'environment' };
     try {
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment', width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false });
+      stream = await navigator.mediaDevices.getUserMedia({ video: { ...which, width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false });
       video.srcObject = stream;
       await video.play();
     } catch (e) {
@@ -143,13 +148,14 @@ export function createBarcodeScanner({ video, onCode, onProgress }) {
         frame.width = video.videoWidth;
         frame.height = video.videoHeight;
         frameCtx.drawImage(video, 0, 0);
-        const v = VARIANTS[turn++ % VARIANTS.length];
+        const variant = turn++ % VARIANTS.length;
         try {
-          const bitmap = new ZXing.BinaryBitmap(new ZXing.HybridBinarizer(new ZXing.HTMLCanvasElementLuminanceSource(drawVariant(frame, v))));
-          const code = reader.decode(bitmap).getText();
+          const bitmap = new ZXing.BinaryBitmap(new ZXing.HybridBinarizer(new ZXing.HTMLCanvasElementLuminanceSource(drawVariant(frame, VARIANTS[variant]))));
+          const result = reader.decode(bitmap);
+          const code = result.getText();
           if (code !== last) {
             last = code;
-            onCode(code);
+            onCode(code, { format: String(ZXing.BarcodeFormat[result.getBarcodeFormat()] ?? ''), variant, frames: frames + 1, ms: performance.now() - startedAt });
           }
         } catch {
           // 이 프레임·변형으로는 읽을 수 있는 바코드가 없다
@@ -174,5 +180,5 @@ export function createBarcodeScanner({ video, onCode, onProgress }) {
   }
 
   window.addEventListener('pagehide', stop);
-  return { start, stop, isRunning: () => running };
+  return { start, stop, isRunning: () => running, forget: () => { last = null; } };
 }

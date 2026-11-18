@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000219607",
+ "collected_at": "2026-11-18T01:01:11.637Z",
+ "options": [
+  {
+   "opt": "012",
+   "barcode": "8800322100486",
+   "alt": "[+곰구마모자] 09 뮤트랄라레로",
+   "img": "item/2025/10/6708561247664478926.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B35D6B",
+   "white": 0.098,
+   "grey": 0.01
+  },
+  {
+   "opt": "013",
+   "barcode": "8800322100493",
+   "alt": "[+곰구마모자] 10 뮤트덩거덩스",
+   "img": "item/2025/10/2061745218390963876.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A5485B",
+   "white": 0.097,
+   "grey": 0.009
+  },
+  {
+   "opt": "014",
+   "barcode": "8800322100509",
+   "alt": "[+곰구마모자] 11 핑룰라라",
+   "img": "item/2025/10/1207997341970826187.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B14955",
+   "white": 0.097,
+   "grey": 0.01
+  },
+  {
+   "opt": "018",
+   "barcode": "8800322100653",
+   "alt": "[단품] 12 핑크면다야",
+   "img": "item/2025/9/9194310120454341184.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BB5052",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8800322100646",
+   "alt": "[단품] 13 웜도조절",
+   "img": "item/2025/9/1219188306368366777.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA755B",
+   "white": 0,
+   "grey": 0.007
+  },
+  {
+   "opt": "001",
+   "barcode": "8800255687283",
+   "alt": " 01 살구가되",
+   "img": "item/2025/2/4418627928044155464.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FB7E6D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800255687306",
+   "alt": "03 님로즈죠",
+   "img": "item/2025/2/2750374292864082458.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB3B49",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800255687320",
+   "alt": "05 쿨럭쿨럭",
+   "img": "item/2025/2/3392459414352974797.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AA3047",
+   "white": 0.002,
+   "grey": 0.002
+  },
+  {
+   "opt": "011",
+   "barcode": "8800290364880",
+   "alt": "[궁 콜라보] 08 쿨네버크라이",
+   "img": "item/2025/6/6790805580870999327.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C03653",
+   "white": 0.001,
+   "grey": 0.002
+  }
+ ]
+}

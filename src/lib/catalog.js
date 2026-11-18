@@ -1,13 +1,23 @@
 // 제품 목록 조회 (서버/브라우저 공용, 외부 의존성 없음).
 // 서버는 repository.js 가 JSON 파일을 읽어 setProducts() 로 넣고, 브라우저(정적 모드)는 data/products.json 을 받아 넣는다.
 let products = [];
+// 미러 화면에 보여 줄 제품 (2026-11-18 사용자 요청): 호수 데이터를 쓰는 중이면
+// 호수가 하나도 없는 제품('호수 정보 준비 중'·'정보 없음')은 추천·챗봇·검색에서 뺀다.
+// 호수 데이터를 아직 안 불러온 경우(가상 데이터·옛 빌드)는 모두 보여 준다. ID·바코드로 찾기는 그대로 된다
+let visible = [];
 
 export function setProducts(list) {
   products = list;
+  annotateShadeCounts();
 }
 
 export function allProducts() {
-  return products;
+  return visible;
+}
+
+/** 호수가 없어 미러 화면에서 뺀 제품 (관리·테스트용) */
+export function hiddenProducts() {
+  return products.filter((p) => !visible.includes(p));
 }
 
 // 시연용 호수 데이터(src/data/products.demo.json): 호수·바코드·재고가 있는 가상 제품.
@@ -16,14 +26,46 @@ let demoProducts = [];
 
 export function setDemoProducts(list) {
   demoProducts = list;
+  // 같은 제품(line)의 호수 수: 카드 안의 호수 고르기가 'N가지'를 보여 준다
+  const count = {};
+  for (const p of demoProducts) count[p.line] = (count[p.line] || 0) + 1;
+  for (const p of demoProducts) if (p.line) p.shade_count = count[p.line];
 }
 
 export function allDemoProducts() {
   return demoProducts;
 }
 
+// 실제 호수 데이터(src/data/products.shades.json, scripts/import-shades.js 로 만든다): 올리브영 제품의 호수별 레코드.
+// line = 제품 id 로 묶는다. 추천(recommend.js)은 호수가 있는 제품을 기준 색과 가장 가까운 호수로 바꿔 보여 준다
+let shades = [];
+let shadeById = new Map();
+let shadesByLine = new Map();
+
+export function setShades(list) {
+  shades = list || [];
+  shadeById = new Map(shades.map((s) => [s.id, s]));
+  shadesByLine = new Map();
+  for (const s of shades) (shadesByLine.get(s.line) || shadesByLine.set(s.line, []).get(s.line)).push(s);
+  annotateShadeCounts();
+}
+
+export function allShades() {
+  return shades;
+}
+
+// 제품 레코드에 호수 수(shade_count)를 붙인다: 카드·챗봇이 '호수 보기' 버튼을 띄울지 판단한다
+function annotateShadeCounts() {
+  for (const p of products) {
+    const n = shadesByLine.get(p.id)?.length || 0;
+    if (n) p.shade_count = n;
+    else delete p.shade_count;
+  }
+  visible = shades.length ? products.filter((p) => p.shade_count) : products;
+}
+
 export function findById(id) {
-  return products.find((p) => p.id === id) || demoProducts.find((p) => p.id === id) || null;
+  return products.find((p) => p.id === id) || demoProducts.find((p) => p.id === id) || shadeById.get(id) || null;
 }
 
 export function normalizeBarcode(input) {
@@ -36,12 +78,18 @@ export const shortName = (p) => (p.shade_name ? `${p.brand} ${p.shade_name}` : `
 
 export function findByBarcode(code) {
   const c = normalizeBarcode(code);
-  return products.find((p) => p.barcode === c) || demoProducts.find((p) => p.barcode === c) || null;
+  return products.find((p) => p.barcode === c) || demoProducts.find((p) => p.barcode === c)
+    || shades.find((s) => s.barcodes?.includes(c)) || null; // 실제 호수: 단품·기획 옵션 바코드 모두
 }
 
-/** 같은 제품의 호수 전체 (호수 데이터가 있는 시연용 제품만, 없으면 빈 배열) */
+/** 같은 제품의 호수 전체: 시연용 제품(line), 실제 호수 레코드(line = 제품 id), 실제 제품(id). 없으면 빈 배열 */
 export function shadesOf(product) {
-  return product?.line ? demoProducts.filter((p) => p.line === product.line) : [];
+  if (!product) return [];
+  if (product.line) {
+    const demo = demoProducts.filter((p) => p.line === product.line);
+    return demo.length ? demo : (shadesByLine.get(product.line) || []);
+  }
+  return shadesByLine.get(product.id) || [];
 }
 
 // 제품 이름으로 찾기: 띄어쓰기·기호를 빼고 비교한다. 이름 말고 다른 조건("더 저렴한", "추천")이 붙은 말은 기존 검색에 맡긴다
@@ -53,7 +101,7 @@ export function findNamedProduct(text) {
   const msg = nameKey(text);
   if (!msg) return null;
   let best = null;
-  for (const p of [...demoProducts, ...products]) {
+  for (const p of [...demoProducts, ...visible]) {
     for (const [brand, name] of [[p.brand, p.name], [p.brand_en, p.name_en]]) {
       const n = nameKey(name), b = nameKey(brand);
       if (!n || !msg.includes(n)) continue;

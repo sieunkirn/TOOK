@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000265287",
+ "collected_at": "2026-11-17T05:01:03.515Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800331321797",
+   "alt": "1호 니어",
+   "img": "item/2026/8/6085556947891934583.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B66E68",
+   "white": 0.484,
+   "grey": 0.019
+  },
+  {
+   "opt": "002",
+   "barcode": "8800331321803",
+   "alt": "2호 디어",
+   "img": "item/2026/8/1826677079114829059.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD6E75",
+   "white": 0.484,
+   "grey": 0.014
+  },
+  {
+   "opt": "003",
+   "barcode": "8800331321810",
+   "alt": "3호 누 얼루어",
+   "img": "item/2026/8/1377511312432442309.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8555C",
+   "white": 0.484,
+   "grey": 0.016
+  },
+  {
+   "opt": "005",
+   "barcode": "8800331323333",
+   "alt": "5호 허그",
+   "img": "item/2026/8/117440032583662902.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF5D57",
+   "white": 0.482,
+   "grey": 0.016
+  },
+  {
+   "opt": "007",
+   "barcode": "8800331321834",
+   "alt": "7호 하트",
+   "img": "item/2026/8/3272333767559856335.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD5764",
+   "white": 0.484,
+   "grey": 0.012
+  },
+  {
+   "opt": "008",
+   "barcode": "8800331323340",
+   "alt": "8호 와일드(온라인 단독)",
+   "img": "item/2026/8/6048103133700425360.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B94F5E",
+   "white": 0.483,
+   "grey": 0.011
+  },
+  {
+   "opt": "009",
+   "barcode": "8800331323357",
+   "alt": "9호 콜드(온라인 단독)",
+   "img": "item/2026/8/2026143589633465619.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#914B55",
+   "white": 0.485,
+   "grey": 0.019
+  },
+  {
+   "opt": "010",
+   "barcode": "8800331323364",
+   "alt": "10호 레더",
+   "img": "item/2026/8/259845628733683520.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F5B51",
+   "white": 0.484,
+   "grey": 0.02
+  },
+  {
+   "opt": "004",
+   "barcode": "8800331323326",
+   "alt": "4호 휘그레이",
+   "img": "item/2026/8/8029731348452277546.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A65856",
+   "white": 0.484,
+   "grey": 0.018
+  },
+  {
+   "opt": "006",
+   "barcode": "8800331321827",
+   "alt": "6호 누 로즈",
+   "img": "item/2026/8/5864247350981483281.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BD5E59",
+   "white": 0.482,
+   "grey": 0.015
+  }
+ ]
+}

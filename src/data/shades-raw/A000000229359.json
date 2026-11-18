@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000229359",
+ "collected_at": "2026-11-17T05:11:52.655Z",
+ "options": [
+  {
+   "opt": "019",
+   "barcode": "8800327140067",
+   "alt": "[글리터 기획] 653 뮤트 써머",
+   "img": "item/2025/8/4291652003517608113.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE969C",
+   "white": 0.691,
+   "grey": 0.634
+  },
+  {
+   "opt": "001",
+   "barcode": "8809506709071",
+   "alt": "(블러링) 601 웜 스프링",
+   "img": "item/2025/6/6604017981063024951.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A1969F",
+   "white": 0.8,
+   "grey": 0.577
+  },
+  {
+   "opt": "002",
+   "barcode": "8809506709088",
+   "alt": "(블러링) 602 쿨 써머",
+   "img": "item/2025/6/2331812785314357325.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F98A2",
+   "white": 0.799,
+   "grey": 0.582
+  },
+  {
+   "opt": "003",
+   "barcode": "8809506709095",
+   "alt": "(블러링) 603 뮤트 써머",
+   "img": "item/2025/6/5676707141665222125.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#979AA3",
+   "white": 0.799,
+   "grey": 0.595
+  },
+  {
+   "opt": "008",
+   "barcode": "8809506709149",
+   "alt": "(글로잉) 651 웜 스프링",
+   "img": "item/2025/6/3416933551676534303.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9D9BA1",
+   "white": 0.799,
+   "grey": 0.539
+  },
+  {
+   "opt": "009",
+   "barcode": "8809506709156",
+   "alt": "(글로잉) 652 쿨 써머",
+   "img": "item/2025/6/6920799612339780247.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F9AA4",
+   "white": 0.799,
+   "grey": 0.543
+  },
+  {
+   "opt": "010",
+   "barcode": "8809506709200",
+   "alt": "(글로잉) 653 뮤트 써머",
+   "img": "item/2025/6/5276785018841786444.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B9BA4",
+   "white": 0.799,
+   "grey": 0.547
+  },
+  {
+   "opt": "016",
+   "barcode": "8800327140029",
+   "alt": "[글리터 기획] 602 쿨 써머",
+   "img": "item/2025/8/2371663003266218778.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B697A1",
+   "white": 0.692,
+   "grey": 0.618
+  },
+  {
+   "opt": "017",
+   "barcode": "8800327140036",
+   "alt": "[글리터 기획] 603 뮤트 써머",
+   "img": "item/2025/8/4519563297369609853.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AC989D",
+   "white": 0.692,
+   "grey": 0.638
+  },
+  {
+   "opt": "018",
+   "barcode": "8800327140043",
+   "alt": "[글리터 기획] 651 웜 스프링",
+   "img": "item/2025/8/5572390598261973780.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B89B9B",
+   "white": 0.692,
+   "grey": 0.609
+  }
+ ]
+}

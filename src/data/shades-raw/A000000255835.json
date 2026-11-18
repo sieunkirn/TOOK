@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000255835",
+ "collected_at": "2026-11-17T05:05:32.810Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8800303332615",
+   "alt": "[NEW 단품] 08 너티라떼",
+   "img": "item/2026/9/8265321314190064679.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE9F8E",
+   "white": 0.593,
+   "grey": 0.107
+  },
+  {
+   "opt": "009",
+   "barcode": "8800303332622",
+   "alt": "[NEW 단품] 09 모카무스",
+   "img": "item/2026/9/2023498006108391049.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B88980",
+   "white": 0.591,
+   "grey": 0.157
+  },
+  {
+   "opt": "001",
+   "barcode": "8800303335401",
+   "alt": "[단품] 01 플레어",
+   "img": "item/2026/5/613983239427972157.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA9E90",
+   "white": 0.598,
+   "grey": 0.03
+  },
+  {
+   "opt": "003",
+   "barcode": "8800303335425",
+   "alt": "[단품] 03 헤이즈",
+   "img": "item/2026/5/7819016393352031425.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C38D91",
+   "white": 0.592,
+   "grey": 0.062
+  },
+  {
+   "opt": "004",
+   "barcode": "8800303335432",
+   "alt": "[단품] 04 멜로우",
+   "img": "item/2026/5/6362652597312740057.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9877F",
+   "white": 0.594,
+   "grey": 0.031
+  },
+  {
+   "opt": "005",
+   "barcode": "8800303335449",
+   "alt": "[단품] 05 로지 코코아",
+   "img": "item/2026/5/3253778458301259300.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C4928D",
+   "white": 0.595,
+   "grey": 0.061
+  },
+  {
+   "opt": "007",
+   "barcode": "8800303335463",
+   "alt": "[단품] 07 플럼 루즈",
+   "img": "item/2026/5/7401103840796081387.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1778C",
+   "white": 0.594,
+   "grey": 0.028
+  },
+  {
+   "opt": "002",
+   "barcode": "8800303335418",
+   "alt": "[단품] 02 페어리 슈",
+   "img": "item/2026/5/1980463893503451641.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FBA1BB",
+   "white": 0.598,
+   "grey": 0.03
+  },
+  {
+   "opt": "006",
+   "barcode": "8800303335456",
+   "alt": "[단품] 06 베어 로즈",
+   "img": "item/2026/5/7874098892989450704.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EB878F",
+   "white": 0.592,
+   "grey": 0.021
+  }
+ ]
+}

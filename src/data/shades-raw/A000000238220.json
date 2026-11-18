@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000238220",
+ "collected_at": "2026-11-17T05:13:17.721Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8809611864450",
+   "alt": "704 러디",
+   "img": "item/2025/10/8002495088829096748.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B7162B",
+   "white": 0.01,
+   "grey": 0.007
+  },
+  {
+   "opt": "007",
+   "barcode": "8809611864467",
+   "alt": "705 토스티",
+   "img": "item/2025/10/8556980574370244047.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B25556",
+   "white": 0.013,
+   "grey": 0.046
+  },
+  {
+   "opt": "005",
+   "barcode": "8809611864481",
+   "alt": "(베스트) 707 트위드",
+   "img": "item/2025/10/2969424397272892189.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B44952",
+   "white": 0.012,
+   "grey": 0.036
+  },
+  {
+   "opt": "004",
+   "barcode": "8809611864498",
+   "alt": "(Laka Pick) 708 버피",
+   "img": "item/2025/10/6423303867229287719.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B5E53",
+   "white": 0.011,
+   "grey": 0.087
+  },
+  {
+   "opt": "003",
+   "barcode": "8809611864504",
+   "alt": "709 빈티지",
+   "img": "item/2025/10/345231449460992310.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7E423A",
+   "white": 0.01,
+   "grey": 0.049
+  },
+  {
+   "opt": "012",
+   "barcode": "8809611866409",
+   "alt": "[글로셔너팟 증정] 702 멜츠 기획",
+   "img": "item/2025/11/2483491915207669761.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D66B68",
+   "white": 0.082,
+   "grey": 0.045
+  },
+  {
+   "opt": "001",
+   "barcode": "8809611864429",
+   "alt": "(쿨톤추천) 701 돌리",
+   "img": "item/2025/10/45112167057868662.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA7278",
+   "white": 0.035,
+   "grey": 0.033
+  },
+  {
+   "opt": "010",
+   "barcode": "8809611864436",
+   "alt": "(웜톤추천) 702 멜츠",
+   "img": "item/2025/10/2438898653020610783.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D86B68",
+   "white": 0.028,
+   "grey": 0.038
+  },
+  {
+   "opt": "009",
+   "barcode": "8809611864443",
+   "alt": "703 애프리",
+   "img": "item/2025/10/864176212404738665.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D35756",
+   "white": 0.015,
+   "grey": 0.039
+  },
+  {
+   "opt": "006",
+   "barcode": "8809611864474",
+   "alt": "706 스틸러",
+   "img": "item/2025/10/2653907521769682883.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#843250",
+   "white": 0.01,
+   "grey": 0.012
+  },
+  {
+   "opt": "002",
+   "barcode": "8809611864511",
+   "alt": "710 체리쉬",
+   "img": "item/2025/10/5419677512198079645.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#6E2A3B",
+   "white": 0.009,
+   "grey": 0.015
+  }
+ ]
+}

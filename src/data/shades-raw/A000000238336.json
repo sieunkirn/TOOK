@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000238336",
+ "collected_at": "2026-11-18T01:01:32.032Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809968207788",
+   "alt": "714 뱀프틴트",
+   "img": "item/2024/8/861679926124496101.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A71227",
+   "white": 0.847,
+   "grey": 0.048
+  },
+  {
+   "opt": "002",
+   "barcode": "8809968207818",
+   "alt": "723 테이스틴",
+   "img": "item/2024/8/5476764135551079447.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B73D36",
+   "white": 0.846,
+   "grey": 0.052
+  }
+ ]
+}

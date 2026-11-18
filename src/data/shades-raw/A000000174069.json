@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000174069",
+ "collected_at": "2026-11-17T05:05:41.765Z",
+ "options": [
+  {
+   "opt": "013",
+   "barcode": "8809864754041",
+   "alt": "13 베어 립스*",
+   "img": "item/2023/12/1481103250110040563.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#26191B",
+   "white": 0.069,
+   "grey": 0.858
+  },
+  {
+   "opt": "016",
+   "barcode": "8809693601493",
+   "alt": "16 긱 앤 모브*",
+   "img": "item/2024/8/6355779529247462410.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#180A0F",
+   "white": 0.053,
+   "grey": 0.854
+  },
+  {
+   "opt": "001",
+   "barcode": "8809693600502",
+   "alt": "01 피치 코랄*",
+   "img": "item/2022/9/4860768272664079788.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CEB9B6",
+   "white": 0.642,
+   "grey": 0.605
+  },
+  {
+   "opt": "002",
+   "barcode": "8809693600519",
+   "alt": "02 핑크 로즈*",
+   "img": "item/2022/9/8935669769194559537.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CEC0BF",
+   "white": 0.671,
+   "grey": 0.672
+  },
+  {
+   "opt": "004",
+   "barcode": "8809693600533",
+   "alt": "04 모브*",
+   "img": "item/2022/9/8925038373735009924.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C9BDBD",
+   "white": 0.63,
+   "grey": 0.651
+  },
+  {
+   "opt": "006",
+   "barcode": "8809693600625",
+   "alt": "06 무드베이지*",
+   "img": "item/2022/10/961899429902156377.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D0C3C3",
+   "white": 0.818,
+   "grey": 0.714
+  },
+  {
+   "opt": "007",
+   "barcode": "8809693600632",
+   "alt": "07 피그로즈*",
+   "img": "item/2022/10/1817380239947401118.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CBB6B4",
+   "white": 0.787,
+   "grey": 0.576
+  },
+  {
+   "opt": "008",
+   "barcode": "8809693600649",
+   "alt": "08 플럼모브*",
+   "img": "item/2022/10/8260417701816369476.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C4B3B5",
+   "white": 0.793,
+   "grey": 0.594
+  }
+ ]
+}

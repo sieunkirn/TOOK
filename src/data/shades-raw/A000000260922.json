@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000260922",
+ "collected_at": "2026-11-18T00:59:33.939Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8800365710253",
+   "alt": "[NEW] C09 프레스드 페탈",
+   "img": "item/2026/9/3806986218064367557.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B3746B",
+   "white": 0.707,
+   "grey": 0.063
+  },
+  {
+   "opt": "010",
+   "barcode": "8800365710260",
+   "alt": "[NEW] C10 오픈 윈도우",
+   "img": "item/2026/9/6476163669904957018.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D07A80",
+   "white": 0.685,
+   "grey": 0.023
+  },
+  {
+   "opt": "001",
+   "barcode": "8800365710116",
+   "alt": "A01 베어 살몬",
+   "img": "item/2026/6/3008438703120735190.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D26E5C",
+   "white": 0.698,
+   "grey": 0.069
+  },
+  {
+   "opt": "002",
+   "barcode": "8800365710123",
+   "alt": "A02 쉘 핑크 헤이즈",
+   "img": "item/2026/6/3086225872687366708.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE6E65",
+   "white": 0.724,
+   "grey": 0.042
+  },
+  {
+   "opt": "003",
+   "barcode": "8800365710000",
+   "alt": "A03 텐더 피치",
+   "img": "item/2026/6/56774602861661261.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C25A50",
+   "white": 0.646,
+   "grey": 0.031
+  },
+  {
+   "opt": "004",
+   "barcode": "8800365710017",
+   "alt": "A04 로우 피오니",
+   "img": "item/2026/6/3158243081657202198.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C95563",
+   "white": 0.725,
+   "grey": 0.024
+  },
+  {
+   "opt": "005",
+   "barcode": "8800365710024",
+   "alt": "A05 더스티 얼",
+   "img": "item/2026/6/1276671337077719962.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A0383A",
+   "white": 0.738,
+   "grey": 0.085
+  },
+  {
+   "opt": "006",
+   "barcode": "8800365710031",
+   "alt": "A06 잉크 로즈",
+   "img": "item/2026/6/6542535021675998653.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#932843",
+   "white": 0.745,
+   "grey": 0.048
+  },
+  {
+   "opt": "007",
+   "barcode": "8800365710048",
+   "alt": "D07 보이드 브라운",
+   "img": "item/2026/6/4873531371211438483.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#835146",
+   "white": 0.483,
+   "grey": 0.1
+  },
+  {
+   "opt": "008",
+   "barcode": "8800365710055",
+   "alt": "D08 플럼 누아르",
+   "img": "item/2026/6/5433529767705699420.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#81383F",
+   "white": 0.687,
+   "grey": 0.114
+  }
+ ]
+}

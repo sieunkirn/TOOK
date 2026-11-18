@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000238153",
+ "collected_at": "2026-11-17T05:13:13.023Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809972900248",
+   "alt": "01 슈가애프리콧",
+   "img": "item/2025/10/8052040056762349813.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.766
+  },
+  {
+   "opt": "002",
+   "barcode": "8809972900231",
+   "alt": "02 슈가그레이프",
+   "img": "item/2025/10/1359793102027784082.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.767
+  },
+  {
+   "opt": "003",
+   "barcode": "8809972900224",
+   "alt": "03 슈가베리",
+   "img": "item/2025/10/2948095110194246245.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.766
+  },
+  {
+   "opt": "004",
+   "barcode": "8809972900804",
+   "alt": "04 슈가피그",
+   "img": "item/2025/10/4842244345794131406.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.769
+  },
+  {
+   "opt": "005",
+   "barcode": "8809972900811",
+   "alt": "05 슈가피치",
+   "img": "item/2025/10/2346311728561750688.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.769
+  },
+  {
+   "opt": "006",
+   "barcode": "8809972900828",
+   "alt": "06 슈가체리",
+   "img": "item/2025/10/6270276039386942425.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.766
+  },
+  {
+   "opt": "007",
+   "barcode": "8809972900835",
+   "alt": "07 슈가타로",
+   "img": "item/2025/10/1493503624777432884.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.769
+  },
+  {
+   "opt": "010",
+   "barcode": "8809972901269",
+   "alt": "[NEW] 08 슈가우베",
+   "img": "item/2026/09/29/fc3_29141829.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.708
+  },
+  {
+   "opt": "011",
+   "barcode": "8809972901276",
+   "alt": "[NEW] 09 슈가리치",
+   "img": "item/2026/09/29/451_29141834.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#010001",
+   "white": 0.001,
+   "grey": 0.698
+  },
+  {
+   "opt": "009",
+   "barcode": "8809972901191",
+   "alt": "[NEW] 09 슈가리치(+피치밀크티)*",
+   "img": "item/2026/8/7502069668962690043.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D88585",
+   "white": 0.676,
+   "grey": 0.142
+  }
+ ]
+}

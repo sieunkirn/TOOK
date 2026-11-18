@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000248293",
+ "collected_at": "2026-11-17T05:05:27.602Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800344920031",
+   "alt": "Z02 누카다미아",
+   "img": "item/2026/2/4917634761251854438.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B55548",
+   "white": 0.024,
+   "grey": 0.024
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344920048",
+   "alt": "Z03 베어 그레이프",
+   "img": "item/2026/2/873924363836421654.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C3636C",
+   "white": 0.021,
+   "grey": 0.014
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344920055",
+   "alt": "Z04 피그피그",
+   "img": "item/2026/2/6168238768249401342.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A23243",
+   "white": 0.001,
+   "grey": 0.031
+  },
+  {
+   "opt": "004",
+   "barcode": "8800344920062",
+   "alt": "Z05 쥬쥬브",
+   "img": "item/2026/2/3948184929291648414.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CD4947",
+   "white": 0.013,
+   "grey": 0.006
+  },
+  {
+   "opt": "005",
+   "barcode": "8800344920079",
+   "alt": "Z06 필링 앵두",
+   "img": "item/2026/2/6077880955133045029.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A8363F",
+   "white": 0.019,
+   "grey": 0.011
+  },
+  {
+   "opt": "006",
+   "barcode": "8800344920239",
+   "alt": "Z23 피치 피치 미",
+   "img": "item/2026/2/1285807816880948803.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FA7E8D",
+   "white": 0.007,
+   "grey": 0.006
+  }
+ ]
+}

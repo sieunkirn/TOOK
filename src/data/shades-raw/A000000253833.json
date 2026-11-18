@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000253833",
+ "collected_at": "2026-11-17T05:00:22.666Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8800353602744",
+   "alt": "[누디블러틴트] 31 말랑일락",
+   "img": "item/2026/8/7703188652441983899.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFC8DE",
+   "white": 0.82,
+   "grey": 0.331
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353602751",
+   "alt": "[누디블러틴트] 32 말랑둥절",
+   "img": "item/2026/8/4936034051340385334.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9C8DC",
+   "white": 0.816,
+   "grey": 0.302
+  },
+  {
+   "opt": "020",
+   "barcode": "8800353602911",
+   "alt": "[블러셔] 14 보라몽글",
+   "img": "item/2026/4/7314372608464723593.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8A1BE",
+   "white": 0.572,
+   "grey": 0.067
+  },
+  {
+   "opt": "007",
+   "barcode": "8800353602485",
+   "alt": "[딥 글레이즈] 03 피그콩포트",
+   "img": "item/2026/5/552764316119307562.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C68FAA",
+   "white": 0.631,
+   "grey": 0.101
+  },
+  {
+   "opt": "010",
+   "barcode": "8800353602515",
+   "alt": "[딥 글레이즈] 11 베이지근",
+   "img": "item/2026/5/4915607620178807131.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8A3C2",
+   "white": 0.598,
+   "grey": 0.067
+  },
+  {
+   "opt": "011",
+   "barcode": "8800353602768",
+   "alt": "[립세럼] 02 백복숭아 ",
+   "img": "item/2026/4/5770576255646210180.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5A2BF",
+   "white": 0.584,
+   "grey": 0.105
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353602775",
+   "alt": "[립세럼] 04 버니딸기",
+   "img": "item/2026/4/3371637785060514477.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB6AA3",
+   "white": 0.581,
+   "grey": 0.094
+  },
+  {
+   "opt": "013",
+   "barcode": "8800353602782",
+   "alt": "[립세럼] 08 말랑베이지",
+   "img": "item/2026/4/6255358448915849797.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C49BB1",
+   "white": 0.583,
+   "grey": 0.129
+  },
+  {
+   "opt": "014",
+   "barcode": "8800353602799",
+   "alt": "[립세럼] 09 말랑포동",
+   "img": "item/2026/4/693952646993208702.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F6594",
+   "white": 0.582,
+   "grey": 0.143
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353602805",
+   "alt": "[메타몽 세트] 01 웜리둥절",
+   "img": "item/2026/4/4142067581399825506.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D6C1C1",
+   "white": 0.49,
+   "grey": 0.187
+  },
+  {
+   "opt": "006",
+   "barcode": "8800353602812",
+   "alt": "[메타몽 세트] 02 쿨리둥절",
+   "img": "item/2026/4/5269938677398710681.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D8C2D2",
+   "white": 0.487,
+   "grey": 0.224
+  },
+  {
+   "opt": "008",
+   "barcode": "8800353602492",
+   "alt": "[딥 글레이즈] 04 토피애플",
+   "img": "item/2026/5/2310238105865598510.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C290A6",
+   "white": 0.622,
+   "grey": 0.088
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353602508",
+   "alt": "[딥 글레이즈] 10 포도알콩",
+   "img": "item/2026/5/7075419624037904664.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CAAAC8",
+   "white": 0.608,
+   "grey": 0.086
+  }
+ ]
+}

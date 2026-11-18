@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000192940",
+ "collected_at": "2026-11-18T01:00:27.088Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809625248697",
+   "alt": "01 키치 핑크",
+   "img": "item/2023/11/4284562154014277019.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C93D54",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625248703",
+   "alt": "02 러비 코랄",
+   "img": "item/2023/11/3335795272170473768.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C22B3B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625248710",
+   "alt": "03 베어 베이지",
+   "img": "item/2023/11/3345558389253024823.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#91363B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625248727",
+   "alt": "04 모브 레인",
+   "img": "item/2023/11/4208356077805457671.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F3B48",
+   "white": 0.001,
+   "grey": 0.002
+  },
+  {
+   "opt": "012",
+   "barcode": "8809625248734",
+   "alt": "05 무스비 레드",
+   "img": "item/2023/11/7674959303301831223.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A02533",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809625248741",
+   "alt": "06 플럼 미 ",
+   "img": "item/2023/11/6187164852459127893.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#660E22",
+   "white": 0,
+   "grey": 0.002
+  }
+ ]
+}

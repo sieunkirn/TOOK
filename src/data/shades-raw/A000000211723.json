@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000211723",
+ "collected_at": "2026-11-17T05:04:05.411Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809968209218",
+   "alt": "1호 누디 볼",
+   "img": "item/2026/1/3477949718397840014.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F58D74",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809968209232",
+   "alt": "3호 바비 볼",
+   "img": "item/2026/1/5831778850773174027.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF7F96",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809968209263",
+   "alt": "9호 코코 볼",
+   "img": "item/2026/1/6285267015220975244.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9C5249",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809968209287",
+   "alt": "11호 돌리 볼",
+   "img": "item/2026/1/6221050691158421808.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE9AAE",
+   "white": 0.013,
+   "grey": 0.027
+  },
+  {
+   "opt": "014",
+   "barcode": "8800276313697",
+   "alt": "12호 라일락 볼",
+   "img": "item/2026/1/3979052779836128887.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F092A7",
+   "white": 0.014,
+   "grey": 0.014
+  },
+  {
+   "opt": "023",
+   "barcode": "8800276319224",
+   "alt": "[NEW] 17호 로즈쿠키 볼",
+   "img": "item/2026/1/6155331431109713194.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0414A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8800276319248",
+   "alt": "[NEW] 19호 베리스무디 볼",
+   "img": "item/2026/1/8912798122472024446.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B52546",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "036",
+   "barcode": "8800316294450",
+   "alt": "[단품 ] 22호 피넛 토핑 볼",
+   "img": "item/2026/3/8005346706549352257.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF8877",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809968209225",
+   "alt": "2호 로즈 볼",
+   "img": "item/2026/1/5211312728652275394.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E66E68",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809968209249",
+   "alt": "4호 피치 볼",
+   "img": "item/2026/1/6568738011256145081.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF9380",
+   "white": 0.024,
+   "grey": 0.02
+  },
+  {
+   "opt": "004",
+   "barcode": "8809968209256",
+   "alt": "5호 모브 볼",
+   "img": "item/2026/1/7261714163849481298.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B54F5C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809968209270",
+   "alt": "10호 와인 볼",
+   "img": "item/2026/1/4278971126871611210.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#741C2B",
+   "white": 0,
+   "grey": 0.042
+  },
+  {
+   "opt": "013",
+   "barcode": "8800276313703",
+   "alt": "13호 오디 볼",
+   "img": "item/2026/1/2146932700276201604.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CC546A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8800276313710",
+   "alt": "14호 밀크티 볼",
+   "img": "item/2026/1/7518534316186193905.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F18F82",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8800276313727",
+   "alt": "15호 피그 볼",
+   "img": "item/2026/1/623702197791128214.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4766F",
+   "white": 0.04,
+   "grey": 0.02
+  },
+  {
+   "opt": "022",
+   "barcode": "8800276319217",
+   "alt": "[NEW] 16호 딸기무스 볼",
+   "img": "item/2026/1/8446630921119987161.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E96672",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8800276319231",
+   "alt": "[NEW][올영단독]18호 워터멜론 볼",
+   "img": "item/2026/1/197267648531720535.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F2475B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "037",
+   "barcode": "8800316294467",
+   "alt": "[단품] 23호 초코 카라멜 볼",
+   "img": "item/2026/3/3569272675954602464.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AA625C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "033",
+   "barcode": "8800316293057",
+   "alt": "18호 워터멜론 볼 기획",
+   "img": "item/2026/1/749003120202342993.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CBA1A3",
+   "white": 0.735,
+   "grey": 0.259
+  }
+ ]
+}

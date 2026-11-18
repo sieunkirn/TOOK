@@ -1,0 +1,226 @@
+{
+ "goodsNo": "A000000251137",
+ "collected_at": "2026-11-17T05:00:59.371Z",
+ "options": [
+  {
+   "opt": "023",
+   "barcode": "8809716947850",
+   "alt": "[기획/틴케이스키링]19해맑은 리치인 척",
+   "img": "item/2026/8/7501930957325913053.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F97882",
+   "white": 0.092,
+   "grey": 0.019
+  },
+  {
+   "opt": "024",
+   "barcode": "8809716947843",
+   "alt": "20 새침한 딸기인 척",
+   "img": "item/2026/8/7021547085957869066.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F06F9A",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "027",
+   "barcode": "8809716947584",
+   "alt": "[기획/틴케이스키링]02상냥한로즈애플인척",
+   "img": "item/2026/8/8294074581446355736.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C06864",
+   "white": 0.109,
+   "grey": 0.035
+  },
+  {
+   "opt": "026",
+   "barcode": "8809716947591",
+   "alt": "[기획/틴케이스키링]08 맹랑한 체리인척",
+   "img": "item/2026/8/5832732533483825798.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC4F70",
+   "white": 0.086,
+   "grey": 0.011
+  },
+  {
+   "opt": "004",
+   "barcode": "8809716946815",
+   "alt": "[기획/젤리 글로스] 03 뽀얀 망고스틴",
+   "img": "item/2026/3/6738093755792444651.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D28591",
+   "white": 0.084,
+   "grey": 0.028
+  },
+  {
+   "opt": "020",
+   "barcode": "8809716947133",
+   "alt": "16 땅콩우유 젤리인 척",
+   "img": "item/2026/8/4508053657619662994.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ECAF96",
+   "white": 0.004,
+   "grey": 0.029
+  },
+  {
+   "opt": "018",
+   "barcode": "8809716947140",
+   "alt": "17 자두우유 젤리인 척",
+   "img": "item/2026/4/2793478408591971157.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9757E",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "017",
+   "barcode": "8809716947157",
+   "alt": "18 사과우유 젤리인 척",
+   "img": "item/2026/4/1745939113628090419.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D27670",
+   "white": 0.014,
+   "grey": 0.008
+  },
+  {
+   "opt": "001",
+   "barcode": "8809716946655",
+   "alt": "01 잔잔한 체리인 척",
+   "img": "item/2026/3/6095761351489685683.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3A5A7",
+   "white": 0,
+   "grey": 0.03
+  },
+  {
+   "opt": "014",
+   "barcode": "8809716946686",
+   "alt": "04 발랄한 구아바인 척",
+   "img": "item/2026/3/1709758576085824547.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F37A69",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "012",
+   "barcode": "8809716946709",
+   "alt": "06 수줍은 복숭아인 척",
+   "img": "item/2026/3/1467836037447973011.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE654F",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809716946716",
+   "alt": "07 당당한 방토인 척",
+   "img": "item/2026/3/2599903530848832318.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD515D",
+   "white": 0.007,
+   "grey": 0.006
+  },
+  {
+   "opt": "010",
+   "barcode": "8809716946723",
+   "alt": "08 맹랑한 체리인 척",
+   "img": "item/2026/3/2676492537785483947.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E32043",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809716946730",
+   "alt": "09 무심한 무화과인 척",
+   "img": "item/2026/3/4342543815063213746.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C75E4F",
+   "white": 0.008,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8809716946747",
+   "alt": "10 좋아하는 체리인 척",
+   "img": "item/2026/3/7105075802876604953.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C05454",
+   "white": 0.008,
+   "grey": 0.007
+  },
+  {
+   "opt": "007",
+   "barcode": "8809716946754",
+   "alt": "11 담담한 코코넛인 척",
+   "img": "item/2026/3/6282021695725289036.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#985247",
+   "white": 0.032,
+   "grey": 0.017
+  },
+  {
+   "opt": "006",
+   "barcode": "8809716946761",
+   "alt": "12 도도한 플럼인 척",
+   "img": "item/2026/3/841091204306876388.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B48388",
+   "white": 0,
+   "grey": 0.07
+  },
+  {
+   "opt": "022",
+   "barcode": "8809716947867",
+   "alt": "[기획/틴케이스키링]20새침한 딸기인 척",
+   "img": "item/2026/8/1795009653019562567.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F1759F",
+   "white": 0.098,
+   "grey": 0.009
+  },
+  {
+   "opt": "021",
+   "barcode": "8809716947126",
+   "alt": "15 딸기우유 젤리인 척",
+   "img": "item/2026/8/2811228850814132859.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F7B8B9",
+   "white": 0.019,
+   "grey": 0.084
+  },
+  {
+   "opt": "013",
+   "barcode": "8809716946693",
+   "alt": "05 다정한 복숭아인 척",
+   "img": "item/2026/3/8941600079693367227.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#ED697F",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

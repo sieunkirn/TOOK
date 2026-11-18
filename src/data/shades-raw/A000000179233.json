@@ -1,0 +1,171 @@
+{
+ "goodsNo": "A000000179233",
+ "collected_at": "2026-11-17T05:02:06.864Z",
+ "options": [
+  {
+   "opt": "038",
+   "barcode": "8800299135177",
+   "alt": "[N21 콜라보] 05 오트 무화과",
+   "img": "item/2026/5/2909199512373772718.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DABFB7",
+   "white": 0.327,
+   "grey": 0.333
+  },
+  {
+   "opt": "039",
+   "barcode": "8800299135184",
+   "alt": "[N21 콜라보] 13 로지 튤",
+   "img": "item/2026/5/4637574455036828815.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DBBEB4",
+   "white": 0.312,
+   "grey": 0.325
+  },
+  {
+   "opt": "037",
+   "barcode": "8800299134194",
+   "alt": "[몬치치 한정기획] 06 서울 걸",
+   "img": "item/2026/3/3205617753491742834.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE8BA0",
+   "white": 0.582,
+   "grey": 0.216
+  },
+  {
+   "opt": "008",
+   "barcode": "8809680143135",
+   "alt": "02 헬시 살몬",
+   "img": "item/2025/12/8370637761457748211.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF9EA6",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809680143142",
+   "alt": "03 누핑크",
+   "img": "item/2025/12/8716967333924372422.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FAA0A8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809680143166",
+   "alt": "05 오트 무화과",
+   "img": "item/2025/12/3067775134545247298.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF9A99",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809680143173",
+   "alt": "06 서울 걸",
+   "img": "item/2025/12/7741567716798076979.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9788F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809680143180",
+   "alt": "07 카라멜",
+   "img": "item/2025/12/4380123451810869670.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C96B5E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809680143197",
+   "alt": "08 고져스 모브",
+   "img": "item/2025/12/2750066757757701346.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D36D79",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809680148574",
+   "alt": "09 피치 코코",
+   "img": "item/2025/12/5773388144476385940.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF9B97",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "035",
+   "barcode": "8800299131995",
+   "alt": "10 피치 베이비",
+   "img": "item/2025/8/3366878282262949416.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE7D90",
+   "white": 0.138,
+   "grey": 0.004
+  },
+  {
+   "opt": "031",
+   "barcode": "8809680148581",
+   "alt": "11 자수정 로즈",
+   "img": "item/2025/12/1973975196152791385.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F678AA",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "036",
+   "barcode": "8800299134187",
+   "alt": "[몬치치 한정기획] 01 복숭아 젤리",
+   "img": "item/2026/3/8625651045995984083.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EBB8BD",
+   "white": 0.596,
+   "grey": 0.27
+  },
+  {
+   "opt": "001",
+   "barcode": "8809680143128",
+   "alt": "01 복숭아 젤리",
+   "img": "item/2025/12/4769357176411920218.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FFB8BC",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809680143159",
+   "alt": "04 장미 우유",
+   "img": "item/2025/12/106733283977470258.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF8CBC",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

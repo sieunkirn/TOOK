@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000250445",
+ "collected_at": "2026-11-17T05:00:05.422Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8809836583815",
+   "alt": "003 멀키 넛 기획(+틴트 리무버)",
+   "img": "item/2026/3/5102257968808061010.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF7E72",
+   "white": 0.448,
+   "grey": 0.192
+  },
+  {
+   "opt": "003",
+   "barcode": "8809836583839",
+   "alt": "006 언필터드 기획(+틴트 리무버)",
+   "img": "item/2026/3/469577582363549164.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C16D76",
+   "white": 0.446,
+   "grey": 0.175
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836583846",
+   "alt": "008 체리 피버 기획(+틴트 리무버)",
+   "img": "item/2026/3/7206018169578595809.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC667B",
+   "white": 0.447,
+   "grey": 0.158
+  },
+  {
+   "opt": "001",
+   "barcode": "8809836583709",
+   "alt": "000 메이플라이징",
+   "img": "item/2026/3/5022029028821452807.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C24B47",
+   "white": 0.584,
+   "grey": 0.008
+  },
+  {
+   "opt": "015",
+   "barcode": "8809836583716",
+   "alt": "001 헤이지 버터",
+   "img": "item/2026/3/8669316871058119701.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA8577",
+   "white": 0.588,
+   "grey": 0.018
+  },
+  {
+   "opt": "014",
+   "barcode": "8809836583723",
+   "alt": "002 썬릿",
+   "img": "item/2026/3/7395677014152703554.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F17362",
+   "white": 0.586,
+   "grey": 0.01
+  },
+  {
+   "opt": "012",
+   "barcode": "8809836583747",
+   "alt": "004 베일 로즈",
+   "img": "item/2026/3/6792471062884586612.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E68890",
+   "white": 0.59,
+   "grey": 0.012
+  },
+  {
+   "opt": "007",
+   "barcode": "8809836583792",
+   "alt": "009 더스티 플럼",
+   "img": "item/2026/3/1122648710002188185.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C14471",
+   "white": 0.584,
+   "grey": 0.007
+  },
+  {
+   "opt": "016",
+   "barcode": "8809836584003",
+   "alt": "000 메이플라이징 (+UV 쉴드 립밤)",
+   "img": "item/2026/7/3101922191051603670.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B54D4A",
+   "white": 0.442,
+   "grey": 0.143
+  },
+  {
+   "opt": "017",
+   "barcode": "8809836584133",
+   "alt": "005 로즈 블러쉬 (+UV 쉴드 립밤)",
+   "img": "item/2026/7/3613133164361991982.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D46C7B",
+   "white": 0.442,
+   "grey": 0.148
+  },
+  {
+   "opt": "018",
+   "barcode": "8809836584164",
+   "alt": "008 체리 피버 (+UV 쉴드 립밤)",
+   "img": "item/2026/7/9103536954028426069.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B62C5B",
+   "white": 0.44,
+   "grey": 0.135
+  },
+  {
+   "opt": "006",
+   "barcode": "8809836583808",
+   "alt": "000 메이플라이징 기획(+틴트 리무버)",
+   "img": "item/2026/3/726750863564141206.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B96962",
+   "white": 0.442,
+   "grey": 0.164
+  },
+  {
+   "opt": "004",
+   "barcode": "8809836583822",
+   "alt": "005 로즈 블러쉬 기획(+틴트 리무버)",
+   "img": "item/2026/3/6678735261607731271.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C97A80",
+   "white": 0.446,
+   "grey": 0.181
+  },
+  {
+   "opt": "011",
+   "barcode": "8809836583754",
+   "alt": "005 로즈 블러쉬",
+   "img": "item/2026/3/6026875601587680065.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D26871",
+   "white": 0.586,
+   "grey": 0.009
+  }
+ ]
+}

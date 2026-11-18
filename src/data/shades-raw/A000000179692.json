@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000179692",
+ "collected_at": "2026-11-17T05:08:50.318Z",
+ "options": [
+  {
+   "opt": "006",
+   "barcode": "8809611862012",
+   "alt": "301 피그링",
+   "img": "item/2023/5/4646372969158007239.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C26E64",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809611862036",
+   "alt": "302 포도링",
+   "img": "item/2023/5/2043828400627690261.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E46F7D",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809611862043",
+   "alt": "303 복숭아링",
+   "img": "item/2023/5/5510918083381100455.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E67577",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809611862371",
+   "alt": "306 엔젤링",
+   "img": "item/2023/5/744193325652752426.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E59196",
+   "white": 0.004,
+   "grey": 0.007
+  },
+  {
+   "opt": "010",
+   "barcode": "8809611862746",
+   "alt": "307 코코링",
+   "img": "item/2025/4/1831184293276761104.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B76558",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809611862760",
+   "alt": "309 하트링",
+   "img": "item/2025/4/900750963777856833.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C87778",
+   "white": 0.004,
+   "grey": 0.003
+  },
+  {
+   "opt": "007",
+   "barcode": "8809611862777",
+   "alt": "310 멜바링",
+   "img": "item/2025/4/1762203296018144306.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E67160",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809611862050",
+   "alt": "304 진저링",
+   "img": "item/2023/5/5959033500994777429.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA8C6F",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809611862067",
+   "alt": "305 귤링",
+   "img": "item/2023/5/4802659172762420505.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E47B54",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809611862753",
+   "alt": "308 로사링",
+   "img": "item/2025/4/7728860402269688647.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C16A62",
+   "white": 0.004,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000243819",
+ "collected_at": "2026-11-17T04:59:08.385Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8809923821486",
+   "alt": "[NEW] 로지 듄",
+   "img": "item/2026/6/2080641343108330419.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#C8837D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809923821493",
+   "alt": "[NEW] 신더 모브",
+   "img": "item/2026/6/3495878673883374937.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#995758",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809923821523",
+   "alt": "[NEW] 칠드 루비",
+   "img": "item/2026/6/1061166759683854003.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#6F3735",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809923821097",
+   "alt": " 아이시 도브",
+   "img": "item/2026/1/8629284276040230876.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#A88D96",
+   "white": 0,
+   "grey": 0.155
+  },
+  {
+   "opt": "008",
+   "barcode": "8809923821103",
+   "alt": "쿨 더스트",
+   "img": "item/2026/1/8065956456940673159.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#9C766B",
+   "white": 0,
+   "grey": 0.012
+  },
+  {
+   "opt": "007",
+   "barcode": "8809923821110",
+   "alt": "칠드 나잇",
+   "img": "item/2026/1/7192303167063778053.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#7A4B46",
+   "white": 0.002,
+   "grey": 0.049
+  },
+  {
+   "opt": "006",
+   "barcode": "8809923821127",
+   "alt": "애쉬 브라운",
+   "img": "item/2026/1/3225086118395416555.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#7E5247",
+   "white": 0,
+   "grey": 0.024
+  },
+  {
+   "opt": "005",
+   "barcode": "8809923821134",
+   "alt": "칠 스톤",
+   "img": "item/2026/1/7341600739680565988.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#7C5D56",
+   "white": 0,
+   "grey": 0.029
+  },
+  {
+   "opt": "004",
+   "barcode": "8809923821141",
+   "alt": "칠 누드",
+   "img": "item/2026/1/8095613842354681127.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#986454",
+   "white": 0,
+   "grey": 0.033
+  },
+  {
+   "opt": "003",
+   "barcode": "8809923821158",
+   "alt": "콜드 플러쉬",
+   "img": "item/2026/1/3784284215540977982.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#9C5E52",
+   "white": 0,
+   "grey": 0.063
+  },
+  {
+   "opt": "002",
+   "barcode": "8809923821165",
+   "alt": "브릭 프리즈",
+   "img": "item/2026/11/11/ea7_11183146.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#9F645E",
+   "white": 0.001,
+   "grey": 0.018
+  }
+ ]
+}

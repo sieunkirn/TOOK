@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000158147",
+ "collected_at": "2026-11-17T05:01:52.888Z",
+ "options": [
+  {
+   "opt": "020",
+   "barcode": "8809680147263",
+   "alt": "01 라 비 앙 코랄",
+   "img": "item/2024/5/3654545902816970243.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC7C75",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8809680147270",
+   "alt": "02 산들",
+   "img": "item/2024/5/2489199067548235745.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F6606A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "023",
+   "barcode": "8809680147294",
+   "alt": "04 포멜로 누드",
+   "img": "item/2024/5/4822114244878083190.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB9693",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809680147300",
+   "alt": "05 스트로베리",
+   "img": "item/2024/5/2496281767261899244.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF83A9",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "027",
+   "barcode": "8809680147331",
+   "alt": "[올영단독] 08 자수정",
+   "img": "item/2024/5/8415030872283660252.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA7F9D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "029",
+   "barcode": "8809680147355",
+   "alt": "10 피치 버니",
+   "img": "item/2024/5/3001943418781061929.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEADAA",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809680147362",
+   "alt": "12 일요일",
+   "img": "item/2024/5/3101152502258617899.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D2525C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "031",
+   "barcode": "8809680147379",
+   "alt": "13 물복숭아",
+   "img": "item/2024/5/7402862758381746911.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FFC1C1",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "036",
+   "barcode": "8800299130684",
+   "alt": "[태닝 헬로키티 틴트반지]11 도토리",
+   "img": "item/2025/4/4529301845383560885.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D68B82",
+   "white": 0.385,
+   "grey": 0.111
+  },
+  {
+   "opt": "022",
+   "barcode": "8809680147287",
+   "alt": "03 헬시 복숭아",
+   "img": "item/2024/5/2737817388970936239.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FAA0AB",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8809680147317",
+   "alt": "06 피그 듀",
+   "img": "item/2024/5/7998977373195208627.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D66361",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "037",
+   "barcode": "8800299131971",
+   "alt": "07 로즈 빈",
+   "img": "item/2026/1/8681003297261457540.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FA81A3",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "028",
+   "barcode": "8809680147348",
+   "alt": "09 모브 그레이프",
+   "img": "item/2024/5/6099472375247624539.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DD8A9C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "038",
+   "barcode": "8800299131988",
+   "alt": "11 도토리",
+   "img": "item/2026/1/1829616543859037042.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EAACAB",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

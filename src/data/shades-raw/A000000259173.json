@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000259173",
+ "collected_at": "2026-11-18T00:59:29.641Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809526849511",
+   "alt": "[갓 글로스 기획] 311 숨",
+   "img": "item/2026/6/1222083632673688062.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2BBB4",
+   "white": 0.454,
+   "grey": 0.395
+  },
+  {
+   "opt": "002",
+   "barcode": "8809526849528",
+   "alt": "[갓 글로스 기획] 314 정",
+   "img": "item/2026/6/2624157062733393369.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DBB2AB",
+   "white": 0.452,
+   "grey": 0.383
+  },
+  {
+   "opt": "003",
+   "barcode": "8809526849535",
+   "alt": "[갓 글로스 기획] 315 중",
+   "img": "item/2026/6/1592819256287757019.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D8B4B3",
+   "white": 0.453,
+   "grey": 0.391
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526849450",
+   "alt": "312 결",
+   "img": "item/2026/6/8907875902997381320.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EAB5A6",
+   "white": 0.546,
+   "grey": 0.03
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526849467",
+   "alt": "313 온",
+   "img": "item/2026/6/5986290686186028920.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4AFB2",
+   "white": 0.559,
+   "grey": 0.025
+  },
+  {
+   "opt": "006",
+   "barcode": "8809526849474",
+   "alt": "316 화",
+   "img": "item/2026/6/4528915336593633925.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C88B91",
+   "white": 0.531,
+   "grey": 0.017
+  },
+  {
+   "opt": "007",
+   "barcode": "8809526849481",
+   "alt": "317 청",
+   "img": "item/2026/6/3260471378153337855.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D1938D",
+   "white": 0.527,
+   "grey": 0.039
+  },
+  {
+   "opt": "008",
+   "barcode": "8809526849498",
+   "alt": "318 명",
+   "img": "item/2026/6/5773252162153717104.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC8C82",
+   "white": 0.542,
+   "grey": 0.028
+  },
+  {
+   "opt": "009",
+   "barcode": "8809526849504",
+   "alt": "319 홍",
+   "img": "item/2026/6/6173952113213218691.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A52226",
+   "white": 0.605,
+   "grey": 0.017
+  }
+ ]
+}

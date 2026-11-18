@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000209877",
+ "collected_at": "2026-11-17T05:10:43.609Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809378329681",
+   "alt": "베어피치 (웜톤)",
+   "img": "item/2024/10/2752558923227035445.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2816C",
+   "white": 0.76,
+   "grey": 0.016
+  },
+  {
+   "opt": "006",
+   "barcode": "8809378329667",
+   "alt": "로지로즈 (쿨톤)",
+   "img": "item/2024/10/604258028891589121.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C64D50",
+   "white": 0.76,
+   "grey": 0.014
+  },
+  {
+   "opt": "007",
+   "barcode": "8809378327762",
+   "alt": "스플래쉬 (쿨톤)",
+   "img": "item/2024/10/1564212830879724057.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA899E",
+   "white": 0.761,
+   "grey": 0.026
+  },
+  {
+   "opt": "008",
+   "barcode": "8809378328608",
+   "alt": "레이크 (쿨톤)",
+   "img": "item/2024/10/4847174331092360998.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE636C",
+   "white": 0.759,
+   "grey": 0.025
+  },
+  {
+   "opt": "009",
+   "barcode": "8809378328332",
+   "alt": "위키드 (쿨톤)",
+   "img": "item/2024/10/1669813155186970827.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8D2D4D",
+   "white": 0.758,
+   "grey": 0.013
+  },
+  {
+   "opt": "013",
+   "barcode": "8809378328592",
+   "alt": "프로스트 (뉴트럴)",
+   "img": "item/2025/10/7191522230927752756.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DD6368",
+   "white": 0.759,
+   "grey": 0.012
+  }
+ ]
+}

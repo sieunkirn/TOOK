@@ -1,0 +1,270 @@
+{
+ "goodsNo": "A000000257253",
+ "collected_at": "2026-11-17T05:05:21.665Z",
+ "options": [
+  {
+   "opt": "028",
+   "barcode": "8809526848514",
+   "alt": "[밀크/위글위글] 16 오디바낭 ",
+   "img": "item/2026/5/7877317406747172905.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF9F87",
+   "white": 0.625,
+   "grey": 0.174
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353602485",
+   "alt": "[딥 글레이즈/포켓몬] 03 피그콩포트",
+   "img": "item/2026/5/552764316119307562.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C68FAA",
+   "white": 0.631,
+   "grey": 0.101
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353602515",
+   "alt": "[딥 글레이즈/포켓몬] 11 베이지근",
+   "img": "item/2026/5/4915607620178807131.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8A3C2",
+   "white": 0.598,
+   "grey": 0.067
+  },
+  {
+   "opt": "001",
+   "barcode": "8800353600337",
+   "alt": "[딥 글레이즈] 01 누디도토리",
+   "img": "item/2026/5/971030636161641954.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC8F84",
+   "white": 0.005,
+   "grey": 0.003
+  },
+  {
+   "opt": "029",
+   "barcode": "8800353600344",
+   "alt": "[딥 글레이즈] 02 딸기마롱",
+   "img": "item/2026/5/7907503279947551549.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D18CA8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8800353600351",
+   "alt": "[딥 글레이즈] 03 피그콩포트",
+   "img": "item/2026/5/4914305983200749893.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA616A",
+   "white": 0.004,
+   "grey": 0.004
+  },
+  {
+   "opt": "031",
+   "barcode": "8800353600368",
+   "alt": "[딥 글레이즈] 04 토피애플",
+   "img": "item/2026/5/1800584421834538944.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B4F51",
+   "white": 0.002,
+   "grey": 0.005
+  },
+  {
+   "opt": "032",
+   "barcode": "8800353600375",
+   "alt": "[딥 글레이즈] 05 흑당체리",
+   "img": "item/2026/5/5204620742170015642.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6D0C28",
+   "white": 0.012,
+   "grey": 0.009
+  },
+  {
+   "opt": "033",
+   "barcode": "8800353600382",
+   "alt": "[딥 글레이즈] 06 꿀잠코코아",
+   "img": "item/2026/5/6369590491147080038.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C4F40",
+   "white": 0,
+   "grey": 0.008
+  },
+  {
+   "opt": "034",
+   "barcode": "8800353604595",
+   "alt": "[딥 글레이즈] 10 포도알콩",
+   "img": "item/2026/5/8892798777186079217.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC6D8C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809526846107",
+   "alt": "[밀크] 01 딸기둥절",
+   "img": "item/2026/5/2471275777075221805.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F26E89",
+   "white": 0.01,
+   "grey": 0.002
+  },
+  {
+   "opt": "015",
+   "barcode": "8809526846121",
+   "alt": "[밀크] 03 행복숭아",
+   "img": "item/2026/5/5308748742331935098.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0767A",
+   "white": 0.007,
+   "grey": 0.005
+  },
+  {
+   "opt": "016",
+   "barcode": "8809526846138",
+   "alt": "[밀크] 04 포도당당",
+   "img": "item/2026/5/5448258358317406901.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E07D93",
+   "white": 0.011,
+   "grey": 0.001
+  },
+  {
+   "opt": "017",
+   "barcode": "8809526846145",
+   "alt": "[밀크] 05 레베리업 ",
+   "img": "item/2026/5/590075219878649273.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF506A",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "018",
+   "barcode": "8809526846152",
+   "alt": "[밀크] 06 우롱리치",
+   "img": "item/2026/5/3427605879087041198.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C96471",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "019",
+   "barcode": "8809526846169",
+   "alt": "[밀크] 07 피그퐁당",
+   "img": "item/2026/5/3459608118374332928.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C04A58",
+   "white": 0.007,
+   "grey": 0.004
+  },
+  {
+   "opt": "020",
+   "barcode": "8809526846176",
+   "alt": "[밀크] 08 오홍홍시",
+   "img": "item/2026/5/1209703190406488455.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD4847",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "021",
+   "barcode": "8809526847609",
+   "alt": "[밀크] 11 햇살베이지",
+   "img": "item/2026/5/2448182854312575746.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF897B",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "022",
+   "barcode": "8809526847616",
+   "alt": "[밀크] 12 시골오렌지",
+   "img": "item/2026/5/204512188004498857.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2625A",
+   "white": 0.017,
+   "grey": 0.007
+  },
+  {
+   "opt": "024",
+   "barcode": "8809526848095",
+   "alt": "[밀크] 13 잔망땅콩",
+   "img": "item/2026/5/8816290728031997702.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C5786D",
+   "white": 0.001,
+   "grey": 0.002
+  },
+  {
+   "opt": "025",
+   "barcode": "8809526848101",
+   "alt": "[밀크] 14 잔망리치",
+   "img": "item/2026/5/4765748598512983624.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D75267",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "026",
+   "barcode": "8809526848569",
+   "alt": "[밀크] 15 딸기바낭",
+   "img": "item/2026/6/3624871623392846581.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF6F80",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "035",
+   "barcode": "8800353604601",
+   "alt": "[딥 글레이즈] 11 베이지근",
+   "img": "item/2026/5/902041484628604490.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B47A7B",
+   "white": 0.013,
+   "grey": 0.002
+  },
+  {
+   "opt": "027",
+   "barcode": "8809526848576",
+   "alt": "[밀크] 16 오디바낭",
+   "img": "item/2026/5/1931813915376464118.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A55F71",
+   "white": 0.006,
+   "grey": 0.001
+  }
+ ]
+}

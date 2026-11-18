@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000269108",
+ "collected_at": "2026-11-18T00:59:57.326Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809625249403",
+   "alt": "C00 코드 네임 콜드 (온)",
+   "img": "item/2024/5/6374215388694160302.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8B7D8",
+   "white": 0.049,
+   "grey": 0.036
+  },
+  {
+   "opt": "001",
+   "barcode": "8809625247058",
+   "alt": "06 핀베리 (온)",
+   "img": "item/2023/7/7137587372581519822.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#953349",
+   "white": 0.003,
+   "grey": 0.004
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625248154",
+   "alt": "07 탠드 아워(온)",
+   "img": "item/2023/8/5029930951317129878.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AD4C5E",
+   "white": 0.005,
+   "grey": 0.006
+  }
+ ]
+}

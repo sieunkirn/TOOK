@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000243174",
+ "collected_at": "2026-11-18T00:57:59.739Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809526848583",
+   "alt": "01 웜바구니",
+   "img": "item/2026/3/5042242107613901149.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F8C722",
+   "white": 0.487,
+   "grey": 0.02
+  },
+  {
+   "opt": "002",
+   "barcode": "8809526848590",
+   "alt": "02 쿨바구니",
+   "img": "item/2026/3/5152149389457247051.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#4D6EC2",
+   "white": 0.479,
+   "grey": 0.027
+  }
+ ]
+}

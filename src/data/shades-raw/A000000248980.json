@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000248980",
+ "collected_at": "2026-11-17T05:04:12.764Z",
+ "options": [
+  {
+   "opt": "013",
+   "barcode": "8800283688252",
+   "alt": "[한정] 로파이모브+하트키링",
+   "img": "item/2026/3/1567467184463356861.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EAADD3",
+   "white": 0.47,
+   "grey": 0.052
+  },
+  {
+   "opt": "012",
+   "barcode": "8800283688269",
+   "alt": "[한정] 디스코코랄+하트키링",
+   "img": "item/2026/3/2180879447144933229.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EEA8C6",
+   "white": 0.475,
+   "grey": 0.049
+  },
+  {
+   "opt": "014",
+   "barcode": "8800283686340",
+   "alt": "[한정] 재지 잼+하트키링",
+   "img": "item/2026/3/5778934778042184740.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC9FBE",
+   "white": 0.473,
+   "grey": 0.051
+  },
+  {
+   "opt": "011",
+   "barcode": "8800283688276",
+   "alt": "[한정] 레드클래식+하트키링",
+   "img": "item/2026/3/5813612862153667463.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E78EB8",
+   "white": 0.471,
+   "grey": 0.047
+  },
+  {
+   "opt": "001",
+   "barcode": "8800283634150",
+   "alt": "[단품] 팝스타 피치",
+   "img": "item/2026/3/8890176222117301398.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.883
+  },
+  {
+   "opt": "004",
+   "barcode": "8800283634181",
+   "alt": "[단품] 디스코 코랄",
+   "img": "item/2026/3/5389229058452134095.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.003,
+   "grey": 0.886
+  },
+  {
+   "opt": "005",
+   "barcode": "8800283634198",
+   "alt": "[단품] 일렉트로 베리",
+   "img": "item/2026/3/1122296189344003011.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.861
+  },
+  {
+   "opt": "006",
+   "barcode": "8800283634204",
+   "alt": "[단품] 레드 클래식",
+   "img": "item/2026/3/8001880685168580444.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0,
+   "grey": 0.865
+  },
+  {
+   "opt": "009",
+   "barcode": "8800283656275",
+   "alt": "[단품] 마룬 멜로디",
+   "img": "item/2026/3/7437667622576589324.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.87
+  },
+  {
+   "opt": "010",
+   "barcode": "8800283656282",
+   "alt": "[단품] 케이팝 핑크",
+   "img": "item/2026/3/3605730488505476987.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.885
+  },
+  {
+   "opt": "002",
+   "barcode": "8800283634167",
+   "alt": "[단품] 재지 잼",
+   "img": "item/2026/3/7743587966953301906.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.877
+  },
+  {
+   "opt": "003",
+   "barcode": "8800283634174",
+   "alt": "[단품] 로파이 모브",
+   "img": "item/2026/3/3400285905680247355.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.88
+  },
+  {
+   "opt": "007",
+   "barcode": "8800283634419",
+   "alt": "[단품] 디제이 플럼",
+   "img": "item/2026/3/1849323465782175721.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.877
+  },
+  {
+   "opt": "008",
+   "barcode": "8800283634426",
+   "alt": "[단품] 모카 리믹스",
+   "img": "item/2026/3/5793915592814376622.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.005,
+   "grey": 0.901
+  }
+ ]
+}

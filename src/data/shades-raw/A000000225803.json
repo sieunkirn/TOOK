@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000225803",
+ "collected_at": "2026-11-17T05:06:21.043Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809526842444",
+   "alt": "252 메멘토 모리",
+   "img": "item/2025/4/6345989067704831070.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#742028",
+   "white": 0,
+   "grey": 0.052
+  },
+  {
+   "opt": "003",
+   "barcode": "8809526842758",
+   "alt": "253 아드 베리타스",
+   "img": "item/2025/4/4628557845720104758.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D39792",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526842772",
+   "alt": "255 베니, 비디, 비치",
+   "img": "item/2025/4/2718257913199225298.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC4246",
+   "white": 0,
+   "grey": 0.008
+  },
+  {
+   "opt": "010",
+   "barcode": "8809526845438",
+   "alt": "261 움브라",
+   "img": "item/2025/4/8061117440261397183.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#5D333C",
+   "white": 0,
+   "grey": 0.164
+  },
+  {
+   "opt": "001",
+   "barcode": "8809526842437",
+   "alt": "251 팍스 로마나",
+   "img": "item/2025/4/5129145653510052537.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D0988D",
+   "white": 0.087,
+   "grey": 0.074
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526842765",
+   "alt": "254 아니마 포르티스",
+   "img": "item/2025/4/7984391845143647347.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DC999C",
+   "white": 0.026,
+   "grey": 0.06
+  },
+  {
+   "opt": "006",
+   "barcode": "8809526842789",
+   "alt": "256 카르페 디엠",
+   "img": "item/2025/4/8066954573076675311.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B6303E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809526845339",
+   "alt": "257 아베 마리아",
+   "img": "item/2025/4/2627668461892408720.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB9397",
+   "white": 0.061,
+   "grey": 0.186
+  },
+  {
+   "opt": "008",
+   "barcode": "8809526845407",
+   "alt": "258 데오 볼렌테",
+   "img": "item/2025/4/7833379492627558419.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BA6674",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809526844158",
+   "alt": "259 데우스",
+   "img": "item/2025/4/2164957541664522207.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AC8D84",
+   "white": 0,
+   "grey": 0.184
+  }
+ ]
+}

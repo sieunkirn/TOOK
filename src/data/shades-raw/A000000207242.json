@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000207242",
+ "collected_at": "2026-11-18T01:00:42.089Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809758804074",
+   "alt": "누로스티",
+   "img": "item/2024/6/7218150165135504080.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#D28182",
+   "white": 0.598,
+   "grey": 0.095
+  },
+  {
+   "opt": "002",
+   "barcode": "8809758804081",
+   "alt": "스웻핑크",
+   "img": "item/2024/6/4330458282914341345.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#D87A87",
+   "white": 0.598,
+   "grey": 0.071
+  },
+  {
+   "opt": "003",
+   "barcode": "8809758804098",
+   "alt": "로지웨이",
+   "img": "item/2024/6/7072282906795634646.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#DF757A",
+   "white": 0.596,
+   "grey": 0.062
+  },
+  {
+   "opt": "004",
+   "barcode": "8809758804111",
+   "alt": "코튼브릭",
+   "img": "item/2024/6/4614578104300083524.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#D56F70",
+   "white": 0.596,
+   "grey": 0.062
+  },
+  {
+   "opt": "005",
+   "barcode": "8809758804104",
+   "alt": "플로즈업",
+   "img": "item/2024/6/7244520160171264574.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C85769",
+   "white": 0.592,
+   "grey": 0.056
+  }
+ ]
+}

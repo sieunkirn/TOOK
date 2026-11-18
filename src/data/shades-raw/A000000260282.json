@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000260282",
+ "collected_at": "2026-11-17T05:06:45.671Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800261387726",
+   "alt": "02 피크 (쿨 추천)",
+   "img": "item/2026/6/8280468759779420035.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F23964",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800261387733",
+   "alt": "03 스파이시 (뉴트럴 추천)",
+   "img": "item/2026/6/1310737037650145376.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D31D2F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800261387740",
+   "alt": "04 치키 (뉴트럴 추천)",
+   "img": "item/2026/6/4238890032036433132.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD1C3B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800261387757",
+   "alt": "05 펄스 (웜 베스트)",
+   "img": "item/2026/6/1455992075666143962.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF111C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800261387764",
+   "alt": "06 로즈번 (뉴트럴 베스트)",
+   "img": "item/2026/6/4473382282687458474.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A72430",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800261387771",
+   "alt": "07 스릴 (쿨 베스트)",
+   "img": "item/2026/6/4358874759097981997.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B40931",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800261387788",
+   "alt": "08 메를로 (쿨 추천)",
+   "img": "item/2026/6/6064115686835515541.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8204A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800261387795",
+   "alt": "09 세비지 (웜 추천)",
+   "img": "item/2026/6/1925645021223340738.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A63E3F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8800261387801",
+   "alt": "10 뱀프 (뉴트럴 추천)",
+   "img": "item/2026/6/6914682419760794563.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7F1121",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800261387719",
+   "alt": "[11/23입고예정] 01팅글(웜추천)",
+   "img": "item/2026/6/8258192089751341670.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E42C03",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

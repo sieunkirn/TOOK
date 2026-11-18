@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000261857",
+ "collected_at": "2026-11-17T05:00:09.591Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "8800299144698",
+   "alt": "[NEW레오파드] 07 메이플 밀크",
+   "img": "item/2026/9/5007351416684012903.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D98974",
+   "white": 0.798,
+   "grey": 0.057
+  },
+  {
+   "opt": "008",
+   "barcode": "8800299144711",
+   "alt": "[NEW레오파드] 08 토피넛 휩",
+   "img": "item/2026/9/6889316749390424798.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A95A4E",
+   "white": 0.797,
+   "grey": 0.062
+  },
+  {
+   "opt": "009",
+   "barcode": "8800299144650",
+   "alt": "[NEW레오파드] 09 블러쉬 베베",
+   "img": "item/2026/9/7695915147578425772.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA7682",
+   "white": 0.797,
+   "grey": 0.028
+  },
+  {
+   "opt": "010",
+   "barcode": "8800299144674",
+   "alt": "[NEW레오파드] 10 모브 듄",
+   "img": "item/2026/9/3929419162413751334.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B25967",
+   "white": 0.797,
+   "grey": 0.043
+  },
+  {
+   "opt": "001",
+   "barcode": "8800299144643",
+   "alt": "01 멜트 베이지",
+   "img": "item/2026/8/4351053763389241653.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB8173",
+   "white": 0.8,
+   "grey": 0.046
+  },
+  {
+   "opt": "002",
+   "barcode": "8800299144667",
+   "alt": "02 핑크 오트",
+   "img": "item/2026/8/8328377815299533274.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD7878",
+   "white": 0.799,
+   "grey": 0.041
+  },
+  {
+   "opt": "003",
+   "barcode": "8800299144681",
+   "alt": "03 하트 바이트",
+   "img": "item/2026/8/2697924487328633493.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F56862",
+   "white": 0.797,
+   "grey": 0.03
+  },
+  {
+   "opt": "004",
+   "barcode": "8800299144704",
+   "alt": "04 로즈 스프레드",
+   "img": "item/2026/8/3135170791203887018.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE6D74",
+   "white": 0.798,
+   "grey": 0.037
+  },
+  {
+   "opt": "005",
+   "barcode": "8800299144841",
+   "alt": "05 푸시아 머랭",
+   "img": "item/2026/8/9025875078911812209.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D65D76",
+   "white": 0.798,
+   "grey": 0.029
+  },
+  {
+   "opt": "006",
+   "barcode": "8800299144865",
+   "alt": "06 모브 멜로우",
+   "img": "item/2026/8/4987628161365101417.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF626E",
+   "white": 0.798,
+   "grey": 0.036
+  }
+ ]
+}

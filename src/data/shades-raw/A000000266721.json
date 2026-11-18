@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000266721",
+ "collected_at": "2026-11-17T04:58:12.218Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800353604960",
+   "alt": "[립앤아이키트]01 웜톤",
+   "img": "item/2026/8/6806385555529660414.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1BCBB",
+   "white": 0.584,
+   "grey": 0.318
+  },
+  {
+   "opt": "003",
+   "barcode": "8800353604977",
+   "alt": "[립앤아이키트]02 쿨톤",
+   "img": "item/2026/8/6468950730524814340.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4B5BF",
+   "white": 0.583,
+   "grey": 0.006
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353601839",
+   "alt": "[아이팔레트]32 피치 샌디 블러링",
+   "img": "item/2026/8/6568838179197341650.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7A0A5",
+   "white": 0.668,
+   "grey": 0.079
+  },
+  {
+   "opt": "006",
+   "barcode": "8800353604878",
+   "alt": "[글로우기획]04 애니웨이",
+   "img": "item/2026/8/2484765259875653989.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE95AF",
+   "white": 0.866,
+   "grey": 0.11
+  },
+  {
+   "opt": "007",
+   "barcode": "8800353604885",
+   "alt": "[글로우기획]05 그루비",
+   "img": "item/2026/8/5328896438268841336.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE96AF",
+   "white": 0.866,
+   "grey": 0.106
+  },
+  {
+   "opt": "008",
+   "barcode": "8800353604892",
+   "alt": "[글로우기획]09 피치릿",
+   "img": "item/2026/8/4233785710052385127.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EDC6C5",
+   "white": 0.868,
+   "grey": 0.177
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353605561",
+   "alt": "[블러틴트기획]12 로젤레떼",
+   "img": "item/2026/8/62614888692399965.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4BCBA",
+   "white": 0.902,
+   "grey": 0.192
+  },
+  {
+   "opt": "010",
+   "barcode": "8800353605578",
+   "alt": "[블러틴트기획]16 헤이즈",
+   "img": "item/2026/8/7439674790401286856.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFB2AB",
+   "white": 0.9,
+   "grey": 0.16
+  },
+  {
+   "opt": "011",
+   "barcode": "8800353605585",
+   "alt": "[블러틴트기획]17 포커스",
+   "img": "item/2026/8/9006142845807328233.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D87783",
+   "white": 0.894,
+   "grey": 0.067
+  },
+  {
+   "opt": "014",
+   "barcode": "8800353604991",
+   "alt": "[블러셔]09 토스티 탠",
+   "img": "item/2026/8/3912811223965880709.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E29C8C",
+   "white": 0.633,
+   "grey": 0.015
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353605103",
+   "alt": "[컬러 파우더]01 페일 클리어",
+   "img": "item/2026/8/5310881183020837928.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9B0BF",
+   "white": 0.635,
+   "grey": 0.011
+  },
+  {
+   "opt": "017",
+   "barcode": "8800353605097",
+   "alt": "[픽서]스테이 락 메이크업 픽서",
+   "img": "item/2026/8/3210192895706707419.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D37493",
+   "white": 0.807,
+   "grey": 0.024
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353601853",
+   "alt": "[아이팔레트]31 핑크 라이크 블러링",
+   "img": "item/2026/8/5665542884720104764.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E0A2B2",
+   "white": 0.584,
+   "grey": 0.05
+  },
+  {
+   "opt": "018",
+   "barcode": "8800353605066",
+   "alt": "[쿠션]19 라이트 단품",
+   "img": "item/2026/8/8622531409336400209.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F6C6D1",
+   "white": 0.697,
+   "grey": 0.033
+  },
+  {
+   "opt": "019",
+   "barcode": "8800353605073",
+   "alt": "[쿠션]21 아이보리 단품",
+   "img": "item/2026/8/8343729331172298349.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F6C6D1",
+   "white": 0.697,
+   "grey": 0.033
+  },
+  {
+   "opt": "020",
+   "barcode": "8800353605080",
+   "alt": "[쿠션]22 베이지 단품",
+   "img": "item/2026/8/8285804403638184445.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F6C6D1",
+   "white": 0.697,
+   "grey": 0.033
+  },
+  {
+   "opt": "013",
+   "barcode": "8800353604984",
+   "alt": "[블러셔]08 하입 핑크",
+   "img": "item/2026/8/1336663388308720052.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EE9EAC",
+   "white": 0.636,
+   "grey": 0.014
+  },
+  {
+   "opt": "015",
+   "barcode": "8800353605011",
+   "alt": "[쉐이킹쉐딩]01 페일 그레이",
+   "img": "item/2026/8/6385752194671810844.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CCAAA3",
+   "white": 0.819,
+   "grey": 0.464
+  },
+  {
+   "opt": "016",
+   "barcode": "8800353605028",
+   "alt": "[쉐이킹쉐딩]02 소프트 베이지",
+   "img": "item/2026/8/8019175840919867838.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DAB4AB",
+   "white": 0.82,
+   "grey": 0.276
+  }
+ ]
+}

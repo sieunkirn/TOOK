@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000247268",
+ "collected_at": "2026-11-18T00:58:32.647Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809581737754",
+   "alt": "01 리치봉봉",
+   "img": "item/2026/1/4645281275080174790.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF7E7E",
+   "white": 0.772,
+   "grey": 0.036
+  },
+  {
+   "opt": "002",
+   "barcode": "8809581737761",
+   "alt": "02 모브문",
+   "img": "item/2026/1/1711664049104922197.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D67583",
+   "white": 0.777,
+   "grey": 0.036
+  },
+  {
+   "opt": "003",
+   "barcode": "8809581737778",
+   "alt": "03 쥬시캐롯",
+   "img": "item/2026/1/532269370258248663.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2423D",
+   "white": 0.778,
+   "grey": 0.033
+  },
+  {
+   "opt": "004",
+   "barcode": "8809581737785",
+   "alt": "04 핑크베어",
+   "img": "item/2026/1/3116522800303339943.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA588C",
+   "white": 0.774,
+   "grey": 0.023
+  },
+  {
+   "opt": "005",
+   "barcode": "8809581737792",
+   "alt": "07 체리글레이즈",
+   "img": "item/2026/2/1235454632065719395.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC1940",
+   "white": 0.758,
+   "grey": 0.032
+  },
+  {
+   "opt": "006",
+   "barcode": "8809581737808",
+   "alt": "08 로지코어",
+   "img": "item/2026/2/6366181647933783344.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC4E59",
+   "white": 0.762,
+   "grey": 0.047
+  }
+ ]
+}

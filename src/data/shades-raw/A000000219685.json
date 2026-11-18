@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000219685",
+ "collected_at": "2026-11-17T05:11:06.487Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809626540806",
+   "alt": "01 피치젤링",
+   "img": "item/2025/2/3798015949332732804.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE7994",
+   "white": 0.008,
+   "grey": 0.261
+  },
+  {
+   "opt": "002",
+   "barcode": "8809626540813",
+   "alt": "02 앵두젤링",
+   "img": "item/2025/2/6417915359272946291.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F7387E",
+   "white": 0.008,
+   "grey": 0.258
+  },
+  {
+   "opt": "003",
+   "barcode": "8809626540820",
+   "alt": "03 파파야젤링",
+   "img": "item/2025/2/8858865615383791851.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E82E23",
+   "white": 0.005,
+   "grey": 0.254
+  },
+  {
+   "opt": "004",
+   "barcode": "8809626540837",
+   "alt": "04 보늬밤젤링",
+   "img": "item/2025/2/3434400790333888289.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD603E",
+   "white": 0.006,
+   "grey": 0.273
+  },
+  {
+   "opt": "005",
+   "barcode": "8809626540844",
+   "alt": "05 페퍼젤링",
+   "img": "item/2025/2/2875669601590209146.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA2C26",
+   "white": 0.004,
+   "grey": 0.257
+  },
+  {
+   "opt": "006",
+   "barcode": "8809626540851",
+   "alt": "06 자두젤링",
+   "img": "item/2025/2/7113392612994027563.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9E2556",
+   "white": 0.004,
+   "grey": 0.252
+  }
+ ]
+}

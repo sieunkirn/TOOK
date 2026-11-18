@@ -1,0 +1,182 @@
+{
+ "goodsNo": "A000000232166",
+ "collected_at": "2026-11-17T05:03:29.235Z",
+ "options": [
+  {
+   "opt": "011",
+   "barcode": "8809836584263",
+   "alt": "003 누디드롭기획(+포차코키링)",
+   "img": "item/2026/8/6529498470342241472.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD7B9B",
+   "white": 0.476,
+   "grey": 0.169
+  },
+  {
+   "opt": "015",
+   "barcode": "8809836584287",
+   "alt": "009 구아바드롭기획(+포차코키링)",
+   "img": "item/2026/8/6862423034658997223.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A67591",
+   "white": 0.476,
+   "grey": 0.175
+  },
+  {
+   "opt": "014",
+   "barcode": "8809836584294",
+   "alt": "012 프렌치드롭기획(+포차코키링)",
+   "img": "item/2026/8/5143516308403136072.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A37398",
+   "white": 0.475,
+   "grey": 0.176
+  },
+  {
+   "opt": "001",
+   "barcode": "8809836583112",
+   "alt": "001 피치드롭",
+   "img": "item/2025/8/7804511613573813851.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A0574F",
+   "white": 0.036,
+   "grey": 0.421
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836583129",
+   "alt": "002 로즈드롭",
+   "img": "item/2025/8/7321429104271635028.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E5156",
+   "white": 0.036,
+   "grey": 0.422
+  },
+  {
+   "opt": "003",
+   "barcode": "8809836583136",
+   "alt": "003 누디드롭",
+   "img": "item/2025/8/1929103849680312649.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#935A58",
+   "white": 0.044,
+   "grey": 0.428
+  },
+  {
+   "opt": "004",
+   "barcode": "8809836583150",
+   "alt": "005 체리드롭",
+   "img": "item/2025/8/1653930514684907310.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#982C3D",
+   "white": 0.012,
+   "grey": 0.418
+  },
+  {
+   "opt": "005",
+   "barcode": "8809836583167",
+   "alt": "006 그레이프 드롭",
+   "img": "item/2025/8/8614543942396068563.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8E4F5C",
+   "white": 0.037,
+   "grey": 0.424
+  },
+  {
+   "opt": "006",
+   "barcode": "8809836583174",
+   "alt": "007 블러쉬 드롭",
+   "img": "item/2025/8/1673039246648959679.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9A4E56",
+   "white": 0.037,
+   "grey": 0.419
+  },
+  {
+   "opt": "007",
+   "barcode": "8809836583396",
+   "alt": "009 구아바드롭",
+   "img": "item/2025/8/3892020878595855289.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#80453B",
+   "white": 0.02,
+   "grey": 0.432
+  },
+  {
+   "opt": "008",
+   "barcode": "8809836583303",
+   "alt": "010 피그드롭",
+   "img": "item/2025/8/556769099850110550.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#945257",
+   "white": 0.04,
+   "grey": 0.423
+  },
+  {
+   "opt": "009",
+   "barcode": "8809836583310",
+   "alt": "011 라일락드롭",
+   "img": "item/2025/8/9048872128701767962.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#926071",
+   "white": 0.05,
+   "grey": 0.426
+  },
+  {
+   "opt": "010",
+   "barcode": "8809836583327",
+   "alt": "012 프렌치드롭",
+   "img": "item/2025/8/8698742775916425687.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7A4852",
+   "white": 0.024,
+   "grey": 0.436
+  },
+  {
+   "opt": "016",
+   "barcode": "8809836584270",
+   "alt": "005 체리드롭기획(+포차코키링)",
+   "img": "item/2026/8/710082332127310150.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AC678F",
+   "white": 0.476,
+   "grey": 0.167
+  },
+  {
+   "opt": "013",
+   "barcode": "8809836584317",
+   "alt": "014 선셋드롭기획(+포차코키링)",
+   "img": "item/2026/8/1435890152000186853.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B27C96",
+   "white": 0.476,
+   "grey": 0.17
+  },
+  {
+   "opt": "012",
+   "barcode": "8809836584324",
+   "alt": "015 미드나잇드롭기획(+포차코키링)",
+   "img": "item/2026/8/8997492588390350751.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A77DA1",
+   "white": 0.476,
+   "grey": 0.178
+  }
+ ]
+}

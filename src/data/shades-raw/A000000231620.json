@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000231620",
+ "collected_at": "2026-11-17T05:12:04.066Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8809337727008",
+   "alt": "[기획] 202 멜로우 + 립펜슬 증정*",
+   "img": "item/2025/11/485667851930211821.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#492024",
+   "white": 0.021,
+   "grey": 0.583
+  },
+  {
+   "opt": "004",
+   "barcode": "8809337726636",
+   "alt": "205 허니듀*",
+   "img": "item/2026/1/1908549294221696014.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": null,
+   "white": 1,
+   "grey": 1
+  },
+  {
+   "opt": "008",
+   "barcode": "8809337727015",
+   "alt": "[기획] 204 레어 + 립펜슬 증정*",
+   "img": "item/2025/11/5289122898239829245.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#3F1D27",
+   "white": 0.021,
+   "grey": 0.579
+  }
+ ]
+}

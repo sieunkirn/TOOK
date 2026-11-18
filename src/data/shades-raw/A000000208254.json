@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000208254",
+ "collected_at": "2026-11-17T05:03:12.239Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809835431339",
+   "alt": "01 엘로디",
+   "img": "item/2026/5/2294002606475320425.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E46F6B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8809835431148",
+   "alt": "06 마리",
+   "img": "item/2026/5/9046323188029741043.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C53331",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8809835431353",
+   "alt": "07 오드",
+   "img": "item/2026/5/4850122406096266899.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C55C7B",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "022",
+   "barcode": "8809835431131",
+   "alt": "09 오로르",
+   "img": "item/2026/5/4491373513108074195.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A83837",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "023",
+   "barcode": "8809835431605",
+   "alt": "10 아띠",
+   "img": "item/2026/5/1921206548118218481.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC3741",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809835431070",
+   "alt": "11 스위티",
+   "img": "item/2026/5/2020768472814748577.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA4C3E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8809835431063",
+   "alt": "12 솔트",
+   "img": "item/2026/5/6155612831902918348.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E14969",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "026",
+   "barcode": "8809835431094",
+   "alt": "13 에떼",
+   "img": "item/2026/5/1456717035778275265.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E53C39",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "027",
+   "barcode": "8809835431087",
+   "alt": "14 지피",
+   "img": "item/2026/5/76760441563789029.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C82536",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "028",
+   "barcode": "8809835431100",
+   "alt": "15 썸머",
+   "img": "item/2026/5/6713147965665007113.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE262B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "031",
+   "barcode": "8809835433340",
+   "alt": "17 미엘",
+   "img": "item/2026/5/7019178421952575792.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ED7684",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "032",
+   "barcode": "8809835433357",
+   "alt": "18 뮤즈",
+   "img": "item/2026/6/4638742388251577599.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F47592",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809835431582",
+   "alt": "02 리르",
+   "img": "item/2026/5/7022964835915351696.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E04E49",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809835431346",
+   "alt": "03 슈슈",
+   "img": "item/2026/5/8581134987092748351.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB5166",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8809835431124",
+   "alt": "04 츄잉",
+   "img": "item/2026/5/1886746435018967760.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D8435A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809835431612",
+   "alt": "05 러스티",
+   "img": "item/2026/5/385203391969452899.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C78978",
+   "white": 0.018,
+   "grey": 0.02
+  },
+  {
+   "opt": "021",
+   "barcode": "8809835431599",
+   "alt": "08 마티니",
+   "img": "item/2026/5/950461199565611311.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B12D61",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "029",
+   "barcode": "8809835431117",
+   "alt": "16 봉봉",
+   "img": "item/2026/5/3931146438332965160.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF2225",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

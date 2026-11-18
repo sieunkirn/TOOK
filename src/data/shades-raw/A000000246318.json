@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000246318",
+ "collected_at": "2026-11-18T00:58:20.310Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800344920628",
+   "alt": "BE01 누디 누드",
+   "img": "item/2026/2/1679158086402657951.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD6C56",
+   "white": 0.074,
+   "grey": 0.023
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344920666",
+   "alt": "PK01 핑크 데어",
+   "img": "item/2026/2/5576044658564540862.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6515E",
+   "white": 0.006,
+   "grey": 0.002
+  },
+  {
+   "opt": "004",
+   "barcode": "8800344920642",
+   "alt": "BR02 로즈 빈",
+   "img": "item/2026/2/1877134913965270634.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE5659",
+   "white": 0.003,
+   "grey": 0.002
+  },
+  {
+   "opt": "005",
+   "barcode": "8800344920659",
+   "alt": "BR03 코코아 브라운",
+   "img": "item/2026/2/6807071705440762407.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E463F",
+   "white": 0.035,
+   "grey": 0.009
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344920635",
+   "alt": "BR01 데저트 브릭",
+   "img": "item/2026/2/5001477602056847805.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C55449",
+   "white": 0.073,
+   "grey": 0.022
+  }
+ ]
+}

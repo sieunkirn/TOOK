@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000239841",
+ "collected_at": "2026-11-17T04:59:18.061Z",
+ "options": [
+  {
+   "opt": "017",
+   "barcode": "8809712393217",
+   "alt": "02 피치피즈 기획(+폴딩 피크닉 매트)",
+   "img": "item/2026/7/7892884671497297096.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C09091",
+   "white": 0.071,
+   "grey": 0.567
+  },
+  {
+   "opt": "018",
+   "barcode": "8809712393224",
+   "alt": "03 뉴 로 기획(+폴딩 피크닉 매트)",
+   "img": "item/2026/7/1995335610860236561.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B67F7C",
+   "white": 0.099,
+   "grey": 0.556
+  },
+  {
+   "opt": "013",
+   "barcode": "8809712392593",
+   "alt": "06 로지마롱 기획 (+전자펫 게임기)",
+   "img": "item/2026/2/2638689234274034272.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#614D4B",
+   "white": 0.26,
+   "grey": 0.781
+  },
+  {
+   "opt": "016",
+   "barcode": "8809712392920",
+   "alt": "03 뉴 로 기획 (+타포린 파우치백)",
+   "img": "item/2026/5/679417610185834633.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#291D1E",
+   "white": 0.035,
+   "grey": 0.66
+  },
+  {
+   "opt": "001",
+   "barcode": "8809712392005",
+   "alt": "01 슬릭코랄",
+   "img": "item/2025/11/4743424896123948162.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D59189",
+   "white": 0.776,
+   "grey": 0.427
+  },
+  {
+   "opt": "010",
+   "barcode": "8809712392036",
+   "alt": "04 틴",
+   "img": "item/2025/11/6406387522757569815.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF808C",
+   "white": 0.78,
+   "grey": 0.407
+  },
+  {
+   "opt": "009",
+   "barcode": "8809712392043",
+   "alt": "05 포그베이",
+   "img": "item/2025/11/7373605068762463426.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C29D99",
+   "white": 0.796,
+   "grey": 0.487
+  },
+  {
+   "opt": "007",
+   "barcode": "8809712392067",
+   "alt": "07 애플리",
+   "img": "item/2025/11/7041488813876128456.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C37987",
+   "white": 0.779,
+   "grey": 0.413
+  },
+  {
+   "opt": "005",
+   "barcode": "8809712392081",
+   "alt": "09 밋 베리",
+   "img": "item/2025/11/7640455054488367932.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B77C88",
+   "white": 0.787,
+   "grey": 0.453
+  },
+  {
+   "opt": "004",
+   "barcode": "8809712392098",
+   "alt": "10 뮤 모브",
+   "img": "item/2025/11/4152948197729446017.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9D7482",
+   "white": 0.785,
+   "grey": 0.45
+  },
+  {
+   "opt": "014",
+   "barcode": "8809712392586",
+   "alt": "03 뉴 로 기획(+전자펫 게임기)",
+   "img": "item/2026/2/8846964337261880462.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#533E41",
+   "white": 0.302,
+   "grey": 0.838
+  },
+  {
+   "opt": "015",
+   "barcode": "8809712392937",
+   "alt": "08 버니잼 기획 (+타포린 파우치백)",
+   "img": "item/2026/5/696153327510158872.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#241A1D",
+   "white": 0.034,
+   "grey": 0.699
+  },
+  {
+   "opt": "011",
+   "barcode": "8809712392029",
+   "alt": "03 뉴 로",
+   "img": "item/2025/11/960937766688537069.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CB888A",
+   "white": 0.79,
+   "grey": 0.433
+  }
+ ]
+}

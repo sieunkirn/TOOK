@@ -6,7 +6,7 @@ import { networkInterfaces } from 'node:os';
 import { readFile, stat } from 'node:fs/promises';
 import { join, extname, normalize, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { allProducts, allDemoProducts, findById, findByBarcode, normalizeBarcode } from './src/lib/repository.js';
+import { allProducts, allDemoProducts, shadesOf, findById, findByBarcode, normalizeBarcode } from './src/lib/repository.js';
 import { recommendByColor } from './src/lib/recommend.js';
 import { hybridAnswer } from './src/lib/llm/agent.js';
 import { abEnabled, abStats, recordEvent } from './src/lib/ab.js';
@@ -58,6 +58,11 @@ async function handleApi(req, res, url) {
   }
   // 호수 안내·바코드 찾기가 쓰는 시연용 호수 데이터 (테스트 데이터)
   if (req.method === 'GET' && path === '/api/demo-products') return sendJson(res, 200, { products: allDemoProducts() });
+  // 한 제품의 호수 전체 (호수 안내 shades.html). id 는 제품·호수·시연용 제품 어느 것이든 된다
+  if (req.method === 'GET' && path === '/api/shades') {
+    const p = findById(q.get('id') || '');
+    return p ? sendJson(res, 200, { product: p, shades: shadesOf(p) }) : sendJson(res, 404, { error: '제품을 찾을 수 없습니다.' });
+  }
   let m = path.match(/^\/api\/products\/barcode\/([^/]*)$/);
   if (req.method === 'GET' && m) {
     const code = normalizeBarcode(decodeURIComponent(m[1]));

@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000245715",
+ "collected_at": "2026-11-17T05:08:05.276Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800303336637",
+   "alt": "01 벨로 체리 (미니)",
+   "img": "item/2026/2/3746901204082865526.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D46D72",
+   "white": 0.839,
+   "grey": 0.168
+  },
+  {
+   "opt": "006",
+   "barcode": "8800303336644",
+   "alt": "02 디어 레드 (미니)",
+   "img": "item/2026/2/1398243060301903695.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C84B5D",
+   "white": 0.838,
+   "grey": 0.161
+  },
+  {
+   "opt": "005",
+   "barcode": "8800303336651",
+   "alt": "03 쿨 베리 (미니)",
+   "img": "item/2026/2/808082933144739950.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B36C82",
+   "white": 0.839,
+   "grey": 0.179
+  },
+  {
+   "opt": "004",
+   "barcode": "8800303336668",
+   "alt": "04 듀 플럼 (미니)",
+   "img": "item/2026/2/7897138797524394539.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA5764",
+   "white": 0.838,
+   "grey": 0.167
+  },
+  {
+   "opt": "003",
+   "barcode": "8800303336675",
+   "alt": "05 로지 피치 (미니)",
+   "img": "item/2026/2/7719990659320723597.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C48776",
+   "white": 0.839,
+   "grey": 0.19
+  },
+  {
+   "opt": "002",
+   "barcode": "8800303336682",
+   "alt": "06 뮤트 코코아 (미니)",
+   "img": "item/2026/2/3166842233900623921.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B7816D",
+   "white": 0.84,
+   "grey": 0.201
+  }
+ ]
+}

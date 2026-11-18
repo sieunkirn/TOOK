@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000229116",
+ "collected_at": "2026-11-17T05:11:48.496Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8800313220056",
+   "alt": "10 칠리스모어",
+   "img": "item/2025/10/7381134754174756689.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#D97778",
+   "white": 0.094,
+   "grey": 0.335
+  },
+  {
+   "opt": "001",
+   "barcode": "8800313220018",
+   "alt": "11 피치밀크티",
+   "img": "item/2025/6/116970331100753285.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#E85958",
+   "white": 0.09,
+   "grey": 0.336
+  },
+  {
+   "opt": "003",
+   "barcode": "8800313220032",
+   "alt": "12 메이플로즈",
+   "img": "item/2025/6/688081461773178512.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#B83F49",
+   "white": 0.061,
+   "grey": 0.331
+  },
+  {
+   "opt": "002",
+   "barcode": "8800313220049",
+   "alt": "13 뉴베리",
+   "img": "item/2025/6/6669153110365698630.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#D07888",
+   "white": 0.098,
+   "grey": 0.334
+  },
+  {
+   "opt": "004",
+   "barcode": "8800313220025",
+   "alt": "14 체리쉬플럼",
+   "img": "item/2025/6/2832435905667680097.png",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#BF2D48",
+   "white": 0.061,
+   "grey": 0.325
+  }
+ ]
+}

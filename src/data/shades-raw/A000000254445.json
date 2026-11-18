@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000254445",
+ "collected_at": "2026-11-18T00:59:03.205Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "8800362325207",
+   "alt": "[NEW] 07 리치청 (온)",
+   "img": "item/2026/10/27/bdc_27114120.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F48375",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "008",
+   "barcode": "8800362325191",
+   "alt": "[NEW] 08 사과청 (온)",
+   "img": "item/2026/10/27/87d_27114127.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F85B64",
+   "white": 0.001,
+   "grey": 0.007
+  },
+  {
+   "opt": "009",
+   "barcode": "8800362325184",
+   "alt": "[NEW] 09 복분자청 (온)",
+   "img": "item/2026/10/27/6a6_27114135.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3474F",
+   "white": 0.012,
+   "grey": 0.002
+  },
+  {
+   "opt": "001",
+   "barcode": "8800322108932",
+   "alt": "01 피치봉봉 (온)",
+   "img": "item/2026/4/7841635715754986470.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE979D",
+   "white": 0.035,
+   "grey": 0.172
+  },
+  {
+   "opt": "002",
+   "barcode": "8800322108925",
+   "alt": "02 쿨각관계 (온)",
+   "img": "item/2026/4/8960455362192227998.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD90A1",
+   "white": 0.036,
+   "grey": 0.175
+  },
+  {
+   "opt": "003",
+   "barcode": "8800322108918",
+   "alt": "03 빛바랜 장미 (온)",
+   "img": "item/2026/4/2307494925433570222.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF6D78",
+   "white": 0.035,
+   "grey": 0.165
+  },
+  {
+   "opt": "004",
+   "barcode": "8800322108901",
+   "alt": "04 설탕복숭아 (온)",
+   "img": "item/2026/4/8749722646227766871.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD847E",
+   "white": 0.035,
+   "grey": 0.167
+  },
+  {
+   "opt": "006",
+   "barcode": "8800322108888",
+   "alt": "06 꾸운복숭아 (온)",
+   "img": "item/2026/4/1315250604020594008.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D87970",
+   "white": 0.035,
+   "grey": 0.164
+  },
+  {
+   "opt": "005",
+   "barcode": "8800322108895",
+   "alt": "05 여기누웜 (온)",
+   "img": "item/2026/4/7589659814181453772.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D6816B",
+   "white": 0.034,
+   "grey": 0.167
+  }
+ ]
+}

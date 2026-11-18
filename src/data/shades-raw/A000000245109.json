@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000245109",
+ "collected_at": "2026-11-17T04:59:12.899Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "8800353602485",
+   "alt": "[포켓몬 에디션] 03 피그콩포트",
+   "img": "item/2026/5/552764316119307562.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C68FAA",
+   "white": 0.631,
+   "grey": 0.101
+  },
+  {
+   "opt": "010",
+   "barcode": "8800353602515",
+   "alt": "[포켓몬 에디션] 11 베이지근",
+   "img": "item/2026/5/4915607620178807131.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8A3C2",
+   "white": 0.598,
+   "grey": 0.067
+  },
+  {
+   "opt": "001",
+   "barcode": "8800353600337",
+   "alt": "01 누디도토리",
+   "img": "item/2026/5/971030636161641954.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC8F84",
+   "white": 0.005,
+   "grey": 0.003
+  },
+  {
+   "opt": "002",
+   "barcode": "8800353600344",
+   "alt": "02 딸기마롱",
+   "img": "item/2026/5/7907503279947551549.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D18CA8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353600368",
+   "alt": "04 토피애플",
+   "img": "item/2026/5/1800584421834538944.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B4F51",
+   "white": 0.002,
+   "grey": 0.005
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353600375",
+   "alt": "05 흑당체리",
+   "img": "item/2026/5/5204620742170015642.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6D0C28",
+   "white": 0.012,
+   "grey": 0.009
+  },
+  {
+   "opt": "006",
+   "barcode": "8800353600382",
+   "alt": "06 꿀잠코코아",
+   "img": "item/2026/5/6369590491147080038.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C4F40",
+   "white": 0,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8800353602492",
+   "alt": "[포켓몬 에디션] 04 토피애플",
+   "img": "item/2026/5/2310238105865598510.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C290A6",
+   "white": 0.622,
+   "grey": 0.088
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353602508",
+   "alt": "[포켓몬 에디션] 10 포도알콩",
+   "img": "item/2026/5/7075419624037904664.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CAAAC8",
+   "white": 0.608,
+   "grey": 0.086
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000231706",
+ "collected_at": "2026-11-17T05:12:08.231Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809783401095",
+   "alt": "02 드리미 피그",
+   "img": "item/2026/3/6132842038479679927.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E26684",
+   "white": 0.504,
+   "grey": 0.008
+  },
+  {
+   "opt": "003",
+   "barcode": "8809783401101",
+   "alt": "03 홀리데이 애플",
+   "img": "item/2025/7/2525495184510452181.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E27270",
+   "white": 0.505,
+   "grey": 0.01
+  },
+  {
+   "opt": "004",
+   "barcode": "8809783401118",
+   "alt": "04 핑크 실루엣",
+   "img": "item/2026/3/1932866438534114373.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E86280",
+   "white": 0.547,
+   "grey": 0.011
+  },
+  {
+   "opt": "005",
+   "barcode": "8809783401125",
+   "alt": "05 샤이닝로지",
+   "img": "item/2026/5/3112272159144557523.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC386D",
+   "white": 0.502,
+   "grey": 0.005
+  },
+  {
+   "opt": "001",
+   "barcode": "8809783401088",
+   "alt": "01 에프리콧 포유",
+   "img": "item/2025/7/8777555094535085007.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E75459",
+   "white": 0.502,
+   "grey": 0.01
+  },
+  {
+   "opt": "006",
+   "barcode": "8809783401132",
+   "alt": "06 모브다이브",
+   "img": "item/2026/5/7549624435181356101.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AB345A",
+   "white": 0.547,
+   "grey": 0.012
+  }
+ ]
+}

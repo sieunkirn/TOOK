@@ -1,0 +1,51 @@
+{
+ "goodsNo": "A000000248605",
+ "collected_at": "2026-11-18T00:58:40.566Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809451798991",
+   "alt": "01 애플 레드",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  },
+  {
+   "opt": "005",
+   "barcode": "8809451799004",
+   "alt": "02 리치 레드",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  },
+  {
+   "opt": "004",
+   "barcode": "8809451799011",
+   "alt": "03 마토 레드",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  },
+  {
+   "opt": "003",
+   "barcode": "8809451799028",
+   "alt": "04 베리 레드",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  },
+  {
+   "opt": "002",
+   "barcode": "8809451799035",
+   "alt": "05 체리 레드",
+   "img": null,
+   "chip": false,
+   "soldOut": false,
+   "hex": null
+  }
+ ]
+}

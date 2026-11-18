@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000231709",
+ "collected_at": "2026-11-17T05:12:15.678Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809783401170",
+   "alt": "03 스크런치 핑크",
+   "img": "item/2026/6/1140616054238139491.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC7E86",
+   "white": 0.557,
+   "grey": 0.013
+  },
+  {
+   "opt": "005",
+   "barcode": "8809783401194",
+   "alt": "05 쏘 칠리",
+   "img": "item/2026/3/9092601246187578999.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA1726",
+   "white": 0.553,
+   "grey": 0.032
+  },
+  {
+   "opt": "001",
+   "barcode": "8809783401156",
+   "alt": "01 라이크체리",
+   "img": "item/2026/6/2916769687791225953.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F77688",
+   "white": 0.558,
+   "grey": 0.013
+  },
+  {
+   "opt": "002",
+   "barcode": "8809783401163",
+   "alt": "02 어썸 하트",
+   "img": "item/2026/6/5916167920062746597.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA536B",
+   "white": 0.555,
+   "grey": 0.012
+  },
+  {
+   "opt": "004",
+   "barcode": "8809783401187",
+   "alt": "04 모브 포션",
+   "img": "item/2026/3/8021582953196137071.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D65668",
+   "white": 0.556,
+   "grey": 0.013
+  },
+  {
+   "opt": "006",
+   "barcode": "8809783401200",
+   "alt": "06 그레이프 슬랜더",
+   "img": "item/2026/3/7304940383903807922.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA1726",
+   "white": 0.553,
+   "grey": 0.032
+  }
+ ]
+}

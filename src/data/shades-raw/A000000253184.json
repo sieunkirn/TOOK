@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000253184",
+ "collected_at": "2026-11-18T00:58:55.332Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8806164191903",
+   "alt": "01 빈 베이지",
+   "img": "item/2026/4/2087376908733352215.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B79A92",
+   "white": 0.767,
+   "grey": 0.408
+  },
+  {
+   "opt": "002",
+   "barcode": "8806164191910",
+   "alt": "02 누드 베이지",
+   "img": "item/2026/4/1647880636529159419.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA978E",
+   "white": 0.798,
+   "grey": 0.317
+  },
+  {
+   "opt": "003",
+   "barcode": "8806164191927",
+   "alt": "03 니어 베이지",
+   "img": "item/2026/4/5854034506619218308.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B8948D",
+   "white": 0.768,
+   "grey": 0.393
+  }
+ ]
+}

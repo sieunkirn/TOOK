@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000198165",
+ "collected_at": "2026-11-17T05:09:57.855Z",
+ "options": [
+  {
+   "opt": "009",
+   "barcode": "8809925163805",
+   "alt": "9호 프레쉬 로즈",
+   "img": "item/2024/4/7411112027503577513.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F12D61",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809925146808",
+   "alt": "5호 피치 브륄레",
+   "img": "item/2024/1/5328823157865806809.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C73437",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809925163799",
+   "alt": "8호 피치 샤워",
+   "img": "item/2024/4/3446102690853998732.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F26556",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809925146730",
+   "alt": "1호 베이비 로즈",
+   "img": "item/2024/1/7254442140291697593.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7893",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "007",
+   "barcode": "8809925146778",
+   "alt": "2호 블러쉬 핑크",
+   "img": "item/2024/1/8473212709847905715.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF587C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809925146785",
+   "alt": "3호 소프트 모브",
+   "img": "item/2024/1/1590526167595347606.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D95F79",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809925146815",
+   "alt": "6호 로즈 힙",
+   "img": "item/2024/1/6997474097104651068.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC2838",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

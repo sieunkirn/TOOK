@@ -12,6 +12,8 @@ async function getLocalApi() {
       ]);
       catalog.setProducts(await (await fetch(new URL('../data/products.json', import.meta.url))).json());
       catalog.setDemoProducts(await (await fetch(new URL('../data/products.demo.json', import.meta.url))).json());
+      // 실제 호수 데이터 (없는 옛 빌드면 빈 목록)
+      catalog.setShades(await fetch(new URL('../data/products.shades.json', import.meta.url)).then((r) => (r.ok ? r.json() : [])).catch(() => []));
       return { catalog, rec, chat, color };
     })();
   }
@@ -30,6 +32,10 @@ async function staticApi(path, options) {
     return ok({ products: catalog.allProducts().filter((p) => !finish || p.finish === finish) });
   }
   if (url.pathname === '/api/demo-products') return ok({ products: catalog.allDemoProducts() });
+  if (url.pathname === '/api/shades') {
+    const p = catalog.findById(q.get('id') || '');
+    return p ? ok({ product: p, shades: catalog.shadesOf(p) }) : fail(404, '제품을 찾을 수 없습니다.');
+  }
   let m = url.pathname.match(/^\/api\/products\/barcode\/([^/]*)$/);
   if (m) {
     const code = catalog.normalizeBarcode(decodeURIComponent(m[1]));

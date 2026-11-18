@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000218173",
+ "collected_at": "2026-11-17T05:11:02.874Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809680149403",
+   "alt": "02 땅콩 코랄",
+   "img": "item/2025/12/5677795631836028223.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F37C7E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809680149427",
+   "alt": "04 핑크 파우더",
+   "img": "item/2025/12/3655810910898708964.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA7082",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809680149458",
+   "alt": "07 솔티 그레이프",
+   "img": "item/2025/12/7297181638386918005.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ECA6B8",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809680149465",
+   "alt": "[올영단독컬러] 08 베리 팝",
+   "img": "item/2025/12/5676917228181853070.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC6584",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809680149397",
+   "alt": "01 레어 피치",
+   "img": "item/2025/12/2483180188300026417.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F39AA9",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809680149410",
+   "alt": "03 멜론 토스트",
+   "img": "item/2025/12/1444131971055696726.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F19690",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809680149434",
+   "alt": "05 퍼피 걸",
+   "img": "item/2025/12/1506863704228601277.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC9194",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809680149441",
+   "alt": "06 장미 앵두",
+   "img": "item/2025/12/540643623664251916.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F57586",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8800299132572",
+   "alt": "[마이멜로디 한정기획] 06 장미 앵두 ",
+   "img": "item/2025/8/2169136398762901558.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#ECC1CB",
+   "white": 0.591,
+   "grey": 0.235
+  },
+  {
+   "opt": "012",
+   "barcode": "8800299132589",
+   "alt": "[쿠로미 한정기획] 09 솜 딸기",
+   "img": "item/2025/8/8104487523187234956.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CDB2CE",
+   "white": 0.575,
+   "grey": 0.286
+  }
+ ]
+}

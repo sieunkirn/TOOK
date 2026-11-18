@@ -1,0 +1,193 @@
+{
+ "goodsNo": "A000000224930",
+ "collected_at": "2026-11-17T05:11:21.786Z",
+ "options": [
+  {
+   "opt": "020",
+   "barcode": "8800299142328",
+   "alt": "[NEW] 20 피치 스킨",
+   "img": "item/2025/11/7358409371199949981.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E39E9A",
+   "white": 0.852,
+   "grey": 0.064
+  },
+  {
+   "opt": "022",
+   "barcode": "8800299142342",
+   "alt": "[NEW] 22 폴링 로즈",
+   "img": "item/2025/11/259696142637606060.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF5551",
+   "white": 0.846,
+   "grey": 0.046
+  },
+  {
+   "opt": "023",
+   "barcode": "8800299142359",
+   "alt": "[NEW] 23 디어 니즈",
+   "img": "item/2025/11/4071816160639423641.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C17C81",
+   "white": 0.852,
+   "grey": 0.06
+  },
+  {
+   "opt": "024",
+   "barcode": "8800299142366",
+   "alt": "[NEW] 24 멀드 그레이프",
+   "img": "item/2025/11/3032960595540877100.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE5159",
+   "white": 0.849,
+   "grey": 0.04
+  },
+  {
+   "opt": "001",
+   "barcode": "8800299140256",
+   "alt": "01 피치 글레이스",
+   "img": "item/2025/4/4433195091593579577.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE8685",
+   "white": 0.858,
+   "grey": 0.033
+  },
+  {
+   "opt": "002",
+   "barcode": "8800299140263",
+   "alt": "02 멜바 퐁듀",
+   "img": "item/2025/4/4871646149097317383.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB8D76",
+   "white": 0.857,
+   "grey": 0.037
+  },
+  {
+   "opt": "007",
+   "barcode": "8800299140317",
+   "alt": "07 크렘드 마롱*",
+   "img": "item/2025/4/8128902493281937825.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1624E",
+   "white": 0.856,
+   "grey": 0.032
+  },
+  {
+   "opt": "008",
+   "barcode": "8800299140324",
+   "alt": "08 베리 라떼",
+   "img": "item/2025/4/6867534071057170188.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F991A7",
+   "white": 0.859,
+   "grey": 0.027
+  },
+  {
+   "opt": "013",
+   "barcode": "8800299140379",
+   "alt": "13 믹싱 체리*",
+   "img": "item/2025/4/6494254375573438928.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D74662",
+   "white": 0.855,
+   "grey": 0.02
+  },
+  {
+   "opt": "015",
+   "barcode": "8800299141840",
+   "alt": "17 슈가 엔젤",
+   "img": "item/2025/10/6822820747013569452.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F7C8D4",
+   "white": 0.875,
+   "grey": 0.175
+  },
+  {
+   "opt": "016",
+   "barcode": "8800299141857",
+   "alt": "18 콜드 핑크",
+   "img": "item/2025/10/4608547917156128533.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F4C7D6",
+   "white": 0.872,
+   "grey": 0.177
+  },
+  {
+   "opt": "019",
+   "barcode": "8800299142311",
+   "alt": "[NEW] 19 메이플 크림",
+   "img": "item/2025/11/3594228286921083658.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E39E81",
+   "white": 0.847,
+   "grey": 0.065
+  },
+  {
+   "opt": "021",
+   "barcode": "8800299142335",
+   "alt": "[NEW] 21 멀멀 코랄",
+   "img": "item/2025/11/2324512851261224257.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E88A7C",
+   "white": 0.848,
+   "grey": 0.059
+  },
+  {
+   "opt": "003",
+   "barcode": "8800299140270",
+   "alt": "03 코랄 슈가*",
+   "img": "item/2025/4/1375406021550014516.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F07171",
+   "white": 0.858,
+   "grey": 0.025
+  },
+  {
+   "opt": "004",
+   "barcode": "8800299140287",
+   "alt": "04 멜팅 구아바",
+   "img": "item/2025/4/173353904215410674.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE867B",
+   "white": 0.857,
+   "grey": 0.037
+  },
+  {
+   "opt": "006",
+   "barcode": "8800299140300",
+   "alt": "06 로지 듀",
+   "img": "item/2025/4/9094602033900902882.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E8575E",
+   "white": 0.858,
+   "grey": 0.022
+  },
+  {
+   "opt": "009",
+   "barcode": "8800299140331",
+   "alt": "09 단델리온 핑크*",
+   "img": "item/2025/4/9112495733560621987.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FC788F",
+   "white": 0.858,
+   "grey": 0.021
+  }
+ ]
+}

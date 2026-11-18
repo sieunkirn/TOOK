@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000170395",
+ "collected_at": "2026-11-17T05:08:41.072Z",
+ "options": [
+  {
+   "opt": "016",
+   "barcode": "8809836581514",
+   "alt": "01 페탈",
+   "img": "item/2024/4/5113145840717969879.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F6A2B0",
+   "white": 0.771,
+   "grey": 0.031
+  },
+  {
+   "opt": "015",
+   "barcode": "8809836581521",
+   "alt": "02 블룸",
+   "img": "item/2024/4/5735953636606324524.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ED778F",
+   "white": 0.765,
+   "grey": 0.019
+  },
+  {
+   "opt": "011",
+   "barcode": "8809836581569",
+   "alt": "06 베러",
+   "img": "item/2024/4/2709591962935412396.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA8A79",
+   "white": 0.765,
+   "grey": 0.025
+  },
+  {
+   "opt": "010",
+   "barcode": "8809836581576",
+   "alt": "07 노블",
+   "img": "item/2024/4/481702499209710312.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D17873",
+   "white": 0.764,
+   "grey": 0.031
+  },
+  {
+   "opt": "019",
+   "barcode": "8809836581491",
+   "alt": "09 칠",
+   "img": "item/2024/9/3631525108304488473.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B6717B",
+   "white": 0.812,
+   "grey": 0.049
+  },
+  {
+   "opt": "020",
+   "barcode": "8809836581507",
+   "alt": "10 프림",
+   "img": "item/2024/9/8863667861873356143.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA6E6D",
+   "white": 0.805,
+   "grey": 0.032
+  },
+  {
+   "opt": "014",
+   "barcode": "8809836581538",
+   "alt": "03 스웨이",
+   "img": "item/2024/4/9148149189671216764.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C76E80",
+   "white": 0.766,
+   "grey": 0.025
+  },
+  {
+   "opt": "013",
+   "barcode": "8809836581545",
+   "alt": "04 디바인",
+   "img": "item/2024/4/3193068158950931058.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B14F5D",
+   "white": 0.763,
+   "grey": 0.025
+  },
+  {
+   "opt": "012",
+   "barcode": "8809836581552",
+   "alt": "05 브리지",
+   "img": "item/2024/4/2945597642526976534.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F98583",
+   "white": 0.766,
+   "grey": 0.022
+  },
+  {
+   "opt": "021",
+   "barcode": "8809836581606",
+   "alt": "11 타닌",
+   "img": "item/2024/9/5866348755859463572.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B16562",
+   "white": 0.803,
+   "grey": 0.033
+  }
+ ]
+}

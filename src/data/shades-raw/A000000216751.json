@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000216751",
+ "collected_at": "2026-11-17T05:02:23.034Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809908690359",
+   "alt": "C1 오팔참",
+   "img": "item/2025/1/5627777386952688808.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0857C",
+   "white": 0.355,
+   "grey": 0.017
+  },
+  {
+   "opt": "002",
+   "barcode": "8809908690366",
+   "alt": "C2 워터 로즈참",
+   "img": "item/2025/1/5388113289803032988.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F5846B",
+   "white": 0.363,
+   "grey": 0.011
+  },
+  {
+   "opt": "003",
+   "barcode": "8809908690373",
+   "alt": "C3 루비참",
+   "img": "item/2025/1/8699747645549781863.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#ED666D",
+   "white": 0.357,
+   "grey": 0.011
+  },
+  {
+   "opt": "005",
+   "barcode": "8809908690397",
+   "alt": "C5 앰버참",
+   "img": "item/2025/1/7860808664459205345.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8C363A",
+   "white": 0.356,
+   "grey": 0.012
+  },
+  {
+   "opt": "006",
+   "barcode": "8809908690458",
+   "alt": "C6 워터 우드참",
+   "img": "item/2025/1/4516312295586141040.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D4826D",
+   "white": 0.36,
+   "grey": 0.012
+  },
+  {
+   "opt": "007",
+   "barcode": "8809908690465",
+   "alt": "C7 스피넬참",
+   "img": "item/2025/1/3569085461028687362.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B2524F",
+   "white": 0.352,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8809908690472",
+   "alt": "C8 스모키 쿼츠참",
+   "img": "item/2025/1/1539181546745947785.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6D3E30",
+   "white": 0.351,
+   "grey": 0.021
+  },
+  {
+   "opt": "009",
+   "barcode": "8809908690489",
+   "alt": "C9 베릴참",
+   "img": "item/2025/1/3258005434066626219.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F4C65",
+   "white": 0.352,
+   "grey": 0.006
+  },
+  {
+   "opt": "010",
+   "barcode": "8809908690496",
+   "alt": "C10 타파이트참",
+   "img": "item/2025/1/4319833209955866086.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7F3960",
+   "white": 0.351,
+   "grey": 0.007
+  },
+  {
+   "opt": "004",
+   "barcode": "8809908690380",
+   "alt": "C4 선스톤참*",
+   "img": "item/2025/1/591045455872705761.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C95B4A",
+   "white": 0.352,
+   "grey": 0.014
+  }
+ ]
+}

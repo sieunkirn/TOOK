@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000238077",
+ "collected_at": "2026-11-18T01:00:30.767Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8801051286755",
+   "alt": "01 허쉬로즈",
+   "img": "item/2023/11/497275740779134328.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DA3745",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8801051286779",
+   "alt": "03 베리빈티지",
+   "img": "item/2023/11/9157171856648119385.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BF4560",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8801051286786",
+   "alt": "04 샌디베이지",
+   "img": "item/2023/11/4231927539463775214.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E8636F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8801051286793",
+   "alt": "05 올웨이즈뮤트",
+   "img": "item/2023/11/5189290029262991102.JPG",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E2726D",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

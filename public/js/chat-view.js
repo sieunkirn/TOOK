@@ -1,5 +1,5 @@
 // 챗봇 화면: 대화 그리기. 말풍선·제품 카드·빠른 답장·추천 패널·비교함, 답변을 몇 글자씩 써 내려가는 출력.
-import { $, el, go, detailLink, won, fullName, shortName, storeLink, toast } from './common.js';
+import { $, el, go, detailLink, won, fullName, shortName, storeLink, toast, shadePicker } from './common.js';
 import { compareSummary } from '../lib/chat.js';
 import { lang as uiLang, t as tr, finishText as finishName } from './i18n.js';
 import { C, STUDIO, BARCODE_PANEL, log, START, state, base, track, save } from './chat-state.js';
@@ -69,21 +69,27 @@ function compareTable(items) {
 
 // ---------- 대화 그리기 ----------
 export function productMini(p) {
+  // 호수 데이터가 있는 올리브영 제품: 카드 안에서 펼쳐 호수를 고른다 (2026-11-17, 따로 창으로 가지 않는다).
+  // 고르면 카드의 이름 줄과 '발라 보기'가 그 호수로 바뀐다
+  let current = p;
+  const nameLine = el('span', { text: fullName(p) });
+  const picker = p.shade_count > 1
+    ? shadePicker(p, { onSelect: (s) => { current = s; nameLine.textContent = fullName(s); } })
+    : null;
   return el('div', { class: 'card mini' + (state.focus.includes(p.id) ? ' focus' : ''), 'data-product-id': p.id },
     // 대표 이미지가 있는 제품만 사진을 보여 준다 (불러오지 못하면 사진 자리를 뺀다)
     p.image_url ? el('img', {
       class: 'card-img', src: p.image_url, alt: fullName(p), loading: 'lazy', referrerpolicy: 'no-referrer',
       onerror: (e) => e.target.remove(),
     }) : null,
-    el('div', {}, el('span', { text: fullName(p) })),
+    el('div', {}, nameLine),
     el('div', { class: 'muted small', text: [p.finish ? finishName(p.finish) : null, p.price != null ? won(p.price) : null, // 대표색 안내는 뺐다, 가격은 카드에 둔다 (2026-11-11)
       p.similarity !== undefined ? C(`기준 색과 유사도 ${p.similarity}%`, `${p.similarity}% similar`) : null].filter(Boolean).join(' · ') }),
     el('div', { class: 'actions' },
       detailLink(p, 'chat'),
       storeLink(p, C('올리브영', 'OLIVE YOUNG')),
-      // 호수 데이터가 있는 제품만: 호수 안내 화면으로 (shades.html)
-      p.line ? el('button', { type: 'button', class: 'shade-open', text: C('색상 보기', 'See shades'), onclick: () => go('shades.html', { id: p.id, from: 'chat' }) }) : null,
-      STUDIO ? el('button', { type: 'button', text: tr('lip.tryOn'), onclick: () => window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: p.color_hex, finish: p.finish } })) }) : null));
+      STUDIO ? el('button', { type: 'button', text: tr('lip.tryOn'), onclick: () => window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: current.color_hex, finish: current.finish } })) }) : null),
+    picker);
   // '+ 비교' 버튼은 2026-11-11 카드에서 뺐다. 비교는 "1번이랑 2번 비교해 줘"처럼 말로 물으면 된다
 }
 

@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000246909",
+ "collected_at": "2026-11-18T00:58:23.741Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8800287111374",
+   "alt": "02 구아바 젤리",
+   "img": "item/2026/1/6882321485768362897.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C9A7AD",
+   "white": 0.742,
+   "grey": 0.536
+  },
+  {
+   "opt": "009",
+   "barcode": "8800287111381",
+   "alt": "03 체리 젤리",
+   "img": "item/2026/1/7317827153971539989.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C5A3AA",
+   "white": 0.741,
+   "grey": 0.535
+  },
+  {
+   "opt": "008",
+   "barcode": "8800287111398",
+   "alt": "04 쥬쥬브 젤리",
+   "img": "item/2026/1/7673037320103305916.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C5A4A6",
+   "white": 0.742,
+   "grey": 0.538
+  },
+  {
+   "opt": "007",
+   "barcode": "8800287111404",
+   "alt": "05 스트로베리 젤리",
+   "img": "item/2026/1/686225669068245568.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CAAAAF",
+   "white": 0.743,
+   "grey": 0.545
+  },
+  {
+   "opt": "006",
+   "barcode": "8800287111411",
+   "alt": "06 라즈베리 젤리",
+   "img": "item/2026/1/7797117451149184228.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CCAAB2",
+   "white": 0.743,
+   "grey": 0.547
+  },
+  {
+   "opt": "005",
+   "barcode": "8800287111428",
+   "alt": "07 살구 젤리",
+   "img": "item/2026/1/2319702915975054576.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C4A5A8",
+   "white": 0.742,
+   "grey": 0.538
+  },
+  {
+   "opt": "004",
+   "barcode": "8800287111435",
+   "alt": "08 자몽 젤리",
+   "img": "item/2026/1/5126807913606783962.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C9A7AB",
+   "white": 0.742,
+   "grey": 0.54
+  },
+  {
+   "opt": "003",
+   "barcode": "8800287111442",
+   "alt": "09 마롱 젤리",
+   "img": "item/2026/1/3626664776705364794.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BDA4A9",
+   "white": 0.743,
+   "grey": 0.552
+  },
+  {
+   "opt": "002",
+   "barcode": "8800287111459",
+   "alt": "10 플럼 젤리",
+   "img": "item/2026/1/101794106737334205.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C6A5AA",
+   "white": 0.742,
+   "grey": 0.537
+  },
+  {
+   "opt": "001",
+   "barcode": "8800287111367",
+   "alt": "01 피치 젤리",
+   "img": "item/2026/1/5379213334310656222.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C9A9AC",
+   "white": 0.743,
+   "grey": 0.551
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000202409",
+ "collected_at": "2026-11-17T05:10:24.477Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809664989193",
+   "alt": "니트",
+   "img": "item/2024/3/1414149875039933570.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA5867",
+   "white": 0.779,
+   "grey": 0.015
+  },
+  {
+   "opt": "002",
+   "barcode": "8809664989179",
+   "alt": "로우 애플",
+   "img": "item/2024/3/4514774281144348990.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB3B54",
+   "white": 0.762,
+   "grey": 0.013
+  },
+  {
+   "opt": "013",
+   "barcode": "8809939531768",
+   "alt": "모브콜",
+   "img": "item/2024/11/1188700373327163996.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.002,
+   "grey": 0.774
+  },
+  {
+   "opt": "014",
+   "barcode": "8809939531751",
+   "alt": "인스파이어드",
+   "img": "item/2024/11/1033245314847840277.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#000000",
+   "white": 0.013,
+   "grey": 0.757
+  },
+  {
+   "opt": "003",
+   "barcode": "8809664989186",
+   "alt": "에센셜",
+   "img": "item/2024/3/1684947510163323048.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B46065",
+   "white": 0.775,
+   "grey": 0.016
+  },
+  {
+   "opt": "001",
+   "barcode": "8809664989162",
+   "alt": "유쓰",
+   "img": "item/2024/3/3802487273767589353.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E46C69",
+   "white": 0.743,
+   "grey": 0.032
+  },
+  {
+   "opt": "005",
+   "barcode": "8809664989209",
+   "alt": "카밍",
+   "img": "item/2024/3/596536866247803866.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF5668",
+   "white": 0.751,
+   "grey": 0.02
+  },
+  {
+   "opt": "006",
+   "barcode": "8809664989216",
+   "alt": "샤이",
+   "img": "item/2024/3/201264965647605196.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E2536E",
+   "white": 0.777,
+   "grey": 0.025
+  },
+  {
+   "opt": "007",
+   "barcode": "8809939530983",
+   "alt": "위켄드",
+   "img": "item/2024/3/1287483493056963778.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A55756",
+   "white": 0.733,
+   "grey": 0.039
+  },
+  {
+   "opt": "009",
+   "barcode": "8809939531003",
+   "alt": "베리 슈어",
+   "img": "item/2024/3/3806463036264987894.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A2374F",
+   "white": 0.72,
+   "grey": 0.014
+  }
+ ]
+}

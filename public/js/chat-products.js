@@ -1,7 +1,7 @@
 // 챗봇 화면: 제품을 직접 가져와 묻기. 바코드(카메라·스캐너·번호·사진·휴대폰 QR 연결)와 NFC 태그.
 import { $, api, el, won, fullName, shortName } from './common.js';
 import { isEn, finishText as finishName } from './i18n.js';
-import { listenNfc, normalizeTag, resolveTag, createNfcHint } from './nfc.js';
+import { listenNfc, findTagProduct, createNfcHint } from './nfc.js';
 import { createBarcodeScanner, cameraErrorMessage, decodeImageFile } from './barcode-scan.js';
 import { C, STUDIO, BARCODE_PANEL, showTab, input, START, state, save, loadBase } from './chat-state.js';
 import { productMini, renderPanel, renderLog, streamReply } from './chat-view.js';
@@ -91,15 +91,13 @@ const nfcHint = $('nfc-hint');
 const NFC_IDLE = C('립 제품을 리더기에 올려도 정보를 알려 드려요', 'You can also tap a lip product on the reader');
 const nfcFlash = createNfcHint(nfcHint, { idleText: NFC_IDLE, ms: 2500 });
 async function handleTag(raw) {
-  const code = normalizeTag(raw);
   speaker.stop();
   state.messages.push({ role: 'user', text: C('제품을 리더기에 올렸어요', 'Tapped a product on the reader') });
-  const id = resolveTag(code);
-  const found = id ? await api('api/products/' + encodeURIComponent(id)) : null;
+  const p = await findTagProduct(raw, api); // 태그 표·제품 ID·바코드 번호(호수까지) 순서로 찾는다
   let text;
-  if (found?.ok && found.body.product) {
-    nfcFlash(C(`읽었어요 · ${shortName(found.body.product)}`, `Read · ${shortName(found.body.product)}`));
-    text = await describeProduct(found.body.product);
+  if (p) {
+    nfcFlash(C(`읽었어요 · ${shortName(p)}`, `Read · ${shortName(p)}`));
+    text = await describeProduct(p);
   } else {
     nfcFlash(C('등록되지 않은 태그예요', 'Unregistered tag'));
     text = C(`등록되지 않은 태그예요. 다른 제품을 올리거나 찾는 립을 말로 알려 주세요.`, `This tag isn't registered. Tap another product or tell me what lip you're looking for.`);

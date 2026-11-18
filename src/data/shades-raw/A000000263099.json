@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000263099",
+ "collected_at": "2026-11-17T04:53:37.880Z",
+ "options": [
+  {
+   "opt": "012",
+   "barcode": "8800362323678",
+   "alt": "[+카라멜 미니틴트] 04 여신주의보",
+   "img": "item/2026/9/332960020699714389.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D38688",
+   "white": 0.523,
+   "grey": 0.038
+  },
+  {
+   "opt": "013",
+   "barcode": "8800362323661",
+   "alt": "[+카라멜 미니틴트] 07 집에모카",
+   "img": "item/2026/9/1051336180655755134.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8776B",
+   "white": 0.516,
+   "grey": 0.047
+  },
+  {
+   "opt": "002",
+   "barcode": "8800362321940",
+   "alt": "[단품] 01 청순원정대",
+   "img": "item/2026/8/1231429910909363560.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E99EA0",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800362321933",
+   "alt": "[단품] 02 캐슈터넛츠",
+   "img": "item/2026/8/566859923876822266.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE9789",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800362321926",
+   "alt": "[단품] 03 맘찍몬드",
+   "img": "item/2026/8/451808719384392627.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EEA191",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800362321919",
+   "alt": "[단품] 04 여신주의보",
+   "img": "item/2026/8/872912574238362287.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D78992",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8800362321902",
+   "alt": "[단품] 05 휘뚤로지",
+   "img": "item/2026/8/2371514817930093335.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5999A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800362321896",
+   "alt": "[단품] 06 로지순례",
+   "img": "item/2026/8/7271247051935495259.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D38286",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800362321872",
+   "alt": "[단품] 08 도토감수성",
+   "img": "item/2026/8/985693585837426065.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB7D74",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800362321865",
+   "alt": "[단품] 09 밤밤곡곡 (온)",
+   "img": "item/2026/8/8654203243200204654.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0968B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8800362323654",
+   "alt": "[+카라멜 미니틴트/한정] 10 꼬숩땅콩",
+   "img": "item/2026/9/3726564510703471384.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C9836E",
+   "white": 0.511,
+   "grey": 0.051
+  }
+ ]
+}

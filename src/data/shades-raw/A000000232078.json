@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000000232078",
+ "collected_at": "2026-11-17T05:01:37.290Z",
+ "options": [
+  {
+   "opt": "013",
+   "barcode": "8800366202863",
+   "alt": "[산리오기획/단독컬러] 08호 피오니 볼",
+   "img": "item/2026/8/2450102245013301812.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DEC0C4",
+   "white": 0.673,
+   "grey": 0.405
+  },
+  {
+   "opt": "012",
+   "barcode": "8800366202870",
+   "alt": "[산리오기획/단독컬러] 20호 체리 볼",
+   "img": "item/2026/8/8913216710127229998.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DDB0B7",
+   "white": 0.662,
+   "grey": 0.35
+  },
+  {
+   "opt": "001",
+   "barcode": "8800316291398",
+   "alt": "02호 로즈 볼",
+   "img": "item/2025/8/2609323648700716203.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E76F68",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800316291411",
+   "alt": "[NEW/단독컬러] 08호 피오니 볼",
+   "img": "item/2025/8/2325166857547077221.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E68EB1",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800316291435",
+   "alt": "15호 피그 볼",
+   "img": "item/2025/8/2381824106777390727.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4736C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800316291442",
+   "alt": "[NEW/단독컬러] 21호 블루밍 볼",
+   "img": "item/2025/8/4367083991265665561.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4666C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8800366202887",
+   "alt": "[산리오기획/단독컬러] 21호 블루밍 볼",
+   "img": "item/2026/8/7960490698998046914.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D3B3B3",
+   "white": 0.664,
+   "grey": 0.382
+  },
+  {
+   "opt": "010",
+   "barcode": "8800366202894",
+   "alt": "[산리오기획/단독컬러] 32호멜로우피즈볼",
+   "img": "item/2026/8/6747804537936338375.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D8B9B2",
+   "white": 0.667,
+   "grey": 0.385
+  },
+  {
+   "opt": "009",
+   "barcode": "8800366202900",
+   "alt": "[산리오기획/단독컬러] 33호로지칵테일볼",
+   "img": "item/2026/8/5317011938803496863.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DBAAB2",
+   "white": 0.662,
+   "grey": 0.323
+  },
+  {
+   "opt": "005",
+   "barcode": "8800316291428",
+   "alt": "13호 오디 볼",
+   "img": "item/2025/8/8422595035843347335.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF4059",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800316291749",
+   "alt": "[NEW/단독컬러] 20호 체리 볼",
+   "img": "item/2025/8/3284214222948751028.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D84558",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809812960630",
+   "alt": "[NEW/단독컬러] 08호 피오니 볼",
+   "img": "item/2026/2/5191526761479062120.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E68EB1",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

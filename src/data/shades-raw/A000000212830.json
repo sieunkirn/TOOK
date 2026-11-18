@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000212830",
+ "collected_at": "2026-11-17T05:05:00.312Z",
+ "options": [
+  {
+   "opt": "013",
+   "barcode": "8800248707516",
+   "alt": "PK04 블러싱",
+   "img": "item/2025/7/624891662126722620.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C66466",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8800248703761",
+   "alt": "PK03 플러피",
+   "img": "item/2025/1/6671812973471692001.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F28884",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800248703754",
+   "alt": "PK02 슈슈",
+   "img": "item/2025/1/4595394815133047840.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F5A2A4",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800248701415",
+   "alt": "PP02 빈티지 멜로우",
+   "img": "item/2024/10/1165860674974669271.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5564",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800248701422",
+   "alt": "PP03 피그모브",
+   "img": "item/2024/10/3879706332790196374.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9D4448",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800248701446",
+   "alt": "RD02 로지 어페어",
+   "img": "item/2024/10/2943649485628514802.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#972C27",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800248701378",
+   "alt": "PK01 발레리나",
+   "img": "item/2024/10/631621394732118083.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D86C69",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8800248707523",
+   "alt": "PP04 슬로우",
+   "img": "item/2025/7/319246870580657714.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B77D7E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800248701392",
+   "alt": "CR01 텐더 브리즈",
+   "img": "item/2024/10/438363208825424418.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF483C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800248701439",
+   "alt": "RD01 러브 미",
+   "img": "item/2024/10/2508264902562694212.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9B272F",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

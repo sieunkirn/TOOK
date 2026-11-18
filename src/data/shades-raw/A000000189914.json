@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000189914",
+ "collected_at": "2026-11-17T05:09:32.620Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "602004148063",
+   "alt": "[단품] 05 허니무너",
+   "img": "item/2023/8/1145592434852472055.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8938F",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "602004148032",
+   "alt": "[단품] 09 아일 스타일",
+   "img": "item/2023/8/238711988458692334.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0938C",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "009",
+   "barcode": "602004148124",
+   "alt": "[단품] 21 섬머 플링",
+   "img": "item/2026/11/16/fe5_16101157.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE7E81",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "003",
+   "barcode": "602004148155",
+   "alt": "[단품] 11 슬러시",
+   "img": "item/2023/8/5028936706025462947.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E6877F",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "008",
+   "barcode": "602004154804",
+   "alt": "[단품] 29 리치 비치",
+   "img": "item/2024/5/370525621277559260.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CE7875",
+   "white": 0.004,
+   "grey": 0.004
+  }
+ ]
+}

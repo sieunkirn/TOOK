@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000185465",
+ "collected_at": "2026-11-17T05:09:07.415Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809753830191",
+   "alt": "02 뮤트 코랄",
+   "img": "item/2023/5/4179317075659584213.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C06650",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809753830214",
+   "alt": "04 칠링 모브",
+   "img": "item/2023/5/8998040263283783705.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AD4C60",
+   "white": 0.062,
+   "grey": 0.013
+  },
+  {
+   "opt": "008",
+   "barcode": "8809753830306",
+   "alt": "06 슈어 쉬어",
+   "img": "item/2023/5/5870545560119559775.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DD6D8B",
+   "white": 0.048,
+   "grey": 0.032
+  },
+  {
+   "opt": "010",
+   "barcode": "8809753830320",
+   "alt": "08 플레저",
+   "img": "item/2023/5/7069656024260124842.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B81248",
+   "white": 0.019,
+   "grey": 0.006
+  },
+  {
+   "opt": "012",
+   "barcode": "8809753830559",
+   "alt": "10 츄 잇 추",
+   "img": "item/2023/11/4487939201186398508.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#ED4934",
+   "white": 0.007,
+   "grey": 0.003
+  }
+ ]
+}

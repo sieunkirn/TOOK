@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000211068",
+ "collected_at": "2026-11-17T04:53:19.851Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800261380659",
+   "alt": "01 포에틱 (웜 추천)",
+   "img": "item/2026/1/5773796111320940943.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD6E6E",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8800261380673",
+   "alt": "03 헬시 (쿨 베스트)",
+   "img": "item/2026/1/6303423651866347135.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F47881",
+   "white": 0.012,
+   "grey": 0.012
+  },
+  {
+   "opt": "004",
+   "barcode": "8800261380680",
+   "alt": "04 커리어 (쿨 추천)",
+   "img": "item/2026/1/3633295941588685737.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D77280",
+   "white": 0,
+   "grey": 0.013
+  },
+  {
+   "opt": "005",
+   "barcode": "8800261380697",
+   "alt": "05 리나운 (뉴트럴 베스트)",
+   "img": "item/2026/1/5643861539300943378.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA4A5D",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8800261380703",
+   "alt": "06 오운 (뉴트럴 베스트)",
+   "img": "item/2026/1/8928135435882631049.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF5555",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800261380727",
+   "alt": "08 위즈 (쿨 추천)",
+   "img": "item/2026/1/6775611845158419430.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF6879",
+   "white": 0.004,
+   "grey": 0.01
+  },
+  {
+   "opt": "009",
+   "barcode": "8800261380734",
+   "alt": "09 페스티브 (쿨 추천)",
+   "img": "item/2026/1/1763895872800033028.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C2134A",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "010",
+   "barcode": "8800261380741",
+   "alt": "10 허틀 (웜 베스트)",
+   "img": "item/2026/1/8615688889016628775.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C43833",
+   "white": 0.002,
+   "grey": 0.004
+  }
+ ]
+}

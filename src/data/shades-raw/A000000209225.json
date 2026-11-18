@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000209225",
+ "collected_at": "2026-11-17T05:10:32.817Z",
+ "options": [
+  {
+   "opt": "006",
+   "barcode": "8809943670200",
+   "alt": "06 피치퍼즈(영롱광)",
+   "img": "item/2024/7/4408939345749259190.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE7666",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8809943670095",
+   "alt": "02 치트키뮤트(영롱광)",
+   "img": "item/2024/7/778309405327087777.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EE667E",
+   "white": 0.003,
+   "grey": 0.003
+  },
+  {
+   "opt": "004",
+   "barcode": "8809943670118",
+   "alt": "04 마성의보스(영롱광)",
+   "img": "item/2024/7/2526759082069909077.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F41655",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809943670194",
+   "alt": "05 럽잇핑크(보송광)",
+   "img": "item/2024/7/6161505413452364837.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE7D7E",
+   "white": 0,
+   "grey": 0.003
+  }
+ ]
+}

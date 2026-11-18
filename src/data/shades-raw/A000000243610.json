@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000243610",
+ "collected_at": "2026-11-18T00:58:03.090Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809711202121",
+   "alt": "[립 글로스] 01 트윙클",
+   "img": "item/2026/8/7199594087440898971.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2E0DE",
+   "white": 0.634,
+   "grey": 1
+  },
+  {
+   "opt": "005",
+   "barcode": "8809814610427",
+   "alt": "[립 글로스] 02 달달수박",
+   "img": "item/2026/8/1764255913311491628.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC8B7F",
+   "white": 0.038,
+   "grey": 0.002
+  },
+  {
+   "opt": "002",
+   "barcode": "8809711202091",
+   "alt": "[립 틴트] 01 에프리콧",
+   "img": "item/2026/8/8638582672321578194.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD9858",
+   "white": 0.055,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8809711202107",
+   "alt": "[립 틴트] 02 체리",
+   "img": "item/2026/8/1826402766363098108.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C0131C",
+   "white": 0.04,
+   "grey": 0.009
+  },
+  {
+   "opt": "004",
+   "barcode": "8809711202114",
+   "alt": "[립 틴트] 03 플럼",
+   "img": "item/2026/8/1300469640473782206.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF5271",
+   "white": 0.05,
+   "grey": 0.006
+  },
+  {
+   "opt": "006",
+   "barcode": "8809814610434",
+   "alt": "[립 틴트] 04 인디핑크",
+   "img": "item/2026/8/3666517976596926494.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF706B",
+   "white": 0.052,
+   "grey": 0.004
+  },
+  {
+   "opt": "007",
+   "barcode": "8809814610441",
+   "alt": "[립 틴트] 05 모브로즈",
+   "img": "item/2026/8/8394039982390012262.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B76072",
+   "white": 0.056,
+   "grey": 0.006
+  },
+  {
+   "opt": "008",
+   "barcode": "8809814610458",
+   "alt": "[립 틴트] 06 캔디팝",
+   "img": "item/2026/8/8523434558922776971.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD6F81",
+   "white": 0.055,
+   "grey": 0.004
+  },
+  {
+   "opt": "010",
+   "barcode": "8809814610472",
+   "alt": "[립 틴트] 08 꿀토마토",
+   "img": "item/2026/8/1463956898564978206.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB3535",
+   "white": 0.054,
+   "grey": 0.003
+  },
+  {
+   "opt": "009",
+   "barcode": "8809814610465",
+   "alt": "[립 틴트] 07 롤리팝",
+   "img": "item/2026/8/5400395380770913425.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF7747",
+   "white": 0.051,
+   "grey": 0.004
+  }
+ ]
+}

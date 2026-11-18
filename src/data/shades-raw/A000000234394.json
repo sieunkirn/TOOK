@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000234394",
+ "collected_at": "2026-11-17T04:53:04.593Z",
+ "options": [
+  {
+   "opt": "034",
+   "barcode": "8800366204164",
+   "alt": "[단품] 18호 차이 로즈",
+   "img": "item/2026/8/100469547241444307.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C86D65",
+   "white": 0.035,
+   "grey": 0.027
+  },
+  {
+   "opt": "033",
+   "barcode": "8800366204171",
+   "alt": "[단품] 19호 모카 30%",
+   "img": "item/2026/8/254789654076299759.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA6765",
+   "white": 0.044,
+   "grey": 0.026
+  },
+  {
+   "opt": "002",
+   "barcode": "8800316292340",
+   "alt": "[단품] 2호 바닐라 로즈",
+   "img": "item/2026/4/4945385428772225950.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC6D6B",
+   "white": 0.046,
+   "grey": 0.008
+  },
+  {
+   "opt": "003",
+   "barcode": "8800316292357",
+   "alt": "[단품] 3호 솔티드 핑크",
+   "img": "item/2026/4/2577288195618394124.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D26374",
+   "white": 0.037,
+   "grey": 0.007
+  },
+  {
+   "opt": "004",
+   "barcode": "8800316292364",
+   "alt": "[단품] 4호 토피 로즈",
+   "img": "item/2026/4/5083669135992311735.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B85C64",
+   "white": 0.034,
+   "grey": 0.008
+  },
+  {
+   "opt": "013",
+   "barcode": "8800316294474",
+   "alt": "[단품] 6호 딸기 바나나",
+   "img": "item/2026/3/5191905796059271420.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB8B9A",
+   "white": 0.062,
+   "grey": 0.018
+  },
+  {
+   "opt": "014",
+   "barcode": "8800316294481",
+   "alt": "[단품] 7호 블랙 체리",
+   "img": "item/2026/3/1231447100795357920.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE4159",
+   "white": 0.02,
+   "grey": 0.013
+  },
+  {
+   "opt": "020",
+   "barcode": "8800316296782",
+   "alt": "[단품] 8호 누몬드",
+   "img": "item/2026/3/6116132467821158448.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D49282",
+   "white": 0.075,
+   "grey": 0.016
+  },
+  {
+   "opt": "018",
+   "barcode": "8800316296805",
+   "alt": "[단품] 10호 돌체피치",
+   "img": "item/2026/3/1285367255070864075.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D8837E",
+   "white": 0.076,
+   "grey": 0.015
+  },
+  {
+   "opt": "024",
+   "barcode": "8800316299912",
+   "alt": "[공동개발] 11호 누디티 피치",
+   "img": "item/2026/3/2779681068694829927.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA8C82",
+   "white": 0.078,
+   "grey": 0.014
+  },
+  {
+   "opt": "023",
+   "barcode": "8800316299929",
+   "alt": "[공동개발] 12호 누디티 핑크",
+   "img": "item/2026/3/1155303743152825064.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E37281",
+   "white": 0.053,
+   "grey": 0.017
+  },
+  {
+   "opt": "022",
+   "barcode": "8800316299936",
+   "alt": "[공동개발] 13호 누디티 로즈",
+   "img": "item/2026/3/3128659797546723339.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C95E6F",
+   "white": 0.037,
+   "grey": 0.018
+  },
+  {
+   "opt": "021",
+   "barcode": "8800316299943",
+   "alt": "[공동개발] 14호 누디티 모브",
+   "img": "item/2026/3/6364606381437566428.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C48698",
+   "white": 0.135,
+   "grey": 0.046
+  },
+  {
+   "opt": "031",
+   "barcode": "8800366200807",
+   "alt": "[단품] 15호 베이비 살구",
+   "img": "item/2026/6/3747560966514329831.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF796C",
+   "white": 0.056,
+   "grey": 0.02
+  },
+  {
+   "opt": "032",
+   "barcode": "8800366203525",
+   "alt": "[단품] 17호 베이비 핑크",
+   "img": "item/2026/7/1967352261495652505.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF818A",
+   "white": 0.061,
+   "grey": 0.017
+  },
+  {
+   "opt": "027",
+   "barcode": "8800366200975",
+   "alt": "[카라멜블러셔기획] 12호 누디티 핑크",
+   "img": "item/2026/5/68790580238724356.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3BBB9",
+   "white": 0.567,
+   "grey": 0.173
+  },
+  {
+   "opt": "001",
+   "barcode": "8800316292333",
+   "alt": "[단품] 1호 밀크 카라멜",
+   "img": "item/2026/4/961424948419634500.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC786B",
+   "white": 0.049,
+   "grey": 0.009
+  },
+  {
+   "opt": "005",
+   "barcode": "8800316292371",
+   "alt": "[단품] 5호 카카오 50%",
+   "img": "item/2026/4/2305395456033182748.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#924D48",
+   "white": 0.023,
+   "grey": 0.02
+  },
+  {
+   "opt": "030",
+   "barcode": "8800366200814",
+   "alt": "[단품] 16호 체리 콩포트",
+   "img": "item/2026/6/5915290055822941348.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FA4B62",
+   "white": 0.049,
+   "grey": 0.011
+  }
+ ]
+}

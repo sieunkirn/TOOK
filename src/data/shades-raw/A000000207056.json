@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000207056",
+ "collected_at": "2026-11-17T04:57:00.714Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8809939538309",
+   "alt": "로지 프로미스 (NEW 선셋 핑크)",
+   "img": "item/2026/5/4357658161026102533.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#220D10",
+   "white": 0.001,
+   "grey": 0.636
+  },
+  {
+   "opt": "011",
+   "barcode": "8809939538316",
+   "alt": "뮤추얼 필링 (NEW 선셋 애프리콧)",
+   "img": "item/2026/5/3353028754540632938.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#24110F",
+   "white": 0.001,
+   "grey": 0.626
+  },
+  {
+   "opt": "006",
+   "barcode": "8809939536916",
+   "alt": "캔디 플러프 (여쿨 추천)",
+   "img": "item/2025/4/1986618814623592392.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D34870",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "007",
+   "barcode": "8809939536862",
+   "alt": "뮤트 라일락 (쿨 베스트)",
+   "img": "item/2025/4/6642805290421083078.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A54867",
+   "white": 0.007,
+   "grey": 0.005
+  },
+  {
+   "opt": "008",
+   "barcode": "8809939536817",
+   "alt": "바이올렛 게이즈 (겨쿨 추천)",
+   "img": "item/2025/4/8019274791436981629.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#792A47",
+   "white": 0.018,
+   "grey": 0.011
+  },
+  {
+   "opt": "009",
+   "barcode": "8809939536763",
+   "alt": "베리 스프링 (봄웜 추천)",
+   "img": "item/2025/4/9194388564806209286.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F24955",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809939531089",
+   "alt": "쿨리스트 (쿨 베스트)",
+   "img": "item/2026/1/4312416212493831336.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5133F",
+   "white": 0.006,
+   "grey": 0.006
+  },
+  {
+   "opt": "005",
+   "barcode": "8809939531072",
+   "alt": "러즈틱 (웜 베스트)",
+   "img": "item/2026/1/251684388388201055.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D10E2E",
+   "white": 0.008,
+   "grey": 0.017
+  },
+  {
+   "opt": "002",
+   "barcode": "8809939531102",
+   "alt": "스파이스드 업 (겨울딥 추천)",
+   "img": "item/2026/1/8198193434732097121.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#781C3A",
+   "white": 0.005,
+   "grey": 0.029
+  },
+  {
+   "opt": "003",
+   "barcode": "8809939531096",
+   "alt": "예이 오어 네이 (봄 브라이트 추천)",
+   "img": "item/2026/1/38942297920946692.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F14B31",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

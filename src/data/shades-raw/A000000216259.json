@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000216259",
+ "collected_at": "2026-11-17T05:10:55.298Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809968209140",
+   "alt": "001 텐더 핑크",
+   "img": "item/2024/12/2463105240409287490.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B85864",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "002",
+   "barcode": "8800276310429",
+   "alt": "002 로지 넛",
+   "img": "item/2024/12/6544149460575231307.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A85F5A",
+   "white": 0.003,
+   "grey": 0.004
+  },
+  {
+   "opt": "003",
+   "barcode": "8800276310436",
+   "alt": "003 퍼시몬 코랄*",
+   "img": "item/2024/12/6679450389605533673.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5350",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800316290834",
+   "alt": "005 애프리콧 쉬어",
+   "img": "item/2025/9/7494132537638256232.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F37A71",
+   "white": 0.017,
+   "grey": 0.009
+  },
+  {
+   "opt": "006",
+   "barcode": "8800316290841",
+   "alt": "006 피치 헤일로",
+   "img": "item/2025/9/6370946469285582748.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF9098",
+   "white": 0.043,
+   "grey": 0.005
+  },
+  {
+   "opt": "007",
+   "barcode": "8800316290858",
+   "alt": "007 페탈 글림",
+   "img": "item/2025/9/5826594345295661867.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF8EA7",
+   "white": 0.019,
+   "grey": 0.004
+  }
+ ]
+}

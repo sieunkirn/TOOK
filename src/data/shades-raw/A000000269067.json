@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000269067",
+ "collected_at": "2026-11-17T05:03:35.133Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800398880046",
+   "alt": "[누디블러틴트] 07 긱로즈",
+   "img": "item/2026/9/2032483957024788458.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CE999D",
+   "white": 0.67,
+   "grey": 0.283
+  },
+  {
+   "opt": "002",
+   "barcode": "8800398880053",
+   "alt": "[누디블러틴트] 33 복숭로즈",
+   "img": "item/2026/9/6623377137565382639.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D68B82",
+   "white": 0.641,
+   "grey": 0.135
+  },
+  {
+   "opt": "003",
+   "barcode": "8800398880060",
+   "alt": "[누디블러틴트] 34 태니피치",
+   "img": "item/2026/9/125365992828215745.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D78D82",
+   "white": 0.637,
+   "grey": 0.16
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353608784",
+   "alt": "[젤리글래싱틴트] 02 너티피치",
+   "img": "item/2026/9/857185666769140405.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4A398",
+   "white": 0.558,
+   "grey": 0.135
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353608807",
+   "alt": "[젤리글래싱틴트] 06 로즈커드",
+   "img": "item/2026/9/8113087383314645060.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E7929A",
+   "white": 0.55,
+   "grey": 0.103
+  },
+  {
+   "opt": "006",
+   "barcode": "8800353608791",
+   "alt": "[젤리글래싱틴트] 08 피치토피",
+   "img": "item/2026/9/3751595082429608544.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E19491",
+   "white": 0.561,
+   "grey": 0.113
+  },
+  {
+   "opt": "013",
+   "barcode": "8800353609248",
+   "alt": "[밤블러셔] 01 굽굽베이지",
+   "img": "item/2026/9/7237820666235396476.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D79180",
+   "white": 0.668,
+   "grey": 0.055
+  },
+  {
+   "opt": "015",
+   "barcode": "8800398880480",
+   "alt": "[팔레트] 06 노릇굽복",
+   "img": "item/2026/9/4297450699735471524.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D59283",
+   "white": 0.668,
+   "grey": 0.024
+  },
+  {
+   "opt": "016",
+   "barcode": "8800398880497",
+   "alt": "[팔레트] 07 멀멀굽복",
+   "img": "item/2026/9/7020154455944524436.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3948C",
+   "white": 0.67,
+   "grey": 0.037
+  },
+  {
+   "opt": "019",
+   "barcode": "8800398880626",
+   "alt": "[라이너/듀오] 번 브라운 듀오 기획",
+   "img": "item/2026/9/815481242548538992.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DD998A",
+   "white": 0.672,
+   "grey": 0.065
+  },
+  {
+   "opt": "017",
+   "barcode": "8800398880602",
+   "alt": "[라이너] 13 30% 번 브라운",
+   "img": "item/2026/9/7829415170537295478.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0BCAE",
+   "white": 0.869,
+   "grey": 0.181
+  },
+  {
+   "opt": "018",
+   "barcode": "8800398880619",
+   "alt": "[라이너] 14 70% 번 브라운",
+   "img": "item/2026/9/5879230040456159690.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CFA794",
+   "white": 0.854,
+   "grey": 0.114
+  },
+  {
+   "opt": "007",
+   "barcode": "8800353608814",
+   "alt": "[글로스] 01 아이싱",
+   "img": "item/2026/9/3357243921843038533.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E8A4AE",
+   "white": 0.071,
+   "grey": 0.029
+  },
+  {
+   "opt": "008",
+   "barcode": "8800353608821",
+   "alt": "[글로스] 02 피치드 ",
+   "img": "item/2026/9/3316251646537463179.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D98A86",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353608838",
+   "alt": "[글로스] 03 바닐로",
+   "img": "item/2026/9/2099014960514860343.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5919D",
+   "white": 0.008,
+   "grey": 0.073
+  },
+  {
+   "opt": "010",
+   "barcode": "8800353608845",
+   "alt": "[글로스] 04 피치넛 ",
+   "img": "item/2026/9/4099877945567178911.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC9487",
+   "white": 0.035,
+   "grey": 0.081
+  },
+  {
+   "opt": "011",
+   "barcode": "8800353608890",
+   "alt": "[누디블러스틱] 12 오트피치",
+   "img": "item/2026/9/4334341206526557653.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B67A6E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353608906",
+   "alt": "[누디블러스틱] 13 던피치",
+   "img": "item/2026/9/1831967665229956122.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B77571",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8800353609286",
+   "alt": "[밤블러셔] 05 노릇꿀복",
+   "img": "item/2026/9/6382282344401381648.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D2867A",
+   "white": 0.666,
+   "grey": 0.032
+  }
+ ]
+}

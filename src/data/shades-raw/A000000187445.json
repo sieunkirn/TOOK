@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000187445",
+ "collected_at": "2026-11-17T04:59:46.264Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809925125032",
+   "alt": "97호 러브바이트",
+   "img": "item/2023/6/4845309943864322897.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F69FB2",
+   "white": 0.912,
+   "grey": 0.056
+  },
+  {
+   "opt": "005",
+   "barcode": "8809925124998",
+   "alt": "126호 리들러",
+   "img": "item/2023/6/3058208983166320321.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F75E8E",
+   "white": 0.908,
+   "grey": 0.051
+  },
+  {
+   "opt": "006",
+   "barcode": "8809925124844",
+   "alt": "103호 히든모브",
+   "img": "item/2023/6/713952343727432394.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC7978",
+   "white": 0.911,
+   "grey": 0.061
+  },
+  {
+   "opt": "007",
+   "barcode": "8809925163331",
+   "alt": "456호 클루리스",
+   "img": "item/2024/6/2496276397586884148.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EDA79F",
+   "white": 0.911,
+   "grey": 0.065
+  },
+  {
+   "opt": "001",
+   "barcode": "8809925125025",
+   "alt": "184호 픽셀핑크",
+   "img": "item/2023/6/4555334355926943079.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FD797B",
+   "white": 0.909,
+   "grey": 0.052
+  },
+  {
+   "opt": "004",
+   "barcode": "8809925125001",
+   "alt": "304호 시퀀스",
+   "img": "item/2023/6/3174666433288384659.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F83348",
+   "white": 0.908,
+   "grey": 0.043
+  }
+ ]
+}

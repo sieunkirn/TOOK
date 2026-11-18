@@ -1,0 +1,160 @@
+{
+ "goodsNo": "A000000219300",
+ "collected_at": "2026-11-17T04:56:17.138Z",
+ "options": [
+  {
+   "opt": "025",
+   "barcode": "8809526848514",
+   "alt": "[위글위글/키캡키링] 16 오디바낭",
+   "img": "item/2026/5/7877317406747172905.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF9F87",
+   "white": 0.625,
+   "grey": 0.174
+  },
+  {
+   "opt": "001",
+   "barcode": "8809526846107",
+   "alt": "01 딸기둥절",
+   "img": "item/2026/5/2471275777075221805.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F26E89",
+   "white": 0.01,
+   "grey": 0.002
+  },
+  {
+   "opt": "003",
+   "barcode": "8809526846121",
+   "alt": "03 행복숭아",
+   "img": "item/2026/5/5308748742331935098.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0767A",
+   "white": 0.007,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526846138",
+   "alt": "04 포도당당",
+   "img": "item/2026/5/5448258358317406901.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E07D93",
+   "white": 0.011,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526846145",
+   "alt": "05 레베리업",
+   "img": "item/2026/5/590075219878649273.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF506A",
+   "white": 0.005,
+   "grey": 0.002
+  },
+  {
+   "opt": "006",
+   "barcode": "8809526846152",
+   "alt": "06 우롱리치",
+   "img": "item/2026/5/3427605879087041198.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C96471",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "007",
+   "barcode": "8809526846169",
+   "alt": "07 피그퐁당",
+   "img": "item/2026/5/3459608118374332928.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C04A58",
+   "white": 0.007,
+   "grey": 0.004
+  },
+  {
+   "opt": "008",
+   "barcode": "8809526846176",
+   "alt": "08 오홍홍시",
+   "img": "item/2026/5/1209703190406488455.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD4847",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "013",
+   "barcode": "8809526847609",
+   "alt": "11 햇살베이지",
+   "img": "item/2026/5/2448182854312575746.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF897B",
+   "white": 0.02,
+   "grey": 0.003
+  },
+  {
+   "opt": "014",
+   "barcode": "8809526847616",
+   "alt": "12 시골오렌지",
+   "img": "item/2026/5/204512188004498857.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2625A",
+   "white": 0.017,
+   "grey": 0.007
+  },
+  {
+   "opt": "015",
+   "barcode": "8809526848095",
+   "alt": "13 잔망땅콩",
+   "img": "item/2026/5/8816290728031997702.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C5786D",
+   "white": 0.001,
+   "grey": 0.002
+  },
+  {
+   "opt": "016",
+   "barcode": "8809526848101",
+   "alt": "14 잔망리치",
+   "img": "item/2026/5/4765748598512983624.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D75267",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "027",
+   "barcode": "8809526848569",
+   "alt": "15 딸기바낭",
+   "img": "item/2026/6/3624871623392846581.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF6F80",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "024",
+   "barcode": "8809526848507",
+   "alt": "[위글위글/키캡키링] 15 딸기바낭",
+   "img": "item/2026/3/2396371539910327532.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E2A38D",
+   "white": 0.623,
+   "grey": 0.11
+  }
+ ]
+}

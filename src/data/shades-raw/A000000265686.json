@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000265686",
+ "collected_at": "2026-11-17T04:57:04.174Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809672513717",
+   "alt": "01 로즈티핑크",
+   "img": "item/2026/9/5059182706952913522.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFAFA7",
+   "white": 0.012,
+   "grey": 0.041
+  },
+  {
+   "opt": "004",
+   "barcode": "8809672513724",
+   "alt": "02 자몽허니티코랄",
+   "img": "item/2026/9/6169341994144231378.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFB2A0",
+   "white": 0.037,
+   "grey": 0.181
+  },
+  {
+   "opt": "003",
+   "barcode": "8809672513731",
+   "alt": "03 히비스커스티레드",
+   "img": "item/2026/9/9009318161749183976.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7B4AD",
+   "white": 0.052,
+   "grey": 0.193
+  },
+  {
+   "opt": "002",
+   "barcode": "8809672513748",
+   "alt": "04 루비베리티플럼",
+   "img": "item/2026/9/8592599319366273061.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2BCB5",
+   "white": 0.029,
+   "grey": 0.115
+  }
+ ]
+}

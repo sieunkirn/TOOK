@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000265823",
+ "collected_at": "2026-11-17T04:57:49.403Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8800283668896",
+   "alt": "[단품] 162 서울로즈",
+   "img": "item/2026/8/2047658469637512093.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D27682",
+   "white": 0.895,
+   "grey": 0.065
+  },
+  {
+   "opt": "008",
+   "barcode": "8800283668933",
+   "alt": "[단품] 222 멜로우코랄",
+   "img": "item/2026/8/9167903569621532510.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F69BA1",
+   "white": 0.895,
+   "grey": 0.066
+  },
+  {
+   "opt": "003",
+   "barcode": "8800283668889",
+   "alt": "[단품] 456 클루리스",
+   "img": "item/2026/8/4220999663909995807.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EFAAA7",
+   "white": 0.897,
+   "grey": 0.087
+  },
+  {
+   "opt": "001",
+   "barcode": "8800283668865",
+   "alt": "[단품] 490 그루비",
+   "img": "item/2026/8/8219360946964708741.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD776E",
+   "white": 0.893,
+   "grey": 0.09
+  },
+  {
+   "opt": "005",
+   "barcode": "8800283668902",
+   "alt": "[단품] 20 플럼프렙",
+   "img": "item/2026/8/3420549555561595008.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0,
+   "grey": 0.881
+  },
+  {
+   "opt": "002",
+   "barcode": "8800283668872",
+   "alt": "[단품] 66 베스티",
+   "img": "item/2026/8/4546294530038244553.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB8E94",
+   "white": 0.905,
+   "grey": 0.1
+  },
+  {
+   "opt": "007",
+   "barcode": "8800283668926",
+   "alt": "[단품] 179 체리파이",
+   "img": "item/2026/8/4324045069044751450.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D24B74",
+   "white": 0.89,
+   "grey": 0.03
+  },
+  {
+   "opt": "006",
+   "barcode": "8800283668919",
+   "alt": "[단품] 352 루비",
+   "img": "item/2026/8/5012878991986864076.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF2637",
+   "white": 0.886,
+   "grey": 0.029
+  }
+ ]
+}

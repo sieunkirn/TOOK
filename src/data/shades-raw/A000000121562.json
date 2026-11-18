@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000121562",
+ "collected_at": "2026-11-17T05:01:41.929Z",
+ "options": [
+  {
+   "opt": "022",
+   "barcode": "8809828419733",
+   "alt": "23 별피치내린다 (온)",
+   "img": "item/2022/5/5080796092500725567.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF777D",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "008",
+   "barcode": "8809644492835",
+   "alt": "07 심장폭격",
+   "img": "item/2022/5/402135847744952436.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA3426",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809644492828",
+   "alt": "08 최애쁨템 (온)",
+   "img": "item/2022/5/5593569535792625818.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF5D55",
+   "white": 0.002,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8809828419719",
+   "alt": "21 물복피치",
+   "img": "item/2022/5/6424142393035261622.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E97B8C",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "029",
+   "barcode": "8809900987815",
+   "alt": "29 너지금무화과",
+   "img": "item/2023/5/5571299795702568329.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC5E54",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809900987822",
+   "alt": "30 정신체리",
+   "img": "item/2023/5/3057770000410476455.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D71C41",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

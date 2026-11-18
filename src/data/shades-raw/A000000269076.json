@@ -1,0 +1,28 @@
+{
+ "goodsNo": "A000000269076",
+ "collected_at": "2026-11-18T01:01:35.694Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8806194059983",
+   "alt": "01 베리슈 (온)",
+   "img": "item/2024/8/6757055406379471179.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA8294",
+   "white": 0.782,
+   "grey": 0.368
+  },
+  {
+   "opt": "002",
+   "barcode": "8806194079974",
+   "alt": "27 스륵 마롱 크림 기획 (+키링) (",
+   "img": "item/2025/10/1967527417898719020.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DAA59D",
+   "white": 0.558,
+   "grey": 0.15
+  }
+ ]
+}

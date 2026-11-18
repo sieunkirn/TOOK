@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000246345",
+ "collected_at": "2026-11-17T04:56:38.692Z",
+ "options": [
+  {
+   "opt": "026",
+   "barcode": "8800331325993",
+   "alt": "[기획] 03 누 얼루어+립펜슬 본품",
+   "img": "item/2026/10/26/45f_26164700.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B67E7F",
+   "white": 0.486,
+   "grey": 0.254
+  },
+  {
+   "opt": "025",
+   "barcode": "8800331326006",
+   "alt": "[기획] 06 누 로즈+립펜슬 본품",
+   "img": "item/2026/10/26/5be_26164717.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C98480",
+   "white": 0.478,
+   "grey": 0.248
+  },
+  {
+   "opt": "024",
+   "barcode": "8800331326013",
+   "alt": "[기획/NEW] 11 블로우+립펜슬 본품",
+   "img": "item/2026/10/26/e18_26164732.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C78A85",
+   "white": 0.482,
+   "grey": 0.247
+  },
+  {
+   "opt": "023",
+   "barcode": "8800331326020",
+   "alt": "[기획/NEW]12 로즈페퍼+립펜슬 본품",
+   "img": "item/2026/10/26/c33_26164743.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C68484",
+   "white": 0.486,
+   "grey": 0.243
+  },
+  {
+   "opt": "022",
+   "barcode": "8800331326037",
+   "alt": "[기획/NEW]13 스파이스+립펜슬 본품",
+   "img": "item/2026/10/26/573_26164759.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9D7671",
+   "white": 0.487,
+   "grey": 0.282
+  },
+  {
+   "opt": "016",
+   "barcode": "8800331325115",
+   "alt": "[기획] 11 블로우+미니틴트 휘퍼",
+   "img": "item/2026/8/2890624794026040630.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D88C86",
+   "white": 0.424,
+   "grey": 0.137
+  },
+  {
+   "opt": "017",
+   "barcode": "8800331325122",
+   "alt": "[기획]12 로즈 페퍼+미니틴트 휘퍼",
+   "img": "item/2026/8/7443512230209813752.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D68B89",
+   "white": 0.426,
+   "grey": 0.14
+  },
+  {
+   "opt": "018",
+   "barcode": "8800331325139",
+   "alt": "[기획] 13 스파이스+미니틴트 멜로우",
+   "img": "item/2026/8/8691951573376393449.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A06F68",
+   "white": 0.421,
+   "grey": 0.179
+  },
+  {
+   "opt": "001",
+   "barcode": "8800331320936",
+   "alt": "01 니어",
+   "img": "item/2026/1/2772813674516256941.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B66E68",
+   "white": 0.487,
+   "grey": 0.013
+  },
+  {
+   "opt": "002",
+   "barcode": "8800331320943",
+   "alt": "02 디어",
+   "img": "item/2026/1/8509292097400597794.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CD6E75",
+   "white": 0.486,
+   "grey": 0.009
+  },
+  {
+   "opt": "003",
+   "barcode": "8800331320950",
+   "alt": "03 누 얼루어",
+   "img": "item/2026/1/6366539155432306007.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8555B",
+   "white": 0.486,
+   "grey": 0.011
+  },
+  {
+   "opt": "004",
+   "barcode": "8800331320967",
+   "alt": "04 휘그레이",
+   "img": "item/2026/1/7181473347169181811.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A65856",
+   "white": 0.486,
+   "grey": 0.014
+  },
+  {
+   "opt": "005",
+   "barcode": "8800331320974",
+   "alt": "05 허그",
+   "img": "item/2026/1/6010436819168504949.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF5D56",
+   "white": 0.485,
+   "grey": 0.01
+  },
+  {
+   "opt": "006",
+   "barcode": "8800331320981",
+   "alt": "06 누 로즈",
+   "img": "item/2026/1/4347422366932407896.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE5E59",
+   "white": 0.485,
+   "grey": 0.01
+  },
+  {
+   "opt": "007",
+   "barcode": "8800331320998",
+   "alt": "07 하트",
+   "img": "item/2026/1/183144488775477888.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD5763",
+   "white": 0.486,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8800331321001",
+   "alt": "08 와일드",
+   "img": "item/2026/1/3013995369004004100.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B94F5E",
+   "white": 0.486,
+   "grey": 0.008
+  },
+  {
+   "opt": "009",
+   "barcode": "8800331321018",
+   "alt": "09 콜드",
+   "img": "item/2026/1/4403647043464848606.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#914B55",
+   "white": 0.487,
+   "grey": 0.016
+  },
+  {
+   "opt": "010",
+   "barcode": "8800331321025",
+   "alt": "10 레더",
+   "img": "item/2026/1/6379072929858802249.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F5B52",
+   "white": 0.486,
+   "grey": 0.017
+  }
+ ]
+}

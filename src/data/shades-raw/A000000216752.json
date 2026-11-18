@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000216752",
+ "collected_at": "2026-11-17T05:06:05.295Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809908690403",
+   "alt": "G1 쿼츠젬",
+   "img": "item/2025/1/4286559712499211461.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EC7F7A",
+   "white": 0.352,
+   "grey": 0.006
+  },
+  {
+   "opt": "002",
+   "barcode": "8809908690410",
+   "alt": "G2 코랄젬",
+   "img": "item/2025/1/1967977704385487914.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E57C6D",
+   "white": 0.352,
+   "grey": 0.006
+  },
+  {
+   "opt": "003",
+   "barcode": "8809908690427",
+   "alt": "G3 피치 스톤젬",
+   "img": "item/2025/1/5380023084483353405.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7795B",
+   "white": 0.352,
+   "grey": 0.008
+  },
+  {
+   "opt": "004",
+   "barcode": "8809908690434",
+   "alt": "G4 가넷젬",
+   "img": "item/2025/1/8342279704139585324.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#874945",
+   "white": 0.351,
+   "grey": 0.017
+  },
+  {
+   "opt": "005",
+   "barcode": "8809908690441",
+   "alt": "G5 토파즈젬",
+   "img": "item/2025/1/6181650883559757535.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B4B56",
+   "white": 0.351,
+   "grey": 0.011
+  },
+  {
+   "opt": "006",
+   "barcode": "8809908690816",
+   "alt": "G6 푸드레젬",
+   "img": "item/2025/8/7794574069593818744.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E38185",
+   "white": 0.355,
+   "grey": 0.009
+  },
+  {
+   "opt": "008",
+   "barcode": "8809908690830",
+   "alt": "G8 브론즈젬",
+   "img": "item/2025/8/5060105646753634801.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8D685D",
+   "white": 0.354,
+   "grey": 0.022
+  },
+  {
+   "opt": "009",
+   "barcode": "8809908690847",
+   "alt": "G9 로디아젬",
+   "img": "item/2025/8/7361337674568085968.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8A213A",
+   "white": 0.355,
+   "grey": 0.009
+  },
+  {
+   "opt": "010",
+   "barcode": "8809908690854",
+   "alt": "G10 바이올렛젬",
+   "img": "item/2025/8/1120441380749813165.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6A1C3B",
+   "white": 0.354,
+   "grey": 0.011
+  },
+  {
+   "opt": "007",
+   "barcode": "8809908690823",
+   "alt": "G7 페나젬*",
+   "img": "item/2025/8/7099876978653634807.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A07475",
+   "white": 0.354,
+   "grey": 0.022
+  }
+ ]
+}

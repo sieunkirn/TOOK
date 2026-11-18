@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000207244",
+ "collected_at": "2026-11-18T01:00:45.803Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809758804272",
+   "alt": "코랄선셋",
+   "img": "item/2024/6/3663900598289818440.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C2B7CB",
+   "white": 0.59,
+   "grey": 0.139
+  },
+  {
+   "opt": "001",
+   "barcode": "8809758804265",
+   "alt": "클루니피치",
+   "img": "item/2024/6/6840362626497137580.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C5B9CC",
+   "white": 0.591,
+   "grey": 0.145
+  },
+  {
+   "opt": "003",
+   "barcode": "8809758804289",
+   "alt": "코튼레드",
+   "img": "item/2024/6/4958777130669406743.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#BDB4CB",
+   "white": 0.588,
+   "grey": 0.142
+  },
+  {
+   "opt": "004",
+   "barcode": "8809758804296",
+   "alt": "핑크업",
+   "img": "item/2024/6/5707512363213551619.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C5BBD3",
+   "white": 0.592,
+   "grey": 0.143
+  },
+  {
+   "opt": "005",
+   "barcode": "8809758804302",
+   "alt": "어텐션로즈",
+   "img": "item/2024/6/131692863891391312.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#C0B5CE",
+   "white": 0.589,
+   "grey": 0.141
+  }
+ ]
+}

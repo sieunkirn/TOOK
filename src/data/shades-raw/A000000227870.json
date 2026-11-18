@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000227870",
+ "collected_at": "2026-11-17T05:07:19.659Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809464544233",
+   "alt": "04 무디베어",
+   "img": "item/2025/5/4305086988105675526.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF8183",
+   "white": 0.003,
+   "grey": 0.015
+  },
+  {
+   "opt": "001",
+   "barcode": "8809464544202",
+   "alt": "01 베리베어",
+   "img": "item/2025/5/6921265254046193758.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F86371",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809464544226",
+   "alt": "03 루디베어",
+   "img": "item/2025/5/3346954934790737642.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4656A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809464544240",
+   "alt": "05 써니베어*",
+   "img": "item/2025/5/58712103959903352.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FD816C",
+   "white": 0.012,
+   "grey": 0.019
+  },
+  {
+   "opt": "005",
+   "barcode": "8809464544219",
+   "alt": "02 로제베어",
+   "img": "item/2025/5/6741853952610497112.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F580A0",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

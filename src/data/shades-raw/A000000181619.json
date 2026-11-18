@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000181619",
+ "collected_at": "2026-11-17T04:58:59.878Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809820695814",
+   "alt": "05 미드나잇 모브",
+   "img": "item/2026/10/12/956_12152027.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB6366",
+   "white": 0.748,
+   "grey": 0.051
+  },
+  {
+   "opt": "003",
+   "barcode": "8809820695838",
+   "alt": "07 크랜베리 플럼",
+   "img": "item/2026/10/12/abb_12152024.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A83343",
+   "white": 0.747,
+   "grey": 0.052
+  },
+  {
+   "opt": "004",
+   "barcode": "8809820695869",
+   "alt": "11 로즈 블렌딩",
+   "img": "item/2026/10/12/45f_12152020.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC3752",
+   "white": 0.747,
+   "grey": 0.036
+  },
+  {
+   "opt": "006",
+   "barcode": "8809820695883",
+   "alt": "13 멜란지 로즈",
+   "img": "item/2026/10/12/c4f_12152014.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE6B65",
+   "white": 0.747,
+   "grey": 0.025
+  },
+  {
+   "opt": "007",
+   "barcode": "8809820695890",
+   "alt": "14 로즈 라일락",
+   "img": "item/2026/10/12/b58_12152010.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8D234D",
+   "white": 0.747,
+   "grey": 0.052
+  },
+  {
+   "opt": "008",
+   "barcode": "8809820696064",
+   "alt": "15 우디 핑크",
+   "img": "item/2026/10/12/092_12152007.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A8515D",
+   "white": 0.749,
+   "grey": 0.049
+  },
+  {
+   "opt": "009",
+   "barcode": "8809820696071",
+   "alt": "16 베이크드 피칸",
+   "img": "item/2026/10/12/ba6_12152005.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9C4846",
+   "white": 0.747,
+   "grey": 0.048
+  },
+  {
+   "opt": "012",
+   "barcode": "8809820693926",
+   "alt": "19 코랄 브리즈",
+   "img": "item/2026/10/12/927_12151957.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D75850",
+   "white": 0.747,
+   "grey": 0.044
+  },
+  {
+   "opt": "005",
+   "barcode": "8809820695876",
+   "alt": "12 살몬 브릭",
+   "img": "item/2026/10/12/79a_12152017.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C35B58",
+   "white": 0.747,
+   "grey": 0.037
+  },
+  {
+   "opt": "011",
+   "barcode": "8809820691946",
+   "alt": "18 쿨핑온탑",
+   "img": "item/2026/10/12/03f_12152000.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C2798B",
+   "white": 0.748,
+   "grey": 0.067
+  },
+  {
+   "opt": "013",
+   "barcode": "8809820693964",
+   "alt": "20 핑크 피그",
+   "img": "item/2026/10/12/041_12151954.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A4404C",
+   "white": 0.747,
+   "grey": 0.025
+  }
+ ]
+}

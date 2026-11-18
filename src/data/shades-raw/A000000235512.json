@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000235512",
+ "collected_at": "2026-11-17T05:12:48.380Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809928133324",
+   "alt": "01 모브로즈",
+   "img": "item/2025/9/5214033328656808775.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.853
+  },
+  {
+   "opt": "003",
+   "barcode": "8809928133348",
+   "alt": "03 샌드몬드",
+   "img": "item/2025/9/4229468201364469392.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0,
+   "grey": 0.852
+  },
+  {
+   "opt": "005",
+   "barcode": "8809928133362",
+   "alt": "05 스카치샷",
+   "img": "item/2025/9/928652446348805012.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0,
+   "grey": 0.852
+  },
+  {
+   "opt": "012",
+   "barcode": "8809928137674",
+   "alt": "12 리치러쉬",
+   "img": "item/2025/9/8145501055914337152.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.853
+  },
+  {
+   "opt": "015",
+   "barcode": "8809928137704",
+   "alt": "15 그레이픈",
+   "img": "item/2025/9/6920699501743599042.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.853
+  }
+ ]
+}

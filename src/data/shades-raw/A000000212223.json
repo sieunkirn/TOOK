@@ -1,0 +1,17 @@
+{
+ "goodsNo": "A000000212223",
+ "collected_at": "2026-11-17T05:10:47.701Z",
+ "options": [
+  {
+   "opt": "005",
+   "barcode": "8809526845209",
+   "alt": "107 아다지오",
+   "img": "item/2024/10/7445217137110464423.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CD7C76",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

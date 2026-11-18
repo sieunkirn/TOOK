@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000207064",
+ "collected_at": "2026-11-17T05:08:09.298Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "8809820702758",
+   "alt": "02 앵두레드",
+   "img": "item/2026/10/12/e5f_12142655.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0000A",
+   "white": 0.755,
+   "grey": 0.083
+  },
+  {
+   "opt": "008",
+   "barcode": "8809820702765",
+   "alt": "03 리얼레드",
+   "img": "item/2026/10/12/658_12142659.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E60016",
+   "white": 0.754,
+   "grey": 0.093
+  },
+  {
+   "opt": "009",
+   "barcode": "8809820702772",
+   "alt": "04 자두레드",
+   "img": "item/2026/10/12/ef1_12142702.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E40135",
+   "white": 0.754,
+   "grey": 0.087
+  },
+  {
+   "opt": "010",
+   "barcode": "8809820702789",
+   "alt": "05 드라큘라레드",
+   "img": "item/2026/10/12/bb7_12142708.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B0012",
+   "white": 0.756,
+   "grey": 0.096
+  },
+  {
+   "opt": "011",
+   "barcode": "8809820702796",
+   "alt": "06 고구마레드",
+   "img": "item/2026/10/12/682_12142711.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB425E",
+   "white": 0.754,
+   "grey": 0.082
+  },
+  {
+   "opt": "013",
+   "barcode": "8809820702819",
+   "alt": "08 수박레드",
+   "img": "item/2026/10/12/e24_12142718.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9635F",
+   "white": 0.756,
+   "grey": 0.059
+  }
+ ]
+}

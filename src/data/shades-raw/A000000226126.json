@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000226126",
+ "collected_at": "2026-11-17T05:11:32.558Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809526844714",
+   "alt": "772 코랄 쥴레",
+   "img": "item/2025/4/3920484464527168559.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEA498",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809526844738",
+   "alt": "774 너티 쥴레",
+   "img": "item/2025/4/6652064573409178811.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D7A19A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809526844752",
+   "alt": "776 뮬리 쥴레",
+   "img": "item/2025/4/7154786767003262366.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EFAFBC",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809526844707",
+   "alt": "771 핑크 쥴레",
+   "img": "item/2025/4/2252087453096744805.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FBA7B2",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809526844745",
+   "alt": "775 우디 쥴레",
+   "img": "item/2025/4/8490713899327241404.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B07569",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809526844769",
+   "alt": "777 베리 쥴레",
+   "img": "item/2025/4/2761716296402994132.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D9778B",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

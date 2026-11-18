@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000249779",
+ "collected_at": "2026-11-17T05:03:40.700Z",
+ "options": [
+  {
+   "opt": "011",
+   "barcode": "8801882245242",
+   "alt": "[NEW] 리본",
+   "img": "item/2026/8/4054891464591042485.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FCBDD9",
+   "white": 0.009,
+   "grey": 0.036
+  },
+  {
+   "opt": "012",
+   "barcode": "8801882245228",
+   "alt": "[NEW] 새틴",
+   "img": "item/2026/8/3647283176196398121.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9A2A6",
+   "white": 0.012,
+   "grey": 0.006
+  },
+  {
+   "opt": "013",
+   "barcode": "8801882245211",
+   "alt": "[NEW] 미스트",
+   "img": "item/2026/8/7016958169597456423.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1B8C4",
+   "white": 0.024,
+   "grey": 0.064
+  },
+  {
+   "opt": "004",
+   "barcode": "8801882244214",
+   "alt": "밀크티",
+   "img": "item/2026/3/2821285943400445669.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0C6BE",
+   "white": 0.006,
+   "grey": 0.095
+  },
+  {
+   "opt": "002",
+   "barcode": "8801882245129",
+   "alt": "쁘띠",
+   "img": "item/2026/3/6718654194869655822.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEA28F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8801882245112",
+   "alt": "프릴",
+   "img": "item/2026/3/7518350186827155806.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEA4CE",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8801882244153",
+   "alt": "위시",
+   "img": "item/2026/3/7089291517034669648.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEC1C6",
+   "white": 0.044,
+   "grey": 0.058
+  },
+  {
+   "opt": "006",
+   "barcode": "8801882244146",
+   "alt": "키티",
+   "img": "item/2026/3/4574096002300724854.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FEB0CA",
+   "white": 0.038,
+   "grey": 0.007
+  },
+  {
+   "opt": "008",
+   "barcode": "8801882244436",
+   "alt": "[블러셔 기획] 쁘띠",
+   "img": "item/2026/5/449855085873641400.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6C7A4",
+   "white": 0.74,
+   "grey": 0.162
+  },
+  {
+   "opt": "001",
+   "barcode": "8801882244139",
+   "alt": "레이스",
+   "img": "item/2026/3/5141876857655084390.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F2C4D5",
+   "white": 0.051,
+   "grey": 0.063
+  },
+  {
+   "opt": "007",
+   "barcode": "8801882244122",
+   "alt": "카멜리아",
+   "img": "item/2026/3/3159996909104405554.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FEA8B1",
+   "white": 0,
+   "grey": 0.004
+  },
+  {
+   "opt": "009",
+   "barcode": "8801882244429",
+   "alt": "[블러셔 기획] 프릴",
+   "img": "item/2026/5/3989504789215660054.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E6C7A5",
+   "white": 0.74,
+   "grey": 0.158
+  },
+  {
+   "opt": "010",
+   "barcode": "8801882244412",
+   "alt": "[블러셔 기획] 레이스",
+   "img": "item/2026/5/3613282201461974942.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E8C7AF",
+   "white": 0.74,
+   "grey": 0.168
+  }
+ ]
+}

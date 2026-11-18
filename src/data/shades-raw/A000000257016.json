@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000257016",
+ "collected_at": "2026-11-17T05:03:52.555Z",
+ "options": [
+  {
+   "opt": "007",
+   "barcode": "773602834914",
+   "alt": "[기획/올영단독] 시즐드 피치+실버키링",
+   "img": "item/2026/5/4314836678836659111.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#AAA199",
+   "white": 0.491,
+   "grey": 0.853
+  },
+  {
+   "opt": "003",
+   "barcode": "773602790043",
+   "alt": "비즈니스 캐주얼",
+   "img": "item/2026/5/1858398369036965657.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#7D4340",
+   "white": 0.818,
+   "grey": 0.604
+  },
+  {
+   "opt": "011",
+   "barcode": "773602789979",
+   "alt": "케이크 토퍼",
+   "img": "item/2026/5/1516590469998829972.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#88463D",
+   "white": 0.818,
+   "grey": 0.605
+  },
+  {
+   "opt": "012",
+   "barcode": "773602789962",
+   "alt": "트래픽",
+   "img": "item/2026/5/7878262176107140144.png",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#9A524B",
+   "white": 0.816,
+   "grey": 0.634
+  },
+  {
+   "opt": "002",
+   "barcode": "773602789993",
+   "alt": "그레이프 바이닐",
+   "img": "item/2026/5/4302036801586124226.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#4F3D41",
+   "white": 0.819,
+   "grey": 0.627
+  },
+  {
+   "opt": "005",
+   "barcode": "773602790036",
+   "alt": "스니키 핑크",
+   "img": "item/2026/5/3889357709952555959.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#9C5A67",
+   "white": 0.819,
+   "grey": 0.604
+  },
+  {
+   "opt": "009",
+   "barcode": "773602789986",
+   "alt": "시즐드 피치",
+   "img": "item/2026/5/4323480549018987880.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#8A5140",
+   "white": 0.817,
+   "grey": 0.614
+  },
+  {
+   "opt": "006",
+   "barcode": "773602790005",
+   "alt": "씨 쉬어",
+   "img": "item/2026/5/8694274322991602907.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#9F4845",
+   "white": 0.818,
+   "grey": 0.6
+  },
+  {
+   "opt": "001",
+   "barcode": "773602790012",
+   "alt": "XOXO",
+   "img": "item/2026/5/7664535501547293333.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#914542",
+   "white": 0.818,
+   "grey": 0.601
+  },
+  {
+   "opt": "004",
+   "barcode": "773602790050",
+   "alt": "소다 파피",
+   "img": "item/2026/5/6405789440000742619.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#6B3D3F",
+   "white": 0.818,
+   "grey": 0.605
+  },
+  {
+   "opt": "010",
+   "barcode": "773602790029",
+   "alt": "주미스",
+   "img": "item/2026/5/1431865521486638852.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#803A3E",
+   "white": 0.819,
+   "grey": 0.604
+  },
+  {
+   "opt": "014",
+   "barcode": "773602789955",
+   "alt": "포쉬 핏",
+   "img": "item/2026/5/1475741637468750291.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#824B44",
+   "white": 0.819,
+   "grey": 0.618
+  },
+  {
+   "opt": "013",
+   "barcode": "773602789948",
+   "alt": "트링킷",
+   "img": "item/2026/5/7954310707579437132.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#997248",
+   "white": 0.819,
+   "grey": 0.603
+  }
+ ]
+}

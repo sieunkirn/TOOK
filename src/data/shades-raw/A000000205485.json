@@ -1,0 +1,248 @@
+{
+ "goodsNo": "A000000205485",
+ "collected_at": "2026-11-17T04:54:03.560Z",
+ "options": [
+  {
+   "opt": "042",
+   "barcode": "8806194084114",
+   "alt": "N19 알로하 쇼킹",
+   "img": "item/2026/5/8573370536693698774.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D56271",
+   "white": 0.589,
+   "grey": 0.019
+  },
+  {
+   "opt": "043",
+   "barcode": "8806194084121",
+   "alt": "N20 선키스 쇼킹",
+   "img": "item/2026/5/3264615790484922418.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC5355",
+   "white": 0.588,
+   "grey": 0.017
+  },
+  {
+   "opt": "046",
+   "barcode": "8806194085203",
+   "alt": "[NEW/정식출시] N21 핑크모브쇼킹",
+   "img": "item/2026/7/6353149102711752417.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#964F5C",
+   "white": 0.003,
+   "grey": 0.326
+  },
+  {
+   "opt": "047",
+   "barcode": "8806194081816",
+   "alt": "S05 선셋볼 쇼킹",
+   "img": "item/2026/8/8050373590114074155.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE5034",
+   "white": 0.493,
+   "grey": 0.009
+  },
+  {
+   "opt": "001",
+   "barcode": "8806194071015",
+   "alt": "N01 루비쇼킹",
+   "img": "item/2025/11/7810891284601603020.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6F2016",
+   "white": 0.003,
+   "grey": 0.471
+  },
+  {
+   "opt": "002",
+   "barcode": "8806194071022",
+   "alt": "N02 토마토쇼킹",
+   "img": "item/2025/11/5604769505739830445.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6F0311",
+   "white": 0.003,
+   "grey": 0.471
+  },
+  {
+   "opt": "003",
+   "barcode": "8806194071039",
+   "alt": "N03 코랄쇼킹",
+   "img": "item/2025/11/949885380298121668.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#721616",
+   "white": 0.003,
+   "grey": 0.471
+  },
+  {
+   "opt": "004",
+   "barcode": "8806194071046",
+   "alt": "N04 핑크쇼킹",
+   "img": "item/2025/11/1421586243466215850.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#6E0324",
+   "white": 0.003,
+   "grey": 0.471
+  },
+  {
+   "opt": "005",
+   "barcode": "8806194071053",
+   "alt": "N05 페탈쇼킹",
+   "img": "item/2025/11/5818317318317076079.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#690113",
+   "white": 0.003,
+   "grey": 0.471
+  },
+  {
+   "opt": "006",
+   "barcode": "8806194071060",
+   "alt": "N06 레드쇼킹",
+   "img": "item/2025/11/5335074864343625416.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#400311",
+   "white": 0.001,
+   "grey": 0.476
+  },
+  {
+   "opt": "007",
+   "barcode": "8806194071077",
+   "alt": "N07 번트로즈쇼킹",
+   "img": "item/2025/11/6711479978606395393.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#4F070B",
+   "white": 0.002,
+   "grey": 0.47
+  },
+  {
+   "opt": "008",
+   "barcode": "8806194071084",
+   "alt": "N08 로즈쇼킹",
+   "img": "item/2025/11/7232389834331562122.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#5D2829",
+   "white": 0.002,
+   "grey": 0.472
+  },
+  {
+   "opt": "009",
+   "barcode": "8806194071091",
+   "alt": "N09 플럼쇼킹",
+   "img": "item/2024/5/4256133641090576023.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#450F1A",
+   "white": 0.002,
+   "grey": 0.47
+  },
+  {
+   "opt": "010",
+   "barcode": "8806194071107",
+   "alt": "N10 모브쇼킹",
+   "img": "item/2024/5/8006347997522945717.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#5B282F",
+   "white": 0.002,
+   "grey": 0.471
+  },
+  {
+   "opt": "030",
+   "barcode": "8806194072562",
+   "alt": "N11 로제트쇼킹",
+   "img": "item/2025/11/6079677981872462569.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DF073E",
+   "white": 0.477,
+   "grey": 0.009
+  },
+  {
+   "opt": "025",
+   "barcode": "8806194072586",
+   "alt": "N12 페어리쇼킹",
+   "img": "item/2025/11/4852314343967502723.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF616C",
+   "white": 0.512,
+   "grey": 0.016
+  },
+  {
+   "opt": "019",
+   "barcode": "8806194076225",
+   "alt": "N13 애프리콧쇼킹",
+   "img": "item/2025/3/6362419782188110511.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D35F58",
+   "white": 0.474,
+   "grey": 0.016
+  },
+  {
+   "opt": "026",
+   "barcode": "8806194078441",
+   "alt": "N14 피치쇼킹",
+   "img": "item/2025/11/2992618986460392928.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF6870",
+   "white": 0.497,
+   "grey": 0.019
+  },
+  {
+   "opt": "020",
+   "barcode": "8806194076232",
+   "alt": "[올영단독] S03 애플쇼킹",
+   "img": "item/2025/3/8723569059995542041.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA323B",
+   "white": 0.475,
+   "grey": 0.015
+  },
+  {
+   "opt": "015",
+   "barcode": "8806194074108",
+   "alt": "S01 오렌지쇼킹",
+   "img": "item/2024/9/5778049703385232106.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC5712",
+   "white": 0.476,
+   "grey": 0.012
+  },
+  {
+   "opt": "016",
+   "barcode": "8806194074115",
+   "alt": "S02 브릭쇼킹",
+   "img": "item/2024/9/910069138888377145.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE5B50",
+   "white": 0.478,
+   "grey": 0.016
+  },
+  {
+   "opt": "027",
+   "barcode": "8806194078458",
+   "alt": "S04 그레이프 쇼킹",
+   "img": "item/2025/9/5562193512163778945.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF5F7F",
+   "white": 0.446,
+   "grey": 0.012
+  }
+ ]
+}

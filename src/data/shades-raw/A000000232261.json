@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000232261",
+ "collected_at": "2026-11-17T05:12:19.413Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8809603934444",
+   "alt": "02 선셋 피크닉*",
+   "img": "item/2025/8/6826967296007284742.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE4951",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809603934468",
+   "alt": "04 베리 듀*",
+   "img": "item/2025/8/2059192951332798630.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB5D7A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809603934437",
+   "alt": "01 코랄서프*",
+   "img": "item/2025/8/2213863744657682480.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E54E4A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809603934451",
+   "alt": "03 로지 레인*",
+   "img": "item/2025/8/426245599321578559.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E0455A",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

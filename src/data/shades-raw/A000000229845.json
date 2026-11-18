@@ -1,0 +1,105 @@
+{
+ "goodsNo": "A000000229845",
+ "collected_at": "2026-11-17T05:11:56.984Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8809976271573",
+   "alt": "[NEW] 핑크 레브르",
+   "img": "item/2026/5/8359256685884088495.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#B4787D",
+   "white": 0.871,
+   "grey": 0.39
+  },
+  {
+   "opt": "009",
+   "barcode": "8809976271566",
+   "alt": "[NEW] 뉴멜로우",
+   "img": "item/2026/5/7132145348899990052.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#BF8783",
+   "white": 0.875,
+   "grey": 0.365
+  },
+  {
+   "opt": "001",
+   "barcode": "8809976270460",
+   "alt": "재지 그레이프",
+   "img": "item/2025/6/871327217049273533.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#996673",
+   "white": 0.867,
+   "grey": 0.391
+  },
+  {
+   "opt": "002",
+   "barcode": "8809976270453",
+   "alt": "코랄 파노라마",
+   "img": "item/2025/6/4458150419161502120.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#933A3B",
+   "white": 0.866,
+   "grey": 0.371
+  },
+  {
+   "opt": "004",
+   "barcode": "8809976270439",
+   "alt": "스캐럴드 로즈",
+   "img": "item/2025/6/5335536636472219175.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#683B48",
+   "white": 0.862,
+   "grey": 0.404
+  },
+  {
+   "opt": "005",
+   "barcode": "8809976270422",
+   "alt": "러스티드 오렌지*",
+   "img": "item/2025/6/7247974721951999845.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#8E3939",
+   "white": 0.863,
+   "grey": 0.378
+  },
+  {
+   "opt": "007",
+   "barcode": "8809976270408",
+   "alt": "레드 블러쉬",
+   "img": "item/2025/6/5537047468319073353.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#992844",
+   "white": 0.862,
+   "grey": 0.376
+  },
+  {
+   "opt": "003",
+   "barcode": "8809976270446",
+   "alt": "모브 토프*",
+   "img": "item/2025/6/7846618295755364006.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#864B55",
+   "white": 0.861,
+   "grey": 0.406
+  },
+  {
+   "opt": "006",
+   "barcode": "8809976270415",
+   "alt": "크러쉬드 체리*",
+   "img": "item/2025/6/7170666028294993750.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#873A52",
+   "white": 0.864,
+   "grey": 0.371
+  }
+ ]
+}

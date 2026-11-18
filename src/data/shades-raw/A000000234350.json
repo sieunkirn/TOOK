@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000234350",
+ "collected_at": "2026-11-17T05:12:40.806Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8800302530074",
+   "alt": "04 팅글체리",
+   "img": "item/2025/10/8049079844695668632.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E10159",
+   "white": 0.318,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "8800302530081",
+   "alt": "[채실장 PICK] 05 헤이보니",
+   "img": "item/2025/10/5038076189807809017.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C67A75",
+   "white": 0.347,
+   "grey": 0.024
+  },
+  {
+   "opt": "006",
+   "barcode": "8800302530128",
+   "alt": "06 스위피블룸",
+   "img": "item/2025/10/2545468436221662338.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F47F77",
+   "white": 0.315,
+   "grey": 0.005
+  },
+  {
+   "opt": "007",
+   "barcode": "8800302530135",
+   "alt": "07 페탈드롭",
+   "img": "item/2025/10/7449613000474473647.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C15C79",
+   "white": 0.312,
+   "grey": 0.008
+  },
+  {
+   "opt": "008",
+   "barcode": "8800302530111",
+   "alt": "08 루나뱅쇼",
+   "img": "item/2025/10/1823075753830319202.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC284C",
+   "white": 0.323,
+   "grey": 0.007
+  },
+  {
+   "opt": "002",
+   "barcode": "8800302530050",
+   "alt": "[먼지나방 PICK] 02 듀이베리",
+   "img": "item/2025/10/2144867932600745836.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EC608F",
+   "white": 0.331,
+   "grey": 0.003
+  },
+  {
+   "opt": "003",
+   "barcode": "8800302530067",
+   "alt": "03 코코초코",
+   "img": "item/2025/10/5006711621759701880.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B64045",
+   "white": 0.355,
+   "grey": 0.016
+  }
+ ]
+}

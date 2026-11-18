@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000136343",
+ "collected_at": "2026-11-17T05:07:57.346Z",
+ "options": [
+  {
+   "opt": "011",
+   "barcode": "8809625247973",
+   "alt": "15 누디 선다운",
+   "img": "item/2026/1/7429125414922187448.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF735A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625247980",
+   "alt": "16 피그라이즈",
+   "img": "item/2026/1/4257736781146969584.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A53E46",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809625241322",
+   "alt": "02 레드 드롭",
+   "img": "item/2020/6/8890039651729535540.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BD1D23",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625241353",
+   "alt": "04 빈티지 오션",
+   "img": "item/2020/6/4714614320472465589.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7F2018",
+   "white": 0,
+   "grey": 0.002
+  },
+  {
+   "opt": "012",
+   "barcode": "8809625247966",
+   "alt": "14 모브 문",
+   "img": "item/2026/1/3496232293214470642.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CC6A80",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809625247997",
+   "alt": "17 우디 선셋",
+   "img": "item/2026/1/7702380123394226938.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#732D2C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809625241346",
+   "alt": "03 브릭 리버",
+   "img": "item/2020/6/860080822736879252.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B9382E",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625241360",
+   "alt": "05 로즈 스플래쉬",
+   "img": "item/2020/6/1860617103044797349.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF3142",
+   "white": 0,
+   "grey": 0.001
+  }
+ ]
+}

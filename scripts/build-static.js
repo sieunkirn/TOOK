@@ -22,9 +22,12 @@ mkdirSync(join(out, 'lib'), { recursive: true });
 for (const f of BROWSER_LIBS) cpSync(join(root, 'src/lib', f), join(out, 'lib', f));
 mkdirSync(join(out, 'data'), { recursive: true });
 // 서버와 같은 데이터(기본: 올리브영, TOOK_DATA=virtual 이면 가상)를 정적 버전에 넣는다
-const { dataFile, DEMO_FILE } = await import('../src/lib/repository.js');
+const { dataFile, DEMO_FILE, SHADES_FILE, useShades } = await import('../src/lib/repository.js');
 cpSync(fileURLToPath(dataFile()), join(out, 'data/products.json'));
 cpSync(fileURLToPath(DEMO_FILE), join(out, 'data/products.demo.json'));
+// 실제 호수 데이터: 올리브영 데이터일 때만 (가상 데이터면 빈 목록)
+if (useShades()) cpSync(fileURLToPath(SHADES_FILE), join(out, 'data/products.shades.json'));
+else writeFileSync(join(out, 'data/products.shades.json'), '[]\n');
 
 // 모델(.task)은 정적 호스팅에서 제공되지 않는 형식이라 base64 텍스트로 바꿔 넣는다
 const model = join(out, 'vendor/mediapipe/face_landmarker.task');

@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000267467",
+ "collected_at": "2026-11-18T00:59:44.765Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800299131216",
+   "alt": "04 포멜로 누드 (미니)",
+   "img": "item/2026/8/609636557711370276.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB9693",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800299131193",
+   "alt": "02 산들 (미니)",
+   "img": "item/2026/8/706621727649026861.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F6606A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800299131285",
+   "alt": "13 물복숭아 (미니)",
+   "img": "item/2026/8/1577718086539224581.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FFC1C1",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000226889",
+ "collected_at": "2026-11-18T01:01:19.465Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809625249793",
+   "alt": "블러 퍼지 틴트 - 피치 다운",
+   "img": "item/2024/6/2027165490826633308.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BE6B65",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809625249809",
+   "alt": "블러 퍼지 틴트 - 베드 베리",
+   "img": "item/2024/6/140532276829110110.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F434E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809625249755",
+   "alt": "글래스팅 멜팅 밤 - 키튼 피치",
+   "img": "item/2024/6/3237312090472477517.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E46A68",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809625249779",
+   "alt": "글래스팅 멜팅 밤 - 베리 인 블랙",
+   "img": "item/2024/6/8091328062942276767.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#573144",
+   "white": 0,
+   "grey": 0.021
+  },
+  {
+   "opt": "005",
+   "barcode": "8809625249748",
+   "alt": "베러 댄 치크 - 진저 나잇",
+   "img": "item/2025/11/1798199005084257890.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#60544D",
+   "white": 0.725,
+   "grey": 0.617
+  },
+  {
+   "opt": "006",
+   "barcode": "8809625249762",
+   "alt": "베러 댄 치크 - 베리 던",
+   "img": "item/2025/11/3439090352130068876.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F7974",
+   "white": 0.725,
+   "grey": 0.534
+  },
+  {
+   "opt": "007",
+   "barcode": "8809625249786",
+   "alt": "베러 댄 치크 - 블랙 밤",
+   "img": "item/2025/11/6282850134456233698.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#312D30",
+   "white": 0.728,
+   "grey": 1
+  },
+  {
+   "opt": "008",
+   "barcode": "8809625249663",
+   "alt": "베러 댄 아이즈 - 그을린 메밀꽃",
+   "img": "item/2026/2/7836521990204169560.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A8887A",
+   "white": 0.611,
+   "grey": 0.39
+  },
+  {
+   "opt": "009",
+   "barcode": "8809625249670",
+   "alt": "베러 댄 아이즈 - 그을린 피오니",
+   "img": "item/2024/6/7841950433216553919.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A78887",
+   "white": 0.01,
+   "grey": 0.297
+  },
+  {
+   "opt": "010",
+   "barcode": "8809625249687",
+   "alt": "베러 댄 아이즈 - 글리츠 인 블랙",
+   "img": "item/2026/2/5088043748617322039.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#2C2D31",
+   "white": 0.561,
+   "grey": 1
+  },
+  {
+   "opt": "011",
+   "barcode": "8809625249861",
+   "alt": "누 제로 쿠션- 04 베이지 23",
+   "img": "item/2025/8/2297422669616766041.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CABEB5",
+   "white": 0.825,
+   "grey": 0.742
+  },
+  {
+   "opt": "012",
+   "barcode": "8809625249854",
+   "alt": "누 제로 쿠션-  03 내추럴 21 ",
+   "img": "item/2025/8/4705833809716547766.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CAB9AD",
+   "white": 0.833,
+   "grey": 0.736
+  },
+  {
+   "opt": "013",
+   "barcode": "8809625249847",
+   "alt": "누 제로 쿠션-  02 퓨어 21  ",
+   "img": "item/2025/8/8572159497444934317.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#424245",
+   "white": 0.718,
+   "grey": 0.833
+  }
+ ]
+}

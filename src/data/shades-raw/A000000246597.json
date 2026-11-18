@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000246597",
+ "collected_at": "2026-11-17T04:58:48.816Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "8800344921557",
+   "alt": "M02 누카다미아",
+   "img": "item/2026/2/1637530650102461576.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B95749",
+   "white": 0.025,
+   "grey": 0.027
+  },
+  {
+   "opt": "009",
+   "barcode": "8800344921564",
+   "alt": "M03 베어 그레이프",
+   "img": "item/2026/2/3643890419750570116.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C4646D",
+   "white": 0.021,
+   "grey": 0.015
+  },
+  {
+   "opt": "010",
+   "barcode": "8800344921571",
+   "alt": "M20 쥬쥬 피그",
+   "img": "item/2026/2/4888205497425249215.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B94756",
+   "white": 0.011,
+   "grey": 0.008
+  },
+  {
+   "opt": "011",
+   "barcode": "8800344921588",
+   "alt": "M23 피치 피치 미",
+   "img": "item/2026/2/9132692431366957360.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC808F",
+   "white": 0.008,
+   "grey": 0.008
+  },
+  {
+   "opt": "001",
+   "barcode": "8800344921649",
+   "alt": "01 여름 무화과",
+   "img": "item/2026/2/8066024464287513999.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C56B74",
+   "white": 0.023,
+   "grey": 0.034
+  },
+  {
+   "opt": "002",
+   "barcode": "8800344921656",
+   "alt": "02 구아바 베이지",
+   "img": "item/2026/2/8470937037584355468.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D0797C",
+   "white": 0.035,
+   "grey": 0.037
+  },
+  {
+   "opt": "003",
+   "barcode": "8800344921687",
+   "alt": "03 핑크 자몽",
+   "img": "item/2026/2/6555584719315944837.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FBADB4",
+   "white": 0.008,
+   "grey": 0.021
+  },
+  {
+   "opt": "014",
+   "barcode": "8800258085628",
+   "alt": "04 초하 살구",
+   "img": "item/2026/11/09/90b_09182129.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F09D81",
+   "white": 0.016,
+   "grey": 0.047
+  },
+  {
+   "opt": "004",
+   "barcode": "8800344921694",
+   "alt": "05 모닝 사과",
+   "img": "item/2026/2/365321231724970852.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C64952",
+   "white": 0.017,
+   "grey": 0.006
+  },
+  {
+   "opt": "005",
+   "barcode": "8800344921663",
+   "alt": "06 복분자",
+   "img": "item/2026/2/155044053878321576.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#780022",
+   "white": 0.015,
+   "grey": 0.003
+  },
+  {
+   "opt": "015",
+   "barcode": "8800258085666",
+   "alt": "08 홍시",
+   "img": "item/2026/11/09/320_09182137.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF7F60",
+   "white": 0.029,
+   "grey": 0.033
+  },
+  {
+   "opt": "016",
+   "barcode": "8800258085673",
+   "alt": "09 돌배",
+   "img": "item/2026/11/09/842_09182145.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CF915D",
+   "white": 0.021,
+   "grey": 0.033
+  },
+  {
+   "opt": "017",
+   "barcode": "8800258085680",
+   "alt": "10 아보카도",
+   "img": "item/2026/11/09/c6f_09182153.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BFD382",
+   "white": 0.02,
+   "grey": 0.009
+  },
+  {
+   "opt": "018",
+   "barcode": "8800258085697",
+   "alt": "11 캠벨포도",
+   "img": "item/2026/11/09/9eb_09182201.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC93B5",
+   "white": 0.036,
+   "grey": 0.031
+  },
+  {
+   "opt": "019",
+   "barcode": "8800258085703",
+   "alt": "12 오드 오디",
+   "img": "item/2026/11/09/56b_09182209.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9289B7",
+   "white": 0,
+   "grey": 0.022
+  },
+  {
+   "opt": "007",
+   "barcode": "8800344921700",
+   "alt": "13 블랙 베리",
+   "img": "item/2026/2/90966525840238957.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#1C1A1B",
+   "white": 0.028,
+   "grey": 1
+  },
+  {
+   "opt": "012",
+   "barcode": "8800344921717",
+   "alt": "M26 신비 복숭아",
+   "img": "item/2026/2/7179546226724080461.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FD5E62",
+   "white": 0.018,
+   "grey": 0.008
+  },
+  {
+   "opt": "013",
+   "barcode": "8800344921724",
+   "alt": "M27 허니 듀 멜론",
+   "img": "item/2026/2/2444634218982878336.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE9D88",
+   "white": 0.097,
+   "grey": 0.032
+  },
+  {
+   "opt": "006",
+   "barcode": "8800344921670",
+   "alt": "07 코코 야자",
+   "img": "item/2026/2/325761548938081060.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8F3A28",
+   "white": 0.024,
+   "grey": 0.021
+  }
+ ]
+}

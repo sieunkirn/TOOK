@@ -1,0 +1,171 @@
+{
+ "goodsNo": "A000000148663",
+ "collected_at": "2026-11-17T04:59:04.326Z",
+ "options": [
+  {
+   "opt": "015",
+   "barcode": "8809835432657",
+   "alt": "02 갈라",
+   "img": "item/2026/1/7393521974699818040.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C8001F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "029",
+   "barcode": "8809835432688",
+   "alt": "05 브랭",
+   "img": "item/2026/5/1800873215975137782.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A52822",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "021",
+   "barcode": "8809835432725",
+   "alt": "09 텐더",
+   "img": "item/2026/1/7294165806582515602.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A0413D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809835432756",
+   "alt": "12 자브레",
+   "img": "item/2026/1/7165970627139747679.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B8001D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809835432787",
+   "alt": "15 코이",
+   "img": "item/2026/1/7400610810385720283.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C14A53",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8809835432824",
+   "alt": "19 모스",
+   "img": "item/2026/1/4529475940569039965.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C7514D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809835432879",
+   "alt": "24 피러팻",
+   "img": "item/2026/2/5826011072881158681.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AC5150",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8809835432886",
+   "alt": "25 버드",
+   "img": "item/2026/1/5894767457822981329.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B43B34",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "022",
+   "barcode": "8809835432961",
+   "alt": "33 하티",
+   "img": "item/2026/2/6135196221082733961.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB2C2B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "025",
+   "barcode": "8809835433036",
+   "alt": "40 데이지",
+   "img": "item/2026/2/117963186138084413.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C13B37",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "027",
+   "barcode": "8809835432480",
+   "alt": "45 코지블로섬",
+   "img": "item/2026/2/7367609713475769058.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D5736A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "028",
+   "barcode": "8809835432497",
+   "alt": "46 로즈베리",
+   "img": "item/2026/2/2858604972674525146.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA6E6F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "023",
+   "barcode": "8809835432664",
+   "alt": "03 뮈니",
+   "img": "item/2026/2/7929112982961670601.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D60357",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8809835432817",
+   "alt": "18 뮬리",
+   "img": "item/2026/1/3165280466000263793.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C06366",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "026",
+   "barcode": "8809835433043",
+   "alt": "41 퀸 ",
+   "img": "item/2026/2/7107301574901648408.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B65761",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "goodsNo": "A000000188142",
+ "collected_at": "2026-11-17T05:02:31.386Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809506705042",
+   "alt": "00 탱글로스",
+   "img": "item/2023/7/4388295468662913616.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1DFE4",
+   "white": 0.939,
+   "grey": 0.994
+  },
+  {
+   "opt": "003",
+   "barcode": "8809506705066",
+   "alt": "02 햇꿀자몽",
+   "img": "item/2023/7/8867221744911369302.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E24E46",
+   "white": 0.004,
+   "grey": 0.005
+  },
+  {
+   "opt": "004",
+   "barcode": "8809506705073",
+   "alt": "03 청량쿨숭아",
+   "img": "item/2023/7/2216925145760531800.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE4F78",
+   "white": 0.009,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8809506705080",
+   "alt": "04 잔망베리",
+   "img": "item/2023/7/9130096220764839226.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E03359",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809506705332",
+   "alt": "07 수줍구아바",
+   "img": "item/2023/9/4341638882121897449.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F56C87",
+   "white": 0.001,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809506705349",
+   "alt": "08 럽라즈베리",
+   "img": "item/2023/9/4946292931055488455.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C41736",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809506707374",
+   "alt": "17 째깍사과",
+   "img": "item/2024/12/2908154111987385415.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#990B20",
+   "white": 0,
+   "grey": 0.054
+  },
+  {
+   "opt": "040",
+   "barcode": "8800327140555",
+   "alt": "[위글위글/키캡키링] 1009 피치바나",
+   "img": "item/2025/12/9123126492178375272.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F2994C",
+   "white": 0.623,
+   "grey": 0.058
+  },
+  {
+   "opt": "041",
+   "barcode": "8800327140562",
+   "alt": "[위글위글/키캡키링] 20 초코바나",
+   "img": "item/2025/12/2777726750598037658.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EBC23D",
+   "white": 0.615,
+   "grey": 0.036
+  },
+  {
+   "opt": "011",
+   "barcode": "8809506705608",
+   "alt": "1004 틴글로스",
+   "img": "item/2023/12/6450807976248845692.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#ECD4D8",
+   "white": 0.145,
+   "grey": 0.611
+  },
+  {
+   "opt": "006",
+   "barcode": "8809506705318",
+   "alt": "05 말랑홍시",
+   "img": "item/2023/9/4459455424957992492.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D7655B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809506706889",
+   "alt": "14 흥칫리치",
+   "img": "item/2024/8/9072362086997604768.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D4767A",
+   "white": 0.001,
+   "grey": 0.004
+  },
+  {
+   "opt": "025",
+   "barcode": "8809506706896",
+   "alt": "15 흐뭇화과",
+   "img": "item/2024/8/2546447002013346667.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#954854",
+   "white": 0.009,
+   "grey": 0.004
+  },
+  {
+   "opt": "029",
+   "barcode": "8809506707336",
+   "alt": "16 모찌연핑",
+   "img": "item/2024/12/8373920332735818812.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE7386",
+   "white": 0.016,
+   "grey": 0.004
+  },
+  {
+   "opt": "039",
+   "barcode": "8800327140487",
+   "alt": "[어워즈/미니틴트 증정] 15 흐뭇화과",
+   "img": "item/2025/11/2738030456750602137.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E4ADB3",
+   "white": 0.593,
+   "grey": 0.086
+  }
+ ]
+}

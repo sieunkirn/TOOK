@@ -1,0 +1,138 @@
+{
+ "goodsNo": "A000001001712",
+ "collected_at": "2026-11-17T04:55:20.733Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809716948086",
+   "alt": "01 바닐라빈",
+   "img": "item/2026/10/12/799_06184617.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA9A88",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809716948093",
+   "alt": "02 요거베리스쿱",
+   "img": "item/2026/10/12/894_06184646.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E49D9E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809716948109",
+   "alt": "03 피넛스쿱",
+   "img": "item/2026/10/12/3a0_06184644.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A97D65",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809716948116",
+   "alt": "04 카라멜로즈스쿱",
+   "img": "item/2026/10/12/ee2_06184641.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C67D71",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8809716948123",
+   "alt": "05 고구마스쿱",
+   "img": "item/2026/10/12/4a1_06184639.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA6C6D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8809716948130",
+   "alt": "06 무화과스쿱",
+   "img": "item/2026/10/12/3b3_06184636.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C54D49",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809716948147",
+   "alt": "07 석류스쿱",
+   "img": "item/2026/10/12/cf6_06184633.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AB2528",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809716948154",
+   "alt": "08 우베스쿱",
+   "img": "item/2026/10/12/e00_06184631.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A25D6D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809716948161",
+   "alt": "09 구아바스쿱",
+   "img": "item/2026/10/12/81b_06184629.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F36C6F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809716948178",
+   "alt": "10 산딸기스쿱",
+   "img": "item/2026/10/12/5cd_06184625.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D6454E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809716948185",
+   "alt": "11 크랜베리스쿱",
+   "img": "item/2026/10/12/ffb_06184622.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E66178",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809716948192",
+   "alt": "12 사과스쿱",
+   "img": "item/2026/10/12/12b_06184620.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DE1E38",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

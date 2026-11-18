@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000238611",
+ "collected_at": "2026-11-17T05:13:21.409Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809563634415",
+   "alt": "밀크 로즈",
+   "img": "item/2025/10/8567673645755520959.jpg",
+   "chip": false,
+   "soldOut": false,
+   "hex": "#CE4661",
+   "white": 0.803,
+   "grey": 0.03
+  },
+  {
+   "opt": "002",
+   "barcode": "8809563634422",
+   "alt": "베리 멜로우",
+   "img": "item/2025/10/4877084887498523787.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#EE2849",
+   "white": 0.796,
+   "grey": 0.018
+  },
+  {
+   "opt": "003",
+   "barcode": "8809563634439",
+   "alt": "체리 펀치",
+   "img": "item/2025/10/1789756070642607971.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#FB6089",
+   "white": 0.795,
+   "grey": 0.025
+  }
+ ]
+}

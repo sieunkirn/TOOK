@@ -20,7 +20,7 @@ import { $, store, api, skeletonCards, tryOnCard, shortName } from './common.js'
 import { t as tr } from './i18n.js';
 import { openChat } from './nav.js'; // 챗봇 모달
 import { getPicks } from './chat-picks.js'; // '챗봇에 담기'로 담은 제품
-import { listenNfc, resolveTag, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
+import { listenNfc, findTagProduct, createNfcHint } from './nfc.js'; // 제품 NFC 태그 → 그 제품 색을 입술에
 import { hexToRgb } from '../lib/color.js';
 import { state as lip } from './lip-state.js';
 import { applyLook } from './lip-look.js';
@@ -670,9 +670,8 @@ function tryProduct(p) {
 
 // ---------- NFC 태그: 립 제품을 리더기에 올리면 그 제품 색을 바로 입술에 바르고 시트에 제품 카드 ----------
 const nfcFlash = createNfcHint($('nfc-hint'), { ms: 3000 });
-async function showNfcProduct(id) {
-  const found = id ? await api('api/products/' + encodeURIComponent(id)) : null;
-  const p = found?.ok ? found.body.product : null;
+async function showNfcProduct(code) {
+  const p = await findTagProduct(code, api); // 태그 표·제품 ID·바코드 번호(호수까지) 순서로 찾는다
   if (!p?.color_hex) { nfcFlash(tr('pal.nfcUnknown')); return; }
   const near = nearestPick(p.color_hex);
   sel.fam = near.fam;
@@ -688,7 +687,7 @@ async function showNfcProduct(id) {
   showDots([p]);
   recList.replaceChildren(tryOnCard(p, tryProduct));
 }
-listenNfc((code) => showNfcProduct(resolveTag(code)));
+listenNfc(showNfcProduct);
 
 // ---------- 시작 ----------
 lip.texture = sel.texture;

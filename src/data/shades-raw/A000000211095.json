@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000211095",
+ "collected_at": "2026-11-17T05:06:40.207Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809836581132",
+   "alt": "01 누디 스텝",
+   "img": "item/2024/9/2880366608172175128.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D59B87",
+   "white": 0.76,
+   "grey": 0.058
+  },
+  {
+   "opt": "003",
+   "barcode": "8809836581156",
+   "alt": "03 핑크 스텝",
+   "img": "item/2024/9/9210619519525489164.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFA4A4",
+   "white": 0.767,
+   "grey": 0.054
+  },
+  {
+   "opt": "004",
+   "barcode": "8809836581163",
+   "alt": "04 페이디드 피그 (온)",
+   "img": "item/2024/9/8720827257277623810.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF6E62",
+   "white": 0.756,
+   "grey": 0.051
+  },
+  {
+   "opt": "005",
+   "barcode": "8809836581170",
+   "alt": "05 허쉬 로즈 (온)",
+   "img": "item/2024/9/4042309674747613027.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA6071",
+   "white": 0.759,
+   "grey": 0.033
+  },
+  {
+   "opt": "006",
+   "barcode": "8809836581187",
+   "alt": "06 콜디쉬 모브",
+   "img": "item/2024/9/3784711405254724789.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#844F57",
+   "white": 0.76,
+   "grey": 0.06
+  },
+  {
+   "opt": "002",
+   "barcode": "8809836581149",
+   "alt": "02 코랄 스텝",
+   "img": "item/2024/9/5202278578601022633.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E1987F",
+   "white": 0.757,
+   "grey": 0.049
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "goodsNo": "A000000197490",
+ "collected_at": "2026-11-17T04:55:26.494Z",
+ "options": [
+  {
+   "opt": "015",
+   "barcode": "8809563959792",
+   "alt": "[NEW/단품] 1호 애플소르베",
+   "img": "item/2025/1/1133160991719478808.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F61A32",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809563959815",
+   "alt": "[NEW/단품] 2호 오드코랄",
+   "img": "item/2025/1/8220239766104312932.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE534B",
+   "white": 0.008,
+   "grey": 0.001
+  },
+  {
+   "opt": "018",
+   "barcode": "8809563959839",
+   "alt": "[NEW/단품] 4호 허쉬드 체리",
+   "img": "item/2025/1/2195633409089140246.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#900825",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "8809563959891",
+   "alt": "[NEW/단품] 10호 언더모브",
+   "img": "item/2025/1/3899075574971125845.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA3D3C",
+   "white": 0,
+   "grey": 0.006
+  },
+  {
+   "opt": "029",
+   "barcode": "8809563930913",
+   "alt": "[NEW/단품] 15호 세레나데",
+   "img": "item/2025/1/8887679874156565372.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D44D63",
+   "white": 0.001,
+   "grey": 0.001
+  },
+  {
+   "opt": "032",
+   "barcode": "8809563950997",
+   "alt": "[NEW/단품] 18호 통카",
+   "img": "item/2025/1/235952004423254365.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D0906F",
+   "white": 0.037,
+   "grey": 0.013
+  },
+  {
+   "opt": "037",
+   "barcode": "8809563942237",
+   "alt": "[NEW/단품] 22호 밀키 허니",
+   "img": "item/2025/7/6217156322500023983.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B474A",
+   "white": 0.001,
+   "grey": 0.002
+  },
+  {
+   "opt": "041",
+   "barcode": "8809563938278",
+   "alt": "[단품] 26호 로젤라이트",
+   "img": "item/2026/2/2396334142882630315.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E6B4BB",
+   "white": 0.535,
+   "grey": 0.225
+  },
+  {
+   "opt": "017",
+   "barcode": "8809563959822",
+   "alt": "[NEW/단품] 3호 칠링칠링",
+   "img": "item/2025/1/605272313332238137.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E15B67",
+   "white": 0.011,
+   "grey": 0.003
+  },
+  {
+   "opt": "022",
+   "barcode": "8809563959877",
+   "alt": "[NEW/단품] 8호 페탈펀치",
+   "img": "item/2025/1/8219986206594007915.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E3455D",
+   "white": 0.095,
+   "grey": 0.005
+  },
+  {
+   "opt": "023",
+   "barcode": "8809563959884",
+   "alt": "[NEW/단품] 9호 핑키로우키",
+   "img": "item/2025/1/1451426189722899628.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F67069",
+   "white": 0,
+   "grey": 0.014
+  },
+  {
+   "opt": "025",
+   "barcode": "8809563950881",
+   "alt": "[NEW/단품] 11호 버터벨",
+   "img": "item/2025/1/6081715394296277272.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#872B2B",
+   "white": 0.005,
+   "grey": 0.001
+  },
+  {
+   "opt": "026",
+   "barcode": "8809563950898",
+   "alt": "[NEW/단품] 12호 체리 소르베",
+   "img": "item/2025/1/5606856504863550293.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C60134",
+   "white": 0.016,
+   "grey": 0.003
+  },
+  {
+   "opt": "027",
+   "barcode": "8809563950942",
+   "alt": "[NEW/단품] 13호 볼드 베리",
+   "img": "item/2025/1/3229569283352020634.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F0145A",
+   "white": 0.013,
+   "grey": 0.002
+  },
+  {
+   "opt": "028",
+   "barcode": "8809563950959",
+   "alt": "[NEW/단품] 14호 핑크 팝",
+   "img": "item/2025/1/8959905588759645705.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FE7294",
+   "white": 0.01,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8809563950973",
+   "alt": "[NEW/단품] 16호 마멀레이드",
+   "img": "item/2025/1/1030397931545302814.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FB7260",
+   "white": 0.011,
+   "grey": 0.001
+  },
+  {
+   "opt": "031",
+   "barcode": "8809563950980",
+   "alt": "[NEW/단품] 17호 진저 피치",
+   "img": "item/2025/1/8115954655170003087.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E0646C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "033",
+   "barcode": "8809563951475",
+   "alt": "[NEW/단품] 19호 베리 소다",
+   "img": "item/2025/1/6455728097952452429.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D15371",
+   "white": 0.015,
+   "grey": 0.001
+  },
+  {
+   "opt": "034",
+   "barcode": "8809563951482",
+   "alt": "[NEW/단품] 20호 플럼 콩포트",
+   "img": "item/2025/1/6186020703955563959.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#76122B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "038",
+   "barcode": "8809563933136",
+   "alt": "[NEW/단품] 23호 아포가토",
+   "img": "item/2025/7/6100367694541937950.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#862F31",
+   "white": 0.016,
+   "grey": 0.02
+  }
+ ]
+}

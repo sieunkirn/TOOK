@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000229582",
+ "collected_at": "2026-11-17T05:07:53.425Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800248707233",
+   "alt": "RD01 러브미",
+   "img": "item/2025/6/5254347558700645242.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B272F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800248707240",
+   "alt": "PK01 발레리나",
+   "img": "item/2025/6/5747962265870448067.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D86C69",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800248707257",
+   "alt": "PP02 빈티지 멜로우",
+   "img": "item/2025/6/2124153570541975353.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5564",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800248707264",
+   "alt": "PP03 피그 모브",
+   "img": "item/2025/6/3095300254981327614.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9D4448",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

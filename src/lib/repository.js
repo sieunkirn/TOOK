@@ -5,9 +5,9 @@
 // - oliveyoung (기본): 올리브영에서 수집한 실제 립틴트 (scripts/import-oliveyoung.js 로 변환)
 // - virtual: 시연·테스트용 가상 제품 27개 (바코드 있음). 테스트는 결과가 바뀌지 않도록 이 데이터를 쓴다 (TOOK_DATA=virtual)
 import { readFileSync, existsSync } from 'node:fs';
-import { setProducts, setDemoProducts } from './catalog.js';
+import { setProducts, setDemoProducts, setShades } from './catalog.js';
 
-export { allProducts, allDemoProducts, findById, findByBarcode, normalizeBarcode } from './catalog.js';
+export { allProducts, allDemoProducts, allShades, shadesOf, findById, findByBarcode, normalizeBarcode } from './catalog.js';
 
 const FILES = {
   oliveyoung: new URL('../data/products.oliveyoung.json', import.meta.url),
@@ -35,5 +35,10 @@ function loadProducts(file = dataFile()) {
   return list;
 }
 
+// 실제 호수 데이터 (올리브영 제품의 호수별 바코드·색상, scripts/import-shades.js 로 만든다). 올리브영 데이터를 쓸 때만 넣는다
+export const SHADES_FILE = new URL('../data/products.shades.json', import.meta.url);
+export const useShades = (source = dataSource()) => source === 'oliveyoung' && existsSync(SHADES_FILE);
+
 loadProducts();
 setDemoProducts(JSON.parse(readFileSync(DEMO_FILE, 'utf8')));
+if (useShades()) setShades(JSON.parse(readFileSync(SHADES_FILE, 'utf8')));

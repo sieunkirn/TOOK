@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000253178",
+ "collected_at": "2026-11-17T05:07:24.932Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809908691363",
+   "alt": "[올영단독] M1 구아바 슬라이스",
+   "img": "item/2026/4/8207736414004867778.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F47876",
+   "white": 0.063,
+   "grey": 0.03
+  },
+  {
+   "opt": "002",
+   "barcode": "8809908691370",
+   "alt": "M2 피치 아일랜드",
+   "img": "item/2026/4/5487926527932770385.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FAC5BB",
+   "white": 0.029,
+   "grey": 0.277
+  },
+  {
+   "opt": "003",
+   "barcode": "8809908691387",
+   "alt": "M3 스트로베리 핑크",
+   "img": "item/2026/4/2426671313814440177.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA7F8F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809908691394",
+   "alt": "M4 라즈베리 믹스",
+   "img": "item/2026/4/5031214307469568899.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC5B64",
+   "white": 0,
+   "grey": 0.03
+  },
+  {
+   "opt": "005",
+   "barcode": "8809908691400",
+   "alt": "M5 플럼 트위스트",
+   "img": "item/2026/4/3317753773281914957.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#97273B",
+   "white": 0,
+   "grey": 0.064
+  }
+ ]
+}

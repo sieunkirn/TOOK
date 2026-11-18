@@ -1,0 +1,94 @@
+{
+ "goodsNo": "A000000197104",
+ "collected_at": "2026-11-17T05:09:46.579Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8806334391393",
+   "alt": "[단품]03 필로이",
+   "img": "item/2023/11/7755454899025974694.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FC9596",
+   "white": 0.024,
+   "grey": 0.023
+  },
+  {
+   "opt": "015",
+   "barcode": "8806334395377",
+   "alt": "[단품/NEW] 13 탱이",
+   "img": "item/2025/2/2956548007104773466.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FF825D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8806334391409",
+   "alt": "[단품]04 블런트",
+   "img": "item/2023/11/9128745257167609380.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA7877",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8806334391423",
+   "alt": "[단품]06 퍼피",
+   "img": "item/2023/11/571029556486260431.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FA6AAE",
+   "white": 0.051,
+   "grey": 0.011
+  },
+  {
+   "opt": "011",
+   "barcode": "8806334393670",
+   "alt": "[단품]11 바이빈",
+   "img": "item/2024/4/3304201204020711198.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5779E",
+   "white": 0.059,
+   "grey": 0.033
+  },
+  {
+   "opt": "002",
+   "barcode": "8806334391386",
+   "alt": "[단품]02 비미쉬",
+   "img": "item/2023/11/8936635476046756025.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F97F7F",
+   "white": 0,
+   "grey": 0.076
+  },
+  {
+   "opt": "008",
+   "barcode": "8806334391669",
+   "alt": "[단품]08 스텔리파이",
+   "img": "item/2023/11/7676100519147996777.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AB255D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8806334393656",
+   "alt": "[단품]09 쏘,피치",
+   "img": "item/2024/4/4028437677234535793.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FF959B",
+   "white": 0.034,
+   "grey": 0.028
+  }
+ ]
+}

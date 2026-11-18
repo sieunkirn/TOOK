@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000210382",
+ "collected_at": "2026-11-18T01:00:57.170Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8801051499193",
+   "alt": "01 로즈핑크",
+   "img": "item/2024/8/8825827454009211068.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#AA4D4D",
+   "white": 0.926,
+   "grey": 0.446
+  },
+  {
+   "opt": "002",
+   "barcode": "8801051499209",
+   "alt": "02 핑크메이트",
+   "img": "item/2024/8/3560508510470730235.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#A14349",
+   "white": 0.898,
+   "grey": 0.452
+  },
+  {
+   "opt": "003",
+   "barcode": "8801051499216",
+   "alt": "03 피크닉레드",
+   "img": "item/2024/8/6231305526946106770.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#84393F",
+   "white": 0.943,
+   "grey": 0.446
+  },
+  {
+   "opt": "004",
+   "barcode": "8801051499223",
+   "alt": "04 레드시그널",
+   "img": "item/2024/8/26088371660029684.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#5F4045",
+   "white": 0.942,
+   "grey": 0.516
+  },
+  {
+   "opt": "005",
+   "barcode": "8801051499230",
+   "alt": "05 체리키스",
+   "img": "item/2024/8/627603502372670703.jpg",
+   "chip": false,
+   "soldOut": true,
+   "hex": "#53393F",
+   "white": 0.927,
+   "grey": 0.497
+  }
+ ]
+}

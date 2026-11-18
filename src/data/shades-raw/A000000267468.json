@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000267468",
+ "collected_at": "2026-11-17T05:03:57.638Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800299131605",
+   "alt": "05 오트 무화과 (미니)",
+   "img": "item/2026/8/7099603875349150320.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EF9A99",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800299131612",
+   "alt": "06 서울 걸 (미니)",
+   "img": "item/2026/8/479006501424718510.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E9788F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800299131629",
+   "alt": "도쿄 체리 (미니)",
+   "img": "item/2026/8/1790646663117004682.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FB3068",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

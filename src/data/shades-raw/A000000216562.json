@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000216562",
+ "collected_at": "2026-11-17T05:10:59.100Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809747964277",
+   "alt": "06 라즈베리젤리",
+   "img": "item/2024/12/2659633855327242996.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB537F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809747963881",
+   "alt": "01 피치젤리",
+   "img": "item/2024/12/4114839351444423265.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D2544C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8809747963898",
+   "alt": "02 구아바젤리",
+   "img": "item/2024/12/8895109659856089920.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D34659",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8809747963904",
+   "alt": "03 체리젤리",
+   "img": "item/2024/12/408386717211801352.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#8E1F29",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809747963911",
+   "alt": "04 쥬쥬브젤리",
+   "img": "item/2024/12/7234878098448795379.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B2392D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809747963928",
+   "alt": "05 스트로베리젤리",
+   "img": "item/2024/12/7509326305115255661.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D8788B",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

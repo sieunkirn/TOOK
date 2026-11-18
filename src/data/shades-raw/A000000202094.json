@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000202094",
+ "collected_at": "2026-11-17T05:10:20.545Z",
+ "options": [
+  {
+   "opt": "006",
+   "barcode": "8809820693988",
+   "alt": "02 피치 슈가",
+   "img": "item/2024/3/821896356167553715.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E94744",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8809820693995",
+   "alt": "03 프레시 애플",
+   "img": "item/2024/3/4950059352690128501.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA1F25",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809820698532",
+   "alt": "06 허밍 핑크",
+   "img": "item/2024/3/3953723202035231074.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#872643",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "031",
+   "barcode": "8809820710364",
+   "alt": "(카페인더딥) 22 바닐라빈 시럽",
+   "img": "item/2025/8/6602071664089492902.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E45049",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "032",
+   "barcode": "8809820710371",
+   "alt": "(카페인더딥) 23 브라운 슈가 시럽",
+   "img": "item/2025/8/8347323243656160269.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DF6C50",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809820693971",
+   "alt": "01 센티드 로즈",
+   "img": "item/2024/3/9056695948968352226.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DF6259",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8809820703014",
+   "alt": "09 페이크 레드",
+   "img": "item/2024/9/3186003338708664611.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#950007",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

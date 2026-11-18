@@ -1,0 +1,270 @@
+{
+ "goodsNo": "A000000223282",
+ "collected_at": "2026-11-17T05:05:06.013Z",
+ "options": [
+  {
+   "opt": "027",
+   "barcode": "8800280694867",
+   "alt": "테디 (TEDDY)",
+   "img": "item/2025/11/2921658844949082808.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B5656B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "028",
+   "barcode": "8800280694874",
+   "alt": "베어 (BEAR)",
+   "img": "item/2025/11/7025798487200854491.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE5E62",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "029",
+   "barcode": "8800280694881",
+   "alt": "테이스티 (TASTY)",
+   "img": "item/2025/11/7947428782874725060.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B34750",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8800280691606",
+   "alt": "드모르 (DMORE)",
+   "img": "item/2025/3/2145716377713310474.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9B4C4F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "018",
+   "barcode": "8800280691569",
+   "alt": "히어리 (HEARLY)",
+   "img": "item/2025/3/8085132528851311730.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AE5C71",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8800280691576",
+   "alt": "워니 (WANNY)",
+   "img": "item/2025/3/8587820948684324130.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB6B5D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8800280691613",
+   "alt": "카프 (CAPH)",
+   "img": "item/2025/3/6969877504418624513.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C54649",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "8800280691668",
+   "alt": "인센디오 (INCENDIO)",
+   "img": "item/2025/3/4817262813244192868.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C95F6C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800280691712",
+   "alt": "오브디 (OVEDI)",
+   "img": "item/2025/3/2099384198390721747.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B8585B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8800280691583",
+   "alt": "던더 (DONDER)",
+   "img": "item/2025/3/4428145619463621671.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D3718F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "8800280691675",
+   "alt": "헤이 (HEI)",
+   "img": "item/2025/3/6778669953602729220.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D65A62",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800280691729",
+   "alt": "페르소나 (PERSONA)",
+   "img": "item/2025/3/7026403153100338242.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C74051",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800280691699",
+   "alt": "프리실라 (PRICILLA)",
+   "img": "item/2025/3/6223220634205971698.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C2304F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800280691705",
+   "alt": "에트나 (ETNA)",
+   "img": "item/2025/3/8764174165396015614.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C43E49",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "8800280691590",
+   "alt": "오피아 (OPIA)",
+   "img": "item/2025/3/3025658405752630872.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C5304F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "8800280691651",
+   "alt": "튜린 (TURIN)",
+   "img": "item/2025/3/6357812433017282363.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A4274D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8800280691620",
+   "alt": "록스 (ROX)",
+   "img": "item/2025/3/975639433438375105.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#7D2A2E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8800280691644",
+   "alt": "슬레이트 (SLATE)",
+   "img": "item/2025/3/3432668987706815023.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#781C3E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "030",
+   "barcode": "8800280694850",
+   "alt": "솔 (SOL)",
+   "img": "item/2025/11/4398960829123964903.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9A4442",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8800280691736",
+   "alt": "페러데이 (FERADAY)",
+   "img": "item/2025/3/2869186256674405569.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BB5B52",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8800280691552",
+   "alt": "이테일 (EYTAIL)",
+   "img": "item/2025/3/2506252924838174960.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C0687C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800280691682",
+   "alt": "핀 (PIN)",
+   "img": "item/2025/3/6017115235332179567.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#982029",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8800280691637",
+   "alt": "오일러 (OILER)",
+   "img": "item/2025/3/4722007274377475831.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#802D2A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8800280691545",
+   "alt": "하운드 (HOUND)",
+   "img": "item/2025/3/3040831235698331256.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#7F3F4D",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

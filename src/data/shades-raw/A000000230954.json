@@ -1,0 +1,116 @@
+{
+ "goodsNo": "A000000230954",
+ "collected_at": "2026-11-18T01:01:24.258Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8809689681638",
+   "alt": "02 데루루",
+   "img": "item/2025/7/8690915189013177108.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF4F45",
+   "white": 0.364,
+   "grey": 0.027
+  },
+  {
+   "opt": "001",
+   "barcode": "8809689681621",
+   "alt": "01 오버더문",
+   "img": "item/2025/7/8250007988029077599.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C45A5F",
+   "white": 0.344,
+   "grey": 0.024
+  },
+  {
+   "opt": "009",
+   "barcode": "8809689681645",
+   "alt": "03 바이어스",
+   "img": "item/2025/7/2999347886009669049.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#7C3A43",
+   "white": 0.35,
+   "grey": 0.031
+  },
+  {
+   "opt": "008",
+   "barcode": "8809689681652",
+   "alt": "04 핀스타",
+   "img": "item/2025/7/2848432963821368774.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#6A363A",
+   "white": 0.365,
+   "grey": 0.043
+  },
+  {
+   "opt": "007",
+   "barcode": "8809689681669",
+   "alt": "05 리즈업",
+   "img": "item/2025/7/8109114899266661655.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#853131",
+   "white": 0.344,
+   "grey": 0.021
+  },
+  {
+   "opt": "006",
+   "barcode": "8809689681683",
+   "alt": "06 고지나",
+   "img": "item/2025/7/1478312253064951790.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D27A7F",
+   "white": 0.333,
+   "grey": 0.036
+  },
+  {
+   "opt": "005",
+   "barcode": "8809689681690",
+   "alt": "07 슬레이",
+   "img": "item/2025/7/7921326046246302699.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C07084",
+   "white": 0.31,
+   "grey": 0.051
+  },
+  {
+   "opt": "004",
+   "barcode": "8809689681706",
+   "alt": "08 부지",
+   "img": "item/2025/7/1213022882222654437.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#BC6C50",
+   "white": 0.289,
+   "grey": 0.066
+  },
+  {
+   "opt": "003",
+   "barcode": "8809689681713",
+   "alt": "09 로우키더스키",
+   "img": "item/2025/7/8058445044864109815.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AF6453",
+   "white": 0.3,
+   "grey": 0.079
+  },
+  {
+   "opt": "002",
+   "barcode": "8809689681720",
+   "alt": "10 셰이디",
+   "img": "item/2025/7/2672167786894694145.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#A74A49",
+   "white": 0.289,
+   "grey": 0.069
+  }
+ ]
+}

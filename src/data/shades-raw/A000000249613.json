@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000249613",
+ "collected_at": "2026-11-17T05:00:50.400Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8800266076137",
+   "alt": "[뉴트럴 딥 로즈] 로지프레소",
+   "img": "item/2026/9/5467491617032981583.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D96A6A",
+   "white": 0.006,
+   "grey": 0.001
+  },
+  {
+   "opt": "009",
+   "barcode": "8800266076120",
+   "alt": "[뮤트 핑크] 핑크 카푸치노",
+   "img": "item/2026/9/6884852308925431957.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E3968E",
+   "white": 0.007,
+   "grey": 0.009
+  },
+  {
+   "opt": "011",
+   "barcode": "8800266076205",
+   "alt": "[누디 브릭] 카라멜라떼",
+   "img": "item/2026/9/4320369120913192652.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D28673",
+   "white": 0.01,
+   "grey": 0.003
+  },
+  {
+   "opt": "001",
+   "barcode": "8800266072726",
+   "alt": "[애프리콧] 틴지",
+   "img": "item/2026/3/5217908595811527212.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FAB185",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8800266072733",
+   "alt": "[누디 베일] 허쉬",
+   "img": "item/2026/3/8377124064778021.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F09F91",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800266072740",
+   "alt": "[생기 쿨 핑크] 스웨이",
+   "img": "item/2026/3/4816223441045872471.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F29EA3",
+   "white": 0,
+   "grey": 0.007
+  },
+  {
+   "opt": "004",
+   "barcode": "8800266072757",
+   "alt": "[코랄 핑크] 브리즈",
+   "img": "item/2026/3/2705351697109167671.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F9707A",
+   "white": 0,
+   "grey": 0.001
+  },
+  {
+   "opt": "005",
+   "barcode": "8800266072764",
+   "alt": "[코랄 로즈] 선릿",
+   "img": "item/2026/3/2038271139366501272.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F17D78",
+   "white": 0,
+   "grey": 0.003
+  },
+  {
+   "opt": "006",
+   "barcode": "8800266072771",
+   "alt": "[브라운 로즈] 레이스",
+   "img": "item/2026/3/3812479255981931499.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F3927C",
+   "white": 0.001,
+   "grey": 0.008
+  },
+  {
+   "opt": "007",
+   "barcode": "8800266072788",
+   "alt": "[로맨틱 핑크] 데이즈",
+   "img": "item/2026/3/2974944122680106775.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E87E8B",
+   "white": 0.001,
+   "grey": 0.018
+  },
+  {
+   "opt": "008",
+   "barcode": "8800266072795",
+   "alt": "[모브 그레이프] 배니쉬",
+   "img": "item/2026/3/1384726572853816742.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5919E",
+   "white": 0,
+   "grey": 0.003
+  }
+ ]
+}

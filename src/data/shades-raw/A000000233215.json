@@ -1,0 +1,50 @@
+{
+ "goodsNo": "A000000233215",
+ "collected_at": "2026-11-17T05:12:33.180Z",
+ "options": [
+  {
+   "opt": "006",
+   "barcode": "8800326570124",
+   "alt": "02 로지 모카",
+   "img": "item/2025/8/7006409590925012072.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC9696",
+   "white": 0.588,
+   "grey": 0.073
+  },
+  {
+   "opt": "008",
+   "barcode": "8800326570148",
+   "alt": "04 피치 슈",
+   "img": "item/2025/8/4018251056877962731.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E86B67",
+   "white": 0.596,
+   "grey": 0.043
+  },
+  {
+   "opt": "001",
+   "barcode": "8800326570117",
+   "alt": "01  누디 코코",
+   "img": "item/2025/8/3482082866338470488.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E8ABA3",
+   "white": 0.594,
+   "grey": 0.068
+  },
+  {
+   "opt": "010",
+   "barcode": "8800326570162",
+   "alt": "09 캔디츄",
+   "img": "item/2025/8/1072168333891229844.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DE5378",
+   "white": 0.589,
+   "grey": 0.037
+  }
+ ]
+}

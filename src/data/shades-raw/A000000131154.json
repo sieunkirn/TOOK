@@ -1,0 +1,83 @@
+{
+ "goodsNo": "A000000131154",
+ "collected_at": "2026-11-17T04:56:28.039Z",
+ "options": [
+  {
+   "opt": "008",
+   "barcode": "602004163011",
+   "alt": "[단품] 베네틴트-라즈베리",
+   "img": "item/2025/5/6013060151453263283.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BC004B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "602004106681",
+   "alt": "[단품] 베네틴트-로즈",
+   "img": "item/2020/6/9086584210774011716.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C40203",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "602004106643",
+   "alt": "[단품] 차차틴트",
+   "img": "item/2020/6/3497370422548186300.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FE5336",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "602004140128",
+   "alt": "[단품] 플로라 틴트",
+   "img": "item/2022/4/6859977135898507830.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B73B3B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "602004111807",
+   "alt": "[단품] 러브틴트",
+   "img": "item/2020/6/3794713216744865351.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EE011F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "602004106667",
+   "alt": "[단품] 고고틴트",
+   "img": "item/2020/6/4661561247675907473.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA2D5B",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "602004129512",
+   "alt": "[단품] 플레이 틴트",
+   "img": "item/2021/5/650517695439029666.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA5C5E",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

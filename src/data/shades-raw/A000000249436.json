@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000249436",
+ "collected_at": "2026-11-18T00:58:48.012Z",
+ "options": [
+  {
+   "opt": "003",
+   "barcode": "8809464544905",
+   "alt": "02 페어리무디",
+   "img": "item/2026/2/6658500045587485982.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E59477",
+   "white": 0.58,
+   "grey": 0.074
+  },
+  {
+   "opt": "004",
+   "barcode": "8809464544912",
+   "alt": "03 로지애플",
+   "img": "item/2026/4/752479290504214676.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C54843",
+   "white": 0.475,
+   "grey": 0.066
+  },
+  {
+   "opt": "005",
+   "barcode": "8809464544929",
+   "alt": "04 그레이프베리",
+   "img": "item/2026/4/7532620893204527154.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D17F92",
+   "white": 0.469,
+   "grey": 0.103
+  },
+  {
+   "opt": "006",
+   "barcode": "8809464544936",
+   "alt": "05 체리블리",
+   "img": "item/2026/4/4536030075976161627.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB6578",
+   "white": 0.483,
+   "grey": 0.071
+  },
+  {
+   "opt": "001",
+   "barcode": "8809464544882",
+   "alt": "00 문글리츠",
+   "img": "item/2026/2/4901670252870056237.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DED7DE",
+   "white": 0.693,
+   "grey": 0.942
+  },
+  {
+   "opt": "002",
+   "barcode": "8809464544899",
+   "alt": "01 페어리핑크",
+   "img": "item/2026/2/6397871045520611766.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D791A3",
+   "white": 0.54,
+   "grey": 0.163
+  }
+ ]
+}

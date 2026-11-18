@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000235875",
+ "collected_at": "2026-11-17T05:12:52.004Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8809971487979",
+   "alt": "05 딤 레드",
+   "img": "item/2025/9/2499943513931512882.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BB2731",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8800313700060",
+   "alt": "06 퍼피 핑크",
+   "img": "item/2025/9/6493669986631586160.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5778E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8800313700077",
+   "alt": "07 텐더 모카",
+   "img": "item/2025/9/3600585650496722583.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9E5A43",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "8800313700121",
+   "alt": "08 스모키 피치",
+   "img": "item/2025/11/4160227565104495246.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D2817C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "8800313700138",
+   "alt": "09 슬리피 피기",
+   "img": "item/2025/11/7006642176040301433.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C76C7E",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "8809971487948",
+   "alt": "02 부다페스트 핑크*",
+   "img": "item/2025/9/1563562552576490123.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E67173",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

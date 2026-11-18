@@ -1,0 +1,226 @@
+{
+ "goodsNo": "A000000232483",
+ "collected_at": "2026-11-17T05:05:52.147Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8809611863910",
+   "alt": " 301 피그링",
+   "img": "item/2025/8/2994203713198890933.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C26E64",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "019",
+   "barcode": "8809611863934",
+   "alt": "303 복숭아링",
+   "img": "item/2025/8/2145712296259844106.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E67577",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "018",
+   "barcode": "8809611863941",
+   "alt": "304 진저링",
+   "img": "item/2025/8/1405314395120928168.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EA8C6F",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "017",
+   "barcode": "8809611863958",
+   "alt": "305 귤링",
+   "img": "item/2025/8/1017666463130597324.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E47B54",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "016",
+   "barcode": "8809611863965",
+   "alt": "306 엔젤링",
+   "img": "item/2025/8/3993070701805337748.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E59196",
+   "white": 0.004,
+   "grey": 0.007
+  },
+  {
+   "opt": "015",
+   "barcode": "8809611863972",
+   "alt": "307 코코링",
+   "img": "item/2025/8/2835263167509582219.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B76558",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "8809611863989",
+   "alt": "308 로사링",
+   "img": "item/2025/8/973237866419000802.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C16A61",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "8809611864009",
+   "alt": "310 멜바링",
+   "img": "item/2025/8/6213887939070179363.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E5715F",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "8809611864016",
+   "alt": "(mini단독) 311 누디링",
+   "img": "item/2025/8/8357606033006612251.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C77E71",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "8809611864023",
+   "alt": "(mini단독) 312 쿨링",
+   "img": "item/2025/8/3081262487097678215.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B6757E",
+   "white": 0.004,
+   "grey": 0.009
+  },
+  {
+   "opt": "008",
+   "barcode": "8809611864047",
+   "alt": "(mini단독) 314 블러쉬링",
+   "img": "item/2025/8/2558335358632265673.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B05C6B",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "006",
+   "barcode": "8809611864061",
+   "alt": "(mini단독) 316 모브링",
+   "img": "item/2025/8/5656456355257664644.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE706E",
+   "white": 0.004,
+   "grey": 0.004
+  },
+  {
+   "opt": "005",
+   "barcode": "8809611864078",
+   "alt": "(mini단독) 317 체리링",
+   "img": "item/2025/8/5975640727597930922.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8D2236",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "8809611864092",
+   "alt": "(mini단독) 319 바인링",
+   "img": "item/2025/8/580169605132184432.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#5D1933",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "020",
+   "barcode": "8809611863927",
+   "alt": "302 포도링",
+   "img": "item/2025/8/8539787623029366660.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E46F7D",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "8809611863996",
+   "alt": "309 하트링",
+   "img": "item/2025/8/7652931690847413894.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C77678",
+   "white": 0.004,
+   "grey": 0.003
+  },
+  {
+   "opt": "009",
+   "barcode": "8809611864030",
+   "alt": "(mini단독) 313 포지링",
+   "img": "item/2025/8/4998546596809048649.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D17082",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "007",
+   "barcode": "8809611864054",
+   "alt": "(mini단독) 315 베러링",
+   "img": "item/2025/8/5481610725106863937.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#C06065",
+   "white": 0.004,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "8809611864085",
+   "alt": "(mini단독) 318 레드링",
+   "img": "item/2025/8/7143430622795919274.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#9A4234",
+   "white": 0.003,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "8809611864108",
+   "alt": "(mini단독) 320 머드링",
+   "img": "item/2025/8/4350464224337153223.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#521C21",
+   "white": 0.003,
+   "grey": 0
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "goodsNo": "A000000231637",
+ "collected_at": "2026-11-17T04:57:35.759Z",
+ "options": [
+  {
+   "opt": "010",
+   "barcode": "8800248709770",
+   "alt": "PK04 핑크 벨루어",
+   "img": "item/2026/3/32383286029630635.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FD8A94",
+   "white": 0.011,
+   "grey": 0.003
+  },
+  {
+   "opt": "012",
+   "barcode": "8800248709794",
+   "alt": "CR01 피치 쉘",
+   "img": "item/2026/3/8648167793908728711.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FB9D7D",
+   "white": 0.006,
+   "grey": 0.013
+  },
+  {
+   "opt": "013",
+   "barcode": "8800328100398",
+   "alt": "BE03 헤이즈 브라운",
+   "img": "item/2026/3/7280169345594615219.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B07C6E",
+   "white": 0.014,
+   "grey": 0.022
+  },
+  {
+   "opt": "001",
+   "barcode": "8800248707097",
+   "alt": "BE01 래비쉬 베어",
+   "img": "item/2025/7/288184556937834889.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CB8B7D",
+   "white": 0.006,
+   "grey": 0.009
+  },
+  {
+   "opt": "002",
+   "barcode": "8800248707165",
+   "alt": "RD03 스터닝 레드",
+   "img": "item/2025/7/5201921765318560576.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF1A3A",
+   "white": 0.004,
+   "grey": 0.001
+  },
+  {
+   "opt": "003",
+   "barcode": "8800248707158",
+   "alt": "RD02 로지쉘",
+   "img": "item/2025/7/2270855280439977247.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9C2521",
+   "white": 0.002,
+   "grey": 0.002
+  },
+  {
+   "opt": "004",
+   "barcode": "8800248707141",
+   "alt": "RD01 허니 로즈",
+   "img": "item/2025/7/6877933731279736565.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CC4951",
+   "white": 0.006,
+   "grey": 0.003
+  },
+  {
+   "opt": "006",
+   "barcode": "8800248707127",
+   "alt": "PK01 누디니어",
+   "img": "item/2025/7/6701475241534658093.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D36F71",
+   "white": 0.007,
+   "grey": 0.002
+  },
+  {
+   "opt": "007",
+   "barcode": "8800248707110",
+   "alt": "PP01 더스티 블러쉬",
+   "img": "item/2025/7/8613566097404359646.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B95C69",
+   "white": 0.002,
+   "grey": 0.001
+  },
+  {
+   "opt": "009",
+   "barcode": "8800248709763",
+   "alt": "PK03 누디 멜로우",
+   "img": "item/2026/3/3821830993861732421.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#FAB9A8",
+   "white": 0.048,
+   "grey": 0.036
+  },
+  {
+   "opt": "011",
+   "barcode": "8800248709787",
+   "alt": "PK05 로즈 스웨이",
+   "img": "item/2026/3/1927613260000992578.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#F26B7F",
+   "white": 0.019,
+   "grey": 0.004
+  },
+  {
+   "opt": "005",
+   "barcode": "8800248707134",
+   "alt": "PK02 소프트 버니",
+   "img": "item/2025/7/5584352048512773828.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E26672",
+   "white": 0.043,
+   "grey": 0.011
+  },
+  {
+   "opt": "008",
+   "barcode": "8800248707103",
+   "alt": "BE02 뮤티드 코코아",
+   "img": "item/2025/7/2083582439648486032.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#B14645",
+   "white": 0.004,
+   "grey": 0.004
+  }
+ ]
+}

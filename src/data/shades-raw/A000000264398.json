@@ -1,0 +1,39 @@
+{
+ "goodsNo": "A000000264398",
+ "collected_at": "2026-11-17T05:08:01.429Z",
+ "options": [
+  {
+   "opt": "002",
+   "barcode": "8800353602744",
+   "alt": "[포켓몬에디션] 31 말랑일락",
+   "img": "item/2026/8/7703188652441983899.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFC8DE",
+   "white": 0.82,
+   "grey": 0.331
+  },
+  {
+   "opt": "003",
+   "barcode": "8800353602751",
+   "alt": "[포켓몬에디션] 32 말랑둥절",
+   "img": "item/2026/8/4936034051340385334.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9C8DC",
+   "white": 0.816,
+   "grey": 0.302
+  },
+  {
+   "opt": "001",
+   "barcode": "8800353602737",
+   "alt": "[포켓몬에디션] 14 딸기멜로",
+   "img": "item/2026/8/3920640393545324995.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E6C1C8",
+   "white": 0.846,
+   "grey": 0.49
+  }
+ ]
+}

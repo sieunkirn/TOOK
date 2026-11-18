@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000232518",
+ "collected_at": "2026-11-17T04:58:38.612Z",
+ "options": [
+  {
+   "opt": "025",
+   "barcode": "8805545401143",
+   "alt": "[쿠로미에디션] 더스키핑크+스크런치",
+   "img": "item/2026/10/26/482_26181035.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D08E9A",
+   "white": 0.602,
+   "grey": 0.117
+  },
+  {
+   "opt": "026",
+   "barcode": "8805545400900",
+   "alt": "[쿠로미NEW컬러] 사일런트핑크+스크런치",
+   "img": "item/2026/10/26/7ce_26181038.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#875A5E",
+   "white": 0.595,
+   "grey": 0.56
+  },
+  {
+   "opt": "023",
+   "barcode": "6902395991175",
+   "alt": "(NEW) 피버 무드(봄웜추천)",
+   "img": "item/2026/9/8135556433138477946.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D35D6D",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "024",
+   "barcode": "6902395991168",
+   "alt": "(NEW) 쿨 어페어(쿨톤 추천)",
+   "img": "item/2026/9/5247220934764798003.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA4F59",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "001",
+   "barcode": "6902395979074",
+   "alt": "[OY단독] 더스키 핑크(쿨 베스트)",
+   "img": "item/2025/9/2499850405164102142.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA6571",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "008",
+   "barcode": "6902395979135",
+   "alt": "[OY단독] 사일런트(쿨 베스트)",
+   "img": "item/2025/9/8807148488406942635.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A41544",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "010",
+   "barcode": "6902395979104",
+   "alt": "캐시미어 누드(쿨 베스트)",
+   "img": "item/2025/9/479086832482109967.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BE6074",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "013",
+   "barcode": "6902395979036",
+   "alt": "다포딜(웜 베스트)",
+   "img": "item/2025/9/4732340361574509185.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A62F39",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "6902395979203",
+   "alt": "플럼 스모크(겨울쿨 추천)",
+   "img": "item/2025/9/5930538913806261241.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AA6265",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "007",
+   "barcode": "6902395979142",
+   "alt": "히티드(봄웜 추천)",
+   "img": "item/2025/9/7790219663859264496.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B05459",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "005",
+   "barcode": "6902395979166",
+   "alt": "다키스트 아워(가을웜 추천)",
+   "img": "item/2025/9/8234282311290116892.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B353A",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "006",
+   "barcode": "6902395979159",
+   "alt": "스파이스드 라떼(가을웜 추천)",
+   "img": "item/2025/9/8508470856958130867.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A95555",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "003",
+   "barcode": "6902395979180",
+   "alt": "셀프 메이드(뉴트럴 추천)",
+   "img": "item/2025/9/8852210070106562886.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9F5A55",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "009",
+   "barcode": "6902395979111",
+   "alt": "베스트 에버(여름쿨 추천)",
+   "img": "item/2025/9/5825401351560773071.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DC013F",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "011",
+   "barcode": "6902395979098",
+   "alt": "차일드라이크(봄웜 추천)",
+   "img": "item/2025/9/4934428905182783698.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E53922",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "012",
+   "barcode": "6902395979081",
+   "alt": "피그타치오(봄웜 추천)",
+   "img": "item/2025/9/4024558722573415682.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C96B69",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "014",
+   "barcode": "6902395979029",
+   "alt": "토프(가을웜 추천)",
+   "img": "item/2025/9/4246611724645351620.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#8B433C",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "015",
+   "barcode": "6902395979012",
+   "alt": "스피크 업(뉴트럴 추천)",
+   "img": "item/2025/9/1541612925912355092.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#A1283C",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

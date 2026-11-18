@@ -1,0 +1,204 @@
+{
+ "goodsNo": "A000000258196",
+ "collected_at": "2026-11-17T04:58:27.521Z",
+ "options": [
+  {
+   "opt": "018",
+   "barcode": "8800353605561",
+   "alt": "[레오파드 헬로키티]12 로젤레떼 기획",
+   "img": "item/2026/8/62614888692399965.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E4BCBA",
+   "white": 0.902,
+   "grey": 0.192
+  },
+  {
+   "opt": "019",
+   "barcode": "8800353605578",
+   "alt": "[레오파드 헬로키티]16 헤이즈 기획",
+   "img": "item/2026/8/7439674790401286856.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DFB2AB",
+   "white": 0.9,
+   "grey": 0.16
+  },
+  {
+   "opt": "020",
+   "barcode": "8800353605585",
+   "alt": "[레오파드 헬로키티] 17 포커스 기획",
+   "img": "item/2026/8/9006142845807328233.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D87783",
+   "white": 0.894,
+   "grey": 0.067
+  },
+  {
+   "opt": "001",
+   "barcode": "8800353600702",
+   "alt": "01 센티멘탈",
+   "img": "item/2026/5/454571036642065812.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F0CCD6",
+   "white": 0.897,
+   "grey": 0.073
+  },
+  {
+   "opt": "002",
+   "barcode": "8800353600719",
+   "alt": "02 언카인드",
+   "img": "item/2026/5/3719230834798746540.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F2AFB6",
+   "white": 0.885,
+   "grey": 0.077
+  },
+  {
+   "opt": "003",
+   "barcode": "8800353600658",
+   "alt": "03 애프리시티",
+   "img": "item/2026/5/5857054770535137936.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2B09D",
+   "white": 0.882,
+   "grey": 0.119
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353600665",
+   "alt": "04 포쉬",
+   "img": "item/2026/5/6008755839494837109.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#FCAFB3",
+   "white": 0.877,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353600672",
+   "alt": "05 카프리",
+   "img": "item/2026/5/196566099601052702.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#F18B7F",
+   "white": 0.882,
+   "grey": 0.079
+  },
+  {
+   "opt": "006",
+   "barcode": "8800353600771",
+   "alt": "06 비트윈",
+   "img": "item/2026/5/3022974966005368960.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E27577",
+   "white": 0.882,
+   "grey": 0.021
+  },
+  {
+   "opt": "007",
+   "barcode": "8800353600733",
+   "alt": "07 러프",
+   "img": "item/2026/5/707821788544458025.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C88890",
+   "white": 0.887,
+   "grey": 0.058
+  },
+  {
+   "opt": "008",
+   "barcode": "8800353600627",
+   "alt": "08 더티 로즈",
+   "img": "item/2026/5/1318168852344846587.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B78B8D",
+   "white": 0.883,
+   "grey": 0.24
+  },
+  {
+   "opt": "010",
+   "barcode": "8800353600634",
+   "alt": "10 머스키",
+   "img": "item/2026/5/3470142386851925632.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B2817C",
+   "white": 0.883,
+   "grey": 0.141
+  },
+  {
+   "opt": "011",
+   "barcode": "8800353600788",
+   "alt": "11 밤비",
+   "img": "item/2026/5/2166763775081307918.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C69D8F",
+   "white": 0.883,
+   "grey": 0.121
+  },
+  {
+   "opt": "012",
+   "barcode": "8800353600610",
+   "alt": "12 로젤레떼",
+   "img": "item/2026/5/1321336258640109676.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E0B0B2",
+   "white": 0.893,
+   "grey": 0.078
+  },
+  {
+   "opt": "013",
+   "barcode": "8800353600689",
+   "alt": "13 모카 솔레이",
+   "img": "item/2026/5/2014804395936446369.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C57C71",
+   "white": 0.884,
+   "grey": 0.078
+  },
+  {
+   "opt": "014",
+   "barcode": "8800353600764",
+   "alt": "14 플럼 슈",
+   "img": "item/2026/5/8970443621031279478.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BF707F",
+   "white": 0.883,
+   "grey": 0.091
+  },
+  {
+   "opt": "015",
+   "barcode": "8800353600740",
+   "alt": "15 코클리코",
+   "img": "item/2026/5/2460873119040567624.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C66468",
+   "white": 0.876,
+   "grey": 0.008
+  },
+  {
+   "opt": "009",
+   "barcode": "8800353600603",
+   "alt": "09 로 애쉬드",
+   "img": "item/2026/5/4670600440042084466.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D4AAA9",
+   "white": 0.889,
+   "grey": 0.089
+  }
+ ]
+}

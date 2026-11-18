@@ -1,0 +1,17 @@
+{
+ "goodsNo": "A000000192644",
+ "collected_at": "2026-11-17T05:09:42.132Z",
+ "options": [
+  {
+   "opt": "004",
+   "barcode": "8806164183809",
+   "alt": "04 바이올렛 진",
+   "img": "item/2023/10/5013673337331216008.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#BA6D76",
+   "white": 0.83,
+   "grey": 0.139
+  }
+ ]
+}

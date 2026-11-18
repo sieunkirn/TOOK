@@ -1,0 +1,215 @@
+{
+ "goodsNo": "A000000229469",
+ "collected_at": "2026-11-17T05:01:48.510Z",
+ "options": [
+  {
+   "opt": "024",
+   "barcode": "8800303330437",
+   "alt": "[NEW 단품] 18 밀키 듀",
+   "img": "item/2026/9/2448602614944011019.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E9B4A4",
+   "white": 0.652,
+   "grey": 0.093
+  },
+  {
+   "opt": "025",
+   "barcode": "8800303330833",
+   "alt": "[NEW 단품] 19 넛 베이지",
+   "img": "item/2026/9/605770076746876673.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D09D95",
+   "white": 0.659,
+   "grey": 0.104
+  },
+  {
+   "opt": "004",
+   "barcode": "8809871382169",
+   "alt": "[단품] 02 레이지",
+   "img": "item/2026/3/8411392086350106669.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#B87A74",
+   "white": 0.654,
+   "grey": 0.151
+  },
+  {
+   "opt": "005",
+   "barcode": "8809871382176",
+   "alt": "[단품] 03 로지 포엠",
+   "img": "item/2026/3/1336683345118241167.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E1878A",
+   "white": 0.656,
+   "grey": 0.075
+  },
+  {
+   "opt": "007",
+   "barcode": "8809871382190",
+   "alt": "[단품] 05 소르베",
+   "img": "item/2026/3/3515251998060368381.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D9747E",
+   "white": 0.656,
+   "grey": 0.055
+  },
+  {
+   "opt": "008",
+   "barcode": "8809871382206",
+   "alt": "[단품] 06 칠링",
+   "img": "item/2026/3/3474904318214222815.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C46B64",
+   "white": 0.65,
+   "grey": 0.061
+  },
+  {
+   "opt": "016",
+   "barcode": "8800303335036",
+   "alt": "[단품] 11 베리 듀",
+   "img": "item/2026/3/6078396494984949916.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D17690",
+   "white": 0.657,
+   "grey": 0.036
+  },
+  {
+   "opt": "020",
+   "barcode": "8800303335296",
+   "alt": "[단품] 14 핑크 듀",
+   "img": "item/2026/3/4447910013038352133.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EFBCBF",
+   "white": 0.68,
+   "grey": 0.138
+  },
+  {
+   "opt": "021",
+   "barcode": "8800303335302",
+   "alt": "[단품] 15 픽시",
+   "img": "item/2026/3/5930021857828745471.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EF9789",
+   "white": 0.646,
+   "grey": 0.056
+  },
+  {
+   "opt": "022",
+   "barcode": "8800303335319",
+   "alt": "[단품] 16 뮤즈",
+   "img": "item/2026/3/3248704728001690379.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#EB9AAF",
+   "white": 0.667,
+   "grey": 0.099
+  },
+  {
+   "opt": "023",
+   "barcode": "8800303335326",
+   "alt": "[단품] 17 티 로즈",
+   "img": "item/2026/3/4686380391460320239.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C1787C",
+   "white": 0.66,
+   "grey": 0.082
+  },
+  {
+   "opt": "019",
+   "barcode": "8800303335159",
+   "alt": "[단품] 00 듀",
+   "img": "item/2026/3/311617587007938165.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EDC1B4",
+   "white": 0.663,
+   "grey": 0.128
+  },
+  {
+   "opt": "001",
+   "barcode": "8809871382152",
+   "alt": "[단품] 01 베이브",
+   "img": "item/2026/3/8562487765859429837.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#DB9992",
+   "white": 0.663,
+   "grey": 0.095
+  },
+  {
+   "opt": "006",
+   "barcode": "8809871382183",
+   "alt": "[단품] 04 페어리",
+   "img": "item/2026/3/1246521879593796491.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EE8BA9",
+   "white": 0.666,
+   "grey": 0.055
+  },
+  {
+   "opt": "009",
+   "barcode": "8809871382251",
+   "alt": "[단품] 07 솔 피치",
+   "img": "item/2026/3/6969848523578874342.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#EA967E",
+   "white": 0.649,
+   "grey": 0.064
+  },
+  {
+   "opt": "010",
+   "barcode": "8809871382268",
+   "alt": "[단품] 08 선릿",
+   "img": "item/2026/3/5020446113013071453.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#E47B70",
+   "white": 0.65,
+   "grey": 0.064
+  },
+  {
+   "opt": "012",
+   "barcode": "8800303335029",
+   "alt": "[단품] 10 폴 인",
+   "img": "item/2026/3/281336939012739280.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D27B78",
+   "white": 0.656,
+   "grey": 0.063
+  },
+  {
+   "opt": "017",
+   "barcode": "8800303335043",
+   "alt": "[단품] 12 듀 그레이프",
+   "img": "item/2026/3/313330743598560140.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#CA7D8D",
+   "white": 0.658,
+   "grey": 0.045
+  },
+  {
+   "opt": "018",
+   "barcode": "8800303335050",
+   "alt": "[단품] 13 멀롯",
+   "img": "item/2026/3/1153366936813575418.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#AD576B",
+   "white": 0.656,
+   "grey": 0.059
+  }
+ ]
+}

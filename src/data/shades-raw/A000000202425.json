@@ -1,0 +1,127 @@
+{
+ "goodsNo": "A000000202425",
+ "collected_at": "2026-11-17T04:57:17.273Z",
+ "options": [
+  {
+   "opt": "023",
+   "barcode": "8800283692174",
+   "alt": "[NEW] 220호 선데이즈 5g",
+   "img": "item/2026/4/2846274318453835633.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#200E0E",
+   "white": 0.002,
+   "grey": 0.629
+  },
+  {
+   "opt": "025",
+   "barcode": "8800283702866",
+   "alt": "[NEW] 420호 앰버크림 5g",
+   "img": "item/2026/7/4610790379004047.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#1A0E0D",
+   "white": 0.004,
+   "grey": 0.636
+  },
+  {
+   "opt": "013",
+   "barcode": "8800283645491",
+   "alt": "134호 핑크헤이즈 5g",
+   "img": "item/2025/7/8326295950990002776.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D79696",
+   "white": 0.646,
+   "grey": 0.027
+  },
+  {
+   "opt": "014",
+   "barcode": "8800283645439",
+   "alt": "435호 팜파스 5g",
+   "img": "item/2025/9/9194174087216506346.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#200B0A",
+   "white": 0.002,
+   "grey": 0.629
+  },
+  {
+   "opt": "015",
+   "barcode": "8800283645446",
+   "alt": "499호 로지 스웨이드 5g",
+   "img": "item/2025/9/3711650796694116352.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#100707",
+   "white": 0.002,
+   "grey": 0.632
+  },
+  {
+   "opt": "016",
+   "barcode": "8800283645453",
+   "alt": "187호 섹슈얼 초콜릿 5g",
+   "img": "item/2025/9/5629446709067564143.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#160A0D",
+   "white": 0.002,
+   "grey": 0.63
+  },
+  {
+   "opt": "017",
+   "barcode": "8800283645460",
+   "alt": "426호 얼그레이 5g",
+   "img": "item/2025/9/2839866807595358822.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#20100F",
+   "white": 0.003,
+   "grey": 0.63
+  },
+  {
+   "opt": "018",
+   "barcode": "8800283645477",
+   "alt": "145호 포에버 영 5g",
+   "img": "item/2025/9/7820737573314746684.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#1D090B",
+   "white": 0.002,
+   "grey": 0.629
+  },
+  {
+   "opt": "019",
+   "barcode": "8800283645484",
+   "alt": "293호 비포 선셋 5g",
+   "img": "item/2025/9/2539835481542511670.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#180909",
+   "white": 0.002,
+   "grey": 0.63
+  },
+  {
+   "opt": "020",
+   "barcode": "8800283645507",
+   "alt": "176호 체리 플럼 5g",
+   "img": "item/2025/9/1546934706248141224.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#180A0D",
+   "white": 0.002,
+   "grey": 0.629
+  },
+  {
+   "opt": "024",
+   "barcode": "8800283694673",
+   "alt": "[NEW] 323호  체리온탑 5g",
+   "img": "item/2026/4/688584577334159234.png",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#1A0709",
+   "white": 0.002,
+   "grey": 0.629
+  }
+ ]
+}

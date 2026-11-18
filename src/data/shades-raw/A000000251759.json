@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000251759",
+ "collected_at": "2026-11-18T00:58:51.635Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "4973167019535",
+   "alt": "CP01 로즈 블러쉬",
+   "img": "item/2026/4/3885693024831070303.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AF5952",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "002",
+   "barcode": "4973167019542",
+   "alt": "CP02 베일 핑크",
+   "img": "item/2026/4/6687551411817471612.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DB7573",
+   "white": 0,
+   "grey": 0
+  },
+  {
+   "opt": "004",
+   "barcode": "4973167050996",
+   "alt": "[NEW] CP04 애프리콧 레드",
+   "img": "item/2026/8/8669394352559953402.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#D64544",
+   "white": 0,
+   "grey": 0.003
+  },
+  {
+   "opt": "005",
+   "barcode": "4973167051009",
+   "alt": "[NEW] CP05 더스티 모브",
+   "img": "item/2026/8/1505292479472761930.jpg",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#9A5047",
+   "white": 0.002,
+   "grey": 0.007
+  },
+  {
+   "opt": "003",
+   "barcode": "4973167019559",
+   "alt": "CP03 코랄 워터",
+   "img": "item/2026/4/5419398168914335071.jpg",
+   "chip": true,
+   "soldOut": true,
+   "hex": "#D47060",
+   "white": 0,
+   "grey": 0
+  }
+ ]
+}

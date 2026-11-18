@@ -1,0 +1,61 @@
+{
+ "goodsNo": "A000000245673",
+ "collected_at": "2026-11-17T04:59:51.856Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8800353600429",
+   "alt": "01 웜누디 21",
+   "img": "item/2026/2/765832376179960090.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#E2A799",
+   "white": 0.659,
+   "grey": 0.015
+  },
+  {
+   "opt": "002",
+   "barcode": "8800353600436",
+   "alt": "02 웜누디 23",
+   "img": "item/2026/2/359591177925276813.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#C98F84",
+   "white": 0.624,
+   "grey": 0.02
+  },
+  {
+   "opt": "003",
+   "barcode": "8800353600443",
+   "alt": "03 쿨누디 21",
+   "img": "item/2026/2/6931796742686568866.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#DA9FA3",
+   "white": 0.695,
+   "grey": 0.017
+  },
+  {
+   "opt": "004",
+   "barcode": "8800353600450",
+   "alt": "04 쿨누디 23",
+   "img": "item/2026/2/139737806796026388.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#CA8C90",
+   "white": 0.727,
+   "grey": 0.017
+  },
+  {
+   "opt": "005",
+   "barcode": "8800353600467",
+   "alt": "05 시멘트",
+   "img": "item/2026/2/3257469729892763825.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#AD918A",
+   "white": 0.656,
+   "grey": 0.113
+  }
+ ]
+}

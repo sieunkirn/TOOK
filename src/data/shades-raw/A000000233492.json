@@ -1,0 +1,72 @@
+{
+ "goodsNo": "A000000233492",
+ "collected_at": "2026-11-17T05:05:46.347Z",
+ "options": [
+  {
+   "opt": "001",
+   "barcode": "8806076018770",
+   "alt": "01 러브그로스",
+   "img": "item/2025/8/7845158893047460780.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.905
+  },
+  {
+   "opt": "006",
+   "barcode": "8806076018787",
+   "alt": "02 폴링브라운",
+   "img": "item/2025/8/2424431166830678914.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.904
+  },
+  {
+   "opt": "007",
+   "barcode": "8806076018794",
+   "alt": "03 솔티드피치",
+   "img": "item/2025/8/321465938132409879.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.904
+  },
+  {
+   "opt": "008",
+   "barcode": "8806076018800",
+   "alt": "04 체리바이트",
+   "img": "item/2025/8/9174976978227876607.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.904
+  },
+  {
+   "opt": "009",
+   "barcode": "8806076018817",
+   "alt": "05 베어바닐라",
+   "img": "item/2025/8/4537686269736257103.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0.001,
+   "grey": 0.904
+  },
+  {
+   "opt": "010",
+   "barcode": "8806076018824",
+   "alt": "06 모브라떼",
+   "img": "item/2025/8/4983685726389131259.png",
+   "chip": true,
+   "soldOut": false,
+   "hex": "#000000",
+   "white": 0,
+   "grey": 0.903
+  }
+ ]
+}
