@@ -191,6 +191,9 @@ export function parseMessage(message, brands = []) {
   if (has(text, ['비슷', '유사', '닮은', '같은 색', 'similar']) && !has(text, ['입술색', '입술 색', '내 입술']) && !namedColor) c.similar = true;
   if (has(text, ['밝은', '연한', '라이트', '가벼운 색'])) c.lightness = 'lighter';
   else if (has(text, ['어두운', '진한', '딥', '다크'])) c.lightness = 'darker';
+  // 진하기 숫자 (2026-11-19, 단계형 도우미의 진하기 바): "연한(진하기 20)" → 0~100. 숫자가 있으면 '연한/진한'은 그 설명일 뿐이다
+  const depth = text.match(/진하기\s*(\d{1,3})/);
+  if (depth) { c.depth = Math.min(100, Number(depth[1])); delete c.lightness; }
   parseBrandWords(text, c, brands);
   parseOccasionWords(text, c);
   parseFollowUpWords(text, c);

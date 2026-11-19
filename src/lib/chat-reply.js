@@ -165,6 +165,9 @@ function compareLines(items) {
 // 추천 뒤 빠른 답장 (2026-11-11 다시 짬): 손님이 다음에 하고 싶은 '방향 바꾸기'를 짧은 말로, 최대 4개.
 //  ① 색 방향(기준 색이 있을 때만: 밝게 ↔ 진하게) ② 제형 바꾸기(지금 많은 쪽의 반대) ③ 가격 낮추기(가격 조건이 없을 때)
 //  ④ 다른 거 더 보기(더 있으면) 또는 1번·2번 비교. 자리가 남으면 1번 자세히. 모두 규칙 챗봇이 알아듣는 말인지 확인했다
+// 제품 비교 (2026-11-19 사용자 요청 '비교 기능은 일단 빼고'): false 면 빠른 답장에 비교를 넣지 않고, 비교를 물으면 하나씩 자세히 보자고 답한다 (chat.js)
+export const COMPARE_ON = false;
+
 export function resultSuggestions(products, q, hasMore, hasRef = false) {
   if (!products.length) return startSuggestions();
   const glossy = q.finish === 'glossy' || products.filter((p) => p.finish === 'glossy').length * 2 > products.length;
@@ -173,7 +176,7 @@ export function resultSuggestions(products, q, hasMore, hasRef = false) {
   out.push(glossy ? L('보송한 매트로', 'Switch to matte') : L('촉촉한 글로시로', 'Switch to glossy'));
   if (!q.maxPrice && !q.minPrice && !q.price) out.push(L('더 저렴한 걸로', 'Something cheaper'));
   if (hasMore) out.push(L('다른 거 더 보여 줘', 'Show more'));
-  else if (products.length >= 2) out.push(L('1번이랑 2번 비교', 'Compare the first and second'));
+  else if (products.length >= 2) out.push(COMPARE_ON ? L('1번이랑 2번 비교', 'Compare the first and second') : L('그중에 제일 싼 거는?', 'Which is the cheapest of those?'));
   if (out.length < 4) out.push(L('1번 자세히', 'Tell me more about the first one'));
   return out.slice(0, QUICK_REPLY_MAX);
 }

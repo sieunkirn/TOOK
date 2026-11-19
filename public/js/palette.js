@@ -31,6 +31,8 @@ import { mapPoint } from './lip-view.js';
 import { REDUCE_MOTION as reduce } from './motion.js';
 import { markSvg } from './brand.js';
 import { fitStage, toStage } from './ui-stage.js';
+import { createIntro } from './fc-intro.js'; // 거울 첫 화면 안내 (길 세 개, 2026-11-19)
+import { createTakeaway } from './takeaway.js'; // 가져가기 (진입 흐름의 마지막 화면, 2026-11-19)
 
 const RECOMMEND_COUNT = 6; // 고른 색과 비슷한 제품을 몇 개 보여 줄지
 const stage = $('stage');
@@ -273,20 +275,17 @@ function frame(now) {
   ctx.clearRect(0, 0, 900, 1440 - WHEEL_TOP);
   if (alpha > 0.002) {
     const cy = G.cy - WHEEL_TOP;
-    // 원형 그래프: 28칸을 틈(G.gap°)을 두고 한 칸씩. 다이얼이 돌면(rot) 칸이 모두 같이 돈다. 화면에 보이는 위쪽(±80°)만 그린다
+    // 원형 링 (GP-홈화면 Figma 26:36, 2026-11-19): 칸 사이 틈 없이 이어진 그라데이션 링. 색은 28칸 색을 칸 가운데마다 놓고 부드럽게 잇는다
+    // (손잡이 아래 = 고른 칸 색 그대로). 다이얼이 돌면(rot) 그라데이션이 같이 돈다
     ctx.globalAlpha = alpha;
-    for (let s = 0; s < SEGS; s++) {
-      const rel = mod(s * SEG + rot + 180, 360) - 180; // 위(손잡이) 기준 칸 가운데 각도
-      if (Math.abs(rel) > 80) continue;
-      const a0 = rad(G.ind + rel - SEG / 2 + G.gap / 2);
-      const a1 = rad(G.ind + rel + SEG / 2 - G.gap / 2);
-      ctx.fillStyle = segHex(s);
-      ctx.beginPath();
-      ctx.arc(G.cx, cy, G.ro, a0, a1);
-      ctx.arc(G.cx, cy, G.ri, a1, a0, true);
-      ctx.closePath();
-      ctx.fill();
-    }
+    const ring = ctx.createConicGradient(rad(G.ind + rot), G.cx, cy); // 0 = 칸 0 의 가운데
+    for (let s = 0; s < SEGS; s++) ring.addColorStop(s / SEGS, segHex(s));
+    ring.addColorStop(1, segHex(0));
+    ctx.fillStyle = ring;
+    ctx.beginPath();
+    ctx.arc(G.cx, cy, G.ro, 0, Math.PI * 2);
+    ctx.arc(G.cx, cy, G.ri, Math.PI * 2, 0, true);
+    ctx.fill('evenodd');
     // 흰 점(눈금)은 손잡이처럼 제자리. 그 위를 링 안 검정 반원이 덮어 아래로 갈수록 사라진다 (Figma 와 같은 겹침 순서)
     ctx.fillStyle = '#fff';
     for (let k = -G.dot.n; k <= G.dot.n; k++) {
@@ -457,7 +456,7 @@ function spinTo(to, ms = 320, live = true) {
 }
 stage.addEventListener('pointerdown', (e) => {
   if (drag || mode !== 'arc' || (e.pointerType === 'mouse' && e.button !== 0)) return;
-  if (e.target.closest('button, a, .fc-swatches, .nt')) return; // .nt = NFC 태그 시트 (위에 떠 있는 동안 다이얼은 안 돈다)
+  if (e.target.closest('button, a, .fc-swatches, .nt, .fc-intro')) return; // .nt = NFC 태그 시트 (위에 떠 있는 동안 다이얼은 안 돈다), .fc-intro = 첫 화면 안내
   const p = toStage(stage, e);
   if (p.y < DRAG_ZONE[0] || p.y > DRAG_ZONE[1]) return;
   e.preventDefault();
@@ -520,12 +519,15 @@ wheel.addEventListener('keydown', (e) => {
 const faceSec = document.querySelector('.fc-face');
 const camArea = document.querySelector('.fc-camarea');
 const viewEl = $('view');
-const HOME = [248, 356, 654, 841]; // 얼굴이 없을 때 괄호 네 개가 이루는 네모 (x0, y0, x1, y1, 원본 4번 자리)
+// 얼굴이 없을 때 괄호 네 개가 이루는 네모 (x0, y0, x1, y1). GP-홈화면 Figma 26:24 (2026-11-19): 괄호 선 가운데 기준 x 251.08~651.08, y 359.32~838.32
+const HOME = [251.08, 359.32, 651.08, 838.32];
+// 가이드 그림(face-guide.svg 432×521.693) 안에서 괄호 네모가 있는 자리 (그림 좌표)
+const GUIDE_BOX = { x: 16, y: 26.306, w: 400, h: 479 };
 // 괄호가 다닐 수 있는 화면 범위 (카메라가 화면 꽉 차므로 제목 아래 ~ 색 동그라미 위, 2026-11-17). 추천 결과에서는 시트 위 카메라 창 안
 // 2026-11-18 GP-홈화면: 왼쪽 세로 메뉴(x ~90)·'내 톤으로 추천받기'(y ~294) 를 비켜서. recs 아래 = 가운데 버튼(y 652~) 위
 const TRACK_AREA = { arc: [104, 304, 876, 900], recs: [104, 304, 876, 620] };
 const MIN_BOX = [200, 236]; // 괄호(66×66)끼리 겹치지 않는 최소 크기
-const brs = ['tl', 'tr', 'bl', 'br'].map((k) => faceSec.querySelector('.fc-br-' + k));
+const guideImg = $('fc-guide-img'); // 괄호+타원 격자 그림 한 장 (괄호 네모가 fb 에 맞게 옮기고 늘린다)
 const fb = HOME.slice(); // 지금 괄호 네모
 let lastGoal = null;
 let lastSeen = 0;
@@ -581,11 +583,10 @@ function shiftFor() {
 }
 function placeBrackets() {
   const [x0, y0, x1, y1] = fb;
-  const at = (el, x, y) => { el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`; };
-  at(brs[0], x0 - HOME[0], y0 - HOME[1]);
-  at(brs[1], x1 - HOME[2], y0 - HOME[1]);
-  at(brs[2], x0 - HOME[0], y1 - HOME[3]);
-  at(brs[3], x1 - HOME[2], y1 - HOME[3]);
+  // transform-origin = 그림 속 괄호 네모 왼쪽 위 (CSS). 그 점을 (x0, y0) 로 옮기고 네모 크기에 맞게 늘린다
+  const sx = (x1 - x0) / GUIDE_BOX.w;
+  const sy = (y1 - y0) / GUIDE_BOX.h;
+  guideImg.style.transform = `translate(${(x0 - HOME[0]).toFixed(1)}px, ${(y0 - HOME[1]).toFixed(1)}px) scale(${sx.toFixed(4)}, ${sy.toFixed(4)})`;
 }
 function trackFace(now) {
   let goal = faceGoal();
@@ -674,10 +675,17 @@ async function loadRecs() {
   recStatus.textContent = body.products.length ? tr('fc.found', { n: body.products.length }) : tr('fc.none');
   showDots(body.products);
   recList.scrollTop = 0;
-  recList.replaceChildren(...body.products.map((product) => tryOnCard(product, tryProduct)));
+  recList.replaceChildren(...body.products.map((product) => tryOnCard(product, tryProduct, { onTake: takeIt })));
 }
 // 추천 카드: '입술에 발라보기' · '챗봇에 담기' (담은 제품은 오른쪽 아래 챗봇 버튼으로 이어서 물어본다)
 // '입술에 발라보기': 그 제품 색·제형을 그대로 입힌다
+// 가져가기: 고른 립(호수)을 입술에 바른 채로 매장 재고·폰 QR 시트를 띄운다
+let takeaway = null;
+function takeIt(p) {
+  takeaway ||= createTakeaway({ stage });
+  tryProduct(p, { quiet: true });
+  takeaway.show(p);
+}
 function tryProduct(p, { quiet = false } = {}) { // quiet: 아래 알림 없이 (NFC 시트는 입술 색이 바뀌는 것으로 충분하고, 알림이 시트 버튼을 가린다)
   sel.exact = p.color_hex;
   if (p.finish) setTexture(p.finish === 'velvet' ? 'matte' : p.finish); // 제품 제형 → 가장 가까운 텍스처
@@ -706,9 +714,9 @@ function wearProduct(p, kind = 'nfc') {
   recSeq++; // 찾는 중이던 추천은 버리고 이 제품 카드를 보여 준다
   want = shown = chosen();
   setMode('recs');
-  recStatus.textContent = tr(kind === 'barcode' ? 'pal.barcodeRead' : 'pal.nfcRead');
+  recStatus.textContent = tr(kind === 'barcode' ? 'pal.barcodeRead' : kind === 'chat' ? 'pal.chatRead' : 'pal.nfcRead');
   showDots([p]);
-  recList.replaceChildren(tryOnCard(p, tryProduct));
+  recList.replaceChildren(tryOnCard(p, tryProduct, { onTake: takeIt }));
 }
 // NFC 태그 시트 (세 번째 창, js/nfc-window.js, 2026-11-19): 메뉴 버튼 없이 리더기가 태그를 읽으면 그 제품 색을 바로 입술에 바르고,
 // 아래(다이얼 자리)에 시트를 올려 실제 호수 줄을 보여 준다(누를 때마다 입술 색이 바뀜). 얼굴은 가리지 않는다.
@@ -725,8 +733,10 @@ const nfcWin = createNfcWindow({
   },
   onSimilar: () => { colorChanged(); setMode('recs'); },
   onAsk: (p) => openChat({ base: lineOf(p) }),
+  onTake: (p) => takeIt(p),
 });
-const tagToWindow = (code) => nfcWin.show(code);
+let intro = { close() {} }; // 거울 첫 화면 안내 (아래에서 만든다). 태그하면 닫는다
+const tagToWindow = (code) => { intro.close(); nfcWin.show(code); };
 const lineOf = (p) => p.line || p.id; // 호수 상품(OY-…-01)이면 그 제품 줄 (챗봇 기준 제품)
 listenNfc(tagToWindow);
 // 홈에서 태그하고 넘어온 경우 (home.js 가 took.pendingTag 에 남긴 번호): 들어오자마자 NFC 창에서 그 제품을 보여 준다
@@ -734,6 +744,18 @@ listenNfc(tagToWindow);
   let pending = null;
   try { pending = sessionStorage.getItem('took.pendingTag'); sessionStorage.removeItem('took.pendingTag'); } catch { /* 저장 불가 환경 */ }
   if (pending) tagToWindow(pending);
+  // 거울 첫 화면 안내: 홈에서 태그하고 넘어왔으면(바로 NFC 창) 띄우지 않는다
+  intro = createIntro({
+    stage,
+    skip: !!pending,
+    onChat: () => chatBtn.click(),
+    onDial: () => { // 다이얼 손잡이를 몇 번 반짝여 어디를 돌리는지 보여 준다
+      stage.classList.remove('fc-dial-hint');
+      void stage.offsetWidth;
+      stage.classList.add('fc-dial-hint');
+      setTimeout(() => stage.classList.remove('fc-dial-hint'), 2600);
+    },
+  });
 }
 // 바코드 (2026-11-18): 입술 카메라 영상을 그대로 써서 상품 바코드(EAN·UPC)를 천천히 계속 찾는다 (카메라를 새로 열지 않음).
 // 카메라가 켜져 있을 때만, 화면이 보이고 챗봇 창이 닫혀 있을 때만 읽는다 (챗봇 창은 자기 '바코드 비추기'로 읽는다).
@@ -751,5 +773,10 @@ drawTex();
 tintHandle();
 setMode(new URLSearchParams(location.search).get('mode'), { instant: true }); // 화면 확인용 ?mode=recs
 toLips();
+// 챗봇 빠른 답장 '입술에 발라 보기' (2026-11-19): 팔레트 위 챗봇 창은 window.tookWear(제품)를 부르고(창을 닫고 바로 바름),
+// 전체 화면 챗봇은 palette.html?wear=제품ID 로 온다
+window.tookWear = (p) => { if (!p?.color_hex) return; closeChat(); wearProduct(p, 'chat'); };
+const wearId = new URLSearchParams(location.search).get('wear');
+if (wearId) api('api/products/' + encodeURIComponent(wearId)).then((r) => { if (r?.ok && r.body.product?.color_hex) wearProduct(r.body.product, 'chat'); }).catch(() => {});
 // 자동 테스트·화면 확인용
 window.tookFind = { setMode, spinTo, setTexture, sel, chosen, FAMILIES, SEG, rot: () => rot, segHex, texPos: () => texPos };

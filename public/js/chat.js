@@ -61,7 +61,9 @@ export async function send(text) {
     } else {
       state.focus = products.map((p) => p.id).filter((id) => state.list.some((x) => x.id === id));
     }
-    state.messages.push({ role: 'bot', kind: body.kind || null, text: body.reply, suggestions: body.suggestions || [], products });
+    // conditions·total·unsure: 빠른 답장을 상황별로 고를 때 쓴다 (js/chat-quick.js, 2026-11-19)
+    state.messages.push({ role: 'bot', kind: body.kind || null, text: body.reply, suggestions: body.suggestions || [], products,
+      conditions: body.conditions || [], total: body.total ?? null, unsure: !!body.unsure });
     speaker.speak(spokenReply(body));
     if (body.action?.type === 'setBase') {
       state.baseId = body.action.id;
@@ -198,10 +200,10 @@ async function picksHandoff() {
   state.messages.push({
     role: 'bot', picks: key, products,
     text: C(`담아 오신 제품 ${products.length}개예요. 이 제품들에 대해 궁금한 걸 물어보세요.`, `Here are the ${products.length} products you added. Ask me anything about them.`)
-      + (many ? C(' 번호로 비교하거나 가격을 견줘 볼 수도 있어요.', ' You can compare them by number or check which is cheapest.') : ''),
+      + (many ? C(' 번호로 자세히 묻거나 제일 싼 걸 찾아볼 수도 있어요.', ' Ask about one by number, or find the cheapest.') : ''), // 비교는 2026-11-19 뺐다
     suggestions: many
       // '…기준으로 골라 줘' = 그 제품을 기준 제품으로 (그다음 '비슷한 색'·'더 저렴한 거'가 그 제품 기준). 영어 엔진은 아직 못 알아들어 영어에선 뺀다
-      ? C(['첫 번째 거 자세히 알려 줘', '첫 번째랑 두 번째 비교해 줘', '그중에 제일 싼 거는?', '첫 번째 거 기준으로 골라 줘'], ['Tell me more about the first one', 'Compare the first and second', 'Which is the cheapest of those?'])
+      ? C(['첫 번째 거 자세히 알려 줘', '두 번째 거 자세히 알려 줘', '그중에 제일 싼 거는?', '첫 번째 거 기준으로 골라 줘'], ['Tell me more about the first one', 'Tell me more about the second one', 'Which is the cheapest of those?'])
       : C(['첫 번째 거 자세히 알려 줘', '첫 번째 거 기준으로 골라 줘', '이거보다 저렴한 거'], ['Tell me more about the first one', 'Something cheaper']),
   });
   save();

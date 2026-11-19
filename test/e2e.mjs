@@ -244,7 +244,7 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
       ['/', ['#stage']],
       ['/palette.html', ['.fc-camarea', '.fc-wheel', '#fc-swatches', '#fc-sbtn', '.fc-logo']],
       // 대화가 없으면 시작 화면(예시 질문·입력창·키보드, 2026-11-17): 대화 칸은 첫 질문 뒤에 보인다. 마이크는 2026-11-15 뺐다
-      ['/chat.html', ['#cs-top', '#chat-input', '#chat-send', '#tts', '.tkb']],
+      ['/chat.html', ['#cs-top', '#chat-input', '#chat-send', '#cm-menu']],
       ['/shades.html', ['#sh-page']],
     ]) {
       await pg.goto(BASE + path);
@@ -273,43 +273,49 @@ await step('세로 키오스크: 홈/팔레트/챗봇/호수 안내가 스크롤
   await pg.close();
 });
 
-// 챗봇 시작 화면 (2026-11-17, 아멜리 HEVA 시작 화면 구성): js/chat-start.js
-await step('챗봇 시작 화면: 예시 질문이 바뀌고, 누르면 입력창에 써 넣기만 → 고쳐서 보내면 대화 화면 / 키보드는 항상', async () => {
+// 챗봇 시작 화면 (2026-11-19): '답하며 고르기' 단계형이 기본 (js/chat-start.js START_GUIDE, js/chat-guide.js)
+await step('챗봇 시작 화면: 단계형(자리→질감 카드→진하기·가격 슬라이더)으로 고르면 조건 문장으로 대화 시작 / 키보드는 입력창을 누를 때만 / 빠른 답장 줄·밑줄 단어', async () => {
   const pg = await ctx.newPage();
   watch(pg, 'chat-start');
   await pg.setViewportSize(KIOSK);
   await openFresh(pg, '/chat.html');
   assert.ok(await pg.evaluate(() => document.body.classList.contains('cs-on')), '대화가 없으면 시작 화면');
-  assert.ok(await pg.locator('.cs-slide').count() >= 10);
+  assert.ok(await pg.locator('.tkb').isHidden(), '화면 키보드는 평소 닫혀 있다');
   assert.ok(await pg.locator('#chat-send').isDisabled(), '글자가 없으면 보내기 꺼짐');
-  assert.ok(await pg.locator('.tkb').isVisible(), '시작 화면도 키보드를 항상 연다');
-  const first = await pg.locator('.cs-slide.is-cur').textContent();
-  await pg.waitForFunction((t) => document.querySelector('.cs-slide.is-cur').textContent !== t, first, { timeout: 4500 });
-  // 화면 키보드로 쓰면 보내기가 켜지고, 다 지우면 다시 꺼진다
+  // 직접 입력: 입력창을 누르면 키보드가 열리고, 쓰면 보내기가 켜지고, 다 지우면 꺼진다
   await pg.click('#chat-input');
+  assert.ok(await pg.locator('.tkb').isVisible(), '입력창을 누르면 키보드가 열린다');
   await pg.click('.tkb-key[data-ch="ㄷ"]');
-  assert.ok(!(await pg.locator('#chat-send').isDisabled()), '글자가 있으면 보내기 켜짐');
+  assert.ok(!(await pg.locator('#chat-send').isDisabled()));
   await pg.click('.tkb-back');
   assert.ok(await pg.locator('#chat-send').isDisabled());
-  // 지금 보이는 예시를 읽고 바로 누른다 (3초마다 바뀌므로 한 번에) → 입력창에 써 넣기만 하고 보내지 않는다
-  const ex = await pg.evaluate(() => {
-    const s = document.querySelector('.cs-slide.is-cur');
-    const text = [...s.children].map((c) => c.textContent).join(' ');
-    document.querySelector('.cs-rot').click();
-    return text.trim();
-  });
-  await pg.waitForFunction((t) => document.getElementById('chat-input').value === t, ex, { timeout: 5000 });
-  assert.equal(await pg.locator('.chat-log .bubble.user').count(), 0, '예시를 눌러도 바로 보내지 않는다');
-  assert.ok(await pg.evaluate(() => document.body.classList.contains('cs-on')));
-  // 화면 키보드로 고친 뒤(끝에 한 글자 더) 보내기
-  await pg.click('.tkb-key[data-k="mode"]'); // 123 (숫자·기호)
-  await pg.click('.tkb-key[data-ch="?"]');
-  await pg.click('#chat-send');
+  // 단계형: 1 자리(면접) → 2 질감 카드(매트) → 3 진하기 슬라이더(연하게) → 4 가격 슬라이더(2만원 이하) → 찾기
+  await pg.click('#cs-top .gd-q'); // 키보드 밖을 누르면 닫힌다
+  assert.ok(await pg.locator('.tkb').isHidden(), '키보드 밖을 누르면 닫힌다');
+  await pg.click('#cs-top .gd-pill:has-text("면접")');
+  await pg.click('#cs-top .gd-card:has-text("매트")');
+  await pg.locator('#cs-top .gd-ticks button').first().click();
+  await pg.click('#cs-top .gd-cta');
+  await pg.locator('#cs-top .gd-ticks button').nth(1).click();
+  await pg.click('#cs-top .gd-cta');
   await pg.waitForSelector('.chat-log .bubble.user');
-  assert.equal((await pg.locator('.chat-log .bubble.user .btext').first().textContent()).trim(), ex + '?');
+  assert.equal((await pg.locator('.chat-log .bubble.user .btext').first().textContent()).trim(), '면접 때 바를 연한(진하기 0) 매트 립 20,000원 이하로 추천해 줘');
   assert.ok(await pg.evaluate(() => !document.body.classList.contains('cs-on')), '첫 질문 뒤에는 대화 화면');
-  assert.ok(await pg.locator('#cs-top').isHidden());
-  assert.ok(await pg.locator('.tkb').isVisible(), '대화 화면은 키보드를 항상 연다');
+  // 답변이 다 나오면: 입력창 위 고정 줄(맨 앞 '답하며 고르기') + 답변 속 밑줄 단어
+  await pg.waitForSelector('#qr-bar .qr-chip:not(.qr-guide)', { timeout: 10000 });
+  assert.equal(await pg.locator('#qr-bar .qr-chip').first().textContent(), '답하며 고르기');
+  assert.ok(await pg.locator('.chat-log .bt-link').count() > 0, '답변 속 제품 이름·색 계열에 밑줄');
+  assert.ok(await pg.locator('.tkb').isHidden(), '보낸 뒤 키보드는 닫혀 있다');
+  // 상황별 빠른 답장 (2026-11-19 1차, js/chat-quick.js): A 추천 직후 → '질감 바꾸기'(카드 한 단계) → 그 말로 이어 묻기
+  assert.ok(await pg.locator('#qr-bar .qr-pick:has-text("질감 바꾸기")').count(), 'A: 질감 바꾸기');
+  assert.ok(await pg.locator('#qr-bar .qr-act:has-text("입술에 발라 보기")').count(), 'A: 입술에 발라 보기');
+  await pg.click('#qr-bar .qr-pick:has-text("질감 바꾸기")');
+  await pg.click('.gd-mini .gd-card:has-text("벨벳")');
+  await pg.waitForFunction(() => [...document.querySelectorAll('.bubble.user .btext')].at(-1)?.textContent.trim() === '벨벳으로 바꿔 줘');
+  // B 제품 하나 자세히 → 이거랑 비슷한 색(그 제품을 기준 제품으로)
+  await pg.waitForSelector('#qr-bar .qr-chip:not(.qr-guide)', { timeout: 10000 });
+  await pg.click('#qr-bar .qr-say:has-text("다른 거 더 보여 줘"), #qr-bar .qr-say:has-text("그중에 제일 싼 거는?")');
+  await pg.waitForSelector('#qr-bar .qr-chip:not(.qr-guide)', { timeout: 10000 });
   await pg.close();
 });
 

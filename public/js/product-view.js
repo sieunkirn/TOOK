@@ -37,11 +37,12 @@ export function detailLink(product, from, text = t('card.detail')) {
 /** '입술에 발라보기' 버튼이 붙은 제품 카드. 누르면 onTry(제품) */
 // 그 옆 '챗봇에 담기'(2026-11-15): 담은 제품으로 챗봇과 이야기한다 (chat-picks.js · chat.js picksHandoff)
 // 카드 안에서 호수(옵션)를 바꾸면 '발라보기'·'챗봇에 담기'도 고른 호수로 한다
-export function tryOnCard(product, onTry) {
+export function tryOnCard(product, onTry, { onTake } = {}) { // onTake: 거울의 '가져가기' (2026-11-19)
   let current = product;
   const pick = pickButton(() => current);
   return productCard(product, {
-    extraActions: [el('button', { type: 'button', text: t('lip.tryOn'), onclick: () => onTry(current) }), pick],
+    extraActions: [el('button', { type: 'button', text: t('lip.tryOn'), onclick: () => onTry(current) }), pick,
+      onTake ? el('button', { type: 'button', class: 'take-btn', text: t('nw.take'), onclick: () => onTake(current) }) : null].filter(Boolean),
     onShade: (s) => { current = s; pick.sync(); },
   });
 }

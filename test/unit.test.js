@@ -160,8 +160,10 @@ test('대화: 이전 결과를 이어서 묻기 (그중 최저가 / 번호 / 비
 
   const cmp = answer({ message: '1번이랑 3번 비교해 줘', context: ctx });
   assert.deepEqual(cmp.products.map((p) => p.id), [first.products[0].id, first.products[2].id]);
-  assert.equal(cmp.kind, 'compare');
-  assert.match(cmp.reply, /가장 저렴한 건/);
+  // 비교 기능은 2026-11-19 뺐다 (COMPARE_ON=false): 두 제품을 보여 주고 하나씩 자세히 묻게 한다
+  assert.notEqual(cmp.kind, 'compare');
+  assert.match(cmp.reply, /비교를 잠시 쉬고/);
+  assert.ok(!cmp.suggestions.some((s) => s.includes('비교')), '빠른 답장에 비교 없음');
 
   const more = answer({ message: '더 보여 줘', context: ctx });
   assert.ok(more.products.length > 0 && !more.products.some((p) => ctx.shown.includes(p.id)));
@@ -569,4 +571,30 @@ test('챗봇: 제품 이름을 부르면 그 제품을 보여 주고, 조건이 
   assert.ok(!search.products.some((p) => p.shade_count));
   const generic = answer({ message: '벨벳 틴트' });
   assert.ok(!generic.products.some((p) => p.shade_count));
+});
+
+// 가져가기 화면의 QR (public/js/qr.js, 2026-11-19): 직접 만든 QR 을 @zxing/library 로 다시 읽어 원래 글과 같은지 (버전 1~6 전부)
+test('QR: 만든 QR 을 zxing 이 그대로 읽는다 (버전 1~6), 너무 길면 null', async () => {
+  const { createRequire } = await import('node:module');
+  const Z = createRequire(import.meta.url)('@zxing/library');
+  const { qrMatrix } = await import('../public/js/qr.js');
+  const decode = (m) => {
+    const S = 6, Q = 4, n = (m.length + Q * 2) * S;
+    const lum = new Uint8ClampedArray(n * n).fill(255);
+    m.forEach((row, y) => row.forEach((on, x) => {
+      if (!on) return;
+      for (let a = 0; a < S; a++) for (let b = 0; b < S; b++) lum[((y + Q) * S + a) * n + (x + Q) * S + b] = 0;
+    }));
+    return new Z.QRCodeReader().decode(new Z.BinaryBitmap(new Z.HybridBinarizer(new Z.RGBLuminanceSource(lum, n, n)))).getText();
+  };
+  const texts = ['hi', 'x'.repeat(30), 'y'.repeat(50), 'z'.repeat(75), 'w'.repeat(100), 'v'.repeat(134),
+    'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000120880'];
+  const versions = new Set();
+  for (const text of texts) {
+    const m = qrMatrix(text);
+    versions.add((m.length - 17) / 4);
+    assert.equal(decode(m), text);
+  }
+  assert.deepEqual([...versions].sort(), [1, 2, 3, 4, 5, 6]);
+  assert.equal(qrMatrix('a'.repeat(135)), null);
 });

@@ -22,8 +22,9 @@ const lineOf = (p) => p.line || p.id; // 호수 상품(OY-…-01)이면 그 제�
 /**
  * NFC 시트 만들기. stage = 팔레트 900×1440 무대.
  * onWear(p): 그 색을 입술에 바르기 · onSimilar(): 지금 색과 비슷한 립(거울 추천 제품) · onAsk(p): 챗봇에게 물어보기 · onOpen(): 시트가 올라올 때
+ * onTake(p): 가져가기 화면 (고른 호수, 2026-11-19 진입 흐름의 마지막 화면)
  */
-export function createNfcWindow({ stage, onWear, onSimilar, onAsk, onOpen }) {
+export function createNfcWindow({ stage, onWear, onSimilar, onAsk, onOpen, onTake }) {
   let shelf = (store.get(SHELF_KEY) || []).filter((p) => p && p.id && p.color_hex).slice(-SHELF_MAX);
   let current = null; // 태그한 제품
   let picked = null; // 입술에 바른 호수 (null = 대표 색)
@@ -48,7 +49,8 @@ export function createNfcWindow({ stage, onWear, onSimilar, onAsk, onOpen }) {
 
   const actions = el('div', { class: 'nt-actions' },
     el('button', { type: 'button', class: 'nt-btn', onclick: () => { api_.close(); onSimilar(); } }, t('nw.similar')),
-    el('button', { type: 'button', class: 'nt-btn nt-btn-pink', onclick: () => { const x = picked || current; api_.close(); onAsk(x); } }, t('nw.ask')));
+    el('button', { type: 'button', class: 'nt-btn', onclick: () => { const x = picked || current; api_.close(); onAsk(x); } }, t('nw.ask')),
+    onTake ? el('button', { type: 'button', class: 'nt-btn nt-btn-pink', onclick: () => { const x = picked || current; api_.close(); onTake(x); } }, t('nw.take')) : null);
 
   const unknown = el('div', { class: 'nt-unknown' },
     el('span', { class: 'nt-q', 'aria-hidden': 'true', text: '?' }),

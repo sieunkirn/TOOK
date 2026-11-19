@@ -4557,37 +4557,6 @@
     "name_en_source": "oliveyoung_global_auto"
   },
   {
-    "id": "OY-A000000225219",
-    "source": "oliveyoung",
-    "barcode": null,
-    "brand": "얼터너티브스테레오",
-    "name": "블러싱 펜던트",
-    "type": "립틴트",
-    "shade_name": null,
-    "color_options": null,
-    "color_hex": "#451F04",
-    "color_lab": {
-      "L": 16.77,
-      "a": 16.18,
-      "b": 23.28
-    },
-    "color_family": "burgundy",
-    "color_family_source": "estimated_from_color",
-    "finish": "matte",
-    "finish_source": "product_name",
-    "price": 6500,
-    "list_price": 6500,
-    "image_url": "images/lip-tints/A000000225219.png",
-    "description": "",
-    "url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000225219&dispCatNo=1000001000200060003",
-    "original_name": "얼터너티브스테레오 [뉴컬러출시] 얼터너티브스테레오 블러싱 펜던트",
-    "brand_en": "Alternativestereo",
-    "name_en": "Blushing Pendant (Glow/Velvet)",
-    "global_id": "GA260540045",
-    "url_en": "https://global.oliveyoung.com/product/detail?prdtNo=GA260540045",
-    "name_en_source": "oliveyoung_global_auto"
-  },
-  {
     "id": "OY-A000000107447",
     "source": "oliveyoung",
     "barcode": null,

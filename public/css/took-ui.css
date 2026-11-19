@@ -114,7 +114,7 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 .fc-sub { position: absolute; left: 0; right: 0; top: 205.7px; margin: 0; text-align: center; color: #fff;
   font-size: 20px; line-height: 26px; font-weight: 300; letter-spacing: 0; }
 
-/* 얼굴 자리: 카메라 칸 + 괄호 네 개 (66×66, 선 6). 2026-11-16 디자이너 의견: 화면에는 프레임만 — 원본의 타원·점 격자는 카메라 자리를 보려던 작업용 선이라 뺐다.
+/* 얼굴 자리: 카메라 칸 + 얼굴 가이드 그림 (2026-11-19 GP-홈화면 Figma: 흐린 괄호 + 타원 격자를 다시 넣었다. 예전 11-16 에는 괄호 네 개만).
    카메라 칸 = 괄호 네 개가 이루는 네모(x 248~654, y 356~841). 가장자리는 검정으로 부드럽게 사라져 모양(테두리)이 보이지 않는다 */
 .fc-face { position: absolute; inset: 0; pointer-events: none; }
 /* 카메라 칸 = 화면 전체 (2026-11-17 사용자 요청 "카메라는 화면 꽉 차게"). 예전: 괄호 네모(x 248~654, y 356~841) 안, 가장자리 페이드.
@@ -133,24 +133,13 @@ body.tui { max-width: none; width: 100%; color: #fff; }
 .tui-stage .fc-cam .placeholder { flex-direction: column; justify-content: flex-start; gap: 12px; padding: 470px 290px 0; border: 0; border-radius: 0; background: transparent;
   color: #fff; font-size: 16px; line-height: 1.5; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9); }
 .fc-cam .placeholder.loading .spinner { border-color: rgba(255, 255, 255, 0.3); border-top-color: #fff; }
-/* 옅은 그림자: 괄호가 밝은 카메라 영상(흰 벽·얼굴) 위로 갈 때도 보이게 (검정 바탕에서는 보이지 않는다) */
-.fc-br { position: absolute; width: 66px; height: 66px; box-sizing: border-box; border: 0 solid #fff; will-change: transform; filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.6)); }
-.fc-br-tl { left: 248px; top: 356px; border-top-width: 6px; border-left-width: 6px; border-top-left-radius: 30px; }
-.fc-br-tr { left: 588px; top: 356px; border-top-width: 6px; border-right-width: 6px; border-top-right-radius: 30px; }
-.fc-br-bl { left: 248px; top: 775px; border-bottom-width: 6px; border-left-width: 6px; border-bottom-left-radius: 30px; }
-.fc-br-br { left: 588px; top: 775px; border-bottom-width: 6px; border-right-width: 6px; border-bottom-right-radius: 30px; }
-/* 어두운 상태(4·10·11번)의 괄호 빛 번짐: 괄호보다 3.5px 넓힌 흰 선을 흐리게 (원본처럼 가까이는 밝고 멀리 빨리 사라짐) */
-.fc-br::before { content: ""; position: absolute; inset: -3.5px; border: 0 solid #fff; border-radius: inherit; filter: blur(5px); opacity: 0; transition: opacity .4s ease; }
-.fc-br-tl::before { inset: -9.5px -3.5px -3.5px -9.5px; border-top-width: 13px; border-left-width: 13px; border-top-left-radius: 33.5px; }
-.fc-br-tr::before { inset: -9.5px -9.5px -3.5px -3.5px; border-top-width: 13px; border-right-width: 13px; border-top-right-radius: 33.5px; }
-.fc-br-bl::before { inset: -3.5px -3.5px -9.5px -9.5px; border-bottom-width: 13px; border-left-width: 13px; border-bottom-left-radius: 33.5px; }
-.fc-br-br::before { inset: -3.5px -9.5px -9.5px -3.5px; border-bottom-width: 13px; border-right-width: 13px; border-bottom-right-radius: 33.5px; }
-.fc[data-dim="1"] .fc-br::before { opacity: 0.44; }
-/* 얼굴 트래킹 (js/palette.js): 얼굴을 찾으면 괄호가 얼굴 둘레로 따라가 붙고 빛이 또렷해진다. 찾는 중에는 제자리에서 숨 쉬듯 빛난다 */
-.fc[data-dim="1"] .fc-face.fc-tracking .fc-br::before { opacity: 0.85; }
-.fc[data-dim="1"] .fc-face:not(.fc-tracking) .fc-br::before { animation: fc-seek 2.4s ease-in-out infinite; }
-@keyframes fc-seek { 0%, 100% { opacity: 0.22; } 50% { opacity: 0.66; } }
-@media (prefers-reduced-motion: reduce) { .fc-face .fc-br::before { animation: none !important; } }
+/* 얼굴 가이드 (GP-홈화면 Figma 26:24, 2026-11-19 사용자 요청): 흐린 회색 모서리 괄호 + 타원 격자 그림 한 장 (images/gp-home/face-guide.svg 432×521.693).
+   Figma 자리 = left 235.08, top 333.01. transform-origin = 그림 속 괄호 네모 왼쪽 위(16, 26.306) → js/palette.js 가 얼굴 둘레로 옮기고 늘린다 */
+.fc-guide-img { position: absolute; left: 235.08px; top: 333.01px; width: 432px; height: 521.693px; max-width: none; transform-origin: 16px 26.306px; will-change: transform; pointer-events: none; }
+/* 얼굴 트래킹: 찾는 중에는 제자리에서 숨 쉬듯, 찾으면 또렷하게 */
+.fc-face:not(.fc-tracking) .fc-guide-img { animation: fc-seek 2.4s ease-in-out infinite; }
+@keyframes fc-seek { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .fc-face .fc-guide-img { animation: none !important; } }
 /* 카메라를 쓸 수 없을 때 안내 (카메라 칸 가운데) */
 .fc-camerr { position: absolute; left: 274px; top: 560px; width: 352px; text-align: center; pointer-events: auto; z-index: 2; }
 .fc-camerr .msg { border: 0; background: none; padding: 0; margin: 0 0 12px; color: rgba(255, 255, 255, 0.8); font-size: 15px; line-height: 1.45; }
@@ -361,3 +350,62 @@ html.enter-fx main.tui-stage, html main.tui-stage { animation: none; }
 .fc-camerr #guide { position: static !important; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; margin: 0; }
 .fc-guide { position: absolute; left: 254px; width: 392px; top: 788px; z-index: 2; margin: 0; text-align: center; font-size: 15px; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9); pointer-events: none; }
 .fc-guide:empty, .fc[data-mode="recs"] .fc-guide { display: none; }
+
+/* ---------- 거울 첫 화면 안내 (2026-11-19, js/fc-intro.js): 얼굴이 비친 채로 시작하는 길 세 개 (900×1440 무대 좌표) ----------
+   어두운 막 위에 제목 + 유리 카드 셋(제품 올리기 · 색 돌려 보기 · 추천받기) + '바로 둘러볼게요' */
+.fc-intro { position: absolute; inset: 0; z-index: 30; opacity: 0; transition: opacity .35s ease; }
+.fc-intro.on { opacity: 1; }
+.fc-intro.off { opacity: 0; pointer-events: none; }
+.fi-dim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.62); }
+.fi-box { position: absolute; left: 130px; top: 360px; width: 640px; display: flex; flex-direction: column; gap: 22px; pointer-events: none;
+  transform: translateY(16px); transition: transform .45s cubic-bezier(.3, 1.2, .5, 1); }
+.fc-intro.on .fi-box { transform: none; }
+.fi-box > * { pointer-events: auto; }
+.fi-title { margin: 0; text-align: center; color: #fff; font-size: 40px; line-height: 1.25; font-weight: 700; letter-spacing: -0.02em; }
+.fi-sub { margin: -10px 0 14px; text-align: center; color: rgba(255, 255, 255, 0.72); font-size: 21px; line-height: 1.4; }
+.tui .tui-stage .fi-card, .tui .tui-stage button.fi-card:hover:not(:disabled) {
+  position: relative; display: flex; align-items: center; gap: 22px; width: 100%; min-height: 128px; margin: 0; padding: 22px 28px; box-sizing: border-box;
+  text-align: left; color: #fff; border-radius: 30px; cursor: pointer;
+  background: rgba(255, 255, 255, 0.10); border: 1px solid rgba(255, 255, 255, 0.24); border-top-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16); }
+.tui .tui-stage .fi-card.fi-nfc { cursor: default; border-color: rgba(255, 120, 180, 0.55); box-shadow: 0 0 26px rgba(255, 60, 140, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.16); }
+.tui .tui-stage button.fi-card:active { transform: scale(.985); background: rgba(255, 255, 255, 0.16); }
+.fi-ico { flex: none; display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: #fff; }
+.fi-nfc .fi-ico { background: linear-gradient(135deg, #ff8cc0, #e8307a); }
+.fi-ico svg { width: 42px; height: 42px; }
+.fi-text { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.fi-text strong { font-size: 27px; line-height: 1.3; font-weight: 700; letter-spacing: -0.02em; }
+.fi-text span { font-size: 19px; line-height: 1.4; color: rgba(255, 255, 255, 0.72); }
+.fi-go { flex: none; width: 30px; height: 30px; color: rgba(255, 255, 255, 0.7); }
+/* 제품 올리기: 리더기 쪽으로 퍼지는 물결 (누르는 버튼이 아니라 안내) */
+.fi-wave { position: absolute; left: 66px; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 50%; border: 2px solid rgba(255, 140, 192, 0.8); pointer-events: none; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) { .fc-intro.on .fi-wave { animation: fi-wave 1.8s ease-out infinite; } }
+@keyframes fi-wave { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
+.tui .tui-stage button.fi-skip, .tui .tui-stage button.fi-skip:hover:not(:disabled) { align-self: center; min-height: 56px; margin: 6px 0 0; padding: 0 26px; border: 0; background: none;
+  color: rgba(255, 255, 255, 0.78); font-size: 21px; text-decoration: underline; text-underline-offset: 5px; box-shadow: none; }
+/* '색 돌려 보기'를 누르면 다이얼 손잡이가 몇 번 반짝인다 */
+@media (prefers-reduced-motion: no-preference) { .fc.fc-dial-hint .fc-handle { animation: fc-dial-hint .8s ease-in-out 3; } }
+@keyframes fc-dial-hint { 0%, 100% { filter: none; } 50% { filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.95)) brightness(1.25); } }
+
+/* ---------- 색 통일 (2026-11-20 사용자 요청 "팔레트 조절 바 빼고는 다 통일", README '색') ----------
+   핑크는 #FF007B 한 가지(눌림 #D60067), 그라데이션·빛 번짐·유리 테두리 없이 단색. 면 #1E1E21 · 선 #2E2E33.
+   그대로 두는 것: 다이얼(색 칸 canvas·유리 손잡이 .fc-handle), 질감 동그라미(.fc-sw, 실제 립 색의 질감 표현), 카메라 위·아래 어둡게(글자 읽히게), 왼쪽 세로 메뉴(Figma 원본) */
+/* 거울의 알약 버튼(내 톤으로 추천받기 · matte) */
+.fc-lang, .fc-match, .fc-tex,
+.tui .tui-stage button.fc-lang:hover:not(:disabled),
+.tui .tui-stage button.fc-match:hover:not(:disabled), .tui .tui-stage button.fc-tex:hover:not(:disabled),
+.tui .tui-stage button.fc-match:disabled {
+  background: #1e1e21; border: 1px solid #2e2e33; box-shadow: none; }
+.fc .fc-tex:active { box-shadow: none; background: #2a2a2e; }
+body.tui .chat-modal-close, body.tui .chat-modal-close:hover:not(:disabled) { background: #1e1e21; border: 1px solid #2e2e33; box-shadow: none; }
+/* 거울 첫 화면 안내 카드 */
+.tui .tui-stage .fi-card, .tui .tui-stage button.fi-card:hover:not(:disabled) {
+  background: #1e1e21; border: 1px solid #2e2e33; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
+.tui .tui-stage button.fi-card:active { background: #2a2a2e; }
+.tui .tui-stage .fi-card.fi-nfc { border-color: #ff007b; box-shadow: none; }
+.fi-nfc .fi-ico { background: #ff007b; }
+.fi-ico { background: #2a2a2e; }
+.fi-wave { border-color: #ff007b; }
+.fc.fc-dial-hint .fc-handle { animation: none; }
+@media (prefers-reduced-motion: no-preference) { .fc.fc-dial-hint .fc-handle { animation: fc-dial-hint-flat .8s ease-in-out 3; } }
+@keyframes fc-dial-hint-flat { 50% { opacity: .35; } }

@@ -9,19 +9,33 @@
 <meta name="referrer" content="no-referrer">
 <title data-i18n="chat.pageTitle">took(툭) - AI 뷰티 챗봇</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap"><!-- Figma GP · 추천 멘트 03: 제목 Inter Semi Bold, 나머지 Noto Sans KR -->
 <link rel="stylesheet" href="css/wireframe.css">
 <link rel="stylesheet" href="css/took-mood.css"><!-- TOOK_prototype 무드 (검정·분홍 빛, 2026-11-16) -->
-<link rel="stylesheet" href="css/chat-start.css"><!-- 대화 전 시작 화면 (아멜리 HEVA 시작 화면 구성, 2026-11-17) -->
+<link rel="stylesheet" href="css/chat-start.css">
+<link rel="stylesheet" href="css/chat-quick.css"><!-- 빠른 답장: 입력창 위 고정 줄·답하며 고르기(질감 카드·슬라이더)·답변 속 밑줄 단어 (2026-11-19) --><!-- 대화 전 시작 화면 (아멜리 HEVA 시작 화면 구성, 2026-11-17) -->
+<link rel="stylesheet" href="css/took-flat.css"><!-- 색 통일: 그라데이션·빛 번짐 없이 단색 (2026-11-20) -->
 <link rel="manifest" href="manifest.webmanifest">
 <script src="js/touch-calib.js"></script>
 <script src="js/fullscreen-keep.js"></script><!-- 전체화면 고정: 빠져도 다음 터치에서 다시 -->
 </head>
 <body class="tui-mood">
 <main class="fit chat-user">
+  <!-- 왼쪽 세로 메뉴 (2026-11-19 사용자 요청 "챗봇 화면을 거울 화면과 비슷한 무드로"): 거울 화면과 같은 유리 알약·같은 자리(x 28, y 604).
+       여기서는 손잡이가 음성(챗봇) 쪽. 스캔 = 거울로, 9점 = 거울의 추천 제품, 집 = 처음으로(저장값 지움, js/chat-start.js). 전체 화면 챗봇만 (모달 안에서는 거울 메뉴가 이미 있다) -->
+  <nav class="cm-menu" id="cm-menu" aria-label="메뉴" data-i18n-aria="fc.menu">
+    <span class="cm-pair" aria-hidden="true"></span>
+    <span class="cm-knob" aria-hidden="true"></span>
+    <a class="cm-mb cm-scan" href="palette.html" data-i18n-aria="chat.toMirror" aria-label="거울로 (컬러 찾기)"><svg viewBox="0 0 46.83 46.83" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14.66 18.75Q14.66 15.09 18.71 15.09"/><path d="M31.22 18.75Q31.22 15.09 27.17 15.09"/><path d="M14.66 28.08Q14.66 31.75 18.71 31.75"/><path d="M31.22 28.08Q31.22 31.75 27.17 31.75"/></g></svg></a>
+    <span class="cm-mb cm-voice" aria-current="page" role="img" data-i18n-aria="chat.here" aria-label="AI 뷰티 챗봇 (지금 화면)"><svg viewBox="0 0 46.83 46.83" aria-hidden="true" focusable="false"><g fill="currentColor"><rect x="21.27" y="16.68" width="3.37" height="13.48" rx="1.68"/><rect x="15.79" y="18.34" width="3.37" height="10.16" rx="1.68"/><rect x="26.75" y="18.34" width="3.37" height="10.16" rx="1.68"/><rect x="32.23" y="20.22" width="3.37" height="6.39" rx="1.68"/><ellipse cx="12.37" cy="23.42" rx="1.3" ry="1.82"/></g></svg></span>
+    <a class="cm-mb cm-grid" href="palette.html?mode=recs" data-i18n-aria="fc.sheet" aria-label="추천 제품 보기"><svg viewBox="0 0 54.93 54.93" aria-hidden="true" focusable="false"><g fill="currentColor"><circle cx="20.36" cy="19.49" r="2.09"/><circle cx="27.94" cy="19.49" r="2.09"/><circle cx="35.53" cy="19.49" r="2.09"/><circle cx="20.36" cy="27.46" r="2.09"/><circle cx="27.94" cy="27.46" r="2.09"/><circle cx="35.53" cy="27.46" r="2.09"/><circle cx="20.36" cy="35.44" r="2.09"/><circle cx="27.94" cy="35.44" r="2.09"/><circle cx="35.53" cy="35.44" r="2.09"/></g></svg></a>
+    <a class="cm-mb cm-home" id="cm-home" href="index.html" data-i18n-aria="nav.reset" aria-label="took(초기화)"><svg viewBox="0 0 54.93 54.93" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.99 26.89L27.46 18.99L36.94 26.89"/><path d="M20.62 24.88V35.94H34.31V24.88"/><path d="M24.83 35.94V29.62H30.1V35.94"/></g></svg></a>
+  </nav>
   <section class="area chat-shell">
     <div class="chat-head">
       <div>
-        <strong data-i18n="chat.title">took 뷰티 챗봇</strong>
+        <strong data-i18n="chat.title">Beauty Chat</strong>
+        <span class="chat-sub" data-i18n="chat.subtitle">나에게 어울리는 뷰티, 함께 찾아봐요</span>
       </div>
       <div class="row">
         <button type="button" id="tts" class="icon-btn" aria-pressed="true" aria-label="답변 소리로 읽어주기" title="답변 소리로 읽어주기" data-i18n-aria="chat.tts" data-i18n-title="chat.tts">
@@ -30,6 +44,8 @@
         <!-- 립 다시 바르기: 팔레트 거울 화면으로. 대화·섞은 색·바른 립은 그대로 둔다 (초기화 없음) -->
         <button type="button" id="chat-to-palette" onclick="location.href='palette.html'" data-i18n="chat.toPalette">립 다시 바르기</button>
       </div>
+      <!-- 뒤로 (2026-11-19 Figma 디자인, 전체 화면 챗봇만): 왼쪽 위 동그라미. 이전 화면으로, 없으면 팔레트(거울)로. 대화는 그대로 둔다 (js/chat-start.js) -->
+      <button type="button" id="chat-back" class="cs-back" aria-label="뒤로" title="뒤로" data-i18n-aria="chat.back" data-i18n-title="chat.back"><img src="images/chat/back.svg" width="28" height="28" alt=""></button>
     </div>
 
     <div id="base-chip" class="msg small hidden">
@@ -51,15 +67,17 @@
     </div>
 
     <!-- 입력: 아래 화면 터치 키보드로 쓰거나 답변 아래 빠른 답장 버튼을 누른다. 마이크(음성 질문)는 2026-11-15 뺐다 (합본 studio.html 에는 남아 있다) -->
+    <!-- 빠른 답장 (2026-11-19): 입력창 바로 위 고정 줄. 맨 앞 '답하며 고르기'(단계형 도우미) + 마지막 답변의 다음 질문 추천, 옆으로 밀어 더 보기 (js/chat-view.js) -->
+    <div id="qr-bar" class="qr-bar" role="group" aria-label="빠른 답장" data-i18n-aria="chat.quick" hidden></div>
     <form id="chat-form" class="chat-input voice-only no-mic" autocomplete="off">
       <label for="chat-input" class="hidden" data-i18n="chat.heard">들은 말</label>
       <input type="text" id="chat-input" readonly tabindex="-1" placeholder="아래 키보드로 입력하세요">
       <!-- 보내기: 글자가 있을 때만 켜진다 (화면 키보드의 '보내기'와 같은 동작) -->
       <button type="submit" id="chat-send" class="cs-send" disabled aria-label="보내기" title="보내기" data-i18n-aria="chat.send" data-i18n-title="chat.send">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M12.76 22q-.6 0-.87-.43a4.4 4.4 0 0 1-.45-1.07l-1.37-4.54q-.12-.43-.09-.69.04-.27.29-.53l8.77-9.46a.24.24 0 0 0 .08-.17.2.2 0 0 0-.07-.15.24.24 0 0 0-.16-.06q-.09-.01-.17.07L9.3 13.77q-.29.26-.55.29-.27.03-.68-.1l-4.64-1.41a4.2 4.2 0 0 1-1.02-.45Q2 11.84 2 11.24q0-.46.37-.8t.91-.54L18.06 4.24q.3-.11.56-.17.27-.07.48-.07.42 0 .66.24t.24.66q0 .23-.07.48-.06.26-.17.56l-5.67 14.77q-.25.56-.6.92-.35.37-.73.37"/></svg>
+        <img src="images/chat/send.svg" width="28" height="28" alt="">
       </button>
       <button type="button" id="scan-open" class="icon-btn narrow-only" aria-label="바코드로 제품 알아보기" title="바코드로 제품 알아보기" data-i18n-aria="chat.scanOpen" data-i18n-title="chat.scanOpen">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
+        <img src="images/chat/barcode.svg" width="28" height="28" alt="">
       </button>
     </form>
     <p id="nfc-hint" class="nfc-hint" aria-live="polite"></p>

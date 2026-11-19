@@ -11,13 +11,13 @@ import { has, MOODS, GENERIC_ACKS } from './chat-words.js';
 import { isEn, setEn, L, finL, won, nameOf, shortOf, josa, euro, ord } from './chat-lang.js';
 import { parseMessage, normalizeForChat } from './chat-parse.js';
 import { runSearch, relaxHint, buildEnv, friendlySummary, searchPart, phraseOf, phraseOfEn } from './chat-search.js';
-import { offTopicReply, hasalReply, openerFor, compareSummary, resultSuggestions, startSuggestions } from './chat-reply.js';
+import { offTopicReply, hasalReply, openerFor, compareSummary, resultSuggestions, startSuggestions, COMPARE_ON } from './chat-reply.js';
 
 export { PII_RE, CHAT_VOCAB } from './chat-words.js';
 export { josa } from './chat-lang.js';
 export { parseMessage, normalizeForChat, chatKeepWords, chatAliases, chatVocab } from './chat-parse.js';
 export { searchProducts } from './chat-search.js';
-export { compareSummary, resultSuggestions } from './chat-reply.js';
+export { compareSummary, resultSuggestions, COMPARE_ON } from './chat-reply.js';
 
 // 영어로 브랜드를 부르는 이름들: 글로벌 표기(brand_en) + 말소리 별칭 중 영어 (예: 롬앤 ← rom&nd, romand)
 function brandIndexEn(brands) {
@@ -106,6 +106,14 @@ function replyAboutShownProduct(turn) {
       const pair = items.length >= 2 ? items.slice(0, 2) : [items[0], { i: items[0].i === 0 ? 1 : 0, p: shown[items[0].i === 0 ? 1 : 0] }];
       if (!pair[1].p) return out({ reply: L('비교하려면 제품이 두 개 이상 있어야 해요.', 'I need at least two products to compare.') });
       const [a, b] = pair;
+      // 비교 기능을 쉬는 동안: 두 제품을 보여 주고 하나씩 자세히 묻게 한다
+      if (!COMPARE_ON) {
+        return out({
+          reply: L('지금은 제품 비교를 잠시 쉬고 있어요. 하나씩 자세히 알려 드릴게요.', "Comparing products is paused for now. I can tell you about each one."),
+          products: [a.p, b.p],
+          suggestions: isEn() ? [`Tell me more about the ${ord(a.i)} one`, `Tell me more about the ${ord(b.i)} one`, 'Which is the cheapest of those?'] : [`${ord(a.i)} 거 자세히 알려 줘`, `${ord(b.i)} 거 자세히 알려 줘`, '그중에 제일 싼 거는?'],
+        });
+      }
       return out({
         reply: compareSummary([a.p, b.p]),
         products: [a.p, b.p],
@@ -138,8 +146,8 @@ function replyAboutShownProduct(turn) {
       reply: parts.filter(Boolean).join(' '),
       products: [p],
       suggestions: (isEn()
-        ? [shown.length >= 2 ? `Compare the first and ${ord(i === 0 ? 1 : i)}` : null, 'Which is the cheapest of those?', 'Show more']
-        : [`${ord(i)} 거 기준으로 골라 줘`, shown.length >= 2 ? `첫 번째랑 ${ord(i === 0 ? 1 : i)} 비교해 줘` : null, '다른 거 더 보여 줘']).filter(Boolean),
+        ? [COMPARE_ON && shown.length >= 2 ? `Compare the first and ${ord(i === 0 ? 1 : i)}` : null, 'Which is the cheapest of those?', 'Show more']
+        : [`${ord(i)} 거 기준으로 골라 줘`, COMPARE_ON && shown.length >= 2 ? `첫 번째랑 ${ord(i === 0 ? 1 : i)} 비교해 줘` : '그중에 제일 싼 거는?', '다른 거 더 보여 줘']).filter(Boolean),
     });
   }
   return null;
@@ -307,7 +315,7 @@ function lightTalk(turn) {
     // 규칙이 뜻을 잡은 건 아니므로 unsure (LLM 층을 켜 두면 LLM 이 대신 답해 본다)
     bridge = {
       query: toneHint ? { mine: true } : { situations: ['데일리'] },
-      ack: c.compare ? L('비교하려면 먼저 제품이 있어야 해요. 무난한 립부터 보여 드릴게요.', 'I need products to compare first. Here are some easy picks.')
+      ack: c.compare && COMPARE_ON ? L('비교하려면 먼저 제품이 있어야 해요. 무난한 립부터 보여 드릴게요.', 'I need products to compare first. Here are some easy picks.')
         : toneHint ? L('정확히 알아듣진 못했지만, 측정한 톤에 어울리는 립을 먼저 골라 볼게요.', "I didn't quite catch that, so here are lips that suit your measured tone.")
           : (isEn() ? GENERIC_ACKS_EN : GENERIC_ACKS)[spoken.text.length % GENERIC_ACKS.length],
       unsure: true,
@@ -320,7 +328,7 @@ function lightTalk(turn) {
 function searchReply(turn, bridge) {
   const { c, q, ctx, env, base, shown, toneHint, limit, out } = turn;
   let query = bridge ? bridge.query : q;
-  if (!bridge && ctx.query && (c.refine || (!q.families && !q.tone && !q.situations && !q.concerns && !q.brand && (q.finish || q.price || q.maxPrice || q.minPrice || q.exclude || q.lightness)))) {
+  if (!bridge && ctx.query && (c.refine || (!q.families && !q.tone && !q.situations && !q.concerns && !q.brand && (q.finish || q.price || q.maxPrice || q.minPrice || q.exclude || q.lightness || q.depth !== undefined)))) {
     query = { ...ctx.query, ...q };
     if (q.exclude?.families?.length && query.families) {
       query.families = query.families.filter((f) => !q.exclude.families.includes(f));

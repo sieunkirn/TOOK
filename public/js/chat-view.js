@@ -1,11 +1,13 @@
 // 챗봇 화면: 대화 그리기. 말풍선·제품 카드·빠른 답장·추천 패널·비교함, 답변을 몇 글자씩 써 내려가는 출력.
-import { $, el, go, detailLink, won, fullName, shortName, storeLink, toast, shadePicker } from './common.js';
+import { $, el, go, won, fullName, shortName, toast, shadePicker } from './common.js';
 import { compareSummary } from '../lib/chat.js';
 import { lang as uiLang, t as tr, finishText as finishName } from './i18n.js';
 import { C, STUDIO, BARCODE_PANEL, log, START, state, base, track, save } from './chat-state.js';
 import { speaker } from './chat-input.js';
 import { send } from './chat.js';
 import { syncStart } from './chat-start.js'; // 대화가 없을 때의 시작 화면 (chat.html 에만 있다)
+import { startGuide, startMini, guideCard } from './chat-guide.js'; // '답하며 고르기' 단계형 도우미 (2026-11-19)
+import { quickChips } from './chat-quick.js'; // 상황별 빠른 답장 (2026-11-19 1차: A·B·C·D)
 
 // ---------- 비교함 ----------
 const COMPARE_MAX = 3;
@@ -85,10 +87,9 @@ export function productMini(p) {
     el('div', {}, nameLine),
     el('div', { class: 'muted small', text: [p.finish ? finishName(p.finish) : null, p.price != null ? won(p.price) : null, // 대표색 안내는 뺐다, 가격은 카드에 둔다 (2026-11-11)
       p.similarity !== undefined ? C(`기준 색과 유사도 ${p.similarity}%`, `${p.similarity}% similar`) : null].filter(Boolean).join(' · ') }),
-    el('div', { class: 'actions' },
-      detailLink(p, 'chat'),
-      storeLink(p, C('올리브영', 'OLIVE YOUNG')),
-      STUDIO ? el('button', { type: 'button', text: tr('lip.tryOn'), onclick: () => window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: current.color_hex, finish: current.finish } })) }) : null),
+    // '상세 보기'·'올리브영' 링크는 2026-11-20 사용자 요청으로 뺐다 (손님이 키오스크를 떠나 다른 화면으로 가지 않게. 폰으로 가져가기는 거울의 '가져가기' QR)
+    STUDIO ? el('div', { class: 'actions' },
+      el('button', { type: 'button', text: tr('lip.tryOn'), onclick: () => window.dispatchEvent(new CustomEvent('took:apply', { detail: { hex: current.color_hex, finish: current.finish } })) })) : null,
     picker);
   // '+ 비교' 버튼은 2026-11-11 카드에서 뺐다. 비교는 "1번이랑 2번 비교해 줘"처럼 말로 물으면 된다
 }
@@ -152,15 +153,81 @@ function bubble(m, isLastBot, streaming = false) {
   return el('div', { class: 'bubble ' + m.role + (streaming ? ' streaming' : '') },
     el('div', { class: 'who', text: who }),
     m.swatch ? swatchCard(m.swatch) : null,
-    el('div', { class: 'btext', text: streaming ? '' : (m.role === 'bot' ? asLines(m.text) : m.text) }),
+    m.role === 'bot' && !streaming && m.kind !== 'guide'
+      ? el('div', { class: 'btext' }, ...linkify(asLines(m.text), m.products))
+      : el('div', { class: 'btext', text: streaming ? '' : (m.role === 'bot' ? asLines(m.text) : m.text) }),
+    m.kind === 'guide' && m.guide ? guideCard(m, isLastMsg(m), renderLog) : null,
     // 비교 답변은 비교표로, 그 밖에는 좁은 화면용 카드 / 넓은 화면용 짧은 목록 (둘 중 하나만 CSS 로 보인다)
     m.kind === 'compare' && m.products?.length >= 2 ? compareTable(m.products) : null,
     m.kind !== 'compare' && m.products?.length ? productPager(m.products) : null,
     m.kind !== 'compare' && m.products?.length ? el('div', { class: 'mini-names muted small', text: '→ ' + m.products.map((p) => shortName(p)).join(' / ') }) : null);
 }
 
-// 다음 질문 추천(빠른 답장): 사용자가 할 말이므로 대화 끝 오른쪽(내 말 자리)에 둔다. 마지막 답변이 다 나온 뒤에만 보인다
+const isLastMsg = (m) => state.messages.at(-1) === m;
+
+// ---------- 답변 속 단어 누르기 (빠른 답장 7번, 2026-11-19) ----------
+// 챗봇 답의 제품 이름·색 계열·질감 단어에 분홍 밑줄. 누르면 그걸로 이어서 묻는다:
+//  제품 이름 → "두 번째 거 자세히 알려 줘"(목록 순서로 묻기: 규칙 챗봇이 제품을 정확히 짚는다) / 색 계열 → "코랄 계열 립 더 보여 줘" / 질감 → "벨벳 립 추천해 줘"
+const KO_ORD = ['첫', '두', '세', '네', '다섯', '여섯', '일곱', '여덟', '아홉', '열'];
+const EN_ORD = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
+const FAMILY_KO = ['누드', '로즈', '코랄', '핑크', '레드', '오렌지', '브라운', '베리', '플럼', '버건디'];
+const FAMILY_EN = ['nude', 'rose', 'coral', 'pink', 'red', 'orange', 'brown', 'berry', 'plum', 'burgundy'];
+const FINISH_KO = ['매트', '벨벳', '새틴', '글로시'];
+const FINISH_EN = ['matte', 'velvet', 'satin', 'glossy'];
+const esc = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function linkTerms(products) {
+  const en = C('ko', 'en') === 'en';
+  const terms = [];
+  for (const p of products || []) {
+    const n = p.n || 1;
+    const ask = en ? `Tell me more about the ${EN_ORD[n - 1] || `#${n}`} one` : `${KO_ORD[n - 1] || n} 번째 거 자세히 알려 줘`;
+    for (const name of [fullName(p), shortName(p), p.brand && p.name ? `${p.brand} ${p.name}` : null, p.name]) if (name && name.length >= 3) terms.push({ w: name, ask });
+  }
+  (en ? FAMILY_EN : FAMILY_KO).forEach((w) => terms.push({ w, ask: en ? `Show me ${w} lips` : `${w} 계열 립 더 보여 줘` }));
+  (en ? FINISH_EN : FINISH_KO).forEach((w) => terms.push({ w, ask: en ? `Recommend ${w} lips` : `${w} 립 추천해 줘` }));
+  return terms.sort((a, b) => b.w.length - a.w.length);
+}
+function linkify(text, products) {
+  const terms = linkTerms(products);
+  if (!text || !terms.length) return [text || ''];
+  const en = C('ko', 'en') === 'en';
+  const re = new RegExp(terms.map((t) => (en && /^[a-z]+$/i.test(t.w) ? `\\b${esc(t.w)}\\b` : esc(t.w))).join('|'), en ? 'gi' : 'g');
+  const out = [];
+  let last = 0;
+  for (const mt of text.matchAll(re)) {
+    const t = terms.find((x) => x.w.toLowerCase() === mt[0].toLowerCase());
+    if (!t) continue;
+    if (mt.index > last) out.push(text.slice(last, mt.index));
+    out.push(el('button', { type: 'button', class: 'bt-link', text: mt[0], 'aria-label': t.ask, title: t.ask,
+      onclick: () => { if (state.typing) return; track('word_tap'); send(t.ask); } }));
+    last = mt.index + mt[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+
+// ---------- 빠른 답장 (2026-11-19 2번): 입력창 바로 위 고정 줄 (옆으로 밀기) ----------
+// 맨 앞은 '답하며 고르기'(단계형 도우미), 그 뒤는 마지막 답변의 다음 질문 추천. 답변을 쓰는 중이거나 도우미가 진행 중이면 숨긴다.
+// 이 줄이 없는 화면(합본 studio.html)은 예전처럼 대화 끝 오른쪽(내 말 자리)에 둔다
+const qrBar = $('qr-bar');
+function renderQuickBar(m) {
+  if (!qrBar) return;
+  const guiding = m?.kind === 'guide' && !m.guide?.done;
+  const busy = state.typing || streamAt >= 0;
+  if (busy || guiding) { qrBar.replaceChildren(); qrBar.hidden = true; return; }
+  // 상황별 버튼 (js/chat-quick.js: A 추천 직후 · B 제품 자세히 · C 결과 0개 · D 못 알아들음)
+  const { chips, strongGuide } = quickChips(m);
+  const guideBtn = el('button', { type: 'button', class: 'qr-chip qr-guide' + (strongGuide ? ' qr-strong' : ''), onclick: () => startGuide(renderLog) },
+    el('span', { class: 'qr-ico', 'aria-hidden': 'true' }), strongGuide ? C('답하며 고르기로 찾아볼까요?', 'Try picking step by step?') : C('답하며 고르기', 'Pick step by step'));
+  const chipBtn = (c) => el('button', { type: 'button', class: 'qr-chip qr-' + c.type,
+    onclick: () => (c.type === 'pick' ? startMini(c.which, renderLog) : c.run()) },
+  c.type === 'say' ? null : el('span', { class: 'qr-ico', 'aria-hidden': 'true' }), c.label);
+  qrBar.replaceChildren(guideBtn, ...chips.slice(0, 5).map(chipBtn));
+  qrBar.hidden = false;
+  qrBar.scrollLeft = 0;
+}
 function quickReplies(m) {
+  if (qrBar) return null;
   if (!m || m.role !== 'bot' || !m.suggestions?.length || state.typing || streamAt >= 0) return null;
   return el('div', { class: 'row suggest quick-replies', role: 'group', 'aria-label': C('빠른 답장', 'Quick replies') },
     ...m.suggestions.map((q) => el('button', { type: 'button', text: q, onclick: () => { track('quick_reply'); send(q); } })));
@@ -214,6 +281,7 @@ export function renderLog() {
       el('div', { class: 'who', text: C('took 챗봇', 'took chat') }),
       el('div', { class: 'typing-dots', 'aria-hidden': 'true' }, el('i'), el('i'), el('i'))) : null,
   ].filter(Boolean));
+  renderQuickBar(messages.at(-1));
   syncStart();
   scrollToLatest();
 }

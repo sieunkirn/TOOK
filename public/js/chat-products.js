@@ -91,7 +91,7 @@ async function describeProduct(p) {
 const nfcHint = $('nfc-hint');
 const NFC_IDLE = BARCODE_PANEL
   ? C('립 제품을 리더기에 올려도 정보를 알려 드려요', 'You can also tap a lip product on the reader')
-  : C('립 제품을 리더기에 올리거나, 바코드 버튼을 눌러 카메라에 비춰도 알려 드려요', 'Tap a lip product on the reader, or press the barcode button and show it to the camera');
+  : C('립 제품을 리더기에 올리거나, 바코드를 스캔해 보세요.', 'Place a lip product on the reader, or scan its barcode.'); // 2026-11-19 Figma 디자인 문구
 const nfcFlash = createNfcHint(nfcHint, { idleText: NFC_IDLE, ms: 2500 });
 async function handleTag(raw) {
   speaker.stop();

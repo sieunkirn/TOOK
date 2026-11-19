@@ -25,6 +25,7 @@ export function friendlySummary(q, { base }) {
   if (q.price === 'cheaper') parts.push(base ? L('기준 제품보다 저렴한', 'cheaper than the base product') : q.cheaperThan ? L('방금 본 것보다 저렴한', 'cheaper than the ones shown') : L('저렴한 순', 'cheapest first'));
   if (q.price === 'pricier') parts.push(base ? L('기준 제품보다 고급', 'pricier than the base product') : L('고급스러운', 'premium'));
   if (q.lightness) parts.push(q.lightness === 'lighter' ? L('더 밝은 색', 'lighter shade') : L('더 진한 색', 'deeper shade'));
+  if (q.depth !== undefined) parts.push(L(`진하기 ${q.depth}`, `depth ${q.depth}`));
   if (q.exclude?.families?.length) parts.push(L(famsL(q.exclude.families) + ' 빼고', 'no ' + famsL(q.exclude.families)));
   if (q.exclude?.finishes?.length) parts.push(L(q.exclude.finishes.map(finL).join('·') + ' 빼고', 'no ' + q.exclude.finishes.map(finL).join('/')));
   if (q.similar) parts.push(L('비슷한 색', 'similar color'));
@@ -32,7 +33,7 @@ export function friendlySummary(q, { base }) {
   return parts.join(' · ');
 }
 
-const SEARCH_KEYS = ['finish', 'families', 'price', 'maxPrice', 'minPrice', 'similar', 'lightness', 'brand', 'tone', 'situations', 'concerns', 'exclude', 'superlative'];
+const SEARCH_KEYS = ['finish', 'families', 'price', 'maxPrice', 'minPrice', 'similar', 'lightness', 'depth', 'brand', 'tone', 'situations', 'concerns', 'exclude', 'superlative'];
 export const searchPart = (c) => Object.fromEntries(SEARCH_KEYS.filter((k) => c[k] !== undefined).map((k) => [k, c[k]]));
 
 // 조건을 다시 말로 만든다 (다음 질문 추천 칩에 사용)
@@ -143,6 +144,19 @@ function applyPreferences(list, q, toneHint, { conditions, reasons, notes, tips 
   return list;
 }
 
+// 진하기 0~100 (2026-11-19): 지금 후보들의 명도(L*) 가운데 그 위치(0 = 가장 밝은 쪽, 100 = 가장 어두운 쪽)를 목표로,
+// 목표 명도에 가까운 제품만 남긴다 (후보의 35%, 최소 6개). 순서는 원래대로 두고 뒤의 정렬(가격 등)이 정한다
+const DEPTH_KEEP = 0.35;
+const DEPTH_MIN = 6;
+function pickByDepth(list, depth, conditions) {
+  const Ls = list.map((p) => p.color_lab.L).sort((a, b) => b - a); // 밝은 → 어두운
+  const target = Ls[Math.round((depth / 100) * (Ls.length - 1))];
+  const keep = Math.min(list.length, Math.max(DEPTH_MIN, Math.ceil(list.length * DEPTH_KEEP)));
+  const near = new Set([...list].sort((a, b) => Math.abs(a.color_lab.L - target) - Math.abs(b.color_lab.L - target) || a.id.localeCompare(b.id)).slice(0, keep));
+  conditions.push(L(`진하기 ${depth} (명도 L* ${target.toFixed(0)} 근처)`, `Depth ${depth} (near L* ${target.toFixed(0)})`));
+  return list.filter((p) => near.has(p));
+}
+
 // 정렬: 최저가/최고가 요청 > 기준 색상과 유사한 순 > 가격 순 > ID 순
 function sortByRequest(list, q, { base, ref }, conditions) {
   const refLab = ref ? hexToLab(ref.hex) : null;
@@ -176,6 +190,7 @@ export function runSearch(q, { products, base, ref, toneHint }) {
   if ((q.similar || q.lightness) && !ref) {
     notes.push(L('기준 색상이 없어 색 비교는 못 했어요. 바코드로 제품을 찍거나 팔레트에서 색을 만든 뒤 물어봐 주세요.', 'There is no reference color to compare with. Scan a product barcode or mix a color on the palette, then ask again.'));
   }
+  if (q.depth !== undefined && list.length) list = pickByDepth(list, q.depth, conditions);
   if (q.lightness && ref) {
     const refL = hexToLab(ref.hex).L;
     list = list.filter((p) => (q.lightness === 'lighter' ? p.color_lab.L > refL + LIGHTNESS_MARGIN : p.color_lab.L < refL - LIGHTNESS_MARGIN));
@@ -192,7 +207,7 @@ export function runSearch(q, { products, base, ref, toneHint }) {
 // 결과가 없을 때: 조건을 하나씩 빼 보고 결과가 생기는 조건을 알려 준다
 export function relaxHint(q, env) {
   const tries = [
-    ['maxPrice', L('가격 조건', 'price limit')], ['minPrice', L('가격 조건', 'price limit')], ['brand', L('브랜드 조건', 'brand')], ['finish', L('제형 조건', 'finish')], ['families', L('색상 계열 조건', 'color family')], ['lightness', L('밝기 조건', 'lightness')],
+    ['maxPrice', L('가격 조건', 'price limit')], ['minPrice', L('가격 조건', 'price limit')], ['brand', L('브랜드 조건', 'brand')], ['finish', L('제형 조건', 'finish')], ['families', L('색상 계열 조건', 'color family')], ['lightness', L('밝기 조건', 'lightness')], ['depth', L('진하기 조건', 'depth')],
   ];
   for (const [key, label] of tries) {
     if (q[key] === undefined) continue;

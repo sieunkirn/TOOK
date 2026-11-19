@@ -240,6 +240,9 @@ export function parseMessageEn(message, brandIndex = [], { situations = [] } = {
   if (has(text, ['similar', 'like this', 'same color', 'close to this', 'look alike', 'dupe']) && !namedColor && !has(text, ['my lips', 'my lip color'])) c.similar = true;
   if (has(text, ['lighter', 'paler', 'softer color', 'light shade', 'brighter shade'])) c.lightness = 'lighter';
   else if (has(text, ['darker', 'deeper', 'dark shade', 'deep shade'])) c.lightness = 'darker';
+  // 진하기 숫자 (단계형 도우미의 진하기 바): "light (depth 20)" → 0~100
+  const depth = text.match(/depth\s*(\d{1,3})/);
+  if (depth) { c.depth = Math.min(100, Number(depth[1])); delete c.lightness; }
 
   // 브랜드: 긴 이름부터 (예: '&nd by rom&nd' 안의 'rom&nd')
   const names = brandIndex.flatMap(({ ko, names: ns, noEn }) => ns.map((n) => ({ ko, n: n.toLowerCase(), noEn }))).sort((a, b) => b.n.length - a.n.length);

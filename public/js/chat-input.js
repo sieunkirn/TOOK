@@ -2,7 +2,7 @@
 import { $, store } from './common.js';
 import { setupVoiceInput, setupSpeaker } from './voice.js';
 import { attachTouchKeyboard } from './touch-keyboard.js';
-import { C, log, input, brands } from './chat-state.js';
+import { C, STUDIO, log, input, brands } from './chat-state.js';
 import { send } from './chat.js';
 
 // ---------- 음성 질문 / 읽어주기 ----------
@@ -44,15 +44,24 @@ if (voiceBtn) setupVoiceInput({
 // 가운데 칸에 직접 쓰고 '보내기'(Enter)로 보낸다
 input.readOnly = false;
 input.removeAttribute('tabindex');
-input.placeholder = voiceBtn ? C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below') : C('아래 키보드로 입력하세요', 'Type with the keyboard below');
+input.placeholder = voiceBtn ? C('마이크로 말하거나 아래 키보드로 입력하세요', 'Speak into the mic, or type with the keyboard below') : C('여기를 눌러 입력하세요', 'Tap here to type');
 $('chat-form').addEventListener('submit', (e) => {
   e.preventDefault();
   send(input.value);
 });
-// 화면 터치 키보드: 입력줄 아래에 한/영 키보드를 항상 열어 둔다 (2026-11-11 고정, 기기 키보드 대신, js/touch-keyboard.js)
-attachTouchKeyboard({
+// 화면 터치 키보드 (기기 키보드 대신, js/touch-keyboard.js).
+// 챗봇 화면(2026-11-19 사용자 요청): 평소에는 닫혀 있고 입력창을 누르면(예시 질문을 눌러 입력창에 써 넣을 때도) 열린다.
+// 키보드·입력줄 밖을 누르거나 보내면 닫힌다. 합본(studio.html)은 예전처럼 항상 열어 둔다
+const kbd = attachTouchKeyboard({
   input,
   form: $('chat-form'),
-  pinned: true,
-  onToggle: (on) => { if (on) requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; }); },
+  pinned: STUDIO,
+  onToggle: (on) => {
+    document.body.classList.toggle('kb-open', on);
+    if (on) requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; });
+  },
 });
+// 입력줄의 보내기 버튼으로 보내도 닫는다 (키보드의 '보내기'는 키보드가 직접 닫는다)
+if (!STUDIO) $('chat-form').addEventListener('submit', () => kbd.close());
+// 시작 화면 예시를 입력창에 써 넣은 뒤 고칠 수 있게 연다 (chat-start.js). 창에 포커스가 없으면 focus 이벤트가 안 와서 따로 알린다
+input.addEventListener('took:kb-open', () => kbd.open());
